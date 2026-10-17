@@ -1,0 +1,33 @@
+{
+  "status": "PASS",
+  "toolchain": "leanprover/lean4:v4.33.1",
+  "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474",
+  "proofs": [
+    {
+      "key": "localized_domain4_21_04",
+      "status": "PASS",
+      "solution_file": "formalization/platform/Repair_localized_domain4_21_04_size2.lean",
+      "sha256": "975664875bb1527d10ff4bf0ca51cde639c856368dd2ba9050e02c71bd3c0e8c",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 35.294
+    },
+    {
+      "key": "localized_domain4_21_08",
+      "status": "PASS",
+      "solution_file": "formalization/platform/Repair_localized_domain4_21_08_size2.lean",
+      "sha256": "858f6109460ac5b8613b48e039dc010409783aabd7eaabbb701c15dbc3f87f1c",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 30.605
+    }
+  ],
+  "manifest": "formalization/platform/domain-repair-proofs.json",
+  "scope": "2 proof files from this manifest only. The cutoff21 root remains unproved."
+}

@@ -14,7 +14,7 @@
 | 任意有限复维度传递及最小性 | [通用桥接](Hlawka21/ComplexBridge.lean) 本地通过且平台 `Proved`、开放依赖为零；[平台记录](../results/prove2me-analytic-assembly.json) |
 | 全范围最终拼接 | [FullWindow](Hlawka21/FullWindow.lean) 本地证明准确的 cutoff 21 结论，显式输入既有 cutoff 32 尾部；[639 个源码哈希、601 项公理检查](../results/lean-full-window-build.json)；尾部未独立重建，原始平台主目标组合已获 `SKETCH_ACCEPTED`，仍有两个实三维窗口依赖 |
 
-目前 34 个辅助定理获平台 `ACCEPTED`，另有两个原始标量里程碑 `Proved`。计数与新增证书的异步状态分别见 [status.json](../status.json)、[原辅助记录](../results/prove2me-auxiliary.json)、[任意反例归约](../results/prove2me-failure.json)、[公共解析及传递](../results/prove2me-analytic-assembly.json)、[紧凑证书](../results/prove2me-real-pieces.json)。这不表示原始全维主目标已经通过。
+目前 53 个辅助定理获平台 `ACCEPTED`，另有两个原始标量里程碑 `Proved`。计数与新增证书的异步状态分别见 [status.json](../status.json)、[原辅助记录](../results/prove2me-auxiliary.json)、[任意反例归约](../results/prove2me-failure.json)、[公共解析及传递](../results/prove2me-analytic-assembly.json)、[紧凑证书](../results/prove2me-real-pieces.json)。这不表示原始全维主目标已经通过。
 
 ## 平台提交为何拆分
 
@@ -52,12 +52,21 @@ python scripts/check_full_window_lean.py
 ```powershell
 python scripts/prepare_group_domain_platform_proofs.py
 python scripts/prepare_transfer_platform_proof.py
-python scripts/generate_real_pieces.py
-python scripts/prepare_real_piece_platform_proofs.py
-python scripts/build_theorem_mirrors.py
+python scripts/prepare_domain_block_platform_proofs.py
+python scripts/build_theorem_mirrors.py --manifest formalization/platform/domain-block-proofs.json
 python scripts/check_lean_proofs.py --manifest formalization/platform/analytic-assembly-proofs.json --output results/lean-analytic-assembly-build.json --jobs 2
-python scripts/check_lean_proofs.py --manifest formalization/platform/real-piece-proofs.json --output results/lean-real-pieces-build.json --jobs 2
+python scripts/check_lean_proofs.py --manifest formalization/platform/domain-block-proofs.json --output results/lean-domain-blocks-build.json --jobs 2
+python scripts/prepare_real_window_platform_proofs.py
+python scripts/check_lean_proofs.py --manifest formalization/platform/real-window-proofs.json --output results/lean-real-window-platform-build.json --jobs 1
+python scripts/prepare_root_platform_proof.py
+python scripts/check_lean_proofs.py --manifest formalization/platform/root-assembly-check.json --output results/lean-root-assembly-build.json --jobs 1
 ```
+
+四段 API 镜像把真实局部证明在本地合并编译一次，再由各个 `Theorems/` 模块导入；没有开放声明、外加公理或平台 Definition 中隐藏的复杂证明。`--keys` 可明确选择少数代表块，报告会记录选择；只有整份清单全部 PASS 才表示整批精确文件通过。
+
+个别四段文件仍触发服务器限时，分别用 `prepare_domain_block_repair.py <parent_key>` 拆成两个忠实子区间。原父声明、256 段覆盖及最终目标保持不变。子证明闭合后，用新的短区间组合证明修复父目标；旧超时提交保留为历史，不重复上传同一文件。[子证明检查](../results/lean-domain-children-build.json)、[子证明平台任务](../results/prove2me-domain-children.json)、[修复源码清单](platform/domain-repair-proofs.json)。
+
+`root-assembly-check.json` 检查与最终组合相同的证明体，显式输入 cutoff 32 尾部。最终 `Sol_campaign_cutoff21.lean` 改为导入平台已闭合的尾部，由服务器检查；当前 [组合判决](../results/prove2me-root.json) 为 `SKETCH_ACCEPTED`，不能称为无开放依赖的完整证明。
 
 这些检查器默认执行新检查；`--reuse` 只显式复用同一工具链和 Mathlib 下、文件哈希一致的既有 PASS，不是独立复验。`--lean-threads` 可限制每个 Lean 进程的线程数。当前机器使用过相同固定版本的隔离目录 `.test-tmp/prove2me/lean`；缓存不提交。
 

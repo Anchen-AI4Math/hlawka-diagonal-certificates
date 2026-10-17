@@ -25,11 +25,14 @@ def main():
               'results/lean-real-pieces-build.json','results/prove2me-real-pieces.json',
               'results/lean-localization-platform-build.json','results/prove2me-localization.json',
               'results/lean-domain-blocks-build.json','results/prove2me-domain-blocks.json',
-              'results/lean-root-assembly-build.json','results/prove2me-root.json']
+              'results/lean-root-assembly-build.json','results/prove2me-root.json',
+              'results/lean-domain-children-build.json','results/prove2me-domain-children.json',
+              'results/lean-domain-repairs-build.json','results/prove2me-domain-repairs.json']
     accepted=0
     for path in ['results/prove2me-auxiliary.json','results/prove2me-failure.json',
                  'results/prove2me-analytic-assembly.json','results/prove2me-real-pieces.json',
-                 'results/prove2me-localization.json','results/prove2me-domain-blocks.json']:
+                 'results/prove2me-localization.json','results/prove2me-domain-blocks.json',
+                 'results/prove2me-domain-children.json']:
         if (ROOT/path).exists():
             accepted+=sum(r.get('proof_status')=='ACCEPTED' for r in read(path)['theorems'].values())
     complete=root['status']=='Proved' and root.get('open_leaf_count')==0
@@ -38,7 +41,8 @@ def main():
     local_files=0
     for path in ['results/lean-auxiliary-build.json','results/lean-failure-build.json',
                  'results/lean-analytic-assembly-build.json','results/lean-real-pieces-build.json',
-                 'results/lean-localization-platform-build.json','results/lean-domain-blocks-build.json']:
+                 'results/lean-localization-platform-build.json','results/lean-domain-blocks-build.json',
+                 'results/lean-domain-children-build.json','results/lean-domain-repairs-build.json']:
         if (ROOT/path).exists():
             local_files+=sum(r.get('status')=='PASS' for r in read(path)['proofs'])
     formal.update(stage='original_full_goal_proved' if complete else 'all_new_ingredients_kernel_checked; platform_closure_in_progress',
@@ -54,15 +58,22 @@ def main():
                   new_core_evidence='results/lean-full-window-build.json',
                   local_final_assembly='Exact cutoff21 conclusion with an explicit cutoff32 tail input; the already Proved platform tail is not independently rebuilt here.',
                   platform_proved_original_milestones=[r['theorem_name'].rsplit('.',1)[-1] for r in goals['targets'] if r['key']!='goal' and r['status']=='Proved'],
-                  compact_certificate_manifest='formalization/platform/real-piece-proofs.json',
-                  compact_certificate_build='results/lean-real-pieces-build.json',
-                  compact_certificate_platform='results/prove2me-real-pieces.json',
+                  compact_certificate_manifest='formalization/platform/domain-block-proofs.json',
+                  compact_certificate_build='results/lean-domain-blocks-build.json',
+                  compact_certificate_platform='results/prove2me-domain-blocks.json',
+                  superseded_eight_slab_manifest='formalization/platform/real-piece-proofs.json',
                   original_large_certificate_attempt='The first three 16-slab packets and the first three 8-slab packets timed out at the server 300s limit. Local proofs pass; packet size is being tested rather than treated as a fixed remaining theorem count.',
                   minimal_localization_platform='results/prove2me-localization.json',
                   domain_block_manifest='formalization/platform/domain-block-proofs.json',
                   domain_block_coverage='formalization/domain-blocks.json',
                   domain_block_build='results/lean-domain-blocks-build.json',
                   domain_block_platform='results/prove2me-domain-blocks.json')
+    if (ROOT/'results/prove2me-domain-blocks.json').exists():
+        blocks=read('results/prove2me-domain-blocks.json')['theorems']
+        formal.update(domain_blocks_closed=sum(r.get('theorem_status')=='Proved' and r.get('open_leaf_count')==0 for r in blocks.values()),
+                      domain_block_target_count=65,
+                      domain_block_repairs_pending=[k for k,r in blocks.items() if r.get('repair_pending')],
+                      domain_repair_manifest='formalization/platform/domain-repair-proofs.json')
     if (ROOT/'results/prove2me-root.json').exists():
         assembly=read('results/prove2me-root.json')
         formal.update(root_submission_status=assembly.get('proof_status'),

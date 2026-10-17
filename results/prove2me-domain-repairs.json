@@ -1,0 +1,28 @@
+{
+  "scope": "Different, faithful interval-cover proofs of unchanged timed-out parents. Original attempts are preserved in the main domain-block report.",
+  "theorems": {
+    "localized_domain4_21_04": {
+      "theorem_id": "3837e35f-b98d-4b55-9013-5e6173548031",
+      "theorem_name": "HlawkaSchatten.DiagonalCutoff21.localized_domain4_21_04",
+      "submission_id": "a0561cb7-5a10-4bea-b258-8f1c0e5862c5",
+      "proof_status": "ACCEPTED",
+      "solution_sha256": "975664875bb1527d10ff4bf0ca51cde639c856368dd2ba9050e02c71bd3c0e8c",
+      "children": [
+        "localized_domain2_21_04_part0",
+        "localized_domain2_21_04_part1"
+      ],
+      "theorem_status": "Proved",
+      "open_leaf_count": 0,
+      "statement_matches_original_parent": true,
+      "checked_at": "2026-10-17T14:11:46.715257+00:00"
+    },
+    "localized_domain4_21_08": {
+      "theorem_id": "fd806c8d-0c1b-4472-ba60-bd7b7fd32117",
+      "theorem_name": "HlawkaSchatten.DiagonalCutoff21.localized_domain4_21_08"
+    },
+    "localized_domain4_21_14": {
+      "theorem_id": "820f7e38-cb97-4544-bfdc-977e6fc9bc09",
+      "theorem_name": "HlawkaSchatten.DiagonalCutoff21.localized_domain4_21_14"
+    }
+  }
+}

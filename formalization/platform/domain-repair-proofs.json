@@ -1,0 +1,41 @@
+[
+  {
+    "key": "localized_domain4_21_04",
+    "theorem_id": "3837e35f-b98d-4b55-9013-5e6173548031",
+    "theorem_name": "HlawkaSchatten.DiagonalCutoff21.localized_domain4_21_04",
+    "formal_statement": "theorem HlawkaSchatten.DiagonalCutoff21.localized_domain4_21_04 :\n    ∀ p : ℝ, (43/2 : ℝ) ≤ p → p ≤ (173/8 : ℝ) → ∀ X : Fin 3 → Fin 3 → ℝ,\n      (∀ i, -(607/500 : ℝ) ≤ X i i ∧ X i i ≤ -(189/500 : ℝ)) →\n      (∀ j i, j ≠ i → (349/500 : ℝ) ≤ X j i ∧ X j i ≤ (607/500 : ℝ)) →\n      lpNorm p (X 0) + lpNorm p (X 1) + lpNorm p (X 2) = 3 →\n      lpNorm p (X 0 + X 1 + X 2) < (3033/2500 : ℝ) →\n      pairGapSum (lpNorm p) (X 0) (X 1) (X 2) < 2 / ((273/625 : ℝ)*p) →\n      (∀ j, -(5559/5000 : ℝ) ≤ X j j ∧ X j j ≤ -(881/2000 : ℝ)) ∧\n      (∀ j i, j ≠ i → (3779/5000 : ℝ) ≤ X j i ∧ X j i ≤ (11847/10000 : ℝ)) ∧\n      (∀ j, lpNorm p (X j) ≤ (1193402307/1000000000 : ℝ)) ∧\n      (∀ i j k : Fin 3, i ≠ j → i ≠ k → j ≠ k → (1139124440087/716625000000 : ℝ) ≤ X j i + X k i) ∧\n      (3314799982801/573300000000 : ℝ) ≤ X 0 1 + X 0 2 + X 1 0 + X 1 2 + X 2 0 + X 2 1 := by sorry",
+    "solution_file": "formalization/platform/Repair_localized_domain4_21_04_size2.lean",
+    "solution_sha256": "975664875bb1527d10ff4bf0ca51cde639c856368dd2ba9050e02c71bd3c0e8c",
+    "children": [
+      "localized_domain2_21_04_part0",
+      "localized_domain2_21_04_part1"
+    ],
+    "explanation": "Faithful subinterval decomposition of the unchanged parent localization statement. Each smaller actual-norm certificate proves the same explicit conclusions on its subinterval; their closed cover proves the parent. This revised proof imports the children rather than rerunning the timed-out arithmetic file."
+  },
+  {
+    "key": "localized_domain4_21_08",
+    "theorem_id": "fd806c8d-0c1b-4472-ba60-bd7b7fd32117",
+    "theorem_name": "HlawkaSchatten.DiagonalCutoff21.localized_domain4_21_08",
+    "formal_statement": "theorem HlawkaSchatten.DiagonalCutoff21.localized_domain4_21_08 :\n    ∀ p : ℝ, (22 : ℝ) ≤ p → p ≤ (177/8 : ℝ) → ∀ X : Fin 3 → Fin 3 → ℝ,\n      (∀ i, -(607/500 : ℝ) ≤ X i i ∧ X i i ≤ -(189/500 : ℝ)) →\n      (∀ j i, j ≠ i → (349/500 : ℝ) ≤ X j i ∧ X j i ≤ (607/500 : ℝ)) →\n      lpNorm p (X 0) + lpNorm p (X 1) + lpNorm p (X 2) = 3 →\n      lpNorm p (X 0 + X 1 + X 2) < (3033/2500 : ℝ) →\n      pairGapSum (lpNorm p) (X 0) (X 1) (X 2) < 2 / ((273/625 : ℝ)*p) →\n      (∀ j, -(5559/5000 : ℝ) ≤ X j j ∧ X j j ≤ -(881/2000 : ℝ)) ∧\n      (∀ j i, j ≠ i → (3779/5000 : ℝ) ≤ X j i ∧ X j i ≤ (11847/10000 : ℝ)) ∧\n      (∀ j, lpNorm p (X j) ≤ (1193402307/1000000000 : ℝ)) ∧\n      (∀ i j k : Fin 3, i ≠ j → i ≠ k → j ≠ k → (1139124440087/716625000000 : ℝ) ≤ X j i + X k i) ∧\n      (3314799982801/573300000000 : ℝ) ≤ X 0 1 + X 0 2 + X 1 0 + X 1 2 + X 2 0 + X 2 1 := by sorry",
+    "solution_file": "formalization/platform/Repair_localized_domain4_21_08_size2.lean",
+    "solution_sha256": "858f6109460ac5b8613b48e039dc010409783aabd7eaabbb701c15dbc3f87f1c",
+    "children": [
+      "localized_domain2_21_08_part0",
+      "localized_domain2_21_08_part1"
+    ],
+    "explanation": "Faithful subinterval decomposition of the unchanged parent localization statement. Each smaller actual-norm certificate proves the same explicit conclusions on its subinterval; their closed cover proves the parent. This revised proof imports the children rather than rerunning the timed-out arithmetic file."
+  },
+  {
+    "key": "localized_domain4_21_14",
+    "theorem_id": "820f7e38-cb97-4544-bfdc-977e6fc9bc09",
+    "theorem_name": "HlawkaSchatten.DiagonalCutoff21.localized_domain4_21_14",
+    "formal_statement": "theorem HlawkaSchatten.DiagonalCutoff21.localized_domain4_21_14 :\n    ∀ p : ℝ, (91/4 : ℝ) ≤ p → p ≤ (183/8 : ℝ) → ∀ X : Fin 3 → Fin 3 → ℝ,\n      (∀ i, -(607/500 : ℝ) ≤ X i i ∧ X i i ≤ -(189/500 : ℝ)) →\n      (∀ j i, j ≠ i → (349/500 : ℝ) ≤ X j i ∧ X j i ≤ (607/500 : ℝ)) →\n      lpNorm p (X 0) + lpNorm p (X 1) + lpNorm p (X 2) = 3 →\n      lpNorm p (X 0 + X 1 + X 2) < (3033/2500 : ℝ) →\n      pairGapSum (lpNorm p) (X 0) (X 1) (X 2) < 2 / ((273/625 : ℝ)*p) →\n      (∀ j, -(5559/5000 : ℝ) ≤ X j j ∧ X j j ≤ -(881/2000 : ℝ)) ∧\n      (∀ j i, j ≠ i → (3779/5000 : ℝ) ≤ X j i ∧ X j i ≤ (11847/10000 : ℝ)) ∧\n      (∀ j, lpNorm p (X j) ≤ (1193402307/1000000000 : ℝ)) ∧\n      (∀ i j k : Fin 3, i ≠ j → i ≠ k → j ≠ k → (1139124440087/716625000000 : ℝ) ≤ X j i + X k i) ∧\n      (3314799982801/573300000000 : ℝ) ≤ X 0 1 + X 0 2 + X 1 0 + X 1 2 + X 2 0 + X 2 1 := by sorry",
+    "solution_file": "formalization/platform/Repair_localized_domain4_21_14_size2.lean",
+    "solution_sha256": "fffdc8a130020f09374bcde76fa8605801fb354e15a85d98d17a437fbb2e8849",
+    "children": [
+      "localized_domain2_21_14_part0",
+      "localized_domain2_21_14_part1"
+    ],
+    "explanation": "Faithful subinterval decomposition of the unchanged parent localization statement. Each smaller actual-norm certificate proves the same explicit conclusions on its subinterval; their closed cover proves the parent. This revised proof imports the children rather than rerunning the timed-out arithmetic file."
+  }
+]

@@ -1,0 +1,81 @@
+{
+  "status": "PASS",
+  "toolchain": "leanprover/lean4:v4.33.1",
+  "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474",
+  "proofs": [
+    {
+      "key": "localized_domain2_21_04_part0",
+      "status": "PASS",
+      "solution_file": "formalization/platform/Sol_localized_domain2_21_04_part0.lean",
+      "sha256": "bef379644d9c26bface662282e17168ae4da036559023f6848cf3998e18ad82c",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 86.084
+    },
+    {
+      "key": "localized_domain2_21_04_part1",
+      "status": "PASS",
+      "solution_file": "formalization/platform/Sol_localized_domain2_21_04_part1.lean",
+      "sha256": "0e42281911a7ff1e1b14aaa699929ad6a8842d53d8fd150d5dcdf99bb50d1294",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 77.881
+    },
+    {
+      "key": "localized_domain2_21_08_part0",
+      "status": "PASS",
+      "solution_file": "formalization/platform/Sol_localized_domain2_21_08_part0.lean",
+      "sha256": "7aa8fff4f7672111be21ddbf3a336bee5621d3ddca457d99f8965c5fd533114f",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 93.945
+    },
+    {
+      "key": "localized_domain2_21_08_part1",
+      "status": "PASS",
+      "solution_file": "formalization/platform/Sol_localized_domain2_21_08_part1.lean",
+      "sha256": "988405258954f80463b68c1ec41acf5f6ec3d5bfdc56a4f9a1672e538dfed967",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 81.701
+    },
+    {
+      "key": "localized_domain2_21_14_part0",
+      "status": "PASS",
+      "solution_file": "formalization/platform/Sol_localized_domain2_21_14_part0.lean",
+      "sha256": "5acd6712fda734745141a5b2d3b92938084805c8ece78b9da6c424f21140e0ce",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 78.159
+    },
+    {
+      "key": "localized_domain2_21_14_part1",
+      "status": "PASS",
+      "solution_file": "formalization/platform/Sol_localized_domain2_21_14_part1.lean",
+      "sha256": "7b36b0c364870a0b7d5e3127e4dc9d3735eb3659c046c050e4cde7501eb05246",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 66.237
+    }
+  ],
+  "manifest": "formalization/platform/domain-child-proofs.json",
+  "scope": "6 proof files from this manifest only. The cutoff21 root remains unproved."
+}

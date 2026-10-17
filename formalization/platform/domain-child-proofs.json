@@ -1,0 +1,146 @@
+[
+  {
+    "key": "localized_domain2_21_04_part0",
+    "theorem_name": "HlawkaSchatten.DiagonalCutoff21.localized_domain2_21_04_part0",
+    "theorem_title": "Actual norm localization subblock [43/2,345/16]",
+    "formal_statement": "theorem HlawkaSchatten.DiagonalCutoff21.localized_domain2_21_04_part0 :\n    ∀ p : ℝ, (43/2 : ℝ) ≤ p → p ≤ (345/16 : ℝ) → ∀ X : Fin 3 → Fin 3 → ℝ,\n      (∀ i, -(607/500 : ℝ) ≤ X i i ∧ X i i ≤ -(189/500 : ℝ)) →\n      (∀ j i, j ≠ i → (349/500 : ℝ) ≤ X j i ∧ X j i ≤ (607/500 : ℝ)) →\n      lpNorm p (X 0) + lpNorm p (X 1) + lpNorm p (X 2) = 3 →\n      lpNorm p (X 0 + X 1 + X 2) < (3033/2500 : ℝ) →\n      pairGapSum (lpNorm p) (X 0) (X 1) (X 2) < 2 / ((273/625 : ℝ)*p) →\n      (∀ j, -(5559/5000 : ℝ) ≤ X j j ∧ X j j ≤ -(881/2000 : ℝ)) ∧\n      (∀ j i, j ≠ i → (3779/5000 : ℝ) ≤ X j i ∧ X j i ≤ (11847/10000 : ℝ)) ∧\n      (∀ j, lpNorm p (X j) ≤ (1193402307/1000000000 : ℝ)) ∧\n      (∀ i j k : Fin 3, i ≠ j → i ≠ k → j ≠ k → (1139124440087/716625000000 : ℝ) ≤ X j i + X k i) ∧\n      (3314799982801/573300000000 : ℝ) ≤ X 0 1 + X 0 2 + X 1 0 + X 1 2 + X 2 0 + X 2 1 := by sorry",
+    "preamble": "import Definitions.Def_HlawkaSchatten_GapComparison\nimport Definitions.Def_HlawkaSchatten_DiagonalConstruction_Basic\nopen HlawkaSchatten HlawkaSchatten.DiagonalConstruction\n",
+    "natural_language_statement": "On [43/2,345/16], the original norm data in the displayed coarse box imply the same explicit analytic-domain bounds as the parent localization theorem. This proves 2 consecutive original parameter slabs; it is a faithful subinterval decomposition of that same localization result, with no new validity premise.",
+    "source": "Yuxuan Xu, A computer-assisted sharp diagonal Hlawka inequality for real exponents p >= 21, Sections 3-4, https://github.com/Anchen-AI4Math/hlawka-diagonal-certificates/blob/main/paper/main.pdf . Generic contraction framework adapted from @bwdaugherty, Apache-2.0; notices retained.",
+    "tags": [
+      "hlawka-schatten",
+      "localization",
+      "exact-arithmetic"
+    ],
+    "solution_file": "formalization/platform/Sol_localized_domain2_21_04_part0.lean",
+    "solution_sha256": "bef379644d9c26bface662282e17168ae4da036559023f6848cf3998e18ad82c",
+    "explanation": "Complete actual-norm localization for 2 original slabs. The original leaf proof texts are reused and all integer-power inequalities and ten contraction rounds are checked here. No platform theorem imports or external numerical validity predicates are used. The parent timed out; this smaller proof will be recombined into its unchanged statement.",
+    "parent_key": "localized_domain4_21_04",
+    "a": "43/2",
+    "b": "345/16",
+    "indices": [
+      16,
+      17
+    ]
+  },
+  {
+    "key": "localized_domain2_21_04_part1",
+    "theorem_name": "HlawkaSchatten.DiagonalCutoff21.localized_domain2_21_04_part1",
+    "theorem_title": "Actual norm localization subblock [345/16,173/8]",
+    "formal_statement": "theorem HlawkaSchatten.DiagonalCutoff21.localized_domain2_21_04_part1 :\n    ∀ p : ℝ, (345/16 : ℝ) ≤ p → p ≤ (173/8 : ℝ) → ∀ X : Fin 3 → Fin 3 → ℝ,\n      (∀ i, -(607/500 : ℝ) ≤ X i i ∧ X i i ≤ -(189/500 : ℝ)) →\n      (∀ j i, j ≠ i → (349/500 : ℝ) ≤ X j i ∧ X j i ≤ (607/500 : ℝ)) →\n      lpNorm p (X 0) + lpNorm p (X 1) + lpNorm p (X 2) = 3 →\n      lpNorm p (X 0 + X 1 + X 2) < (3033/2500 : ℝ) →\n      pairGapSum (lpNorm p) (X 0) (X 1) (X 2) < 2 / ((273/625 : ℝ)*p) →\n      (∀ j, -(5559/5000 : ℝ) ≤ X j j ∧ X j j ≤ -(881/2000 : ℝ)) ∧\n      (∀ j i, j ≠ i → (3779/5000 : ℝ) ≤ X j i ∧ X j i ≤ (11847/10000 : ℝ)) ∧\n      (∀ j, lpNorm p (X j) ≤ (1193402307/1000000000 : ℝ)) ∧\n      (∀ i j k : Fin 3, i ≠ j → i ≠ k → j ≠ k → (1139124440087/716625000000 : ℝ) ≤ X j i + X k i) ∧\n      (3314799982801/573300000000 : ℝ) ≤ X 0 1 + X 0 2 + X 1 0 + X 1 2 + X 2 0 + X 2 1 := by sorry",
+    "preamble": "import Definitions.Def_HlawkaSchatten_GapComparison\nimport Definitions.Def_HlawkaSchatten_DiagonalConstruction_Basic\nopen HlawkaSchatten HlawkaSchatten.DiagonalConstruction\n",
+    "natural_language_statement": "On [345/16,173/8], the original norm data in the displayed coarse box imply the same explicit analytic-domain bounds as the parent localization theorem. This proves 2 consecutive original parameter slabs; it is a faithful subinterval decomposition of that same localization result, with no new validity premise.",
+    "source": "Yuxuan Xu, A computer-assisted sharp diagonal Hlawka inequality for real exponents p >= 21, Sections 3-4, https://github.com/Anchen-AI4Math/hlawka-diagonal-certificates/blob/main/paper/main.pdf . Generic contraction framework adapted from @bwdaugherty, Apache-2.0; notices retained.",
+    "tags": [
+      "hlawka-schatten",
+      "localization",
+      "exact-arithmetic"
+    ],
+    "solution_file": "formalization/platform/Sol_localized_domain2_21_04_part1.lean",
+    "solution_sha256": "0e42281911a7ff1e1b14aaa699929ad6a8842d53d8fd150d5dcdf99bb50d1294",
+    "explanation": "Complete actual-norm localization for 2 original slabs. The original leaf proof texts are reused and all integer-power inequalities and ten contraction rounds are checked here. No platform theorem imports or external numerical validity predicates are used. The parent timed out; this smaller proof will be recombined into its unchanged statement.",
+    "parent_key": "localized_domain4_21_04",
+    "a": "345/16",
+    "b": "173/8",
+    "indices": [
+      18,
+      19
+    ]
+  },
+  {
+    "key": "localized_domain2_21_08_part0",
+    "theorem_name": "HlawkaSchatten.DiagonalCutoff21.localized_domain2_21_08_part0",
+    "theorem_title": "Actual norm localization subblock [22,353/16]",
+    "formal_statement": "theorem HlawkaSchatten.DiagonalCutoff21.localized_domain2_21_08_part0 :\n    ∀ p : ℝ, (22 : ℝ) ≤ p → p ≤ (353/16 : ℝ) → ∀ X : Fin 3 → Fin 3 → ℝ,\n      (∀ i, -(607/500 : ℝ) ≤ X i i ∧ X i i ≤ -(189/500 : ℝ)) →\n      (∀ j i, j ≠ i → (349/500 : ℝ) ≤ X j i ∧ X j i ≤ (607/500 : ℝ)) →\n      lpNorm p (X 0) + lpNorm p (X 1) + lpNorm p (X 2) = 3 →\n      lpNorm p (X 0 + X 1 + X 2) < (3033/2500 : ℝ) →\n      pairGapSum (lpNorm p) (X 0) (X 1) (X 2) < 2 / ((273/625 : ℝ)*p) →\n      (∀ j, -(5559/5000 : ℝ) ≤ X j j ∧ X j j ≤ -(881/2000 : ℝ)) ∧\n      (∀ j i, j ≠ i → (3779/5000 : ℝ) ≤ X j i ∧ X j i ≤ (11847/10000 : ℝ)) ∧\n      (∀ j, lpNorm p (X j) ≤ (1193402307/1000000000 : ℝ)) ∧\n      (∀ i j k : Fin 3, i ≠ j → i ≠ k → j ≠ k → (1139124440087/716625000000 : ℝ) ≤ X j i + X k i) ∧\n      (3314799982801/573300000000 : ℝ) ≤ X 0 1 + X 0 2 + X 1 0 + X 1 2 + X 2 0 + X 2 1 := by sorry",
+    "preamble": "import Definitions.Def_HlawkaSchatten_GapComparison\nimport Definitions.Def_HlawkaSchatten_DiagonalConstruction_Basic\nopen HlawkaSchatten HlawkaSchatten.DiagonalConstruction\n",
+    "natural_language_statement": "On [22,353/16], the original norm data in the displayed coarse box imply the same explicit analytic-domain bounds as the parent localization theorem. This proves 2 consecutive original parameter slabs; it is a faithful subinterval decomposition of that same localization result, with no new validity premise.",
+    "source": "Yuxuan Xu, A computer-assisted sharp diagonal Hlawka inequality for real exponents p >= 21, Sections 3-4, https://github.com/Anchen-AI4Math/hlawka-diagonal-certificates/blob/main/paper/main.pdf . Generic contraction framework adapted from @bwdaugherty, Apache-2.0; notices retained.",
+    "tags": [
+      "hlawka-schatten",
+      "localization",
+      "exact-arithmetic"
+    ],
+    "solution_file": "formalization/platform/Sol_localized_domain2_21_08_part0.lean",
+    "solution_sha256": "7aa8fff4f7672111be21ddbf3a336bee5621d3ddca457d99f8965c5fd533114f",
+    "explanation": "Complete actual-norm localization for 2 original slabs. The original leaf proof texts are reused and all integer-power inequalities and ten contraction rounds are checked here. No platform theorem imports or external numerical validity predicates are used. The parent timed out; this smaller proof will be recombined into its unchanged statement.",
+    "parent_key": "localized_domain4_21_08",
+    "a": "22",
+    "b": "353/16",
+    "indices": [
+      32,
+      33
+    ]
+  },
+  {
+    "key": "localized_domain2_21_08_part1",
+    "theorem_name": "HlawkaSchatten.DiagonalCutoff21.localized_domain2_21_08_part1",
+    "theorem_title": "Actual norm localization subblock [353/16,177/8]",
+    "formal_statement": "theorem HlawkaSchatten.DiagonalCutoff21.localized_domain2_21_08_part1 :\n    ∀ p : ℝ, (353/16 : ℝ) ≤ p → p ≤ (177/8 : ℝ) → ∀ X : Fin 3 → Fin 3 → ℝ,\n      (∀ i, -(607/500 : ℝ) ≤ X i i ∧ X i i ≤ -(189/500 : ℝ)) →\n      (∀ j i, j ≠ i → (349/500 : ℝ) ≤ X j i ∧ X j i ≤ (607/500 : ℝ)) →\n      lpNorm p (X 0) + lpNorm p (X 1) + lpNorm p (X 2) = 3 →\n      lpNorm p (X 0 + X 1 + X 2) < (3033/2500 : ℝ) →\n      pairGapSum (lpNorm p) (X 0) (X 1) (X 2) < 2 / ((273/625 : ℝ)*p) →\n      (∀ j, -(5559/5000 : ℝ) ≤ X j j ∧ X j j ≤ -(881/2000 : ℝ)) ∧\n      (∀ j i, j ≠ i → (3779/5000 : ℝ) ≤ X j i ∧ X j i ≤ (11847/10000 : ℝ)) ∧\n      (∀ j, lpNorm p (X j) ≤ (1193402307/1000000000 : ℝ)) ∧\n      (∀ i j k : Fin 3, i ≠ j → i ≠ k → j ≠ k → (1139124440087/716625000000 : ℝ) ≤ X j i + X k i) ∧\n      (3314799982801/573300000000 : ℝ) ≤ X 0 1 + X 0 2 + X 1 0 + X 1 2 + X 2 0 + X 2 1 := by sorry",
+    "preamble": "import Definitions.Def_HlawkaSchatten_GapComparison\nimport Definitions.Def_HlawkaSchatten_DiagonalConstruction_Basic\nopen HlawkaSchatten HlawkaSchatten.DiagonalConstruction\n",
+    "natural_language_statement": "On [353/16,177/8], the original norm data in the displayed coarse box imply the same explicit analytic-domain bounds as the parent localization theorem. This proves 2 consecutive original parameter slabs; it is a faithful subinterval decomposition of that same localization result, with no new validity premise.",
+    "source": "Yuxuan Xu, A computer-assisted sharp diagonal Hlawka inequality for real exponents p >= 21, Sections 3-4, https://github.com/Anchen-AI4Math/hlawka-diagonal-certificates/blob/main/paper/main.pdf . Generic contraction framework adapted from @bwdaugherty, Apache-2.0; notices retained.",
+    "tags": [
+      "hlawka-schatten",
+      "localization",
+      "exact-arithmetic"
+    ],
+    "solution_file": "formalization/platform/Sol_localized_domain2_21_08_part1.lean",
+    "solution_sha256": "988405258954f80463b68c1ec41acf5f6ec3d5bfdc56a4f9a1672e538dfed967",
+    "explanation": "Complete actual-norm localization for 2 original slabs. The original leaf proof texts are reused and all integer-power inequalities and ten contraction rounds are checked here. No platform theorem imports or external numerical validity predicates are used. The parent timed out; this smaller proof will be recombined into its unchanged statement.",
+    "parent_key": "localized_domain4_21_08",
+    "a": "353/16",
+    "b": "177/8",
+    "indices": [
+      34,
+      35
+    ]
+  },
+  {
+    "key": "localized_domain2_21_14_part0",
+    "theorem_name": "HlawkaSchatten.DiagonalCutoff21.localized_domain2_21_14_part0",
+    "theorem_title": "Actual norm localization subblock [91/4,365/16]",
+    "formal_statement": "theorem HlawkaSchatten.DiagonalCutoff21.localized_domain2_21_14_part0 :\n    ∀ p : ℝ, (91/4 : ℝ) ≤ p → p ≤ (365/16 : ℝ) → ∀ X : Fin 3 → Fin 3 → ℝ,\n      (∀ i, -(607/500 : ℝ) ≤ X i i ∧ X i i ≤ -(189/500 : ℝ)) →\n      (∀ j i, j ≠ i → (349/500 : ℝ) ≤ X j i ∧ X j i ≤ (607/500 : ℝ)) →\n      lpNorm p (X 0) + lpNorm p (X 1) + lpNorm p (X 2) = 3 →\n      lpNorm p (X 0 + X 1 + X 2) < (3033/2500 : ℝ) →\n      pairGapSum (lpNorm p) (X 0) (X 1) (X 2) < 2 / ((273/625 : ℝ)*p) →\n      (∀ j, -(5559/5000 : ℝ) ≤ X j j ∧ X j j ≤ -(881/2000 : ℝ)) ∧\n      (∀ j i, j ≠ i → (3779/5000 : ℝ) ≤ X j i ∧ X j i ≤ (11847/10000 : ℝ)) ∧\n      (∀ j, lpNorm p (X j) ≤ (1193402307/1000000000 : ℝ)) ∧\n      (∀ i j k : Fin 3, i ≠ j → i ≠ k → j ≠ k → (1139124440087/716625000000 : ℝ) ≤ X j i + X k i) ∧\n      (3314799982801/573300000000 : ℝ) ≤ X 0 1 + X 0 2 + X 1 0 + X 1 2 + X 2 0 + X 2 1 := by sorry",
+    "preamble": "import Definitions.Def_HlawkaSchatten_GapComparison\nimport Definitions.Def_HlawkaSchatten_DiagonalConstruction_Basic\nopen HlawkaSchatten HlawkaSchatten.DiagonalConstruction\n",
+    "natural_language_statement": "On [91/4,365/16], the original norm data in the displayed coarse box imply the same explicit analytic-domain bounds as the parent localization theorem. This proves 2 consecutive original parameter slabs; it is a faithful subinterval decomposition of that same localization result, with no new validity premise.",
+    "source": "Yuxuan Xu, A computer-assisted sharp diagonal Hlawka inequality for real exponents p >= 21, Sections 3-4, https://github.com/Anchen-AI4Math/hlawka-diagonal-certificates/blob/main/paper/main.pdf . Generic contraction framework adapted from @bwdaugherty, Apache-2.0; notices retained.",
+    "tags": [
+      "hlawka-schatten",
+      "localization",
+      "exact-arithmetic"
+    ],
+    "solution_file": "formalization/platform/Sol_localized_domain2_21_14_part0.lean",
+    "solution_sha256": "5acd6712fda734745141a5b2d3b92938084805c8ece78b9da6c424f21140e0ce",
+    "explanation": "Complete actual-norm localization for 2 original slabs. The original leaf proof texts are reused and all integer-power inequalities and ten contraction rounds are checked here. No platform theorem imports or external numerical validity predicates are used. The parent timed out; this smaller proof will be recombined into its unchanged statement.",
+    "parent_key": "localized_domain4_21_14",
+    "a": "91/4",
+    "b": "365/16",
+    "indices": [
+      56,
+      57
+    ]
+  },
+  {
+    "key": "localized_domain2_21_14_part1",
+    "theorem_name": "HlawkaSchatten.DiagonalCutoff21.localized_domain2_21_14_part1",
+    "theorem_title": "Actual norm localization subblock [365/16,183/8]",
+    "formal_statement": "theorem HlawkaSchatten.DiagonalCutoff21.localized_domain2_21_14_part1 :\n    ∀ p : ℝ, (365/16 : ℝ) ≤ p → p ≤ (183/8 : ℝ) → ∀ X : Fin 3 → Fin 3 → ℝ,\n      (∀ i, -(607/500 : ℝ) ≤ X i i ∧ X i i ≤ -(189/500 : ℝ)) →\n      (∀ j i, j ≠ i → (349/500 : ℝ) ≤ X j i ∧ X j i ≤ (607/500 : ℝ)) →\n      lpNorm p (X 0) + lpNorm p (X 1) + lpNorm p (X 2) = 3 →\n      lpNorm p (X 0 + X 1 + X 2) < (3033/2500 : ℝ) →\n      pairGapSum (lpNorm p) (X 0) (X 1) (X 2) < 2 / ((273/625 : ℝ)*p) →\n      (∀ j, -(5559/5000 : ℝ) ≤ X j j ∧ X j j ≤ -(881/2000 : ℝ)) ∧\n      (∀ j i, j ≠ i → (3779/5000 : ℝ) ≤ X j i ∧ X j i ≤ (11847/10000 : ℝ)) ∧\n      (∀ j, lpNorm p (X j) ≤ (1193402307/1000000000 : ℝ)) ∧\n      (∀ i j k : Fin 3, i ≠ j → i ≠ k → j ≠ k → (1139124440087/716625000000 : ℝ) ≤ X j i + X k i) ∧\n      (3314799982801/573300000000 : ℝ) ≤ X 0 1 + X 0 2 + X 1 0 + X 1 2 + X 2 0 + X 2 1 := by sorry",
+    "preamble": "import Definitions.Def_HlawkaSchatten_GapComparison\nimport Definitions.Def_HlawkaSchatten_DiagonalConstruction_Basic\nopen HlawkaSchatten HlawkaSchatten.DiagonalConstruction\n",
+    "natural_language_statement": "On [365/16,183/8], the original norm data in the displayed coarse box imply the same explicit analytic-domain bounds as the parent localization theorem. This proves 2 consecutive original parameter slabs; it is a faithful subinterval decomposition of that same localization result, with no new validity premise.",
+    "source": "Yuxuan Xu, A computer-assisted sharp diagonal Hlawka inequality for real exponents p >= 21, Sections 3-4, https://github.com/Anchen-AI4Math/hlawka-diagonal-certificates/blob/main/paper/main.pdf . Generic contraction framework adapted from @bwdaugherty, Apache-2.0; notices retained.",
+    "tags": [
+      "hlawka-schatten",
+      "localization",
+      "exact-arithmetic"
+    ],
+    "solution_file": "formalization/platform/Sol_localized_domain2_21_14_part1.lean",
+    "solution_sha256": "7b36b0c364870a0b7d5e3127e4dc9d3735eb3659c046c050e4cde7501eb05246",
+    "explanation": "Complete actual-norm localization for 2 original slabs. The original leaf proof texts are reused and all integer-power inequalities and ten contraction rounds are checked here. No platform theorem imports or external numerical validity predicates are used. The parent timed out; this smaller proof will be recombined into its unchanged statement.",
+    "parent_key": "localized_domain4_21_14",
+    "a": "365/16",
+    "b": "183/8",
+    "indices": [
+      58,
+      59
+    ]
+  }
+]

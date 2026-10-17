@@ -98,7 +98,11 @@
       "results/lean-domain-blocks-build.json",
       "results/prove2me-domain-blocks.json",
       "results/lean-root-assembly-build.json",
-      "results/prove2me-root.json"
+      "results/prove2me-root.json",
+      "results/lean-domain-children-build.json",
+      "results/prove2me-domain-children.json",
+      "results/prove2me-domain-repairs.json",
+      "results/lean-domain-repairs-build.json"
     ],
     "release_replay": "results/release-replay.json",
     "release_replay_status": "PASS",
@@ -109,8 +113,8 @@
       "stage": "all_new_ingredients_kernel_checked; platform_closure_in_progress",
       "toolchain": "leanprover/lean4:v4.33.1",
       "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474",
-      "locally_compiled_auxiliary_files": 70,
-      "platform_accepted_auxiliary_theorems": 34,
+      "locally_compiled_auxiliary_files": 117,
+      "platform_accepted_auxiliary_theorems": 53,
       "root_status": "Open",
       "axioms": [
         "propext",
@@ -142,9 +146,9 @@
       "new_core_axiom_checks": 601,
       "new_core_evidence": "results/lean-full-window-build.json",
       "local_final_assembly": "Exact cutoff21 conclusion with an explicit cutoff32 tail input; the already Proved platform tail is not independently rebuilt here.",
-      "compact_certificate_manifest": "formalization/platform/real-piece-proofs.json",
-      "compact_certificate_build": "results/lean-real-pieces-build.json",
-      "compact_certificate_platform": "results/prove2me-real-pieces.json",
+      "compact_certificate_manifest": "formalization/platform/domain-block-proofs.json",
+      "compact_certificate_build": "results/lean-domain-blocks-build.json",
+      "compact_certificate_platform": "results/prove2me-domain-blocks.json",
       "original_large_certificate_attempt": "The first three 16-slab packets and the first three 8-slab packets timed out at the server 300s limit. Local proofs pass; packet size is being tested rather than treated as a fixed remaining theorem count.",
       "local_auxiliary_file_count_scope": "Passing exact files in the current auxiliary submission manifests; the superseded large packet checks are recorded separately.",
       "minimal_localization_platform": "results/prove2me-localization.json",
@@ -154,7 +158,15 @@
       "domain_block_platform": "results/prove2me-domain-blocks.json",
       "root_submission_status": "SKETCH_ACCEPTED",
       "root_assembly_open_leaf_count": 2,
-      "root_assembly_evidence": "results/prove2me-root.json"
+      "root_assembly_evidence": "results/prove2me-root.json",
+      "superseded_eight_slab_manifest": "formalization/platform/real-piece-proofs.json",
+      "domain_blocks_closed": 17,
+      "domain_block_target_count": 65,
+      "domain_block_repairs_pending": [
+        "localized_domain4_21_08",
+        "localized_domain4_21_14"
+      ],
+      "domain_repair_manifest": "formalization/platform/domain-repair-proofs.json"
     }
   },
   "publication": {

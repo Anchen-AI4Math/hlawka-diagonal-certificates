@@ -1,5 +1,5 @@
 {
-  "status": "RUNNING",
+  "status": "PASS",
   "toolchain": "leanprover/lean4:v4.33.1",
   "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474",
   "proofs": [
@@ -338,8 +338,452 @@
         "propext"
       ],
       "elapsed_seconds": 47.098
+    },
+    {
+      "key": "localized_domain4_21_28",
+      "status": "PASS",
+      "solution_file": "formalization/platform/Sol_localized_domain4_21_28.lean",
+      "sha256": "69ac077e35f49adb62d608fbdba76a9386862a830851968e87182d5c201d7a83",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 53.668
+    },
+    {
+      "key": "localized_domain4_21_29",
+      "status": "PASS",
+      "solution_file": "formalization/platform/Sol_localized_domain4_21_29.lean",
+      "sha256": "28601cc3137c442352cd32ed9412a9db8dc180a18c10eeb8a8743a1b04eb68f7",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 54.529
+    },
+    {
+      "key": "localized_domain4_21_30",
+      "status": "PASS",
+      "solution_file": "formalization/platform/Sol_localized_domain4_21_30.lean",
+      "sha256": "0f4bbb14da068d7cbae8a9080d4ac21fd986e155cd223a90d6c22d243748a9c6",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 49.352
+    },
+    {
+      "key": "localized_domain4_21_31",
+      "status": "PASS",
+      "solution_file": "formalization/platform/Sol_localized_domain4_21_31.lean",
+      "sha256": "c84867650448a72a0dad1e223fd898ac0538bf1f4e0b2f026cc166f3d4f95622",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 51.955
+    },
+    {
+      "key": "localized_domain4_21_32",
+      "status": "PASS",
+      "solution_file": "formalization/platform/Sol_localized_domain4_21_32.lean",
+      "sha256": "1b59f8739e65e8c0424d5f5105f07254d791508a24a324e7daae8da3abe8ecb0",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 50.247
+    },
+    {
+      "key": "localized_domain4_21_33",
+      "status": "PASS",
+      "solution_file": "formalization/platform/Sol_localized_domain4_21_33.lean",
+      "sha256": "7b72a2dababbcda02d0e51743b7f3c21e8b2643835f9351726de0a5d0d28735b",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 48.352
+    },
+    {
+      "key": "localized_domain4_21_34",
+      "status": "PASS",
+      "solution_file": "formalization/platform/Sol_localized_domain4_21_34.lean",
+      "sha256": "8e974ac9a09960330e5063f45492a3dba893a93d47c3f45328f0b7171d81e166",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 51.168
+    },
+    {
+      "key": "localized_domain4_21_35",
+      "status": "PASS",
+      "solution_file": "formalization/platform/Sol_localized_domain4_21_35.lean",
+      "sha256": "04370bdcc483f3794b30d2b339490216f5b87acf18a6ce1cd35c99e11ed59be2",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 50.925
+    },
+    {
+      "key": "localized_domain4_21_36",
+      "status": "PASS",
+      "solution_file": "formalization/platform/Sol_localized_domain4_21_36.lean",
+      "sha256": "5c8dd8650758c028c9efb8da8830902ba7246891459f476fb5bbc17bcf676133",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 53.064
+    },
+    {
+      "key": "localized_domain4_21_37",
+      "status": "PASS",
+      "solution_file": "formalization/platform/Sol_localized_domain4_21_37.lean",
+      "sha256": "2f317dffe6892e18f9d04808948576b62d53761cb6e58e09d005224e6c063f85",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 54.165
+    },
+    {
+      "key": "localized_domain4_21_38",
+      "status": "PASS",
+      "solution_file": "formalization/platform/Sol_localized_domain4_21_38.lean",
+      "sha256": "41aca61ca984919ec843bfb820be52ef844f079503f293b726f24e41c869d3ff",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 56.69
+    },
+    {
+      "key": "localized_domain4_21_39",
+      "status": "PASS",
+      "solution_file": "formalization/platform/Sol_localized_domain4_21_39.lean",
+      "sha256": "cb42739f2ab791fd599c0fdf4d77ed89fcb810e98b2f703b4cd239fb61e1386d",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 54.91
+    },
+    {
+      "key": "localized_domain4_21_40",
+      "status": "PASS",
+      "solution_file": "formalization/platform/Sol_localized_domain4_21_40.lean",
+      "sha256": "926adeb53327c526fad2b0e39e66cff1f5612ec65ce3fdeb171e30fb8c711859",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 84.811
+    },
+    {
+      "key": "localized_domain4_26_00",
+      "status": "PASS",
+      "solution_file": "formalization/platform/Sol_localized_domain4_26_00.lean",
+      "sha256": "c9301aecf93e42bba89bbf82004608d99aa1742ee4e0684d730220be0815bb48",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 77.97
+    },
+    {
+      "key": "localized_domain4_26_01",
+      "status": "PASS",
+      "solution_file": "formalization/platform/Sol_localized_domain4_26_01.lean",
+      "sha256": "4b5362edd6eeb474782fe1524ab99a5c1cbd43e264c25653ab4c1055476140a9",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 87.929
+    },
+    {
+      "key": "localized_domain4_26_02",
+      "status": "PASS",
+      "solution_file": "formalization/platform/Sol_localized_domain4_26_02.lean",
+      "sha256": "9b9674e4850a506d26bbf3e290098462a674c697eb02b251ebcec74c585cc94e",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 82.368
+    },
+    {
+      "key": "localized_domain4_26_03",
+      "status": "PASS",
+      "solution_file": "formalization/platform/Sol_localized_domain4_26_03.lean",
+      "sha256": "7ba1410b525fb8571c1bc60350e4b25ec9b0089cb2ffde237bc4056c7dd2ccd1",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 77.781
+    },
+    {
+      "key": "localized_domain4_26_04",
+      "status": "PASS",
+      "solution_file": "formalization/platform/Sol_localized_domain4_26_04.lean",
+      "sha256": "1a5a4ee5968be69c91edad1ab9671aed803e8b244f6182f74912e52cab9b8b59",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 77.603
+    },
+    {
+      "key": "localized_domain4_26_05",
+      "status": "PASS",
+      "solution_file": "formalization/platform/Sol_localized_domain4_26_05.lean",
+      "sha256": "f88fcee07d7763fd971ef0355a7485c2c9a4d8ba1935545222f578bfd92030f0",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 73.806
+    },
+    {
+      "key": "localized_domain4_26_06",
+      "status": "PASS",
+      "solution_file": "formalization/platform/Sol_localized_domain4_26_06.lean",
+      "sha256": "5c3a5bf8f539c9296fd1fd14eb583abd80650559c4c8eaef38de3919b2704409",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 73.502
+    },
+    {
+      "key": "localized_domain4_26_07",
+      "status": "PASS",
+      "solution_file": "formalization/platform/Sol_localized_domain4_26_07.lean",
+      "sha256": "1c5f7c331ce660c9f7a156bcf33e93c0e4b9522b55a757bd9a55bbe1a2f77f91",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 74.041
+    },
+    {
+      "key": "localized_domain4_26_08",
+      "status": "PASS",
+      "solution_file": "formalization/platform/Sol_localized_domain4_26_08.lean",
+      "sha256": "32525b023cdd6adda1460600121cd4907b13dbbb07ec754be7f937bc882b6d91",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 74.67
+    },
+    {
+      "key": "localized_domain4_26_09",
+      "status": "PASS",
+      "solution_file": "formalization/platform/Sol_localized_domain4_26_09.lean",
+      "sha256": "c40453a83b258edbafe7f5d3cf2502408621895e75382e07f65460944cb7bf93",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 91.442
+    },
+    {
+      "key": "localized_domain4_26_10",
+      "status": "PASS",
+      "solution_file": "formalization/platform/Sol_localized_domain4_26_10.lean",
+      "sha256": "ec7e655577a7cf959b21934a8eefe618e33c68f651fdc30a9ac36a519c0ceaa6",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 97.034
+    },
+    {
+      "key": "localized_domain4_26_11",
+      "status": "PASS",
+      "solution_file": "formalization/platform/Sol_localized_domain4_26_11.lean",
+      "sha256": "f3dd356ed6449d3e47efafd13b2b4e4d13bdad2725019fb1b3935d86b0929305",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 82.971
+    },
+    {
+      "key": "localized_domain4_26_12",
+      "status": "PASS",
+      "solution_file": "formalization/platform/Sol_localized_domain4_26_12.lean",
+      "sha256": "31a5eb8509051ab2bb108fe8ca8adb33e5568185232aecd28d21702b1db56343",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 78.428
+    },
+    {
+      "key": "localized_domain4_26_13",
+      "status": "PASS",
+      "solution_file": "formalization/platform/Sol_localized_domain4_26_13.lean",
+      "sha256": "6761cf0de5d6b15413e308bfd22ec758defbd7f24c68f3bd51d2e64c9160805b",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 77.777
+    },
+    {
+      "key": "localized_domain4_26_14",
+      "status": "PASS",
+      "solution_file": "formalization/platform/Sol_localized_domain4_26_14.lean",
+      "sha256": "3be8d1d010e75758266155291377213fff08f2f8aad3f581bb2b6e54e370760d",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 75.243
+    },
+    {
+      "key": "localized_domain4_26_15",
+      "status": "PASS",
+      "solution_file": "formalization/platform/Sol_localized_domain4_26_15.lean",
+      "sha256": "bd9732caf38918084511e537f1ff85671a979354d4e1bf701ffe92db38984bd3",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 76.118
+    },
+    {
+      "key": "localized_domain4_26_16",
+      "status": "PASS",
+      "solution_file": "formalization/platform/Sol_localized_domain4_26_16.lean",
+      "sha256": "50edc4d35597e454d03e9d0495e31a2cc308b47e3b6a1684dac8069010c6cf8f",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 75.503
+    },
+    {
+      "key": "localized_domain4_26_17",
+      "status": "PASS",
+      "solution_file": "formalization/platform/Sol_localized_domain4_26_17.lean",
+      "sha256": "5bdca812d6f6dca5573d4cf905d40e8c41a53aea6ff76ba04adf36b31eae11da",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 71.632
+    },
+    {
+      "key": "localized_domain4_26_18",
+      "status": "PASS",
+      "solution_file": "formalization/platform/Sol_localized_domain4_26_18.lean",
+      "sha256": "09734d3f5fe4bf30d356795d1b0fefa57dab1e77ebbeffca3ae3198f9621cb53",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 76.435
+    },
+    {
+      "key": "localized_domain4_26_19",
+      "status": "PASS",
+      "solution_file": "formalization/platform/Sol_localized_domain4_26_19.lean",
+      "sha256": "4ac745f0b4822dacee30b9014ad7316d57d9072bc1bd7d3443593770ba7d1c8e",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 67.215
+    },
+    {
+      "key": "localized_domain4_26_20",
+      "status": "PASS",
+      "solution_file": "formalization/platform/Sol_localized_domain4_26_20.lean",
+      "sha256": "60b9cf63e8df755890010f7aee64b71db8fe9194fc92be4ffbb74998d6ec8dbe",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 67.37
+    },
+    {
+      "key": "localized_domain4_26_21",
+      "status": "PASS",
+      "solution_file": "formalization/platform/Sol_localized_domain4_26_21.lean",
+      "sha256": "b255b33e11906f7127c92523ee6e6db5a0725599a5ed64bfe50f7636db3a3a19",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 72.487
+    },
+    {
+      "key": "localized_domain4_26_22",
+      "status": "PASS",
+      "solution_file": "formalization/platform/Sol_localized_domain4_26_22.lean",
+      "sha256": "fde416a893928769e585e84709bc92bbd6f561cc5ed7f57705e75fedabb18047",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 79.0
+    },
+    {
+      "key": "localized_domain4_26_23",
+      "status": "PASS",
+      "solution_file": "formalization/platform/Sol_localized_domain4_26_23.lean",
+      "sha256": "f20c0d74c4610ac4b937fd068148ee93a693db4ff463a080ac66707801de59f6",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 71.9
     }
   ],
   "manifest": "formalization/platform/domain-block-proofs.json",
-  "scope": "28 proof files from this manifest only. The cutoff21 root remains unproved."
+  "scope": "65 proof files from this manifest only. The cutoff21 root remains unproved."
 }
