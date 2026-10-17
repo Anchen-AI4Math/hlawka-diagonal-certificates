@@ -1,0 +1,13 @@
+{
+  "checked_at": "2026-10-17T08:30:10.442653+00:00",
+  "source": "Authenticated server read-back; owner-only proposal identifier omitted.",
+  "status": "In review",
+  "submitted_at": "2026-10-17T08:15:12.549+00:00",
+  "confirmed_items": 11,
+  "total_items": 11,
+  "campaign_id": "e360ac37-a9aa-4574-bda3-b50843c599e3",
+  "campaign_url": "https://prove2.me/campaigns/sharp-diagonal-hlawka-constant",
+  "live_mission_created": false,
+  "goal_url": "https://prove2.me/theorems/db286144-c8c4-4918-9bc9-03fcadedfffd",
+  "proof_status": "Open; auxiliary proofs do not establish the root theorem."
+}

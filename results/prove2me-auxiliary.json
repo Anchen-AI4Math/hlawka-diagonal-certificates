@@ -1,0 +1,60 @@
+{
+  "env": "0df444a360eaa60ab8c11dca51a86af692955474",
+  "scope": "Auxiliary lemmas only; cutoff21 root is not proved.",
+  "theorems": {
+    "coarse21_stage0": {
+      "theorem_name": "HlawkaSchatten.DiagonalCutoff21.coarse21_stage0",
+      "publish_job_id": "c9f62b42-a159-420e-b335-d850239c98b1",
+      "publish_status": "PUBLISHED",
+      "theorem_id": "27c8aade-49b0-4c71-a5d2-315ae0125c39",
+      "submission_id": "ed05f8da-4d6a-4e35-aad8-5d6c24187711",
+      "proof_status": "ACCEPTED",
+      "solution_sha256": "43dd7caced46f51a32885f590e4dc1fc40f04c5bd245e4f0ce5bab280fbf24e7"
+    },
+    "coarse21_stage1": {
+      "theorem_name": "HlawkaSchatten.DiagonalCutoff21.coarse21_stage1",
+      "publish_job_id": "3124a044-34ed-486d-b753-4a570559fd0f",
+      "publish_status": "PUBLISHED",
+      "theorem_id": "cf272823-9b62-417a-86fd-0227886fe171",
+      "submission_id": "266d888b-8c2f-41b4-bec7-4a72564a12c1",
+      "proof_status": "ACCEPTED",
+      "solution_sha256": "fc63d6b9e6be6aec565d279ebd635f545fe5265edf4e190c9ca2ac89d5a20f16"
+    },
+    "coarse26_stage0": {
+      "theorem_name": "HlawkaSchatten.DiagonalCutoff21.coarse26_stage0",
+      "publish_job_id": "ada5769b-940f-44fc-aebb-66d42280176e",
+      "publish_status": "PUBLISHED",
+      "theorem_id": "b2b1da2f-878c-42b9-9f9a-ee6a5bd39e11",
+      "submission_id": "7fd06e11-0d4d-4569-80e9-52dce8d61ce8",
+      "proof_status": "ACCEPTED",
+      "solution_sha256": "4a3064f695058610987cb1e20ad1f0df9887e5659820cae1f9c077935a871062"
+    },
+    "coarse26_stage1": {
+      "theorem_name": "HlawkaSchatten.DiagonalCutoff21.coarse26_stage1",
+      "publish_job_id": "3f6d916a-a4e0-4954-a63f-a6df9173f747",
+      "publish_status": "PUBLISHED",
+      "theorem_id": "375d29c8-7474-4d9e-9cd7-6d1746de5891",
+      "submission_id": "c14d2d8f-979a-4e57-ac8e-59150d95ebd0",
+      "proof_status": "ACCEPTED",
+      "solution_sha256": "c3c13060747e4c49013d8c9db208836584ea9a345226c32e15da2867b89abc4a"
+    },
+    "residual_energy": {
+      "theorem_name": "HlawkaSchatten.DiagonalCutoff21.residual_energy_bound_rounded",
+      "publish_job_id": "816911f8-67b3-4060-abe6-99edfaff1623",
+      "publish_status": "PUBLISHED",
+      "theorem_id": "34ad8b62-b3cd-4b9d-95b5-2dc7a3cf6c90",
+      "submission_id": "77c16c4b-1a69-4d7e-8b25-d3d67463464a",
+      "proof_status": "ACCEPTED",
+      "solution_sha256": "09c0dcd303cdc4e48f159dd8a326975f33241f9af65311db3bd7ee58c97f1813"
+    },
+    "matrix_pair_residual": {
+      "theorem_name": "HlawkaSchatten.DiagonalCutoff21.matrix_pair_residual_bound_explicit",
+      "publish_job_id": "a6647bdc-b307-453e-9eb4-73b5936428af",
+      "publish_status": "PUBLISHED",
+      "theorem_id": "801ebba3-077b-43ec-b4b4-cb2aa8f6fee4",
+      "submission_id": "baac6538-babb-4831-89e9-c6ad5096ab2a",
+      "proof_status": "ACCEPTED",
+      "solution_sha256": "c5408a1cf88fae22390ebdb327bf085595bafc4d93b5eedfb71117a50373d9f0"
+    }
+  }
+}

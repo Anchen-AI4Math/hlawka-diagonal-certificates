@@ -1,0 +1,80 @@
+{
+  "status": "PASS",
+  "toolchain": "leanprover/lean4:v4.33.1",
+  "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474",
+  "proofs": [
+    {
+      "key": "coarse21_stage0",
+      "status": "PASS",
+      "solution_file": "formalization/platform/Sol_coarse21_stage0.lean",
+      "sha256": "43dd7caced46f51a32885f590e4dc1fc40f04c5bd245e4f0ce5bab280fbf24e7",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 13.371
+    },
+    {
+      "key": "coarse21_stage1",
+      "status": "PASS",
+      "solution_file": "formalization/platform/Sol_coarse21_stage1.lean",
+      "sha256": "fc63d6b9e6be6aec565d279ebd635f545fe5265edf4e190c9ca2ac89d5a20f16",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 12.961
+    },
+    {
+      "key": "coarse26_stage0",
+      "status": "PASS",
+      "solution_file": "formalization/platform/Sol_coarse26_stage0.lean",
+      "sha256": "4a3064f695058610987cb1e20ad1f0df9887e5659820cae1f9c077935a871062",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 14.04
+    },
+    {
+      "key": "coarse26_stage1",
+      "status": "PASS",
+      "solution_file": "formalization/platform/Sol_coarse26_stage1.lean",
+      "sha256": "c3c13060747e4c49013d8c9db208836584ea9a345226c32e15da2867b89abc4a",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 12.65
+    },
+    {
+      "key": "residual_energy",
+      "status": "PASS",
+      "solution_file": "formalization/platform/Sol_residual_energy.lean",
+      "sha256": "09c0dcd303cdc4e48f159dd8a326975f33241f9af65311db3bd7ee58c97f1813",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 10.193
+    },
+    {
+      "key": "matrix_pair_residual",
+      "status": "PASS",
+      "solution_file": "formalization/platform/Sol_matrix_pair_residual.lean",
+      "sha256": "c5408a1cf88fae22390ebdb327bf085595bafc4d93b5eedfb71117a50373d9f0",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 11.932
+    }
+  ],
+  "scope": "6 auxiliary proofs only. The cutoff21 root remains unproved."
+}

@@ -53,7 +53,7 @@
     "lp_dual_certificates": 36,
     "arithmetic_crosschecks": 53,
     "negative_controls_per_backend": 8,
-    "new_lean_proof": false,
+    "new_lean_proof": true,
     "second_arithmetic_implementation": true,
     "independent_end_to_end_verifier": false,
     "shared_components": [
@@ -72,15 +72,34 @@
       "results/cutoff26-regression.json",
       "results/cutoff26-rational.json",
       "results/arithmetic-crosscheck.json",
-      "results/release-replay.json"
+      "results/release-replay.json",
+      "results/lean-auxiliary-build.json",
+      "results/prove2me-auxiliary.json"
     ],
     "release_replay": "results/release-replay.json",
     "release_replay_status": "PASS",
     "release_negative_controls": 15,
-    "proposal_statement_compilation": "platform/proposal/validation.json"
+    "proposal_statement_compilation": "platform/proposal/validation.json",
+    "full_cutoff21_lean_proof": false,
+    "lean_formalization": {
+      "stage": "auxiliary proofs",
+      "toolchain": "leanprover/lean4:v4.33.1",
+      "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474",
+      "locally_compiled_auxiliary_files": 6,
+      "platform_accepted_auxiliary_theorems": 6,
+      "root_status": "Open",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "sources": "formalization/README.md",
+      "build_evidence": "results/lean-auxiliary-build.json",
+      "platform_evidence": "results/prove2me-auxiliary.json"
+    }
   },
   "publication": {
-    "platform_submitted": false,
+    "platform_submitted": true,
     "paper_submitted": false,
     "public_navigation": "synced and remotely verified: organization profile README, research-index README and catalog.json",
     "preprint_title": "A computer-assisted sharp diagonal Hlawka inequality for real exponents p >= 21",
@@ -96,16 +115,18 @@
     "evidence": "results/publication-v1.json",
     "preprint_public": true,
     "prove2me_proposal": {
-      "status": "Draft",
+      "status": "In review",
       "campaign": "sharp-diagonal-hlawka-constant",
       "campaign_flag_set": true,
       "target_cutoff": "21",
       "proposal_uploaded": true,
-      "submitted_for_moderation": false,
+      "submitted_for_moderation": true,
       "live_mission_created": false,
       "campaign_entry_attested": false,
-      "human_self_audit_and_submit_pending": true,
-      "public_materials": "platform/README.md"
+      "human_self_audit_and_submit_pending": false,
+      "public_materials": "platform/README.md",
+      "submitted_at": "2026-10-17T08:15:12.549+00:00",
+      "evidence": "results/prove2me-proposal-status.json"
     }
   }
 }
