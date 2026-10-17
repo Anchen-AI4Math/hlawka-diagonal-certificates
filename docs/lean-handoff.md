@@ -14,19 +14,17 @@
 
 这些已通过的数学步骤不是当前缺口。原始 `sources/*.lean` 保持字节不变；改编与归属记录于 [Foundation provenance](../formalization/Hlawka21/Foundation/provenance.json)。
 
-## 平台闭合与当前缺口
+## 平台闭合与最终证据
 
-两个原始标量窗口和原先 32 个辅助定理已获平台接受。新增的任意反例粗定位两个窗口、两组公共解析域非负性、通用复数最小性传递均读回 Proved、零开放依赖。见 [反例归约](../results/prove2me-failure.json)、[公共分析与传递](../results/prove2me-analytic-assembly.json)。
+**原始完整主目标已完成：`Proved`、零开放依赖。** 两个原始标量窗口、两个原始无条件实三维窗口均为 `Proved`、零开放依赖；[全目标读回](../results/prove2me-goals.json) 核对原始声明与导入前言未改变。
 
-单段实际范数定位 `actual_localize21_slab000` 也已 ACCEPTED，读回 Proved、零开放依赖：[记录](../results/prove2me-localization.json)。因此平台有限算术路线可行，不能把编译超时理解为数学反例。
+实际反例归约、分段定位、曲率、凸性、对称平均和所有有限复维度的最小性传递均已通过。65 个定位父定理覆盖原 256 段，全部平台闭合。原始 16 段及 8 段大包的超时仍保留为历史；四段方案中另有 4 个父目标通过 8 个更小子区间和同一父命题的拼接证明闭合。没有重复上传相同失败文件或修改目标范围。
 
-首批 16 段打包和随后 8 段打包的前三个提交均超出服务器 300 秒限时。保留 ERROR 历史，不重复上传原文件。8 段方案共 33 份，本地批量检查已中止并保留 11 个精确文件 PASS；不能称为全部通过或“固定剩余 36 项”。
+本地精确文件检查与平台接受记录分别保留：[65 份原文件](../results/lean-domain-blocks-build.json)、[父目标闭合](../results/prove2me-domain-blocks.json)、[子证书](../results/prove2me-domain-children.json)、[修复证明](../results/prove2me-domain-repairs.json)。修复后采用的源文件也独立经过本地内核检查。
 
-首个 4 段组合已在平台 Proved、零开放依赖；当前逐批核验和提交 4 段一组的实际范数定位，只导出公共解析域所需的显式有理界，不导入解析定理。`domain-blocks.json` 检查所有 256 段恰好覆盖一次且端点无缝；其本地精确文件检查与平台判决必须分别读取，不能从已生成源文件推断通过。复杂证明不能藏入 Definition 文件绕过平台限制。
+两个窗口的接口检查使用 41、24 个显式证书参数；可逆标识符替换核对其证明体与服务器文件一致。这些接口检查是条件性检查，不能单独替代实际 `RealWindows` 无条件证明；后者及全部定位证书已分别核验。可选逐文件镜像导入实际证明；已停止并移除重复展开全部证明的慢速聚合镜像，没有以 `sorry` 或新公理替代。
 
-全部 65 份原始四段文件已通过精确本地检查。个别平台超时保持原父声明，通过两个更小子区间独立证明再组合修复；三个初始超时块已全部修复。两个窗口的组合层已使用 41、24 个显式证书参数通过检查，证明体可逆替换回最终服务器文件；这项条件接口检查不改变已通过的无条件 `RealWindows` 证明。重复编译 65 个边界包装的聚合 API 已停止并移除；可选镜像仍导入各自的实际证明。平台只有在对应完整覆盖全部闭合后才提交原窗口。
-
-原始 real_three_window21 已 Proved、零开放依赖；real_three_window26 和最终主目标尚未闭合，见 [原目标读回](../results/prove2me-goals.json)。后续须将完整 `[21,32]` 的闭合证书与公共解析定理、任意反例归约连接，再通过已闭合的复数桥接与 cutoff 32 尾部关闭原始主目标。`prepare_real_window_platform_proofs.py` 已接入 65 份四段定位及两组已闭合解析定理；原始主目标组合已获 SKETCH_ACCEPTED，目前仅原始 real_three_window26 依赖待闭合，见 [主目标记录](../results/prove2me-root.json)。
+[主目标记录](../results/prove2me-root.json) 中 `SKETCH_ACCEPTED` 是历史提交判决；其依赖闭合后，当前原始定理已 `Proved`、零开放依赖，无需为改变历史标签重复提交。[完成审计](../results/lean-completion-audit.json) 核对原始目标、精确源文件、完整区间覆盖、全部依赖及数值回放。完整平台证明使用已有 `campaign_cutoff32`；未声称独立重建尾部或完成独立解析审阅。
 
 ## 环境和操作约束
 

@@ -22,7 +22,7 @@
 \title{A computer-assisted sharp diagonal Hlawka inequality\protect\\for real exponents $p\ge21$}
 \author{Yuxuan Xu\thanks{AI-assisted research and manuscript preparation; see the disclosure at the end.}\\
 School of Computer Science, Wuhan University}
-\date{17 October 2026\\\small Research preprint, version 1}
+\date{17 October 2026\\\small Research preprint, version 2}
 \begin{document}
 \maketitle
 \begin{abstract}
@@ -38,9 +38,11 @@ estimate. Rational linear-programming dual witnesses and interval
 certificates cover real exponent intervals, rather than sampled exponents.
 The finite obligations pass both Arb and a standard-library dyadic rational
 implementation. We give the analytic reduction, certificate specification,
-and reproduction instructions. This preprint has not undergone independent
-analytic review; the new range is not Lean-formalized, and no optimality of
-the exponent threshold $21$ is asserted.
+and reproduction instructions. An accompanying Lean formalization of the
+original uniform complex least-constant goal is verified on Prove2Me with
+no open dependencies, reusing the accepted $p\ge32$ tail. Independent
+analytic review remains pending, and no optimality of the exponent
+threshold $21$ is asserted.
 \end{abstract}
 \noindent\textbf{Keywords:} Hlawka inequality; $\ell_p$ norm; sharp constant;
 computer-assisted proof; interval arithmetic; convexity.
@@ -67,8 +69,8 @@ Audenaert and Kittaneh formulate a dimension-independent operator version
 in Section 8.2, Problem 7 of \cite{AK}. A survey of the classical inequality
 and related questions is \cite{MN}. The diagonal construction and its
 reduction to a cyclic family were developed in the formalization project
-\cite{savarin}; the Prove2Me campaign records an accepted exponent cutoff
-$32$ \cite{campaign,solution32}. We use that result for the unbounded tail.
+\cite{savarin}. The accepted cutoff-$32$ result
+\cite{campaign,solution32} supplies the unbounded tail used here.
 Our contribution is an explicit certified extension to $[21,32]$, retaining
 additional convex constraints in the localization argument. We reproduce
 the analytic reductions needed for this interval below rather than requiring
@@ -94,8 +96,9 @@ The proof on $[21,32]$ consists of the analytic arguments below and the
 finite certificate lemma in Section~\ref{sec:cert}. The proof on $[32,\infty)$
 invokes \cite{solution32}, whose downloaded source and acceptance metadata
 are preserved in the repository. That source was not independently rebuilt
-in this project. The theorem is a computer-assisted claim in this preprint,
-not a claim that the platform has accepted the cutoff $21$.
+in this project. The original uniform complex cutoff-$21$ goal has now
+also been verified on Prove2Me with zero open dependencies; the formal
+verification record is described in Section~8.1.
 
 \section{Dimension reduction and the scalar envelope}\label{sec:reduce}
 We first explain why it suffices to exclude real three-dimensional
@@ -646,11 +649,24 @@ not substitutes for the analytic lemmas.
 \subsection{Trust and provenance}
 The two arithmetic backends share the certificate data, LP model,
 geometric formulas, and \path{verify.py}. They are not independent
-end-to-end proofs. Python's integer arithmetic, interpreter, the interval
-implementation, and the correspondence between this paper and the checker
-remain in the computational trust boundary. The mathematical argument
-has received internal self-audit, but no independent analytic review is
-claimed. No new Lean proof or Prove2Me submission has been made.
+end-to-end proofs. Their numerical checks rely on Python's integer
+arithmetic, interpreter, interval implementation, and the correspondence
+between the mathematical obligations and the checker.
+
+A separate Lean formalization verifies the new $[21,32]$ argument and
+the passage to arbitrary finite complex dimensions, including dimension
+zero, zero vectors and unequal singleton norms. The original theorem
+\path{HlawkaSchatten.DiagonalConstruction.campaign_cutoff21} is
+\texttt{Proved} on Prove2Me with zero open dependencies:
+\url{https://prove2.me/theorems/db286144-c8c4-4918-9bc9-03fcadedfffd}.
+The new local proof chain is checked with Lean 4.33.1 and Mathlib commit
+\path{0df444a360eaa60ab8c11dca51a86af692955474}; its axiom checks use only
+\texttt{propext}, \texttt{Classical.choice} and \texttt{Quot.sound}.
+The final platform proof imports the already proved cutoff-32 tail,
+whose full proof has not been independently rebuilt here. Source hashes,
+exact certificate checks and platform read-backs accompany the code.
+These formal checks do not constitute independent analytic review of the
+manuscript, which remains pending.
 
 The tail reference is the final \texttt{theorem solution} in submission
 \path{2d248eb1-4938-4dee-8392-df24d2c70f2f}, with statement
@@ -735,7 +751,8 @@ it does not claim to originate the diagonal Hlawka problem or the
 cyclic extremizer construction.
 
 OpenAI Codex assisted with mathematical exploration, proof drafting,
-certificate generation, implementation, verification runs, and preparation
+certificate generation, implementation, Lean formalization, verification
+runs, and preparation
 of this manuscript. AI assistance and internal replay do not constitute
 independent expert review. The author name and institutional affiliation
 are supplied by the author; no institutional endorsement is implied.

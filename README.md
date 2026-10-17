@@ -10,11 +10,13 @@
 
 本轮改进包括：用总范数上界裁剪 pair 尾坐标；把已推导的 pair 主坐标下界与非对角总和下界保留为凸域上的线性约束；把 pair 误差的统一系数 16 改成更小的有理系数。新证书覆盖 `[21,26]`，接上既有稿的 `[26,32]`，尾部 `p≥32` 引用平台已有接受结果。
 
-**当前状态：本地新证明链已接通，平台完整主目标仍未关闭。** 两个原始标量里程碑为 `Proved`、开放依赖为零；另有 84 个辅助定理获 `ACCEPTED`，其中任意反例的两个粗定位结果、两组凸域非负性与通用复数最小性传递均已核验闭合。256 段实际范数定位、两个原始实三维窗口及显式使用既有 cutoff 32 尾部的最终拼接已在本地 Lean 通过。[本地完整新证明链报告](results/lean-full-window-build.json) 记录 639 个源码哈希、601 项标准公理检查；尾部没有独立重建。16 段及 8 段打包的首批提交均触发平台 300 秒限制，单段定位证书已在平台闭合，现测试 4 段组合，之后闭合两个实三维原目标与完整主目标。[精确状态与复现](formalization/README.md)。平台原始主目标组合已获 `SKETCH_ACCEPTED`，原始 real_three_window21 已 Proved、零开放依赖，real_three_window26 尚待闭合；主目标仍为 `Open`，正式 campaign 纪录仍为 32。
+**当前状态：完整原始 cutoff 21 定理已在 Prove2Me 通过，`Proved`、开放依赖为 0。** [主定理](https://prove2.me/theorems/db286144-c8c4-4918-9bc9-03fcadedfffd) 保留原始声明，覆盖每个实数 `p≥21`、所有自然数复维度（包括 `n=0`）、任意三元组（包括零向量与不等范数），并证明原始 `cyclicConstant` 的 `IsLeast`。四个原始里程碑也全部 `Proved`、零开放依赖；[最新读回](results/prove2me-goals.json) 与 [完成审计](results/lean-completion-audit.json) 记录声明、导入前言和固定环境未改变。
+
+新证明链通过本地 Lean 内核检查：[639 个源码哈希、601 项公理检查](results/lean-full-window-build.json)，只使用 `propext`、`Classical.choice`、`Quot.sound`。65 个有限定位证书覆盖 256 段，均已在平台闭合；其中 4 个超时父定理由 8 个更小子区间证书及保持原命题的拼接证明闭合。完整平台证明复用既有 cutoff 32 尾部；本仓库没有独立重建该尾部。论文 v2 已更新形式化结果，独立解析审阅和期刊投稿仍未完成。详见 [形式化与复现](formalization/README.md)。
 
 完整计算机辅助证明稿已完成作者自审，待独立审阅。Arb 192/256 位和纯有理数 256 位均通过原数值证书；两种数值后端共享数学条件和检查流程，不代表两份独立端到端证明。新增的 [Lean 标量证明](docs/lean-scalar.md) 使用端点整数幂证书和 Bernoulli 传递，没有把外部检查器 PASS 当作前提。
 
-2026-10-17 查询的 [Prove2Me campaign](https://prove2.me/campaigns/sharp-diagonal-hlawka-constant) 仍显示最佳形式化 cutoff 为 32。这里的 21、26、31.75、32 都是指数 p 的阈值，不是最优常数 K_p 的数值。
+2026-10-17 查询的 [Prove2Me campaign](https://prove2.me/campaigns/sharp-diagonal-hlawka-constant) 仍显示已认证 campaign cutoff 为 32。这里的 21、26、31.75、32 都是指数 p 的阈值，不是最优常数 K_p 的数值。
 
 ## 复核新窗口 [21,26]
 

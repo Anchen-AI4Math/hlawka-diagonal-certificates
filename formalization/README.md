@@ -1,6 +1,6 @@
 # Cutoff 21 的 Lean 形式化
 
-持续目标是原始 `campaign_cutoff21`：对每个实数 `p≥21`，`cyclicConstant p` 是所有有限复维度的统一最小 Hlawka 常数，包含 `n=0`、零向量和不等范数三元组。**完整平台主目标仍未关闭。**
+持续目标是原始 `campaign_cutoff21`：对每个实数 `p≥21`，`cyclicConstant p` 是所有有限复维度的统一最小 Hlawka 常数，包含 `n=0`、零向量和不等范数三元组。**完整平台主目标已通过：`Proved`、零开放依赖。**
 
 固定环境：Lean **v4.33.1**，Mathlib **0df444a360eaa60ab8c11dca51a86af692955474**，`autoImplicit=false`。
 
@@ -10,11 +10,13 @@
 | 任意严格实三维反例到粗盒子 | 两个平台定理 `Proved`，开放依赖为零；[完整证明与记录](../results/prove2me-failure.json)；输入没有归一化、定向、非零或等范数假设 |
 | 256 段实际范数定位 | [全部 PASS](../results/lean-localization-build.json)，含 768 个根界整数幂证书、十轮收缩和线性 pair/offsum floors；不再以抽象 `Facts` 为输入 |
 | 范数 cap 下的 Hessian、凸性与对称平均 | [两组域构建报告](../results/lean-geometry-build.json)；参数区间 `[21,377/16]`、`[377/16,32]`；两组公共域定理已获平台接受 |
-| 两个原始无条件实三维窗口 | [RealWindows](Hlawka21/RealWindows.lean) 已本地内核检查；平台原目标 real_three_window21 已 `Proved`、零开放依赖；real_three_window26 仍 `Open` |
-| 任意有限复维度传递及最小性 | [通用桥接](Hlawka21/ComplexBridge.lean) 本地通过且平台 `Proved`、开放依赖为零；[平台记录](../results/prove2me-analytic-assembly.json) |
-| 全范围最终拼接 | [FullWindow](Hlawka21/FullWindow.lean) 本地证明准确的 cutoff 21 结论，显式输入既有 cutoff 32 尾部；[639 个源码哈希、601 项公理检查](../results/lean-full-window-build.json)；尾部未独立重建，原始平台主目标组合已获 `SKETCH_ACCEPTED`，目前仅 real_three_window26 仍开放 |
+| 两个原始无条件实三维窗口 | [RealWindows](Hlawka21/RealWindows.lean) 已本地内核检查；两个原始平台目标均为 `Proved`、零开放依赖；[平台记录](../results/prove2me-real-windows.json) |
+| 所有有限复维度传递及最小性 | [通用桥接](Hlawka21/ComplexBridge.lean) 本地通过且平台 `Proved`、零开放依赖；包括零维度 |
+| 全范围最终拼接 | [原始 campaign_cutoff21](https://prove2.me/theorems/db286144-c8c4-4918-9bc9-03fcadedfffd) 已 `Proved`、零开放依赖；[最终读回](../results/prove2me-root.json)。本地 [FullWindow](Hlawka21/FullWindow.lean) 显式输入既有 cutoff 32 尾部；尾部未独立重建 |
 
-目前 84 个辅助定理获平台 `ACCEPTED`，另有两个原始标量里程碑 `Proved`。计数与新增证书的异步状态分别见 [status.json](../status.json)、[原辅助记录](../results/prove2me-auxiliary.json)、[任意反例归约](../results/prove2me-failure.json)、[公共解析及传递](../results/prove2me-analytic-assembly.json)、[紧凑证书](../results/prove2me-real-pieces.json)。这不表示原始全维主目标已经通过。
+[完成审计](../results/lean-completion-audit.json) 核对了全部 5 个原始目标的声明、导入前言和固定环境，均未改变。65 个定位父定理全部闭合；4 个超时父定理由 8 个已证明子区间及同一父命题的拼接证明修复。全部 65 份原始证书文件本地通过，实际平台接受的修复文件也分别通过本地内核检查。历史 `ERROR` 与原文件哈希保留，不改写为原文件已被接受。
+
+原始主目标最后一次提交的历史判决为 `SKETCH_ACCEPTED`；其依赖随后全部闭合，当前定理状态为 `Proved`、零开放依赖。这两个字段表达不同事件，最终完成依据是当前定理及依赖状态，而不是历史提交标签。独立解析审阅、论文提案审核和 campaign attestation 分别记录。
 
 ## 平台提交为何拆分
 
@@ -22,7 +24,7 @@
 
 公共 Hessian、凸性和平均论证已提取为两条闭合的平台定理。第二版有限证书各覆盖至多 8 段，共 33 份、无缝覆盖原 256 段，但首批三个提交也触发了 300 秒超时；[批量本地检查](../results/lean-real-pieces-build.json) 已中止并保留 11 个精确文件通过记录。因此 33 不是固定剩余定理数，也不能据此估计完成时间。
 
-不导入解析定理的单段实际范数定位已获平台 `ACCEPTED`，读回 `Proved`、零开放依赖：[精确文件通过](../results/lean-localization-platform-build.json)，[平台异步任务](../results/prove2me-localization.json)。65 份四段组合无缝覆盖全部 256 段，原始提交文件已[全部通过本地精确检查](../results/lean-domain-blocks-build.json)。平台仍逐批验收这些定位定理；部分超时块通过更小子区间证明修复，不能称为所有原始文件均获平台接受。所有版本仍使用原始 `lpNorm`，没有把目标改成数值有效性谓词，也没有修改原始五个 mission 声明。
+单段定位证明验证了较小提交规模可行。最终改用 65 个最多四段的定位父定理，无缝覆盖全部 256 段；[原始精确文件本地检查](../results/lean-domain-blocks-build.json) 全部 PASS，[平台读回](../results/prove2me-domain-blocks.json) 全部 `Proved`、零开放依赖。21_04、21_08、21_14、21_29 四个父目标改用各两个更小子区间后闭合；[修复记录](../results/prove2me-domain-repairs.json) 保留对应证据。全部版本使用原始 `lpNorm`，没有替换目标谓词或缩小原始 mission 范围。
 
 ## 复现
 
@@ -63,13 +65,13 @@ python scripts/check_lean_proofs.py --manifest formalization/platform/real-windo
 python scripts/check_lean_proofs.py --manifest formalization/platform/root-assembly-check.json --output results/lean-root-assembly-build.json --jobs 1
 ```
 
-定位定理的可选 `Theorems/` 镜像保留实际证明，可逐个编译。组合层检查以 41 份、24 份证书为显式参数；[接口映射](platform/real-window-assembly-mapping.json) 记录文件哈希，并通过逆替换验证证明体与最终服务器文件一致。[组合层检查](../results/lean-real-window-assembly-build.json) 只验证这个条件接口。两个无条件实三维窗口的实际证明另见完整新证明链报告；全部 65 份证书也已逐文件通过内核检查。最终服务器文件保留原始无条件声明，并导入平台已证明的定位定理。
+定位定理的可选 `Theorems/` 镜像保留实际证明，可逐个编译。组合层检查以 41 份、24 份证书为显式参数；[接口映射](platform/real-window-assembly-mapping.json) 记录文件哈希，并通过逆替换验证证明体与最终服务器文件一致。[组合层检查](../results/lean-real-window-assembly-build.json) 只验证这个条件接口。两个无条件实三维窗口的实际证明另见完整新证明链报告；全部 65 份证书也已逐文件通过内核检查。最终服务器文件保留原始无条件声明，导入的定位定理现已全部闭合。
 
 如需直接本地编译最终文件的全部同名导入，可先运行 `build_theorem_mirrors.py --manifest formalization/platform/domain-block-proofs.json`，再对 `real-window-proofs.json` 执行检查；这会重复编译边界包装。该重复构建的旧聚合版本已停止。没有引入本地 `sorry`、新公理或平台 Definition 中隐藏的复杂证明。`--keys` 可明确选择少数文件，报告会记录选择。
 
 个别四段文件仍触发服务器限时，分别用 `prepare_domain_block_repair.py <parent_key>` 拆成两个忠实子区间。原父声明、256 段覆盖及最终目标保持不变。子证明闭合后，用新的短区间组合证明修复父目标；旧超时提交保留为历史，不重复上传同一文件。[子证明检查](../results/lean-domain-children-build.json)、[子证明平台任务](../results/prove2me-domain-children.json)、[修复源码清单](platform/domain-repair-proofs.json)。
 
-`root-assembly-check.json` 检查与最终组合相同的证明体，显式输入 cutoff 32 尾部。最终 `Sol_campaign_cutoff21.lean` 改为导入平台已闭合的尾部，由服务器检查；当前 [组合判决](../results/prove2me-root.json) 为 `SKETCH_ACCEPTED`，不能称为无开放依赖的完整证明。
+`root-assembly-check.json` 检查与最终组合相同的证明体，显式输入 cutoff 32 尾部。最终 `Sol_campaign_cutoff21.lean` 改为导入平台已闭合的尾部，由服务器检查；[服务器读回](../results/prove2me-root.json) 的历史提交判决为 `SKETCH_ACCEPTED`，当前定理已为 `Proved`、零开放依赖。完整闭合还由 [全目标读回](../results/prove2me-goals.json) 与 [完成审计](../results/lean-completion-audit.json) 交叉核对。
 
 这些检查器默认执行新检查；`--reuse` 只显式复用同一工具链和 Mathlib 下、文件哈希一致的既有 PASS，不是独立复验。`--lean-threads` 可限制每个 Lean 进程的线程数。当前机器使用过相同固定版本的隔离目录 `.test-tmp/prove2me/lean`；缓存不提交。
 

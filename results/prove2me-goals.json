@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-10-17T14:55:41.598116+00:00",
+  "checked_at": "2026-10-17T15:43:59.373193+00:00",
   "source": "Prove2Me API current read-back",
   "scope": "Original five published mission targets, unchanged statements.",
   "targets": [
@@ -49,43 +49,29 @@
       "key": "real26",
       "theorem_id": "a1a7a36f-f8b9-4061-84a2-33080e185b41",
       "theorem_name": "HlawkaSchatten.DiagonalCutoff21.real_three_window26",
-      "status": "Open",
+      "status": "Proved",
       "statement_matches_original_proposal": true,
       "preamble_matches_original_proposal": true,
       "preamble_sha256": "ab8cf5d9a799bbd2e52fc2f23415075623a5e10014787055895f4cdb5fa6c9b2",
       "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474",
       "formal_statement": "theorem HlawkaSchatten.DiagonalCutoff21.real_three_window26 :\n    ∀ p : ℝ, 26 ≤ p → p ≤ 32 →\n      HasHlawkaConstant (lpNorm p : (Fin 3 → ℝ) → ℝ)\n        (cyclicConstant p) := by sorry",
       "url": "https://prove2.me/theorems/a1a7a36f-f8b9-4061-84a2-33080e185b41",
-      "open_leaf_count": 1,
-      "open_leaves": [
-        {
-          "theorem_id": "a1a7a36f-f8b9-4061-84a2-33080e185b41",
-          "theorem_name": "HlawkaSchatten.DiagonalCutoff21.real_three_window26",
-          "status": "Open",
-          "closability": 0
-        }
-      ]
+      "open_leaf_count": 0,
+      "open_leaves": []
     },
     {
       "key": "goal",
       "theorem_id": "db286144-c8c4-4918-9bc9-03fcadedfffd",
       "theorem_name": "HlawkaSchatten.DiagonalConstruction.campaign_cutoff21",
-      "status": "Open",
+      "status": "Proved",
       "statement_matches_original_proposal": true,
       "preamble_matches_original_proposal": true,
       "preamble_sha256": "ba721b760379a312ba34f0d8e38782cb906798064fe663dcfb477b600dc350d3",
       "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474",
       "formal_statement": "theorem HlawkaSchatten.DiagonalConstruction.campaign_cutoff21 :\n    ∀ p : ℝ, 21 ≤ p →\n      IsLeast {C : ℝ | ∀ n : ℕ,\n        HasHlawkaConstant (lpNorm p : (Fin n → ℂ) → ℝ) C}\n        (cyclicConstant p) := by sorry",
       "url": "https://prove2.me/theorems/db286144-c8c4-4918-9bc9-03fcadedfffd",
-      "open_leaf_count": 1,
-      "open_leaves": [
-        {
-          "theorem_id": "a1a7a36f-f8b9-4061-84a2-33080e185b41",
-          "theorem_name": "HlawkaSchatten.DiagonalCutoff21.real_three_window26",
-          "status": "Open",
-          "closability": 0
-        }
-      ]
+      "open_leaf_count": 0,
+      "open_leaves": []
     }
   ]
 }

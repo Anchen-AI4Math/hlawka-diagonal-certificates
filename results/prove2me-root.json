@@ -20,16 +20,9 @@
     }
   ],
   "submitted_at": "2026-10-17T13:42:06.297085+00:00",
-  "theorem_status": "Open",
+  "theorem_status": "Proved",
   "statement_matches_original": true,
-  "open_leaf_count": 1,
-  "open_leaves": [
-    {
-      "theorem_id": "a1a7a36f-f8b9-4061-84a2-33080e185b41",
-      "theorem_name": "HlawkaSchatten.DiagonalCutoff21.real_three_window26",
-      "status": "Open",
-      "closability": 0
-    }
-  ],
-  "checked_at": "2026-10-17T14:55:27.243922+00:00"
+  "open_leaf_count": 0,
+  "open_leaves": [],
+  "checked_at": "2026-10-17T15:43:51.687461+00:00"
 }

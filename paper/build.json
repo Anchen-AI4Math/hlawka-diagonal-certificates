@@ -1,10 +1,19 @@
 {
   "date": "2026-10-17",
+  "preprint_version": "2",
   "compiler": "Tectonic 0.17.0+20260731",
   "status": "PASS",
   "pages": 12,
   "final_pass_warnings": [],
-  "visual_review": "All 12 pages rendered and inspected in contact sheets; pages 1, 4, 7, 8, 11 and 12 additionally inspected at full image size.",
-  "source_sha256": "7a52f1f8b7fad0c0b38c071ef5c455f25e8c093cb9f765b9b089d64d4884ab1f",
-  "pdf_sha256": "94c10308c9e903aee029e9220e07234b766fd80ec1eb11f84b6505af58d02bcc"
+  "visual_review": "All 12 latest pages rendered and inspected in two contact sheets; changed pages 2 and 10 additionally inspected at full image size. No clipping, overlaps, missing glyphs or broken references observed.",
+  "mathematical_display_and_statement_blocks_unchanged": 41,
+  "mathematical_blocks_sha256": "87bf6b265220e2b2697956f3e4ae724b839295db113ea0aa87f223c7ac7c327f",
+  "source_sha256": "0f92b152c5679cce4b99529a7aba438bc4796c74a1f45a7037081b45ac697517",
+  "pdf_sha256": "47374bbbf2ca2fef9c450f65bd1a2b4a54102968caec82aef4b70641a20434f5",
+  "formalization_root": "https://prove2.me/theorems/db286144-c8c4-4918-9bc9-03fcadedfffd",
+  "root_status": "Proved",
+  "root_open_leaf_count": 0,
+  "independent_analytic_review": "pending",
+  "cutoff32_tail_independently_rebuilt": false,
+  "checked_at": "2026-10-17T15:40:43.885067+00:00"
 }

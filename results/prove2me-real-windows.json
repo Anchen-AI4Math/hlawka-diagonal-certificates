@@ -1,5 +1,5 @@
 {
-  "scope": "The two unchanged, unrestricted original real-three windows. Local assembly checks have explicit certificate parameters; the server files import actual proved theorems and contain no extra hypotheses.",
+  "scope": "The two unchanged unrestricted original real-three windows. Local assembly checks have explicit certificate parameters; server files import tracked platform theorems. A sketch is only an intermediate result: the original windows and root must become Proved with zero open leaves.",
   "theorems": {
     "real_three_window21": {
       "theorem_id": "6c62afca-c977-42ef-8cf7-7b8d39ebe08a",
@@ -13,11 +13,22 @@
       "theorem_status": "Proved",
       "open_leaf_count": 0,
       "statement_matches_original_proposal": true,
-      "checked_at": "2026-10-17T14:58:01.046875+00:00"
+      "checked_at": "2026-10-17T15:35:02.346827+00:00"
     },
     "real_three_window26": {
       "theorem_id": "a1a7a36f-f8b9-4061-84a2-33080e185b41",
-      "theorem_name": "HlawkaSchatten.DiagonalCutoff21.real_three_window26"
+      "theorem_name": "HlawkaSchatten.DiagonalCutoff21.real_three_window26",
+      "submission_id": "bce2c548-93d4-401e-a205-56e74cb86c96",
+      "proof_status": "ACCEPTED",
+      "solution_sha256": "a19a4ffdf0800a9ed24c2d71379afdd8b44c41b1354699fa05159a479b194d54",
+      "local_check_scope": "Only the assembly interface is conditional here. The original unconditional real windows and every finite certificate are separately kernel checked; the server checks the unchanged original statement using tracked proved dependencies. No local axiom or sorry placeholder is introduced.",
+      "certificate_dependency_count": 24,
+      "closed_certificate_dependencies_at_submit": 14,
+      "submitted_at": "2026-10-17T15:18:16.643019+00:00",
+      "theorem_status": "Proved",
+      "open_leaf_count": 0,
+      "statement_matches_original_proposal": true,
+      "checked_at": "2026-10-17T15:35:03.751976+00:00"
     }
   }
 }

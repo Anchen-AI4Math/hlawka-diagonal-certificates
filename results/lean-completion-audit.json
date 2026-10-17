@@ -1,0 +1,36 @@
+{
+  "status": "PASS",
+  "checked_at": "2026-10-17T15:43:59.630041+00:00",
+  "scope": "Consistency of exact source bytes and proof receipts, backed by a separately refreshed authenticated platform read-back. This is not independent analytic review or an independent rebuild of the accepted cutoff32 tail.",
+  "root_theorem_id": "db286144-c8c4-4918-9bc9-03fcadedfffd",
+  "root_status": "Proved",
+  "root_open_leaf_count": 0,
+  "original_targets_unchanged": 5,
+  "original_preambles_unchanged": 5,
+  "exact_local_certificate_files": 65,
+  "closed_parent_localization_theorems": 65,
+  "faithful_repaired_parents": 4,
+  "closed_child_localizations": 8,
+  "core_source_hashes": 639,
+  "core_axiom_checks": 601,
+  "allowed_local_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "real_parameter_cover": [
+    [
+      "21",
+      "26"
+    ],
+    [
+      "26",
+      "32"
+    ]
+  ],
+  "original_slabs": 256,
+  "preserved_reference_source_hashes": 11,
+  "explicit_scope": "All real p>=21; every natural dimension including zero; arbitrary complex triples including zero and unequal norms; original lpNorm and cyclicConstant; IsLeast.",
+  "platform_readback": "2026-10-17T15:43:59.373193+00:00",
+  "root_readback": "2026-10-17T15:43:51.687461+00:00"
+}

@@ -7,7 +7,7 @@
     "solved_date": "2026-10-16",
     "source": "https://prove2.me/campaigns/sharp-diagonal-hlawka-constant",
     "independently_rebuilt": false,
-    "last_checked": "2026-10-17T14:59:58.471655+00:00"
+    "last_checked": "2026-10-17T15:43:49.228301+00:00"
   },
   "research": {
     "candidate_cutoff": "21",
@@ -16,7 +16,7 @@
       "21",
       "26"
     ],
-    "stage": "complete_computer_assisted_proof_manuscript",
+    "stage": "original_full_goal_proved; public_preprint_v2",
     "proof": "paper/main.tex",
     "foundation": [
       "docs/proof-26.md",
@@ -104,20 +104,21 @@
       "results/prove2me-domain-repairs.json",
       "results/lean-domain-repairs-build.json",
       "results/lean-real-window-assembly-build.json",
-      "results/prove2me-real-windows.json"
+      "results/prove2me-real-windows.json",
+      "results/lean-completion-audit.json"
     ],
     "release_replay": "results/release-replay.json",
     "release_replay_status": "PASS",
     "release_negative_controls": 15,
     "proposal_statement_compilation": "platform/proposal/validation.json",
-    "full_cutoff21_lean_proof": false,
+    "full_cutoff21_lean_proof": true,
     "lean_formalization": {
-      "stage": "all_new_ingredients_kernel_checked; platform_closure_in_progress",
+      "stage": "original_full_goal_proved",
       "toolchain": "leanprover/lean4:v4.33.1",
       "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474",
       "locally_compiled_auxiliary_files": 110,
-      "platform_accepted_auxiliary_theorems": 84,
-      "root_status": "Open",
+      "platform_accepted_auxiliary_theorems": 106,
+      "root_status": "Proved",
       "axioms": [
         "propext",
         "Classical.choice",
@@ -130,7 +131,8 @@
       "platform_proved_original_milestones": [
         "scalar_window21",
         "scalar_window26",
-        "real_three_window21"
+        "real_three_window21",
+        "real_three_window26"
       ],
       "scalar_lower_slabs_compiled": 256,
       "scalar_integer_power_certificates": 768,
@@ -152,7 +154,7 @@
       "compact_certificate_manifest": "formalization/platform/domain-block-proofs.json",
       "compact_certificate_build": "results/lean-domain-blocks-build.json",
       "compact_certificate_platform": "results/prove2me-domain-blocks.json",
-      "original_large_certificate_attempt": "The first three 16-slab packets and the first three 8-slab packets timed out at the server 300s limit. Local proofs pass; packet size is being tested rather than treated as a fixed remaining theorem count.",
+      "original_large_certificate_attempt": "Historical first three 16-slab packets and first three 8-slab packets timed out at the server 300s limit. All 65 final localization parent targets are now Proved with zero open dependencies; four parents use faithful smaller-interval repairs.",
       "local_auxiliary_file_count_scope": "Passing exact files in the current auxiliary submission manifests; the superseded large packet checks are recorded separately.",
       "minimal_localization_platform": "results/prove2me-localization.json",
       "domain_block_manifest": "formalization/platform/domain-block-proofs.json",
@@ -160,34 +162,39 @@
       "domain_block_build": "results/lean-domain-blocks-build.json",
       "domain_block_platform": "results/prove2me-domain-blocks.json",
       "root_submission_status": "SKETCH_ACCEPTED",
-      "root_assembly_open_leaf_count": 1,
+      "root_assembly_open_leaf_count": 0,
       "root_assembly_evidence": "results/prove2me-root.json",
       "superseded_eight_slab_manifest": "formalization/platform/real-piece-proofs.json",
-      "domain_blocks_closed": 43,
+      "domain_blocks_closed": 65,
       "domain_block_target_count": 65,
       "domain_block_repairs_pending": [],
       "domain_repair_manifest": "formalization/platform/domain-repair-proofs.json",
-      "real_window_assembly_check": "Explicit certificate inputs (41 and 24), with reversible proof-body substitution. The unconditional RealWindows proofs and the 65 exact certificate files are separately kernel checked. The unchanged server files require actual proved dependency closure.",
+      "real_window_assembly_check": "Explicit certificate inputs (41 and 24), with reversible proof-body substitution. These are conditional interface checks. The unconditional RealWindows proofs and the 65 exact certificate files are separately kernel checked; unchanged server window targets and all their dependencies are now Proved with zero open leaves.",
       "real_window_assembly_evidence": "results/lean-real-window-assembly-build.json",
       "real_window_interface_mapping": "formalization/platform/real-window-assembly-mapping.json",
-      "real_window_platform_evidence": "results/prove2me-real-windows.json"
+      "real_window_platform_evidence": "results/prove2me-real-windows.json",
+      "completion_audit": "results/lean-completion-audit.json",
+      "original_targets_unchanged": 5,
+      "original_preambles_unchanged": 5,
+      "faithful_repaired_parents": 4,
+      "closed_child_localizations": 8
     }
   },
   "publication": {
     "platform_submitted": true,
     "paper_submitted": false,
-    "public_navigation": "synced and remotely verified: organization profile README, research-index README and catalog.json",
+    "public_navigation": "final full-proof status update pending",
     "preprint_title": "A computer-assisted sharp diagonal Hlawka inequality for real exponents p >= 21",
     "author": {
       "name": "Yuxuan Xu",
       "name_zh": "徐宇轩",
       "affiliation": "School of Computer Science, Wuhan University"
     },
-    "version": "1",
+    "version": "2",
     "date": "2026-10-17",
     "ai_assistance_disclosed": true,
-    "public_release_status": "public repository preprint; anonymous downloads verified",
-    "evidence": "results/publication-v1.json",
+    "public_release_status": "public repository preprint v2; final anonymous downloads and navigation verification pending",
+    "evidence": "results/publication-v2.json",
     "preprint_public": true,
     "prove2me_proposal": {
       "status": "In review",
@@ -202,6 +209,7 @@
       "public_materials": "platform/README.md",
       "submitted_at": "2026-10-17T08:15:12.549+00:00",
       "evidence": "results/prove2me-proposal-status.json"
-    }
+    },
+    "paper_build": "paper/build.json"
   }
 }
