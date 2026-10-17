@@ -1,0 +1,27 @@
+[
+  {
+    "control": "gap",
+    "status": "REJECTED",
+    "reason": "gap, overlap or inverted interval"
+  },
+  {
+    "control": "witness",
+    "status": "REJECTED",
+    "reason": "scalar envelope"
+  },
+  {
+    "control": "chain",
+    "status": "REJECTED",
+    "reason": "round does not use preceding n"
+  },
+  {
+    "control": "dual",
+    "status": "REJECTED",
+    "reason": "dual sign/dimension"
+  },
+  {
+    "control": "missing",
+    "status": "REJECTED",
+    "reason": "coverage endpoint mismatch"
+  }
+]

@@ -1,0 +1,9 @@
+{
+  "as_of": "2026-10-17",
+  "topic": "Sharp diagonal Hlawka constant",
+  "repository_visibility": "private",
+  "platform_record": {"cutoff": "32", "solved_date": "2026-10-16", "source": "https://prove2.me/campaigns/sharp-diagonal-hlawka-constant", "independently_rebuilt": false},
+  "research": {"candidate_cutoff": "127/4", "new_window": ["127/4", "32"], "stage": "numerical_obligations_certified_analytic_reduction_draft", "independent_analytic_review": "pending"},
+  "verification": {"method": "Arb ball arithmetic and exact rational LP dual replay", "precisions_bits": [192, 256], "new_lean_proof": false, "independent_verifier_implementation": false, "evidence": "results/verification.json"},
+  "publication": {"platform_submitted": false, "paper_submitted": false, "public_navigation": "excluded because repository is private"}
+}

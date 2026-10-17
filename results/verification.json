@@ -1,0 +1,28 @@
+{
+  "status": "PASS",
+  "precision_bits": 192,
+  "p_interval": [
+    "127/4",
+    "32"
+  ],
+  "scalar_cells": 1124,
+  "upper_boxes": 96,
+  "contractor_slabs": 16,
+  "lp_dual_certificates": 36,
+  "min_envelope_margin_lower": 1.3559983926825225e-06,
+  "min_final_box_slacks": [
+    0.002373788679731856,
+    0.00230360114917249,
+    0.003597366,
+    0.001763039939696552
+  ],
+  "total_curvature_margin": "[0.93 +/- 6.34e-3]",
+  "column_curvature_margin": "[0.865 +/- 5.17e-4]",
+  "scope": "Numerical obligations only; analytic reduction and source dependencies are not machine checked here.",
+  "sha256": {
+    "coarse.json": "a2ca5b4e1a0fdd3bfedaa5d34bb023a10307217f5867fe764c97ede3b1a1de53",
+    "contractor.json": "810059adcf5bf1ab19fdbea6d0a15ac21241c38ea0a53d23bf1f3518f86d8d85",
+    "cyclic-upper.json": "097d847ce15333e2c292ee5b31e5ad274180565923dd36e197f6991c7881c552",
+    "scalar.json": "81ceaa1867f81656a9dd5b0642239f8757ae0218e065ad0caeb7c614d57c9ec3"
+  }
+}

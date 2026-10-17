@@ -1,0 +1,15 @@
+{
+  "id": "d5944a03-85b4-4962-b146-4e6c7e7e50c7",
+  "theorem_id": "c1396734-69ba-4126-9311-53cdb8b8c6db",
+  "user_id": "a4da5acb-ce18-4748-88fc-1576f5e40353",
+  "username": "@bwdaugherty",
+  "status": "ACCEPTED",
+  "error_message": "",
+  "file_path": "c1396734-69ba-4126-9311-53cdb8b8c6db/a4da5acb-ce18-4748-88fc-1576f5e40353/d5944a03-85b4-4962-b146-4e6c7e7e50c7.lean",
+  "created_at": "2026-10-16T14:21:16.886783+00:00",
+  "updated_at": "2026-10-16T14:24:17.305922+00:00",
+  "accepted_at": "2026-10-16T14:24:17.305922+00:00",
+  "vote_count": 0,
+  "explanation": "After normalizing the failure (singleton norms summing to $3$, total below $3q$, pair-gap sum below $2/(0.448p)$; `scaled_failure`), the largest coordinate of each pair sum is within $\\log 3/p$ of its norm (`exists_signed_coord`). Two pairs sharing a vector cannot share their dominant coordinate (`signed_conflict`), so after a permutation and signs (`orient`) pair $(j,k)$ is dominant at coordinate $i$. A second pass with the half-size tail bound (`dominant_half`) tightens the slack to $10^{-5}$, and linear arithmetic gives the coarse box (`oriented_core`).",
+  "deprecated_at": null
+}

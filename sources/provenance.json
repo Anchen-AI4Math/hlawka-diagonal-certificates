@@ -1,0 +1,54 @@
+{
+  "retrieved_date": "2026-10-17",
+  "campaign": "https://prove2.me/campaigns/sharp-diagonal-hlawka-constant",
+  "platform_cutoff": "32",
+  "main_submission": "2d248eb1-4938-4dee-8392-df24d2c70f2f",
+  "baseline_repository": "https://github.com/savarin/hlawka-schatten",
+  "baseline_commit": "1829591140522193a81ae721330e4d775c81123e",
+  "components": [
+    {
+      "name": "coarse32",
+      "theorem_id": "c1396734-69ba-4126-9311-53cdb8b8c6db",
+      "submission_id": "d5944a03-85b4-4962-b146-4e6c7e7e50c7",
+      "author": "@bwdaugherty",
+      "status": "ACCEPTED",
+      "accepted_at": "2026-10-16T14:24:17.305922+00:00",
+      "url": "https://prove2.me/theorems/c1396734-69ba-4126-9311-53cdb8b8c6db",
+      "local_source": "coarse32.lean"
+    },
+    {
+      "name": "contract32",
+      "theorem_id": "4e05427b-74d9-4e61-8d14-a52384a5ca10",
+      "submission_id": "d75400b0-5a0e-4167-8192-7fd299469c2e",
+      "author": "@bwdaugherty",
+      "status": "ACCEPTED",
+      "accepted_at": "2026-10-16T14:24:27.974597+00:00",
+      "url": "https://prove2.me/theorems/4e05427b-74d9-4e61-8d14-a52384a5ca10",
+      "local_source": "contract32.lean"
+    },
+    {
+      "name": "convex_box32",
+      "theorem_id": "68c3c859-6ab9-4935-ad89-1e0b49a3946b",
+      "submission_id": "9194204b-0072-43c0-8df1-f8fce4b9c5ef",
+      "author": "@bwdaugherty",
+      "status": "ACCEPTED",
+      "accepted_at": "2026-10-16T14:24:10.342984+00:00",
+      "url": "https://prove2.me/theorems/68c3c859-6ab9-4935-ad89-1e0b49a3946b",
+      "local_source": "convex_box32.lean"
+    }
+  ],
+  "independently_compiled": false,
+  "files": {
+    "coarse32-submission.json": "32cc362c7ed3a8dbe922b10b352b138d8520551a3763edc94c2bbf4e31b8f11f",
+    "coarse32.lean": "3cd8933974249b36e6d0557407de308ade956071f1094c441876b21009bfedb1",
+    "components32.json": "61f49000c313f166f828a742f9b922009b785fa66cf5e4111555b096e67aa34b",
+    "contract32-submission.json": "12b1245ecbfa261a7e0745ebf22128d07c1d8e1340f5babc3c48f5250cc7a2f6",
+    "contract32.lean": "fd4619a998755a615532db8f607561f929cdf602efcc6e083a24324211e9c6a0",
+    "convex_box32-submission.json": "7107c27d4ce06d392dce1138323d5dcaafc1658322036e1526b8161221f040de",
+    "convex_box32.lean": "8911d0dd65d4c965fe7001257e61bf78df94c166a4983d05ac6761af6dc2b3b2",
+    "solution32.json": "c6811ae474a3d1a7251476b1e7c1bcc4d4baa9f79546648084ceb3c67a7ba3e9",
+    "solution32.lean": "fb450f7011506ca6a9094c86615b2c6caf5f7ee72cb8693d5a72c05e92d588bc",
+    "submissions32.json": "56cfc055be96546f2a6346fc4de5ab73474c0f3097cfec53a7dd1b33a20236ec",
+    "theorems32.json": "5d7365e459f9574ed2c19aff02a0756e394832b6ddbeaed58abecbbf7a5bd753"
+  }
+}

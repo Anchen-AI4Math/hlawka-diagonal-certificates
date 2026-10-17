@@ -1,0 +1,28 @@
+"""Check that damaged coverage, witnesses, round order and LP duals are rejected."""
+import copy,json,tempfile
+from pathlib import Path
+from verify import verify
+
+def run():
+    source={p.name:json.loads(p.read_text()) for p in Path('certificates').glob('*.json')}
+    def gap(d): d['scalar.json'][0]['a']='3175001/100000'
+    def witness(d): d['scalar.json'][0]['t']='1/2'
+    def chain(d): d['contractor.json'][0]['rounds'][1]['n']='1'
+    def dual(d): d['coarse.json']['stages'][0][0]['dual_ineq'][0]='1'
+    def missing(d): d['cyclic-upper.json'][0]['t_cells'].pop()
+    results=[]
+    for mutate in [gap,witness,chain,dual,missing]:
+        data=copy.deepcopy(source); mutate(data)
+        workspace=Path(__file__).resolve().parents[1]
+        scratch=workspace/'.test-tmp'; scratch.mkdir(exist_ok=True)
+        temp=tempfile.TemporaryDirectory(prefix='hlawka-control-',dir=scratch)
+        Path(temp.name).resolve().relative_to(workspace)
+        with temp as folder:
+            root=Path(folder)
+            for name,value in data.items(): (root/name).write_text(json.dumps(value))
+            try: verify(root)
+            except ValueError as exc: results.append(dict(control=mutate.__name__,status='REJECTED',reason=str(exc)))
+            else: raise RuntimeError('Corrupted certificate accepted: '+mutate.__name__)
+    Path('results/negative-controls.json').write_text(json.dumps(results,indent=2)+'\n')
+    print(json.dumps(results,indent=2))
+if __name__=='__main__': run()

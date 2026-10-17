@@ -1,0 +1,15 @@
+{
+  "id": "d75400b0-5a0e-4167-8192-7fd299469c2e",
+  "theorem_id": "4e05427b-74d9-4e61-8d14-a52384a5ca10",
+  "user_id": "a4da5acb-ce18-4748-88fc-1576f5e40353",
+  "username": "@bwdaugherty",
+  "status": "ACCEPTED",
+  "error_message": "",
+  "file_path": "4e05427b-74d9-4e61-8d14-a52384a5ca10/a4da5acb-ce18-4748-88fc-1576f5e40353/d75400b0-5a0e-4167-8192-7fd299469c2e.lean",
+  "created_at": "2026-10-16T14:21:17.614976+00:00",
+  "updated_at": "2026-10-16T14:24:27.974597+00:00",
+  "accepted_at": "2026-10-16T14:24:27.974597+00:00",
+  "vote_count": 0,
+  "explanation": "Residual-budget contraction. On each sub-slab $[\\alpha,\\beta]$ the pair-gap budget is converted into two-coordinate costs $x^\\beta+(s-x)_+^\\beta>1$ that bound each off-diagonal entry against its partner, and each diagonal magnitude is bounded through its row norm by $F(N)=[N^p-(N-D/(2t))^p]^{1/p}$, $D$ the residual budget; monotone quantities are evaluated at the unfavourable endpoint. Each round only uses bounds proved in earlier rounds (`slab_generic`, sub-slab lemmas `sub_*`). The eight slabs with radii `slabRadius` are combined by a case split.",
+  "deprecated_at": null
+}

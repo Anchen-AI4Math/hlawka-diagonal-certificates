@@ -1,0 +1,4 @@
+# Preserve certificate and reference bytes so SHA-256 survives checkout.
+* -text
+# Keep downloaded upstream snapshots byte-for-byte, including trailing blank lines.
+sources/*.lean whitespace=-blank-at-eof

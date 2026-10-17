@@ -1,0 +1,15 @@
+{
+  "id": "9194204b-0072-43c0-8df1-f8fce4b9c5ef",
+  "theorem_id": "68c3c859-6ab9-4935-ad89-1e0b49a3946b",
+  "user_id": "a4da5acb-ce18-4748-88fc-1576f5e40353",
+  "username": "@bwdaugherty",
+  "status": "ACCEPTED",
+  "error_message": "",
+  "file_path": "68c3c859-6ab9-4935-ad89-1e0b49a3946b/a4da5acb-ce18-4748-88fc-1576f5e40353/9194204b-0072-43c0-8df1-f8fce4b9c5ef.lean",
+  "created_at": "2026-10-16T14:21:18.43075+00:00",
+  "updated_at": "2026-10-16T14:24:10.342984+00:00",
+  "accepted_at": "2026-10-16T14:24:10.342984+00:00",
+  "vote_count": 0,
+  "explanation": "The Hessian of the deficit is bounded below by $((2K-1)\\,\\mathrm{lowerColumn}-4200K\\,\\mathrm{upperPair})|U|^2+(\\mathrm{lowerTotal}-9K\\,\\mathrm{upperPair})|D|^2$ on the box, where the coefficients are $\\ell_p$-norm Hessian bounds with corner constants of the box (`normHessian_lower_generic`, pair-coordinate geometry with constants $9$ and $4200$). Both margins hold uniformly on $p\\in[32,50]$, $K\\le p/2$ via $r^{p-2}\\le (3/4)^{30}$ (`total_comparison`, `column_comparison`), giving `ConvexOn` on the box.",
+  "deprecated_at": null
+}

@@ -1,0 +1,10 @@
+.deps/
+.venv/
+__pycache__/
+sources/upstream/
+sources/*.html
+sources/start.md
+sources/fetch_platform.py
+sources/inspect_page.py
+*.tmp
+.test-tmp/
