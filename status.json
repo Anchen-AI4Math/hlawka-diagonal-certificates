@@ -1,7 +1,7 @@
 {
   "as_of": "2026-10-17",
   "topic": "Sharp diagonal Hlawka constant",
-  "repository_visibility": "private",
+  "repository_visibility": "public",
   "platform_record": {
     "cutoff": "32",
     "solved_date": "2026-10-16",
@@ -81,7 +81,7 @@
   "publication": {
     "platform_submitted": false,
     "paper_submitted": false,
-    "public_navigation": "pending repository visibility change",
+    "public_navigation": "synced and remotely verified: organization profile README, research-index README and catalog.json",
     "preprint_title": "A computer-assisted sharp diagonal Hlawka inequality for real exponents p >= 21",
     "author": {
       "name": "Yuxuan Xu",
@@ -91,6 +91,8 @@
     "version": "1",
     "date": "2026-10-17",
     "ai_assistance_disclosed": true,
-    "public_release_status": "prepared; authorized by author on 2026-10-17"
+    "public_release_status": "public repository preprint; anonymous downloads verified",
+    "evidence": "results/publication-v1.json",
+    "preprint_public": true
   }
 }

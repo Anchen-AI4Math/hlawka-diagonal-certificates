@@ -1,0 +1,42 @@
+{
+  "date": "2026-10-17",
+  "repository": "https://github.com/Anchen-AI4Math/hlawka-diagonal-certificates",
+  "visibility_verified": "public",
+  "preprint_version": "1",
+  "paper_release_commit": "bbb7567811f9ee82c41792542da35615e9e5f276",
+  "anonymous_content_checks": {
+    "paper/main.pdf": {
+      "anonymous_http_status": 200,
+      "sha256": "94c10308c9e903aee029e9220e07234b766fd80ec1eb11f84b6505af58d02bcc"
+    },
+    "paper/main.tex": {
+      "anonymous_http_status": 200,
+      "sha256": "7a52f1f8b7fad0c0b38c071ef5c455f25e8c093cb9f765b9b089d64d4884ab1f"
+    },
+    "results/release-replay.json": {
+      "anonymous_http_status": 200,
+      "sha256": "af95f637758a381499f409baedb6cd3355da3359f1719ee2c5b11f229202c193"
+    }
+  },
+  "navigation_updates": [
+    {
+      "repository": "research-index",
+      "path": "README.md",
+      "commit": "225294cc65d6e40047917a97f657faf36f8383cd",
+      "url": "https://github.com/Anchen-AI4Math/research-index/blob/main/README.md"
+    },
+    {
+      "repository": "research-index",
+      "path": "catalog.json",
+      "commit": "b7f8c64d0882aa1a9e3f7f0db238abc0a37814b8",
+      "url": "https://github.com/Anchen-AI4Math/research-index/blob/main/catalog.json"
+    },
+    {
+      "repository": ".github",
+      "path": "profile/README.md",
+      "commit": "583da5aec846bfe814bf789a548dd0b253f06cc5",
+      "url": "https://github.com/Anchen-AI4Math/.github/blob/main/profile/README.md"
+    }
+  ],
+  "publication_scope": "Public repository preprint and reproducibility package; no journal or platform submission; independent review pending."
+}
