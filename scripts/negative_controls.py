@@ -30,6 +30,11 @@ def run(backend='arb',directory=Path('certificates'),profile=None,output=None):
         try: verify(directory,256,backend,bad_profile)
         except ValueError as exc: results.append(dict(control='curvature',backend=backend,status='REJECTED',reason=str(exc)))
         else: raise RuntimeError('Invalid geometry accepted')
+        if profile['geometry']=='pair_caps':
+            bad_profile=copy.deepcopy(profile); bad_profile['coarse_tail']='1/'+str(10**100)
+            try: verify(directory,256,backend,bad_profile)
+            except ValueError as exc: results.append(dict(control='understated_tail',backend=backend,status='REJECTED',reason=str(exc)))
+            else: raise RuntimeError('Unproved tail estimate accepted')
     filename='negative-controls.json' if backend=='arb' else 'negative-controls-rational.json'
     destination=output or Path('results',filename)
     destination.write_text(json.dumps(results,indent=2)+'\n')

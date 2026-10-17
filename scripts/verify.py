@@ -46,7 +46,7 @@ def verify(root,precision=192,backend='arb',profile=None):
     loss,half_tail,coarse_tail=F('.08'),F('1e-5'),F('1e-10')
     coarse_box=dict(diag_min=F('.555'),diag_max=F('1.158'),off_min=F('.79'),off_max=F('1.158'))
     if profile is not None:
-        require(profile['geometry']=='norm_caps','unknown geometry')
+        require(profile['geometry'] in ['norm_caps','pair_caps'],'unknown geometry')
         lo,hi,c,q=[F(profile[k]) for k in ['p_min','p_max','c','q']]
         loss,half_tail,coarse_tail=[F(profile[k]) for k in ['orientation_loss','half_tail','coarse_tail']]
         coarse_box={k:F(v) for k,v in profile['coarse_box'].items()}
@@ -79,7 +79,11 @@ def verify(root,precision=192,backend='arb',profile=None):
     require(Nmin>Gcap+loss,'opposite signs conflict')
     require(3-2*Gcap-2*loss>Tcap,'equal signs conflict')
     positive(Q(half_tail)-6*Q(F(1,2))**Q(lo)/Q(lo),'half-tail')
-    tail_ratio=max(abs(bl0-ah0),abs(bh0-al0))/(2*bl0)
+    if profile is not None and profile['geometry']=='pair_caps':
+        from geometry import capped_tail
+        tail_ratio=capped_tail(coarse_box,Tcap)/(2*bl0)
+    else:
+        tail_ratio=max(abs(bl0-ah0),abs(bh0-al0))/(2*bl0)
     require(0<tail_ratio<1,'coarse tail ratio')
     positive(Q(coarse_tail)-6*Q(tail_ratio)**Q(lo)/Q(lo),'coarse-tail')
     positive(Q(2/c)-6*Q(2).log(),'residual monotonicity')
@@ -146,8 +150,15 @@ def verify(root,precision=192,backend='arb',profile=None):
         require(all(x>=0 for x in slacks),'final box')
         final_slacks.append(list(map(float,slacks)))
         if profile is not None:
-            from geometry import constants
-            g=constants(box,Tcap,U,F(profile['young_epsilon_1']),F(profile['young_epsilon_2']))
+            from geometry import constants,pair_cap_constants
+            if profile['geometry']=='pair_caps':
+                # These are consequences of S=3 at the counterexample, then
+                # retained as linear constraints on the convex averaging domain.
+                pair_floor=3-U-2/(c*a)-coarse_tail
+                offsum_floor=6-h
+                g=pair_cap_constants(box,Tcap,U,F(profile['young_epsilon_1']),F(profile['young_epsilon_2']),pair_floor,offsum_floor)
+            else:
+                g=constants(box,Tcap,U,F(profile['young_epsilon_1']),F(profile['young_epsilon_2']))
             p=I(a,b)
             rT=Q(g['rT_factor'])*Q(g['rT_base'])**(p-2)
             rC=Q(g['rC_factor'])*Q(g['rC_base'])**(p-2)
@@ -164,7 +175,7 @@ def verify(root,precision=192,backend='arb',profile=None):
             min_envelope_margin_lower=min(margins),min_final_box_slacks=[min(v[i] for v in final_slacks) for i in range(4)],
             min_total_curvature_margin_lower=min(r['total_lower'] for r in curvature_rows),
             min_column_curvature_margin_lower=min(r['column_lower'] for r in curvature_rows),curvature=curvature_rows,
-            scope='Finite numerical obligations; analytical norm-constrained domain argument is in docs/proof-26.md.',
+            scope='Finite numerical obligations; analytical convex-domain arguments are documented separately.',
             sha256={p.name:hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted(root.glob('*.json'))})
     # Fixed final box, geometry constants 9 and 4200 from the source proof.
     m,M=F('0.625'),F('1.121')

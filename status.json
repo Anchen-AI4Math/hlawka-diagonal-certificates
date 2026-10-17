@@ -2,8 +2,80 @@
   "as_of": "2026-10-17",
   "topic": "Sharp diagonal Hlawka constant",
   "repository_visibility": "private",
-  "platform_record": {"cutoff": "32", "solved_date": "2026-10-16", "source": "https://prove2.me/campaigns/sharp-diagonal-hlawka-constant", "independently_rebuilt": false},
-  "research": {"candidate_cutoff": "26", "previous_candidate_cutoff": "127/4", "new_window": ["26", "32"], "stage": "complete_computer_assisted_proof_manuscript", "proof": "docs/proof-26.md", "foundation": "docs/proof-127-over-4.md", "scope": "Uniform sharp constant for all finite complex dimensions and real p >= 26", "improvement": "Convex domain retains singleton and total norm caps; geometry recomputed per p slab", "tail_dependency": "Accepted platform cutoff 32 result, not rebuilt here", "author_self_audit": "docs/self-audit.md", "independent_analytic_review": "pending", "optimal_cutoff_proved": false},
-  "verification": {"method": "Arb and standard-library dyadic rational intervals; exact rational LP dual replay", "profile": "profiles/cutoff26.json", "arb_precisions_bits": [192, 256], "rational_precision_bits": 256, "scalar_cells": 2699, "upper_boxes": 672, "contractor_slabs": 96, "lp_dual_certificates": 36, "arithmetic_crosschecks": 53, "negative_controls_per_backend": 7, "new_lean_proof": false, "second_arithmetic_implementation": true, "independent_end_to_end_verifier": false, "shared_components": ["mathematical obligations", "verify.py", "LP model", "geometry.py", "certificates"], "evidence": ["results/cutoff26-arb.json", "results/cutoff26-arb-256.json", "results/cutoff26-rational.json", "results/cutoff26-negative-arb.json", "results/cutoff26-negative-rational.json", "results/baseline-regression.json", "results/arithmetic-crosscheck.json"]},
-  "publication": {"platform_submitted": false, "paper_submitted": false, "public_navigation": "excluded because repository is private"}
+  "platform_record": {
+    "cutoff": "32",
+    "solved_date": "2026-10-16",
+    "source": "https://prove2.me/campaigns/sharp-diagonal-hlawka-constant",
+    "independently_rebuilt": false
+  },
+  "research": {
+    "candidate_cutoff": "21",
+    "previous_candidate_cutoff": "26",
+    "new_window": [
+      "21",
+      "26"
+    ],
+    "stage": "complete_computer_assisted_proof_manuscript",
+    "proof": "docs/proof-21.md",
+    "foundation": [
+      "docs/proof-26.md",
+      "docs/proof-127-over-4.md"
+    ],
+    "scope": "Uniform sharp constant for all finite complex dimensions and real p >= 21",
+    "improvement": "Clip pair tails using total norm; retain linear pair-coordinate and offsum floors; sharpen residual error coefficient",
+    "tail_dependency": "Local cutoff26 proof covers [26,32]; accepted platform cutoff32 covers [32,infinity), not rebuilt here",
+    "author_self_audit": "docs/self-audit.md",
+    "independent_analytic_review": "pending",
+    "optimal_cutoff_proved": false,
+    "certified_windows": [
+      [
+        "21",
+        "26"
+      ],
+      [
+        "26",
+        "32"
+      ]
+    ]
+  },
+  "verification": {
+    "method": "Arb and standard-library dyadic rational intervals; exact rational LP dual replay",
+    "profile": "profiles/cutoff21.json",
+    "arb_precisions_bits": [
+      192,
+      256
+    ],
+    "rational_precision_bits": 256,
+    "scalar_cells": 2355,
+    "upper_boxes": 960,
+    "contractor_slabs": 160,
+    "lp_dual_certificates": 36,
+    "arithmetic_crosschecks": 53,
+    "negative_controls_per_backend": 8,
+    "new_lean_proof": false,
+    "second_arithmetic_implementation": true,
+    "independent_end_to_end_verifier": false,
+    "shared_components": [
+      "mathematical obligations",
+      "verify.py",
+      "LP model",
+      "geometry.py",
+      "certificates"
+    ],
+    "evidence": [
+      "results/cutoff21-arb.json",
+      "results/cutoff21-arb-256.json",
+      "results/cutoff21-rational.json",
+      "results/cutoff21-negative-arb.json",
+      "results/cutoff21-negative-rational.json",
+      "results/cutoff26-regression.json",
+      "results/cutoff26-rational.json",
+      "results/arithmetic-crosscheck.json"
+    ]
+  },
+  "publication": {
+    "platform_submitted": false,
+    "paper_submitted": false,
+    "public_navigation": "excluded because repository is private"
+  }
 }

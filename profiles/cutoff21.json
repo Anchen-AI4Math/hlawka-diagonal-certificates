@@ -1,0 +1,16 @@
+{
+  "name": "cutoff21",
+  "p_min": "21",
+  "p_max": "26",
+  "c": "273/625",
+  "q": "1011/2500",
+  "orientation_loss": "13/100",
+  "half_tail": "1/100000",
+  "coarse_tail": "1/100000000",
+  "coarse_box": {"diag_min": "189/500", "diag_max": "607/500", "off_min": "349/500", "off_max": "607/500"},
+  "young_epsilon_1": "1",
+  "young_epsilon_2": "1/4",
+  "geometry": "pair_caps",
+  "slab_width": "1/32",
+  "rounds": 10
+}
