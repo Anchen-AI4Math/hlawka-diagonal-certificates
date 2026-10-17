@@ -3,7 +3,7 @@ import copy,json,tempfile
 from pathlib import Path
 from verify import verify
 
-def run():
+def run(backend='arb'):
     source={p.name:json.loads(p.read_text()) for p in Path('certificates').glob('*.json')}
     def gap(d): d['scalar.json'][0]['a']='3175001/100000'
     def witness(d): d['scalar.json'][0]['t']='1/2'
@@ -20,9 +20,13 @@ def run():
         with temp as folder:
             root=Path(folder)
             for name,value in data.items(): (root/name).write_text(json.dumps(value))
-            try: verify(root)
-            except ValueError as exc: results.append(dict(control=mutate.__name__,status='REJECTED',reason=str(exc)))
+            try: verify(root,256,backend)
+            except ValueError as exc: results.append(dict(control=mutate.__name__,backend=backend,status='REJECTED',reason=str(exc)))
             else: raise RuntimeError('Corrupted certificate accepted: '+mutate.__name__)
-    Path('results/negative-controls.json').write_text(json.dumps(results,indent=2)+'\n')
+    filename='negative-controls.json' if backend=='arb' else 'negative-controls-rational.json'
+    Path('results',filename).write_text(json.dumps(results,indent=2)+'\n')
     print(json.dumps(results,indent=2))
-if __name__=='__main__': run()
+if __name__=='__main__':
+    import argparse
+    parser=argparse.ArgumentParser(); parser.add_argument('--backend',choices=['arb','rational'],default='arb')
+    run(parser.parse_args().backend)

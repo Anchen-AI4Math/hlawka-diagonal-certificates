@@ -3,7 +3,7 @@
   "topic": "Sharp diagonal Hlawka constant",
   "repository_visibility": "private",
   "platform_record": {"cutoff": "32", "solved_date": "2026-10-16", "source": "https://prove2.me/campaigns/sharp-diagonal-hlawka-constant", "independently_rebuilt": false},
-  "research": {"candidate_cutoff": "127/4", "new_window": ["127/4", "32"], "stage": "numerical_obligations_certified_analytic_reduction_draft", "independent_analytic_review": "pending"},
-  "verification": {"method": "Arb ball arithmetic and exact rational LP dual replay", "precisions_bits": [192, 256], "new_lean_proof": false, "independent_verifier_implementation": false, "evidence": "results/verification.json"},
+  "research": {"candidate_cutoff": "127/4", "new_window": ["127/4", "32"], "stage": "complete_computer_assisted_proof_manuscript", "proof": "docs/proof-127-over-4.md", "scope": "Uniform sharp constant for all finite complex dimensions and real p >= 127/4", "tail_dependency": "Accepted platform cutoff 32 result, not rebuilt here", "author_self_audit": "docs/self-audit.md", "independent_analytic_review": "pending"},
+  "verification": {"method": "Arb and standard-library dyadic rational intervals; exact rational LP dual replay", "arb_precisions_bits": [192, 256], "rational_precision_bits": 256, "arithmetic_crosschecks": 53, "negative_controls_per_backend": 5, "new_lean_proof": false, "second_arithmetic_implementation": true, "independent_end_to_end_verifier": false, "shared_components": ["mathematical obligations", "verify.py", "LP model", "certificates"], "evidence": ["results/verification.json", "results/verification-256.json", "results/verification-rational.json", "results/arithmetic-crosscheck.json", "results/negative-controls.json", "results/negative-controls-rational.json"]},
   "publication": {"platform_submitted": false, "paper_submitted": false, "public_navigation": "excluded because repository is private"}
 }

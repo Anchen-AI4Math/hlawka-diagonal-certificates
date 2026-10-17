@@ -1,5 +1,6 @@
 {
   "status": "PASS",
+  "backend": "arb",
   "precision_bits": 256,
   "p_interval": [
     "127/4",
@@ -9,6 +10,7 @@
   "upper_boxes": 96,
   "contractor_slabs": 16,
   "lp_dual_certificates": 36,
+  "geometry_constants_checked": true,
   "min_envelope_margin_lower": 1.3559983926825225e-06,
   "min_final_box_slacks": [
     0.002373788679731856,

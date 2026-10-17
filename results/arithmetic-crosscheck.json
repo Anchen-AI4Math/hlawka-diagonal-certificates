@@ -1,0 +1,7 @@
+{
+  "status": "PASS",
+  "checks": 53,
+  "rational_bits": 192,
+  "reference_arb_bits": 320,
+  "scope": "Arithmetic cross-checks, not a second analytical reviewer"
+}

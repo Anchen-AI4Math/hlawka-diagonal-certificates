@@ -4,7 +4,7 @@
 
 - 本仓库为用户明确选择的私有研究仓库，不向公开目录发布其名称、内容或状态。
 - 用户要求优先推进数值证书，暂不急做 Lean；除非后续改变要求，不提交平台证明或启动大规模 Lean 工作。
-- 先读 `status.json`、`docs/numerical-note.md` 和 `docs/next-steps.md`。严格区分数值义务、解析归约、独立审阅、Lean 验证和发表状态。
+- 先读 `status.json`、`docs/proof-127-over-4.md`、`docs/self-audit.md` 和 `docs/next-steps.md`。`docs/numerical-note.md` 为历史数值笔记。严格区分数值义务、解析归约、独立审阅、Lean 验证和发表状态。
 - `sources/*.lean` 是参考下载，保留不改；新数值证书放在 `certificates/`，验证器放在 `scripts/`。生成器可用浮点搜索，接受证书必须通过区间或精确有理数验证。
 
 <!-- ai4math-maintenance:start -->

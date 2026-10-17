@@ -1,4 +1,4 @@
-"""Replay certificates with Arb and exact rational LP dual arithmetic.
+"""Replay certificates with Arb or dyadic intervals, plus rational LP duals.
 
 No scipy, optimizer output or stored numeric margin is trusted.
 This checks numerical obligations, not the entire mathematical reduction.
@@ -6,8 +6,10 @@ This checks numerical obligations, not the entire mathematical reduction.
 import argparse, json, hashlib
 from pathlib import Path
 from fractions import Fraction as F
-from intervals import Q,I,ratio,envelope,require,ctx
 from coarse_lp import model,add,scale,X,P,DIM
+
+def require(condition,message):
+    if not condition: raise ValueError(message)
 
 LO=F(127,4); HI=F(32); C=F('0.448'); QC=F('.3854')
 def partition(cells,lo,hi):
@@ -31,8 +33,15 @@ def ratios(r,n,tlo,D,b):
     power_cert(sigma,s-sigma,b,'ratio upper')
     return tau,sigma
 
-def verify(root,precision=192):
-    ctx.prec=precision
+def verify(root,precision=192,backend='arb'):
+    global Q,I,ratio,envelope
+    if backend=='arb':
+        from intervals import Q,I,ratio,envelope,ctx
+        ctx.prec=precision
+    elif backend=='rational':
+        from rational_intervals import Q,I,ratio,envelope,configure
+        configure(precision)
+    else: raise ValueError('unknown arithmetic backend')
     load=lambda name:json.loads((root/name).read_text())
     scalar=load('scalar.json'); upper=load('cyclic-upper.json'); slabs=load('contractor.json'); coarse=load('coarse.json')
     partition([(F(s['a']),F(s['b'])) for s in scalar],LO,HI)
@@ -121,17 +130,23 @@ def verify(root,precision=192):
         require(all(x>=0 for x in slacks),'final box')
         final_slacks.append(list(map(float,slacks)))
     # Fixed final box, geometry constants 9 and 4200 from the source proof.
+    m,M=F('0.625'),F('1.121')
+    tmin,tmax=F('0.633'),F('1.617')
+    require((tmin*tmin+tmax*tmax)/(tmin+tmax)**2<=F(8,5)*m*m,'total pair shape')
+    require(4*F(101,100)*M*M*F(202,125)<=9,'geometry D coefficient')
+    require(4*F(101,100)*M*M*F(2424,5)+101*16<=4200,'geometry U coefficient')
+    require(F('.625')/F('1.121')>=F(1,2) and F('1.065')/F('.849')<=2,'orbit parameter range')
     p=I(LO,HI)
     rT=Q(F(14553,4528))*Q(F(133672,179139))**(p-2)
     rC=Q(F(10089,4528))*Q(F(278008,530625))**(p-2)
     curvatureT=1-9*(p/2)*rT
     curvatureC=2*Q(C)-1/p-2100*rC
     positive(curvatureT,'total curvature'); positive(curvatureC,'column curvature')
-    return dict(status='PASS',precision_bits=precision,p_interval=[str(LO),str(HI)],scalar_cells=len(scalar),upper_boxes=sum(len(s['t_cells']) for s in upper),contractor_slabs=len(slabs),lp_dual_certificates=sum(map(len,coarse['stages'])),min_envelope_margin_lower=min(margins),min_final_box_slacks=[min(v[i] for v in final_slacks) for i in range(4)],total_curvature_margin=str(curvatureT),column_curvature_margin=str(curvatureC),scope='Numerical obligations only; analytic reduction and source dependencies are not machine checked here.',sha256={p.name:hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted(root.glob('*.json'))})
+    return dict(status='PASS',backend=backend,precision_bits=precision,p_interval=[str(LO),str(HI)],scalar_cells=len(scalar),upper_boxes=sum(len(s['t_cells']) for s in upper),contractor_slabs=len(slabs),lp_dual_certificates=sum(map(len,coarse['stages'])),geometry_constants_checked=True,min_envelope_margin_lower=min(margins),min_final_box_slacks=[min(v[i] for v in final_slacks) for i in range(4)],total_curvature_margin=str(curvatureT),column_curvature_margin=str(curvatureC),scope='Numerical obligations only; analytic reduction and source dependencies are not machine checked here.',sha256={p.name:hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted(root.glob('*.json'))})
 
 if __name__=='__main__':
-    parser=argparse.ArgumentParser(); parser.add_argument('--precision',type=int,default=192); parser.add_argument('--directory',type=Path,default=Path('certificates')); parser.add_argument('--output',type=Path,default=Path('results/verification.json')); args=parser.parse_args()
-    result=verify(args.directory,args.precision)
+    parser=argparse.ArgumentParser(); parser.add_argument('--precision',type=int,default=192); parser.add_argument('--backend',choices=['arb','rational'],default='arb'); parser.add_argument('--directory',type=Path,default=Path('certificates')); parser.add_argument('--output',type=Path,default=Path('results/verification.json')); args=parser.parse_args()
+    result=verify(args.directory,args.precision,args.backend)
     args.output.parent.mkdir(exist_ok=True)
     args.output.write_text(json.dumps(result,indent=2)+'\n')
     print(json.dumps(result,indent=2))
