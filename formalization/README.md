@@ -14,7 +14,7 @@
 | 任意有限复维度传递及最小性 | [通用桥接](Hlawka21/ComplexBridge.lean) 本地通过且平台 `Proved`、开放依赖为零；[平台记录](../results/prove2me-analytic-assembly.json) |
 | 全范围最终拼接 | [FullWindow](Hlawka21/FullWindow.lean) 本地证明准确的 cutoff 21 结论，显式输入既有 cutoff 32 尾部；[639 个源码哈希、601 项公理检查](../results/lean-full-window-build.json)；尾部未独立重建，原始平台主目标组合已获 `SKETCH_ACCEPTED`，仍有两个实三维窗口依赖 |
 
-目前 53 个辅助定理获平台 `ACCEPTED`，另有两个原始标量里程碑 `Proved`。计数与新增证书的异步状态分别见 [status.json](../status.json)、[原辅助记录](../results/prove2me-auxiliary.json)、[任意反例归约](../results/prove2me-failure.json)、[公共解析及传递](../results/prove2me-analytic-assembly.json)、[紧凑证书](../results/prove2me-real-pieces.json)。这不表示原始全维主目标已经通过。
+目前 59 个辅助定理获平台 `ACCEPTED`，另有两个原始标量里程碑 `Proved`。计数与新增证书的异步状态分别见 [status.json](../status.json)、[原辅助记录](../results/prove2me-auxiliary.json)、[任意反例归约](../results/prove2me-failure.json)、[公共解析及传递](../results/prove2me-analytic-assembly.json)、[紧凑证书](../results/prove2me-real-pieces.json)。这不表示原始全维主目标已经通过。
 
 ## 平台提交为何拆分
 
@@ -22,7 +22,7 @@
 
 公共 Hessian、凸性和平均论证已提取为两条闭合的平台定理。第二版有限证书各覆盖至多 8 段，共 33 份、无缝覆盖原 256 段，但首批三个提交也触发了 300 秒超时；[批量本地检查](../results/lean-real-pieces-build.json) 已中止并保留 11 个精确文件通过记录。因此 33 不是固定剩余定理数，也不能据此估计完成时间。
 
-不导入解析定理的单段实际范数定位已获平台 `ACCEPTED`，读回 `Proved`、零开放依赖：[精确文件通过](../results/lean-localization-platform-build.json)，[平台异步任务](../results/prove2me-localization.json)。目前测试 4 段组合；65 份候选文件无缝覆盖全部 256 段，首个四段组合已在平台闭合，其他文件的本地精确检查与平台验证正在逐批进行，尚不能称为整批通过。这样可分离有限算术、公共引理及解析导入的开销，再确定适合服务器的组合。所有版本仍使用原始 `lpNorm`，没有把目标改成数值有效性谓词，也没有修改原始五个 mission 声明。
+不导入解析定理的单段实际范数定位已获平台 `ACCEPTED`，读回 `Proved`、零开放依赖：[精确文件通过](../results/lean-localization-platform-build.json)，[平台异步任务](../results/prove2me-localization.json)。65 份四段组合无缝覆盖全部 256 段，原始提交文件已[全部通过本地精确检查](../results/lean-domain-blocks-build.json)。平台仍逐批验收这些定位定理；部分超时块通过更小子区间证明修复，不能称为所有原始文件均获平台接受。所有版本仍使用原始 `lpNorm`，没有把目标改成数值有效性谓词，也没有修改原始五个 mission 声明。
 
 ## 复现
 

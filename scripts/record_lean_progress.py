@@ -40,7 +40,7 @@ def main():
     formal=verification['lean_formalization']
     local_files=0
     for path in ['results/lean-auxiliary-build.json','results/lean-failure-build.json',
-                 'results/lean-analytic-assembly-build.json','results/lean-real-pieces-build.json',
+                 'results/lean-analytic-assembly-build.json',
                  'results/lean-localization-platform-build.json','results/lean-domain-blocks-build.json',
                  'results/lean-domain-children-build.json','results/lean-domain-repairs-build.json']:
         if (ROOT/path).exists():

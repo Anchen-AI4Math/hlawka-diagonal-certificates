@@ -14,11 +14,22 @@
       "theorem_status": "Proved",
       "open_leaf_count": 0,
       "statement_matches_original_parent": true,
-      "checked_at": "2026-10-17T14:11:46.715257+00:00"
+      "checked_at": "2026-10-17T14:16:30.911795+00:00"
     },
     "localized_domain4_21_08": {
       "theorem_id": "fd806c8d-0c1b-4472-ba60-bd7b7fd32117",
-      "theorem_name": "HlawkaSchatten.DiagonalCutoff21.localized_domain4_21_08"
+      "theorem_name": "HlawkaSchatten.DiagonalCutoff21.localized_domain4_21_08",
+      "submission_id": "69f8b2d2-d500-4d89-8935-fc54eefd029f",
+      "proof_status": "ACCEPTED",
+      "solution_sha256": "858f6109460ac5b8613b48e039dc010409783aabd7eaabbb701c15dbc3f87f1c",
+      "children": [
+        "localized_domain2_21_08_part0",
+        "localized_domain2_21_08_part1"
+      ],
+      "theorem_status": "Proved",
+      "open_leaf_count": 0,
+      "statement_matches_original_parent": true,
+      "checked_at": "2026-10-17T14:16:32.122466+00:00"
     },
     "localized_domain4_21_14": {
       "theorem_id": "820f7e38-cb97-4544-bfdc-977e6fc9bc09",

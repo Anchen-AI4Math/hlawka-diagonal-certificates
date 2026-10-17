@@ -44,19 +44,32 @@
       "publish_status": "PUBLISHED",
       "theorem_id": "ad8dc514-2d45-4dbd-b918-22b5b06c6dd9",
       "submission_id": "41798d2b-63e7-4090-b86b-94a130787afe",
-      "proof_status": "PENDING",
-      "solution_sha256": "988405258954f80463b68c1ec41acf5f6ec3d5bfdc56a4f9a1672e538dfed967"
+      "proof_status": "ACCEPTED",
+      "solution_sha256": "988405258954f80463b68c1ec41acf5f6ec3d5bfdc56a4f9a1672e538dfed967",
+      "theorem_status": "Proved",
+      "open_leaf_count": 0,
+      "checked_at": "2026-10-17T14:12:37.596779+00:00"
     },
     "localized_domain2_21_14_part0": {
       "theorem_name": "HlawkaSchatten.DiagonalCutoff21.localized_domain2_21_14_part0",
       "publish_job_id": "ffea4827-4683-4deb-abfe-6cf265e7b61b",
       "publish_status": "PUBLISHED",
-      "theorem_id": "f792054b-d7a5-41fb-a5cd-1af20db1bbf6"
+      "theorem_id": "f792054b-d7a5-41fb-a5cd-1af20db1bbf6",
+      "submission_id": "0a22e5b5-5a89-4c50-b4b8-823ff3b5d52f",
+      "proof_status": "ACCEPTED",
+      "solution_sha256": "5acd6712fda734745141a5b2d3b92938084805c8ece78b9da6c424f21140e0ce",
+      "theorem_status": "Proved",
+      "open_leaf_count": 0,
+      "checked_at": "2026-10-17T14:16:24.039625+00:00"
     },
     "localized_domain2_21_14_part1": {
       "theorem_name": "HlawkaSchatten.DiagonalCutoff21.localized_domain2_21_14_part1",
       "publish_job_id": "17473e21-a73a-4659-8309-fab81ec54b02",
-      "publish_status": "PENDING"
+      "publish_status": "PUBLISHED",
+      "theorem_id": "3977d628-4991-48a4-9f0b-7a1cecf71e58",
+      "submission_id": "fe21ba2d-0770-43e2-8fc3-2d3e84fcc23b",
+      "proof_status": "PENDING",
+      "solution_sha256": "7b36b0c364870a0b7d5e3127e4dc9d3735eb3659c046c050e4cde7501eb05246"
     }
   }
 }

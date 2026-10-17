@@ -113,8 +113,8 @@
       "stage": "all_new_ingredients_kernel_checked; platform_closure_in_progress",
       "toolchain": "leanprover/lean4:v4.33.1",
       "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474",
-      "locally_compiled_auxiliary_files": 117,
-      "platform_accepted_auxiliary_theorems": 53,
+      "locally_compiled_auxiliary_files": 107,
+      "platform_accepted_auxiliary_theorems": 59,
       "root_status": "Open",
       "axioms": [
         "propext",
@@ -160,10 +160,9 @@
       "root_assembly_open_leaf_count": 2,
       "root_assembly_evidence": "results/prove2me-root.json",
       "superseded_eight_slab_manifest": "formalization/platform/real-piece-proofs.json",
-      "domain_blocks_closed": 17,
+      "domain_blocks_closed": 20,
       "domain_block_target_count": 65,
       "domain_block_repairs_pending": [
-        "localized_domain4_21_08",
         "localized_domain4_21_14"
       ],
       "domain_repair_manifest": "formalization/platform/domain-repair-proofs.json"

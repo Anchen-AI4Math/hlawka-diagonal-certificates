@@ -26,8 +26,20 @@
         "propext"
       ],
       "elapsed_seconds": 30.605
+    },
+    {
+      "key": "localized_domain4_21_14",
+      "status": "PASS",
+      "solution_file": "formalization/platform/Repair_localized_domain4_21_14_size2.lean",
+      "sha256": "fffdc8a130020f09374bcde76fa8605801fb354e15a85d98d17a437fbb2e8849",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 26.229
     }
   ],
   "manifest": "formalization/platform/domain-repair-proofs.json",
-  "scope": "2 proof files from this manifest only. The cutoff21 root remains unproved."
+  "scope": "3 proof files from this manifest only. The cutoff21 root remains unproved."
 }
