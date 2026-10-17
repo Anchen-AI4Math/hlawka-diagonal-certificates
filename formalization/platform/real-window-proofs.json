@@ -1,0 +1,18 @@
+[
+  {
+    "key": "real_three_window21",
+    "theorem_id": "6c62afca-c977-42ef-8cf7-7b8d39ebe08a",
+    "theorem_name": "HlawkaSchatten.DiagonalCutoff21.real_three_window21",
+    "solution_file": "formalization/platform/Sol_real_three_window21.lean",
+    "solution_sha256": "aebc4e9236e5090e37cb984f0bb803f13e33c8b94ea84ae4339bce99703c68f8",
+    "explanation": "The unchanged unrestricted real-three theorem follows by contradiction. Arbitrary-failure localization gives the coarse box and original norm normalization, total-norm bound and pair-gap bound. A balanced split over the complete finite interval cover applies a four-slab actual-norm localization block, then the shared analytic domain theorem gives nonnegative deficit, contradicting strict failure. All input triples are unrestricted, including zero and unequal singleton norms. All imported theorem dependencies are tracked; the target is not imported. Full closure requires every localization block and analytic dependency to be Proved."
+  },
+  {
+    "key": "real_three_window26",
+    "theorem_id": "a1a7a36f-f8b9-4061-84a2-33080e185b41",
+    "theorem_name": "HlawkaSchatten.DiagonalCutoff21.real_three_window26",
+    "solution_file": "formalization/platform/Sol_real_three_window26.lean",
+    "solution_sha256": "a19a4ffdf0800a9ed24c2d71379afdd8b44c41b1354699fa05159a479b194d54",
+    "explanation": "The unchanged unrestricted real-three theorem follows by contradiction. Arbitrary-failure localization gives the coarse box and original norm normalization, total-norm bound and pair-gap bound. A balanced split over the complete finite interval cover applies a four-slab actual-norm localization block, then the shared analytic domain theorem gives nonnegative deficit, contradicting strict failure. All input triples are unrestricted, including zero and unequal singleton norms. All imported theorem dependencies are tracked; the target is not imported. Full closure requires every localization block and analytic dependency to be Proved."
+  }
+]

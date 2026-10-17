@@ -75,6 +75,11 @@ for cutoff in [21,26]:
         f'  · exact (HlawkaSchatten.DiagonalCutoff21.envelope_linear{cutoff} hp).trans hlower',
         '', '#print axioms solution',''])
     file=f'Sol_scalar_window{cutoff}.lean';(OUT/file).write_text('\n'.join(lines),encoding='utf-8')
+    wrapper='Thm_'+target.replace('.','_')
+    mirror='\n'.join(lines).replace('theorem solution', 'theorem '+target).replace(
+        '#print axioms solution', '#print axioms '+target)
+    (theorems/(wrapper+'.lean')).write_text(mirror,encoding='utf-8')
+    wrappers.append('Theorems.'+wrapper)
     missions.append(dict(key=f'scalar_window{cutoff}',theorem_id='2b5def5c-82ab-4480-bbcb-1d11f05b7cbe' if cutoff==21 else 'bfa2ef01-7ed9-4ac2-93ec-ace2d0624fda',
         theorem_name=target,solution_file='formalization/platform/'+file,
         explanation='The fixed rational cyclic witness gives cp<Kp on a finite covering of the full real window. Bernoulli scaling transports exact endpoint root certificates across each closed subinterval. The analytic cyclic upper bound yields Kp<=p/2. A separate endpoint certificate and Bernoulli scaling yield Ep(q)<cp, hence Ep(q)<Kp. The imported lower-bound chunks, upper bound and envelope comparison together prove all three original scalar-window conclusions, with no added assumptions.'))

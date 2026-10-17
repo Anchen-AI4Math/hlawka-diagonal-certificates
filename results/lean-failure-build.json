@@ -1,0 +1,33 @@
+{
+  "status": "PASS",
+  "toolchain": "leanprover/lean4:v4.33.1",
+  "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474",
+  "proofs": [
+    {
+      "key": "coarse_failure_window21",
+      "status": "PASS",
+      "solution_file": "formalization/platform/Sol_coarse_failure_window21.lean",
+      "sha256": "7c549a1456ad1f3b316e86da2a71b0bdaabe4a66824c469a4f92022a47c11c9a",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 46.816
+    },
+    {
+      "key": "coarse_failure_window26",
+      "status": "PASS",
+      "solution_file": "formalization/platform/Sol_coarse_failure_window26.lean",
+      "sha256": "2af0781aba7986d1adc63b6abbd32ef3fa44b877e7f5e132180d7fce72d13d5a",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 47.079
+    }
+  ],
+  "manifest": "formalization/platform/failure-proofs.json",
+  "scope": "2 proof files from this manifest only. The cutoff21 root remains unproved."
+}

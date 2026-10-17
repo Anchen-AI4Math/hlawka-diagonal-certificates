@@ -1,0 +1,201 @@
+{
+  "status": "PASS",
+  "toolchain": "leanprover/lean4:v4.33.1",
+  "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474",
+  "proofs": [
+    {
+      "key": "certified_nonneg21_chunk00",
+      "status": "PASS",
+      "solution_file": "formalization/platform/Sol_certified_nonneg21_chunk00.lean",
+      "sha256": "7e89fe86c1352dac58d0ccfb24dbe93337d7fe3b27a0b8fd9cb8c550ba3655c5",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 81.328
+    },
+    {
+      "key": "certified_nonneg21_chunk01",
+      "status": "PASS",
+      "solution_file": "formalization/platform/Sol_certified_nonneg21_chunk01.lean",
+      "sha256": "ad07f43df907867852eb28034f71e58af3ae4e37714124d9648881f4e8a014c9",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 224.725
+    },
+    {
+      "key": "certified_nonneg21_chunk02",
+      "status": "PASS",
+      "solution_file": "formalization/platform/Sol_certified_nonneg21_chunk02.lean",
+      "sha256": "7ef9fd6754fa0798515d933674a909299f6dcd93c57ce76ee587aa0aa1dfc01d",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 222.033
+    },
+    {
+      "key": "certified_nonneg21_chunk03",
+      "status": "PASS",
+      "solution_file": "formalization/platform/Sol_certified_nonneg21_chunk03.lean",
+      "sha256": "08f85c16b60edea380886f6ca323abe3dc5a0aabe23d003a5a0305af1e16f9b2",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 221.985
+    },
+    {
+      "key": "certified_nonneg21_chunk04",
+      "status": "PASS",
+      "solution_file": "formalization/platform/Sol_certified_nonneg21_chunk04.lean",
+      "sha256": "1db3f5ca583cb226c1d5a4a6e42f461eaa89626d63f7fc1e22de1054cdd38e96",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 205.407
+    },
+    {
+      "key": "certified_nonneg21_chunk05",
+      "status": "PASS",
+      "solution_file": "formalization/platform/Sol_certified_nonneg21_chunk05.lean",
+      "sha256": "15b913d8b0664e4b431f95e231460b733a4df1ed89d9d0f6fe9554e8b86381f9",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 207.301
+    },
+    {
+      "key": "certified_nonneg21_chunk06",
+      "status": "PASS",
+      "solution_file": "formalization/platform/Sol_certified_nonneg21_chunk06.lean",
+      "sha256": "daa36806e7b134e73a84b2f3d92d40db83bde0253539a158976f8fe09a86eab3",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 202.678
+    },
+    {
+      "key": "certified_nonneg21_chunk07",
+      "status": "PASS",
+      "solution_file": "formalization/platform/Sol_certified_nonneg21_chunk07.lean",
+      "sha256": "48a3401af8a856921aa077cd5efd3bd9861c49f7fdf46976db74e71b004204af",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 211.706
+    },
+    {
+      "key": "certified_nonneg21_chunk08",
+      "status": "PASS",
+      "solution_file": "formalization/platform/Sol_certified_nonneg21_chunk08.lean",
+      "sha256": "852b49c9f7aafe3e747f220b64d4709ecdfcefd3c2bad2ded60fbc04d2e3324a",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 211.074
+    },
+    {
+      "key": "certified_nonneg21_chunk09",
+      "status": "PASS",
+      "solution_file": "formalization/platform/Sol_certified_nonneg21_chunk09.lean",
+      "sha256": "806ba4620c83b40205a208a65ccac7cd1cb709fb5ea920dde33b01d16949a93e",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 207.873
+    },
+    {
+      "key": "certified_nonneg26_chunk00",
+      "status": "PASS",
+      "solution_file": "formalization/platform/Sol_certified_nonneg26_chunk00.lean",
+      "sha256": "4c4b6b38d182aee4b7329a8fd2a307aed21bd199306bfab725fbce750f1ff0eb",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 219.241
+    },
+    {
+      "key": "certified_nonneg26_chunk01",
+      "status": "PASS",
+      "solution_file": "formalization/platform/Sol_certified_nonneg26_chunk01.lean",
+      "sha256": "ee4134944fb3a71a387d22577e3f13f5c9b999ceeb0913d2473591371fdf0de5",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 216.981
+    },
+    {
+      "key": "certified_nonneg26_chunk02",
+      "status": "PASS",
+      "solution_file": "formalization/platform/Sol_certified_nonneg26_chunk02.lean",
+      "sha256": "82fb7fd516e3d599a282917b912ca50aa038e1fbaeaa7d65fbc35272e53122c8",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 220.27
+    },
+    {
+      "key": "certified_nonneg26_chunk03",
+      "status": "PASS",
+      "solution_file": "formalization/platform/Sol_certified_nonneg26_chunk03.lean",
+      "sha256": "70efa70edcf825367b50f69a63587888a68c5fbbf9c6087552dcc1ae9cd1910f",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 265.502
+    },
+    {
+      "key": "certified_nonneg26_chunk04",
+      "status": "PASS",
+      "solution_file": "formalization/platform/Sol_certified_nonneg26_chunk04.lean",
+      "sha256": "f4ba3058bf6ccc7227d72c76f2d0e0abcde7c18a4008104cf0a0fd57321b0331",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 266.778
+    },
+    {
+      "key": "certified_nonneg26_chunk05",
+      "status": "PASS",
+      "solution_file": "formalization/platform/Sol_certified_nonneg26_chunk05.lean",
+      "sha256": "bc80c0a77fc8c0b686e7b62631039650fa49b334e5d20b08b0fcde12a909ab90",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 261.627
+    }
+  ],
+  "manifest": "formalization/platform/real-chunk-proofs.json",
+  "scope": "16 proof files from this manifest only. The cutoff21 root remains unproved."
+}

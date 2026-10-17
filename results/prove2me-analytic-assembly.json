@@ -1,0 +1,42 @@
+{
+  "env": "0df444a360eaa60ab8c11dca51a86af692955474",
+  "scope": "Sixteen localized nonnegativity chunks; unrestricted real-three windows and cutoff21 root are separate original targets.",
+  "theorems": {
+    "domain_nonneg_group00": {
+      "theorem_name": "HlawkaSchatten.DiagonalCutoff21.domain_nonneg_group00",
+      "publish_job_id": "d3bf944b-c117-4d89-b032-37f470584f70",
+      "publish_status": "PUBLISHED",
+      "theorem_id": "b60ea380-c391-49fe-8496-6dfe8c4dee55",
+      "submission_id": "de577b6b-0253-45ac-9b17-ccf002bb69a6",
+      "proof_status": "ACCEPTED",
+      "solution_sha256": "2e6032bbce39992f0114698b41e007114af3188358204f995f7875ec2cb41d60",
+      "theorem_status": "Proved",
+      "open_leaf_count": 0,
+      "checked_at": "2026-10-17T13:06:55.389004+00:00"
+    },
+    "domain_nonneg_group01": {
+      "theorem_name": "HlawkaSchatten.DiagonalCutoff21.domain_nonneg_group01",
+      "publish_job_id": "8eea16b4-2c28-40dc-a5db-9207001c9927",
+      "publish_status": "PUBLISHED",
+      "theorem_id": "cacacf50-4b02-4205-926d-88289ecb93bc",
+      "submission_id": "729a1148-9b57-4996-99f0-f7f849c19a82",
+      "proof_status": "ACCEPTED",
+      "solution_sha256": "cd817119328fd5b8ca3db34668f3d8c88f983a7b5c0cde8ac62611ac43a9fc13",
+      "theorem_status": "Proved",
+      "open_leaf_count": 0,
+      "checked_at": "2026-10-17T13:06:56.509329+00:00"
+    },
+    "complex_least_of_real_three": {
+      "theorem_name": "HlawkaSchatten.DiagonalCutoff21.complex_least_of_real_three",
+      "publish_job_id": "ebc718e0-55fe-456a-a179-0c21c89baf6f",
+      "publish_status": "PUBLISHED",
+      "theorem_id": "6f78c968-f438-4a77-b0d4-e7e743d0acae",
+      "submission_id": "4b2f58ef-04f4-46e1-8309-cd16679007ed",
+      "proof_status": "ACCEPTED",
+      "solution_sha256": "7df75f5c848e757e54aa0720357a5ff735e5376e59f08577c6849a53e487f0cb",
+      "theorem_status": "Proved",
+      "open_leaf_count": 0,
+      "checked_at": "2026-10-17T13:06:57.832459+00:00"
+    }
+  }
+}

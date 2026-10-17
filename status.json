@@ -7,7 +7,7 @@
     "solved_date": "2026-10-16",
     "source": "https://prove2.me/campaigns/sharp-diagonal-hlawka-constant",
     "independently_rebuilt": false,
-    "last_checked": "2026-10-17T09:41:51.487123+00:00"
+    "last_checked": "2026-10-17T13:13:49.929163+00:00"
   },
   "research": {
     "candidate_cutoff": "21",
@@ -80,7 +80,25 @@
       "results/lean-contraction-build.json",
       "results/lean-milestone-build.json",
       "results/prove2me-milestones.json",
-      "results/prove2me-goals.json"
+      "results/prove2me-goals.json",
+      "results/lean-failure-build.json",
+      "results/prove2me-failure.json",
+      "results/lean-localization-build.json",
+      "results/lean-geometry-build.json",
+      "results/lean-real-chunks-build.json",
+      "results/lean-full-window-build.json",
+      "results/lean-analytic-assembly-build.json",
+      "results/prove2me-analytic-assembly.json",
+      "results/lean-real-platform-build.json",
+      "results/prove2me-real-chunks.json",
+      "results/lean-real-pieces-build.json",
+      "results/prove2me-real-pieces.json",
+      "results/lean-localization-platform-build.json",
+      "results/prove2me-localization.json",
+      "results/lean-domain-blocks-build.json",
+      "results/prove2me-domain-blocks.json",
+      "results/lean-root-assembly-build.json",
+      "results/prove2me-root.json"
     ],
     "release_replay": "results/release-replay.json",
     "release_replay_status": "PASS",
@@ -88,11 +106,11 @@
     "proposal_statement_compilation": "platform/proposal/validation.json",
     "full_cutoff21_lean_proof": false,
     "lean_formalization": {
-      "stage": "two_original_scalar_milestones_proved; real_three_windows_and_root_open",
+      "stage": "all_new_ingredients_kernel_checked; platform_closure_in_progress",
       "toolchain": "leanprover/lean4:v4.33.1",
       "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474",
-      "locally_compiled_auxiliary_files": 27,
-      "platform_accepted_auxiliary_theorems": 27,
+      "locally_compiled_auxiliary_files": 70,
+      "platform_accepted_auxiliary_theorems": 34,
       "root_status": "Open",
       "axioms": [
         "propext",
@@ -113,7 +131,30 @@
       "milestone_evidence": "results/prove2me-milestones.json",
       "goal_evidence": "results/prove2me-goals.json",
       "scalar_evidence": "results/lean-scalar-build.json",
-      "conditional_contraction_evidence": "results/lean-contraction-build.json"
+      "conditional_contraction_evidence": "results/lean-contraction-build.json",
+      "locally_proved_original_real_windows": [
+        "real_three_window21",
+        "real_three_window26"
+      ],
+      "actual_norm_localization_slabs": 256,
+      "localization_integer_power_certificates": 768,
+      "new_core_source_hashes": 639,
+      "new_core_axiom_checks": 601,
+      "new_core_evidence": "results/lean-full-window-build.json",
+      "local_final_assembly": "Exact cutoff21 conclusion with an explicit cutoff32 tail input; the already Proved platform tail is not independently rebuilt here.",
+      "compact_certificate_manifest": "formalization/platform/real-piece-proofs.json",
+      "compact_certificate_build": "results/lean-real-pieces-build.json",
+      "compact_certificate_platform": "results/prove2me-real-pieces.json",
+      "original_large_certificate_attempt": "The first three 16-slab packets and the first three 8-slab packets timed out at the server 300s limit. Local proofs pass; packet size is being tested rather than treated as a fixed remaining theorem count.",
+      "local_auxiliary_file_count_scope": "Passing exact files in the current auxiliary submission manifests; the superseded large packet checks are recorded separately.",
+      "minimal_localization_platform": "results/prove2me-localization.json",
+      "domain_block_manifest": "formalization/platform/domain-block-proofs.json",
+      "domain_block_coverage": "formalization/domain-blocks.json",
+      "domain_block_build": "results/lean-domain-blocks-build.json",
+      "domain_block_platform": "results/prove2me-domain-blocks.json",
+      "root_submission_status": "SKETCH_ACCEPTED",
+      "root_assembly_open_leaf_count": 2,
+      "root_assembly_evidence": "results/prove2me-root.json"
     }
   },
   "publication": {

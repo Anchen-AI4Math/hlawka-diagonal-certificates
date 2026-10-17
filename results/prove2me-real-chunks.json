@@ -1,0 +1,93 @@
+{
+  "env": "0df444a360eaa60ab8c11dca51a86af692955474",
+  "scope": "Sixteen localized nonnegativity chunks; unrestricted real-three windows and cutoff21 root are separate original targets.",
+  "theorems": {
+    "certified_nonneg21_chunk00": {
+      "theorem_name": "HlawkaSchatten.DiagonalCutoff21.certified_nonneg21_chunk00",
+      "publish_job_id": "2b96512f-52e5-4c14-918d-eac2ee0a13ca",
+      "publish_status": "PUBLISHED",
+      "theorem_id": "2f97965b-252e-4e4c-b1d3-8b7b02851172",
+      "submission_id": "00d8d41d-3b84-4958-aac9-3761d647017e",
+      "proof_status": "ERROR",
+      "solution_sha256": "7e89fe86c1352dac58d0ccfb24dbe93337d7fe3b27a0b8fd9cb8c550ba3655c5",
+      "proof_error": "Verification timed out after 300s. Try breaking the statement or proof into smaller lemmas or definitions and checking each piece separately before retrying. If imports are heavy, prefer the specific Mathlib modules you need over `import Mathlib`."
+    },
+    "certified_nonneg21_chunk01": {
+      "theorem_name": "HlawkaSchatten.DiagonalCutoff21.certified_nonneg21_chunk01",
+      "publish_job_id": "a31dcd29-f5e9-483a-a477-f6ca2118849d",
+      "publish_status": "PUBLISHED",
+      "theorem_id": "b680767b-e08e-4e8f-9c39-58a7c384279f",
+      "submission_id": "28a6c99d-94e8-43d0-93f1-490ac35f9fde",
+      "proof_status": "ERROR",
+      "solution_sha256": "ad07f43df907867852eb28034f71e58af3ae4e37714124d9648881f4e8a014c9",
+      "proof_error": "Verification timed out after 300s. Try breaking the statement or proof into smaller lemmas or definitions and checking each piece separately before retrying. If imports are heavy, prefer the specific Mathlib modules you need over `import Mathlib`."
+    },
+    "certified_nonneg21_chunk02": {
+      "theorem_name": "HlawkaSchatten.DiagonalCutoff21.certified_nonneg21_chunk02",
+      "publish_job_id": "2a888b46-3492-4589-aba8-200e0761763c",
+      "publish_status": "PUBLISHED",
+      "theorem_id": "27d26efa-b3c6-4d0f-9b73-4d961af0399f",
+      "submission_id": "22c4e243-b17e-4708-9989-68b6e87c2a2b",
+      "proof_status": "ERROR",
+      "solution_sha256": "7ef9fd6754fa0798515d933674a909299f6dcd93c57ce76ee587aa0aa1dfc01d",
+      "proof_error": "Verification timed out after 300s. Try breaking the statement or proof into smaller lemmas or definitions and checking each piece separately before retrying. If imports are heavy, prefer the specific Mathlib modules you need over `import Mathlib`."
+    },
+    "certified_nonneg21_chunk03": {
+      "theorem_name": "HlawkaSchatten.DiagonalCutoff21.certified_nonneg21_chunk03",
+      "publish_job_id": "5470e26a-eefe-40f4-a7ba-0b6a769d2c19",
+      "publish_status": "PUBLISHED",
+      "theorem_id": "7c2e28a5-74fe-4da3-b795-c6be67313817"
+    },
+    "certified_nonneg21_chunk04": {
+      "theorem_name": "HlawkaSchatten.DiagonalCutoff21.certified_nonneg21_chunk04",
+      "publish_job_id": "291590b4-263f-4bfb-aabe-cb4721d0c587",
+      "publish_status": "PUBLISHED",
+      "theorem_id": "f8992369-1651-4b63-ba88-bef2ca3548a6"
+    },
+    "certified_nonneg21_chunk05": {
+      "theorem_name": "HlawkaSchatten.DiagonalCutoff21.certified_nonneg21_chunk05",
+      "publish_job_id": "840cc1ff-4b21-4812-9af4-8cbb21124954",
+      "publish_status": "PUBLISHED",
+      "theorem_id": "ec323d27-76eb-472e-a71c-dcb53489b2f1"
+    },
+    "certified_nonneg21_chunk06": {
+      "theorem_name": "HlawkaSchatten.DiagonalCutoff21.certified_nonneg21_chunk06",
+      "publish_job_id": "bbb7cef3-5635-4f61-a49a-2a631c512ce0",
+      "publish_status": "PUBLISHED",
+      "theorem_id": "fa254d89-a9b4-4ae3-8510-8355520d2d9f"
+    },
+    "certified_nonneg21_chunk07": {
+      "theorem_name": "HlawkaSchatten.DiagonalCutoff21.certified_nonneg21_chunk07",
+      "publish_job_id": "40d0d9f7-7770-477e-ae34-efdc3b2b25b1",
+      "publish_status": "PUBLISHED",
+      "theorem_id": "79bbb27f-cb61-42a2-b818-571602cccb38"
+    },
+    "certified_nonneg21_chunk08": {
+      "theorem_name": "HlawkaSchatten.DiagonalCutoff21.certified_nonneg21_chunk08",
+      "publish_job_id": "4e75c232-0490-40e9-9a0b-2fcbc4ae7fb4",
+      "publish_status": "PUBLISHED",
+      "theorem_id": "bb6a9979-7e2b-4215-b1ed-31a654630226"
+    },
+    "certified_nonneg21_chunk09": {
+      "theorem_name": "HlawkaSchatten.DiagonalCutoff21.certified_nonneg21_chunk09",
+      "publish_job_id": "7253436a-c8b3-4d14-ba71-29bb6d1252d7",
+      "publish_status": "PUBLISHED",
+      "theorem_id": "988e3e16-6b3c-4647-b665-51d510b35406"
+    },
+    "certified_nonneg26_chunk00": {
+      "theorem_name": "HlawkaSchatten.DiagonalCutoff21.certified_nonneg26_chunk00",
+      "publish_job_id": "22a79652-d948-4572-a75d-5520ba47f57b",
+      "publish_status": "COMPILING"
+    },
+    "certified_nonneg26_chunk01": {
+      "theorem_name": "HlawkaSchatten.DiagonalCutoff21.certified_nonneg26_chunk01",
+      "publish_job_id": "bf539c89-9f21-4bf0-8b62-d0b7b306c4f8",
+      "publish_status": "COMPILING"
+    },
+    "certified_nonneg26_chunk02": {
+      "theorem_name": "HlawkaSchatten.DiagonalCutoff21.certified_nonneg26_chunk02",
+      "publish_job_id": "83fcfde3-d2bb-4db9-840c-a1977de5691c",
+      "publish_status": "COMPILING"
+    }
+  }
+}

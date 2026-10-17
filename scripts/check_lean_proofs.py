@@ -8,7 +8,9 @@ def main():
     parser=argparse.ArgumentParser()
     parser.add_argument('--reuse',action='store_true',help='Reuse prior successful checks of unchanged self-contained files in the identical toolchain and Mathlib revision')
     parser.add_argument('--jobs',type=int,choices=[1,2,3,4],default=1)
+    parser.add_argument('--lean-threads',type=int,choices=[1,2,4,8],help='Bound threads within each Lean process')
     parser.add_argument('--manifest',default='formalization/platform/payloads.json')
+    parser.add_argument('--keys',nargs='+',help='Check only these keys from the published manifest; the report explicitly records the selection')
     parser.add_argument('--output',default='results/lean-auxiliary-build.json')
     args=parser.parse_args()
     toolchain=(ROOT/'formalization/lean-toolchain').read_text().strip()
@@ -28,6 +30,10 @@ def main():
     head=subprocess.check_output(['git','-C',str(project/'.lake/packages/mathlib'),'rev-parse','HEAD'],text=True).strip()
     assert head=='0df444a360eaa60ab8c11dca51a86af692955474'
     payloads=json.loads((ROOT/args.manifest).read_text(encoding='utf-8'))
+    if args.keys:
+        requested=set(args.keys)
+        assert requested <= {item['key'] for item in payloads},'Unknown selected proof key'
+        payloads=[item for item in payloads if item['key'] in requested]
     old_report=ROOT/args.output
     previous=json.loads(old_report.read_text(encoding='utf-8')) if args.reuse and old_report.exists() else {}
     if previous.get('toolchain')!=toolchain or previous.get('mathlib_rev')!=head:previous={}
@@ -40,7 +46,9 @@ def main():
             print(item['key'],'prior exact-file check retained',flush=True)
             return old
         started=time.monotonic()
-        result=subprocess.run([str(executable),'env','lean','-DautoImplicit=false',str(path)],cwd=project,env=env,capture_output=True,text=True,encoding='utf-8')
+        command=[str(executable),'env','lean','-DautoImplicit=false']
+        if args.lean_threads:command.append('-j'+str(args.lean_threads))
+        result=subprocess.run(command+[str(path)],cwd=project,env=env,capture_output=True,text=True,encoding='utf-8')
         print(item['key'],result.returncode,flush=True)
         if result.returncode or 'sorryAx' in result.stdout:
             print(result.stdout);print(result.stderr)
@@ -57,6 +65,8 @@ def main():
         records.sort(key=lambda r:order[r['key']])
         report=dict(status=status,toolchain=toolchain,mathlib_rev=head,proofs=records,manifest=args.manifest,
             scope=f'{len(records)} proof files from this manifest only. The cutoff21 root remains unproved.')
+        if args.lean_threads:report['lean_threads']=args.lean_threads
+        if args.keys:report['selected_keys']=args.keys
         if failures:report['failures']=failures
         (ROOT/args.output).write_text(json.dumps(report,indent=2)+'\n',encoding='utf-8')
     with concurrent.futures.ThreadPoolExecutor(max_workers=args.jobs) as pool:

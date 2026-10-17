@@ -26,5 +26,61 @@
     "source": "https://github.com/savarin/hlawka-schatten/blob/79aa498bfcf7b22bd91d771fb32ec278e2d4704b/HlawkaSchatten/GapComparison.lean#L20-L36",
     "sha256": "fea0f637de5e406b698c4ca86fd7f70a70fcedca43a7a31688b80ca336123ee5",
     "notice": "Original author and Apache-2.0 notices preserved."
+  },
+  {
+    "file": "Def_HlawkaSchatten_DiagonalConstruction_Normalization.lean",
+    "platform_theorem_id": "db77e7ef-74bb-47e0-8ab3-db4c064e23bd",
+    "source": "https://github.com/savarin/hlawka-schatten/blob/79aa498bfcf7b22bd91d771fb32ec278e2d4704b/HlawkaSchatten/DiagonalConstruction/Normalization.lean#L15-L18",
+    "sha256": "1968ca67a860b9871d1366e80176f07784216fa7227552fd76261d6b46350c89",
+    "notice": "Original author and Apache-2.0 notices preserved."
+  },
+  {
+    "file": "Def_HlawkaSchatten_DiagonalConstruction_Coordinates.lean",
+    "platform_theorem_id": "a54e4ad8-16c8-4302-814d-5dded85aa036",
+    "source": "https://github.com/savarin/hlawka-schatten/blob/79aa498bfcf7b22bd91d771fb32ec278e2d4704b/HlawkaSchatten/DiagonalConstruction/Coordinates.lean#L98-L100",
+    "sha256": "428d8b616a5c484c987bed68d9e73755566e92b8fc3618f5b877d7e4d10e5c8c",
+    "notice": "Original author and Apache-2.0 notices preserved."
+  },
+  {
+    "file": "Def_HlawkaSchatten_DiagonalConstruction_Localization.lean",
+    "platform_theorem_id": "408307c3-c8cb-4264-a00b-541ee217f047",
+    "source": "https://github.com/savarin/hlawka-schatten/blob/79aa498bfcf7b22bd91d771fb32ec278e2d4704b/HlawkaSchatten/DiagonalConstruction/Localization.lean#L12-L20",
+    "sha256": "9ea3c29b74532995c08347259a8fa91c4a7d4f23b11f6250bb51793ace8eb6d5",
+    "notice": "Original author and Apache-2.0 notices preserved."
+  },
+  {
+    "file": "Def_HlawkaSchatten_DiagonalConstruction_NormHessian.lean",
+    "platform_theorem_id": "daa25aef-a910-411a-9aa5-0b52fd6aa634",
+    "source": "https://github.com/savarin/hlawka-schatten/blob/79aa498bfcf7b22bd91d771fb32ec278e2d4704b/HlawkaSchatten/DiagonalConstruction/NormHessian.lean#L16-L34",
+    "sha256": "7bf82b829c04bd0a0857dd8d4911f91736bde90affee88e2ed8e04c91839221b",
+    "notice": "Original author and Apache-2.0 notices preserved."
+  },
+  {
+    "file": "Def_HlawkaSchatten_DiagonalConstruction_BoxCoordinates.lean",
+    "platform_theorem_id": "da9585d5-2b76-4189-9a5a-b193e17c30f5",
+    "source": "https://github.com/savarin/hlawka-schatten/blob/79aa498bfcf7b22bd91d771fb32ec278e2d4704b/HlawkaSchatten/DiagonalConstruction/BoxCoordinates.lean#L12-L13",
+    "sha256": "d30f0ed29ff767728123fec4c689e37f2be037e6657c558eb2f350c2f4ee0e9f",
+    "notice": "Original author and Apache-2.0 notices preserved."
+  },
+  {
+    "file": "Def_HlawkaSchatten_DiagonalConstruction_BoxGeometry.lean",
+    "platform_theorem_id": "ee940ce1-3eda-4981-9fbc-604b8ff3a547",
+    "source": "https://github.com/savarin/hlawka-schatten/blob/79aa498bfcf7b22bd91d771fb32ec278e2d4704b/HlawkaSchatten/DiagonalConstruction/BoxGeometry.lean#L17-L23",
+    "sha256": "095b107a69cb56787b1ecf9a01f66f0a7701f7dfbdcfc4defdfcfb8ed596d09c",
+    "notice": "Original author and Apache-2.0 notices preserved."
+  },
+  {
+    "file": "Def_HlawkaSchatten_DiagonalConstruction_BoxHessian.lean",
+    "platform_theorem_id": "67a497f7-8a7d-4f4f-acfa-d289c97ffb1a",
+    "source": "https://github.com/savarin/hlawka-schatten/blob/79aa498bfcf7b22bd91d771fb32ec278e2d4704b/HlawkaSchatten/DiagonalConstruction/BoxHessian.lean#L13-L16",
+    "sha256": "6e6aea7da5b391b1277516f13afb0d9b92db038c0dc261c55945964a75020f3a",
+    "notice": "Original author and Apache-2.0 notices preserved."
+  },
+  {
+    "file": "Def_HlawkaSchatten_DiagonalConstruction_BoxConvexity.lean",
+    "platform_theorem_id": "149cc404-d435-4c1c-a983-20fc6a0ef285",
+    "source": "https://github.com/savarin/hlawka-schatten/blob/79aa498bfcf7b22bd91d771fb32ec278e2d4704b/HlawkaSchatten/DiagonalConstruction/BoxConvexity.lean#L15-L18",
+    "sha256": "eeaafa35977d5e777c82fd41cb707cbf07fddf3f5ed7f4f31a37173747086fad",
+    "notice": "Original author and Apache-2.0 notices preserved."
   }
 ]

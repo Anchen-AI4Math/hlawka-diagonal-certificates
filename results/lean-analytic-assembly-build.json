@@ -1,0 +1,45 @@
+{
+  "status": "PASS",
+  "toolchain": "leanprover/lean4:v4.33.1",
+  "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474",
+  "proofs": [
+    {
+      "key": "domain_nonneg_group00",
+      "status": "PASS",
+      "solution_file": "formalization/platform/Sol_domain_nonneg_group00.lean",
+      "sha256": "2e6032bbce39992f0114698b41e007114af3188358204f995f7875ec2cb41d60",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 42.021
+    },
+    {
+      "key": "domain_nonneg_group01",
+      "status": "PASS",
+      "solution_file": "formalization/platform/Sol_domain_nonneg_group01.lean",
+      "sha256": "cd817119328fd5b8ca3db34668f3d8c88f983a7b5c0cde8ac62611ac43a9fc13",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 40.917
+    },
+    {
+      "key": "complex_least_of_real_three",
+      "status": "PASS",
+      "solution_file": "formalization/platform/Sol_complex_least_of_real_three.lean",
+      "sha256": "7df75f5c848e757e54aa0720357a5ff735e5376e59f08577c6849a53e487f0cb",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 20.98
+    }
+  ],
+  "manifest": "formalization/platform/analytic-assembly-proofs.json",
+  "scope": "3 proof files from this manifest only. The cutoff21 root remains unproved."
+}

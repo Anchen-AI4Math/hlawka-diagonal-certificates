@@ -1,0 +1,134 @@
+{
+  "upstream_commit": "1829591140522193a81ae721330e4d775c81123e",
+  "upstream_repository": "https://github.com/savarin/hlawka-schatten",
+  "license": "Apache-2.0",
+  "files": [
+    {
+      "file": "formalization/Hlawka21/Foundation/Basic.lean",
+      "upstream_file": "sources/upstream/HlawkaSchatten/DiagonalConstruction/Basic.lean",
+      "upstream_sha256": "6a18f12ce12bab4af2ad1cbebbadc42a12859ea68692a533dd6e51d4a7872375",
+      "sha256": "ab8788370b79d11db79cd982b3d2286e61fa0109c08a530a87c2a18c4ae6df1f",
+      "adaptation": "Keep original proofs and notices; import platform definitions; remove duplicate definitions and unused dependencies."
+    },
+    {
+      "file": "formalization/Hlawka21/Foundation/Normalization.lean",
+      "upstream_file": "sources/upstream/HlawkaSchatten/DiagonalConstruction/Normalization.lean",
+      "upstream_sha256": "75004d69566976afa0436e6dc08ef7452657a52d2f09b655a8c0bf6cbd46e822",
+      "sha256": "64c1060ad61af473f355ab6a6cb21104298c0d50d9a44b2de68885dfab8434dd",
+      "adaptation": "Keep original proofs and notices; import platform definitions; remove duplicate definitions and unused dependencies."
+    },
+    {
+      "file": "formalization/Hlawka21/Foundation/WeightedConvex.lean",
+      "upstream_file": "sources/upstream/HlawkaSchatten/DiagonalConstruction/WeightedConvex.lean",
+      "upstream_sha256": "a482e2f11bbfe3f984243f131b2bedbe6234620d6bad6209b104acce52dfcaeb",
+      "sha256": "96777e6bf111c2740487174ffb42dc87e85673d56dd48ab23aa98d812c8e5fbb",
+      "adaptation": "Keep original proofs and notices; import platform definitions; remove duplicate definitions and unused dependencies."
+    },
+    {
+      "file": "formalization/Hlawka21/Foundation/ScalarConvexity.lean",
+      "upstream_file": "sources/upstream/HlawkaSchatten/ScalarBregman.lean",
+      "upstream_sha256": "53625a878114774821337e5b84ff87ca437ce91a8125548cec4f864e163309c8",
+      "sha256": "a3c11d72cb3f1b4239f337f771ffddf260a770288106f500095afb39428210a0",
+      "adaptation": "Keep original proofs and notices; import platform definitions; remove duplicate definitions and unused dependencies."
+    },
+    {
+      "file": "formalization/Hlawka21/Foundation/ScalarBounds.lean",
+      "upstream_file": "sources/upstream/HlawkaSchatten/DiagonalConstruction/ScalarBounds.lean",
+      "upstream_sha256": "427253e10d4e271efe1b9005678b4ddb81d23813207ed184f25565d5ac4eb965",
+      "sha256": "2243055c28d592420b0b18b999364d4115859736c0092b2e3de4e489343cf954",
+      "adaptation": "Keep original proofs and notices; import platform definitions; remove duplicate definitions and unused dependencies."
+    },
+    {
+      "file": "formalization/Hlawka21/Foundation/ScalarEnvelope.lean",
+      "upstream_file": "sources/upstream/HlawkaSchatten/DiagonalConstruction/ScalarEnvelope.lean",
+      "upstream_sha256": "ed317f8388ed134f738b52a3b4dfe76eaa90a2aaabb20d5e0ec511f498f8119c",
+      "sha256": "e69949b0ae3730e2fc6ae1a6e4f333ef31b902101f0d1a1fe608bd069a98ed44",
+      "adaptation": "Keep original proofs and notices; import platform definitions; remove duplicate definitions and unused dependencies."
+    },
+    {
+      "file": "formalization/Hlawka21/Foundation/Failure.lean",
+      "upstream_file": "sources/coarse32.lean",
+      "upstream_sha256": "3cd8933974249b36e6d0557407de308ade956071f1094c441876b21009bfedb1",
+      "sha256": "09a859c5ef4a209e5f3ad405211f6c598c0a389ddb71f6bbceab960303d7972c",
+      "adaptation": "Keep original proofs and notices; import platform definitions; remove duplicate definitions and unused dependencies."
+    },
+    {
+      "file": "formalization/Hlawka21/Foundation/NormHessian.lean",
+      "upstream_file": "sources/upstream/HlawkaSchatten/DiagonalConstruction/NormHessian.lean",
+      "upstream_sha256": "03ccd591f7ca049f2d8b5377aeeb51bbf03d764ac3e94d0ef6158835f89a6dcf",
+      "sha256": "b34e022f0233c802e88673d31a20ef4acffefaaf5e3804f46642011b126ac196",
+      "adaptation": "Keep original proofs and notices; import platform definitions and remove duplicate definitions."
+    },
+    {
+      "file": "formalization/Hlawka21/DomainConvexity.lean",
+      "upstream_file": "sources/upstream/HlawkaSchatten/DiagonalConstruction/BoxConvexity.lean",
+      "upstream_sha256": "a644d1c2b1894e8e522a03b53a6ba72aa3d726f27a5092392d9e934af8662dae",
+      "sha256": "ece8e049d0d2614850b3214229d33b16cb04e069b3c2abadf778c342aff8ebc5",
+      "adaptation": "Preserve notices and derivative proofs; replace entryBox-specific membership by seven nonzero norm arguments, an arbitrary convex set and pointwise Hessian nonnegativity."
+    },
+    {
+      "file": "formalization/Hlawka21/Foundation/Cyclic.lean",
+      "upstream_file": "sources/upstream/HlawkaSchatten/DiagonalConstruction/Cyclic.lean",
+      "upstream_sha256": "0de6fbfeded5a1860cff795536e6aee4b2b3691237ae6e9a47d5dc8152710154",
+      "sha256": "0705f08c6a6566b1d17a04c1310feae61c16bf134641bda7d1f8ba66b87136d7",
+      "adaptation": "Keep original proofs and notices; import platform definitions and remove four duplicate scalar definitions."
+    },
+    {
+      "file": "formalization/Hlawka21/Foundation/CyclicWitness.lean",
+      "upstream_file": "sources/upstream/HlawkaSchatten/DiagonalConstruction/CyclicWitness.lean",
+      "upstream_sha256": "08bc2a19cb73553d68e91441e97ccf053e47074dd96bf5c9011372a480dcdd48",
+      "sha256": "862b9646e7555fada900c9f53501a0833ce7b8c2c48e90ed7e688f7537b5f27a",
+      "adaptation": "Keep original definitions, proofs and notices; import the actual rebuilt cyclic foundation."
+    },
+    {
+      "file": "formalization/Hlawka21/NormDomainOrbit.lean",
+      "upstream_file": "sources/upstream/HlawkaSchatten/DiagonalConstruction/OrbitAveraging.lean",
+      "upstream_sha256": "4e3e6c97985b0235298fe0bcbaea7bccfc3b110da08e4e414d34ec9c407470fc",
+      "sha256": "13b0315c933e3211385ee8b9d114701d287950c28500731d13407aad51c16d4e",
+      "adaptation": "Keep original six-permutation orbit, invariance and average formulas with notices; generalize domain invariance and Jensen step to norm-capped domains."
+    },
+    {
+      "file": "formalization/Hlawka21/NormDomainNonneg.lean",
+      "upstream_file": "sources/upstream/HlawkaSchatten/DiagonalConstruction/OrbitAveraging.lean",
+      "upstream_sha256": "4e3e6c97985b0235298fe0bcbaea7bccfc3b110da08e4e414d34ec9c407470fc",
+      "sha256": "b37be26eaf939a7cdbbe63c65ea427f0f0823c3814c054b0b85bd0585b00632f",
+      "adaptation": "Keep original cyclic-average argument with notices; derive average parameter bounds from actual norm caps and linear offsum floors."
+    },
+    {
+      "file": "formalization/Hlawka21/Foundation/WeightedCoordinates.lean",
+      "upstream_file": "sources/upstream/HlawkaSchatten/DiagonalConstruction/WeightedCoordinates.lean",
+      "upstream_sha256": "8bb510e782b02a672fb303799b5a34138d54b67370b6e8f6744a24481756a31c",
+      "sha256": "793388f5a4a8b7db450ba46aff1dc03c6fadb97e97f8b5129ee84d2fa0d3f7e1",
+      "adaptation": "Preserve actual proofs, definitions and original notices; adapt imports to rebuilt foundations and the pinned Lean 4.33.1 environment."
+    },
+    {
+      "file": "formalization/Hlawka21/Foundation/Sparsification.lean",
+      "upstream_file": "sources/upstream/HlawkaSchatten/DiagonalConstruction/Sparsification.lean",
+      "upstream_sha256": "9df021ed12cc2010d619a0f33478dc5a16254dae8cda65783e1bf5c68c336d2b",
+      "sha256": "566aebea5b660b9d72bb04b4100694e3e8f2bc273a92fdcea4f2464ce605e45c",
+      "adaptation": "Preserve actual proofs, definitions and original notices; adapt imports to rebuilt foundations and the pinned Lean 4.33.1 environment. Replace the newer dite_eq_left/right lemma names by the matching dif_pos/neg API."
+    },
+    {
+      "file": "formalization/Hlawka21/Foundation/DimensionReduction.lean",
+      "upstream_file": "sources/upstream/HlawkaSchatten/DiagonalConstruction/DimensionReduction.lean",
+      "upstream_sha256": "50d817eebc981e2a85d2e1d3b80e91823cbe26094494d51f45f2708eff6f318f",
+      "sha256": "fc5aaa86976e542c7dc95bd7b878845a9073c656ad9f3915b789dff83dba2399",
+      "adaptation": "Preserve actual proofs, definitions and original notices; adapt imports to rebuilt foundations and the pinned Lean 4.33.1 environment."
+    },
+    {
+      "file": "formalization/Hlawka21/Foundation/CircleProjection.lean",
+      "upstream_file": "sources/upstream/HlawkaSchatten/DiagonalConstruction/CircleProjection.lean",
+      "upstream_sha256": "c7f0cabcc6166d59dad7b6abd5de65456fa7222a787f0d546608ae2ca84ddf68",
+      "sha256": "11f549274cc080bad246c8fd3c559c23214faf36b90e1b5c96ed8d06492cef57",
+      "adaptation": "Preserve actual proofs, definitions and original notices; adapt imports to rebuilt foundations and the pinned Lean 4.33.1 environment."
+    },
+    {
+      "file": "formalization/Hlawka21/Foundation/ComplexTransfer.lean",
+      "upstream_file": "sources/solution32.lean",
+      "upstream_sha256": "fb450f7011506ca6a9094c86615b2c6caf5f7ee72cb8693d5a72c05e92d588bc",
+      "sha256": "265a37aa429a46893bc2c53580cce71c8468cdbd274a3774c1dbbf0c6a0f6285",
+      "adaptation": "Extract the generic real-three to complex/leastness argument from the accepted cutoff32 submission, with its explicit real-three premise; reuse rebuilt circle and cyclic foundations; rename generic helpers to avoid colliding with older cutoff-specific platform names.",
+      "source_url": "https://prove2.me/theorems/6e8430ce-7c32-4b82-9a1b-d7fcd67fdeb3"
+    }
+  ]
+}

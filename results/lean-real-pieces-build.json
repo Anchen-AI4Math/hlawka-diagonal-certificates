@@ -1,0 +1,143 @@
+{
+  "status": "INTERRUPTED",
+  "toolchain": "leanprover/lean4:v4.33.1",
+  "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474",
+  "proofs": [
+    {
+      "key": "certified_piece21_00",
+      "status": "PASS",
+      "solution_file": "formalization/platform/Sol_certified_piece21_00.lean",
+      "sha256": "0211bdce41b5c41cf4ac9c75c4173159242d1c077acf26991abeb4b06b7ee2cf",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 51.518
+    },
+    {
+      "key": "certified_piece21_01",
+      "status": "PASS",
+      "solution_file": "formalization/platform/Sol_certified_piece21_01.lean",
+      "sha256": "5dacee1565dcb6041b332d924aa1ddd5697dde59d7dc213af9cabc5f4f4a0d76",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 160.419
+    },
+    {
+      "key": "certified_piece21_02",
+      "status": "PASS",
+      "solution_file": "formalization/platform/Sol_certified_piece21_02.lean",
+      "sha256": "210238a9ae9c13f4f5f49cf84bcc3861ecb146595f6c22dbc568ed7d3374f464",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 163.451
+    },
+    {
+      "key": "certified_piece21_03",
+      "status": "PASS",
+      "solution_file": "formalization/platform/Sol_certified_piece21_03.lean",
+      "sha256": "0703df102f239ede70ec1209e36d7cdf23ae2bbf483a971fd8252214cc5fee01",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 160.125
+    },
+    {
+      "key": "certified_piece21_04",
+      "status": "PASS",
+      "solution_file": "formalization/platform/Sol_certified_piece21_04.lean",
+      "sha256": "1672d76adc1e7746bd7e6ed1218d4fe29dc42ff7bd1420c69857bfeae4fddc46",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 182.766
+    },
+    {
+      "key": "certified_piece21_05",
+      "status": "PASS",
+      "solution_file": "formalization/platform/Sol_certified_piece21_05.lean",
+      "sha256": "0fd2f220080ddec082ff99c6847b1aa26c4bb5d329fb4d11aa300fc7f0b26b6b",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 179.365
+    },
+    {
+      "key": "certified_piece21_06",
+      "status": "PASS",
+      "solution_file": "formalization/platform/Sol_certified_piece21_06.lean",
+      "sha256": "dd32dcd7ceee5aa84313c6ac308c8824b275d0257cf95dd15b01251fa0bfd45c",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 175.717
+    },
+    {
+      "key": "certified_piece21_07",
+      "status": "PASS",
+      "solution_file": "formalization/platform/Sol_certified_piece21_07.lean",
+      "sha256": "10cddd47c1d86cc31019e83b2d20a3d0e32e574e826fa0ce8d1e4af2db991e71",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 415.661
+    },
+    {
+      "key": "certified_piece21_08",
+      "status": "PASS",
+      "solution_file": "formalization/platform/Sol_certified_piece21_08.lean",
+      "sha256": "0641041642370e2a11a3dc409583bd880161dc7c0e7dbd91d9d26c395d5293eb",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 410.689
+    },
+    {
+      "key": "certified_piece21_09",
+      "status": "PASS",
+      "solution_file": "formalization/platform/Sol_certified_piece21_09.lean",
+      "sha256": "1a477a77ea5b22127a770307c35cea830005f89ec627c02f94239408f70a7f4a",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 402.482
+    },
+    {
+      "key": "certified_piece21_10",
+      "status": "PASS",
+      "solution_file": "formalization/platform/Sol_certified_piece21_10.lean",
+      "sha256": "f7e5f66fe2b90fd5fc117a56f59d216d8d681c225c0ee3008547307c6b24d7fe",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 142.786
+    }
+  ],
+  "manifest": "formalization/platform/real-piece-proofs.json",
+  "scope": "11 proof files from this manifest only. The cutoff21 root remains unproved.",
+  "lean_threads": 2,
+  "interruption_reason": "Eight-slab platform submissions timed out; completed exact-file PASS records are retained while smaller packaging is investigated."
+}

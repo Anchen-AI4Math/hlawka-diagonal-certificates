@@ -1,0 +1,7 @@
+[
+  {
+    "key": "conditional_root_assembly",
+    "solution_file": "formalization/platform/Check_root_assembly.lean",
+    "solution_sha256": "d9e94b99b46438578439e3fd9f4bdd16a463e761dfe7cef2aeb960e575723f5f"
+  }
+]

@@ -1,0 +1,14 @@
+[
+  {
+    "key": "campaign_cutoff21",
+    "theorem_id": "db286144-c8c4-4918-9bc9-03fcadedfffd",
+    "theorem_name": "HlawkaSchatten.DiagonalConstruction.campaign_cutoff21",
+    "formal_statement": "theorem HlawkaSchatten.DiagonalConstruction.campaign_cutoff21 :\n    ∀ p : ℝ, 21 ≤ p →\n      IsLeast {C : ℝ | ∀ n : ℕ,\n        HasHlawkaConstant (lpNorm p : (Fin n → ℂ) → ℝ) C}\n        (cyclicConstant p) := by sorry",
+    "solution_file": "formalization/platform/Sol_campaign_cutoff21.lean",
+    "solution_sha256": "bb118ceaf3288330c0835b7a6baca856d58c815db89a27650c64a0cbad4ff458",
+    "conditional_check_file": "formalization/platform/Check_root_assembly.lean",
+    "conditional_check_sha256": "d9e94b99b46438578439e3fd9f4bdd16a463e761dfe7cef2aeb960e575723f5f",
+    "local_check_scope": "The exact same assembly body with an explicit cutoff32 tail input. The server file itself is checked by Prove2Me using its accepted tail theorem; the tail is not independently rebuilt locally.",
+    "explanation": "The original full statement is unchanged. For p>=32 apply the already Proved campaign_cutoff32. For 21<=p<32 apply the already Proved universal real-three-to-complex least-constant theorem, using the original real-three window21 or window26 as appropriate. All natural dimensions including zero, all complex triples and IsLeast remain in the target. The two real-three windows are tracked dependencies: this is not a complete proof until both are Proved and the original root has zero open leaves. No self import or external validity axiom is used."
+  }
+]

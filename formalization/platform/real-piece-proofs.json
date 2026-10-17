@@ -1,0 +1,563 @@
+[
+  {
+    "key": "certified_piece21_00",
+    "theorem_name": "HlawkaSchatten.DiagonalCutoff21.certified_piece21_00",
+    "theorem_title": "Finite contraction certificate [21,85/4]",
+    "formal_statement": "theorem HlawkaSchatten.DiagonalCutoff21.certified_piece21_00 :\n    ∀ p : ℝ, (21 : ℝ) ≤ p → p ≤ (85/4 : ℝ) →\n    ∀ X : Fin 3 → Fin 3 → ℝ,\n      (∀ i, -(607/500 : ℝ) ≤ X i i ∧ X i i ≤ -(189/500 : ℝ)) →\n      (∀ j i, j ≠ i → (349/500 : ℝ) ≤ X j i ∧ X j i ≤ (607/500 : ℝ)) →\n      lpNorm p (X 0) + lpNorm p (X 1) + lpNorm p (X 2) = 3 →\n      lpNorm p (X 0 + X 1 + X 2) < (3033/2500 : ℝ) →\n      pairGapSum (lpNorm p) (X 0) (X 1) (X 2) < 2 / ((273/625 : ℝ)*p) →\n      0 ≤ tripleDeficit p (cyclicConstant p) X := by sorry",
+    "preamble": "import Theorems.Thm_HlawkaSchatten_DiagonalCutoff21_domain_nonneg_group00\nimport Definitions.Def_HlawkaSchatten_GapComparison\nimport Definitions.Def_HlawkaSchatten_DiagonalConstruction_Basic\nopen HlawkaSchatten HlawkaSchatten.DiagonalConstruction\n",
+    "natural_language_statement": "For all real p in [21,85/4], an original real triple satisfying the explicit coarse coordinate box, singleton norm sum three, total norm bound 3033/2500, and original pair-gap bound has nonnegative original cyclic-constant deficit. This piece covers 8 consecutive parameter slabs. Root bounds, budgets, all ten contraction rounds and the linear pair/offsum floors are proved here; the shared norm-domain nonnegativity theorem is imported. Unequal singleton norms are allowed.",
+    "source": "Yuxuan Xu, A computer-assisted sharp diagonal Hlawka inequality for real exponents p >= 21, Sections 3-7, https://github.com/Anchen-AI4Math/hlawka-diagonal-certificates/blob/main/paper/main.pdf . Contraction framework adapted from @bwdaugherty, Apache-2.0; source notices retained.",
+    "tags": [
+      "hlawka-schatten",
+      "exact-arithmetic",
+      "real-analysis"
+    ],
+    "solution_file": "formalization/platform/Sol_certified_piece21_00.lean",
+    "solution_sha256": "0211bdce41b5c41cf4ac9c75c4173159242d1c077acf26991abeb4b06b7ee2cf",
+    "explanation": "The only theorem import is the appropriate shared analytic domain-nonnegativity result. The exact root comparisons, actual original p-norm-to-contraction bridge and complete ten-round contraction schedules for at most eight slabs are embedded. Explicit rational box inclusions and norm/pair/offsum bounds imply every displayed hypothesis of the imported analytic theorem. Balanced interval decisions cover the entire real exponent interval with no floating-point or external validity predicate. This factoring avoids repeating the shared Hessian and averaging proof in every certificate file."
+  },
+  {
+    "key": "certified_piece21_01",
+    "theorem_name": "HlawkaSchatten.DiagonalCutoff21.certified_piece21_01",
+    "theorem_title": "Finite contraction certificate [85/4,43/2]",
+    "formal_statement": "theorem HlawkaSchatten.DiagonalCutoff21.certified_piece21_01 :\n    ∀ p : ℝ, (85/4 : ℝ) ≤ p → p ≤ (43/2 : ℝ) →\n    ∀ X : Fin 3 → Fin 3 → ℝ,\n      (∀ i, -(607/500 : ℝ) ≤ X i i ∧ X i i ≤ -(189/500 : ℝ)) →\n      (∀ j i, j ≠ i → (349/500 : ℝ) ≤ X j i ∧ X j i ≤ (607/500 : ℝ)) →\n      lpNorm p (X 0) + lpNorm p (X 1) + lpNorm p (X 2) = 3 →\n      lpNorm p (X 0 + X 1 + X 2) < (3033/2500 : ℝ) →\n      pairGapSum (lpNorm p) (X 0) (X 1) (X 2) < 2 / ((273/625 : ℝ)*p) →\n      0 ≤ tripleDeficit p (cyclicConstant p) X := by sorry",
+    "preamble": "import Theorems.Thm_HlawkaSchatten_DiagonalCutoff21_domain_nonneg_group00\nimport Definitions.Def_HlawkaSchatten_GapComparison\nimport Definitions.Def_HlawkaSchatten_DiagonalConstruction_Basic\nopen HlawkaSchatten HlawkaSchatten.DiagonalConstruction\n",
+    "natural_language_statement": "For all real p in [85/4,43/2], an original real triple satisfying the explicit coarse coordinate box, singleton norm sum three, total norm bound 3033/2500, and original pair-gap bound has nonnegative original cyclic-constant deficit. This piece covers 8 consecutive parameter slabs. Root bounds, budgets, all ten contraction rounds and the linear pair/offsum floors are proved here; the shared norm-domain nonnegativity theorem is imported. Unequal singleton norms are allowed.",
+    "source": "Yuxuan Xu, A computer-assisted sharp diagonal Hlawka inequality for real exponents p >= 21, Sections 3-7, https://github.com/Anchen-AI4Math/hlawka-diagonal-certificates/blob/main/paper/main.pdf . Contraction framework adapted from @bwdaugherty, Apache-2.0; source notices retained.",
+    "tags": [
+      "hlawka-schatten",
+      "exact-arithmetic",
+      "real-analysis"
+    ],
+    "solution_file": "formalization/platform/Sol_certified_piece21_01.lean",
+    "solution_sha256": "5dacee1565dcb6041b332d924aa1ddd5697dde59d7dc213af9cabc5f4f4a0d76",
+    "explanation": "The only theorem import is the appropriate shared analytic domain-nonnegativity result. The exact root comparisons, actual original p-norm-to-contraction bridge and complete ten-round contraction schedules for at most eight slabs are embedded. Explicit rational box inclusions and norm/pair/offsum bounds imply every displayed hypothesis of the imported analytic theorem. Balanced interval decisions cover the entire real exponent interval with no floating-point or external validity predicate. This factoring avoids repeating the shared Hessian and averaging proof in every certificate file."
+  },
+  {
+    "key": "certified_piece21_02",
+    "theorem_name": "HlawkaSchatten.DiagonalCutoff21.certified_piece21_02",
+    "theorem_title": "Finite contraction certificate [43/2,87/4]",
+    "formal_statement": "theorem HlawkaSchatten.DiagonalCutoff21.certified_piece21_02 :\n    ∀ p : ℝ, (43/2 : ℝ) ≤ p → p ≤ (87/4 : ℝ) →\n    ∀ X : Fin 3 → Fin 3 → ℝ,\n      (∀ i, -(607/500 : ℝ) ≤ X i i ∧ X i i ≤ -(189/500 : ℝ)) →\n      (∀ j i, j ≠ i → (349/500 : ℝ) ≤ X j i ∧ X j i ≤ (607/500 : ℝ)) →\n      lpNorm p (X 0) + lpNorm p (X 1) + lpNorm p (X 2) = 3 →\n      lpNorm p (X 0 + X 1 + X 2) < (3033/2500 : ℝ) →\n      pairGapSum (lpNorm p) (X 0) (X 1) (X 2) < 2 / ((273/625 : ℝ)*p) →\n      0 ≤ tripleDeficit p (cyclicConstant p) X := by sorry",
+    "preamble": "import Theorems.Thm_HlawkaSchatten_DiagonalCutoff21_domain_nonneg_group00\nimport Definitions.Def_HlawkaSchatten_GapComparison\nimport Definitions.Def_HlawkaSchatten_DiagonalConstruction_Basic\nopen HlawkaSchatten HlawkaSchatten.DiagonalConstruction\n",
+    "natural_language_statement": "For all real p in [43/2,87/4], an original real triple satisfying the explicit coarse coordinate box, singleton norm sum three, total norm bound 3033/2500, and original pair-gap bound has nonnegative original cyclic-constant deficit. This piece covers 8 consecutive parameter slabs. Root bounds, budgets, all ten contraction rounds and the linear pair/offsum floors are proved here; the shared norm-domain nonnegativity theorem is imported. Unequal singleton norms are allowed.",
+    "source": "Yuxuan Xu, A computer-assisted sharp diagonal Hlawka inequality for real exponents p >= 21, Sections 3-7, https://github.com/Anchen-AI4Math/hlawka-diagonal-certificates/blob/main/paper/main.pdf . Contraction framework adapted from @bwdaugherty, Apache-2.0; source notices retained.",
+    "tags": [
+      "hlawka-schatten",
+      "exact-arithmetic",
+      "real-analysis"
+    ],
+    "solution_file": "formalization/platform/Sol_certified_piece21_02.lean",
+    "solution_sha256": "210238a9ae9c13f4f5f49cf84bcc3861ecb146595f6c22dbc568ed7d3374f464",
+    "explanation": "The only theorem import is the appropriate shared analytic domain-nonnegativity result. The exact root comparisons, actual original p-norm-to-contraction bridge and complete ten-round contraction schedules for at most eight slabs are embedded. Explicit rational box inclusions and norm/pair/offsum bounds imply every displayed hypothesis of the imported analytic theorem. Balanced interval decisions cover the entire real exponent interval with no floating-point or external validity predicate. This factoring avoids repeating the shared Hessian and averaging proof in every certificate file."
+  },
+  {
+    "key": "certified_piece21_03",
+    "theorem_name": "HlawkaSchatten.DiagonalCutoff21.certified_piece21_03",
+    "theorem_title": "Finite contraction certificate [87/4,22]",
+    "formal_statement": "theorem HlawkaSchatten.DiagonalCutoff21.certified_piece21_03 :\n    ∀ p : ℝ, (87/4 : ℝ) ≤ p → p ≤ (22 : ℝ) →\n    ∀ X : Fin 3 → Fin 3 → ℝ,\n      (∀ i, -(607/500 : ℝ) ≤ X i i ∧ X i i ≤ -(189/500 : ℝ)) →\n      (∀ j i, j ≠ i → (349/500 : ℝ) ≤ X j i ∧ X j i ≤ (607/500 : ℝ)) →\n      lpNorm p (X 0) + lpNorm p (X 1) + lpNorm p (X 2) = 3 →\n      lpNorm p (X 0 + X 1 + X 2) < (3033/2500 : ℝ) →\n      pairGapSum (lpNorm p) (X 0) (X 1) (X 2) < 2 / ((273/625 : ℝ)*p) →\n      0 ≤ tripleDeficit p (cyclicConstant p) X := by sorry",
+    "preamble": "import Theorems.Thm_HlawkaSchatten_DiagonalCutoff21_domain_nonneg_group00\nimport Definitions.Def_HlawkaSchatten_GapComparison\nimport Definitions.Def_HlawkaSchatten_DiagonalConstruction_Basic\nopen HlawkaSchatten HlawkaSchatten.DiagonalConstruction\n",
+    "natural_language_statement": "For all real p in [87/4,22], an original real triple satisfying the explicit coarse coordinate box, singleton norm sum three, total norm bound 3033/2500, and original pair-gap bound has nonnegative original cyclic-constant deficit. This piece covers 8 consecutive parameter slabs. Root bounds, budgets, all ten contraction rounds and the linear pair/offsum floors are proved here; the shared norm-domain nonnegativity theorem is imported. Unequal singleton norms are allowed.",
+    "source": "Yuxuan Xu, A computer-assisted sharp diagonal Hlawka inequality for real exponents p >= 21, Sections 3-7, https://github.com/Anchen-AI4Math/hlawka-diagonal-certificates/blob/main/paper/main.pdf . Contraction framework adapted from @bwdaugherty, Apache-2.0; source notices retained.",
+    "tags": [
+      "hlawka-schatten",
+      "exact-arithmetic",
+      "real-analysis"
+    ],
+    "solution_file": "formalization/platform/Sol_certified_piece21_03.lean",
+    "solution_sha256": "0703df102f239ede70ec1209e36d7cdf23ae2bbf483a971fd8252214cc5fee01",
+    "explanation": "The only theorem import is the appropriate shared analytic domain-nonnegativity result. The exact root comparisons, actual original p-norm-to-contraction bridge and complete ten-round contraction schedules for at most eight slabs are embedded. Explicit rational box inclusions and norm/pair/offsum bounds imply every displayed hypothesis of the imported analytic theorem. Balanced interval decisions cover the entire real exponent interval with no floating-point or external validity predicate. This factoring avoids repeating the shared Hessian and averaging proof in every certificate file."
+  },
+  {
+    "key": "certified_piece21_04",
+    "theorem_name": "HlawkaSchatten.DiagonalCutoff21.certified_piece21_04",
+    "theorem_title": "Finite contraction certificate [22,89/4]",
+    "formal_statement": "theorem HlawkaSchatten.DiagonalCutoff21.certified_piece21_04 :\n    ∀ p : ℝ, (22 : ℝ) ≤ p → p ≤ (89/4 : ℝ) →\n    ∀ X : Fin 3 → Fin 3 → ℝ,\n      (∀ i, -(607/500 : ℝ) ≤ X i i ∧ X i i ≤ -(189/500 : ℝ)) →\n      (∀ j i, j ≠ i → (349/500 : ℝ) ≤ X j i ∧ X j i ≤ (607/500 : ℝ)) →\n      lpNorm p (X 0) + lpNorm p (X 1) + lpNorm p (X 2) = 3 →\n      lpNorm p (X 0 + X 1 + X 2) < (3033/2500 : ℝ) →\n      pairGapSum (lpNorm p) (X 0) (X 1) (X 2) < 2 / ((273/625 : ℝ)*p) →\n      0 ≤ tripleDeficit p (cyclicConstant p) X := by sorry",
+    "preamble": "import Theorems.Thm_HlawkaSchatten_DiagonalCutoff21_domain_nonneg_group00\nimport Definitions.Def_HlawkaSchatten_GapComparison\nimport Definitions.Def_HlawkaSchatten_DiagonalConstruction_Basic\nopen HlawkaSchatten HlawkaSchatten.DiagonalConstruction\n",
+    "natural_language_statement": "For all real p in [22,89/4], an original real triple satisfying the explicit coarse coordinate box, singleton norm sum three, total norm bound 3033/2500, and original pair-gap bound has nonnegative original cyclic-constant deficit. This piece covers 8 consecutive parameter slabs. Root bounds, budgets, all ten contraction rounds and the linear pair/offsum floors are proved here; the shared norm-domain nonnegativity theorem is imported. Unequal singleton norms are allowed.",
+    "source": "Yuxuan Xu, A computer-assisted sharp diagonal Hlawka inequality for real exponents p >= 21, Sections 3-7, https://github.com/Anchen-AI4Math/hlawka-diagonal-certificates/blob/main/paper/main.pdf . Contraction framework adapted from @bwdaugherty, Apache-2.0; source notices retained.",
+    "tags": [
+      "hlawka-schatten",
+      "exact-arithmetic",
+      "real-analysis"
+    ],
+    "solution_file": "formalization/platform/Sol_certified_piece21_04.lean",
+    "solution_sha256": "1672d76adc1e7746bd7e6ed1218d4fe29dc42ff7bd1420c69857bfeae4fddc46",
+    "explanation": "The only theorem import is the appropriate shared analytic domain-nonnegativity result. The exact root comparisons, actual original p-norm-to-contraction bridge and complete ten-round contraction schedules for at most eight slabs are embedded. Explicit rational box inclusions and norm/pair/offsum bounds imply every displayed hypothesis of the imported analytic theorem. Balanced interval decisions cover the entire real exponent interval with no floating-point or external validity predicate. This factoring avoids repeating the shared Hessian and averaging proof in every certificate file."
+  },
+  {
+    "key": "certified_piece21_05",
+    "theorem_name": "HlawkaSchatten.DiagonalCutoff21.certified_piece21_05",
+    "theorem_title": "Finite contraction certificate [89/4,45/2]",
+    "formal_statement": "theorem HlawkaSchatten.DiagonalCutoff21.certified_piece21_05 :\n    ∀ p : ℝ, (89/4 : ℝ) ≤ p → p ≤ (45/2 : ℝ) →\n    ∀ X : Fin 3 → Fin 3 → ℝ,\n      (∀ i, -(607/500 : ℝ) ≤ X i i ∧ X i i ≤ -(189/500 : ℝ)) →\n      (∀ j i, j ≠ i → (349/500 : ℝ) ≤ X j i ∧ X j i ≤ (607/500 : ℝ)) →\n      lpNorm p (X 0) + lpNorm p (X 1) + lpNorm p (X 2) = 3 →\n      lpNorm p (X 0 + X 1 + X 2) < (3033/2500 : ℝ) →\n      pairGapSum (lpNorm p) (X 0) (X 1) (X 2) < 2 / ((273/625 : ℝ)*p) →\n      0 ≤ tripleDeficit p (cyclicConstant p) X := by sorry",
+    "preamble": "import Theorems.Thm_HlawkaSchatten_DiagonalCutoff21_domain_nonneg_group00\nimport Definitions.Def_HlawkaSchatten_GapComparison\nimport Definitions.Def_HlawkaSchatten_DiagonalConstruction_Basic\nopen HlawkaSchatten HlawkaSchatten.DiagonalConstruction\n",
+    "natural_language_statement": "For all real p in [89/4,45/2], an original real triple satisfying the explicit coarse coordinate box, singleton norm sum three, total norm bound 3033/2500, and original pair-gap bound has nonnegative original cyclic-constant deficit. This piece covers 8 consecutive parameter slabs. Root bounds, budgets, all ten contraction rounds and the linear pair/offsum floors are proved here; the shared norm-domain nonnegativity theorem is imported. Unequal singleton norms are allowed.",
+    "source": "Yuxuan Xu, A computer-assisted sharp diagonal Hlawka inequality for real exponents p >= 21, Sections 3-7, https://github.com/Anchen-AI4Math/hlawka-diagonal-certificates/blob/main/paper/main.pdf . Contraction framework adapted from @bwdaugherty, Apache-2.0; source notices retained.",
+    "tags": [
+      "hlawka-schatten",
+      "exact-arithmetic",
+      "real-analysis"
+    ],
+    "solution_file": "formalization/platform/Sol_certified_piece21_05.lean",
+    "solution_sha256": "0fd2f220080ddec082ff99c6847b1aa26c4bb5d329fb4d11aa300fc7f0b26b6b",
+    "explanation": "The only theorem import is the appropriate shared analytic domain-nonnegativity result. The exact root comparisons, actual original p-norm-to-contraction bridge and complete ten-round contraction schedules for at most eight slabs are embedded. Explicit rational box inclusions and norm/pair/offsum bounds imply every displayed hypothesis of the imported analytic theorem. Balanced interval decisions cover the entire real exponent interval with no floating-point or external validity predicate. This factoring avoids repeating the shared Hessian and averaging proof in every certificate file."
+  },
+  {
+    "key": "certified_piece21_06",
+    "theorem_name": "HlawkaSchatten.DiagonalCutoff21.certified_piece21_06",
+    "theorem_title": "Finite contraction certificate [45/2,91/4]",
+    "formal_statement": "theorem HlawkaSchatten.DiagonalCutoff21.certified_piece21_06 :\n    ∀ p : ℝ, (45/2 : ℝ) ≤ p → p ≤ (91/4 : ℝ) →\n    ∀ X : Fin 3 → Fin 3 → ℝ,\n      (∀ i, -(607/500 : ℝ) ≤ X i i ∧ X i i ≤ -(189/500 : ℝ)) →\n      (∀ j i, j ≠ i → (349/500 : ℝ) ≤ X j i ∧ X j i ≤ (607/500 : ℝ)) →\n      lpNorm p (X 0) + lpNorm p (X 1) + lpNorm p (X 2) = 3 →\n      lpNorm p (X 0 + X 1 + X 2) < (3033/2500 : ℝ) →\n      pairGapSum (lpNorm p) (X 0) (X 1) (X 2) < 2 / ((273/625 : ℝ)*p) →\n      0 ≤ tripleDeficit p (cyclicConstant p) X := by sorry",
+    "preamble": "import Theorems.Thm_HlawkaSchatten_DiagonalCutoff21_domain_nonneg_group00\nimport Definitions.Def_HlawkaSchatten_GapComparison\nimport Definitions.Def_HlawkaSchatten_DiagonalConstruction_Basic\nopen HlawkaSchatten HlawkaSchatten.DiagonalConstruction\n",
+    "natural_language_statement": "For all real p in [45/2,91/4], an original real triple satisfying the explicit coarse coordinate box, singleton norm sum three, total norm bound 3033/2500, and original pair-gap bound has nonnegative original cyclic-constant deficit. This piece covers 8 consecutive parameter slabs. Root bounds, budgets, all ten contraction rounds and the linear pair/offsum floors are proved here; the shared norm-domain nonnegativity theorem is imported. Unequal singleton norms are allowed.",
+    "source": "Yuxuan Xu, A computer-assisted sharp diagonal Hlawka inequality for real exponents p >= 21, Sections 3-7, https://github.com/Anchen-AI4Math/hlawka-diagonal-certificates/blob/main/paper/main.pdf . Contraction framework adapted from @bwdaugherty, Apache-2.0; source notices retained.",
+    "tags": [
+      "hlawka-schatten",
+      "exact-arithmetic",
+      "real-analysis"
+    ],
+    "solution_file": "formalization/platform/Sol_certified_piece21_06.lean",
+    "solution_sha256": "dd32dcd7ceee5aa84313c6ac308c8824b275d0257cf95dd15b01251fa0bfd45c",
+    "explanation": "The only theorem import is the appropriate shared analytic domain-nonnegativity result. The exact root comparisons, actual original p-norm-to-contraction bridge and complete ten-round contraction schedules for at most eight slabs are embedded. Explicit rational box inclusions and norm/pair/offsum bounds imply every displayed hypothesis of the imported analytic theorem. Balanced interval decisions cover the entire real exponent interval with no floating-point or external validity predicate. This factoring avoids repeating the shared Hessian and averaging proof in every certificate file."
+  },
+  {
+    "key": "certified_piece21_07",
+    "theorem_name": "HlawkaSchatten.DiagonalCutoff21.certified_piece21_07",
+    "theorem_title": "Finite contraction certificate [91/4,23]",
+    "formal_statement": "theorem HlawkaSchatten.DiagonalCutoff21.certified_piece21_07 :\n    ∀ p : ℝ, (91/4 : ℝ) ≤ p → p ≤ (23 : ℝ) →\n    ∀ X : Fin 3 → Fin 3 → ℝ,\n      (∀ i, -(607/500 : ℝ) ≤ X i i ∧ X i i ≤ -(189/500 : ℝ)) →\n      (∀ j i, j ≠ i → (349/500 : ℝ) ≤ X j i ∧ X j i ≤ (607/500 : ℝ)) →\n      lpNorm p (X 0) + lpNorm p (X 1) + lpNorm p (X 2) = 3 →\n      lpNorm p (X 0 + X 1 + X 2) < (3033/2500 : ℝ) →\n      pairGapSum (lpNorm p) (X 0) (X 1) (X 2) < 2 / ((273/625 : ℝ)*p) →\n      0 ≤ tripleDeficit p (cyclicConstant p) X := by sorry",
+    "preamble": "import Theorems.Thm_HlawkaSchatten_DiagonalCutoff21_domain_nonneg_group00\nimport Definitions.Def_HlawkaSchatten_GapComparison\nimport Definitions.Def_HlawkaSchatten_DiagonalConstruction_Basic\nopen HlawkaSchatten HlawkaSchatten.DiagonalConstruction\n",
+    "natural_language_statement": "For all real p in [91/4,23], an original real triple satisfying the explicit coarse coordinate box, singleton norm sum three, total norm bound 3033/2500, and original pair-gap bound has nonnegative original cyclic-constant deficit. This piece covers 8 consecutive parameter slabs. Root bounds, budgets, all ten contraction rounds and the linear pair/offsum floors are proved here; the shared norm-domain nonnegativity theorem is imported. Unequal singleton norms are allowed.",
+    "source": "Yuxuan Xu, A computer-assisted sharp diagonal Hlawka inequality for real exponents p >= 21, Sections 3-7, https://github.com/Anchen-AI4Math/hlawka-diagonal-certificates/blob/main/paper/main.pdf . Contraction framework adapted from @bwdaugherty, Apache-2.0; source notices retained.",
+    "tags": [
+      "hlawka-schatten",
+      "exact-arithmetic",
+      "real-analysis"
+    ],
+    "solution_file": "formalization/platform/Sol_certified_piece21_07.lean",
+    "solution_sha256": "10cddd47c1d86cc31019e83b2d20a3d0e32e574e826fa0ce8d1e4af2db991e71",
+    "explanation": "The only theorem import is the appropriate shared analytic domain-nonnegativity result. The exact root comparisons, actual original p-norm-to-contraction bridge and complete ten-round contraction schedules for at most eight slabs are embedded. Explicit rational box inclusions and norm/pair/offsum bounds imply every displayed hypothesis of the imported analytic theorem. Balanced interval decisions cover the entire real exponent interval with no floating-point or external validity predicate. This factoring avoids repeating the shared Hessian and averaging proof in every certificate file."
+  },
+  {
+    "key": "certified_piece21_08",
+    "theorem_name": "HlawkaSchatten.DiagonalCutoff21.certified_piece21_08",
+    "theorem_title": "Finite contraction certificate [23,93/4]",
+    "formal_statement": "theorem HlawkaSchatten.DiagonalCutoff21.certified_piece21_08 :\n    ∀ p : ℝ, (23 : ℝ) ≤ p → p ≤ (93/4 : ℝ) →\n    ∀ X : Fin 3 → Fin 3 → ℝ,\n      (∀ i, -(607/500 : ℝ) ≤ X i i ∧ X i i ≤ -(189/500 : ℝ)) →\n      (∀ j i, j ≠ i → (349/500 : ℝ) ≤ X j i ∧ X j i ≤ (607/500 : ℝ)) →\n      lpNorm p (X 0) + lpNorm p (X 1) + lpNorm p (X 2) = 3 →\n      lpNorm p (X 0 + X 1 + X 2) < (3033/2500 : ℝ) →\n      pairGapSum (lpNorm p) (X 0) (X 1) (X 2) < 2 / ((273/625 : ℝ)*p) →\n      0 ≤ tripleDeficit p (cyclicConstant p) X := by sorry",
+    "preamble": "import Theorems.Thm_HlawkaSchatten_DiagonalCutoff21_domain_nonneg_group00\nimport Definitions.Def_HlawkaSchatten_GapComparison\nimport Definitions.Def_HlawkaSchatten_DiagonalConstruction_Basic\nopen HlawkaSchatten HlawkaSchatten.DiagonalConstruction\n",
+    "natural_language_statement": "For all real p in [23,93/4], an original real triple satisfying the explicit coarse coordinate box, singleton norm sum three, total norm bound 3033/2500, and original pair-gap bound has nonnegative original cyclic-constant deficit. This piece covers 8 consecutive parameter slabs. Root bounds, budgets, all ten contraction rounds and the linear pair/offsum floors are proved here; the shared norm-domain nonnegativity theorem is imported. Unequal singleton norms are allowed.",
+    "source": "Yuxuan Xu, A computer-assisted sharp diagonal Hlawka inequality for real exponents p >= 21, Sections 3-7, https://github.com/Anchen-AI4Math/hlawka-diagonal-certificates/blob/main/paper/main.pdf . Contraction framework adapted from @bwdaugherty, Apache-2.0; source notices retained.",
+    "tags": [
+      "hlawka-schatten",
+      "exact-arithmetic",
+      "real-analysis"
+    ],
+    "solution_file": "formalization/platform/Sol_certified_piece21_08.lean",
+    "solution_sha256": "0641041642370e2a11a3dc409583bd880161dc7c0e7dbd91d9d26c395d5293eb",
+    "explanation": "The only theorem import is the appropriate shared analytic domain-nonnegativity result. The exact root comparisons, actual original p-norm-to-contraction bridge and complete ten-round contraction schedules for at most eight slabs are embedded. Explicit rational box inclusions and norm/pair/offsum bounds imply every displayed hypothesis of the imported analytic theorem. Balanced interval decisions cover the entire real exponent interval with no floating-point or external validity predicate. This factoring avoids repeating the shared Hessian and averaging proof in every certificate file."
+  },
+  {
+    "key": "certified_piece21_09",
+    "theorem_name": "HlawkaSchatten.DiagonalCutoff21.certified_piece21_09",
+    "theorem_title": "Finite contraction certificate [93/4,47/2]",
+    "formal_statement": "theorem HlawkaSchatten.DiagonalCutoff21.certified_piece21_09 :\n    ∀ p : ℝ, (93/4 : ℝ) ≤ p → p ≤ (47/2 : ℝ) →\n    ∀ X : Fin 3 → Fin 3 → ℝ,\n      (∀ i, -(607/500 : ℝ) ≤ X i i ∧ X i i ≤ -(189/500 : ℝ)) →\n      (∀ j i, j ≠ i → (349/500 : ℝ) ≤ X j i ∧ X j i ≤ (607/500 : ℝ)) →\n      lpNorm p (X 0) + lpNorm p (X 1) + lpNorm p (X 2) = 3 →\n      lpNorm p (X 0 + X 1 + X 2) < (3033/2500 : ℝ) →\n      pairGapSum (lpNorm p) (X 0) (X 1) (X 2) < 2 / ((273/625 : ℝ)*p) →\n      0 ≤ tripleDeficit p (cyclicConstant p) X := by sorry",
+    "preamble": "import Theorems.Thm_HlawkaSchatten_DiagonalCutoff21_domain_nonneg_group00\nimport Definitions.Def_HlawkaSchatten_GapComparison\nimport Definitions.Def_HlawkaSchatten_DiagonalConstruction_Basic\nopen HlawkaSchatten HlawkaSchatten.DiagonalConstruction\n",
+    "natural_language_statement": "For all real p in [93/4,47/2], an original real triple satisfying the explicit coarse coordinate box, singleton norm sum three, total norm bound 3033/2500, and original pair-gap bound has nonnegative original cyclic-constant deficit. This piece covers 8 consecutive parameter slabs. Root bounds, budgets, all ten contraction rounds and the linear pair/offsum floors are proved here; the shared norm-domain nonnegativity theorem is imported. Unequal singleton norms are allowed.",
+    "source": "Yuxuan Xu, A computer-assisted sharp diagonal Hlawka inequality for real exponents p >= 21, Sections 3-7, https://github.com/Anchen-AI4Math/hlawka-diagonal-certificates/blob/main/paper/main.pdf . Contraction framework adapted from @bwdaugherty, Apache-2.0; source notices retained.",
+    "tags": [
+      "hlawka-schatten",
+      "exact-arithmetic",
+      "real-analysis"
+    ],
+    "solution_file": "formalization/platform/Sol_certified_piece21_09.lean",
+    "solution_sha256": "1a477a77ea5b22127a770307c35cea830005f89ec627c02f94239408f70a7f4a",
+    "explanation": "The only theorem import is the appropriate shared analytic domain-nonnegativity result. The exact root comparisons, actual original p-norm-to-contraction bridge and complete ten-round contraction schedules for at most eight slabs are embedded. Explicit rational box inclusions and norm/pair/offsum bounds imply every displayed hypothesis of the imported analytic theorem. Balanced interval decisions cover the entire real exponent interval with no floating-point or external validity predicate. This factoring avoids repeating the shared Hessian and averaging proof in every certificate file."
+  },
+  {
+    "key": "certified_piece21_10",
+    "theorem_name": "HlawkaSchatten.DiagonalCutoff21.certified_piece21_10",
+    "theorem_title": "Finite contraction certificate [47/2,377/16]",
+    "formal_statement": "theorem HlawkaSchatten.DiagonalCutoff21.certified_piece21_10 :\n    ∀ p : ℝ, (47/2 : ℝ) ≤ p → p ≤ (377/16 : ℝ) →\n    ∀ X : Fin 3 → Fin 3 → ℝ,\n      (∀ i, -(607/500 : ℝ) ≤ X i i ∧ X i i ≤ -(189/500 : ℝ)) →\n      (∀ j i, j ≠ i → (349/500 : ℝ) ≤ X j i ∧ X j i ≤ (607/500 : ℝ)) →\n      lpNorm p (X 0) + lpNorm p (X 1) + lpNorm p (X 2) = 3 →\n      lpNorm p (X 0 + X 1 + X 2) < (3033/2500 : ℝ) →\n      pairGapSum (lpNorm p) (X 0) (X 1) (X 2) < 2 / ((273/625 : ℝ)*p) →\n      0 ≤ tripleDeficit p (cyclicConstant p) X := by sorry",
+    "preamble": "import Theorems.Thm_HlawkaSchatten_DiagonalCutoff21_domain_nonneg_group00\nimport Definitions.Def_HlawkaSchatten_GapComparison\nimport Definitions.Def_HlawkaSchatten_DiagonalConstruction_Basic\nopen HlawkaSchatten HlawkaSchatten.DiagonalConstruction\n",
+    "natural_language_statement": "For all real p in [47/2,377/16], an original real triple satisfying the explicit coarse coordinate box, singleton norm sum three, total norm bound 3033/2500, and original pair-gap bound has nonnegative original cyclic-constant deficit. This piece covers 2 consecutive parameter slabs. Root bounds, budgets, all ten contraction rounds and the linear pair/offsum floors are proved here; the shared norm-domain nonnegativity theorem is imported. Unequal singleton norms are allowed.",
+    "source": "Yuxuan Xu, A computer-assisted sharp diagonal Hlawka inequality for real exponents p >= 21, Sections 3-7, https://github.com/Anchen-AI4Math/hlawka-diagonal-certificates/blob/main/paper/main.pdf . Contraction framework adapted from @bwdaugherty, Apache-2.0; source notices retained.",
+    "tags": [
+      "hlawka-schatten",
+      "exact-arithmetic",
+      "real-analysis"
+    ],
+    "solution_file": "formalization/platform/Sol_certified_piece21_10.lean",
+    "solution_sha256": "f7e5f66fe2b90fd5fc117a56f59d216d8d681c225c0ee3008547307c6b24d7fe",
+    "explanation": "The only theorem import is the appropriate shared analytic domain-nonnegativity result. The exact root comparisons, actual original p-norm-to-contraction bridge and complete ten-round contraction schedules for at most eight slabs are embedded. Explicit rational box inclusions and norm/pair/offsum bounds imply every displayed hypothesis of the imported analytic theorem. Balanced interval decisions cover the entire real exponent interval with no floating-point or external validity predicate. This factoring avoids repeating the shared Hessian and averaging proof in every certificate file."
+  },
+  {
+    "key": "certified_piece21_11",
+    "theorem_name": "HlawkaSchatten.DiagonalCutoff21.certified_piece21_11",
+    "theorem_title": "Finite contraction certificate [377/16,381/16]",
+    "formal_statement": "theorem HlawkaSchatten.DiagonalCutoff21.certified_piece21_11 :\n    ∀ p : ℝ, (377/16 : ℝ) ≤ p → p ≤ (381/16 : ℝ) →\n    ∀ X : Fin 3 → Fin 3 → ℝ,\n      (∀ i, -(607/500 : ℝ) ≤ X i i ∧ X i i ≤ -(189/500 : ℝ)) →\n      (∀ j i, j ≠ i → (349/500 : ℝ) ≤ X j i ∧ X j i ≤ (607/500 : ℝ)) →\n      lpNorm p (X 0) + lpNorm p (X 1) + lpNorm p (X 2) = 3 →\n      lpNorm p (X 0 + X 1 + X 2) < (3033/2500 : ℝ) →\n      pairGapSum (lpNorm p) (X 0) (X 1) (X 2) < 2 / ((273/625 : ℝ)*p) →\n      0 ≤ tripleDeficit p (cyclicConstant p) X := by sorry",
+    "preamble": "import Theorems.Thm_HlawkaSchatten_DiagonalCutoff21_domain_nonneg_group01\nimport Definitions.Def_HlawkaSchatten_GapComparison\nimport Definitions.Def_HlawkaSchatten_DiagonalConstruction_Basic\nopen HlawkaSchatten HlawkaSchatten.DiagonalConstruction\n",
+    "natural_language_statement": "For all real p in [377/16,381/16], an original real triple satisfying the explicit coarse coordinate box, singleton norm sum three, total norm bound 3033/2500, and original pair-gap bound has nonnegative original cyclic-constant deficit. This piece covers 8 consecutive parameter slabs. Root bounds, budgets, all ten contraction rounds and the linear pair/offsum floors are proved here; the shared norm-domain nonnegativity theorem is imported. Unequal singleton norms are allowed.",
+    "source": "Yuxuan Xu, A computer-assisted sharp diagonal Hlawka inequality for real exponents p >= 21, Sections 3-7, https://github.com/Anchen-AI4Math/hlawka-diagonal-certificates/blob/main/paper/main.pdf . Contraction framework adapted from @bwdaugherty, Apache-2.0; source notices retained.",
+    "tags": [
+      "hlawka-schatten",
+      "exact-arithmetic",
+      "real-analysis"
+    ],
+    "solution_file": "formalization/platform/Sol_certified_piece21_11.lean",
+    "solution_sha256": "7475d4230039213e959b5d4fc2ac0bce64ff16f586986681de64dd88583b7289",
+    "explanation": "The only theorem import is the appropriate shared analytic domain-nonnegativity result. The exact root comparisons, actual original p-norm-to-contraction bridge and complete ten-round contraction schedules for at most eight slabs are embedded. Explicit rational box inclusions and norm/pair/offsum bounds imply every displayed hypothesis of the imported analytic theorem. Balanced interval decisions cover the entire real exponent interval with no floating-point or external validity predicate. This factoring avoids repeating the shared Hessian and averaging proof in every certificate file."
+  },
+  {
+    "key": "certified_piece21_12",
+    "theorem_name": "HlawkaSchatten.DiagonalCutoff21.certified_piece21_12",
+    "theorem_title": "Finite contraction certificate [381/16,385/16]",
+    "formal_statement": "theorem HlawkaSchatten.DiagonalCutoff21.certified_piece21_12 :\n    ∀ p : ℝ, (381/16 : ℝ) ≤ p → p ≤ (385/16 : ℝ) →\n    ∀ X : Fin 3 → Fin 3 → ℝ,\n      (∀ i, -(607/500 : ℝ) ≤ X i i ∧ X i i ≤ -(189/500 : ℝ)) →\n      (∀ j i, j ≠ i → (349/500 : ℝ) ≤ X j i ∧ X j i ≤ (607/500 : ℝ)) →\n      lpNorm p (X 0) + lpNorm p (X 1) + lpNorm p (X 2) = 3 →\n      lpNorm p (X 0 + X 1 + X 2) < (3033/2500 : ℝ) →\n      pairGapSum (lpNorm p) (X 0) (X 1) (X 2) < 2 / ((273/625 : ℝ)*p) →\n      0 ≤ tripleDeficit p (cyclicConstant p) X := by sorry",
+    "preamble": "import Theorems.Thm_HlawkaSchatten_DiagonalCutoff21_domain_nonneg_group01\nimport Definitions.Def_HlawkaSchatten_GapComparison\nimport Definitions.Def_HlawkaSchatten_DiagonalConstruction_Basic\nopen HlawkaSchatten HlawkaSchatten.DiagonalConstruction\n",
+    "natural_language_statement": "For all real p in [381/16,385/16], an original real triple satisfying the explicit coarse coordinate box, singleton norm sum three, total norm bound 3033/2500, and original pair-gap bound has nonnegative original cyclic-constant deficit. This piece covers 8 consecutive parameter slabs. Root bounds, budgets, all ten contraction rounds and the linear pair/offsum floors are proved here; the shared norm-domain nonnegativity theorem is imported. Unequal singleton norms are allowed.",
+    "source": "Yuxuan Xu, A computer-assisted sharp diagonal Hlawka inequality for real exponents p >= 21, Sections 3-7, https://github.com/Anchen-AI4Math/hlawka-diagonal-certificates/blob/main/paper/main.pdf . Contraction framework adapted from @bwdaugherty, Apache-2.0; source notices retained.",
+    "tags": [
+      "hlawka-schatten",
+      "exact-arithmetic",
+      "real-analysis"
+    ],
+    "solution_file": "formalization/platform/Sol_certified_piece21_12.lean",
+    "solution_sha256": "6a47281eeb0d9fdde83cdb97e35753f1c6bf00eb1d4e3f037956a49101e9161d",
+    "explanation": "The only theorem import is the appropriate shared analytic domain-nonnegativity result. The exact root comparisons, actual original p-norm-to-contraction bridge and complete ten-round contraction schedules for at most eight slabs are embedded. Explicit rational box inclusions and norm/pair/offsum bounds imply every displayed hypothesis of the imported analytic theorem. Balanced interval decisions cover the entire real exponent interval with no floating-point or external validity predicate. This factoring avoids repeating the shared Hessian and averaging proof in every certificate file."
+  },
+  {
+    "key": "certified_piece21_13",
+    "theorem_name": "HlawkaSchatten.DiagonalCutoff21.certified_piece21_13",
+    "theorem_title": "Finite contraction certificate [385/16,389/16]",
+    "formal_statement": "theorem HlawkaSchatten.DiagonalCutoff21.certified_piece21_13 :\n    ∀ p : ℝ, (385/16 : ℝ) ≤ p → p ≤ (389/16 : ℝ) →\n    ∀ X : Fin 3 → Fin 3 → ℝ,\n      (∀ i, -(607/500 : ℝ) ≤ X i i ∧ X i i ≤ -(189/500 : ℝ)) →\n      (∀ j i, j ≠ i → (349/500 : ℝ) ≤ X j i ∧ X j i ≤ (607/500 : ℝ)) →\n      lpNorm p (X 0) + lpNorm p (X 1) + lpNorm p (X 2) = 3 →\n      lpNorm p (X 0 + X 1 + X 2) < (3033/2500 : ℝ) →\n      pairGapSum (lpNorm p) (X 0) (X 1) (X 2) < 2 / ((273/625 : ℝ)*p) →\n      0 ≤ tripleDeficit p (cyclicConstant p) X := by sorry",
+    "preamble": "import Theorems.Thm_HlawkaSchatten_DiagonalCutoff21_domain_nonneg_group01\nimport Definitions.Def_HlawkaSchatten_GapComparison\nimport Definitions.Def_HlawkaSchatten_DiagonalConstruction_Basic\nopen HlawkaSchatten HlawkaSchatten.DiagonalConstruction\n",
+    "natural_language_statement": "For all real p in [385/16,389/16], an original real triple satisfying the explicit coarse coordinate box, singleton norm sum three, total norm bound 3033/2500, and original pair-gap bound has nonnegative original cyclic-constant deficit. This piece covers 8 consecutive parameter slabs. Root bounds, budgets, all ten contraction rounds and the linear pair/offsum floors are proved here; the shared norm-domain nonnegativity theorem is imported. Unequal singleton norms are allowed.",
+    "source": "Yuxuan Xu, A computer-assisted sharp diagonal Hlawka inequality for real exponents p >= 21, Sections 3-7, https://github.com/Anchen-AI4Math/hlawka-diagonal-certificates/blob/main/paper/main.pdf . Contraction framework adapted from @bwdaugherty, Apache-2.0; source notices retained.",
+    "tags": [
+      "hlawka-schatten",
+      "exact-arithmetic",
+      "real-analysis"
+    ],
+    "solution_file": "formalization/platform/Sol_certified_piece21_13.lean",
+    "solution_sha256": "d1e2e0bf33f47966eb3d90e1215fe29b0991e4a8556eb2333c00825dfa3717dd",
+    "explanation": "The only theorem import is the appropriate shared analytic domain-nonnegativity result. The exact root comparisons, actual original p-norm-to-contraction bridge and complete ten-round contraction schedules for at most eight slabs are embedded. Explicit rational box inclusions and norm/pair/offsum bounds imply every displayed hypothesis of the imported analytic theorem. Balanced interval decisions cover the entire real exponent interval with no floating-point or external validity predicate. This factoring avoids repeating the shared Hessian and averaging proof in every certificate file."
+  },
+  {
+    "key": "certified_piece21_14",
+    "theorem_name": "HlawkaSchatten.DiagonalCutoff21.certified_piece21_14",
+    "theorem_title": "Finite contraction certificate [389/16,393/16]",
+    "formal_statement": "theorem HlawkaSchatten.DiagonalCutoff21.certified_piece21_14 :\n    ∀ p : ℝ, (389/16 : ℝ) ≤ p → p ≤ (393/16 : ℝ) →\n    ∀ X : Fin 3 → Fin 3 → ℝ,\n      (∀ i, -(607/500 : ℝ) ≤ X i i ∧ X i i ≤ -(189/500 : ℝ)) →\n      (∀ j i, j ≠ i → (349/500 : ℝ) ≤ X j i ∧ X j i ≤ (607/500 : ℝ)) →\n      lpNorm p (X 0) + lpNorm p (X 1) + lpNorm p (X 2) = 3 →\n      lpNorm p (X 0 + X 1 + X 2) < (3033/2500 : ℝ) →\n      pairGapSum (lpNorm p) (X 0) (X 1) (X 2) < 2 / ((273/625 : ℝ)*p) →\n      0 ≤ tripleDeficit p (cyclicConstant p) X := by sorry",
+    "preamble": "import Theorems.Thm_HlawkaSchatten_DiagonalCutoff21_domain_nonneg_group01\nimport Definitions.Def_HlawkaSchatten_GapComparison\nimport Definitions.Def_HlawkaSchatten_DiagonalConstruction_Basic\nopen HlawkaSchatten HlawkaSchatten.DiagonalConstruction\n",
+    "natural_language_statement": "For all real p in [389/16,393/16], an original real triple satisfying the explicit coarse coordinate box, singleton norm sum three, total norm bound 3033/2500, and original pair-gap bound has nonnegative original cyclic-constant deficit. This piece covers 8 consecutive parameter slabs. Root bounds, budgets, all ten contraction rounds and the linear pair/offsum floors are proved here; the shared norm-domain nonnegativity theorem is imported. Unequal singleton norms are allowed.",
+    "source": "Yuxuan Xu, A computer-assisted sharp diagonal Hlawka inequality for real exponents p >= 21, Sections 3-7, https://github.com/Anchen-AI4Math/hlawka-diagonal-certificates/blob/main/paper/main.pdf . Contraction framework adapted from @bwdaugherty, Apache-2.0; source notices retained.",
+    "tags": [
+      "hlawka-schatten",
+      "exact-arithmetic",
+      "real-analysis"
+    ],
+    "solution_file": "formalization/platform/Sol_certified_piece21_14.lean",
+    "solution_sha256": "2cd3231921985a29768f5f0e7e3a88db2c6186696146cf5da6f53a3203198575",
+    "explanation": "The only theorem import is the appropriate shared analytic domain-nonnegativity result. The exact root comparisons, actual original p-norm-to-contraction bridge and complete ten-round contraction schedules for at most eight slabs are embedded. Explicit rational box inclusions and norm/pair/offsum bounds imply every displayed hypothesis of the imported analytic theorem. Balanced interval decisions cover the entire real exponent interval with no floating-point or external validity predicate. This factoring avoids repeating the shared Hessian and averaging proof in every certificate file."
+  },
+  {
+    "key": "certified_piece21_15",
+    "theorem_name": "HlawkaSchatten.DiagonalCutoff21.certified_piece21_15",
+    "theorem_title": "Finite contraction certificate [393/16,397/16]",
+    "formal_statement": "theorem HlawkaSchatten.DiagonalCutoff21.certified_piece21_15 :\n    ∀ p : ℝ, (393/16 : ℝ) ≤ p → p ≤ (397/16 : ℝ) →\n    ∀ X : Fin 3 → Fin 3 → ℝ,\n      (∀ i, -(607/500 : ℝ) ≤ X i i ∧ X i i ≤ -(189/500 : ℝ)) →\n      (∀ j i, j ≠ i → (349/500 : ℝ) ≤ X j i ∧ X j i ≤ (607/500 : ℝ)) →\n      lpNorm p (X 0) + lpNorm p (X 1) + lpNorm p (X 2) = 3 →\n      lpNorm p (X 0 + X 1 + X 2) < (3033/2500 : ℝ) →\n      pairGapSum (lpNorm p) (X 0) (X 1) (X 2) < 2 / ((273/625 : ℝ)*p) →\n      0 ≤ tripleDeficit p (cyclicConstant p) X := by sorry",
+    "preamble": "import Theorems.Thm_HlawkaSchatten_DiagonalCutoff21_domain_nonneg_group01\nimport Definitions.Def_HlawkaSchatten_GapComparison\nimport Definitions.Def_HlawkaSchatten_DiagonalConstruction_Basic\nopen HlawkaSchatten HlawkaSchatten.DiagonalConstruction\n",
+    "natural_language_statement": "For all real p in [393/16,397/16], an original real triple satisfying the explicit coarse coordinate box, singleton norm sum three, total norm bound 3033/2500, and original pair-gap bound has nonnegative original cyclic-constant deficit. This piece covers 8 consecutive parameter slabs. Root bounds, budgets, all ten contraction rounds and the linear pair/offsum floors are proved here; the shared norm-domain nonnegativity theorem is imported. Unequal singleton norms are allowed.",
+    "source": "Yuxuan Xu, A computer-assisted sharp diagonal Hlawka inequality for real exponents p >= 21, Sections 3-7, https://github.com/Anchen-AI4Math/hlawka-diagonal-certificates/blob/main/paper/main.pdf . Contraction framework adapted from @bwdaugherty, Apache-2.0; source notices retained.",
+    "tags": [
+      "hlawka-schatten",
+      "exact-arithmetic",
+      "real-analysis"
+    ],
+    "solution_file": "formalization/platform/Sol_certified_piece21_15.lean",
+    "solution_sha256": "0c1c107786b17abd0da0a519db5c8d27a7e1c2b545dea81230ac59c919cf44fd",
+    "explanation": "The only theorem import is the appropriate shared analytic domain-nonnegativity result. The exact root comparisons, actual original p-norm-to-contraction bridge and complete ten-round contraction schedules for at most eight slabs are embedded. Explicit rational box inclusions and norm/pair/offsum bounds imply every displayed hypothesis of the imported analytic theorem. Balanced interval decisions cover the entire real exponent interval with no floating-point or external validity predicate. This factoring avoids repeating the shared Hessian and averaging proof in every certificate file."
+  },
+  {
+    "key": "certified_piece21_16",
+    "theorem_name": "HlawkaSchatten.DiagonalCutoff21.certified_piece21_16",
+    "theorem_title": "Finite contraction certificate [397/16,401/16]",
+    "formal_statement": "theorem HlawkaSchatten.DiagonalCutoff21.certified_piece21_16 :\n    ∀ p : ℝ, (397/16 : ℝ) ≤ p → p ≤ (401/16 : ℝ) →\n    ∀ X : Fin 3 → Fin 3 → ℝ,\n      (∀ i, -(607/500 : ℝ) ≤ X i i ∧ X i i ≤ -(189/500 : ℝ)) →\n      (∀ j i, j ≠ i → (349/500 : ℝ) ≤ X j i ∧ X j i ≤ (607/500 : ℝ)) →\n      lpNorm p (X 0) + lpNorm p (X 1) + lpNorm p (X 2) = 3 →\n      lpNorm p (X 0 + X 1 + X 2) < (3033/2500 : ℝ) →\n      pairGapSum (lpNorm p) (X 0) (X 1) (X 2) < 2 / ((273/625 : ℝ)*p) →\n      0 ≤ tripleDeficit p (cyclicConstant p) X := by sorry",
+    "preamble": "import Theorems.Thm_HlawkaSchatten_DiagonalCutoff21_domain_nonneg_group01\nimport Definitions.Def_HlawkaSchatten_GapComparison\nimport Definitions.Def_HlawkaSchatten_DiagonalConstruction_Basic\nopen HlawkaSchatten HlawkaSchatten.DiagonalConstruction\n",
+    "natural_language_statement": "For all real p in [397/16,401/16], an original real triple satisfying the explicit coarse coordinate box, singleton norm sum three, total norm bound 3033/2500, and original pair-gap bound has nonnegative original cyclic-constant deficit. This piece covers 8 consecutive parameter slabs. Root bounds, budgets, all ten contraction rounds and the linear pair/offsum floors are proved here; the shared norm-domain nonnegativity theorem is imported. Unequal singleton norms are allowed.",
+    "source": "Yuxuan Xu, A computer-assisted sharp diagonal Hlawka inequality for real exponents p >= 21, Sections 3-7, https://github.com/Anchen-AI4Math/hlawka-diagonal-certificates/blob/main/paper/main.pdf . Contraction framework adapted from @bwdaugherty, Apache-2.0; source notices retained.",
+    "tags": [
+      "hlawka-schatten",
+      "exact-arithmetic",
+      "real-analysis"
+    ],
+    "solution_file": "formalization/platform/Sol_certified_piece21_16.lean",
+    "solution_sha256": "13d34bc155926b9d07320a941f891c3f2244962cfa3da6265bb94c33ed570b7c",
+    "explanation": "The only theorem import is the appropriate shared analytic domain-nonnegativity result. The exact root comparisons, actual original p-norm-to-contraction bridge and complete ten-round contraction schedules for at most eight slabs are embedded. Explicit rational box inclusions and norm/pair/offsum bounds imply every displayed hypothesis of the imported analytic theorem. Balanced interval decisions cover the entire real exponent interval with no floating-point or external validity predicate. This factoring avoids repeating the shared Hessian and averaging proof in every certificate file."
+  },
+  {
+    "key": "certified_piece21_17",
+    "theorem_name": "HlawkaSchatten.DiagonalCutoff21.certified_piece21_17",
+    "theorem_title": "Finite contraction certificate [401/16,405/16]",
+    "formal_statement": "theorem HlawkaSchatten.DiagonalCutoff21.certified_piece21_17 :\n    ∀ p : ℝ, (401/16 : ℝ) ≤ p → p ≤ (405/16 : ℝ) →\n    ∀ X : Fin 3 → Fin 3 → ℝ,\n      (∀ i, -(607/500 : ℝ) ≤ X i i ∧ X i i ≤ -(189/500 : ℝ)) →\n      (∀ j i, j ≠ i → (349/500 : ℝ) ≤ X j i ∧ X j i ≤ (607/500 : ℝ)) →\n      lpNorm p (X 0) + lpNorm p (X 1) + lpNorm p (X 2) = 3 →\n      lpNorm p (X 0 + X 1 + X 2) < (3033/2500 : ℝ) →\n      pairGapSum (lpNorm p) (X 0) (X 1) (X 2) < 2 / ((273/625 : ℝ)*p) →\n      0 ≤ tripleDeficit p (cyclicConstant p) X := by sorry",
+    "preamble": "import Theorems.Thm_HlawkaSchatten_DiagonalCutoff21_domain_nonneg_group01\nimport Definitions.Def_HlawkaSchatten_GapComparison\nimport Definitions.Def_HlawkaSchatten_DiagonalConstruction_Basic\nopen HlawkaSchatten HlawkaSchatten.DiagonalConstruction\n",
+    "natural_language_statement": "For all real p in [401/16,405/16], an original real triple satisfying the explicit coarse coordinate box, singleton norm sum three, total norm bound 3033/2500, and original pair-gap bound has nonnegative original cyclic-constant deficit. This piece covers 8 consecutive parameter slabs. Root bounds, budgets, all ten contraction rounds and the linear pair/offsum floors are proved here; the shared norm-domain nonnegativity theorem is imported. Unequal singleton norms are allowed.",
+    "source": "Yuxuan Xu, A computer-assisted sharp diagonal Hlawka inequality for real exponents p >= 21, Sections 3-7, https://github.com/Anchen-AI4Math/hlawka-diagonal-certificates/blob/main/paper/main.pdf . Contraction framework adapted from @bwdaugherty, Apache-2.0; source notices retained.",
+    "tags": [
+      "hlawka-schatten",
+      "exact-arithmetic",
+      "real-analysis"
+    ],
+    "solution_file": "formalization/platform/Sol_certified_piece21_17.lean",
+    "solution_sha256": "4b19c2c0c077af67b2dd83b1bf3fdad9fc1e2119afe0a13a84fabdcd9ab6fecc",
+    "explanation": "The only theorem import is the appropriate shared analytic domain-nonnegativity result. The exact root comparisons, actual original p-norm-to-contraction bridge and complete ten-round contraction schedules for at most eight slabs are embedded. Explicit rational box inclusions and norm/pair/offsum bounds imply every displayed hypothesis of the imported analytic theorem. Balanced interval decisions cover the entire real exponent interval with no floating-point or external validity predicate. This factoring avoids repeating the shared Hessian and averaging proof in every certificate file."
+  },
+  {
+    "key": "certified_piece21_18",
+    "theorem_name": "HlawkaSchatten.DiagonalCutoff21.certified_piece21_18",
+    "theorem_title": "Finite contraction certificate [405/16,409/16]",
+    "formal_statement": "theorem HlawkaSchatten.DiagonalCutoff21.certified_piece21_18 :\n    ∀ p : ℝ, (405/16 : ℝ) ≤ p → p ≤ (409/16 : ℝ) →\n    ∀ X : Fin 3 → Fin 3 → ℝ,\n      (∀ i, -(607/500 : ℝ) ≤ X i i ∧ X i i ≤ -(189/500 : ℝ)) →\n      (∀ j i, j ≠ i → (349/500 : ℝ) ≤ X j i ∧ X j i ≤ (607/500 : ℝ)) →\n      lpNorm p (X 0) + lpNorm p (X 1) + lpNorm p (X 2) = 3 →\n      lpNorm p (X 0 + X 1 + X 2) < (3033/2500 : ℝ) →\n      pairGapSum (lpNorm p) (X 0) (X 1) (X 2) < 2 / ((273/625 : ℝ)*p) →\n      0 ≤ tripleDeficit p (cyclicConstant p) X := by sorry",
+    "preamble": "import Theorems.Thm_HlawkaSchatten_DiagonalCutoff21_domain_nonneg_group01\nimport Definitions.Def_HlawkaSchatten_GapComparison\nimport Definitions.Def_HlawkaSchatten_DiagonalConstruction_Basic\nopen HlawkaSchatten HlawkaSchatten.DiagonalConstruction\n",
+    "natural_language_statement": "For all real p in [405/16,409/16], an original real triple satisfying the explicit coarse coordinate box, singleton norm sum three, total norm bound 3033/2500, and original pair-gap bound has nonnegative original cyclic-constant deficit. This piece covers 8 consecutive parameter slabs. Root bounds, budgets, all ten contraction rounds and the linear pair/offsum floors are proved here; the shared norm-domain nonnegativity theorem is imported. Unequal singleton norms are allowed.",
+    "source": "Yuxuan Xu, A computer-assisted sharp diagonal Hlawka inequality for real exponents p >= 21, Sections 3-7, https://github.com/Anchen-AI4Math/hlawka-diagonal-certificates/blob/main/paper/main.pdf . Contraction framework adapted from @bwdaugherty, Apache-2.0; source notices retained.",
+    "tags": [
+      "hlawka-schatten",
+      "exact-arithmetic",
+      "real-analysis"
+    ],
+    "solution_file": "formalization/platform/Sol_certified_piece21_18.lean",
+    "solution_sha256": "d9566b0e77293b140f27a61d1ed5021db2bfec3486d4f4d2a6703c3d5e4cd81b",
+    "explanation": "The only theorem import is the appropriate shared analytic domain-nonnegativity result. The exact root comparisons, actual original p-norm-to-contraction bridge and complete ten-round contraction schedules for at most eight slabs are embedded. Explicit rational box inclusions and norm/pair/offsum bounds imply every displayed hypothesis of the imported analytic theorem. Balanced interval decisions cover the entire real exponent interval with no floating-point or external validity predicate. This factoring avoids repeating the shared Hessian and averaging proof in every certificate file."
+  },
+  {
+    "key": "certified_piece21_19",
+    "theorem_name": "HlawkaSchatten.DiagonalCutoff21.certified_piece21_19",
+    "theorem_title": "Finite contraction certificate [409/16,413/16]",
+    "formal_statement": "theorem HlawkaSchatten.DiagonalCutoff21.certified_piece21_19 :\n    ∀ p : ℝ, (409/16 : ℝ) ≤ p → p ≤ (413/16 : ℝ) →\n    ∀ X : Fin 3 → Fin 3 → ℝ,\n      (∀ i, -(607/500 : ℝ) ≤ X i i ∧ X i i ≤ -(189/500 : ℝ)) →\n      (∀ j i, j ≠ i → (349/500 : ℝ) ≤ X j i ∧ X j i ≤ (607/500 : ℝ)) →\n      lpNorm p (X 0) + lpNorm p (X 1) + lpNorm p (X 2) = 3 →\n      lpNorm p (X 0 + X 1 + X 2) < (3033/2500 : ℝ) →\n      pairGapSum (lpNorm p) (X 0) (X 1) (X 2) < 2 / ((273/625 : ℝ)*p) →\n      0 ≤ tripleDeficit p (cyclicConstant p) X := by sorry",
+    "preamble": "import Theorems.Thm_HlawkaSchatten_DiagonalCutoff21_domain_nonneg_group01\nimport Definitions.Def_HlawkaSchatten_GapComparison\nimport Definitions.Def_HlawkaSchatten_DiagonalConstruction_Basic\nopen HlawkaSchatten HlawkaSchatten.DiagonalConstruction\n",
+    "natural_language_statement": "For all real p in [409/16,413/16], an original real triple satisfying the explicit coarse coordinate box, singleton norm sum three, total norm bound 3033/2500, and original pair-gap bound has nonnegative original cyclic-constant deficit. This piece covers 8 consecutive parameter slabs. Root bounds, budgets, all ten contraction rounds and the linear pair/offsum floors are proved here; the shared norm-domain nonnegativity theorem is imported. Unequal singleton norms are allowed.",
+    "source": "Yuxuan Xu, A computer-assisted sharp diagonal Hlawka inequality for real exponents p >= 21, Sections 3-7, https://github.com/Anchen-AI4Math/hlawka-diagonal-certificates/blob/main/paper/main.pdf . Contraction framework adapted from @bwdaugherty, Apache-2.0; source notices retained.",
+    "tags": [
+      "hlawka-schatten",
+      "exact-arithmetic",
+      "real-analysis"
+    ],
+    "solution_file": "formalization/platform/Sol_certified_piece21_19.lean",
+    "solution_sha256": "ddc1ba1e98ae4a5cabbb4acf203239de6f5764a5e347d8ee5fe20fb622d4de2a",
+    "explanation": "The only theorem import is the appropriate shared analytic domain-nonnegativity result. The exact root comparisons, actual original p-norm-to-contraction bridge and complete ten-round contraction schedules for at most eight slabs are embedded. Explicit rational box inclusions and norm/pair/offsum bounds imply every displayed hypothesis of the imported analytic theorem. Balanced interval decisions cover the entire real exponent interval with no floating-point or external validity predicate. This factoring avoids repeating the shared Hessian and averaging proof in every certificate file."
+  },
+  {
+    "key": "certified_piece21_20",
+    "theorem_name": "HlawkaSchatten.DiagonalCutoff21.certified_piece21_20",
+    "theorem_title": "Finite contraction certificate [413/16,26]",
+    "formal_statement": "theorem HlawkaSchatten.DiagonalCutoff21.certified_piece21_20 :\n    ∀ p : ℝ, (413/16 : ℝ) ≤ p → p ≤ (26 : ℝ) →\n    ∀ X : Fin 3 → Fin 3 → ℝ,\n      (∀ i, -(607/500 : ℝ) ≤ X i i ∧ X i i ≤ -(189/500 : ℝ)) →\n      (∀ j i, j ≠ i → (349/500 : ℝ) ≤ X j i ∧ X j i ≤ (607/500 : ℝ)) →\n      lpNorm p (X 0) + lpNorm p (X 1) + lpNorm p (X 2) = 3 →\n      lpNorm p (X 0 + X 1 + X 2) < (3033/2500 : ℝ) →\n      pairGapSum (lpNorm p) (X 0) (X 1) (X 2) < 2 / ((273/625 : ℝ)*p) →\n      0 ≤ tripleDeficit p (cyclicConstant p) X := by sorry",
+    "preamble": "import Theorems.Thm_HlawkaSchatten_DiagonalCutoff21_domain_nonneg_group01\nimport Definitions.Def_HlawkaSchatten_GapComparison\nimport Definitions.Def_HlawkaSchatten_DiagonalConstruction_Basic\nopen HlawkaSchatten HlawkaSchatten.DiagonalConstruction\n",
+    "natural_language_statement": "For all real p in [413/16,26], an original real triple satisfying the explicit coarse coordinate box, singleton norm sum three, total norm bound 3033/2500, and original pair-gap bound has nonnegative original cyclic-constant deficit. This piece covers 6 consecutive parameter slabs. Root bounds, budgets, all ten contraction rounds and the linear pair/offsum floors are proved here; the shared norm-domain nonnegativity theorem is imported. Unequal singleton norms are allowed.",
+    "source": "Yuxuan Xu, A computer-assisted sharp diagonal Hlawka inequality for real exponents p >= 21, Sections 3-7, https://github.com/Anchen-AI4Math/hlawka-diagonal-certificates/blob/main/paper/main.pdf . Contraction framework adapted from @bwdaugherty, Apache-2.0; source notices retained.",
+    "tags": [
+      "hlawka-schatten",
+      "exact-arithmetic",
+      "real-analysis"
+    ],
+    "solution_file": "formalization/platform/Sol_certified_piece21_20.lean",
+    "solution_sha256": "8536e7a0dd71ba6b342647c4a522a03d0f5372032d504177edae17bfd0f71cea",
+    "explanation": "The only theorem import is the appropriate shared analytic domain-nonnegativity result. The exact root comparisons, actual original p-norm-to-contraction bridge and complete ten-round contraction schedules for at most eight slabs are embedded. Explicit rational box inclusions and norm/pair/offsum bounds imply every displayed hypothesis of the imported analytic theorem. Balanced interval decisions cover the entire real exponent interval with no floating-point or external validity predicate. This factoring avoids repeating the shared Hessian and averaging proof in every certificate file."
+  },
+  {
+    "key": "certified_piece26_00",
+    "theorem_name": "HlawkaSchatten.DiagonalCutoff21.certified_piece26_00",
+    "theorem_title": "Finite contraction certificate [26,53/2]",
+    "formal_statement": "theorem HlawkaSchatten.DiagonalCutoff21.certified_piece26_00 :\n    ∀ p : ℝ, (26 : ℝ) ≤ p → p ≤ (53/2 : ℝ) →\n    ∀ X : Fin 3 → Fin 3 → ℝ,\n      (∀ i, -(1183/1000 : ℝ) ≤ X i i ∧ X i i ≤ -(477/1000 : ℝ)) →\n      (∀ j i, j ≠ i → (3/4 : ℝ) ≤ X j i ∧ X j i ≤ (1183/1000 : ℝ)) →\n      lpNorm p (X 0) + lpNorm p (X 1) + lpNorm p (X 2) = 3 →\n      lpNorm p (X 0 + X 1 + X 2) < (591/500 : ℝ) →\n      pairGapSum (lpNorm p) (X 0) (X 1) (X 2) < 2 / ((443/1000 : ℝ)*p) →\n      0 ≤ tripleDeficit p (cyclicConstant p) X := by sorry",
+    "preamble": "import Theorems.Thm_HlawkaSchatten_DiagonalCutoff21_domain_nonneg_group01\nimport Definitions.Def_HlawkaSchatten_GapComparison\nimport Definitions.Def_HlawkaSchatten_DiagonalConstruction_Basic\nopen HlawkaSchatten HlawkaSchatten.DiagonalConstruction\n",
+    "natural_language_statement": "For all real p in [26,53/2], an original real triple satisfying the explicit coarse coordinate box, singleton norm sum three, total norm bound 591/500, and original pair-gap bound has nonnegative original cyclic-constant deficit. This piece covers 8 consecutive parameter slabs. Root bounds, budgets, all ten contraction rounds and the linear pair/offsum floors are proved here; the shared norm-domain nonnegativity theorem is imported. Unequal singleton norms are allowed.",
+    "source": "Yuxuan Xu, A computer-assisted sharp diagonal Hlawka inequality for real exponents p >= 21, Sections 3-7, https://github.com/Anchen-AI4Math/hlawka-diagonal-certificates/blob/main/paper/main.pdf . Contraction framework adapted from @bwdaugherty, Apache-2.0; source notices retained.",
+    "tags": [
+      "hlawka-schatten",
+      "exact-arithmetic",
+      "real-analysis"
+    ],
+    "solution_file": "formalization/platform/Sol_certified_piece26_00.lean",
+    "solution_sha256": "b0cb682dea61e52592cf3d10c57ab74bfcea4d82f8578515d40fb67b1e0c2c33",
+    "explanation": "The only theorem import is the appropriate shared analytic domain-nonnegativity result. The exact root comparisons, actual original p-norm-to-contraction bridge and complete ten-round contraction schedules for at most eight slabs are embedded. Explicit rational box inclusions and norm/pair/offsum bounds imply every displayed hypothesis of the imported analytic theorem. Balanced interval decisions cover the entire real exponent interval with no floating-point or external validity predicate. This factoring avoids repeating the shared Hessian and averaging proof in every certificate file."
+  },
+  {
+    "key": "certified_piece26_01",
+    "theorem_name": "HlawkaSchatten.DiagonalCutoff21.certified_piece26_01",
+    "theorem_title": "Finite contraction certificate [53/2,27]",
+    "formal_statement": "theorem HlawkaSchatten.DiagonalCutoff21.certified_piece26_01 :\n    ∀ p : ℝ, (53/2 : ℝ) ≤ p → p ≤ (27 : ℝ) →\n    ∀ X : Fin 3 → Fin 3 → ℝ,\n      (∀ i, -(1183/1000 : ℝ) ≤ X i i ∧ X i i ≤ -(477/1000 : ℝ)) →\n      (∀ j i, j ≠ i → (3/4 : ℝ) ≤ X j i ∧ X j i ≤ (1183/1000 : ℝ)) →\n      lpNorm p (X 0) + lpNorm p (X 1) + lpNorm p (X 2) = 3 →\n      lpNorm p (X 0 + X 1 + X 2) < (591/500 : ℝ) →\n      pairGapSum (lpNorm p) (X 0) (X 1) (X 2) < 2 / ((443/1000 : ℝ)*p) →\n      0 ≤ tripleDeficit p (cyclicConstant p) X := by sorry",
+    "preamble": "import Theorems.Thm_HlawkaSchatten_DiagonalCutoff21_domain_nonneg_group01\nimport Definitions.Def_HlawkaSchatten_GapComparison\nimport Definitions.Def_HlawkaSchatten_DiagonalConstruction_Basic\nopen HlawkaSchatten HlawkaSchatten.DiagonalConstruction\n",
+    "natural_language_statement": "For all real p in [53/2,27], an original real triple satisfying the explicit coarse coordinate box, singleton norm sum three, total norm bound 591/500, and original pair-gap bound has nonnegative original cyclic-constant deficit. This piece covers 8 consecutive parameter slabs. Root bounds, budgets, all ten contraction rounds and the linear pair/offsum floors are proved here; the shared norm-domain nonnegativity theorem is imported. Unequal singleton norms are allowed.",
+    "source": "Yuxuan Xu, A computer-assisted sharp diagonal Hlawka inequality for real exponents p >= 21, Sections 3-7, https://github.com/Anchen-AI4Math/hlawka-diagonal-certificates/blob/main/paper/main.pdf . Contraction framework adapted from @bwdaugherty, Apache-2.0; source notices retained.",
+    "tags": [
+      "hlawka-schatten",
+      "exact-arithmetic",
+      "real-analysis"
+    ],
+    "solution_file": "formalization/platform/Sol_certified_piece26_01.lean",
+    "solution_sha256": "649f4d4176fcf4cf379541666f07294a79c6d5bcfb95428288ad1cb16a60d095",
+    "explanation": "The only theorem import is the appropriate shared analytic domain-nonnegativity result. The exact root comparisons, actual original p-norm-to-contraction bridge and complete ten-round contraction schedules for at most eight slabs are embedded. Explicit rational box inclusions and norm/pair/offsum bounds imply every displayed hypothesis of the imported analytic theorem. Balanced interval decisions cover the entire real exponent interval with no floating-point or external validity predicate. This factoring avoids repeating the shared Hessian and averaging proof in every certificate file."
+  },
+  {
+    "key": "certified_piece26_02",
+    "theorem_name": "HlawkaSchatten.DiagonalCutoff21.certified_piece26_02",
+    "theorem_title": "Finite contraction certificate [27,55/2]",
+    "formal_statement": "theorem HlawkaSchatten.DiagonalCutoff21.certified_piece26_02 :\n    ∀ p : ℝ, (27 : ℝ) ≤ p → p ≤ (55/2 : ℝ) →\n    ∀ X : Fin 3 → Fin 3 → ℝ,\n      (∀ i, -(1183/1000 : ℝ) ≤ X i i ∧ X i i ≤ -(477/1000 : ℝ)) →\n      (∀ j i, j ≠ i → (3/4 : ℝ) ≤ X j i ∧ X j i ≤ (1183/1000 : ℝ)) →\n      lpNorm p (X 0) + lpNorm p (X 1) + lpNorm p (X 2) = 3 →\n      lpNorm p (X 0 + X 1 + X 2) < (591/500 : ℝ) →\n      pairGapSum (lpNorm p) (X 0) (X 1) (X 2) < 2 / ((443/1000 : ℝ)*p) →\n      0 ≤ tripleDeficit p (cyclicConstant p) X := by sorry",
+    "preamble": "import Theorems.Thm_HlawkaSchatten_DiagonalCutoff21_domain_nonneg_group01\nimport Definitions.Def_HlawkaSchatten_GapComparison\nimport Definitions.Def_HlawkaSchatten_DiagonalConstruction_Basic\nopen HlawkaSchatten HlawkaSchatten.DiagonalConstruction\n",
+    "natural_language_statement": "For all real p in [27,55/2], an original real triple satisfying the explicit coarse coordinate box, singleton norm sum three, total norm bound 591/500, and original pair-gap bound has nonnegative original cyclic-constant deficit. This piece covers 8 consecutive parameter slabs. Root bounds, budgets, all ten contraction rounds and the linear pair/offsum floors are proved here; the shared norm-domain nonnegativity theorem is imported. Unequal singleton norms are allowed.",
+    "source": "Yuxuan Xu, A computer-assisted sharp diagonal Hlawka inequality for real exponents p >= 21, Sections 3-7, https://github.com/Anchen-AI4Math/hlawka-diagonal-certificates/blob/main/paper/main.pdf . Contraction framework adapted from @bwdaugherty, Apache-2.0; source notices retained.",
+    "tags": [
+      "hlawka-schatten",
+      "exact-arithmetic",
+      "real-analysis"
+    ],
+    "solution_file": "formalization/platform/Sol_certified_piece26_02.lean",
+    "solution_sha256": "7bce71f34d35c9f4b9c3a9fee2e6fae6c3f282f853f4ccc508fcb16668807904",
+    "explanation": "The only theorem import is the appropriate shared analytic domain-nonnegativity result. The exact root comparisons, actual original p-norm-to-contraction bridge and complete ten-round contraction schedules for at most eight slabs are embedded. Explicit rational box inclusions and norm/pair/offsum bounds imply every displayed hypothesis of the imported analytic theorem. Balanced interval decisions cover the entire real exponent interval with no floating-point or external validity predicate. This factoring avoids repeating the shared Hessian and averaging proof in every certificate file."
+  },
+  {
+    "key": "certified_piece26_03",
+    "theorem_name": "HlawkaSchatten.DiagonalCutoff21.certified_piece26_03",
+    "theorem_title": "Finite contraction certificate [55/2,28]",
+    "formal_statement": "theorem HlawkaSchatten.DiagonalCutoff21.certified_piece26_03 :\n    ∀ p : ℝ, (55/2 : ℝ) ≤ p → p ≤ (28 : ℝ) →\n    ∀ X : Fin 3 → Fin 3 → ℝ,\n      (∀ i, -(1183/1000 : ℝ) ≤ X i i ∧ X i i ≤ -(477/1000 : ℝ)) →\n      (∀ j i, j ≠ i → (3/4 : ℝ) ≤ X j i ∧ X j i ≤ (1183/1000 : ℝ)) →\n      lpNorm p (X 0) + lpNorm p (X 1) + lpNorm p (X 2) = 3 →\n      lpNorm p (X 0 + X 1 + X 2) < (591/500 : ℝ) →\n      pairGapSum (lpNorm p) (X 0) (X 1) (X 2) < 2 / ((443/1000 : ℝ)*p) →\n      0 ≤ tripleDeficit p (cyclicConstant p) X := by sorry",
+    "preamble": "import Theorems.Thm_HlawkaSchatten_DiagonalCutoff21_domain_nonneg_group01\nimport Definitions.Def_HlawkaSchatten_GapComparison\nimport Definitions.Def_HlawkaSchatten_DiagonalConstruction_Basic\nopen HlawkaSchatten HlawkaSchatten.DiagonalConstruction\n",
+    "natural_language_statement": "For all real p in [55/2,28], an original real triple satisfying the explicit coarse coordinate box, singleton norm sum three, total norm bound 591/500, and original pair-gap bound has nonnegative original cyclic-constant deficit. This piece covers 8 consecutive parameter slabs. Root bounds, budgets, all ten contraction rounds and the linear pair/offsum floors are proved here; the shared norm-domain nonnegativity theorem is imported. Unequal singleton norms are allowed.",
+    "source": "Yuxuan Xu, A computer-assisted sharp diagonal Hlawka inequality for real exponents p >= 21, Sections 3-7, https://github.com/Anchen-AI4Math/hlawka-diagonal-certificates/blob/main/paper/main.pdf . Contraction framework adapted from @bwdaugherty, Apache-2.0; source notices retained.",
+    "tags": [
+      "hlawka-schatten",
+      "exact-arithmetic",
+      "real-analysis"
+    ],
+    "solution_file": "formalization/platform/Sol_certified_piece26_03.lean",
+    "solution_sha256": "4eca411ee2ff40fe66abb5ca405fabff8fe93d5a8e270aa8d20c58871cbeb5ef",
+    "explanation": "The only theorem import is the appropriate shared analytic domain-nonnegativity result. The exact root comparisons, actual original p-norm-to-contraction bridge and complete ten-round contraction schedules for at most eight slabs are embedded. Explicit rational box inclusions and norm/pair/offsum bounds imply every displayed hypothesis of the imported analytic theorem. Balanced interval decisions cover the entire real exponent interval with no floating-point or external validity predicate. This factoring avoids repeating the shared Hessian and averaging proof in every certificate file."
+  },
+  {
+    "key": "certified_piece26_04",
+    "theorem_name": "HlawkaSchatten.DiagonalCutoff21.certified_piece26_04",
+    "theorem_title": "Finite contraction certificate [28,57/2]",
+    "formal_statement": "theorem HlawkaSchatten.DiagonalCutoff21.certified_piece26_04 :\n    ∀ p : ℝ, (28 : ℝ) ≤ p → p ≤ (57/2 : ℝ) →\n    ∀ X : Fin 3 → Fin 3 → ℝ,\n      (∀ i, -(1183/1000 : ℝ) ≤ X i i ∧ X i i ≤ -(477/1000 : ℝ)) →\n      (∀ j i, j ≠ i → (3/4 : ℝ) ≤ X j i ∧ X j i ≤ (1183/1000 : ℝ)) →\n      lpNorm p (X 0) + lpNorm p (X 1) + lpNorm p (X 2) = 3 →\n      lpNorm p (X 0 + X 1 + X 2) < (591/500 : ℝ) →\n      pairGapSum (lpNorm p) (X 0) (X 1) (X 2) < 2 / ((443/1000 : ℝ)*p) →\n      0 ≤ tripleDeficit p (cyclicConstant p) X := by sorry",
+    "preamble": "import Theorems.Thm_HlawkaSchatten_DiagonalCutoff21_domain_nonneg_group01\nimport Definitions.Def_HlawkaSchatten_GapComparison\nimport Definitions.Def_HlawkaSchatten_DiagonalConstruction_Basic\nopen HlawkaSchatten HlawkaSchatten.DiagonalConstruction\n",
+    "natural_language_statement": "For all real p in [28,57/2], an original real triple satisfying the explicit coarse coordinate box, singleton norm sum three, total norm bound 591/500, and original pair-gap bound has nonnegative original cyclic-constant deficit. This piece covers 8 consecutive parameter slabs. Root bounds, budgets, all ten contraction rounds and the linear pair/offsum floors are proved here; the shared norm-domain nonnegativity theorem is imported. Unequal singleton norms are allowed.",
+    "source": "Yuxuan Xu, A computer-assisted sharp diagonal Hlawka inequality for real exponents p >= 21, Sections 3-7, https://github.com/Anchen-AI4Math/hlawka-diagonal-certificates/blob/main/paper/main.pdf . Contraction framework adapted from @bwdaugherty, Apache-2.0; source notices retained.",
+    "tags": [
+      "hlawka-schatten",
+      "exact-arithmetic",
+      "real-analysis"
+    ],
+    "solution_file": "formalization/platform/Sol_certified_piece26_04.lean",
+    "solution_sha256": "83a531c8353a2420473ca7aa8652d257269088fb08b6b33cee14fa826f87ae36",
+    "explanation": "The only theorem import is the appropriate shared analytic domain-nonnegativity result. The exact root comparisons, actual original p-norm-to-contraction bridge and complete ten-round contraction schedules for at most eight slabs are embedded. Explicit rational box inclusions and norm/pair/offsum bounds imply every displayed hypothesis of the imported analytic theorem. Balanced interval decisions cover the entire real exponent interval with no floating-point or external validity predicate. This factoring avoids repeating the shared Hessian and averaging proof in every certificate file."
+  },
+  {
+    "key": "certified_piece26_05",
+    "theorem_name": "HlawkaSchatten.DiagonalCutoff21.certified_piece26_05",
+    "theorem_title": "Finite contraction certificate [57/2,29]",
+    "formal_statement": "theorem HlawkaSchatten.DiagonalCutoff21.certified_piece26_05 :\n    ∀ p : ℝ, (57/2 : ℝ) ≤ p → p ≤ (29 : ℝ) →\n    ∀ X : Fin 3 → Fin 3 → ℝ,\n      (∀ i, -(1183/1000 : ℝ) ≤ X i i ∧ X i i ≤ -(477/1000 : ℝ)) →\n      (∀ j i, j ≠ i → (3/4 : ℝ) ≤ X j i ∧ X j i ≤ (1183/1000 : ℝ)) →\n      lpNorm p (X 0) + lpNorm p (X 1) + lpNorm p (X 2) = 3 →\n      lpNorm p (X 0 + X 1 + X 2) < (591/500 : ℝ) →\n      pairGapSum (lpNorm p) (X 0) (X 1) (X 2) < 2 / ((443/1000 : ℝ)*p) →\n      0 ≤ tripleDeficit p (cyclicConstant p) X := by sorry",
+    "preamble": "import Theorems.Thm_HlawkaSchatten_DiagonalCutoff21_domain_nonneg_group01\nimport Definitions.Def_HlawkaSchatten_GapComparison\nimport Definitions.Def_HlawkaSchatten_DiagonalConstruction_Basic\nopen HlawkaSchatten HlawkaSchatten.DiagonalConstruction\n",
+    "natural_language_statement": "For all real p in [57/2,29], an original real triple satisfying the explicit coarse coordinate box, singleton norm sum three, total norm bound 591/500, and original pair-gap bound has nonnegative original cyclic-constant deficit. This piece covers 8 consecutive parameter slabs. Root bounds, budgets, all ten contraction rounds and the linear pair/offsum floors are proved here; the shared norm-domain nonnegativity theorem is imported. Unequal singleton norms are allowed.",
+    "source": "Yuxuan Xu, A computer-assisted sharp diagonal Hlawka inequality for real exponents p >= 21, Sections 3-7, https://github.com/Anchen-AI4Math/hlawka-diagonal-certificates/blob/main/paper/main.pdf . Contraction framework adapted from @bwdaugherty, Apache-2.0; source notices retained.",
+    "tags": [
+      "hlawka-schatten",
+      "exact-arithmetic",
+      "real-analysis"
+    ],
+    "solution_file": "formalization/platform/Sol_certified_piece26_05.lean",
+    "solution_sha256": "f8a21ed73761f32e833740ddbdaf7342886f7574b93d05e5b58b0a80e25751cf",
+    "explanation": "The only theorem import is the appropriate shared analytic domain-nonnegativity result. The exact root comparisons, actual original p-norm-to-contraction bridge and complete ten-round contraction schedules for at most eight slabs are embedded. Explicit rational box inclusions and norm/pair/offsum bounds imply every displayed hypothesis of the imported analytic theorem. Balanced interval decisions cover the entire real exponent interval with no floating-point or external validity predicate. This factoring avoids repeating the shared Hessian and averaging proof in every certificate file."
+  },
+  {
+    "key": "certified_piece26_06",
+    "theorem_name": "HlawkaSchatten.DiagonalCutoff21.certified_piece26_06",
+    "theorem_title": "Finite contraction certificate [29,59/2]",
+    "formal_statement": "theorem HlawkaSchatten.DiagonalCutoff21.certified_piece26_06 :\n    ∀ p : ℝ, (29 : ℝ) ≤ p → p ≤ (59/2 : ℝ) →\n    ∀ X : Fin 3 → Fin 3 → ℝ,\n      (∀ i, -(1183/1000 : ℝ) ≤ X i i ∧ X i i ≤ -(477/1000 : ℝ)) →\n      (∀ j i, j ≠ i → (3/4 : ℝ) ≤ X j i ∧ X j i ≤ (1183/1000 : ℝ)) →\n      lpNorm p (X 0) + lpNorm p (X 1) + lpNorm p (X 2) = 3 →\n      lpNorm p (X 0 + X 1 + X 2) < (591/500 : ℝ) →\n      pairGapSum (lpNorm p) (X 0) (X 1) (X 2) < 2 / ((443/1000 : ℝ)*p) →\n      0 ≤ tripleDeficit p (cyclicConstant p) X := by sorry",
+    "preamble": "import Theorems.Thm_HlawkaSchatten_DiagonalCutoff21_domain_nonneg_group01\nimport Definitions.Def_HlawkaSchatten_GapComparison\nimport Definitions.Def_HlawkaSchatten_DiagonalConstruction_Basic\nopen HlawkaSchatten HlawkaSchatten.DiagonalConstruction\n",
+    "natural_language_statement": "For all real p in [29,59/2], an original real triple satisfying the explicit coarse coordinate box, singleton norm sum three, total norm bound 591/500, and original pair-gap bound has nonnegative original cyclic-constant deficit. This piece covers 8 consecutive parameter slabs. Root bounds, budgets, all ten contraction rounds and the linear pair/offsum floors are proved here; the shared norm-domain nonnegativity theorem is imported. Unequal singleton norms are allowed.",
+    "source": "Yuxuan Xu, A computer-assisted sharp diagonal Hlawka inequality for real exponents p >= 21, Sections 3-7, https://github.com/Anchen-AI4Math/hlawka-diagonal-certificates/blob/main/paper/main.pdf . Contraction framework adapted from @bwdaugherty, Apache-2.0; source notices retained.",
+    "tags": [
+      "hlawka-schatten",
+      "exact-arithmetic",
+      "real-analysis"
+    ],
+    "solution_file": "formalization/platform/Sol_certified_piece26_06.lean",
+    "solution_sha256": "0ebf44d0fc3a050bdde1fd47075f7c5970b16c4b49ce6b6e000b078ee7f9956d",
+    "explanation": "The only theorem import is the appropriate shared analytic domain-nonnegativity result. The exact root comparisons, actual original p-norm-to-contraction bridge and complete ten-round contraction schedules for at most eight slabs are embedded. Explicit rational box inclusions and norm/pair/offsum bounds imply every displayed hypothesis of the imported analytic theorem. Balanced interval decisions cover the entire real exponent interval with no floating-point or external validity predicate. This factoring avoids repeating the shared Hessian and averaging proof in every certificate file."
+  },
+  {
+    "key": "certified_piece26_07",
+    "theorem_name": "HlawkaSchatten.DiagonalCutoff21.certified_piece26_07",
+    "theorem_title": "Finite contraction certificate [59/2,30]",
+    "formal_statement": "theorem HlawkaSchatten.DiagonalCutoff21.certified_piece26_07 :\n    ∀ p : ℝ, (59/2 : ℝ) ≤ p → p ≤ (30 : ℝ) →\n    ∀ X : Fin 3 → Fin 3 → ℝ,\n      (∀ i, -(1183/1000 : ℝ) ≤ X i i ∧ X i i ≤ -(477/1000 : ℝ)) →\n      (∀ j i, j ≠ i → (3/4 : ℝ) ≤ X j i ∧ X j i ≤ (1183/1000 : ℝ)) →\n      lpNorm p (X 0) + lpNorm p (X 1) + lpNorm p (X 2) = 3 →\n      lpNorm p (X 0 + X 1 + X 2) < (591/500 : ℝ) →\n      pairGapSum (lpNorm p) (X 0) (X 1) (X 2) < 2 / ((443/1000 : ℝ)*p) →\n      0 ≤ tripleDeficit p (cyclicConstant p) X := by sorry",
+    "preamble": "import Theorems.Thm_HlawkaSchatten_DiagonalCutoff21_domain_nonneg_group01\nimport Definitions.Def_HlawkaSchatten_GapComparison\nimport Definitions.Def_HlawkaSchatten_DiagonalConstruction_Basic\nopen HlawkaSchatten HlawkaSchatten.DiagonalConstruction\n",
+    "natural_language_statement": "For all real p in [59/2,30], an original real triple satisfying the explicit coarse coordinate box, singleton norm sum three, total norm bound 591/500, and original pair-gap bound has nonnegative original cyclic-constant deficit. This piece covers 8 consecutive parameter slabs. Root bounds, budgets, all ten contraction rounds and the linear pair/offsum floors are proved here; the shared norm-domain nonnegativity theorem is imported. Unequal singleton norms are allowed.",
+    "source": "Yuxuan Xu, A computer-assisted sharp diagonal Hlawka inequality for real exponents p >= 21, Sections 3-7, https://github.com/Anchen-AI4Math/hlawka-diagonal-certificates/blob/main/paper/main.pdf . Contraction framework adapted from @bwdaugherty, Apache-2.0; source notices retained.",
+    "tags": [
+      "hlawka-schatten",
+      "exact-arithmetic",
+      "real-analysis"
+    ],
+    "solution_file": "formalization/platform/Sol_certified_piece26_07.lean",
+    "solution_sha256": "72ee9affaeff3a1665933b5b9df6f1901f0762dd9d6bc1ca9f83f0fadedb1263",
+    "explanation": "The only theorem import is the appropriate shared analytic domain-nonnegativity result. The exact root comparisons, actual original p-norm-to-contraction bridge and complete ten-round contraction schedules for at most eight slabs are embedded. Explicit rational box inclusions and norm/pair/offsum bounds imply every displayed hypothesis of the imported analytic theorem. Balanced interval decisions cover the entire real exponent interval with no floating-point or external validity predicate. This factoring avoids repeating the shared Hessian and averaging proof in every certificate file."
+  },
+  {
+    "key": "certified_piece26_08",
+    "theorem_name": "HlawkaSchatten.DiagonalCutoff21.certified_piece26_08",
+    "theorem_title": "Finite contraction certificate [30,61/2]",
+    "formal_statement": "theorem HlawkaSchatten.DiagonalCutoff21.certified_piece26_08 :\n    ∀ p : ℝ, (30 : ℝ) ≤ p → p ≤ (61/2 : ℝ) →\n    ∀ X : Fin 3 → Fin 3 → ℝ,\n      (∀ i, -(1183/1000 : ℝ) ≤ X i i ∧ X i i ≤ -(477/1000 : ℝ)) →\n      (∀ j i, j ≠ i → (3/4 : ℝ) ≤ X j i ∧ X j i ≤ (1183/1000 : ℝ)) →\n      lpNorm p (X 0) + lpNorm p (X 1) + lpNorm p (X 2) = 3 →\n      lpNorm p (X 0 + X 1 + X 2) < (591/500 : ℝ) →\n      pairGapSum (lpNorm p) (X 0) (X 1) (X 2) < 2 / ((443/1000 : ℝ)*p) →\n      0 ≤ tripleDeficit p (cyclicConstant p) X := by sorry",
+    "preamble": "import Theorems.Thm_HlawkaSchatten_DiagonalCutoff21_domain_nonneg_group01\nimport Definitions.Def_HlawkaSchatten_GapComparison\nimport Definitions.Def_HlawkaSchatten_DiagonalConstruction_Basic\nopen HlawkaSchatten HlawkaSchatten.DiagonalConstruction\n",
+    "natural_language_statement": "For all real p in [30,61/2], an original real triple satisfying the explicit coarse coordinate box, singleton norm sum three, total norm bound 591/500, and original pair-gap bound has nonnegative original cyclic-constant deficit. This piece covers 8 consecutive parameter slabs. Root bounds, budgets, all ten contraction rounds and the linear pair/offsum floors are proved here; the shared norm-domain nonnegativity theorem is imported. Unequal singleton norms are allowed.",
+    "source": "Yuxuan Xu, A computer-assisted sharp diagonal Hlawka inequality for real exponents p >= 21, Sections 3-7, https://github.com/Anchen-AI4Math/hlawka-diagonal-certificates/blob/main/paper/main.pdf . Contraction framework adapted from @bwdaugherty, Apache-2.0; source notices retained.",
+    "tags": [
+      "hlawka-schatten",
+      "exact-arithmetic",
+      "real-analysis"
+    ],
+    "solution_file": "formalization/platform/Sol_certified_piece26_08.lean",
+    "solution_sha256": "a62c9dd2a747023132f4f3f2d08a70e5ffa08bfaeb554fb5c18d3ce5ae8676e8",
+    "explanation": "The only theorem import is the appropriate shared analytic domain-nonnegativity result. The exact root comparisons, actual original p-norm-to-contraction bridge and complete ten-round contraction schedules for at most eight slabs are embedded. Explicit rational box inclusions and norm/pair/offsum bounds imply every displayed hypothesis of the imported analytic theorem. Balanced interval decisions cover the entire real exponent interval with no floating-point or external validity predicate. This factoring avoids repeating the shared Hessian and averaging proof in every certificate file."
+  },
+  {
+    "key": "certified_piece26_09",
+    "theorem_name": "HlawkaSchatten.DiagonalCutoff21.certified_piece26_09",
+    "theorem_title": "Finite contraction certificate [61/2,31]",
+    "formal_statement": "theorem HlawkaSchatten.DiagonalCutoff21.certified_piece26_09 :\n    ∀ p : ℝ, (61/2 : ℝ) ≤ p → p ≤ (31 : ℝ) →\n    ∀ X : Fin 3 → Fin 3 → ℝ,\n      (∀ i, -(1183/1000 : ℝ) ≤ X i i ∧ X i i ≤ -(477/1000 : ℝ)) →\n      (∀ j i, j ≠ i → (3/4 : ℝ) ≤ X j i ∧ X j i ≤ (1183/1000 : ℝ)) →\n      lpNorm p (X 0) + lpNorm p (X 1) + lpNorm p (X 2) = 3 →\n      lpNorm p (X 0 + X 1 + X 2) < (591/500 : ℝ) →\n      pairGapSum (lpNorm p) (X 0) (X 1) (X 2) < 2 / ((443/1000 : ℝ)*p) →\n      0 ≤ tripleDeficit p (cyclicConstant p) X := by sorry",
+    "preamble": "import Theorems.Thm_HlawkaSchatten_DiagonalCutoff21_domain_nonneg_group01\nimport Definitions.Def_HlawkaSchatten_GapComparison\nimport Definitions.Def_HlawkaSchatten_DiagonalConstruction_Basic\nopen HlawkaSchatten HlawkaSchatten.DiagonalConstruction\n",
+    "natural_language_statement": "For all real p in [61/2,31], an original real triple satisfying the explicit coarse coordinate box, singleton norm sum three, total norm bound 591/500, and original pair-gap bound has nonnegative original cyclic-constant deficit. This piece covers 8 consecutive parameter slabs. Root bounds, budgets, all ten contraction rounds and the linear pair/offsum floors are proved here; the shared norm-domain nonnegativity theorem is imported. Unequal singleton norms are allowed.",
+    "source": "Yuxuan Xu, A computer-assisted sharp diagonal Hlawka inequality for real exponents p >= 21, Sections 3-7, https://github.com/Anchen-AI4Math/hlawka-diagonal-certificates/blob/main/paper/main.pdf . Contraction framework adapted from @bwdaugherty, Apache-2.0; source notices retained.",
+    "tags": [
+      "hlawka-schatten",
+      "exact-arithmetic",
+      "real-analysis"
+    ],
+    "solution_file": "formalization/platform/Sol_certified_piece26_09.lean",
+    "solution_sha256": "0d9a797274d51811001a895e666bfc440db6e7e8aca858a0003736a008df05ff",
+    "explanation": "The only theorem import is the appropriate shared analytic domain-nonnegativity result. The exact root comparisons, actual original p-norm-to-contraction bridge and complete ten-round contraction schedules for at most eight slabs are embedded. Explicit rational box inclusions and norm/pair/offsum bounds imply every displayed hypothesis of the imported analytic theorem. Balanced interval decisions cover the entire real exponent interval with no floating-point or external validity predicate. This factoring avoids repeating the shared Hessian and averaging proof in every certificate file."
+  },
+  {
+    "key": "certified_piece26_10",
+    "theorem_name": "HlawkaSchatten.DiagonalCutoff21.certified_piece26_10",
+    "theorem_title": "Finite contraction certificate [31,63/2]",
+    "formal_statement": "theorem HlawkaSchatten.DiagonalCutoff21.certified_piece26_10 :\n    ∀ p : ℝ, (31 : ℝ) ≤ p → p ≤ (63/2 : ℝ) →\n    ∀ X : Fin 3 → Fin 3 → ℝ,\n      (∀ i, -(1183/1000 : ℝ) ≤ X i i ∧ X i i ≤ -(477/1000 : ℝ)) →\n      (∀ j i, j ≠ i → (3/4 : ℝ) ≤ X j i ∧ X j i ≤ (1183/1000 : ℝ)) →\n      lpNorm p (X 0) + lpNorm p (X 1) + lpNorm p (X 2) = 3 →\n      lpNorm p (X 0 + X 1 + X 2) < (591/500 : ℝ) →\n      pairGapSum (lpNorm p) (X 0) (X 1) (X 2) < 2 / ((443/1000 : ℝ)*p) →\n      0 ≤ tripleDeficit p (cyclicConstant p) X := by sorry",
+    "preamble": "import Theorems.Thm_HlawkaSchatten_DiagonalCutoff21_domain_nonneg_group01\nimport Definitions.Def_HlawkaSchatten_GapComparison\nimport Definitions.Def_HlawkaSchatten_DiagonalConstruction_Basic\nopen HlawkaSchatten HlawkaSchatten.DiagonalConstruction\n",
+    "natural_language_statement": "For all real p in [31,63/2], an original real triple satisfying the explicit coarse coordinate box, singleton norm sum three, total norm bound 591/500, and original pair-gap bound has nonnegative original cyclic-constant deficit. This piece covers 8 consecutive parameter slabs. Root bounds, budgets, all ten contraction rounds and the linear pair/offsum floors are proved here; the shared norm-domain nonnegativity theorem is imported. Unequal singleton norms are allowed.",
+    "source": "Yuxuan Xu, A computer-assisted sharp diagonal Hlawka inequality for real exponents p >= 21, Sections 3-7, https://github.com/Anchen-AI4Math/hlawka-diagonal-certificates/blob/main/paper/main.pdf . Contraction framework adapted from @bwdaugherty, Apache-2.0; source notices retained.",
+    "tags": [
+      "hlawka-schatten",
+      "exact-arithmetic",
+      "real-analysis"
+    ],
+    "solution_file": "formalization/platform/Sol_certified_piece26_10.lean",
+    "solution_sha256": "cf2cee81281bd30a0f3ee72f4cb7a5f33f3449740e7a0cb617c0e39afb08d71d",
+    "explanation": "The only theorem import is the appropriate shared analytic domain-nonnegativity result. The exact root comparisons, actual original p-norm-to-contraction bridge and complete ten-round contraction schedules for at most eight slabs are embedded. Explicit rational box inclusions and norm/pair/offsum bounds imply every displayed hypothesis of the imported analytic theorem. Balanced interval decisions cover the entire real exponent interval with no floating-point or external validity predicate. This factoring avoids repeating the shared Hessian and averaging proof in every certificate file."
+  },
+  {
+    "key": "certified_piece26_11",
+    "theorem_name": "HlawkaSchatten.DiagonalCutoff21.certified_piece26_11",
+    "theorem_title": "Finite contraction certificate [63/2,32]",
+    "formal_statement": "theorem HlawkaSchatten.DiagonalCutoff21.certified_piece26_11 :\n    ∀ p : ℝ, (63/2 : ℝ) ≤ p → p ≤ (32 : ℝ) →\n    ∀ X : Fin 3 → Fin 3 → ℝ,\n      (∀ i, -(1183/1000 : ℝ) ≤ X i i ∧ X i i ≤ -(477/1000 : ℝ)) →\n      (∀ j i, j ≠ i → (3/4 : ℝ) ≤ X j i ∧ X j i ≤ (1183/1000 : ℝ)) →\n      lpNorm p (X 0) + lpNorm p (X 1) + lpNorm p (X 2) = 3 →\n      lpNorm p (X 0 + X 1 + X 2) < (591/500 : ℝ) →\n      pairGapSum (lpNorm p) (X 0) (X 1) (X 2) < 2 / ((443/1000 : ℝ)*p) →\n      0 ≤ tripleDeficit p (cyclicConstant p) X := by sorry",
+    "preamble": "import Theorems.Thm_HlawkaSchatten_DiagonalCutoff21_domain_nonneg_group01\nimport Definitions.Def_HlawkaSchatten_GapComparison\nimport Definitions.Def_HlawkaSchatten_DiagonalConstruction_Basic\nopen HlawkaSchatten HlawkaSchatten.DiagonalConstruction\n",
+    "natural_language_statement": "For all real p in [63/2,32], an original real triple satisfying the explicit coarse coordinate box, singleton norm sum three, total norm bound 591/500, and original pair-gap bound has nonnegative original cyclic-constant deficit. This piece covers 8 consecutive parameter slabs. Root bounds, budgets, all ten contraction rounds and the linear pair/offsum floors are proved here; the shared norm-domain nonnegativity theorem is imported. Unequal singleton norms are allowed.",
+    "source": "Yuxuan Xu, A computer-assisted sharp diagonal Hlawka inequality for real exponents p >= 21, Sections 3-7, https://github.com/Anchen-AI4Math/hlawka-diagonal-certificates/blob/main/paper/main.pdf . Contraction framework adapted from @bwdaugherty, Apache-2.0; source notices retained.",
+    "tags": [
+      "hlawka-schatten",
+      "exact-arithmetic",
+      "real-analysis"
+    ],
+    "solution_file": "formalization/platform/Sol_certified_piece26_11.lean",
+    "solution_sha256": "705dd1ccdec54b773ed58628ad2eb5830db834378a3cdd782e4e2ed389a6807b",
+    "explanation": "The only theorem import is the appropriate shared analytic domain-nonnegativity result. The exact root comparisons, actual original p-norm-to-contraction bridge and complete ten-round contraction schedules for at most eight slabs are embedded. Explicit rational box inclusions and norm/pair/offsum bounds imply every displayed hypothesis of the imported analytic theorem. Balanced interval decisions cover the entire real exponent interval with no floating-point or external validity predicate. This factoring avoids repeating the shared Hessian and averaging proof in every certificate file."
+  }
+]

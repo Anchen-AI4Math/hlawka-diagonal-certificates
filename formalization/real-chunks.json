@@ -1,0 +1,178 @@
+[
+  {
+    "module": "Hlawka21.Real21.Chunk00",
+    "source": "formalization/Hlawka21/Real21/Chunk00.lean",
+    "theorem": "localized_nonneg21_chunk00",
+    "cutoff": 21,
+    "start": 0,
+    "end": 16,
+    "a": "21",
+    "b": "43/2",
+    "sha256": "e9b34c9cae7952d5c360fcff492d4887f587f207e9676d024d8398a2c845acc0"
+  },
+  {
+    "module": "Hlawka21.Real21.Chunk01",
+    "source": "formalization/Hlawka21/Real21/Chunk01.lean",
+    "theorem": "localized_nonneg21_chunk01",
+    "cutoff": 21,
+    "start": 16,
+    "end": 32,
+    "a": "43/2",
+    "b": "22",
+    "sha256": "59be94816f8025c5ae680633548c61ce925803f45e756cadddfdf374217abed5"
+  },
+  {
+    "module": "Hlawka21.Real21.Chunk02",
+    "source": "formalization/Hlawka21/Real21/Chunk02.lean",
+    "theorem": "localized_nonneg21_chunk02",
+    "cutoff": 21,
+    "start": 32,
+    "end": 48,
+    "a": "22",
+    "b": "45/2",
+    "sha256": "51941e11717c0779708f6ca1217f49ae5043863016b55db692796226e34de23c"
+  },
+  {
+    "module": "Hlawka21.Real21.Chunk03",
+    "source": "formalization/Hlawka21/Real21/Chunk03.lean",
+    "theorem": "localized_nonneg21_chunk03",
+    "cutoff": 21,
+    "start": 48,
+    "end": 64,
+    "a": "45/2",
+    "b": "23",
+    "sha256": "e7f098735412890fda73c73e96e4a2a6d77bd8d62991d9af3df67609d94eb852"
+  },
+  {
+    "module": "Hlawka21.Real21.Chunk04",
+    "source": "formalization/Hlawka21/Real21/Chunk04.lean",
+    "theorem": "localized_nonneg21_chunk04",
+    "cutoff": 21,
+    "start": 64,
+    "end": 80,
+    "a": "23",
+    "b": "47/2",
+    "sha256": "51e6f5d3eb8b1a8f6a28320a483a167f5cd8700756b875f654047b624ac6ad6f"
+  },
+  {
+    "module": "Hlawka21.Real21.Chunk05",
+    "source": "formalization/Hlawka21/Real21/Chunk05.lean",
+    "theorem": "localized_nonneg21_chunk05",
+    "cutoff": 21,
+    "start": 80,
+    "end": 96,
+    "a": "47/2",
+    "b": "24",
+    "sha256": "c09732313bcffaff3323ca12a531ef6a2dd9255232a70df3706b4117954a579f"
+  },
+  {
+    "module": "Hlawka21.Real21.Chunk06",
+    "source": "formalization/Hlawka21/Real21/Chunk06.lean",
+    "theorem": "localized_nonneg21_chunk06",
+    "cutoff": 21,
+    "start": 96,
+    "end": 112,
+    "a": "24",
+    "b": "49/2",
+    "sha256": "ff28107ededb7dd2f4490a300c36567709b43dd6ac91d5df15260e1fad254573"
+  },
+  {
+    "module": "Hlawka21.Real21.Chunk07",
+    "source": "formalization/Hlawka21/Real21/Chunk07.lean",
+    "theorem": "localized_nonneg21_chunk07",
+    "cutoff": 21,
+    "start": 112,
+    "end": 128,
+    "a": "49/2",
+    "b": "25",
+    "sha256": "e67a330687ab0418507eb3351af6ba03a867510685b1acabfc567bc6692c766c"
+  },
+  {
+    "module": "Hlawka21.Real21.Chunk08",
+    "source": "formalization/Hlawka21/Real21/Chunk08.lean",
+    "theorem": "localized_nonneg21_chunk08",
+    "cutoff": 21,
+    "start": 128,
+    "end": 144,
+    "a": "25",
+    "b": "51/2",
+    "sha256": "6ab04ef314c3806fb494aec949eea4582e9c97dd5f0cf4a13c8e6ca77cb66a68"
+  },
+  {
+    "module": "Hlawka21.Real21.Chunk09",
+    "source": "formalization/Hlawka21/Real21/Chunk09.lean",
+    "theorem": "localized_nonneg21_chunk09",
+    "cutoff": 21,
+    "start": 144,
+    "end": 160,
+    "a": "51/2",
+    "b": "26",
+    "sha256": "003c4164cc7f20186cb759fc43ab99c7db3143625e1064f621f246fc27940560"
+  },
+  {
+    "module": "Hlawka21.Real26.Chunk00",
+    "source": "formalization/Hlawka21/Real26/Chunk00.lean",
+    "theorem": "localized_nonneg26_chunk00",
+    "cutoff": 26,
+    "start": 0,
+    "end": 16,
+    "a": "26",
+    "b": "27",
+    "sha256": "054d3873e643e2ed83e110fe6ef16bbb7d760513d6f200c4e5d46ac7af66ebbf"
+  },
+  {
+    "module": "Hlawka21.Real26.Chunk01",
+    "source": "formalization/Hlawka21/Real26/Chunk01.lean",
+    "theorem": "localized_nonneg26_chunk01",
+    "cutoff": 26,
+    "start": 16,
+    "end": 32,
+    "a": "27",
+    "b": "28",
+    "sha256": "aba576d21c0dad9bfb2444934822baa7708bce25d68369e96a9de5134b9d71e6"
+  },
+  {
+    "module": "Hlawka21.Real26.Chunk02",
+    "source": "formalization/Hlawka21/Real26/Chunk02.lean",
+    "theorem": "localized_nonneg26_chunk02",
+    "cutoff": 26,
+    "start": 32,
+    "end": 48,
+    "a": "28",
+    "b": "29",
+    "sha256": "2bf32a632ad8c507f563f1b777a53a92d120ea6b70ba9c87a5e1af3f2a73af2f"
+  },
+  {
+    "module": "Hlawka21.Real26.Chunk03",
+    "source": "formalization/Hlawka21/Real26/Chunk03.lean",
+    "theorem": "localized_nonneg26_chunk03",
+    "cutoff": 26,
+    "start": 48,
+    "end": 64,
+    "a": "29",
+    "b": "30",
+    "sha256": "bff2e286b3b48acbffcacfcb23c750c1bc6fbbdf37f321ad925af5d4adbbad02"
+  },
+  {
+    "module": "Hlawka21.Real26.Chunk04",
+    "source": "formalization/Hlawka21/Real26/Chunk04.lean",
+    "theorem": "localized_nonneg26_chunk04",
+    "cutoff": 26,
+    "start": 64,
+    "end": 80,
+    "a": "30",
+    "b": "31",
+    "sha256": "cee8de0779ad86155c284b2c27c69226c467d7c787dd8e4913a9a3c630e045be"
+  },
+  {
+    "module": "Hlawka21.Real26.Chunk05",
+    "source": "formalization/Hlawka21/Real26/Chunk05.lean",
+    "theorem": "localized_nonneg26_chunk05",
+    "cutoff": 26,
+    "start": 80,
+    "end": 96,
+    "a": "31",
+    "b": "32",
+    "sha256": "9a3f0fc74bb509f04731b51bc200d78b31c37f0862f55fd6059c5654c1af9a1b"
+  }
+]

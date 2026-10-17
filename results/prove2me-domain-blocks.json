@@ -1,0 +1,190 @@
+{
+  "env": "0df444a360eaa60ab8c11dca51a86af692955474",
+  "scope": "Four-slab actual-norm domain localization; original unrestricted windows and full cutoff21 scope unchanged.",
+  "theorems": {
+    "localized_domain4_21_00": {
+      "theorem_name": "HlawkaSchatten.DiagonalCutoff21.localized_domain4_21_00",
+      "publish_job_id": "89fd611b-5464-4712-92b2-b40191d9cfa1",
+      "publish_status": "PUBLISHED",
+      "theorem_id": "19ddf7af-42a9-437c-8646-3ee943ae487d",
+      "submission_id": "3735254f-536b-45fe-a0c1-2ea9ffc9d938",
+      "proof_status": "ACCEPTED",
+      "solution_sha256": "73a93a14b1240db029fa0c8651c5acb5ea1762b5c3a019fb84a6b3b1746067d5",
+      "theorem_status": "Proved",
+      "open_leaf_count": 0,
+      "checked_at": "2026-10-17T13:43:07.514705+00:00"
+    },
+    "localized_domain4_21_01": {
+      "theorem_name": "HlawkaSchatten.DiagonalCutoff21.localized_domain4_21_01",
+      "publish_job_id": "2bae624a-096f-4d10-8ce3-437882b8cc68",
+      "publish_status": "PUBLISHED",
+      "theorem_id": "dece0241-0c16-408a-8d8e-2dbfa73a5886",
+      "submission_id": "7616ebe9-6569-4afe-8acb-509ed093b7df",
+      "proof_status": "PENDING",
+      "solution_sha256": "b9ca942ba8780f1d16b82800f9b82aad4f097d61fa12657c78239907ffc893e2"
+    },
+    "localized_domain4_21_02": {
+      "theorem_name": "HlawkaSchatten.DiagonalCutoff21.localized_domain4_21_02",
+      "publish_job_id": "56deff3b-ea6c-4dad-bf8a-7379bf9dc8a9",
+      "publish_status": "PUBLISHED",
+      "theorem_id": "86f2c6fe-92e5-44c1-ade7-bfc3fa5e99f7",
+      "submission_id": "67f25194-174c-4b52-855a-3a53fc1f978a",
+      "proof_status": "PENDING",
+      "solution_sha256": "2c6933a5d853b5aeecca7839d8b923fa3a17b75a0f057786129f21b4ac2e532f"
+    },
+    "localized_domain4_21_03": {
+      "theorem_name": "HlawkaSchatten.DiagonalCutoff21.localized_domain4_21_03",
+      "publish_job_id": "d0aaf9d4-94e1-44ef-b528-6a36c1b5efb9",
+      "publish_status": "PUBLISHED",
+      "theorem_id": "6061f663-dcf5-43a2-9080-46c4d4607908",
+      "submission_id": "77667264-d9bc-44a0-8f3a-448de27f342f",
+      "proof_status": "ACCEPTED",
+      "solution_sha256": "8a8feee481093995e88c84fc1c141d10848fc3b3421cc5d7a1e4eba00022d212",
+      "theorem_status": "Proved",
+      "open_leaf_count": 0,
+      "checked_at": "2026-10-17T13:49:07.882977+00:00"
+    },
+    "localized_domain4_21_04": {
+      "theorem_name": "HlawkaSchatten.DiagonalCutoff21.localized_domain4_21_04",
+      "publish_job_id": "fed1a720-81a6-41bb-95fa-d9110d9d2648",
+      "publish_status": "PUBLISHED",
+      "theorem_id": "3837e35f-b98d-4b55-9013-5e6173548031",
+      "submission_id": "9dca00a5-7ade-4d72-b796-08645ebc5f09",
+      "proof_status": "PENDING",
+      "solution_sha256": "521a19c1e4f778c0d280fbc4d97c87aabbf6a2091a58e6a88ff74175f12e7fcb"
+    },
+    "localized_domain4_21_05": {
+      "theorem_name": "HlawkaSchatten.DiagonalCutoff21.localized_domain4_21_05",
+      "publish_job_id": "345fb94f-9b97-461f-a08d-2ad82e163adb",
+      "publish_status": "PUBLISHED",
+      "theorem_id": "69834d94-098f-4e90-877b-fd5b20c5bdb0",
+      "submission_id": "b2a47797-c7d9-4158-a1e5-7e7633b9264e",
+      "proof_status": "PENDING",
+      "solution_sha256": "2baf525f86e2b20cef668348d3f56070b2728756671a25e30f7bbfc80943bf4c"
+    },
+    "localized_domain4_21_06": {
+      "theorem_name": "HlawkaSchatten.DiagonalCutoff21.localized_domain4_21_06",
+      "publish_job_id": "7f68f088-7109-48c8-ae16-08e35db47c7a",
+      "publish_status": "PUBLISHED",
+      "theorem_id": "4aadab34-b3fb-4df9-b411-da18eb7bec47",
+      "submission_id": "249434c5-16b3-4afd-b038-04c60be9df9f",
+      "proof_status": "PENDING",
+      "solution_sha256": "2aec48eab1dc3c8b26cfde55c17445fb97a7a00a4a209818787c9763d3de6313"
+    },
+    "localized_domain4_21_07": {
+      "theorem_name": "HlawkaSchatten.DiagonalCutoff21.localized_domain4_21_07",
+      "publish_job_id": "5ebbf55c-ddc2-42d4-9e1c-525436de3530",
+      "publish_status": "PUBLISHED",
+      "theorem_id": "e6214a7a-b4f1-4ec1-88e2-1d003b4b9f1c",
+      "submission_id": "bd778a39-f7bc-43e7-ad43-fcc4a67c62cc",
+      "proof_status": "PENDING",
+      "solution_sha256": "456f3d9cc8b5b76e0958837f6ce255fa73ab97e6a50a7670c51b11e711f9f1a5"
+    },
+    "localized_domain4_21_08": {
+      "theorem_name": "HlawkaSchatten.DiagonalCutoff21.localized_domain4_21_08",
+      "publish_job_id": "2e8bca63-6082-4ce9-98de-5f9d6bf7c2bc",
+      "publish_status": "PUBLISHED",
+      "theorem_id": "fd806c8d-0c1b-4472-ba60-bd7b7fd32117"
+    },
+    "localized_domain4_21_09": {
+      "theorem_name": "HlawkaSchatten.DiagonalCutoff21.localized_domain4_21_09",
+      "publish_job_id": "8c7dedaa-1d53-4633-b38e-834a46fae6be",
+      "publish_status": "PUBLISHED",
+      "theorem_id": "a881413a-05b2-4019-9faa-731c886d1e7a"
+    },
+    "localized_domain4_21_10": {
+      "theorem_name": "HlawkaSchatten.DiagonalCutoff21.localized_domain4_21_10",
+      "publish_job_id": "42cec87b-a9ff-494c-91f8-d0a7814eecea",
+      "publish_status": "PUBLISHED",
+      "theorem_id": "4e3b4729-295b-40b4-832f-3b81e3d758d3"
+    },
+    "localized_domain4_21_11": {
+      "theorem_name": "HlawkaSchatten.DiagonalCutoff21.localized_domain4_21_11",
+      "publish_job_id": "d80935ad-390e-4ae0-a2fc-d6d9d8636ded",
+      "publish_status": "PUBLISHED",
+      "theorem_id": "51b65901-9fcf-4209-85fb-62390f0fe7aa"
+    },
+    "localized_domain4_21_12": {
+      "theorem_name": "HlawkaSchatten.DiagonalCutoff21.localized_domain4_21_12",
+      "publish_job_id": "208230e2-32bb-45a3-b6d7-f8a88e28ab69",
+      "publish_status": "PUBLISHED",
+      "theorem_id": "8a456d91-56c2-4c30-8494-20b77a59c13c"
+    },
+    "localized_domain4_21_13": {
+      "theorem_name": "HlawkaSchatten.DiagonalCutoff21.localized_domain4_21_13",
+      "publish_job_id": "acf25609-5597-463b-be11-741959e7b672",
+      "publish_status": "PUBLISHED",
+      "theorem_id": "ff4079d3-f742-4a9a-90f7-a8cc69f5be14"
+    },
+    "localized_domain4_21_14": {
+      "theorem_name": "HlawkaSchatten.DiagonalCutoff21.localized_domain4_21_14",
+      "publish_job_id": "bab1233a-45e2-4e6b-999e-7324665d3f82",
+      "publish_status": "PUBLISHED",
+      "theorem_id": "820f7e38-cb97-4544-bfdc-977e6fc9bc09"
+    },
+    "localized_domain4_21_15": {
+      "theorem_name": "HlawkaSchatten.DiagonalCutoff21.localized_domain4_21_15",
+      "publish_job_id": "cc8825d3-e960-40e1-910b-5d8d873bce9f",
+      "publish_status": "PUBLISHED",
+      "theorem_id": "92e10367-f4cd-4da7-af20-c675ff1983c9"
+    },
+    "localized_domain4_21_16": {
+      "theorem_name": "HlawkaSchatten.DiagonalCutoff21.localized_domain4_21_16",
+      "publish_job_id": "f46d7a29-d232-4ea9-9623-9e7a11e8a284",
+      "publish_status": "PUBLISHED",
+      "theorem_id": "f1593316-0aae-41dd-ab96-1f2de8aff574"
+    },
+    "localized_domain4_21_17": {
+      "theorem_name": "HlawkaSchatten.DiagonalCutoff21.localized_domain4_21_17",
+      "publish_job_id": "02c19d8e-0a79-4d7e-9831-4b8dc821d130",
+      "publish_status": "PUBLISHED",
+      "theorem_id": "9913304c-02a0-405d-9c17-208b1bd19ccd"
+    },
+    "localized_domain4_21_18": {
+      "theorem_name": "HlawkaSchatten.DiagonalCutoff21.localized_domain4_21_18",
+      "publish_job_id": "9a1906db-e5df-4a0c-a5ab-6a4563b473e7",
+      "publish_status": "PUBLISHED",
+      "theorem_id": "ee086a16-30de-4b5c-90b0-4156e096d3b8"
+    },
+    "localized_domain4_21_19": {
+      "theorem_name": "HlawkaSchatten.DiagonalCutoff21.localized_domain4_21_19",
+      "publish_job_id": "0bb92d36-58c1-461d-8885-e7cd19499bf4",
+      "publish_status": "PUBLISHED",
+      "theorem_id": "b33460e7-0ad3-4bcd-bac3-35dbfa20902e"
+    },
+    "localized_domain4_21_20": {
+      "theorem_name": "HlawkaSchatten.DiagonalCutoff21.localized_domain4_21_20",
+      "publish_job_id": "c13dbb5a-897d-479d-86e1-37396bc9d322",
+      "publish_status": "PUBLISHED",
+      "theorem_id": "341474e2-91ce-4a07-ac39-507900425c2e"
+    },
+    "localized_domain4_21_21": {
+      "theorem_name": "HlawkaSchatten.DiagonalCutoff21.localized_domain4_21_21",
+      "publish_job_id": "c20ea10c-fc4d-4fb3-87e1-6afd97fa3e55",
+      "publish_status": "PUBLISHED",
+      "theorem_id": "ed779c8c-76e4-4181-a5dd-2ab71e4f3995"
+    },
+    "localized_domain4_21_22": {
+      "theorem_name": "HlawkaSchatten.DiagonalCutoff21.localized_domain4_21_22",
+      "publish_job_id": "99c09438-01cd-4009-a298-66ebd871cab7",
+      "publish_status": "PUBLISHED",
+      "theorem_id": "81238fc6-9bd7-46b3-ba28-6f143e8f0dc5"
+    },
+    "localized_domain4_21_23": {
+      "theorem_name": "HlawkaSchatten.DiagonalCutoff21.localized_domain4_21_23",
+      "publish_job_id": "4dc57810-1ae5-4989-b99d-d41e4f403a86",
+      "publish_status": "PUBLISHED",
+      "theorem_id": "7ec7afb6-e431-4104-924a-a01a422d82b7"
+    },
+    "localized_domain4_21_24": {
+      "theorem_name": "HlawkaSchatten.DiagonalCutoff21.localized_domain4_21_24",
+      "publish_job_id": "75399070-415e-4580-8034-5131c452d169",
+      "publish_status": "PENDING"
+    },
+    "localized_domain4_21_25": {
+      "theorem_name": "HlawkaSchatten.DiagonalCutoff21.localized_domain4_21_25",
+      "publish_job_id": "034d3354-b296-4616-be78-b1bf10e69587",
+      "publish_status": "PENDING"
+    }
+  }
+}

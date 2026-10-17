@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "toolchain": "leanprover/lean4:v4.33.1",
+  "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474",
+  "proofs": [
+    {
+      "key": "conditional_root_assembly",
+      "status": "PASS",
+      "solution_file": "formalization/platform/Check_root_assembly.lean",
+      "sha256": "d9e94b99b46438578439e3fd9f4bdd16a463e761dfe7cef2aeb960e575723f5f",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 22.796
+    }
+  ],
+  "manifest": "formalization/platform/root-assembly-check.json",
+  "scope": "1 proof files from this manifest only. The cutoff21 root remains unproved."
+}

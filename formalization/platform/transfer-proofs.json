@@ -1,0 +1,19 @@
+[
+  {
+    "key": "complex_least_of_real_three",
+    "theorem_name": "HlawkaSchatten.DiagonalCutoff21.complex_least_of_real_three",
+    "theorem_title": "A real three-coordinate bound gives the uniform least complex constant",
+    "formal_statement": "theorem HlawkaSchatten.DiagonalCutoff21.complex_least_of_real_three :\n    ∀ p : ℝ, 1 < p →\n      HasHlawkaConstant (lpNorm p : (Fin 3 → ℝ) → ℝ) (cyclicConstant p) →\n      IsLeast {C : ℝ | ∀ n : ℕ,\n        HasHlawkaConstant (lpNorm p : (Fin n → ℂ) → ℝ) C} (cyclicConstant p) := by sorry",
+    "preamble": "import Theorems.Thm_HlawkaSchatten_DiagonalConstruction_real_bound_of_fin_three\nimport Mathlib.Analysis.Normed.Lp.PiLp\nimport Mathlib.Analysis.SpecialFunctions.Pow.Continuity\nimport Definitions.Def_HlawkaSchatten_GapComparison\nimport Definitions.Def_HlawkaSchatten_DiagonalConstruction_Basic\nimport Definitions.Def_HlawkaSchatten_DiagonalConstruction_Cyclic\nimport Mathlib.Topology.Order.Compact\nimport Mathlib.Data.Fin.VecNotation\nimport Mathlib.Analysis.Complex.Circle\nimport Mathlib.Analysis.Convex.Integral\nimport Mathlib.MeasureTheory.Measure.Haar.Basic\nimport Mathlib.MeasureTheory.Group.Integral\nimport Mathlib.MeasureTheory.Integral.Bochner.ContinuousLinearMap\nopen HlawkaSchatten HlawkaSchatten.DiagonalConstruction\n",
+    "natural_language_statement": "For every real p>1, if the unchanged cyclic constant satisfies the original Hlawka inequality for all real three-coordinate triples, it is the least constant valid in every finite complex coordinate dimension, including dimension zero. Finite nonnegative mixtures of real circle projections preserve all seven norm powers up to a common positive circle moment; continuity passes the bound to the circle integral. The existing three-coordinate cyclic obstruction gives leastness. No equal-norm or nonzero-vector premise is used.",
+    "source": "Ezzeri Esa, Hlawka-Schatten construction (Apache-2.0), and @bwdaugherty, accepted cutoff32 submission 2d248eb1-4938-4dee-8392-df24d2c70f2f, https://prove2.me/theorems/6e8430ce-7c32-4b82-9a1b-d7fcd67fdeb3 . Generic transfer isolated and rebuilt for the cutoff21 proof by Yuxuan Xu. Original notices retained.",
+    "tags": [
+      "hlawka-schatten",
+      "complex-analysis",
+      "sharp-constant"
+    ],
+    "solution_file": "formalization/platform/Sol_complex_least_of_real_three.lean",
+    "solution_sha256": "7df75f5c848e757e54aa0720357a5ff735e5376e59f08577c6849a53e487f0cb",
+    "explanation": "The sole theorem import is the already Proved arbitrary-dimensional real reduction real_bound_of_fin_three. All other needed norm laws, positivity and compactness of the cyclic supremum, cyclic lower obstruction, Haar-circle projection identities, finite projection norm formula, convex-hull/closure argument, and the positive common moment cancellation are fully proved in the file under a separate helper namespace. The conclusion quantifies over every natural dimension, including zero, and proves IsLeast, not only admissibility."
+  }
+]

@@ -1,0 +1,41 @@
+{
+  "scope": "Unchanged original cutoff21 root; tracked assembly is incomplete until the theorem is Proved with zero open leaves.",
+  "theorem_id": "db286144-c8c4-4918-9bc9-03fcadedfffd",
+  "submission_id": "ff1e7441-f309-4dbf-818c-d22a272a1abb",
+  "proof_status": "SKETCH_ACCEPTED",
+  "solution_sha256": "bb118ceaf3288330c0835b7a6baca856d58c815db89a27650c64a0cbad4ff458",
+  "local_check_scope": "The exact same assembly body with an explicit cutoff32 tail input. The server file itself is checked by Prove2Me using its accepted tail theorem; the tail is not independently rebuilt locally.",
+  "verified_closed_dependencies": [
+    {
+      "theorem_id": "6e8430ce-7c32-4b82-9a1b-d7fcd67fdeb3",
+      "theorem_name": "HlawkaSchatten.DiagonalConstruction.campaign_cutoff32",
+      "status": "Proved",
+      "open_leaf_count": 0
+    },
+    {
+      "theorem_id": "6f78c968-f438-4a77-b0d4-e7e743d0acae",
+      "theorem_name": "HlawkaSchatten.DiagonalCutoff21.complex_least_of_real_three",
+      "status": "Proved",
+      "open_leaf_count": 0
+    }
+  ],
+  "submitted_at": "2026-10-17T13:42:06.297085+00:00",
+  "theorem_status": "Open",
+  "statement_matches_original": true,
+  "open_leaf_count": 2,
+  "open_leaves": [
+    {
+      "theorem_id": "6c62afca-c977-42ef-8cf7-7b8d39ebe08a",
+      "theorem_name": "HlawkaSchatten.DiagonalCutoff21.real_three_window21",
+      "status": "Open",
+      "closability": 0
+    },
+    {
+      "theorem_id": "a1a7a36f-f8b9-4061-84a2-33080e185b41",
+      "theorem_name": "HlawkaSchatten.DiagonalCutoff21.real_three_window26",
+      "status": "Open",
+      "closability": 0
+    }
+  ],
+  "checked_at": "2026-10-17T13:45:07.889066+00:00"
+}

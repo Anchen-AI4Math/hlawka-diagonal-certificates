@@ -1,0 +1,42 @@
+{
+  "env": "0df444a360eaa60ab8c11dca51a86af692955474",
+  "scope": "Sixteen localized nonnegativity chunks; unrestricted real-three windows and cutoff21 root are separate original targets.",
+  "theorems": {
+    "certified_piece21_00": {
+      "theorem_name": "HlawkaSchatten.DiagonalCutoff21.certified_piece21_00",
+      "publish_job_id": "6f56cd25-ed21-43d0-8c28-ef6d6a81c0e3",
+      "publish_status": "PUBLISHED",
+      "theorem_id": "d98f0dbe-c2cf-4f17-a110-05d1409fcbd7",
+      "submission_id": "c22dd28c-ffeb-4827-a02e-ae53375cb8ab",
+      "proof_status": "ERROR",
+      "solution_sha256": "0211bdce41b5c41cf4ac9c75c4173159242d1c077acf26991abeb4b06b7ee2cf",
+      "proof_error": "Verification timed out after 300s. Try breaking the statement or proof into smaller lemmas or definitions and checking each piece separately before retrying. If imports are heavy, prefer the specific Mathlib modules you need over `import Mathlib`."
+    },
+    "certified_piece21_01": {
+      "theorem_name": "HlawkaSchatten.DiagonalCutoff21.certified_piece21_01",
+      "publish_job_id": "b32d5586-e4ca-41bc-936d-eab6b78be059",
+      "publish_status": "PUBLISHED",
+      "theorem_id": "977d1c8c-a399-47f5-9992-b4a087b22173",
+      "submission_id": "92fba215-4c13-46d5-bd21-f55bb460a4ec",
+      "proof_status": "ERROR",
+      "solution_sha256": "5dacee1565dcb6041b332d924aa1ddd5697dde59d7dc213af9cabc5f4f4a0d76",
+      "proof_error": "Verification timed out after 300s. Try breaking the statement or proof into smaller lemmas or definitions and checking each piece separately before retrying. If imports are heavy, prefer the specific Mathlib modules you need over `import Mathlib`."
+    },
+    "certified_piece21_02": {
+      "theorem_name": "HlawkaSchatten.DiagonalCutoff21.certified_piece21_02",
+      "publish_job_id": "0f10bd2b-3ef2-4765-a4c5-088d8c56b380",
+      "publish_status": "PUBLISHED",
+      "theorem_id": "e246dff9-77c6-428e-a44d-98713a06f0e8",
+      "submission_id": "9ca73e43-5f49-4b91-bf27-12d916a9a3e0",
+      "proof_status": "ERROR",
+      "solution_sha256": "210238a9ae9c13f4f5f49cf84bcc3861ecb146595f6c22dbc568ed7d3374f464",
+      "proof_error": "Verification timed out after 300s. Try breaking the statement or proof into smaller lemmas or definitions and checking each piece separately before retrying. If imports are heavy, prefer the specific Mathlib modules you need over `import Mathlib`."
+    },
+    "certified_piece21_03": {
+      "theorem_name": "HlawkaSchatten.DiagonalCutoff21.certified_piece21_03",
+      "publish_job_id": "e971af5e-76fa-4afa-91a3-c1dbc5163f9d",
+      "publish_status": "PUBLISHED",
+      "theorem_id": "4898f818-71e7-4a6d-88d2-77e9df2cd28e"
+    }
+  }
+}

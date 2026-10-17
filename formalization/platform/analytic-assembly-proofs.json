@@ -1,0 +1,53 @@
+[
+  {
+    "key": "domain_nonneg_group00",
+    "theorem_name": "HlawkaSchatten.DiagonalCutoff21.domain_nonneg_group00",
+    "theorem_title": "Cyclic deficit nonnegative on norm-capped group 0",
+    "formal_statement": "theorem HlawkaSchatten.DiagonalCutoff21.domain_nonneg_group00 :\n    ∀ p : ℝ, (21 : ℝ) ≤ p → p ≤ (377/16 : ℝ) → ∀ X : Fin 3 → Fin 3 → ℝ,\n      (∀ j, -(5559/5000 : ℝ) ≤ X j j ∧ X j j ≤ -(881/2000 : ℝ)) →\n      (∀ j i, j ≠ i → (3779/5000 : ℝ) ≤ X j i ∧ X j i ≤ (11847/10000 : ℝ)) →\n      (∀ j, lpNorm p (X j) ≤ (1193402307/1000000000 : ℝ)) →\n      lpNorm p (X 0 + X 1 + X 2) ≤ (3033/2500 : ℝ) →\n      (∀ i j k : Fin 3, i ≠ j → i ≠ k → j ≠ k → (1139124440087/716625000000 : ℝ) ≤ X j i + X k i) →\n      (3314799982801/573300000000 : ℝ) ≤ X 0 1 + X 0 2 + X 1 0 + X 1 2 + X 2 0 + X 2 1 →\n      0 ≤ tripleDeficit p (cyclicConstant p) X := by sorry",
+    "preamble": "import Definitions.Def_HlawkaSchatten_GapComparison\nimport Definitions.Def_HlawkaSchatten_DiagonalConstruction_Basic\nimport Definitions.Def_HlawkaSchatten_DiagonalConstruction_NormHessian\nimport Definitions.Def_HlawkaSchatten_DiagonalConstruction_BoxGeometry\nimport Definitions.Def_HlawkaSchatten_DiagonalConstruction_BoxCoordinates\nimport Definitions.Def_HlawkaSchatten_DiagonalConstruction_BoxConvexity\nimport Definitions.Def_HlawkaSchatten_DiagonalConstruction_BoxHessian\nimport Definitions.Def_HlawkaSchatten_DiagonalConstruction_Cyclic\nimport Definitions.Def_HlawkaSchatten_DiagonalConstruction_Normalization\nopen HlawkaSchatten HlawkaSchatten.DiagonalConstruction\n",
+    "natural_language_statement": "For every real p in [21,377/16], a real three-coordinate triple satisfying the displayed diagonal and off-diagonal coordinate intervals, actual singleton norm caps, actual total norm cap, linear complementary-pair coordinate floors and linear off-diagonal-sum floor has nonnegative original Hlawka deficit for the unchanged cyclic constant. No equality of singleton norms is assumed. Pointwise seven-norm Hessian estimates imply convexity on this invariant domain, and permutation averaging reduces the assertion to the defining cyclic supremum.",
+    "source": "Yuxuan Xu, A computer-assisted sharp diagonal Hlawka inequality for real exponents p >= 21, Sections 5-7, https://github.com/Anchen-AI4Math/hlawka-diagonal-certificates/blob/main/paper/main.pdf . Generic norm/averaging framework by Ezzeri Esa, Apache-2.0; original notices retained.",
+    "tags": [
+      "hlawka-schatten",
+      "convexity",
+      "real-analysis"
+    ],
+    "solution_file": "formalization/platform/Sol_domain_nonneg_group00.lean",
+    "solution_sha256": "2e6032bbce39992f0114698b41e007114af3188358204f995f7875ec2cb41d60",
+    "explanation": "All generic norm-Hessian, coefficient, radial-spread, six-pair matrix, domain convexity, line derivative and permutation averaging proofs are embedded. Exact rational grouped geometry and real-exponent numeric margins prove Hessian nonnegativity. The two already Proved original scalar milestones fix the actual cyclicConstant coefficient. This extracts the shared analytic theorem, so finite contraction certificates can import it without recompiling the full analytic argument."
+  },
+  {
+    "key": "domain_nonneg_group01",
+    "theorem_name": "HlawkaSchatten.DiagonalCutoff21.domain_nonneg_group01",
+    "theorem_title": "Cyclic deficit nonnegative on norm-capped group 1",
+    "formal_statement": "theorem HlawkaSchatten.DiagonalCutoff21.domain_nonneg_group01 :\n    ∀ p : ℝ, (377/16 : ℝ) ≤ p → p ≤ (32 : ℝ) → ∀ X : Fin 3 → Fin 3 → ℝ,\n      (∀ j, -(2239/2000 : ℝ) ≤ X j j ∧ X j j ≤ -(4577/10000 : ℝ)) →\n      (∀ j i, j ≠ i → (3863/5000 : ℝ) ≤ X j i ∧ X j i ≤ (1483/1250 : ℝ)) →\n      (∀ j, lpNorm p (X j) ≤ (149298789/125000000 : ℝ)) →\n      lpNorm p (X 0 + X 1 + X 2) ≤ (3033/2500 : ℝ) →\n      (∀ i j k : Fin 3, i ≠ j → i ≠ k → j ≠ k → (82967765642843/51460500000000 : ℝ) ≤ X j i + X k i) →\n      (59752599691237/10292100000000 : ℝ) ≤ X 0 1 + X 0 2 + X 1 0 + X 1 2 + X 2 0 + X 2 1 →\n      0 ≤ tripleDeficit p (cyclicConstant p) X := by sorry",
+    "preamble": "import Definitions.Def_HlawkaSchatten_GapComparison\nimport Definitions.Def_HlawkaSchatten_DiagonalConstruction_Basic\nimport Definitions.Def_HlawkaSchatten_DiagonalConstruction_NormHessian\nimport Definitions.Def_HlawkaSchatten_DiagonalConstruction_BoxGeometry\nimport Definitions.Def_HlawkaSchatten_DiagonalConstruction_BoxCoordinates\nimport Definitions.Def_HlawkaSchatten_DiagonalConstruction_BoxConvexity\nimport Definitions.Def_HlawkaSchatten_DiagonalConstruction_BoxHessian\nimport Definitions.Def_HlawkaSchatten_DiagonalConstruction_Cyclic\nimport Definitions.Def_HlawkaSchatten_DiagonalConstruction_Normalization\nopen HlawkaSchatten HlawkaSchatten.DiagonalConstruction\n",
+    "natural_language_statement": "For every real p in [377/16,32], a real three-coordinate triple satisfying the displayed diagonal and off-diagonal coordinate intervals, actual singleton norm caps, actual total norm cap, linear complementary-pair coordinate floors and linear off-diagonal-sum floor has nonnegative original Hlawka deficit for the unchanged cyclic constant. No equality of singleton norms is assumed. Pointwise seven-norm Hessian estimates imply convexity on this invariant domain, and permutation averaging reduces the assertion to the defining cyclic supremum.",
+    "source": "Yuxuan Xu, A computer-assisted sharp diagonal Hlawka inequality for real exponents p >= 21, Sections 5-7, https://github.com/Anchen-AI4Math/hlawka-diagonal-certificates/blob/main/paper/main.pdf . Generic norm/averaging framework by Ezzeri Esa, Apache-2.0; original notices retained.",
+    "tags": [
+      "hlawka-schatten",
+      "convexity",
+      "real-analysis"
+    ],
+    "solution_file": "formalization/platform/Sol_domain_nonneg_group01.lean",
+    "solution_sha256": "cd817119328fd5b8ca3db34668f3d8c88f983a7b5c0cde8ac62611ac43a9fc13",
+    "explanation": "All generic norm-Hessian, coefficient, radial-spread, six-pair matrix, domain convexity, line derivative and permutation averaging proofs are embedded. Exact rational grouped geometry and real-exponent numeric margins prove Hessian nonnegativity. The two already Proved original scalar milestones fix the actual cyclicConstant coefficient. This extracts the shared analytic theorem, so finite contraction certificates can import it without recompiling the full analytic argument."
+  },
+  {
+    "key": "complex_least_of_real_three",
+    "theorem_name": "HlawkaSchatten.DiagonalCutoff21.complex_least_of_real_three",
+    "theorem_title": "A real three-coordinate bound gives the uniform least complex constant",
+    "formal_statement": "theorem HlawkaSchatten.DiagonalCutoff21.complex_least_of_real_three :\n    ∀ p : ℝ, 1 < p →\n      HasHlawkaConstant (lpNorm p : (Fin 3 → ℝ) → ℝ) (cyclicConstant p) →\n      IsLeast {C : ℝ | ∀ n : ℕ,\n        HasHlawkaConstant (lpNorm p : (Fin n → ℂ) → ℝ) C} (cyclicConstant p) := by sorry",
+    "preamble": "import Theorems.Thm_HlawkaSchatten_DiagonalConstruction_real_bound_of_fin_three\nimport Mathlib.Analysis.Normed.Lp.PiLp\nimport Mathlib.Analysis.SpecialFunctions.Pow.Continuity\nimport Definitions.Def_HlawkaSchatten_GapComparison\nimport Definitions.Def_HlawkaSchatten_DiagonalConstruction_Basic\nimport Definitions.Def_HlawkaSchatten_DiagonalConstruction_Cyclic\nimport Mathlib.Topology.Order.Compact\nimport Mathlib.Data.Fin.VecNotation\nimport Mathlib.Analysis.Complex.Circle\nimport Mathlib.Analysis.Convex.Integral\nimport Mathlib.MeasureTheory.Measure.Haar.Basic\nimport Mathlib.MeasureTheory.Group.Integral\nimport Mathlib.MeasureTheory.Integral.Bochner.ContinuousLinearMap\nopen HlawkaSchatten HlawkaSchatten.DiagonalConstruction\n",
+    "natural_language_statement": "For every real p>1, if the unchanged cyclic constant satisfies the original Hlawka inequality for all real three-coordinate triples, it is the least constant valid in every finite complex coordinate dimension, including dimension zero. Finite nonnegative mixtures of real circle projections preserve all seven norm powers up to a common positive circle moment; continuity passes the bound to the circle integral. The existing three-coordinate cyclic obstruction gives leastness. No equal-norm or nonzero-vector premise is used.",
+    "source": "Ezzeri Esa, Hlawka-Schatten construction (Apache-2.0), and @bwdaugherty, accepted cutoff32 submission 2d248eb1-4938-4dee-8392-df24d2c70f2f, https://prove2.me/theorems/6e8430ce-7c32-4b82-9a1b-d7fcd67fdeb3 . Generic transfer isolated and rebuilt for the cutoff21 proof by Yuxuan Xu. Original notices retained.",
+    "tags": [
+      "hlawka-schatten",
+      "complex-analysis",
+      "sharp-constant"
+    ],
+    "solution_file": "formalization/platform/Sol_complex_least_of_real_three.lean",
+    "solution_sha256": "7df75f5c848e757e54aa0720357a5ff735e5376e59f08577c6849a53e487f0cb",
+    "explanation": "The sole theorem import is the already Proved arbitrary-dimensional real reduction real_bound_of_fin_three. All other needed norm laws, positivity and compactness of the cyclic supremum, cyclic lower obstruction, Haar-circle projection identities, finite projection norm formula, convex-hull/closure argument, and the positive common moment cancellation are fully proved in the file under a separate helper namespace. The conclusion quantifies over every natural dimension, including zero, and proves IsLeast, not only admissibility."
+  }
+]

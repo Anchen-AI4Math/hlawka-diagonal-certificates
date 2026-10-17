@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "toolchain": "leanprover/lean4:v4.33.1",
+  "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474",
+  "proofs": [
+    {
+      "key": "certified_piece21_00",
+      "status": "PASS",
+      "solution_file": "formalization/platform/Sol_certified_piece21_00.lean",
+      "sha256": "0211bdce41b5c41cf4ac9c75c4173159242d1c077acf26991abeb4b06b7ee2cf",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 51.518
+    }
+  ],
+  "manifest": ".test-tmp/prove2me/real-piece-test.json",
+  "scope": "1 proof files from this manifest only. The cutoff21 root remains unproved."
+}

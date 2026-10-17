@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-10-17T09:45:28.021539+00:00",
+  "checked_at": "2026-10-17T13:13:49.929163+00:00",
   "source": "Authenticated server read-back; owner-only proposal identifier omitted.",
   "status": "In review",
   "submitted_at": "2026-10-17T08:15:12.549+00:00",
@@ -9,5 +9,5 @@
   "campaign_url": "https://prove2.me/campaigns/sharp-diagonal-hlawka-constant",
   "live_mission_created": false,
   "goal_url": "https://prove2.me/theorems/db286144-c8c4-4918-9bc9-03fcadedfffd",
-  "proof_status": "Open; auxiliary proofs do not establish the root theorem."
+  "proof_status": "Original full goal is tracked separately in results/prove2me-goals.json."
 }

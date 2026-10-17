@@ -1,0 +1,363 @@
+{
+  "status": "PASS",
+  "toolchain": "leanprover/lean4:v4.33.1",
+  "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474",
+  "modules": [
+    "Hlawka21.GroupedNonneg.Group00",
+    "Hlawka21.GroupedNonneg.Group01"
+  ],
+  "sources": {
+    "formalization/Hlawka21/GroupedNonneg/Group00.lean": "6f7a600e9d362a3fa6c26caf9f58d5a5a70b973b1097967d66e3afefd9d53507",
+    "formalization/Hlawka21/NormDomainNonneg.lean": "b37be26eaf939a7cdbbe63c65ea427f0f0823c3814c054b0b85bd0585b00632f",
+    "formalization/Hlawka21/NormDomainOrbit.lean": "13b0315c933e3211385ee8b9d114701d287950c28500731d13407aad51c16d4e",
+    "formalization/Hlawka21/NormDomainConvexity.lean": "83e18f87611c3526746eb2cb7fe90985c7baec6b5b0f9ebac130ffa892688d7f",
+    "formalization/Hlawka21/DomainConvexity.lean": "ece8e049d0d2614850b3214229d33b16cb04e069b3c2abadf778c342aff8ebc5",
+    "formalization/Hlawka21/Foundation/NormHessian.lean": "b34e022f0233c802e88673d31a20ef4acffefaaf5e3804f46642011b126ac196",
+    "formalization/Hlawka21/Foundation/Basic.lean": "ab8788370b79d11db79cd982b3d2286e61fa0109c08a530a87c2a18c4ae6df1f",
+    "formalization/Definitions/Def_HlawkaSchatten_GapComparison.lean": "fea0f637de5e406b698c4ca86fd7f70a70fcedca43a7a31688b80ca336123ee5",
+    "formalization/Definitions/Def_HlawkaSchatten_DiagonalConstruction_Basic.lean": "3dc980faa7f2f29df60b4c83b746ebdcd942e61e8e2c0cba97d987032a740e2a",
+    "formalization/Definitions/Def_HlawkaSchatten_DiagonalConstruction_NormHessian.lean": "7bf82b829c04bd0a0857dd8d4911f91736bde90affee88e2ed8e04c91839221b",
+    "formalization/Hlawka21/DomainGeometry.lean": "13395013b0cd75623be7a67ee3388c0e895f9350b47efa1a4b22ce59c29d9bd3",
+    "formalization/Hlawka21/Domain.lean": "66bac03f70be53ab6d11efbf4951fcf35c9e12f09b24aa0fa3768d0804b334a5",
+    "formalization/Hlawka21/LinearFloors.lean": "175bbfeb1c3269032c922fa610fb6e20a1d1c65a592b33d11e78e67ed0326da8",
+    "formalization/Hlawka21/RefinedTail.lean": "ce613e9d4feeacca48574761d76b754537f5611d52b2ec3a0b5972bd6e7ff87e",
+    "formalization/Hlawka21/NormBasic.lean": "0549744aa0bf83833af9d72bf988e728a15b0045645740a3f29090db1e717bd2",
+    "formalization/Hlawka21/ContractionFacts.lean": "b1856581f82527119e38fa51ba142b153152ebaa0665fbf862b75eb69b57ed49",
+    "formalization/Hlawka21/NormGeometry.lean": "7f3fac7bacfb06497c961f99284d56b38daded32c38658643f0ef5f34fe06d14",
+    "formalization/Hlawka21/ContractionRounds.lean": "266e19189d45aed08a7baa53b31fefe966c12d2c85b6d17f6cea4e1ff47c7d5c",
+    "formalization/Hlawka21/ContractionCore.lean": "ae4a68fdb14bd5c9229084a55fe301b597a6df0cc43e472385d99a6c637a3882",
+    "formalization/Hlawka21/Budget.lean": "641b4dd42c1794541c56b52c5662b4d633e8b40f5b82ff881b5e1fb0b81c2c43",
+    "formalization/Hlawka21/Tail.lean": "f304e8a2d19f9176acaf0cf0716f76cce8e4725acbc7d165de05d98e84c3d06b",
+    "formalization/Hlawka21/PairGeometry.lean": "9bc23752fd042634316322f476adb99ed647dff6f23d61e37240dec9f5d08e70",
+    "formalization/Hlawka21/RadialSpread.lean": "b038549a4e4131059559b437162df5f0eaaaa482942f22252ac75ba6363ab3b6",
+    "formalization/Hlawka21/SpreadGeometry.lean": "f80807f4939433233f82d86178a5863ea92db0d06eea6af3dc29fef7dd678c16",
+    "formalization/Hlawka21/NormCurvature.lean": "c967813f4610dc2abe1ab283798999a544f465e946aab8681ce4a453d70e799f",
+    "formalization/Definitions/Def_HlawkaSchatten_DiagonalConstruction_BoxGeometry.lean": "095b107a69cb56787b1ecf9a01f66f0a7701f7dfbdcfc4defdfcfb8ed596d09c",
+    "formalization/Definitions/Def_HlawkaSchatten_DiagonalConstruction_Localization.lean": "9ea3c29b74532995c08347259a8fa91c4a7d4f23b11f6250bb51793ace8eb6d5",
+    "formalization/Definitions/Def_HlawkaSchatten_DiagonalConstruction_Normalization.lean": "1968ca67a860b9871d1366e80176f07784216fa7227552fd76261d6b46350c89",
+    "formalization/Definitions/Def_HlawkaSchatten_DiagonalConstruction_BoxCoordinates.lean": "d30f0ed29ff767728123fec4c689e37f2be037e6657c558eb2f350c2f4ee0e9f",
+    "formalization/Hlawka21/PairResidual.lean": "fac4d67677bce4d208584f518132485e495ee7ff130523007fdab4defe4942d9",
+    "formalization/Hlawka21/Residual.lean": "267b18efeb872dace33f4c1ee28c31e11cbc0ac26db0be1be7289c5382854e7c",
+    "formalization/Definitions/Def_HlawkaSchatten_DiagonalConstruction_BoxConvexity.lean": "eeaafa35977d5e777c82fd41cb707cbf07fddf3f5ed7f4f31a37173747086fad",
+    "formalization/Definitions/Def_HlawkaSchatten_DiagonalConstruction_BoxHessian.lean": "6e6aea7da5b391b1277516f13afb0d9b92db038c0dc261c55945964a75020f3a",
+    "formalization/Hlawka21/Foundation/CyclicWitness.lean": "862b9646e7555fada900c9f53501a0833ce7b8c2c48e90ed7e688f7537b5f27a",
+    "formalization/Hlawka21/Foundation/Cyclic.lean": "0705f08c6a6566b1d17a04c1310feae61c16bf134641bda7d1f8ba66b87136d7",
+    "formalization/Definitions/Def_HlawkaSchatten_DiagonalConstruction_Cyclic.lean": "79594ce39ab401db1d067cbbd8391a09df3868a0354107b077c9d4520937fa88",
+    "formalization/Hlawka21/Foundation/Normalization.lean": "64c1060ad61af473f355ab6a6cb21104298c0d50d9a44b2de68885dfab8434dd",
+    "formalization/Hlawka21/ScalarMilestoneBounds.lean": "bc93a0da60397643b5c9f181aa3e489a20bfe53e375f96c5cb0aacae3e476191",
+    "formalization/Hlawka21/GroupedConvexity/Group00.lean": "1c872613286a785e9490c54ffe79dee72b0ecaa0fa86964a505fe1db5eb43ed4",
+    "formalization/Hlawka21/GroupedCurvature/Group00.lean": "df6b99c2c82d9eda30e6a86da24746078399f3d8671d1709dc0cc3139f01db8f",
+    "formalization/Hlawka21/CurvatureComparison.lean": "16b6ac8e16965ff9e6d19a8cf8cd13cdcb5dee6cc89162ec477c1a60f4395dc5",
+    "formalization/Hlawka21/DeficitCurvature.lean": "1c56dae758646a9b3ecf9452338e45c204293872441d6bd32fce79a64900c62a",
+    "formalization/Hlawka21/PairHessian.lean": "317c2cc5c5a676de06877c3c84374e8e522e0d5fe624c160b8536a502b92a357",
+    "formalization/Hlawka21/GroupedGeometry/Group00.lean": "7c6fbc7602689f811e1ec2eab9dcfb5874c84912615250d34da184251832a63c",
+    "formalization/Hlawka21/GroupedNonneg/Group01.lean": "213d1fbb74743c13afb3454b5e31cd8092417818a4f8705036535348ee129847",
+    "formalization/Hlawka21/GroupedConvexity/Group01.lean": "333f1200a62d5ea25b98c92b69d193f1d53e2822fd6188a637673452f74217af",
+    "formalization/Hlawka21/GroupedCurvature/Group01.lean": "3badeb4879c26ab5b4bccf6526cbbd59b363f40636b39e8856b119ec7642b3d7",
+    "formalization/Hlawka21/GroupedGeometry/Group01.lean": "3ec1b0ee4293306580463eea61e66eea22286f5f6c0ca28d9154155b003dec44"
+  },
+  "axiom_checks": {
+    "HlawkaSchatten.DiagonalCutoff21.final_round": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.residual_budget": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.facts_of": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.half_tail21": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.refined_tail21": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.refined_tail26": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.refined_pair_tail21": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.refined_pair_tail26": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.pair_floor_of_norm_data": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.residual_energy_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.residual_energy_bound_rounded": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.matrix_pair_residual_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.normCappedDomain_convex": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.normHessian_lower_norm_cap": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.normHessian_upper_canceled": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.spread_from_residual_interval": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.young_square": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.coefficient_differences_interval": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.error_pairs_sharp_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.canceled_pairs_sq_estimate": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.norm_domain_pair_bounds": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.norm_domain_pair_ratio": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.convexOn_tripleDeficit_of_hessian": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.normCappedDomain_deficit_convex": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.tripleDeficit_normDomain_orbitAverage_le": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.normDomain_deficit_nonneg_of_convex": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.cyclicConstant_upper21": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.cyclicConstant_lower_endpoint": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.lower21_chunk00": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.lower21_chunk01": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.lower21_chunk02": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.lower21_chunk03": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.lower21_chunk04": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.lower21_chunk05": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.lower21_chunk06": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.lower21_chunk07": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.lower21_chunk08": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.lower21_chunk09": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.envelope_linear21": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.envelope_linear26": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.scalar_window21": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.lower26_chunk00": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.lower26_chunk01": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.lower26_chunk02": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.lower26_chunk03": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.lower26_chunk04": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.lower26_chunk05": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.scalar_window26": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.cyclicConstant_bounds_window": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.pair_hessian_domain_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.deficit_hessian_domain_nonneg": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.curvature_coefficients_from_ratios": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.grouped_curvature_numeric00": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.grouped_deficit_hessian00": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.grouped_deficit_convex00": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.grouped_deficit_nonneg00": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.grouped_curvature_numeric01": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.grouped_deficit_hessian01": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.grouped_deficit_convex01": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.grouped_deficit_nonneg01": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "elapsed_seconds": 5.96,
+  "scope": "Two grouped norm-capped domains have parameter ranges covering [21,32]. The actual cyclicConstant deficit is nonnegative on each domain, using actual scalar-milestone proofs, Hessian bounds, convexity and simultaneous permutation averaging. Placing all localized slabs in these domains, the arbitrary-real-three theorem and the original full cutoff21 goal are not assembled here."
+}

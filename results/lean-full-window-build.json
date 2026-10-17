@@ -1,0 +1,3658 @@
+{
+  "status": "PASS",
+  "toolchain": "leanprover/lean4:v4.33.1",
+  "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474",
+  "modules": [
+    "Hlawka21.FullWindow"
+  ],
+  "sources": {
+    "formalization/Hlawka21/FullWindow.lean": "cf58a1927423c88e04b135d08eba695d00af154130009011e5c740eab4c840dc",
+    "formalization/Hlawka21/RealWindows.lean": "92aff0e1d397c44c53fd0d544b2db313e967ac66298a00a70326d6324ad10e70",
+    "formalization/Hlawka21/CoarseFailure21.lean": "bf1a890209cddbbd45c6630c727448eb5013d5c9c62a3ccaf5463c0a1b45bd01",
+    "formalization/Hlawka21/Orientation.lean": "ad7d45fb4aff7203d66ae0846ff6eabefa6260fa60d7655a7259db2b67968f23",
+    "formalization/Hlawka21/Foundation/Failure.lean": "09a859c5ef4a209e5f3ad405211f6c598c0a389ddb71f6bbceab960303d7972c",
+    "formalization/Hlawka21/Foundation/Normalization.lean": "64c1060ad61af473f355ab6a6cb21104298c0d50d9a44b2de68885dfab8434dd",
+    "formalization/Hlawka21/Foundation/Basic.lean": "ab8788370b79d11db79cd982b3d2286e61fa0109c08a530a87c2a18c4ae6df1f",
+    "formalization/Definitions/Def_HlawkaSchatten_GapComparison.lean": "fea0f637de5e406b698c4ca86fd7f70a70fcedca43a7a31688b80ca336123ee5",
+    "formalization/Definitions/Def_HlawkaSchatten_DiagonalConstruction_Basic.lean": "3dc980faa7f2f29df60b4c83b746ebdcd942e61e8e2c0cba97d987032a740e2a",
+    "formalization/Definitions/Def_HlawkaSchatten_DiagonalConstruction_Normalization.lean": "1968ca67a860b9871d1366e80176f07784216fa7227552fd76261d6b46350c89",
+    "formalization/Hlawka21/Foundation/ScalarEnvelope.lean": "e69949b0ae3730e2fc6ae1a6e4f333ef31b902101f0d1a1fe608bd069a98ed44",
+    "formalization/Hlawka21/Foundation/ScalarBounds.lean": "2243055c28d592420b0b18b999364d4115859736c0092b2e3de4e489343cf954",
+    "formalization/Definitions/Def_HlawkaSchatten_DiagonalConstruction_ScalarBounds.lean": "fb9cd37af5031ea83e63c660082d233501f8288ffd82d48208845ecad67e0a86",
+    "formalization/Hlawka21/Foundation/WeightedConvex.lean": "96777e6bf111c2740487174ffb42dc87e85673d56dd48ab23aa98d812c8e5fbb",
+    "formalization/Hlawka21/Foundation/ScalarConvexity.lean": "a3c11d72cb3f1b4239f337f771ffddf260a770288106f500095afb39428210a0",
+    "formalization/Hlawka21/NormBasic.lean": "0549744aa0bf83833af9d72bf988e728a15b0045645740a3f29090db1e717bd2",
+    "formalization/Definitions/Def_HlawkaSchatten_DiagonalConstruction_Coordinates.lean": "428d8b616a5c484c987bed68d9e73755566e92b8fc3618f5b877d7e4d10e5c8c",
+    "formalization/Definitions/Def_HlawkaSchatten_DiagonalConstruction_Localization.lean": "9ea3c29b74532995c08347259a8fa91c4a7d4f23b11f6250bb51793ace8eb6d5",
+    "formalization/Hlawka21/CoarseConnection21.lean": "e243d8da7e8fcb5dbc3d879ffa3347ad750fd46ee7badea1fa6598d0cc232ac9",
+    "formalization/Hlawka21/Coarse21.lean": "a1efce713ab2d39305ecdf21bdde382ae47612d5211e7eaebb1d0054411a3148",
+    "formalization/Hlawka21/ContractionFacts.lean": "b1856581f82527119e38fa51ba142b153152ebaa0665fbf862b75eb69b57ed49",
+    "formalization/Hlawka21/NormGeometry.lean": "7f3fac7bacfb06497c961f99284d56b38daded32c38658643f0ef5f34fe06d14",
+    "formalization/Hlawka21/ContractionRounds.lean": "266e19189d45aed08a7baa53b31fefe966c12d2c85b6d17f6cea4e1ff47c7d5c",
+    "formalization/Hlawka21/ContractionCore.lean": "ae4a68fdb14bd5c9229084a55fe301b597a6df0cc43e472385d99a6c637a3882",
+    "formalization/Hlawka21/Budget.lean": "641b4dd42c1794541c56b52c5662b4d633e8b40f5b82ff881b5e1fb0b81c2c43",
+    "formalization/Hlawka21/Tail.lean": "f304e8a2d19f9176acaf0cf0716f76cce8e4725acbc7d165de05d98e84c3d06b",
+    "formalization/Definitions/Def_HlawkaSchatten_DiagonalConstruction_Cyclic.lean": "79594ce39ab401db1d067cbbd8391a09df3868a0354107b077c9d4520937fa88",
+    "formalization/Hlawka21/CoarseFailure26.lean": "af700dc0bc3138452a749dd105584997c152f750aa16656111c05b228108248f",
+    "formalization/Hlawka21/CoarseConnection26.lean": "173ec0be7378345988017b85f17ed9f9a1caee08bbe09fe53799c6d9febc0d2f",
+    "formalization/Hlawka21/Coarse26.lean": "7e275674d32125e8d6b23544152d852dcc70713bdc45fdf93fb3f613ec7ffa4c",
+    "formalization/Hlawka21/Real21/Chunk00.lean": "e9b34c9cae7952d5c360fcff492d4887f587f207e9676d024d8398a2c845acc0",
+    "formalization/Hlawka21/NormDomainInclusion.lean": "56241155a598a8f8d5f3fa04a764ff0a8041c10f692c2696a817f0ae8d4ebe26",
+    "formalization/Hlawka21/Domain.lean": "66bac03f70be53ab6d11efbf4951fcf35c9e12f09b24aa0fa3768d0804b334a5",
+    "formalization/Hlawka21/LinearFloors.lean": "175bbfeb1c3269032c922fa610fb6e20a1d1c65a592b33d11e78e67ed0326da8",
+    "formalization/Hlawka21/RefinedTail.lean": "ce613e9d4feeacca48574761d76b754537f5611d52b2ec3a0b5972bd6e7ff87e",
+    "formalization/Hlawka21/GroupedNonneg/Group00.lean": "6f7a600e9d362a3fa6c26caf9f58d5a5a70b973b1097967d66e3afefd9d53507",
+    "formalization/Hlawka21/NormDomainNonneg.lean": "b37be26eaf939a7cdbbe63c65ea427f0f0823c3814c054b0b85bd0585b00632f",
+    "formalization/Hlawka21/NormDomainOrbit.lean": "13b0315c933e3211385ee8b9d114701d287950c28500731d13407aad51c16d4e",
+    "formalization/Hlawka21/NormDomainConvexity.lean": "83e18f87611c3526746eb2cb7fe90985c7baec6b5b0f9ebac130ffa892688d7f",
+    "formalization/Hlawka21/DomainConvexity.lean": "ece8e049d0d2614850b3214229d33b16cb04e069b3c2abadf778c342aff8ebc5",
+    "formalization/Hlawka21/Foundation/NormHessian.lean": "b34e022f0233c802e88673d31a20ef4acffefaaf5e3804f46642011b126ac196",
+    "formalization/Definitions/Def_HlawkaSchatten_DiagonalConstruction_NormHessian.lean": "7bf82b829c04bd0a0857dd8d4911f91736bde90affee88e2ed8e04c91839221b",
+    "formalization/Hlawka21/DomainGeometry.lean": "13395013b0cd75623be7a67ee3388c0e895f9350b47efa1a4b22ce59c29d9bd3",
+    "formalization/Hlawka21/PairGeometry.lean": "9bc23752fd042634316322f476adb99ed647dff6f23d61e37240dec9f5d08e70",
+    "formalization/Hlawka21/RadialSpread.lean": "b038549a4e4131059559b437162df5f0eaaaa482942f22252ac75ba6363ab3b6",
+    "formalization/Hlawka21/SpreadGeometry.lean": "f80807f4939433233f82d86178a5863ea92db0d06eea6af3dc29fef7dd678c16",
+    "formalization/Hlawka21/NormCurvature.lean": "c967813f4610dc2abe1ab283798999a544f465e946aab8681ce4a453d70e799f",
+    "formalization/Definitions/Def_HlawkaSchatten_DiagonalConstruction_BoxGeometry.lean": "095b107a69cb56787b1ecf9a01f66f0a7701f7dfbdcfc4defdfcfb8ed596d09c",
+    "formalization/Definitions/Def_HlawkaSchatten_DiagonalConstruction_BoxCoordinates.lean": "d30f0ed29ff767728123fec4c689e37f2be037e6657c558eb2f350c2f4ee0e9f",
+    "formalization/Hlawka21/PairResidual.lean": "fac4d67677bce4d208584f518132485e495ee7ff130523007fdab4defe4942d9",
+    "formalization/Hlawka21/Residual.lean": "267b18efeb872dace33f4c1ee28c31e11cbc0ac26db0be1be7289c5382854e7c",
+    "formalization/Definitions/Def_HlawkaSchatten_DiagonalConstruction_BoxConvexity.lean": "eeaafa35977d5e777c82fd41cb707cbf07fddf3f5ed7f4f31a37173747086fad",
+    "formalization/Definitions/Def_HlawkaSchatten_DiagonalConstruction_BoxHessian.lean": "6e6aea7da5b391b1277516f13afb0d9b92db038c0dc261c55945964a75020f3a",
+    "formalization/Hlawka21/Foundation/CyclicWitness.lean": "862b9646e7555fada900c9f53501a0833ce7b8c2c48e90ed7e688f7537b5f27a",
+    "formalization/Hlawka21/Foundation/Cyclic.lean": "0705f08c6a6566b1d17a04c1310feae61c16bf134641bda7d1f8ba66b87136d7",
+    "formalization/Hlawka21/ScalarMilestoneBounds.lean": "bc93a0da60397643b5c9f181aa3e489a20bfe53e375f96c5cb0aacae3e476191",
+    "formalization/Theorems/Thm_HlawkaSchatten_DiagonalCutoff21_scalar_window21.lean": "958fbc6c247e1167535f92338f0a7431ef8a85c31d183114567eaaf486150751",
+    "formalization/Theorems/Thm_HlawkaSchatten_DiagonalCutoff21_lower21_chunk00.lean": "63e6e0157167954593b4d5f1ccf929dc00493a4beec439c1aee8310a89020f52",
+    "formalization/Hlawka21/Scalar21/Chunk00.lean": "8661ec03469eb966e0bf9586bdcf69594cf274a3e3f2f1c16fb0fe4a4a9abd82",
+    "formalization/Hlawka21/FixedWitness.lean": "e87b55e8bf631fa46ed25c8b70f153062439c95e207ad5a0877a835498b81170",
+    "formalization/Hlawka21/CyclicUpper.lean": "51acf705d55c1edda1365c77cb84a9de2ebb8abbd83c1ffb75c0003114efa46d",
+    "formalization/Theorems/Thm_HlawkaSchatten_DiagonalCutoff21_lower21_chunk01.lean": "36797e5d2d4cd9e3c33591c69c8204edbc0e316a70f6c91a478509c5f50e0c56",
+    "formalization/Hlawka21/Scalar21/Chunk01.lean": "2126e7c600f4d6ae674659aecc41c68614b8447be4b2ddbe783044ebbe621991",
+    "formalization/Theorems/Thm_HlawkaSchatten_DiagonalCutoff21_lower21_chunk02.lean": "1f06f70dd35d9e13d6816a7a33ab9daf085ad0ec66e632fc1e0d025f30b03a96",
+    "formalization/Hlawka21/Scalar21/Chunk02.lean": "d79128778fd528fb62db6a36aa9bd47f445761515957f6195bcad24605cf85fe",
+    "formalization/Theorems/Thm_HlawkaSchatten_DiagonalCutoff21_lower21_chunk03.lean": "2cdddeda26453679f8493d2a610437be307f5beba7dce8d8de7fd00260d4a033",
+    "formalization/Hlawka21/Scalar21/Chunk03.lean": "0fb22513887fc2b6bde408da7be2a6fef6b68764d6dd90aa6c7570e3b81b0ce6",
+    "formalization/Theorems/Thm_HlawkaSchatten_DiagonalCutoff21_lower21_chunk04.lean": "efafd6a97e41a468438c885c04ae0e73ca9fd44b5dfa9279da08612acadd6827",
+    "formalization/Hlawka21/Scalar21/Chunk04.lean": "9aca589fa995a777c33312fb69e7123d85699d5c07d09ee38d549533383d12ba",
+    "formalization/Theorems/Thm_HlawkaSchatten_DiagonalCutoff21_lower21_chunk05.lean": "9145efdb7eba1c8f9ec9fb1409e439cfe73e751ba1efed56a8b288a6580d32f8",
+    "formalization/Hlawka21/Scalar21/Chunk05.lean": "b307d3d5df3dc4ddb5578f7182f7d4fb85c4cea44aff5a480c63e7e3e3a9b694",
+    "formalization/Theorems/Thm_HlawkaSchatten_DiagonalCutoff21_lower21_chunk06.lean": "0b62a01dc190780e8c330ce25b797e547f401ec74975179c9d114e881381794c",
+    "formalization/Hlawka21/Scalar21/Chunk06.lean": "3f03433592e7cc522afe3c12e76ced9c8334e13f78d6a3c4c737b9e65ab7e68b",
+    "formalization/Theorems/Thm_HlawkaSchatten_DiagonalCutoff21_lower21_chunk07.lean": "2868abe8a66fdc1893317ce416f5aafc60035639dd95041341a138bee2546644",
+    "formalization/Hlawka21/Scalar21/Chunk07.lean": "888eafbe9f330c7154b398c972a8e5baf5805c2bed8df006592edf34cd783ebf",
+    "formalization/Theorems/Thm_HlawkaSchatten_DiagonalCutoff21_lower21_chunk08.lean": "4931875cc57c267a7978392dada856c6e286a9e66be5da29510530d78cb52774",
+    "formalization/Hlawka21/Scalar21/Chunk08.lean": "4102428ba4b945ac09c0e225b25168543088357a31cd7add197f75cea0f051e3",
+    "formalization/Theorems/Thm_HlawkaSchatten_DiagonalCutoff21_lower21_chunk09.lean": "e9ad7cf0bec16e4591afd76a757fb5962bb4a9e18ac9f7d47a5f98d9f4b87a97",
+    "formalization/Hlawka21/Scalar21/Chunk09.lean": "b867074c85e538fb0fbcb70ebedc67471d84b43a4dbf69401655cecbebaeb86b",
+    "formalization/Theorems/Thm_HlawkaSchatten_DiagonalCutoff21_envelope_linear21.lean": "45c61506aef3842ce859845282f60fcb9a072022e45ee338c2f4f1fd21e99b99",
+    "formalization/Hlawka21/Envelope.lean": "61e2d76fa6f8771747bc7a339baab0dede37b419dd38e2da0fbcd3e7048edd74",
+    "formalization/Theorems/Thm_HlawkaSchatten_DiagonalCutoff21_cyclicConstant_upper21.lean": "52be887d23052827c3ffac397bb6837d1cd67675fd655e17b28d26e0318cd2aa",
+    "formalization/Theorems/Thm_HlawkaSchatten_DiagonalCutoff21_scalar_window26.lean": "594ae00b9bfaaaa5fbd0d3ce516658eb8c06f862fec796c3b1ad25aad7fe4d5d",
+    "formalization/Theorems/Thm_HlawkaSchatten_DiagonalCutoff21_lower26_chunk00.lean": "cb7bcbf4f1e12f689f05f4e074addbcf61e2132f3c46458326c2250228349dc2",
+    "formalization/Hlawka21/Scalar26/Chunk00.lean": "74aa133664c9213e511a6506143f69e8e0e29387a9577c097da2d122b57c5f03",
+    "formalization/Theorems/Thm_HlawkaSchatten_DiagonalCutoff21_lower26_chunk01.lean": "131140b0c8d588142bf972cda981e6cbad303a245ad107f858c3cf3a0ebcf9fd",
+    "formalization/Hlawka21/Scalar26/Chunk01.lean": "6e5b0f200406074482090ca17514cc7dbcca7e77f591f939eb93292dcc13c84b",
+    "formalization/Theorems/Thm_HlawkaSchatten_DiagonalCutoff21_lower26_chunk02.lean": "26380bc4b50247c570ca39cf6dcfded76e4a2176c76c4ed45d556a42a8226499",
+    "formalization/Hlawka21/Scalar26/Chunk02.lean": "7af8a27afba74b4ff530ae0c7633dd924df917e0f4ca09745f5e23407af856a3",
+    "formalization/Theorems/Thm_HlawkaSchatten_DiagonalCutoff21_lower26_chunk03.lean": "4309ed911c85082be66ebcee6d59674fea2b7c3772358f4a8fd6577fed118803",
+    "formalization/Hlawka21/Scalar26/Chunk03.lean": "f1672585cc4c903edcd131b1934738cd1b4d07288898b4f9a984b995ee74f2a2",
+    "formalization/Theorems/Thm_HlawkaSchatten_DiagonalCutoff21_lower26_chunk04.lean": "ba16899d7b296745e8c30b78e61866f294a248b9cb4ad687b10a1175a9a73731",
+    "formalization/Hlawka21/Scalar26/Chunk04.lean": "9c786ae62acb179996131a8a8259232a344ef7e32d58da270354c26cf7431094",
+    "formalization/Theorems/Thm_HlawkaSchatten_DiagonalCutoff21_lower26_chunk05.lean": "f1d97ccdd81e02dfa022b8b4f17650809ccc914c40477beec5a563ba76f1d20a",
+    "formalization/Hlawka21/Scalar26/Chunk05.lean": "4c3838f553fb4f701ca1a203bafce8b7206eccafe71c1f1f1776f0283f4ff242",
+    "formalization/Theorems/Thm_HlawkaSchatten_DiagonalCutoff21_envelope_linear26.lean": "45c61506aef3842ce859845282f60fcb9a072022e45ee338c2f4f1fd21e99b99",
+    "formalization/Hlawka21/GroupedConvexity/Group00.lean": "1c872613286a785e9490c54ffe79dee72b0ecaa0fa86964a505fe1db5eb43ed4",
+    "formalization/Hlawka21/GroupedCurvature/Group00.lean": "df6b99c2c82d9eda30e6a86da24746078399f3d8671d1709dc0cc3139f01db8f",
+    "formalization/Hlawka21/CurvatureComparison.lean": "16b6ac8e16965ff9e6d19a8cf8cd13cdcb5dee6cc89162ec477c1a60f4395dc5",
+    "formalization/Hlawka21/DeficitCurvature.lean": "1c56dae758646a9b3ecf9452338e45c204293872441d6bd32fce79a64900c62a",
+    "formalization/Hlawka21/PairHessian.lean": "317c2cc5c5a676de06877c3c84374e8e522e0d5fe624c160b8536a502b92a357",
+    "formalization/Hlawka21/GroupedGeometry/Group00.lean": "7c6fbc7602689f811e1ec2eab9dcfb5874c84912615250d34da184251832a63c",
+    "formalization/Hlawka21/Localized21/Slab000.lean": "f8d8110119626a33bd70e7684888d66e753250dbbac771eabff64b32d41dba0a",
+    "formalization/Hlawka21/Window21/Slab000.lean": "0263cdb9b43870659da7fd628d1e5e3a09c3650d69af1528753be0086814e065",
+    "formalization/Hlawka21/Localized21/Slab001.lean": "3b0aa7bd1bf2c3ba25c272bc8248645c2d710be6aa6b9a7e32ee2c4b0ebb4a29",
+    "formalization/Hlawka21/Window21/Slab001.lean": "10052032d8b5c5030d69a71ffd3ada8ae9a7e2efd13dd80315b4a7a1624f63fc",
+    "formalization/Hlawka21/Localized21/Slab002.lean": "4d7207f806632664fd0d0b27f42b09352a88569f2ec57ad206a6e7879776416d",
+    "formalization/Hlawka21/Window21/Slab002.lean": "b1a27db3dc37e2c21c932b3142179fe4fc4faa03657621f1bb1043c7b80ba942",
+    "formalization/Hlawka21/Localized21/Slab003.lean": "2f497db5c8745ba710f2dcf5039f1063b876d12e780b77f2086fc8855ef83957",
+    "formalization/Hlawka21/Window21/Slab003.lean": "d34774f942b630fe04de190526eb5db574f3d2392a83a854ffd6ae4225ae78e9",
+    "formalization/Hlawka21/Localized21/Slab004.lean": "83307f9d9dd5d896c7d702db0b120f282ffaa734461cd6402a04fbc3db631500",
+    "formalization/Hlawka21/Window21/Slab004.lean": "62d2de7ff5e8440b45732bbea1f1aa4d83c88501c80ed86a0aa513ab86f86834",
+    "formalization/Hlawka21/Localized21/Slab005.lean": "82dd77a76c572823d4dd487f43f1bbc73d3ac2eba25252a8fd6d282ee80719da",
+    "formalization/Hlawka21/Window21/Slab005.lean": "7e19018043eaf944dab5b5418ad1a7043c302584f5a913568b61ac66f15057ca",
+    "formalization/Hlawka21/Localized21/Slab006.lean": "95dc84f5433f68a54052caa08d2660cef04a6a8a54510ecade99b716a925aef2",
+    "formalization/Hlawka21/Window21/Slab006.lean": "4eb205a9fa11fd54128651147c3ca2c9e7875aef66d615c472ea4a223d6ca8cc",
+    "formalization/Hlawka21/Localized21/Slab007.lean": "ba18801a502541830618c55caf399f31d1fbd16ff7e723910f21ccb690b2ae42",
+    "formalization/Hlawka21/Window21/Slab007.lean": "a6ba11647f5fb71c5e304dadb80f52c7399a9a348290bbec887e59b5127840a9",
+    "formalization/Hlawka21/Localized21/Slab008.lean": "9c3a1d9c9f4cff2dc916aaf716bb4b9edbe951dced71a5ce6edbe2f2aae3e6e8",
+    "formalization/Hlawka21/Window21/Slab008.lean": "9ad84b4cef0266672f4440929493e8dc2c42e11594c7834c2554e725c646fbc5",
+    "formalization/Hlawka21/Localized21/Slab009.lean": "34596b3242137254ccad18112958d49b775f94bfd7f86f7a23b580785053d08c",
+    "formalization/Hlawka21/Window21/Slab009.lean": "f5d92164ca993a61b32b643ef8607eff003a80caf04b39b809a10d9201103e6c",
+    "formalization/Hlawka21/Localized21/Slab010.lean": "298b5ca0ea92735cdbb9d9d8cbcc7334d83744acf8b6bf4a0e157fd0e2f70acc",
+    "formalization/Hlawka21/Window21/Slab010.lean": "2fbf90672a4fc5f0288531559b9e06f6bcf9ce1e2b46d69cc0deb46e36f16c6f",
+    "formalization/Hlawka21/Localized21/Slab011.lean": "1efdbdfe3cf705a4117bd5ca3f9131fcdbccdd4fa15d70645d5c1f5ede80bf3a",
+    "formalization/Hlawka21/Window21/Slab011.lean": "31cb841d3239a73b03521eafd362a0d15ce5bf2ac63f3c6e355a41b0ce9e78d5",
+    "formalization/Hlawka21/Localized21/Slab012.lean": "2c8d68b6e66d868e9e2b6bc0568060498ea6dbe724ef866bee9dc283d72830ef",
+    "formalization/Hlawka21/Window21/Slab012.lean": "48589dc11983cdaa179f2611dcba02dcd2a37598f6cb9bd019f312bdf5ac2816",
+    "formalization/Hlawka21/Localized21/Slab013.lean": "9544eb928333e0b4c25914a372c3efb140980040b895261349b3157803e94967",
+    "formalization/Hlawka21/Window21/Slab013.lean": "d09f8d6c645a73f410747227f5d1a1c12c132bb2eba0f5481a2df343d0e257d7",
+    "formalization/Hlawka21/Localized21/Slab014.lean": "2e10ada6c99cfdb198cb92a99b65cf9fd58ce3b7af98f0e8cb9b6d5149a8ace8",
+    "formalization/Hlawka21/Window21/Slab014.lean": "92bb44f5ec7ae47e0c211b4c5f5f27d2325ed16be4fd2b28d24879904bc52870",
+    "formalization/Hlawka21/Localized21/Slab015.lean": "54eb74bd2fe15a173899db3fb0bf000fea43990f2736dc9d4c37b3e8c1ced4eb",
+    "formalization/Hlawka21/Window21/Slab015.lean": "3dffd2948f8b7241d8331b1b655d64bef8c95ddeb0058042a92370ace932eca7",
+    "formalization/Hlawka21/Real21/Chunk01.lean": "59be94816f8025c5ae680633548c61ce925803f45e756cadddfdf374217abed5",
+    "formalization/Hlawka21/Localized21/Slab016.lean": "003d3dea46f37cb7cbc31f55b7c26b378674ef0cc023cf7114006722587e0a18",
+    "formalization/Hlawka21/Window21/Slab016.lean": "126c20ec1914592ece66cd8fda081daf231f0718e7b0b4968f1ef7c9c99167fd",
+    "formalization/Hlawka21/Localized21/Slab017.lean": "b935fa352d1cfb521b49a502bd069ce09ef8b08b3dd4fa7727677f759fbcd541",
+    "formalization/Hlawka21/Window21/Slab017.lean": "c1b2012148cb2cf006e07ec40f18a746bb3086b0e69b8c3f1b55e63080bf771d",
+    "formalization/Hlawka21/Localized21/Slab018.lean": "bea2b9c4054b1efc2f20328be4d75b1eef98f52370fd4267b750dc3dd9b758c4",
+    "formalization/Hlawka21/Window21/Slab018.lean": "a9b8bc8f87e9f32c737538b5f5b8c0f0c55a6bf37e4bb018e0deab097202188c",
+    "formalization/Hlawka21/Localized21/Slab019.lean": "a07e5fd96d9356c14ee401e5551b573a6b676f0387a411a138efdcb3173ef452",
+    "formalization/Hlawka21/Window21/Slab019.lean": "835e58991fe7b3a6fef5ca0732abb60da13a02bfb5aa3eb51eada7ba83c34f8a",
+    "formalization/Hlawka21/Localized21/Slab020.lean": "e90a0cb542bd2c64756f2968926171873f586d9c10caba9b1d5c593cb12db9ad",
+    "formalization/Hlawka21/Window21/Slab020.lean": "eeaff18e114b4f32b86f836101caaf60e7f4c3db522f665933b66cf9d7d6ca55",
+    "formalization/Hlawka21/Localized21/Slab021.lean": "d5c33eba6d646d35bf6884ddbd09d3f1c4a6233629ac18eaf9cbdf977b94a3ad",
+    "formalization/Hlawka21/Window21/Slab021.lean": "2eaea08c285a3578f8aef0f0c6b444cbc55e868011f44b3f89101e94c7c7dcd0",
+    "formalization/Hlawka21/Localized21/Slab022.lean": "519009c1ecc332c4eb20a4e2b9b4a6df4bd3e705ed7ca99639fae336bbf4802c",
+    "formalization/Hlawka21/Window21/Slab022.lean": "3cf34fee273315a06f6bc16cb1fb372aa630fb5194d71b5e19e47f843c2365e4",
+    "formalization/Hlawka21/Localized21/Slab023.lean": "7503fb7c3a2ee54c7ed21ea9fcddac2072188e4e36821bfc4a4b9fd37ee31b06",
+    "formalization/Hlawka21/Window21/Slab023.lean": "fea2565c7b78bd6ab7376a604b6650f6184a836b77c4982a45498b0d23e873f7",
+    "formalization/Hlawka21/Localized21/Slab024.lean": "5cad9620c328bc531e1563f2c4da9881039689ea9c2dc22777744e0c8dcd4e42",
+    "formalization/Hlawka21/Window21/Slab024.lean": "0d153798e3fd398c2585d44ccaef16de1ce48e474a1d380a5fe38eb7a0e9ed2d",
+    "formalization/Hlawka21/Localized21/Slab025.lean": "b2dee0b9cf2b896dc97d57b40c7f16b0edbdd6035324a9b58ee4d25f4ac6b8ef",
+    "formalization/Hlawka21/Window21/Slab025.lean": "0a8b1f897bcb5c4ac86d76e8cc3c10352448c46a9ab63579a51407ee75364644",
+    "formalization/Hlawka21/Localized21/Slab026.lean": "efce996a56346740395b3d996c071608a2a78af9d478b658b99cbb7998212263",
+    "formalization/Hlawka21/Window21/Slab026.lean": "46286fbc5170c5876bf667149da1ccbef6ccac569162e337bf2801b54b75cb35",
+    "formalization/Hlawka21/Localized21/Slab027.lean": "3b67f08be87d6a2055b9a12cbaa33971a549929fe2b6939aa3879becf06068dd",
+    "formalization/Hlawka21/Window21/Slab027.lean": "cb81b63acb0bd181d6dbf168e514d61531e3407ad1276f5571607da77acaca77",
+    "formalization/Hlawka21/Localized21/Slab028.lean": "27dab57c67088fdc361bf637df2148a47989f224db58037af6f6d17774791764",
+    "formalization/Hlawka21/Window21/Slab028.lean": "94c64372f36d5df8c8cd3ef93c2233968bcb65a011682b98a8b89e516f025a1b",
+    "formalization/Hlawka21/Localized21/Slab029.lean": "5ed23ff9cf6f607c2a50bdf738db143b45f3a08287c37f5a4cacf8bec91c734e",
+    "formalization/Hlawka21/Window21/Slab029.lean": "fbf5f2b5903d4e2636672da907ad4797f63d52980dd9fb227f2777c5935bc6a5",
+    "formalization/Hlawka21/Localized21/Slab030.lean": "d0cb4031d1ba5e47bc41a486c62ee7233f422baa6637133f912c3a952ba54c1e",
+    "formalization/Hlawka21/Window21/Slab030.lean": "4d130ef44137432614ba5304b5c3438f11b8ef3f22f1090445e28810c0b7dfa5",
+    "formalization/Hlawka21/Localized21/Slab031.lean": "c1e5111becb9a28a3a6c2bce473be8f22bd0b3a20774728b509fb395cf3df133",
+    "formalization/Hlawka21/Window21/Slab031.lean": "2af5fe8689e3cca30132e81fe0096c6def3406e10d86ed154dc4df0ac764f496",
+    "formalization/Hlawka21/Real21/Chunk02.lean": "51941e11717c0779708f6ca1217f49ae5043863016b55db692796226e34de23c",
+    "formalization/Hlawka21/Localized21/Slab032.lean": "f2e6ab5482dcce7221b0f4bfe4226da022c2e26b0610a4a81f43b1e69432fa55",
+    "formalization/Hlawka21/Window21/Slab032.lean": "7f4e88d5274b205bdc9eeb70e1c6efc6f0beb5d2ff83db1051a39d321f3e604e",
+    "formalization/Hlawka21/Localized21/Slab033.lean": "f26dcc31a02e2625ba9cad5bc18696349a34798e0d1c4a4f2418d47f3af5042d",
+    "formalization/Hlawka21/Window21/Slab033.lean": "963bdf110978aaea137e67752da6a4e7a1c0fad5fd1602e14b8606c73a77d7e6",
+    "formalization/Hlawka21/Localized21/Slab034.lean": "c59c6a19b861d999ecc5da6771d223343f84e0863dd2dbe22c61109f6681b337",
+    "formalization/Hlawka21/Window21/Slab034.lean": "b721e3f9850c952fd5818fcffd1c5de100da3a53d4ea30b0dcd4a7ff9e94d6f4",
+    "formalization/Hlawka21/Localized21/Slab035.lean": "c6d478870a08a9320631b829ac912dd5e136a297f6227702940f7c5ec3bae856",
+    "formalization/Hlawka21/Window21/Slab035.lean": "8c0f9808ec97c54d053b83e83626a8cf0d663ec2b47fa49dfeab1f4e20060b12",
+    "formalization/Hlawka21/Localized21/Slab036.lean": "39f386d69669dd95d14ef51f3d516edf4c2546cfaa54b0fd699c2f17ff006151",
+    "formalization/Hlawka21/Window21/Slab036.lean": "69f48dcc68448bd62d2d44c2a98d1e6cf325b48b3cad4cc26ef474fae80baabf",
+    "formalization/Hlawka21/Localized21/Slab037.lean": "d183f57f0d9b133729e6553b2de4452b5b4090b17805ade41ca9fe1c7b2ac21a",
+    "formalization/Hlawka21/Window21/Slab037.lean": "7efa9dea08b8abd43649be361a3e9205d57a2a05821b353a7f5cc6de6358f30d",
+    "formalization/Hlawka21/Localized21/Slab038.lean": "5852bd269db4ca61a0f737701d8d8113cc345d171b3326a18f5263adcbb53197",
+    "formalization/Hlawka21/Window21/Slab038.lean": "2ac3a000475ae62fcda4e72932b69637ee490aa12b7213a363abfad5bccf4c20",
+    "formalization/Hlawka21/Localized21/Slab039.lean": "ae0841c260f0cb67cd2b1c7404a11c4821cbbbd7d988ae404558b578bc2fe8f1",
+    "formalization/Hlawka21/Window21/Slab039.lean": "3037e26c17e295d5f3fe76ed490c8116b84f6aa7c680b0d4792ff5658bba49ca",
+    "formalization/Hlawka21/Localized21/Slab040.lean": "0227f5b9edda7d3ef823a73fbd34ede84f15a0080023e124116c1fde74a4d5f2",
+    "formalization/Hlawka21/Window21/Slab040.lean": "3ff8c851111691cb509f88c43d8929d0fdb136133a35fe99f6762339acdfec19",
+    "formalization/Hlawka21/Localized21/Slab041.lean": "e7b88c8acc82c6dd4b7815f3fc6e690c183444e67b8ec9c1843866a65c23dbfa",
+    "formalization/Hlawka21/Window21/Slab041.lean": "117f8e92e081111c8e39f2b390f2f4bfc4d1b737dac067248100158a845aab1c",
+    "formalization/Hlawka21/Localized21/Slab042.lean": "49c9245c4bc93cd2d46fa86fac061059b0986f7d583222e8fc317d0999a31262",
+    "formalization/Hlawka21/Window21/Slab042.lean": "3b392f4fe75feebc91a4f5ecfde229b04784ee374087f78dddd542845d8422a0",
+    "formalization/Hlawka21/Localized21/Slab043.lean": "5579cfc1b3d7ded487336b3b52f5ea0dce34a63675e86db6411797fdd592fba7",
+    "formalization/Hlawka21/Window21/Slab043.lean": "f50b2bb3f36e261837b69816a35043c6ac0b07e0a1c999c30872d2fa37a8b2d1",
+    "formalization/Hlawka21/Localized21/Slab044.lean": "d48582899bf5a1338429f2c9c5c5a455e5954c2cbfba77549122031746547c43",
+    "formalization/Hlawka21/Window21/Slab044.lean": "ef246160745967ceafabf21e4fcec2aba4952e957eb59bb16df3cbfd6aa4bd16",
+    "formalization/Hlawka21/Localized21/Slab045.lean": "36359d7a23b9b11c237618e742201eb30979ed098f612f50eeef7eff933d5bfb",
+    "formalization/Hlawka21/Window21/Slab045.lean": "ec26065071db60f5b246a424315e932946b42cf7536fc82754b575ce778a3432",
+    "formalization/Hlawka21/Localized21/Slab046.lean": "ad484b4faa1e8a16e8490043450a199884f0713ae66326fd442e5cef7d724d80",
+    "formalization/Hlawka21/Window21/Slab046.lean": "bcf55ea6fa8282253a004fd1a2fe0863c8c151e288aaeeaf030dc489eb852e27",
+    "formalization/Hlawka21/Localized21/Slab047.lean": "c03754d79f8b7dbe842e9c111c25d46c33d2f37fc015b1906a5d9ac37613944d",
+    "formalization/Hlawka21/Window21/Slab047.lean": "294044df187ddecce6a0a0800cfac80d570761251671f3c36162b9c3457e28cf",
+    "formalization/Hlawka21/Real21/Chunk03.lean": "e7f098735412890fda73c73e96e4a2a6d77bd8d62991d9af3df67609d94eb852",
+    "formalization/Hlawka21/Localized21/Slab048.lean": "066a02af3b43a6c1a08f0ecc91abb950efc550967cbc3de5755767b6209f4ef3",
+    "formalization/Hlawka21/Window21/Slab048.lean": "5e19c3b9770876db6d4ad1c936341e3460ab78c07dbfd8f36b6eb2326145ad2f",
+    "formalization/Hlawka21/Localized21/Slab049.lean": "45762fd11e10c45267c66229e542b72dae26e9cd10895d0dd63d17f7de89d5bc",
+    "formalization/Hlawka21/Window21/Slab049.lean": "71d3aee65c0e2ee5ddba2b7685df1c016fc3bf59cb43b20e4f55d89dcfe97fd6",
+    "formalization/Hlawka21/Localized21/Slab050.lean": "67b6486a17f1a18261d5ffddc99527b6b2d3962ee311ce56a6af8a4c4cf5751b",
+    "formalization/Hlawka21/Window21/Slab050.lean": "8ca8471a3832a0e5ef808ae364fba77de665bb2721d054d0cefaf40090c8b940",
+    "formalization/Hlawka21/Localized21/Slab051.lean": "e959f1ebd72c155fb629fbc9c7a6de03b4d169db2d5a1df5ffb66b32fc8a3177",
+    "formalization/Hlawka21/Window21/Slab051.lean": "c0704960db7f1145e9d4a77ff943628f3478d6c0ba53d7b546d5cb35bb6ef4a5",
+    "formalization/Hlawka21/Localized21/Slab052.lean": "136b1b69a5fea260ad4433012e2f10abfc126211f95000ac376ecb31bef7f431",
+    "formalization/Hlawka21/Window21/Slab052.lean": "5979a2b6c52a8ef3ab1edab90cc59c21460e073cc7d4cb7a9760031b74e09436",
+    "formalization/Hlawka21/Localized21/Slab053.lean": "868a425bdbe8b3300b09597ee4b40b5bf2f77b031f4d6f226de73597ebb387dc",
+    "formalization/Hlawka21/Window21/Slab053.lean": "47a604a1e011ed9ec9ac0bf353d8a1317cbfed842ad56058036e3e0189f29e90",
+    "formalization/Hlawka21/Localized21/Slab054.lean": "2e6a4ac83af40dcf4a3127a3c02a40d6b1ebcebad8e5cd1d9db4eba6b50cab63",
+    "formalization/Hlawka21/Window21/Slab054.lean": "a57a6d221de3528c2303bbe0fa49c0beedc22ca87d5c0bc7d5c6e87ffb1cc1d9",
+    "formalization/Hlawka21/Localized21/Slab055.lean": "eb22e2fb50e22c1304f8c721566cfdb03f824662d4ef1e6f57975cb06a24c7be",
+    "formalization/Hlawka21/Window21/Slab055.lean": "f66accd3149d00580d21bcc7326c68877f1d29d79956cdb1010a3b5cd381da1f",
+    "formalization/Hlawka21/Localized21/Slab056.lean": "cff7190ddd170f8c6e71352a82e7673283eaf81b8bebe53258357c1527a9de9a",
+    "formalization/Hlawka21/Window21/Slab056.lean": "08b8556d4ce8391f4357c805e929c5ee1065b7a57e5ff1f3d8ae57443620b479",
+    "formalization/Hlawka21/Localized21/Slab057.lean": "58df2cc080689bc1c87478466d3438fed20dcd88b67f3ccb8bbff46d04ac9155",
+    "formalization/Hlawka21/Window21/Slab057.lean": "e2ff66c826bf7059fe05e875be27bafc3105563a6a4bb2793c7c96a63edbf661",
+    "formalization/Hlawka21/Localized21/Slab058.lean": "1867d0a0c369adc8ff43b836c5f17b9528877b85330ed4fa215388ace946cf46",
+    "formalization/Hlawka21/Window21/Slab058.lean": "09850665e33fbb6bbbbbbd3c116cd0664d5e4163eae68652923ed68cf939312b",
+    "formalization/Hlawka21/Localized21/Slab059.lean": "9a043938e7668c18cfb171784e1e85e5f130b661a4c22fe9f949b56c8a6254bd",
+    "formalization/Hlawka21/Window21/Slab059.lean": "c8b89148626db6b163120aec6bd38a628a5008c63cc36fed2ce542be61e981fe",
+    "formalization/Hlawka21/Localized21/Slab060.lean": "555568cfee4019e05fc491b5647ea49616415cea3dcc6ec4405867cf06a4597a",
+    "formalization/Hlawka21/Window21/Slab060.lean": "c5e05754ad93b3252896cc8eb44c054332909894834a70af7e656de45a740c4a",
+    "formalization/Hlawka21/Localized21/Slab061.lean": "315e5bb8e24079e9902241dfc782b0fe04244c449fc9ea276f763f79a7f35bb4",
+    "formalization/Hlawka21/Window21/Slab061.lean": "1f815da5959080193edc5c0c3ac8f3d29efa890a31717957deced183615d8d84",
+    "formalization/Hlawka21/Localized21/Slab062.lean": "113ba9dd087623df55a9987845ae69464cec88edcb5c4556b6336c0cec8a1aed",
+    "formalization/Hlawka21/Window21/Slab062.lean": "1303a22db426d37ed2645f923f71f8fffc568e900fc57dd61f8cc21bda203dc5",
+    "formalization/Hlawka21/Localized21/Slab063.lean": "8bcc47087726baf1611c71fa03556b4455e10538ec5d895dbb8ba27248c680c1",
+    "formalization/Hlawka21/Window21/Slab063.lean": "823038acb31b0d2553090c92281a11bcbb93f26d4d9418238a8dd642a41da0e9",
+    "formalization/Hlawka21/Real21/Chunk04.lean": "51e6f5d3eb8b1a8f6a28320a483a167f5cd8700756b875f654047b624ac6ad6f",
+    "formalization/Hlawka21/Localized21/Slab064.lean": "1a2547d83560d61617c1d93480d5965b6718ad521df16374dcf268d5b46c532f",
+    "formalization/Hlawka21/Window21/Slab064.lean": "c826e9c906d1ad5048ccfc83c7927368c04645abc73756005fa68033116f655d",
+    "formalization/Hlawka21/Localized21/Slab065.lean": "b11ca17c04524ed9cc570771e165c89c2df056e72cfb102413501d9565277bbf",
+    "formalization/Hlawka21/Window21/Slab065.lean": "f9d30bef173f6a54bc1b6a9aecad802ca80a1c47146d1a2ebe36683269d17da4",
+    "formalization/Hlawka21/Localized21/Slab066.lean": "7599003bc6ea417d10e6f673d8433f25f8e0b100996672f76567ae2efc2cf635",
+    "formalization/Hlawka21/Window21/Slab066.lean": "92e688738ae921cfa98515fdb304c2306774915f298547f3d8fc0c486f85cfe6",
+    "formalization/Hlawka21/Localized21/Slab067.lean": "51515758b5b73caf99a983c12469ea6839f37bb3beeaa3cbd0aef57cfc6301f0",
+    "formalization/Hlawka21/Window21/Slab067.lean": "52de30c24b69fb1bfd3c35f1a36cd47efa1a7a839c720500077e81042fdd2b38",
+    "formalization/Hlawka21/Localized21/Slab068.lean": "f62bd447f82a8769b057a582ebf70f69d02db8137b40323a997633ffb05d8190",
+    "formalization/Hlawka21/Window21/Slab068.lean": "57815f9829b0652eef0cc87139e3bff71cc62fb131f55b86d3e75e63d463ee72",
+    "formalization/Hlawka21/Localized21/Slab069.lean": "0d459b73f91fda5aa51b51cb53dedfa6a0223dd6b5e0abc2ecaf1efc5f161abb",
+    "formalization/Hlawka21/Window21/Slab069.lean": "22c9a89b3069b3d58c7b9d7b0c4082dd290520d4e8a335824ee90c5e39f4214b",
+    "formalization/Hlawka21/Localized21/Slab070.lean": "2ae15130d715c035319650f9a9a7ead130a4dbe5286999b2d33399073a74d8b5",
+    "formalization/Hlawka21/Window21/Slab070.lean": "55ee879dbedc0480fa8721b873342a43a174aee8e617305e64a8793d3585663f",
+    "formalization/Hlawka21/Localized21/Slab071.lean": "4b9d667d150051f655895aa8cfdd446f0fa86241f2a83f96ebe150147680df6d",
+    "formalization/Hlawka21/Window21/Slab071.lean": "e3482e2936d79601d2a9718c9174a77b9d2202d84fd9d95800f36a34edcc07f4",
+    "formalization/Hlawka21/Localized21/Slab072.lean": "d543ce9d7862ed3c280cf92581d3f43c884873a2b5a7e3923a3c64145ba50554",
+    "formalization/Hlawka21/Window21/Slab072.lean": "ccdacd24b41bb48af3da068fff7b2e323d9bbed7057761eafeb0f9b3c7e769f5",
+    "formalization/Hlawka21/Localized21/Slab073.lean": "1b3e8e9d07b74625d4a96bfb700de7720f7fe533e674a724ef9786a0e52956f8",
+    "formalization/Hlawka21/Window21/Slab073.lean": "52d8ac88ad86f68229ede3da39a202de0831443b694db0b4dd190371c9f796e2",
+    "formalization/Hlawka21/Localized21/Slab074.lean": "c752d5864afb508a1803c9141c6abe1438a533cd1485303b252ce4d10f01f364",
+    "formalization/Hlawka21/Window21/Slab074.lean": "952909e799e7d4c39215704ff7122f3a3a8a1a958c2df2ee3bade9d644b73dfa",
+    "formalization/Hlawka21/Localized21/Slab075.lean": "b857836c37cf088ac6bab8111a9f6f69e8768dc38d33d15d8fee94efdea121a8",
+    "formalization/Hlawka21/Window21/Slab075.lean": "77f69d0ba849b90a56e4aa105548d1220894c5295a16f1bdf75b7ec61f1e8e25",
+    "formalization/Hlawka21/Localized21/Slab076.lean": "4261b6bbc3f81250d63d43cc26952dd136f12ba1a9133ba9dd05cd54a59adc10",
+    "formalization/Hlawka21/Window21/Slab076.lean": "9b05b254d0bb59bf82632cb9e5a936bc19a774539143dace17276e64bf46465e",
+    "formalization/Hlawka21/Localized21/Slab077.lean": "42477ccb402fb390ecd8e5ec751d1ae6a428472a77f534edd76d73aa262d63bc",
+    "formalization/Hlawka21/Window21/Slab077.lean": "8ec447ab66b1850f4c0163e9e57f89acd9b8b5d32cdf34ce3033a750f9aa32a7",
+    "formalization/Hlawka21/Localized21/Slab078.lean": "0d876e9336268f4308366f18444a050fe6319044bbddb8d071a0bac5bf605786",
+    "formalization/Hlawka21/Window21/Slab078.lean": "cd8905f473407be2c491b5108bf4a058e0474d518b9e45c705ff87c438bd25ec",
+    "formalization/Hlawka21/Localized21/Slab079.lean": "c824c6143ccced7215cb3fb71d605f3fd9e1bc65b4fac8d0f325b8cff484c268",
+    "formalization/Hlawka21/Window21/Slab079.lean": "66f16381ea1a8aacb2ec9ff47e6a0614654e877149740475ed584a5a7d029bfe",
+    "formalization/Hlawka21/Real21/Chunk05.lean": "c09732313bcffaff3323ca12a531ef6a2dd9255232a70df3706b4117954a579f",
+    "formalization/Hlawka21/GroupedNonneg/Group01.lean": "213d1fbb74743c13afb3454b5e31cd8092417818a4f8705036535348ee129847",
+    "formalization/Hlawka21/GroupedConvexity/Group01.lean": "333f1200a62d5ea25b98c92b69d193f1d53e2822fd6188a637673452f74217af",
+    "formalization/Hlawka21/GroupedCurvature/Group01.lean": "3badeb4879c26ab5b4bccf6526cbbd59b363f40636b39e8856b119ec7642b3d7",
+    "formalization/Hlawka21/GroupedGeometry/Group01.lean": "3ec1b0ee4293306580463eea61e66eea22286f5f6c0ca28d9154155b003dec44",
+    "formalization/Hlawka21/Localized21/Slab080.lean": "baff1f5aafd657d924e0e2cf95d278844e3afca392133a274ddd2d6c22f2800a",
+    "formalization/Hlawka21/Window21/Slab080.lean": "52bebd319503800cdff93e0ad7720671daf0c207320cbf656236f1e0f8a55829",
+    "formalization/Hlawka21/Localized21/Slab081.lean": "b408c10465e4015a8d6fa9487a06a93be0ed7ce27e04902d0295f89df90cd0c6",
+    "formalization/Hlawka21/Window21/Slab081.lean": "dcbeb4f31105da017769f93f7f0fa155fda3ebe5f9e33de84d43db6c544924ed",
+    "formalization/Hlawka21/Localized21/Slab082.lean": "0d499ae2e607748ca6c953bd90a9829c88417e437bd15e2e0b2620e9c655a90f",
+    "formalization/Hlawka21/Window21/Slab082.lean": "112af092dbd0ee97a50f0dd111a91f5accc112f9e893afb54d58a2662ed924a7",
+    "formalization/Hlawka21/Localized21/Slab083.lean": "5ee63436a947ca63a7a3e8edbd63b95b93165a3ff8b5e5e2f299af62523e1646",
+    "formalization/Hlawka21/Window21/Slab083.lean": "3158ee04f00695d59bfd47606fd1189798728c33f3f982472067c351d96e68ca",
+    "formalization/Hlawka21/Localized21/Slab084.lean": "efc10ec1ff7e9a21d81ea201f04b59cc9a99e5e3725d43549a29cebb7823918b",
+    "formalization/Hlawka21/Window21/Slab084.lean": "7305ba870a607a618b0649acbe1ca06a9538d69efe120831c1bc5d4dff195f89",
+    "formalization/Hlawka21/Localized21/Slab085.lean": "2a3752a8b483892cf8793f3c72e404919e3505c05aa594f551961801b01b6ff2",
+    "formalization/Hlawka21/Window21/Slab085.lean": "dbcb4bdfced1c6a53e595eb35cd07adb2d32695a4020631461a51f384b24bbfe",
+    "formalization/Hlawka21/Localized21/Slab086.lean": "8e705e05059d204f5b537f248c32b3066f7474f9c349e6606cd11dfbb6b35208",
+    "formalization/Hlawka21/Window21/Slab086.lean": "4cceb7a2af3be90d0e78f64c57ba130b43106dfdfe677aee4c2cb98781ff4a19",
+    "formalization/Hlawka21/Localized21/Slab087.lean": "3fa50b6375c8b993fd803ccafc649a1cac649d9a4c573757acad7707ac01566c",
+    "formalization/Hlawka21/Window21/Slab087.lean": "8eb24a9180bcb9763baa00926ea945fd8887084e1ff8d8adff0fc68549f8d981",
+    "formalization/Hlawka21/Localized21/Slab088.lean": "bfeb697eb4feef07ccb0d95c5afd4ea647898b89e41da10d5fbb9733099af7ea",
+    "formalization/Hlawka21/Window21/Slab088.lean": "b0e2136ee00d735e51490ccf1d364c8b4890c696d911647722e955b5b30b879e",
+    "formalization/Hlawka21/Localized21/Slab089.lean": "eaf39b13ef198894996add7c87dd9e8fd5364feb71a1cac06d8d77d3f8360bc8",
+    "formalization/Hlawka21/Window21/Slab089.lean": "0040cf1f13078c1e1f4df4f6cf3abf4cf024353a6e2eb2d47340011f35d69a01",
+    "formalization/Hlawka21/Localized21/Slab090.lean": "b9031397aba881ef39ad9df076dcb5daf09a7d2463f65fa6542cfe88ce5fe1ab",
+    "formalization/Hlawka21/Window21/Slab090.lean": "09bb4b9f3e4d78694f90e80d31846dde50f885ddbfaa44b7347c00fe881c2838",
+    "formalization/Hlawka21/Localized21/Slab091.lean": "1af388648a56af347acb82fe3ede575e0ab01328fec9bd80eab93c15498d5c26",
+    "formalization/Hlawka21/Window21/Slab091.lean": "e6dee308e6e36d68c55b2f476fde8a49218221ff15ea3b6ff5dd6549242e5e00",
+    "formalization/Hlawka21/Localized21/Slab092.lean": "b8b7ef5c3b39c728ee4cd3229fe2d5308821531a82f1f051f9db0aac53c137f2",
+    "formalization/Hlawka21/Window21/Slab092.lean": "db499cad6688ae1d47e7aad455a01101faa3e985b775803be72c4fd9a3f74552",
+    "formalization/Hlawka21/Localized21/Slab093.lean": "f98282399c2c2fbcac9c83f65ce848c2e0aa0c1508936f32aedca479578c590a",
+    "formalization/Hlawka21/Window21/Slab093.lean": "497af3494c8bf735d5c0a35aa378d950746730282ede35e9eaec286a931fe722",
+    "formalization/Hlawka21/Localized21/Slab094.lean": "b23e3f3869283f7d5919ddcc2c9c0f070ccb0574adbbe0d8b71d802716aea516",
+    "formalization/Hlawka21/Window21/Slab094.lean": "7c7b2f4f81c49c49c6ce391bcfddcffb6bc18821920effb6d70b53698b9fffe1",
+    "formalization/Hlawka21/Localized21/Slab095.lean": "3154777dd2571e2aa86646fcc7fa379614e035e22e8291444e47733d61a609e6",
+    "formalization/Hlawka21/Window21/Slab095.lean": "cf4d0ed6ff9931456b3feda4481012f7465c1df2eca16b4f44bf8d2e7c3b3103",
+    "formalization/Hlawka21/Real21/Chunk06.lean": "ff28107ededb7dd2f4490a300c36567709b43dd6ac91d5df15260e1fad254573",
+    "formalization/Hlawka21/Localized21/Slab096.lean": "b3ef40633d24ba3c90fd15f3b4ef9de9e989179d2b7370f04872e48047537d4a",
+    "formalization/Hlawka21/Window21/Slab096.lean": "dce77a5b5d7597317fad08940156c58ad8f941d6887a7dab314b578decd8d236",
+    "formalization/Hlawka21/Localized21/Slab097.lean": "a381666b10d80a9ff7bf4833ecd55a18050aacb1c21ecdc2a0a2e5e02d50e526",
+    "formalization/Hlawka21/Window21/Slab097.lean": "88a9f574eb9a30eb11e51cbb3208db0c79ec931457a68176fcfc1fc2a64c2be8",
+    "formalization/Hlawka21/Localized21/Slab098.lean": "13ae4fa6e8a669cda5e3f1f1c3669afcde39c2c0fa7663504afd27724ab8ec3f",
+    "formalization/Hlawka21/Window21/Slab098.lean": "52b8ce630bec44b5fb6a5fdabfdf0a243525d078efd34fd6e84fb16b835fe5b5",
+    "formalization/Hlawka21/Localized21/Slab099.lean": "dccd4bc5ef8182d9e9db9bb938d8c0d891fef5bcebdfb145505ba9764d775f27",
+    "formalization/Hlawka21/Window21/Slab099.lean": "0904cc3acea1e1a412d6e62164070b651849d6d7c8771023a0cb311df198db87",
+    "formalization/Hlawka21/Localized21/Slab100.lean": "0917d6486f81f86f0af85bf9f601dd93d0614b9f08e5488e4749d01bbc67a33f",
+    "formalization/Hlawka21/Window21/Slab100.lean": "1e90190905e1011c3e76383af00cce9a8bf3250611293553d36724b2215d9959",
+    "formalization/Hlawka21/Localized21/Slab101.lean": "f7dedb13372d98b204a4f0378c43788e0dada4a9fa6270b531b830532998e9af",
+    "formalization/Hlawka21/Window21/Slab101.lean": "41b1fbe29e2d22c3195d34c301782a0f69c68baa50d52bbc5a56d47f2c47c5c4",
+    "formalization/Hlawka21/Localized21/Slab102.lean": "8ce568a36a6323287d523fbaba23c7b99b4eeffc552ee1b0e6e12e7c945d6fb6",
+    "formalization/Hlawka21/Window21/Slab102.lean": "1ce48be0bd872f122aa972b154c6289058120da7502e0cf978ff13a248b0e010",
+    "formalization/Hlawka21/Localized21/Slab103.lean": "e690459c0e51a689eb405857349b47995c9decd7f1ae2014791a0a7e95fe4e0d",
+    "formalization/Hlawka21/Window21/Slab103.lean": "3bd20f1306570861f71d15a6dd04872051d74e2480d83af324c640c47d8077d8",
+    "formalization/Hlawka21/Localized21/Slab104.lean": "76f4a62a37e32614be68a4da15dc165f66d6ae77ef8a6d2bfe047e146de1be64",
+    "formalization/Hlawka21/Window21/Slab104.lean": "b5b126beb3705e66c73f81397970ed9ab08bf73e4ce0595a52057cd3fdddc3b6",
+    "formalization/Hlawka21/Localized21/Slab105.lean": "a46610cc22441a9994eef1661330d280d8a3917f60789593fa78311d44fbcbb3",
+    "formalization/Hlawka21/Window21/Slab105.lean": "3da09f1461816a8f20cd0b307dc24410c63b56e4e983ca1260dd7d601f720b49",
+    "formalization/Hlawka21/Localized21/Slab106.lean": "bb50f3ccc877ae5dbc72780a6767a92cfb98fd5ae07dc19f9e1516b62850af1c",
+    "formalization/Hlawka21/Window21/Slab106.lean": "6c9e0eff60a1535791914e027d4fe8612623ae2bd6b52209886dbc85aa6fc4e8",
+    "formalization/Hlawka21/Localized21/Slab107.lean": "ccba4cc7e273010e6a2440a9a289a90b58f76ccec73b08491561a06e733e3af2",
+    "formalization/Hlawka21/Window21/Slab107.lean": "cec493f0746aad7bbaca63c3b8dcccf3a9773e3565b1592f33869ee0e9c943b1",
+    "formalization/Hlawka21/Localized21/Slab108.lean": "b27cf073bfbc01b91f07e440ddd0f21f98f7bb56ba4bcf0032e6924a10e94d4b",
+    "formalization/Hlawka21/Window21/Slab108.lean": "ab52f7d9047cfcd770749f89c18c1a9057c9f85ce66ad33d058c6f633470c668",
+    "formalization/Hlawka21/Localized21/Slab109.lean": "9152040f650b093d1d9a90f9098c65ad6be70d18032fd1a4c0c94820d6a4f7f6",
+    "formalization/Hlawka21/Window21/Slab109.lean": "e25b6baf8d856303e0a657029cbf4b2fd4f8bad1ca23f4a99cffe70e93093264",
+    "formalization/Hlawka21/Localized21/Slab110.lean": "acaee800be18f34e14fb6e6565d2404cc2645bd3a4b8c32e6231ae9451c2e806",
+    "formalization/Hlawka21/Window21/Slab110.lean": "6833431474796bf578339ce64e0a27e51b7531e3ce8897025997327ad79e209d",
+    "formalization/Hlawka21/Localized21/Slab111.lean": "7f83f2e8cb3ed1c4b44bce2b0faf36eac85e62690fb1649f30f8528b13caf66c",
+    "formalization/Hlawka21/Window21/Slab111.lean": "d049b8ea05f33241b070b22cc1245ce17cbe4e4f1ddb6e6b2e19314f4310a8a8",
+    "formalization/Hlawka21/Real21/Chunk07.lean": "e67a330687ab0418507eb3351af6ba03a867510685b1acabfc567bc6692c766c",
+    "formalization/Hlawka21/Localized21/Slab112.lean": "da59683ccd5e16e9134c060f819d2e23668ef002841b55242a86f9f28450c3b0",
+    "formalization/Hlawka21/Window21/Slab112.lean": "22088126f814f8bdcdc301a0c134b8c355917e85bb28e1d5a84de2a96f1fe828",
+    "formalization/Hlawka21/Localized21/Slab113.lean": "a745eac839cd494b2f65e1db0613bab973078808160b9760c923982ef706f046",
+    "formalization/Hlawka21/Window21/Slab113.lean": "150234bcc2285181e9b142200afdf66525a6b180c6ea4867f17b676e8d58ad39",
+    "formalization/Hlawka21/Localized21/Slab114.lean": "cbe6597aa191b7ebcf13cb82ce4b3482752eed67d7c022a65288b4f7c1fe0788",
+    "formalization/Hlawka21/Window21/Slab114.lean": "2f0311d306f9aa6c9ffa9277b6537e5c085f9eaa5a729ac9a0a604c66f34f670",
+    "formalization/Hlawka21/Localized21/Slab115.lean": "6f0ee081c704822e65b8ed4dacfbfe725619c777b553800b6a77a6e80b1b50f6",
+    "formalization/Hlawka21/Window21/Slab115.lean": "6db3a3b0dcd392a317c44614f559a988602a1f235d2c9255837afa744a050e9e",
+    "formalization/Hlawka21/Localized21/Slab116.lean": "f8356c530b26eccc21132ed0d1021e7b4be459b3e8396e40644fde118cbb2aaa",
+    "formalization/Hlawka21/Window21/Slab116.lean": "5660ab5279de9f4954b2f5c201f3406068e16c79276ac0a667d9916a77e7c783",
+    "formalization/Hlawka21/Localized21/Slab117.lean": "0de68cdaac4f24267fe9a9b98d25856ab66a9a635c46b99322e7b39da0d843e2",
+    "formalization/Hlawka21/Window21/Slab117.lean": "e8a51b81d2fa36aa4e7fdf3bf10d364da92dc39b5c2f55f67e685883722bd9bd",
+    "formalization/Hlawka21/Localized21/Slab118.lean": "1f638ae3943bcacb979f1ebcf8b7af4476bf1b1394aa76b2eba05802f5731464",
+    "formalization/Hlawka21/Window21/Slab118.lean": "fbec9bae9711cd2d66fdc0baac045a15bac29ac77f9d7625c6a03ac046257213",
+    "formalization/Hlawka21/Localized21/Slab119.lean": "24161f4ce488adfc5b7786f12949ad9615bd660bdc3f1a707a5441ce45eda788",
+    "formalization/Hlawka21/Window21/Slab119.lean": "d58a3a96b7b6093f8a4460965efeedf7221b5f6fddcab021bb988d19322bc3bf",
+    "formalization/Hlawka21/Localized21/Slab120.lean": "9ee4fcb03ce2f7a1b8767b8badef182c7aa564b7a5ef39f9ba83ca82a9e48986",
+    "formalization/Hlawka21/Window21/Slab120.lean": "bf26c264dc9092ecdd018b189797ddf5d11aed37fc5c6ba571913ccd6297ee4a",
+    "formalization/Hlawka21/Localized21/Slab121.lean": "07aaad3cca81a45d839f6c9ac9eac9e962e8d1b8a0650b1f39861f5afc636b88",
+    "formalization/Hlawka21/Window21/Slab121.lean": "829dd6474ba3ea642b4a5719795ea6c43cf313d5fd6eae05948c305cb6cd9279",
+    "formalization/Hlawka21/Localized21/Slab122.lean": "1a9af5a1c8ba5e9c88bd9d6a7a316b41a71780bb7359fde4b0700b302cf27b4c",
+    "formalization/Hlawka21/Window21/Slab122.lean": "07e67060fbfadb02e15e3d6ed95deb97c3f417f9d7be4c197676193b4f2cb543",
+    "formalization/Hlawka21/Localized21/Slab123.lean": "155176d7c2b3ce0fd9b995fc6be977195f15c52d798ab63c466a40911d5d1f3e",
+    "formalization/Hlawka21/Window21/Slab123.lean": "c560b4659a80aad0cb1cf54f7bb327c0314a9c51192870b030464548c2cf4de8",
+    "formalization/Hlawka21/Localized21/Slab124.lean": "d3711c3143aed44d180ea8f1817fbe7e8182eab9ec7f5431742f23d1f221def9",
+    "formalization/Hlawka21/Window21/Slab124.lean": "d922afe202d476845d3b310c89aaaeb02bd08a20cd277361c9434fee943a7b10",
+    "formalization/Hlawka21/Localized21/Slab125.lean": "209254b9c1c8d442f8ce9ac2640dba2d0ccbcd3220c0797c4f43775fa42f215e",
+    "formalization/Hlawka21/Window21/Slab125.lean": "717e36b6a19e61902d17b3ce093e6558b6d0c6a58af91ff7d8fdbb99d6f30f1d",
+    "formalization/Hlawka21/Localized21/Slab126.lean": "7cdedea7eb123116000faedcdcf0dfe520bcbe16cf0439b3577824bb776bf5bf",
+    "formalization/Hlawka21/Window21/Slab126.lean": "bc0286e58bf89a690193943cc0967197ad40e95893951bec751d5191775380ae",
+    "formalization/Hlawka21/Localized21/Slab127.lean": "1b80a59bd3667fee970e572b6873b4cb187aaabf39f548ec1430669f77986e19",
+    "formalization/Hlawka21/Window21/Slab127.lean": "6d1f56e9613a1df231b8ab90c8fb498c5732f02297340a7f8ead5eaa60ecaea9",
+    "formalization/Hlawka21/Real21/Chunk08.lean": "6ab04ef314c3806fb494aec949eea4582e9c97dd5f0cf4a13c8e6ca77cb66a68",
+    "formalization/Hlawka21/Localized21/Slab128.lean": "99385212fcfc70498a17668f5fb192b2f79d3bcc509fd2060e23db6aef48c533",
+    "formalization/Hlawka21/Window21/Slab128.lean": "9cf00bc32ecc1137aad7b989b0491c2df4648c49ff1efac8d2f906a5d40f4e24",
+    "formalization/Hlawka21/Localized21/Slab129.lean": "8da6eee2012d01592b76caa3473688b2c7d15a734d2d619c19b34a52cd88019a",
+    "formalization/Hlawka21/Window21/Slab129.lean": "d379746a8c09ea289c61e3983955f960dec78eca5f6be99826037fac8735758f",
+    "formalization/Hlawka21/Localized21/Slab130.lean": "4a83354e804d473c08443b29458a8cd630d0ac9270042ee22c2694e604264e74",
+    "formalization/Hlawka21/Window21/Slab130.lean": "8a279525c8dd8447ff5c10235eb940840134bf0d3f9a4b0b07af26a93ea45678",
+    "formalization/Hlawka21/Localized21/Slab131.lean": "04f7790c585dc58a6f89d4b0807d248a0b1e6c8fd7286023da63f6605265d975",
+    "formalization/Hlawka21/Window21/Slab131.lean": "c294a3e2ea6dca735a4d2edd6a76d58c3417dda046f66bf28c2c9b9cdcdfb526",
+    "formalization/Hlawka21/Localized21/Slab132.lean": "65f2ac2f60bde94dfee39e57c76f781016b4a04051697bd272b3af47c471eaee",
+    "formalization/Hlawka21/Window21/Slab132.lean": "4ee1ce744d18a0ed09ce8f68f0dfb92e11476740ccd060ae5c2559c184a0d95a",
+    "formalization/Hlawka21/Localized21/Slab133.lean": "34894891f6c11cbab3749234d99292a3ae66a1330633b010d31f025cc0c6ced4",
+    "formalization/Hlawka21/Window21/Slab133.lean": "201dada26a224f629e17211a85094872ed0f9f54feed747dac678a57e7f45af1",
+    "formalization/Hlawka21/Localized21/Slab134.lean": "8b84ce18bd39f42db5b38c1b08f8c5bfdd70d2ceb697a0946da03a399008eef7",
+    "formalization/Hlawka21/Window21/Slab134.lean": "c6782cb50bb0a8d625d58f66ca4e290083f2c1422d07bc907f05a4aadaa0aa64",
+    "formalization/Hlawka21/Localized21/Slab135.lean": "ce68cc9c89c9f4b40f75045262eeb8d9e5bde8a7ac68deabfb2e6aa4918912ff",
+    "formalization/Hlawka21/Window21/Slab135.lean": "1f549f6994acdbd50ba11cbcd3638517c6663f6422a47452be7127caddf7c55d",
+    "formalization/Hlawka21/Localized21/Slab136.lean": "99713aaeaa95b0e34440bec3f65f6b9ffade1cb0202d6cb0539f07812d77c09b",
+    "formalization/Hlawka21/Window21/Slab136.lean": "dd3a07b2841bd6228d610fbff8a029c7fb4cf255567a26f94e816e3dd34fa916",
+    "formalization/Hlawka21/Localized21/Slab137.lean": "557ccbfc69da0b67844998859d59501a7369de631e33ab9a2bce61d6d4dfb748",
+    "formalization/Hlawka21/Window21/Slab137.lean": "54be3da92888e2d077977549d393c0ca08d8ef1e3a50f6ae5573558ae748ba22",
+    "formalization/Hlawka21/Localized21/Slab138.lean": "d0a089a082a8a266b2dea09b6a4ff102c4555e55fa1ff1f7a99788a52f223538",
+    "formalization/Hlawka21/Window21/Slab138.lean": "c0f47b943e8e5efe7d90bea460e1663c171721e029be5cf89ae3700eeac9c467",
+    "formalization/Hlawka21/Localized21/Slab139.lean": "56d963855746d6bc052cdbdc9575319cab4f8deac6bf28776d2a5cbedf12c997",
+    "formalization/Hlawka21/Window21/Slab139.lean": "6dfbe04f16a430819ccb276feb2f9963b3f77695acc0ee2b56ed77252b94f6fd",
+    "formalization/Hlawka21/Localized21/Slab140.lean": "795cb37dc926e56deaa16f23ab01ade9864683868543739810bcf2a1c908e9d2",
+    "formalization/Hlawka21/Window21/Slab140.lean": "8a551c379868c654bbe0cc5b4f9477fe5fcd94707258e2c33786156800f2e17f",
+    "formalization/Hlawka21/Localized21/Slab141.lean": "2cff3004025223e81ad9f23cfc067ee29009031fba7b613460f7be4b73a76391",
+    "formalization/Hlawka21/Window21/Slab141.lean": "1f8fb9c1001225d343917e69944e84ca90253acf48c00a4b5f70ee570a433438",
+    "formalization/Hlawka21/Localized21/Slab142.lean": "0c614287b2ccae07e5e6252375f52883793004a8ffd97478963ac757dd10ba7d",
+    "formalization/Hlawka21/Window21/Slab142.lean": "49370ce4a87cc88d1c7ef370281eb79bacb81a0eb1d9194b456fac954315f095",
+    "formalization/Hlawka21/Localized21/Slab143.lean": "619858da4004bb119b174a5ab2bfbe5ac90dd22762404dcb319ce53261413fba",
+    "formalization/Hlawka21/Window21/Slab143.lean": "84bc155775c14526da26eec89dec4f032efdff5aeb80b3bf0a3b11e0305bb088",
+    "formalization/Hlawka21/Real21/Chunk09.lean": "003c4164cc7f20186cb759fc43ab99c7db3143625e1064f621f246fc27940560",
+    "formalization/Hlawka21/Localized21/Slab144.lean": "f1e21a4499f327bf2a773d2ab93a884c5abc77a9ed6b083a775ae1fd980dbdaf",
+    "formalization/Hlawka21/Window21/Slab144.lean": "0f0eb1aaf3a0b5bd078f54bda7fc135ef7caa98de405e7f4ff514d3854806078",
+    "formalization/Hlawka21/Localized21/Slab145.lean": "1cb42ba1f24536f547d5eb87aaaa990bc60899380834141ad6b16d5d649ab91d",
+    "formalization/Hlawka21/Window21/Slab145.lean": "55331e86aa98ffc39dbb4cb03889b0b96e09136338a20610f33f11ada935fd05",
+    "formalization/Hlawka21/Localized21/Slab146.lean": "cfeb7aaca224ce701c344d3eac152debd99b2da6ccd18d995b5a0be51d2072c0",
+    "formalization/Hlawka21/Window21/Slab146.lean": "341879491ebde700a0d04e330c1361d902a8808bcfcc6fb70f5f0246f6df3c47",
+    "formalization/Hlawka21/Localized21/Slab147.lean": "13ef81c907b900a541783f3529a45ecd1fc6058960f23636098d6c2a9ebc4c4f",
+    "formalization/Hlawka21/Window21/Slab147.lean": "e30511e314d59e24d4e825e41e3b525447f63a29a4843a3719b17ee2afa4918e",
+    "formalization/Hlawka21/Localized21/Slab148.lean": "9697e405c60bb1c92a4235943d5afb7fe19585328ef8c4f0ad43513fd8f86546",
+    "formalization/Hlawka21/Window21/Slab148.lean": "6a9574caa0ca7f2ffb57fd73e4bdabb2e23bbe5b2400369c18aa5981040fcfcb",
+    "formalization/Hlawka21/Localized21/Slab149.lean": "b5b3606ed82cf3dadec1ee6a37658205c1c87bc6f2d4e5613e2a419b166184de",
+    "formalization/Hlawka21/Window21/Slab149.lean": "92a1e3ed357edcf87a3f6e4d43685befb8c7c61fc4e71da8c26c772e11bcfd67",
+    "formalization/Hlawka21/Localized21/Slab150.lean": "cd65a4ee106f601a67672eb42bff935c4945d2347e2c8defd355130e7d2e66ea",
+    "formalization/Hlawka21/Window21/Slab150.lean": "c115a1e85158bde7eb00175504970f4c83ba7cfbec8c12fcbf7894e45baa66cd",
+    "formalization/Hlawka21/Localized21/Slab151.lean": "b6e6e7b153503498c20ee1d872d8704a3ec8e758187b034c8e20c17e244a9cbe",
+    "formalization/Hlawka21/Window21/Slab151.lean": "8e166a9953959d7b102d7b091929520b70af7e6f0244c7c512369250481e7cae",
+    "formalization/Hlawka21/Localized21/Slab152.lean": "7610029db30442951cc3606d547b9592e7e979a3fc9b6a3d63906e2aefa9d19d",
+    "formalization/Hlawka21/Window21/Slab152.lean": "e0fa5c7f6df093aabcb977ae62bb3f63b18c9b16e02cfc1d68b6e3f6916debe4",
+    "formalization/Hlawka21/Localized21/Slab153.lean": "66449c941f9efbc1eb4cdcf84658a0216ba8a71b082c3ab412c12ede6a051b47",
+    "formalization/Hlawka21/Window21/Slab153.lean": "84d3aee53f8a60829d81b0643a511033d93b1e6c65d1a57858bab77601da4da4",
+    "formalization/Hlawka21/Localized21/Slab154.lean": "93d0df509e1011cf7ec70a82ecde1e6c3cd9c6e86ccef0e9762951796c0ac2f3",
+    "formalization/Hlawka21/Window21/Slab154.lean": "ef7b6680b394c41ef9a11e98e190405403ad6dbbe0180056e96dfb16c1052b82",
+    "formalization/Hlawka21/Localized21/Slab155.lean": "6fad74f2a326006422b9b5b5ce0dd9384a4a3ede32bf8ea691bf79ee04e0b22b",
+    "formalization/Hlawka21/Window21/Slab155.lean": "da6965b8bdff4ecefe0aeef3e16c8f7e3e86dfbb9e17249b8aca7900d9d0c50f",
+    "formalization/Hlawka21/Localized21/Slab156.lean": "b231b46069ba624caa4ab33739362def8986466e99ee269c8375f004d3860b9f",
+    "formalization/Hlawka21/Window21/Slab156.lean": "8d8325c1fd0f562ca648685c03275ba92af928c95dd588c806c16aea559c9c5d",
+    "formalization/Hlawka21/Localized21/Slab157.lean": "12493704d85d8d2cef71f785a8832f2d4df565460bf7378777a7f73162e8c6c5",
+    "formalization/Hlawka21/Window21/Slab157.lean": "aed6cd92e680041ab7089ecf677fe646628473a2f13bdcbbc096fc03f667ff01",
+    "formalization/Hlawka21/Localized21/Slab158.lean": "afa52cbef48427bcee37360df005e2ba5b32dcf45315effbcac99a52994ce2b3",
+    "formalization/Hlawka21/Window21/Slab158.lean": "8754214b0d74c7be1c18e8370ee8ed8725b63fe5965b324fce90344159a6b070",
+    "formalization/Hlawka21/Localized21/Slab159.lean": "855b4ddbb104ee0c05c9ad7e847fc44458109c3943affbb7fa6325981141e55e",
+    "formalization/Hlawka21/Window21/Slab159.lean": "bd61fd6cf95bfbafeec78febb41863de05672434123f877c10a93cd95db8ca3a",
+    "formalization/Hlawka21/Real26/Chunk00.lean": "054d3873e643e2ed83e110fe6ef16bbb7d760513d6f200c4e5d46ac7af66ebbf",
+    "formalization/Hlawka21/Localized26/Slab000.lean": "a4a1a802bd63d2174ec16422858bc2eea92243f853daa0ab5b22554ca32bb7cc",
+    "formalization/Hlawka21/Window26/Slab000.lean": "97c3fac88ae60af9692e10c12c95a8f5f1626528cfc8d8e367507c4e49fa7541",
+    "formalization/Hlawka21/Localized26/Slab001.lean": "106b79d86026775c3fabf563219116e3ed7296bafe4f464c1e9d62f61a1d4ebf",
+    "formalization/Hlawka21/Window26/Slab001.lean": "caeaede4b119136b6f464d937dd594e5b64e0391c0346588d7b5f10b5a115403",
+    "formalization/Hlawka21/Localized26/Slab002.lean": "300c34f6b927be1474c3d10cc9e15895e4619de09500a4111eafd7a80aef50b3",
+    "formalization/Hlawka21/Window26/Slab002.lean": "02f4f42157ee7a7345380c700bbe25d02420e3abba293edc28991543865547f7",
+    "formalization/Hlawka21/Localized26/Slab003.lean": "184c81e6517740096740c2210a6556f6d71bfed6e166393d5b82cff8619e0060",
+    "formalization/Hlawka21/Window26/Slab003.lean": "f4b7ae8df4511105b19ffce50e0bc351493fbf7d261db48f4fb9017d2e9349f9",
+    "formalization/Hlawka21/Localized26/Slab004.lean": "4ebea29f8a9a88c38f1527a0c0fb2f39fdc24cf45074be470993cce1b27d0915",
+    "formalization/Hlawka21/Window26/Slab004.lean": "73aaab26af3a1c1de882b644c20efa6f0a264db9212eafc92ae5da0e57aedbbf",
+    "formalization/Hlawka21/Localized26/Slab005.lean": "844b092fa28573bd0086872439e359afac627df4fcbc6a969941c426b12155f5",
+    "formalization/Hlawka21/Window26/Slab005.lean": "e3ca5069130f39b4bc48276525d325f8c42342a979055c09765c8e4b5f64f887",
+    "formalization/Hlawka21/Localized26/Slab006.lean": "b22c212818f02ac7a7f653da1d56631aaa1caa54223d7352ff17618143d3174c",
+    "formalization/Hlawka21/Window26/Slab006.lean": "902c1043bf2e1ebce370db7ef2cc5a7bea64129ce11902da257ff6599a0ffdb4",
+    "formalization/Hlawka21/Localized26/Slab007.lean": "785112cc3723963e36a651c589a6acc77096d50f8bcdd917f6abf8dc1852e070",
+    "formalization/Hlawka21/Window26/Slab007.lean": "5e92e32c91c48e5aa4f4b15c34dcf373bd873535f5122e618010cc76af3b71bd",
+    "formalization/Hlawka21/Localized26/Slab008.lean": "a939a228e374fa43ec17ed56d018b328c4fa97163fa1095e5311303ac3f403cd",
+    "formalization/Hlawka21/Window26/Slab008.lean": "67f3a113d2ad9adcc85fb7a58f8f5d20e51c04b37e01cb321c30a6410603a755",
+    "formalization/Hlawka21/Localized26/Slab009.lean": "dbc71b34ba4e19bbd493376949e7ec03c928c5b7672d4f41b342a74878ad7530",
+    "formalization/Hlawka21/Window26/Slab009.lean": "67d531b003e99d0575f7297d535a83c370ce7fdc981e80e29307f00bf0d4f26a",
+    "formalization/Hlawka21/Localized26/Slab010.lean": "6fd69e140b293fd9a385473b122ae6c95681709347bed4e62aa03396dbbf7304",
+    "formalization/Hlawka21/Window26/Slab010.lean": "1acb5c41d720de57b25b4603a5e50ff2b305515f4af876d66719ce29ee464f3d",
+    "formalization/Hlawka21/Localized26/Slab011.lean": "2177363157a24a7fcaf43f45e26fe673cc994812da17a5d7c100f887d36ab927",
+    "formalization/Hlawka21/Window26/Slab011.lean": "67a8d96f03e2a98ec5f70429d1d59929405c082a221982dfe347e42f492367ca",
+    "formalization/Hlawka21/Localized26/Slab012.lean": "addf599a02ba4fc51bd79682be60b349e000d58f229138e5ce79a37f2e5fc625",
+    "formalization/Hlawka21/Window26/Slab012.lean": "2e4a2713dc308fc8ec5ec4431d78d09d86e2844e223cd5aefd144ec86931b076",
+    "formalization/Hlawka21/Localized26/Slab013.lean": "eb28567e4351061b3b382497a407b6023246101f2eea33088e9d7b7a51bb0447",
+    "formalization/Hlawka21/Window26/Slab013.lean": "736a87de941571b88743f61522ad71ef63baab4b3fc30ec64da2b83ff5943d23",
+    "formalization/Hlawka21/Localized26/Slab014.lean": "df4eed729a3e46d5de19f7b6585b69128efbddc241dd5a0c81421886f541641e",
+    "formalization/Hlawka21/Window26/Slab014.lean": "6b52be980ad86c45cac82b27e0ac655396e41b6d0487d173e06f1dbb38b4a340",
+    "formalization/Hlawka21/Localized26/Slab015.lean": "0b9187eb5ea0a00bf0d352ac8c3c58d92c2aeedd9f0d46bf7ee5afa11c518732",
+    "formalization/Hlawka21/Window26/Slab015.lean": "464ac2d0f3e435e44b6cd94a4f1b42ce4423045a1ae9a17eb2066f8b2cfa243f",
+    "formalization/Hlawka21/Real26/Chunk01.lean": "aba576d21c0dad9bfb2444934822baa7708bce25d68369e96a9de5134b9d71e6",
+    "formalization/Hlawka21/Localized26/Slab016.lean": "e4d852dfd384c29b31652179016325f29e4d36b06324ce4463f0c9582aa9dcb0",
+    "formalization/Hlawka21/Window26/Slab016.lean": "e5c2f087b001dbfaf1526a772f371bc9f4d729d2f06b2d1fccd3179aa97a1bfa",
+    "formalization/Hlawka21/Localized26/Slab017.lean": "46f973075497c5a7d81c18483f6fd1671ba6a9c4beb569ea436022ae8a829af0",
+    "formalization/Hlawka21/Window26/Slab017.lean": "ac6c4217e1a7737fc97bc54830b7249e55e98c701a1641d85ee1f648143e9ed1",
+    "formalization/Hlawka21/Localized26/Slab018.lean": "3ab10fba26227be0a19de27ab08f031970f2b8cee33d0003fd97130499cb4570",
+    "formalization/Hlawka21/Window26/Slab018.lean": "e133c86af9cf2706f276cb498e3a7dcb92843a4a4cfa592e581edeb8a092e5ff",
+    "formalization/Hlawka21/Localized26/Slab019.lean": "3b5716eb21e237ae6fedd74d4fe014849e76677fb023ed09dd617bfc96c8fec5",
+    "formalization/Hlawka21/Window26/Slab019.lean": "8e93640861257363c5e25783baf235975aa08a12a0ca78fb815c3dd4fda304aa",
+    "formalization/Hlawka21/Localized26/Slab020.lean": "f329b42767cd7388f21a01abf0b4fee40ab43d191a5a0e8759752d89eb544f78",
+    "formalization/Hlawka21/Window26/Slab020.lean": "194e694971001c2c62f68384cc72e1b93f371a8f6d33ba22a0f1fe1acb381def",
+    "formalization/Hlawka21/Localized26/Slab021.lean": "184d16ddb9be368e29beea7912f921aa0782eab1f18295107ad88b7e824c2ebc",
+    "formalization/Hlawka21/Window26/Slab021.lean": "c20ca8b4d3a5b7eac9720ae3557a143c3f63f18c2c26a36d49d8b8a1aee384c2",
+    "formalization/Hlawka21/Localized26/Slab022.lean": "f400661e11d9ea0ebad8d3edcc94e668086d58002c9248888d7d7442c685253f",
+    "formalization/Hlawka21/Window26/Slab022.lean": "e517d4808ca1609d8c79c6dd0c7ce751c597fe56c81d87c58c7379a0ffdb1dfc",
+    "formalization/Hlawka21/Localized26/Slab023.lean": "4b5edcb6aa0a3d1c7ddf454995ee524942882c0bcf51ac9905722bf42bdb0a7c",
+    "formalization/Hlawka21/Window26/Slab023.lean": "06c3a663cb753192a2fe371011b0dfb5ee311e777d26c56e95a03d54e8126237",
+    "formalization/Hlawka21/Localized26/Slab024.lean": "c9ec69caa236f35bf5746caaac3726cb4af7585fa8de324a1bb4f343ae6a21c2",
+    "formalization/Hlawka21/Window26/Slab024.lean": "791a4328e945ca7d9212c74df67d5858ae51276fb5bd75d90d510a37e8f7d373",
+    "formalization/Hlawka21/Localized26/Slab025.lean": "1e2a5df79c90e63226309dbb0b36fc7e1194a91c89aae14eb0bcf12143f7807d",
+    "formalization/Hlawka21/Window26/Slab025.lean": "d069cb5d0ac4113453e72d92fddc91b1f3694d686aa9d480bd60ce9a388a03b9",
+    "formalization/Hlawka21/Localized26/Slab026.lean": "4a0a41a72e258a248d2b8f58d1b31f319a98fd98b64769458dad33ce7d1ac238",
+    "formalization/Hlawka21/Window26/Slab026.lean": "b78cad596b852e59f70ae5494f6e33279703de1bec46b3b6f123e7abeffa8bb3",
+    "formalization/Hlawka21/Localized26/Slab027.lean": "88932f9e3a8f68174b19fc76fd28b65d2c58a378dfcca769d2ae57026e26a383",
+    "formalization/Hlawka21/Window26/Slab027.lean": "5ad7d7c0914b050701fbfed0430d9e3f2a8d3dc4254be9cb5ad2b41801539f56",
+    "formalization/Hlawka21/Localized26/Slab028.lean": "f809bcecff9bfb396cb95f68fc481523a8b1e66ce1d7dff2705aa78337b252f2",
+    "formalization/Hlawka21/Window26/Slab028.lean": "06670a9c8309887973afb7acc81c344db1e1493709e6f1d313545116c799c0f0",
+    "formalization/Hlawka21/Localized26/Slab029.lean": "beb51f29dbd81ccc065691e9a312c530ce7be882d80deda1c76474b3ddbe9bd3",
+    "formalization/Hlawka21/Window26/Slab029.lean": "68b8d3c8f5fd1fef367d193b49522b03e8170896af24dff06bf1c3010a373c41",
+    "formalization/Hlawka21/Localized26/Slab030.lean": "7070f963c150fe8539218039b65d4417a440ec978b8f006e5bf48e959e5a123e",
+    "formalization/Hlawka21/Window26/Slab030.lean": "da920776052640ce8b9b80ce4d2cadee9b8e23d574355f2fa6057cfb682daca1",
+    "formalization/Hlawka21/Localized26/Slab031.lean": "1fede7548c52689bf2d8a783c41311305eb20de57a00c01d3f19048ea8d6b905",
+    "formalization/Hlawka21/Window26/Slab031.lean": "cda80a94fc467e45625a2d372744ee8285ae5ac7d7d21dbb8fc6882538e8b23c",
+    "formalization/Hlawka21/Real26/Chunk02.lean": "2bf32a632ad8c507f563f1b777a53a92d120ea6b70ba9c87a5e1af3f2a73af2f",
+    "formalization/Hlawka21/Localized26/Slab032.lean": "ec9be07eeb309c0b4018508f303f9d61d865fff95cbda032f9386a3cf86d3f78",
+    "formalization/Hlawka21/Window26/Slab032.lean": "90df00ca16d37bb06941aec9f95bf913fb08dede1cf65a0164b4b4cd48eea4f4",
+    "formalization/Hlawka21/Localized26/Slab033.lean": "5e4e3584e9a2a177be78ed1511dc56b459e7f5bc8d488b692127b009535949c7",
+    "formalization/Hlawka21/Window26/Slab033.lean": "e3e52ad5085b6717f23840c8a54d8dbc64449c3949e2b7928e004b266a5939c0",
+    "formalization/Hlawka21/Localized26/Slab034.lean": "172aa9918283563ee40067510977376ab6466ed87631b7ec761dbb7e183e1801",
+    "formalization/Hlawka21/Window26/Slab034.lean": "bee8081092768b12544512be0e93b105c91e538ddce9623256c11ad799eceb5f",
+    "formalization/Hlawka21/Localized26/Slab035.lean": "a52defb9d380d8ace8027bde15190843bf4358c9b6b041dc66e647bcf5341e6f",
+    "formalization/Hlawka21/Window26/Slab035.lean": "03386cd98ba47a2b4386754f95f19c400f5e6b4397d4484bbdbad74927c838e0",
+    "formalization/Hlawka21/Localized26/Slab036.lean": "390dcf02175f89ea365452e46eaf54903017bac27d1496a865e18ef3ef98fc67",
+    "formalization/Hlawka21/Window26/Slab036.lean": "da33c0d88e46139c9b71f5a31377b725e41a8d28c9d56d4d055a60dc8602488d",
+    "formalization/Hlawka21/Localized26/Slab037.lean": "c0852ce9806e0f46db60b100b55ca673b049f3662751bf83c231513afc32c1d6",
+    "formalization/Hlawka21/Window26/Slab037.lean": "541d0542e10cb30baeb714452dc8a5a1e9501cc113696e2268c6de41ba4b0834",
+    "formalization/Hlawka21/Localized26/Slab038.lean": "f67748de1cb9b807c46f88605a28632d50958bc39b40fa04a0848f4165df69f9",
+    "formalization/Hlawka21/Window26/Slab038.lean": "1f86bbf854441d07c817168f75254136fc3a9fdaec44a900843a729a3d994ced",
+    "formalization/Hlawka21/Localized26/Slab039.lean": "d55643432d680da19ca213cf2608e3f01fd5917fa4f6a7033a918c6f586bc469",
+    "formalization/Hlawka21/Window26/Slab039.lean": "6b1a93e9d6380d715c173c27c861583b28424110ba642b1d96e4de12d93d1d45",
+    "formalization/Hlawka21/Localized26/Slab040.lean": "ffe15b0a4ee9ec252381cd86e8157aeffae2c31b8db74d10627045e99485b0ce",
+    "formalization/Hlawka21/Window26/Slab040.lean": "0479b483cbdc2bfe4e7d01395690d3f318424fa1dde942118207ee9ed84514aa",
+    "formalization/Hlawka21/Localized26/Slab041.lean": "707057045598a630bd824de27adc4ddb139c276997f7f861c96eb169808bda83",
+    "formalization/Hlawka21/Window26/Slab041.lean": "cb95eefc144195f532ceb48eb439d969ddfbbf8d78e77c61664ddb5e9b9a0d22",
+    "formalization/Hlawka21/Localized26/Slab042.lean": "599e1503ac4e9aaa00b44fb054e6794dee52184ed3acde8ccfb3018665d9c5ad",
+    "formalization/Hlawka21/Window26/Slab042.lean": "9865c54455b995c29e3f192853344605fd27aeb03ebfe813b4399b25be20ce5c",
+    "formalization/Hlawka21/Localized26/Slab043.lean": "927810a020a0e3b322c692b5bd19a9ffaff9ba978fbf403d7f893df915c0b978",
+    "formalization/Hlawka21/Window26/Slab043.lean": "dc0d979bf57e80f1b0949ecb10cff21cf9c4a29e2ec95209e24d5c4c39eee2ff",
+    "formalization/Hlawka21/Localized26/Slab044.lean": "4cf4f0304851bcb5c189d0bb3d26338f89262532d362efe3cc009ca150fa8be1",
+    "formalization/Hlawka21/Window26/Slab044.lean": "29d4d7016b11cae8ef8b209dca7de38ac918e3f1c9bfdb67006727d996b5faee",
+    "formalization/Hlawka21/Localized26/Slab045.lean": "42f85b6e876550c7a706bec997c8e91dd0534cafd8a454be59531071526773a1",
+    "formalization/Hlawka21/Window26/Slab045.lean": "a4226ef97c5d3698eb408f81e2145fb34e4ac2369e36749b5c4234038f6f4d46",
+    "formalization/Hlawka21/Localized26/Slab046.lean": "1c93ae9d325e836db11202577adc525d95f01775fa34085cc38e2831a05a49b5",
+    "formalization/Hlawka21/Window26/Slab046.lean": "1150fa5a20a37c96352bde50585ac450f587c6d046fb1004cc033023f8ebb478",
+    "formalization/Hlawka21/Localized26/Slab047.lean": "cab04cd71ca821e130cd6515862c75eb8e22bfef887bbb480aad75c1a454431b",
+    "formalization/Hlawka21/Window26/Slab047.lean": "38b7a3af1363ce2442dc4e3d0abb16654d29f80acca0ff10a0d7c93ac6dd3746",
+    "formalization/Hlawka21/Real26/Chunk03.lean": "bff2e286b3b48acbffcacfcb23c750c1bc6fbbdf37f321ad925af5d4adbbad02",
+    "formalization/Hlawka21/Localized26/Slab048.lean": "7f18794b10fca212885194992598df69a9237f6847e391362d503473ba70b557",
+    "formalization/Hlawka21/Window26/Slab048.lean": "4033c6608b20070504a2261dc4a39d22c652111e5edc5db19a12cc2d45b1bb33",
+    "formalization/Hlawka21/Localized26/Slab049.lean": "8df5e490f85e93ff3863d2aca876427af6d6c9cb47fa40f9b18ddc5307e26f01",
+    "formalization/Hlawka21/Window26/Slab049.lean": "48cd144d7ca6734947310451b90a51617a5d105640980cf7370396e276d1d89b",
+    "formalization/Hlawka21/Localized26/Slab050.lean": "c059464c96377cb1f09f8c1c505e0fa45886a97e073c06db68fa165d8889f656",
+    "formalization/Hlawka21/Window26/Slab050.lean": "021eb661dbed2f2883ff40f548d1d959a2fe38086a4cf0e74f4c2940670d3780",
+    "formalization/Hlawka21/Localized26/Slab051.lean": "af730ef2496585ed54235f5e2b7e601a6769e32c23d2257ec4930ba92cfa2d59",
+    "formalization/Hlawka21/Window26/Slab051.lean": "0b45bed40b1c16162349df46d833fcee3a18f03c4d1a73fe8ccca24c552d0691",
+    "formalization/Hlawka21/Localized26/Slab052.lean": "dadcf3df4caedfd5e7f04ce51dd9b5c5b706fdab200585bf743003e710596c4d",
+    "formalization/Hlawka21/Window26/Slab052.lean": "2014f415bfcf3c50471559fd653beb016fb7743225b12b4e38e2ed657624a63d",
+    "formalization/Hlawka21/Localized26/Slab053.lean": "fbe88f10010333800040c8f714e848b82541dfc7d7ce6b210b296e0bf56a73a1",
+    "formalization/Hlawka21/Window26/Slab053.lean": "3e04c1b73007901803820ce553b4089976eb293c3a5b290ba2e8c9b4e36272f1",
+    "formalization/Hlawka21/Localized26/Slab054.lean": "d5b7a619af4a50ce1fdb894d6e3f42b985f46a570a4a7b22db75826f297647ad",
+    "formalization/Hlawka21/Window26/Slab054.lean": "4ba8a17827eb1e3a6b2f8a7e3cd6eebda2abdae0ca36f44580262e36cfb008c3",
+    "formalization/Hlawka21/Localized26/Slab055.lean": "5fc9f5523290d1d184bd19cf3ba84d8f50324770bfd51441baa7a3499855bcbf",
+    "formalization/Hlawka21/Window26/Slab055.lean": "22f20ef4bc52af5cfb3aeffc7ef0742469fae4966da28cd9bd67f05c4a4b56b0",
+    "formalization/Hlawka21/Localized26/Slab056.lean": "a2d7ba721cec06eac7ebbefa5335c04a61f4442601a17f936a14232ac71739c2",
+    "formalization/Hlawka21/Window26/Slab056.lean": "9cf71541623df120a981c5f7749833299f7b37b1ff9ccf2d38b995c7790cccfa",
+    "formalization/Hlawka21/Localized26/Slab057.lean": "49451c579ff7b6e80f95889fe82fb7d0d771877c522e37e5247fdf86fc6cf754",
+    "formalization/Hlawka21/Window26/Slab057.lean": "68525028732f0dfc2e08a7a9926182f22ea83b4399afaa42af5bc4362db12d2b",
+    "formalization/Hlawka21/Localized26/Slab058.lean": "9b083d8694fac19c373ca942d39f1440f4e4626b99460bde29bd1e818972bee6",
+    "formalization/Hlawka21/Window26/Slab058.lean": "f0e5ad59dbb73cc7e4216e93ba9096c9fe8984fadd4e2079cb2e36d42b586704",
+    "formalization/Hlawka21/Localized26/Slab059.lean": "29fa8b256f434f8d6f53d1b907d42093f01c982f5be14f7feb00225a5121de2f",
+    "formalization/Hlawka21/Window26/Slab059.lean": "7224993c266237af0594e21c614c287d104cd22c1abc4ca47b08ebedc55cb699",
+    "formalization/Hlawka21/Localized26/Slab060.lean": "0eeef7de36a2bbdca43c2d8a2c147787f7fc157426632a2353d214e6db1cfd15",
+    "formalization/Hlawka21/Window26/Slab060.lean": "a571aa9ba4bdb9f69cbc42b24669da71d17e11c14ac0e5c213056801dfeff6f1",
+    "formalization/Hlawka21/Localized26/Slab061.lean": "21e618f639fbd3f0bc1539411da61d496355e7372c170b576f07aa9063f1c3a7",
+    "formalization/Hlawka21/Window26/Slab061.lean": "6c5843d8047cbac36cd461ebe457a1a3e98f922b618f199d8beb04c365fd2fa4",
+    "formalization/Hlawka21/Localized26/Slab062.lean": "c15e8e7fe2592dc31a0cada1e8e451a66b73d39cdf52a87eb9a29d979ae90895",
+    "formalization/Hlawka21/Window26/Slab062.lean": "ca8d0955e560601cd3c6601b2006d3776034d5394627a0e6bc12ded12609f3c2",
+    "formalization/Hlawka21/Localized26/Slab063.lean": "047b7fa451caaff6c2fb8f509d3df54c7970c7f0288e6927ad37909b9d442808",
+    "formalization/Hlawka21/Window26/Slab063.lean": "5e5a8b706b22b913c0b24775b6f50cacb78aa5f5af230a50ba04b24e4eca783d",
+    "formalization/Hlawka21/Real26/Chunk04.lean": "cee8de0779ad86155c284b2c27c69226c467d7c787dd8e4913a9a3c630e045be",
+    "formalization/Hlawka21/Localized26/Slab064.lean": "d5ba116de1de3cb639629fa0442351a423a490dd3c4d5261a68d980870f36ebb",
+    "formalization/Hlawka21/Window26/Slab064.lean": "0c495919fe9627bb3aa981193b0655496e7a8510a0c1490bbe5ca72f3469eaa5",
+    "formalization/Hlawka21/Localized26/Slab065.lean": "99107be201c4c62b62cebba9c3402c8272dad24158b52e6499970d6e404eda2e",
+    "formalization/Hlawka21/Window26/Slab065.lean": "670adad7b2a9dd94a4158c21f7f92527b8906d3ff82b9b78c6288b04e9835a42",
+    "formalization/Hlawka21/Localized26/Slab066.lean": "95612836d9bd749c0f0e490767730d05dbd73767609671fd0a756de646c888e1",
+    "formalization/Hlawka21/Window26/Slab066.lean": "ed830a344b6a84e752a6d82759939da472e560d6cb6d5cb03e5d650d85af0671",
+    "formalization/Hlawka21/Localized26/Slab067.lean": "ccebbdc0fd4093ef2f4bab85db780d4c9664b2796d9f0913cacc10d8afbef8d6",
+    "formalization/Hlawka21/Window26/Slab067.lean": "07079c3bee4e3fa43f00a5a925dccfeec8f1b34baaeca027e16e2b3b8f232083",
+    "formalization/Hlawka21/Localized26/Slab068.lean": "9631c463bce26aa29446714f78f789bd5e7b414ea30f73e56367bd33f7c0df8b",
+    "formalization/Hlawka21/Window26/Slab068.lean": "17afd2bb42b84cc6d0c9aa5b6a5bf5b77252d671c5df4090b92d08ce82fa12be",
+    "formalization/Hlawka21/Localized26/Slab069.lean": "81a882284e061f615f5bc2a6c7a0d7b7266a0794b21f84d3a48dd37a1b5216d8",
+    "formalization/Hlawka21/Window26/Slab069.lean": "8f47f121e44f9811d6bcd380de113af797571c2c4883a28643f7f3c8700255f4",
+    "formalization/Hlawka21/Localized26/Slab070.lean": "f235487a4fdbdd6bc935893af6b43cdfd99f07ed1cd25ebd7d1af9b9890e2637",
+    "formalization/Hlawka21/Window26/Slab070.lean": "7479ba233d8f1597185de0b5e5abfab02fbaaddf091049d2404b09c823388c62",
+    "formalization/Hlawka21/Localized26/Slab071.lean": "a6a8be0cb62b8e095b9c6dd9823ec68d887574de8e591c7560d80ebfb1372ccc",
+    "formalization/Hlawka21/Window26/Slab071.lean": "01c8913d61ecb7deae4fc4a79b45b6931d3650e88ea8649606801d86644c4481",
+    "formalization/Hlawka21/Localized26/Slab072.lean": "9e4562637f2434bec359b99fdfdd3129aa0f607b2cd1532e7ff3fb3add9c46a5",
+    "formalization/Hlawka21/Window26/Slab072.lean": "107235667554a9b92f18b3261b36f7bf8c2e15faafa93bb51959ff3f637349c0",
+    "formalization/Hlawka21/Localized26/Slab073.lean": "7cf23d5b38cf796b4f79d5782fc83ba65cc70d13ba9904b60f84f1ed62a6a94d",
+    "formalization/Hlawka21/Window26/Slab073.lean": "1c4869b636b4ac7a5d266db6a635ffaf1caee1dcc8a7e862143eea3cfc37186f",
+    "formalization/Hlawka21/Localized26/Slab074.lean": "176a2949dc0e86d8e4a0920e7bf8714658f450bf05ee6df8a39d2721a73f65ca",
+    "formalization/Hlawka21/Window26/Slab074.lean": "5645e75990d03b6e32e5497400615ce875a4deea5a443d01fbabb6033f4a16b7",
+    "formalization/Hlawka21/Localized26/Slab075.lean": "40989d6055b6e3729b89bfe987475a46791d13659bb2aca24859f592bcddab4d",
+    "formalization/Hlawka21/Window26/Slab075.lean": "7d5e162c9ad066efa7404f0d4dc57b30cb281532aadd7b46d9d772a44a325720",
+    "formalization/Hlawka21/Localized26/Slab076.lean": "ee7f689a087444299dd83fca9591a4d5cf106c17859f090265f384ad3909f390",
+    "formalization/Hlawka21/Window26/Slab076.lean": "31f0b6ed2cb80d84a871b5cc2616f916a16ec3c412d1cff83b17c38424abedfa",
+    "formalization/Hlawka21/Localized26/Slab077.lean": "86a8679b6870c535b1c8afbbbb955108a3090b1f60a6f6b92631c238f9eb6305",
+    "formalization/Hlawka21/Window26/Slab077.lean": "36cfc85cf6c3d7cfd270fc1a9e153a4c5e2ee2fcaff766c8585b1df72ce5e534",
+    "formalization/Hlawka21/Localized26/Slab078.lean": "1c35ea52de407e3ab43b1e820f8ae5b8c44eb2ef5d70f4c91f150d8e9c060fe2",
+    "formalization/Hlawka21/Window26/Slab078.lean": "21390289302fdd9025955816a6d5c5c72b0da17b284d992595d4e313e67d9cfd",
+    "formalization/Hlawka21/Localized26/Slab079.lean": "6a5fa083752e30e4750abce2ae1f8c5bf28c82ef5400764218cda503938f5208",
+    "formalization/Hlawka21/Window26/Slab079.lean": "39ba9c7faacdf22dd8d8552d723acf9dd7caa2efd6596b210c2efd584a783c2a",
+    "formalization/Hlawka21/Real26/Chunk05.lean": "9a3f0fc74bb509f04731b51bc200d78b31c37f0862f55fd6059c5654c1af9a1b",
+    "formalization/Hlawka21/Localized26/Slab080.lean": "696e8dbaad90e1fdea429eaea03936cf90dee77af138e954e9aa2689d20c6fb1",
+    "formalization/Hlawka21/Window26/Slab080.lean": "d9fe8a4bb8851151167c11329099556b4b780df5d91f7d278c49fd6ec0c23052",
+    "formalization/Hlawka21/Localized26/Slab081.lean": "b9befd9966f8071f8bb274c4721a41e3bd21b4aa5d62388da541cf5a5fe4a095",
+    "formalization/Hlawka21/Window26/Slab081.lean": "976ffe6463b6596e98ed79b9e16daa1555339dcff2f84e6ebb0fc1b915d864df",
+    "formalization/Hlawka21/Localized26/Slab082.lean": "b55202b1d8ffcbdf0d4c690b631bc6d66807ace1e8665ae394d07ff8904555c5",
+    "formalization/Hlawka21/Window26/Slab082.lean": "ffdb6ab5ffa6b07e04b832f92443bac7217a8b502131cb64aabc7ab6cc453bf1",
+    "formalization/Hlawka21/Localized26/Slab083.lean": "19994f1a3942d5dd8b210b089b290b87b93bd6d5f067823d4f28465faf827c6f",
+    "formalization/Hlawka21/Window26/Slab083.lean": "bcd874778f1e2483ce1d6bfe1253ca4b4379b9fbfca2005984885119665727a4",
+    "formalization/Hlawka21/Localized26/Slab084.lean": "8d47d07176778696e8b2cc17ff356ac9c53e8cd1655749bed861d977429e437d",
+    "formalization/Hlawka21/Window26/Slab084.lean": "283e3f6595e0c2aacddf0548446f2f591034f39e88a72490598e6efee34fd370",
+    "formalization/Hlawka21/Localized26/Slab085.lean": "2186ae2110bfdad1706e9d1284ba50ba3271cf1eabc8367e9ef07cae9d11ebc8",
+    "formalization/Hlawka21/Window26/Slab085.lean": "fdfaca40b9bbbb43cb85a173e4c5bea063b559914cf19477c0dd44f605fa4c00",
+    "formalization/Hlawka21/Localized26/Slab086.lean": "68ec35b2f8fc2faa12d354802063ae014dae7d0a07cde9e855a47cfd270cabbc",
+    "formalization/Hlawka21/Window26/Slab086.lean": "c101c327131518ffbd18bc518db569aa5eb54087156f79cb769c3fdb153bbbf8",
+    "formalization/Hlawka21/Localized26/Slab087.lean": "210a9de876cca667392564c412be34036d5fafd5daa377068a82dce4e7789fb4",
+    "formalization/Hlawka21/Window26/Slab087.lean": "4dead223a1728d7448c65ffdbe08dc7fd3a0a3ff4d828693449e4bcea4b4027b",
+    "formalization/Hlawka21/Localized26/Slab088.lean": "8242f0614e15b87a876b03d26e6c5db0fda8d792755e9e3727c2ac7fed23925a",
+    "formalization/Hlawka21/Window26/Slab088.lean": "929b6b08998ab863a93a1747464229c84415bd87c14d4c77defc184e623f7d05",
+    "formalization/Hlawka21/Localized26/Slab089.lean": "20d4ac7253ff24bf5b0b821903dbf990854729e81979bca10b86841fa3914eb0",
+    "formalization/Hlawka21/Window26/Slab089.lean": "2c8aed4a1d456db9d8af2b5e991bc71f0dfa136057e70380e612b0212d18574d",
+    "formalization/Hlawka21/Localized26/Slab090.lean": "4113ad5dc8294cc65caef6f11389c624c9f1ed21ff86c9f0ced4f000d4ba8892",
+    "formalization/Hlawka21/Window26/Slab090.lean": "8127804cf55a17fa3759eb2acf6946946bae15899955ab893690e3ee30f018e4",
+    "formalization/Hlawka21/Localized26/Slab091.lean": "ec4278332336f2b34a463c38f8f3c75587b4d59326047a0f195dddfb5912bc2e",
+    "formalization/Hlawka21/Window26/Slab091.lean": "13b75406eb8cc323a6960bfd6f4a3f90a18d9b5d1fa7b64baa20061a9bf25649",
+    "formalization/Hlawka21/Localized26/Slab092.lean": "93aae7fe61c6c924f53cbbecdb98ea4f17668a58c0e9ea2afc4542094c0d4f63",
+    "formalization/Hlawka21/Window26/Slab092.lean": "e38b07f97bfc36c52c1d449eaa89d4aead1bac3c671d06e36d986abc6716e3c6",
+    "formalization/Hlawka21/Localized26/Slab093.lean": "3374efd51dc1d10357df192eb94cc578a0a2da28ca06bcebf4ef708cde015b37",
+    "formalization/Hlawka21/Window26/Slab093.lean": "4f36b0ee0a3a5f12bd6effe3db92b4e3d7842cdd3d60d1f42d38e3601dc0cd99",
+    "formalization/Hlawka21/Localized26/Slab094.lean": "1b9aeb4afdcb25bf8a4ccc70bd3a06a705a76788c5371d4706124cccc310dbda",
+    "formalization/Hlawka21/Window26/Slab094.lean": "c8f3c4a33ec94ed5fd92ffbc3c7f915adc790d0f308eb06e382187aa1b5e28a5",
+    "formalization/Hlawka21/Localized26/Slab095.lean": "cf0c7b5fcd6df6b495cfeab3d8d9d58438978adbe38bfb063bd509cb4b0aae1a",
+    "formalization/Hlawka21/Window26/Slab095.lean": "f37626055ef4b5ee176b79b19ddca2a5dd60144b89d17b904542ce090827491b",
+    "formalization/Hlawka21/ComplexBridge.lean": "61609fbfa24d055c2046c647a7462985da32de89bf71cd505b3584dee2daa3e9",
+    "formalization/Hlawka21/Foundation/ComplexTransfer.lean": "265a37aa429a46893bc2c53580cce71c8468cdbd274a3774c1dbbf0c6a0f6285",
+    "formalization/Hlawka21/Foundation/CircleProjection.lean": "11f549274cc080bad246c8fd3c559c23214faf36b90e1b5c96ed8d06492cef57",
+    "formalization/Hlawka21/Foundation/DimensionReduction.lean": "fc5aaa86976e542c7dc95bd7b878845a9073c656ad9f3915b789dff83dba2399",
+    "formalization/Hlawka21/Foundation/WeightedCoordinates.lean": "793388f5a4a8b7db450ba46aff1dc03c6fadb97e97f8b5129ee84d2fa0d3f7e1",
+    "formalization/Hlawka21/Foundation/Sparsification.lean": "566aebea5b660b9d72bb04b4100694e3e8f2bc273a92fdcea4f2464ce605e45c"
+  },
+  "axiom_checks": {
+    "HlawkaSchatten.DiagonalCutoff21.coarse21_stage0": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.coarse21_stage1": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.final_round": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.residual_budget": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.half_tail21": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.refined_tail21": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.refined_tail26": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.coarse26_stage0": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.coarse26_stage1": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.facts_of": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.coarse_box21_oriented": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.coarse_box26_oriented": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.refined_pair_tail21": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.refined_pair_tail26": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.pair_floor_of_norm_data": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.normCappedDomain_convex": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.residual_energy_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.residual_energy_bound_rounded": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.matrix_pair_residual_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.cyclicConstant_upper21": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.cyclicConstant_lower_endpoint": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.lower21_chunk00": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.lower21_chunk01": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.lower21_chunk02": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.lower21_chunk03": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.lower21_chunk04": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.lower21_chunk05": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.lower21_chunk06": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.lower21_chunk07": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.lower21_chunk08": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.lower21_chunk09": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.lower26_chunk00": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.lower26_chunk01": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.lower26_chunk02": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.lower26_chunk03": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.lower26_chunk04": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.lower26_chunk05": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.grouped_curvature_numeric00": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab000": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab000": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab001": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab001": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab002": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab002": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab003": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab003": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab004": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab004": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab005": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab005": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab006": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab006": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab007": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab007": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab008": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab008": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab009": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab009": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab010": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab010": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab011": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab011": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab012": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab012": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab013": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab013": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab014": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab014": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab015": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab015": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab016": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab016": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab017": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab017": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab018": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab018": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab019": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab019": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab020": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab020": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab021": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab021": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab022": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab022": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab023": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab023": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab024": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab024": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab025": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab025": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab026": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab026": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab027": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab027": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab028": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab028": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab029": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab029": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab030": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab031": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.normHessian_lower_norm_cap": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.normHessian_upper_canceled": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.spread_from_residual_interval": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.young_square": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.coefficient_differences_interval": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.error_pairs_sharp_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.canceled_pairs_sq_estimate": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.norm_domain_pair_bounds": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.norm_domain_pair_ratio": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.convexOn_tripleDeficit_of_hessian": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.normCappedDomain_deficit_convex": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.tripleDeficit_normDomain_orbitAverage_le": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.envelope_linear21": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.envelope_linear26": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.scalar_window21": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.scalar_window26": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.cyclicConstant_bounds_window": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.pair_hessian_domain_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.deficit_hessian_domain_nonneg": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.curvature_coefficients_from_ratios": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab030": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab031": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab032": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab032": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab033": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab033": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab034": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab034": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab035": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab035": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab036": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab036": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab037": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab037": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab038": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab038": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab039": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab039": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab040": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab040": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab041": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab041": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab042": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab042": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab043": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab043": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab044": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab044": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab045": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab045": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab046": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab046": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab047": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab047": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab048": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab048": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab049": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab049": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab050": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab050": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab051": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab051": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab052": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab052": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab053": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab053": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab054": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab054": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab055": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab055": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab056": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab056": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab057": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab057": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab058": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab058": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab059": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab059": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab060": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab060": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab061": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab061": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab062": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab062": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab063": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab063": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab064": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab064": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab065": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab065": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab066": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab066": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab067": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab067": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab068": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab068": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab069": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab069": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab070": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab070": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab071": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab071": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab072": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab072": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab073": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab073": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab074": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab074": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab075": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab075": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab076": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab076": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab077": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab077": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab078": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab078": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab079": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab079": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.grouped_curvature_numeric01": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab080": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab080": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab081": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab081": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab082": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab082": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab083": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab083": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab084": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab084": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab085": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab085": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab086": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab086": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab087": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab087": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab088": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab089": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.normDomain_deficit_nonneg_of_convex": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.grouped_deficit_hessian00": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.grouped_deficit_convex00": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.grouped_deficit_nonneg00": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localized_nonneg21_chunk00": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localized_nonneg21_chunk01": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localized_nonneg21_chunk02": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localized_nonneg21_chunk03": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localized_nonneg21_chunk04": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.grouped_deficit_hessian01": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.grouped_deficit_convex01": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.grouped_deficit_nonneg01": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab088": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab089": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab090": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab090": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab091": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab091": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab092": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab092": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab093": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab093": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab094": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab094": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab095": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab095": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localized_nonneg21_chunk05": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab096": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab096": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab097": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab097": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab098": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab098": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab099": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab099": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab100": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab100": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab101": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab101": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab102": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab102": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab103": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab103": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab104": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab104": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab105": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab105": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab106": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab106": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab107": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab107": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab108": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab108": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab109": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab109": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab110": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab110": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab111": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab111": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localized_nonneg21_chunk06": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab112": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab112": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab113": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab113": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab114": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab114": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab115": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab115": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab116": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab116": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab117": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab117": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab118": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab118": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab119": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab119": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab120": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab120": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab121": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab121": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab122": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab122": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab123": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab123": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab124": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab124": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab125": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab125": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab126": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab126": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab127": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab127": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localized_nonneg21_chunk07": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab128": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab128": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab129": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab129": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab130": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab130": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab131": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab131": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab132": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab132": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab133": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab133": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab134": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab134": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab135": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab135": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab136": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab136": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab137": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab137": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab138": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab138": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab139": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab139": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab140": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab140": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab141": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab141": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab142": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab142": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab143": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab143": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localized_nonneg21_chunk08": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab144": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab144": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab145": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab145": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab146": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab146": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab147": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab147": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab148": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab148": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab149": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab149": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab150": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab150": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab151": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab151": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab152": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab152": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab153": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab153": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab154": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab154": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab155": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab155": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab156": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab156": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab157": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab157": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab158": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract21_slab159": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab158": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize21_slab159": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localized_nonneg21_chunk09": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract26_slab000": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize26_slab000": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract26_slab001": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize26_slab001": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract26_slab002": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize26_slab002": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract26_slab003": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize26_slab003": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract26_slab004": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize26_slab004": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract26_slab005": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize26_slab005": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract26_slab006": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize26_slab006": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract26_slab007": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize26_slab007": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract26_slab008": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize26_slab008": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract26_slab009": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize26_slab009": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract26_slab010": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize26_slab010": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract26_slab011": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize26_slab011": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract26_slab012": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize26_slab012": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract26_slab013": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize26_slab013": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract26_slab014": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize26_slab014": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract26_slab015": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize26_slab015": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localized_nonneg26_chunk00": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract26_slab016": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize26_slab016": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract26_slab017": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize26_slab017": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract26_slab018": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize26_slab018": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract26_slab019": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize26_slab019": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract26_slab020": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize26_slab020": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract26_slab021": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize26_slab021": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract26_slab022": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize26_slab022": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract26_slab023": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize26_slab023": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract26_slab024": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize26_slab024": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract26_slab025": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize26_slab025": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract26_slab026": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize26_slab026": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract26_slab027": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize26_slab027": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract26_slab028": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize26_slab028": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract26_slab029": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize26_slab029": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract26_slab030": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize26_slab030": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract26_slab031": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize26_slab031": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localized_nonneg26_chunk01": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract26_slab032": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize26_slab032": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract26_slab033": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize26_slab033": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract26_slab034": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize26_slab034": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract26_slab035": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize26_slab035": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract26_slab036": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize26_slab036": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract26_slab037": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize26_slab037": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract26_slab038": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize26_slab038": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract26_slab039": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize26_slab039": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract26_slab040": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize26_slab040": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract26_slab041": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize26_slab041": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract26_slab042": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize26_slab042": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract26_slab043": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize26_slab043": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract26_slab044": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize26_slab044": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract26_slab045": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize26_slab045": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract26_slab046": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize26_slab046": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract26_slab047": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize26_slab047": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localized_nonneg26_chunk02": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract26_slab048": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize26_slab048": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract26_slab049": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize26_slab049": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract26_slab050": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize26_slab050": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract26_slab051": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize26_slab051": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract26_slab052": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize26_slab052": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract26_slab053": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize26_slab053": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract26_slab054": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize26_slab054": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract26_slab055": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize26_slab055": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract26_slab056": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize26_slab056": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract26_slab057": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize26_slab057": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract26_slab058": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract26_slab060": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize26_slab060": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract26_slab061": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize26_slab061": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract26_slab064": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize26_slab064": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract26_slab065": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize26_slab065": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract26_slab066": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract26_slab067": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize26_slab067": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract26_slab068": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize26_slab068": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract26_slab069": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize26_slab069": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract26_slab070": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize26_slab070": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract26_slab071": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize26_slab071": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract26_slab072": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize26_slab072": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract26_slab073": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract26_slab074": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract26_slab075": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract26_slab076": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize26_slab058": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract26_slab059": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize26_slab059": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract26_slab062": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize26_slab062": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract26_slab063": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize26_slab063": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localized_nonneg26_chunk03": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize26_slab066": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize26_slab073": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize26_slab074": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize26_slab075": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize26_slab076": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract26_slab077": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize26_slab077": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract26_slab078": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize26_slab078": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract26_slab079": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize26_slab079": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localized_nonneg26_chunk04": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract26_slab080": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize26_slab080": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract26_slab081": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize26_slab081": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract26_slab082": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize26_slab082": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract26_slab083": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize26_slab083": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract26_slab084": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize26_slab084": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract26_slab085": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize26_slab085": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract26_slab086": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize26_slab086": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract26_slab087": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize26_slab087": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract26_slab088": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize26_slab088": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract26_slab089": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize26_slab089": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract26_slab090": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize26_slab090": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract26_slab091": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize26_slab091": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract26_slab092": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize26_slab092": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract26_slab093": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize26_slab093": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract26_slab094": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize26_slab094": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.contract26_slab095": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localize26_slab095": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.localized_nonneg26_chunk05": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.real_three_window21": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.real_three_window26": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalConstruction.real_bound_of_fin_three": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalConstruction.lpNorm_finiteProjection": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalConstruction.isLeast_of_real_three_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.complex_least_of_real_three": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "HlawkaSchatten.DiagonalCutoff21.campaign_cutoff21_from_tail": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "elapsed_seconds": 7.52,
+  "scope": "Both unchanged unrestricted real-three window statements and the generic finite-complex-dimensional IsLeast transfer are proved with actual source imports, including dimension zero. The exact cutoff21 conclusion is locally proved conditional only on an explicit cutoff32 tail input. That tail is already Proved on Prove2Me but is not independently rebuilt here; the final server proof must close that dependency and all new components before the original full goal is complete."
+}

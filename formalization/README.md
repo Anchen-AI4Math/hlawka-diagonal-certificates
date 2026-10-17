@@ -1,53 +1,64 @@
 # Cutoff 21 的 Lean 形式化
 
-这里保存实际证明。主目标仍是：对每个实数 `p≥21`，`cyclicConstant p` 是所有有限复维度的统一最小 Hlawka 常数。两个原始标量里程碑已关闭；两个实三维窗口及该全维主目标仍未关闭。
+持续目标是原始 `campaign_cutoff21`：对每个实数 `p≥21`，`cyclicConstant p` 是所有有限复维度的统一最小 Hlawka 常数，包含 `n=0`、零向量和不等范数三元组。**完整平台主目标仍未关闭。**
 
-环境与 Prove2Me campaign 相同：Lean **v4.33.1**，Mathlib **0df444a360eaa60ab8c11dca51a86af692955474**，`autoImplicit=false`。
+固定环境：Lean **v4.33.1**，Mathlib **0df444a360eaa60ab8c11dca51a86af692955474**，`autoImplicit=false`。
 
-| 已证明部分 | 源文件 | 范围 |
-|---|---|---|
-| 原始标量里程碑 `[21,26]`、`[26,32]` | [Window I](platform/Sol_scalar_window21.lean)、[Window II](platform/Sol_scalar_window26.lean) | 两条原始声明未改动，均获平台 `ACCEPTED` / `Proved`，开放依赖为零 |
-| 标量下界、上界与 envelope | [FixedWitness](Hlawka21/FixedWitness.lean)、[CyclicUpper](Hlawka21/CyclicUpper.lean)、[Envelope](Hlawka21/Envelope.lean) | 全实区间；256 段合计 768 个整数幂证书；[证明说明](../docs/lean-scalar.md) |
-| 两个窗口的精确粗定位 | [Coarse21](Hlawka21/Coarse21.lean)、[Coarse26](Hlawka21/Coarse26.lean) | 四组 LP 蕴含，合计 72 个线性结论；从明确列出的有理线性前提证明结论 |
-| 原始范数到粗盒子的连接 | [Window I](Hlawka21/CoarseConnection21.lean)、[Window II](Hlawka21/CoarseConnection26.lean) | 从已归一化、已定向的真实范数数据，经两个 LP 阶段和半尾项估计得到坐标盒；两条平台表述均已接受 |
-| 实际 pair 范数的精化尾项 | [Tail](Hlawka21/Tail.lean)、[RefinedTail](Hlawka21/RefinedTail.lean) | 包含零主坐标；Window I 的裁剪明确使用总范数上界 |
-| 256 段十轮条件收缩 | [通用步骤](Hlawka21/ContractionRounds.lean)、[范数桥接](Hlawka21/ContractionFacts.lean) | 全部逐段内核检查；尚需组合每段根界与预算，接成无条件定位，再完成 Hessian 和平均论证 |
-| 扰动能量估计 | [Residual](Hlawka21/Residual.lean) | 任意有限指标集，含 `rho=0`；证明系数 `3+7*rho+4*rho²` 及其有理放宽 |
-| 六个 pair 残差的矩阵估计 | [PairResidual](Hlawka21/PairResidual.lean) | 从九个任意实矩阵分量与六个有界 theta 系数，证明论文式 (34) 的能量界 |
+| 证明部分 | 当前证据 |
+|---|---|
+| 两个原始标量里程碑 | 平台 `Proved`，开放依赖为零；[原目标读回](../results/prove2me-goals.json) |
+| 任意严格实三维反例到粗盒子 | 两个平台定理 `Proved`，开放依赖为零；[完整证明与记录](../results/prove2me-failure.json)；输入没有归一化、定向、非零或等范数假设 |
+| 256 段实际范数定位 | [全部 PASS](../results/lean-localization-build.json)，含 768 个根界整数幂证书、十轮收缩和线性 pair/offsum floors；不再以抽象 `Facts` 为输入 |
+| 范数 cap 下的 Hessian、凸性与对称平均 | [两组域构建报告](../results/lean-geometry-build.json)；参数区间 `[21,377/16]`、`[377/16,32]`；两组公共域定理已获平台接受 |
+| 两个原始无条件实三维窗口 | [RealWindows](Hlawka21/RealWindows.lean) 已本地内核检查；平台原目标仍 `Open` |
+| 任意有限复维度传递及最小性 | [通用桥接](Hlawka21/ComplexBridge.lean) 本地通过且平台 `Proved`、开放依赖为零；[平台记录](../results/prove2me-analytic-assembly.json) |
+| 全范围最终拼接 | [FullWindow](Hlawka21/FullWindow.lean) 本地证明准确的 cutoff 21 结论，显式输入既有 cutoff 32 尾部；[639 个源码哈希、601 项公理检查](../results/lean-full-window-build.json)；尾部未独立重建，原始平台主目标组合已获 `SKETCH_ACCEPTED`，仍有两个实三维窗口依赖 |
 
-27 个辅助定理均已获 Prove2Me `ACCEPTED`，另有两个原始标量里程碑获 `ACCEPTED` / `Proved`。见 [辅助记录](../results/prove2me-auxiliary.json)、[里程碑记录](../results/prove2me-milestones.json) 和 [五个原目标的服务器读回](../results/prove2me-goals.json)。两个平台未接受的旧粗定位表述已可逆退休，并链接到等价且已接受的对角/非对角分开表述；历史记录保留。
+目前 34 个辅助定理获平台 `ACCEPTED`，另有两个原始标量里程碑 `Proved`。计数与新增证书的异步状态分别见 [status.json](../status.json)、[原辅助记录](../results/prove2me-auxiliary.json)、[任意反例归约](../results/prove2me-failure.json)、[公共解析及传递](../results/prove2me-analytic-assembly.json)、[紧凑证书](../results/prove2me-real-pieces.json)。这不表示原始全维主目标已经通过。
 
-每个接受记录对应 [platform](platform/) 中的完整 `theorem solution` 文件。[辅助编译报告](../results/lean-auxiliary-build.json) 与 [里程碑编译报告](../results/lean-milestone-build.json) 保存确切文件哈希，公理均只有 `propext`、`Classical.choice`、`Quot.sound`。本地 `Theorems/` 镜像导入实际已编译证明，没有用 `sorry` 声明代替平台依赖。
+## 平台提交为何拆分
 
-LP 生成器读取原始 profile 与对偶证书，用其选择线性前提，再由 Lean 的 `linarith` 构造内核可检查的证明；证书和外部数值求解器不是公理。当前仍需从任意反例完成归一化和定向，并将收缩、Hessian、凸域和平均过程接起来。条件收缩和残差矩阵估计均未代替完整实三维证明。
+最初 16 份自包含大文件均在本地通过，但首批 3 份约 500 KB 的文件触发了平台 300 秒超时，见 [本地精确文件检查](../results/lean-real-platform-build.json) 和 [服务器记录](../results/prove2me-real-chunks.json)。保留这些记录，不能把超时改写为已接受。
 
-首次构建：
+公共 Hessian、凸性和平均论证已提取为两条闭合的平台定理。第二版有限证书各覆盖至多 8 段，共 33 份、无缝覆盖原 256 段，但首批三个提交也触发了 300 秒超时；[批量本地检查](../results/lean-real-pieces-build.json) 已中止并保留 11 个精确文件通过记录。因此 33 不是固定剩余定理数，也不能据此估计完成时间。
+
+不导入解析定理的单段实际范数定位已获平台 `ACCEPTED`，读回 `Proved`、零开放依赖：[精确文件通过](../results/lean-localization-platform-build.json)，[平台异步任务](../results/prove2me-localization.json)。目前测试 4 段组合；65 份候选文件无缝覆盖全部 256 段，首个四段组合已在平台闭合，其他文件的本地精确检查与平台验证正在逐批进行，尚不能称为整批通过。这样可分离有限算术、公共引理及解析导入的开销，再确定适合服务器的组合。所有版本仍使用原始 `lpNorm`，没有把目标改成数值有效性谓词，也没有修改原始五个 mission 声明。
+
+## 复现
+
+首次安装依赖：
 
 ```powershell
 cd formalization
 lake update
 lake exe cache get
-lake build
+cd ..
 ```
 
-回到仓库根目录，完整重放新增有限证书：
+固定版本工具链与 Mathlib revision 由检查器再次核对。先复核有限证书，再核验组装；Windows 上限制同时运行的 Lean 进程数：
 
 ```powershell
 python scripts/check_contractor_lean.py --jobs 2
 python scripts/check_scalar_lower_lean.py --jobs 2
+python scripts/check_localization_lean.py --jobs 2
+python scripts/check_real_chunks_lean.py --jobs 2
+python scripts/check_full_window_lean.py
 ```
 
-重新生成并检查全部平台证明及原始标量里程碑：
+`check_full_window_lean.py` 使用实际本地证明，检查两个原始实三维声明、全维复数最小性传递和显式尾部接口，公理只有 `propext`、`Classical.choice`、`Quot.sound`。本地 `Theorems/` 镜像导入实际证明，没有用 `sorry` 或外加公理代替平台依赖。
+
+检查准确的紧凑提交文件：
 
 ```powershell
-python scripts/prepare_platform_proofs.py
-python scripts/prepare_analytic_platform_proofs.py
-python scripts/prepare_scalar_platform_proofs.py
-python scripts/check_lean_proofs.py --jobs 2
+python scripts/prepare_group_domain_platform_proofs.py
+python scripts/prepare_transfer_platform_proof.py
+python scripts/generate_real_pieces.py
+python scripts/prepare_real_piece_platform_proofs.py
 python scripts/build_theorem_mirrors.py
-python scripts/check_lean_proofs.py --manifest formalization/platform/mission-proofs.json --output results/lean-milestone-build.json --jobs 2
+python scripts/check_lean_proofs.py --manifest formalization/platform/analytic-assembly-proofs.json --output results/lean-analytic-assembly-build.json --jobs 2
+python scripts/check_lean_proofs.py --manifest formalization/platform/real-piece-proofs.json --output results/lean-real-pieces-build.json --jobs 2
 ```
 
-这些检查器默认重新执行本地检查；`--reuse` 是显式复用匹配哈希的既有记录，不是独立复验。检查器优先使用已安装的固定版本工具链，并核对 Mathlib revision。当前机器曾使用同一固定版本的隔离构建目录 `.test-tmp/prove2me/lean`；缓存不提交。Windows 上应限制同时运行的 Lean 进程数，镜像构建脚本逐个调度。
+这些检查器默认执行新检查；`--reuse` 只显式复用同一工具链和 Mathlib 下、文件哈希一致的既有 PASS，不是独立复验。`--lean-threads` 可限制每个 Lean 进程的线程数。当前机器使用过相同固定版本的隔离目录 `.test-tmp/prove2me/lean`；缓存不提交。
 
-完整剩余工作见 [下一步](../docs/next-steps.md)。原始五个目标中只有两个标量目标已证明；另三个仍为开放任务。[任务材料](../platform/README.md) 的声明占位只描述目标，不能作为证明使用。
+原始 `sources/*.lean` 保持不改。原作者及平台贡献者的来源、许可与改编哈希见 [Foundation provenance](Hlawka21/Foundation/provenance.json) 和 [来源声明](../sources/NOTICE.md)。进一步工作见 [下一步](../docs/next-steps.md)。

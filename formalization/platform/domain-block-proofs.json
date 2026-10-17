@@ -1,0 +1,1107 @@
+[
+  {
+    "key": "localized_domain4_21_00",
+    "theorem_name": "HlawkaSchatten.DiagonalCutoff21.localized_domain4_21_00",
+    "theorem_title": "Actual norm localization block [21,169/8]",
+    "formal_statement": "theorem HlawkaSchatten.DiagonalCutoff21.localized_domain4_21_00 :\n    ∀ p : ℝ, (21 : ℝ) ≤ p → p ≤ (169/8 : ℝ) → ∀ X : Fin 3 → Fin 3 → ℝ,\n      (∀ i, -(607/500 : ℝ) ≤ X i i ∧ X i i ≤ -(189/500 : ℝ)) →\n      (∀ j i, j ≠ i → (349/500 : ℝ) ≤ X j i ∧ X j i ≤ (607/500 : ℝ)) →\n      lpNorm p (X 0) + lpNorm p (X 1) + lpNorm p (X 2) = 3 →\n      lpNorm p (X 0 + X 1 + X 2) < (3033/2500 : ℝ) →\n      pairGapSum (lpNorm p) (X 0) (X 1) (X 2) < 2 / ((273/625 : ℝ)*p) →\n      (∀ j, -(5559/5000 : ℝ) ≤ X j j ∧ X j j ≤ -(881/2000 : ℝ)) ∧\n      (∀ j i, j ≠ i → (3779/5000 : ℝ) ≤ X j i ∧ X j i ≤ (11847/10000 : ℝ)) ∧\n      (∀ j, lpNorm p (X j) ≤ (1193402307/1000000000 : ℝ)) ∧\n      (∀ i j k : Fin 3, i ≠ j → i ≠ k → j ≠ k → (1139124440087/716625000000 : ℝ) ≤ X j i + X k i) ∧\n      (3314799982801/573300000000 : ℝ) ≤ X 0 1 + X 0 2 + X 1 0 + X 1 2 + X 2 0 + X 2 1 := by sorry",
+    "preamble": "import Definitions.Def_HlawkaSchatten_GapComparison\nimport Definitions.Def_HlawkaSchatten_DiagonalConstruction_Basic\nopen HlawkaSchatten HlawkaSchatten.DiagonalConstruction\n",
+    "natural_language_statement": "For every real p in [21,169/8], coarse-box original norm data with singleton norm sum three, total norm below 3033/2500, and pair-gap sum below 2/((273/625)p) imply the explicit norm cap and linear bounds of analytic domain 0. This block covers 4 consecutive certified slabs. Unequal singleton norms are allowed.",
+    "source": "Yuxuan Xu, A computer-assisted sharp diagonal Hlawka inequality for real exponents p >= 21, Sections 3-4, https://github.com/Anchen-AI4Math/hlawka-diagonal-certificates/blob/main/paper/main.pdf . Generic contraction framework adapted from @bwdaugherty, Apache-2.0; notices retained.",
+    "tags": [
+      "hlawka-schatten",
+      "localization",
+      "exact-arithmetic"
+    ],
+    "solution_file": "formalization/platform/Sol_localized_domain4_21_00.lean",
+    "solution_sha256": "73a93a14b1240db029fa0c8651c5acb5ea1762b5c3a019fb84a6b3b1746067d5",
+    "explanation": "No platform theorem imports are used. The complete original norm bridge, rational root inequalities, budget and all ten contraction rounds are proved for at most four slabs, then weakened by exact rational comparisons to a common analytic domain. A balanced interval split covers all real exponents in the block. The analytic theorem is deliberately separated from finite localization; no external validity assumption is introduced."
+  },
+  {
+    "key": "localized_domain4_21_01",
+    "theorem_name": "HlawkaSchatten.DiagonalCutoff21.localized_domain4_21_01",
+    "theorem_title": "Actual norm localization block [169/8,85/4]",
+    "formal_statement": "theorem HlawkaSchatten.DiagonalCutoff21.localized_domain4_21_01 :\n    ∀ p : ℝ, (169/8 : ℝ) ≤ p → p ≤ (85/4 : ℝ) → ∀ X : Fin 3 → Fin 3 → ℝ,\n      (∀ i, -(607/500 : ℝ) ≤ X i i ∧ X i i ≤ -(189/500 : ℝ)) →\n      (∀ j i, j ≠ i → (349/500 : ℝ) ≤ X j i ∧ X j i ≤ (607/500 : ℝ)) →\n      lpNorm p (X 0) + lpNorm p (X 1) + lpNorm p (X 2) = 3 →\n      lpNorm p (X 0 + X 1 + X 2) < (3033/2500 : ℝ) →\n      pairGapSum (lpNorm p) (X 0) (X 1) (X 2) < 2 / ((273/625 : ℝ)*p) →\n      (∀ j, -(5559/5000 : ℝ) ≤ X j j ∧ X j j ≤ -(881/2000 : ℝ)) ∧\n      (∀ j i, j ≠ i → (3779/5000 : ℝ) ≤ X j i ∧ X j i ≤ (11847/10000 : ℝ)) ∧\n      (∀ j, lpNorm p (X j) ≤ (1193402307/1000000000 : ℝ)) ∧\n      (∀ i j k : Fin 3, i ≠ j → i ≠ k → j ≠ k → (1139124440087/716625000000 : ℝ) ≤ X j i + X k i) ∧\n      (3314799982801/573300000000 : ℝ) ≤ X 0 1 + X 0 2 + X 1 0 + X 1 2 + X 2 0 + X 2 1 := by sorry",
+    "preamble": "import Definitions.Def_HlawkaSchatten_GapComparison\nimport Definitions.Def_HlawkaSchatten_DiagonalConstruction_Basic\nopen HlawkaSchatten HlawkaSchatten.DiagonalConstruction\n",
+    "natural_language_statement": "For every real p in [169/8,85/4], coarse-box original norm data with singleton norm sum three, total norm below 3033/2500, and pair-gap sum below 2/((273/625)p) imply the explicit norm cap and linear bounds of analytic domain 0. This block covers 4 consecutive certified slabs. Unequal singleton norms are allowed.",
+    "source": "Yuxuan Xu, A computer-assisted sharp diagonal Hlawka inequality for real exponents p >= 21, Sections 3-4, https://github.com/Anchen-AI4Math/hlawka-diagonal-certificates/blob/main/paper/main.pdf . Generic contraction framework adapted from @bwdaugherty, Apache-2.0; notices retained.",
+    "tags": [
+      "hlawka-schatten",
+      "localization",
+      "exact-arithmetic"
+    ],
+    "solution_file": "formalization/platform/Sol_localized_domain4_21_01.lean",
+    "solution_sha256": "b9ca942ba8780f1d16b82800f9b82aad4f097d61fa12657c78239907ffc893e2",
+    "explanation": "No platform theorem imports are used. The complete original norm bridge, rational root inequalities, budget and all ten contraction rounds are proved for at most four slabs, then weakened by exact rational comparisons to a common analytic domain. A balanced interval split covers all real exponents in the block. The analytic theorem is deliberately separated from finite localization; no external validity assumption is introduced."
+  },
+  {
+    "key": "localized_domain4_21_02",
+    "theorem_name": "HlawkaSchatten.DiagonalCutoff21.localized_domain4_21_02",
+    "theorem_title": "Actual norm localization block [85/4,171/8]",
+    "formal_statement": "theorem HlawkaSchatten.DiagonalCutoff21.localized_domain4_21_02 :\n    ∀ p : ℝ, (85/4 : ℝ) ≤ p → p ≤ (171/8 : ℝ) → ∀ X : Fin 3 → Fin 3 → ℝ,\n      (∀ i, -(607/500 : ℝ) ≤ X i i ∧ X i i ≤ -(189/500 : ℝ)) →\n      (∀ j i, j ≠ i → (349/500 : ℝ) ≤ X j i ∧ X j i ≤ (607/500 : ℝ)) →\n      lpNorm p (X 0) + lpNorm p (X 1) + lpNorm p (X 2) = 3 →\n      lpNorm p (X 0 + X 1 + X 2) < (3033/2500 : ℝ) →\n      pairGapSum (lpNorm p) (X 0) (X 1) (X 2) < 2 / ((273/625 : ℝ)*p) →\n      (∀ j, -(5559/5000 : ℝ) ≤ X j j ∧ X j j ≤ -(881/2000 : ℝ)) ∧\n      (∀ j i, j ≠ i → (3779/5000 : ℝ) ≤ X j i ∧ X j i ≤ (11847/10000 : ℝ)) ∧\n      (∀ j, lpNorm p (X j) ≤ (1193402307/1000000000 : ℝ)) ∧\n      (∀ i j k : Fin 3, i ≠ j → i ≠ k → j ≠ k → (1139124440087/716625000000 : ℝ) ≤ X j i + X k i) ∧\n      (3314799982801/573300000000 : ℝ) ≤ X 0 1 + X 0 2 + X 1 0 + X 1 2 + X 2 0 + X 2 1 := by sorry",
+    "preamble": "import Definitions.Def_HlawkaSchatten_GapComparison\nimport Definitions.Def_HlawkaSchatten_DiagonalConstruction_Basic\nopen HlawkaSchatten HlawkaSchatten.DiagonalConstruction\n",
+    "natural_language_statement": "For every real p in [85/4,171/8], coarse-box original norm data with singleton norm sum three, total norm below 3033/2500, and pair-gap sum below 2/((273/625)p) imply the explicit norm cap and linear bounds of analytic domain 0. This block covers 4 consecutive certified slabs. Unequal singleton norms are allowed.",
+    "source": "Yuxuan Xu, A computer-assisted sharp diagonal Hlawka inequality for real exponents p >= 21, Sections 3-4, https://github.com/Anchen-AI4Math/hlawka-diagonal-certificates/blob/main/paper/main.pdf . Generic contraction framework adapted from @bwdaugherty, Apache-2.0; notices retained.",
+    "tags": [
+      "hlawka-schatten",
+      "localization",
+      "exact-arithmetic"
+    ],
+    "solution_file": "formalization/platform/Sol_localized_domain4_21_02.lean",
+    "solution_sha256": "2c6933a5d853b5aeecca7839d8b923fa3a17b75a0f057786129f21b4ac2e532f",
+    "explanation": "No platform theorem imports are used. The complete original norm bridge, rational root inequalities, budget and all ten contraction rounds are proved for at most four slabs, then weakened by exact rational comparisons to a common analytic domain. A balanced interval split covers all real exponents in the block. The analytic theorem is deliberately separated from finite localization; no external validity assumption is introduced."
+  },
+  {
+    "key": "localized_domain4_21_03",
+    "theorem_name": "HlawkaSchatten.DiagonalCutoff21.localized_domain4_21_03",
+    "theorem_title": "Actual norm localization block [171/8,43/2]",
+    "formal_statement": "theorem HlawkaSchatten.DiagonalCutoff21.localized_domain4_21_03 :\n    ∀ p : ℝ, (171/8 : ℝ) ≤ p → p ≤ (43/2 : ℝ) → ∀ X : Fin 3 → Fin 3 → ℝ,\n      (∀ i, -(607/500 : ℝ) ≤ X i i ∧ X i i ≤ -(189/500 : ℝ)) →\n      (∀ j i, j ≠ i → (349/500 : ℝ) ≤ X j i ∧ X j i ≤ (607/500 : ℝ)) →\n      lpNorm p (X 0) + lpNorm p (X 1) + lpNorm p (X 2) = 3 →\n      lpNorm p (X 0 + X 1 + X 2) < (3033/2500 : ℝ) →\n      pairGapSum (lpNorm p) (X 0) (X 1) (X 2) < 2 / ((273/625 : ℝ)*p) →\n      (∀ j, -(5559/5000 : ℝ) ≤ X j j ∧ X j j ≤ -(881/2000 : ℝ)) ∧\n      (∀ j i, j ≠ i → (3779/5000 : ℝ) ≤ X j i ∧ X j i ≤ (11847/10000 : ℝ)) ∧\n      (∀ j, lpNorm p (X j) ≤ (1193402307/1000000000 : ℝ)) ∧\n      (∀ i j k : Fin 3, i ≠ j → i ≠ k → j ≠ k → (1139124440087/716625000000 : ℝ) ≤ X j i + X k i) ∧\n      (3314799982801/573300000000 : ℝ) ≤ X 0 1 + X 0 2 + X 1 0 + X 1 2 + X 2 0 + X 2 1 := by sorry",
+    "preamble": "import Definitions.Def_HlawkaSchatten_GapComparison\nimport Definitions.Def_HlawkaSchatten_DiagonalConstruction_Basic\nopen HlawkaSchatten HlawkaSchatten.DiagonalConstruction\n",
+    "natural_language_statement": "For every real p in [171/8,43/2], coarse-box original norm data with singleton norm sum three, total norm below 3033/2500, and pair-gap sum below 2/((273/625)p) imply the explicit norm cap and linear bounds of analytic domain 0. This block covers 4 consecutive certified slabs. Unequal singleton norms are allowed.",
+    "source": "Yuxuan Xu, A computer-assisted sharp diagonal Hlawka inequality for real exponents p >= 21, Sections 3-4, https://github.com/Anchen-AI4Math/hlawka-diagonal-certificates/blob/main/paper/main.pdf . Generic contraction framework adapted from @bwdaugherty, Apache-2.0; notices retained.",
+    "tags": [
+      "hlawka-schatten",
+      "localization",
+      "exact-arithmetic"
+    ],
+    "solution_file": "formalization/platform/Sol_localized_domain4_21_03.lean",
+    "solution_sha256": "8a8feee481093995e88c84fc1c141d10848fc3b3421cc5d7a1e4eba00022d212",
+    "explanation": "No platform theorem imports are used. The complete original norm bridge, rational root inequalities, budget and all ten contraction rounds are proved for at most four slabs, then weakened by exact rational comparisons to a common analytic domain. A balanced interval split covers all real exponents in the block. The analytic theorem is deliberately separated from finite localization; no external validity assumption is introduced."
+  },
+  {
+    "key": "localized_domain4_21_04",
+    "theorem_name": "HlawkaSchatten.DiagonalCutoff21.localized_domain4_21_04",
+    "theorem_title": "Actual norm localization block [43/2,173/8]",
+    "formal_statement": "theorem HlawkaSchatten.DiagonalCutoff21.localized_domain4_21_04 :\n    ∀ p : ℝ, (43/2 : ℝ) ≤ p → p ≤ (173/8 : ℝ) → ∀ X : Fin 3 → Fin 3 → ℝ,\n      (∀ i, -(607/500 : ℝ) ≤ X i i ∧ X i i ≤ -(189/500 : ℝ)) →\n      (∀ j i, j ≠ i → (349/500 : ℝ) ≤ X j i ∧ X j i ≤ (607/500 : ℝ)) →\n      lpNorm p (X 0) + lpNorm p (X 1) + lpNorm p (X 2) = 3 →\n      lpNorm p (X 0 + X 1 + X 2) < (3033/2500 : ℝ) →\n      pairGapSum (lpNorm p) (X 0) (X 1) (X 2) < 2 / ((273/625 : ℝ)*p) →\n      (∀ j, -(5559/5000 : ℝ) ≤ X j j ∧ X j j ≤ -(881/2000 : ℝ)) ∧\n      (∀ j i, j ≠ i → (3779/5000 : ℝ) ≤ X j i ∧ X j i ≤ (11847/10000 : ℝ)) ∧\n      (∀ j, lpNorm p (X j) ≤ (1193402307/1000000000 : ℝ)) ∧\n      (∀ i j k : Fin 3, i ≠ j → i ≠ k → j ≠ k → (1139124440087/716625000000 : ℝ) ≤ X j i + X k i) ∧\n      (3314799982801/573300000000 : ℝ) ≤ X 0 1 + X 0 2 + X 1 0 + X 1 2 + X 2 0 + X 2 1 := by sorry",
+    "preamble": "import Definitions.Def_HlawkaSchatten_GapComparison\nimport Definitions.Def_HlawkaSchatten_DiagonalConstruction_Basic\nopen HlawkaSchatten HlawkaSchatten.DiagonalConstruction\n",
+    "natural_language_statement": "For every real p in [43/2,173/8], coarse-box original norm data with singleton norm sum three, total norm below 3033/2500, and pair-gap sum below 2/((273/625)p) imply the explicit norm cap and linear bounds of analytic domain 0. This block covers 4 consecutive certified slabs. Unequal singleton norms are allowed.",
+    "source": "Yuxuan Xu, A computer-assisted sharp diagonal Hlawka inequality for real exponents p >= 21, Sections 3-4, https://github.com/Anchen-AI4Math/hlawka-diagonal-certificates/blob/main/paper/main.pdf . Generic contraction framework adapted from @bwdaugherty, Apache-2.0; notices retained.",
+    "tags": [
+      "hlawka-schatten",
+      "localization",
+      "exact-arithmetic"
+    ],
+    "solution_file": "formalization/platform/Sol_localized_domain4_21_04.lean",
+    "solution_sha256": "521a19c1e4f778c0d280fbc4d97c87aabbf6a2091a58e6a88ff74175f12e7fcb",
+    "explanation": "No platform theorem imports are used. The complete original norm bridge, rational root inequalities, budget and all ten contraction rounds are proved for at most four slabs, then weakened by exact rational comparisons to a common analytic domain. A balanced interval split covers all real exponents in the block. The analytic theorem is deliberately separated from finite localization; no external validity assumption is introduced."
+  },
+  {
+    "key": "localized_domain4_21_05",
+    "theorem_name": "HlawkaSchatten.DiagonalCutoff21.localized_domain4_21_05",
+    "theorem_title": "Actual norm localization block [173/8,87/4]",
+    "formal_statement": "theorem HlawkaSchatten.DiagonalCutoff21.localized_domain4_21_05 :\n    ∀ p : ℝ, (173/8 : ℝ) ≤ p → p ≤ (87/4 : ℝ) → ∀ X : Fin 3 → Fin 3 → ℝ,\n      (∀ i, -(607/500 : ℝ) ≤ X i i ∧ X i i ≤ -(189/500 : ℝ)) →\n      (∀ j i, j ≠ i → (349/500 : ℝ) ≤ X j i ∧ X j i ≤ (607/500 : ℝ)) →\n      lpNorm p (X 0) + lpNorm p (X 1) + lpNorm p (X 2) = 3 →\n      lpNorm p (X 0 + X 1 + X 2) < (3033/2500 : ℝ) →\n      pairGapSum (lpNorm p) (X 0) (X 1) (X 2) < 2 / ((273/625 : ℝ)*p) →\n      (∀ j, -(5559/5000 : ℝ) ≤ X j j ∧ X j j ≤ -(881/2000 : ℝ)) ∧\n      (∀ j i, j ≠ i → (3779/5000 : ℝ) ≤ X j i ∧ X j i ≤ (11847/10000 : ℝ)) ∧\n      (∀ j, lpNorm p (X j) ≤ (1193402307/1000000000 : ℝ)) ∧\n      (∀ i j k : Fin 3, i ≠ j → i ≠ k → j ≠ k → (1139124440087/716625000000 : ℝ) ≤ X j i + X k i) ∧\n      (3314799982801/573300000000 : ℝ) ≤ X 0 1 + X 0 2 + X 1 0 + X 1 2 + X 2 0 + X 2 1 := by sorry",
+    "preamble": "import Definitions.Def_HlawkaSchatten_GapComparison\nimport Definitions.Def_HlawkaSchatten_DiagonalConstruction_Basic\nopen HlawkaSchatten HlawkaSchatten.DiagonalConstruction\n",
+    "natural_language_statement": "For every real p in [173/8,87/4], coarse-box original norm data with singleton norm sum three, total norm below 3033/2500, and pair-gap sum below 2/((273/625)p) imply the explicit norm cap and linear bounds of analytic domain 0. This block covers 4 consecutive certified slabs. Unequal singleton norms are allowed.",
+    "source": "Yuxuan Xu, A computer-assisted sharp diagonal Hlawka inequality for real exponents p >= 21, Sections 3-4, https://github.com/Anchen-AI4Math/hlawka-diagonal-certificates/blob/main/paper/main.pdf . Generic contraction framework adapted from @bwdaugherty, Apache-2.0; notices retained.",
+    "tags": [
+      "hlawka-schatten",
+      "localization",
+      "exact-arithmetic"
+    ],
+    "solution_file": "formalization/platform/Sol_localized_domain4_21_05.lean",
+    "solution_sha256": "2baf525f86e2b20cef668348d3f56070b2728756671a25e30f7bbfc80943bf4c",
+    "explanation": "No platform theorem imports are used. The complete original norm bridge, rational root inequalities, budget and all ten contraction rounds are proved for at most four slabs, then weakened by exact rational comparisons to a common analytic domain. A balanced interval split covers all real exponents in the block. The analytic theorem is deliberately separated from finite localization; no external validity assumption is introduced."
+  },
+  {
+    "key": "localized_domain4_21_06",
+    "theorem_name": "HlawkaSchatten.DiagonalCutoff21.localized_domain4_21_06",
+    "theorem_title": "Actual norm localization block [87/4,175/8]",
+    "formal_statement": "theorem HlawkaSchatten.DiagonalCutoff21.localized_domain4_21_06 :\n    ∀ p : ℝ, (87/4 : ℝ) ≤ p → p ≤ (175/8 : ℝ) → ∀ X : Fin 3 → Fin 3 → ℝ,\n      (∀ i, -(607/500 : ℝ) ≤ X i i ∧ X i i ≤ -(189/500 : ℝ)) →\n      (∀ j i, j ≠ i → (349/500 : ℝ) ≤ X j i ∧ X j i ≤ (607/500 : ℝ)) →\n      lpNorm p (X 0) + lpNorm p (X 1) + lpNorm p (X 2) = 3 →\n      lpNorm p (X 0 + X 1 + X 2) < (3033/2500 : ℝ) →\n      pairGapSum (lpNorm p) (X 0) (X 1) (X 2) < 2 / ((273/625 : ℝ)*p) →\n      (∀ j, -(5559/5000 : ℝ) ≤ X j j ∧ X j j ≤ -(881/2000 : ℝ)) ∧\n      (∀ j i, j ≠ i → (3779/5000 : ℝ) ≤ X j i ∧ X j i ≤ (11847/10000 : ℝ)) ∧\n      (∀ j, lpNorm p (X j) ≤ (1193402307/1000000000 : ℝ)) ∧\n      (∀ i j k : Fin 3, i ≠ j → i ≠ k → j ≠ k → (1139124440087/716625000000 : ℝ) ≤ X j i + X k i) ∧\n      (3314799982801/573300000000 : ℝ) ≤ X 0 1 + X 0 2 + X 1 0 + X 1 2 + X 2 0 + X 2 1 := by sorry",
+    "preamble": "import Definitions.Def_HlawkaSchatten_GapComparison\nimport Definitions.Def_HlawkaSchatten_DiagonalConstruction_Basic\nopen HlawkaSchatten HlawkaSchatten.DiagonalConstruction\n",
+    "natural_language_statement": "For every real p in [87/4,175/8], coarse-box original norm data with singleton norm sum three, total norm below 3033/2500, and pair-gap sum below 2/((273/625)p) imply the explicit norm cap and linear bounds of analytic domain 0. This block covers 4 consecutive certified slabs. Unequal singleton norms are allowed.",
+    "source": "Yuxuan Xu, A computer-assisted sharp diagonal Hlawka inequality for real exponents p >= 21, Sections 3-4, https://github.com/Anchen-AI4Math/hlawka-diagonal-certificates/blob/main/paper/main.pdf . Generic contraction framework adapted from @bwdaugherty, Apache-2.0; notices retained.",
+    "tags": [
+      "hlawka-schatten",
+      "localization",
+      "exact-arithmetic"
+    ],
+    "solution_file": "formalization/platform/Sol_localized_domain4_21_06.lean",
+    "solution_sha256": "2aec48eab1dc3c8b26cfde55c17445fb97a7a00a4a209818787c9763d3de6313",
+    "explanation": "No platform theorem imports are used. The complete original norm bridge, rational root inequalities, budget and all ten contraction rounds are proved for at most four slabs, then weakened by exact rational comparisons to a common analytic domain. A balanced interval split covers all real exponents in the block. The analytic theorem is deliberately separated from finite localization; no external validity assumption is introduced."
+  },
+  {
+    "key": "localized_domain4_21_07",
+    "theorem_name": "HlawkaSchatten.DiagonalCutoff21.localized_domain4_21_07",
+    "theorem_title": "Actual norm localization block [175/8,22]",
+    "formal_statement": "theorem HlawkaSchatten.DiagonalCutoff21.localized_domain4_21_07 :\n    ∀ p : ℝ, (175/8 : ℝ) ≤ p → p ≤ (22 : ℝ) → ∀ X : Fin 3 → Fin 3 → ℝ,\n      (∀ i, -(607/500 : ℝ) ≤ X i i ∧ X i i ≤ -(189/500 : ℝ)) →\n      (∀ j i, j ≠ i → (349/500 : ℝ) ≤ X j i ∧ X j i ≤ (607/500 : ℝ)) →\n      lpNorm p (X 0) + lpNorm p (X 1) + lpNorm p (X 2) = 3 →\n      lpNorm p (X 0 + X 1 + X 2) < (3033/2500 : ℝ) →\n      pairGapSum (lpNorm p) (X 0) (X 1) (X 2) < 2 / ((273/625 : ℝ)*p) →\n      (∀ j, -(5559/5000 : ℝ) ≤ X j j ∧ X j j ≤ -(881/2000 : ℝ)) ∧\n      (∀ j i, j ≠ i → (3779/5000 : ℝ) ≤ X j i ∧ X j i ≤ (11847/10000 : ℝ)) ∧\n      (∀ j, lpNorm p (X j) ≤ (1193402307/1000000000 : ℝ)) ∧\n      (∀ i j k : Fin 3, i ≠ j → i ≠ k → j ≠ k → (1139124440087/716625000000 : ℝ) ≤ X j i + X k i) ∧\n      (3314799982801/573300000000 : ℝ) ≤ X 0 1 + X 0 2 + X 1 0 + X 1 2 + X 2 0 + X 2 1 := by sorry",
+    "preamble": "import Definitions.Def_HlawkaSchatten_GapComparison\nimport Definitions.Def_HlawkaSchatten_DiagonalConstruction_Basic\nopen HlawkaSchatten HlawkaSchatten.DiagonalConstruction\n",
+    "natural_language_statement": "For every real p in [175/8,22], coarse-box original norm data with singleton norm sum three, total norm below 3033/2500, and pair-gap sum below 2/((273/625)p) imply the explicit norm cap and linear bounds of analytic domain 0. This block covers 4 consecutive certified slabs. Unequal singleton norms are allowed.",
+    "source": "Yuxuan Xu, A computer-assisted sharp diagonal Hlawka inequality for real exponents p >= 21, Sections 3-4, https://github.com/Anchen-AI4Math/hlawka-diagonal-certificates/blob/main/paper/main.pdf . Generic contraction framework adapted from @bwdaugherty, Apache-2.0; notices retained.",
+    "tags": [
+      "hlawka-schatten",
+      "localization",
+      "exact-arithmetic"
+    ],
+    "solution_file": "formalization/platform/Sol_localized_domain4_21_07.lean",
+    "solution_sha256": "456f3d9cc8b5b76e0958837f6ce255fa73ab97e6a50a7670c51b11e711f9f1a5",
+    "explanation": "No platform theorem imports are used. The complete original norm bridge, rational root inequalities, budget and all ten contraction rounds are proved for at most four slabs, then weakened by exact rational comparisons to a common analytic domain. A balanced interval split covers all real exponents in the block. The analytic theorem is deliberately separated from finite localization; no external validity assumption is introduced."
+  },
+  {
+    "key": "localized_domain4_21_08",
+    "theorem_name": "HlawkaSchatten.DiagonalCutoff21.localized_domain4_21_08",
+    "theorem_title": "Actual norm localization block [22,177/8]",
+    "formal_statement": "theorem HlawkaSchatten.DiagonalCutoff21.localized_domain4_21_08 :\n    ∀ p : ℝ, (22 : ℝ) ≤ p → p ≤ (177/8 : ℝ) → ∀ X : Fin 3 → Fin 3 → ℝ,\n      (∀ i, -(607/500 : ℝ) ≤ X i i ∧ X i i ≤ -(189/500 : ℝ)) →\n      (∀ j i, j ≠ i → (349/500 : ℝ) ≤ X j i ∧ X j i ≤ (607/500 : ℝ)) →\n      lpNorm p (X 0) + lpNorm p (X 1) + lpNorm p (X 2) = 3 →\n      lpNorm p (X 0 + X 1 + X 2) < (3033/2500 : ℝ) →\n      pairGapSum (lpNorm p) (X 0) (X 1) (X 2) < 2 / ((273/625 : ℝ)*p) →\n      (∀ j, -(5559/5000 : ℝ) ≤ X j j ∧ X j j ≤ -(881/2000 : ℝ)) ∧\n      (∀ j i, j ≠ i → (3779/5000 : ℝ) ≤ X j i ∧ X j i ≤ (11847/10000 : ℝ)) ∧\n      (∀ j, lpNorm p (X j) ≤ (1193402307/1000000000 : ℝ)) ∧\n      (∀ i j k : Fin 3, i ≠ j → i ≠ k → j ≠ k → (1139124440087/716625000000 : ℝ) ≤ X j i + X k i) ∧\n      (3314799982801/573300000000 : ℝ) ≤ X 0 1 + X 0 2 + X 1 0 + X 1 2 + X 2 0 + X 2 1 := by sorry",
+    "preamble": "import Definitions.Def_HlawkaSchatten_GapComparison\nimport Definitions.Def_HlawkaSchatten_DiagonalConstruction_Basic\nopen HlawkaSchatten HlawkaSchatten.DiagonalConstruction\n",
+    "natural_language_statement": "For every real p in [22,177/8], coarse-box original norm data with singleton norm sum three, total norm below 3033/2500, and pair-gap sum below 2/((273/625)p) imply the explicit norm cap and linear bounds of analytic domain 0. This block covers 4 consecutive certified slabs. Unequal singleton norms are allowed.",
+    "source": "Yuxuan Xu, A computer-assisted sharp diagonal Hlawka inequality for real exponents p >= 21, Sections 3-4, https://github.com/Anchen-AI4Math/hlawka-diagonal-certificates/blob/main/paper/main.pdf . Generic contraction framework adapted from @bwdaugherty, Apache-2.0; notices retained.",
+    "tags": [
+      "hlawka-schatten",
+      "localization",
+      "exact-arithmetic"
+    ],
+    "solution_file": "formalization/platform/Sol_localized_domain4_21_08.lean",
+    "solution_sha256": "e5d915299f54af4001cac2d0cc0a0e52994fac281cd15d5558d43ee6f3d5474d",
+    "explanation": "No platform theorem imports are used. The complete original norm bridge, rational root inequalities, budget and all ten contraction rounds are proved for at most four slabs, then weakened by exact rational comparisons to a common analytic domain. A balanced interval split covers all real exponents in the block. The analytic theorem is deliberately separated from finite localization; no external validity assumption is introduced."
+  },
+  {
+    "key": "localized_domain4_21_09",
+    "theorem_name": "HlawkaSchatten.DiagonalCutoff21.localized_domain4_21_09",
+    "theorem_title": "Actual norm localization block [177/8,89/4]",
+    "formal_statement": "theorem HlawkaSchatten.DiagonalCutoff21.localized_domain4_21_09 :\n    ∀ p : ℝ, (177/8 : ℝ) ≤ p → p ≤ (89/4 : ℝ) → ∀ X : Fin 3 → Fin 3 → ℝ,\n      (∀ i, -(607/500 : ℝ) ≤ X i i ∧ X i i ≤ -(189/500 : ℝ)) →\n      (∀ j i, j ≠ i → (349/500 : ℝ) ≤ X j i ∧ X j i ≤ (607/500 : ℝ)) →\n      lpNorm p (X 0) + lpNorm p (X 1) + lpNorm p (X 2) = 3 →\n      lpNorm p (X 0 + X 1 + X 2) < (3033/2500 : ℝ) →\n      pairGapSum (lpNorm p) (X 0) (X 1) (X 2) < 2 / ((273/625 : ℝ)*p) →\n      (∀ j, -(5559/5000 : ℝ) ≤ X j j ∧ X j j ≤ -(881/2000 : ℝ)) ∧\n      (∀ j i, j ≠ i → (3779/5000 : ℝ) ≤ X j i ∧ X j i ≤ (11847/10000 : ℝ)) ∧\n      (∀ j, lpNorm p (X j) ≤ (1193402307/1000000000 : ℝ)) ∧\n      (∀ i j k : Fin 3, i ≠ j → i ≠ k → j ≠ k → (1139124440087/716625000000 : ℝ) ≤ X j i + X k i) ∧\n      (3314799982801/573300000000 : ℝ) ≤ X 0 1 + X 0 2 + X 1 0 + X 1 2 + X 2 0 + X 2 1 := by sorry",
+    "preamble": "import Definitions.Def_HlawkaSchatten_GapComparison\nimport Definitions.Def_HlawkaSchatten_DiagonalConstruction_Basic\nopen HlawkaSchatten HlawkaSchatten.DiagonalConstruction\n",
+    "natural_language_statement": "For every real p in [177/8,89/4], coarse-box original norm data with singleton norm sum three, total norm below 3033/2500, and pair-gap sum below 2/((273/625)p) imply the explicit norm cap and linear bounds of analytic domain 0. This block covers 4 consecutive certified slabs. Unequal singleton norms are allowed.",
+    "source": "Yuxuan Xu, A computer-assisted sharp diagonal Hlawka inequality for real exponents p >= 21, Sections 3-4, https://github.com/Anchen-AI4Math/hlawka-diagonal-certificates/blob/main/paper/main.pdf . Generic contraction framework adapted from @bwdaugherty, Apache-2.0; notices retained.",
+    "tags": [
+      "hlawka-schatten",
+      "localization",
+      "exact-arithmetic"
+    ],
+    "solution_file": "formalization/platform/Sol_localized_domain4_21_09.lean",
+    "solution_sha256": "c3995370731956c767238c832728c702b24f0f75480e289635234ec54329f862",
+    "explanation": "No platform theorem imports are used. The complete original norm bridge, rational root inequalities, budget and all ten contraction rounds are proved for at most four slabs, then weakened by exact rational comparisons to a common analytic domain. A balanced interval split covers all real exponents in the block. The analytic theorem is deliberately separated from finite localization; no external validity assumption is introduced."
+  },
+  {
+    "key": "localized_domain4_21_10",
+    "theorem_name": "HlawkaSchatten.DiagonalCutoff21.localized_domain4_21_10",
+    "theorem_title": "Actual norm localization block [89/4,179/8]",
+    "formal_statement": "theorem HlawkaSchatten.DiagonalCutoff21.localized_domain4_21_10 :\n    ∀ p : ℝ, (89/4 : ℝ) ≤ p → p ≤ (179/8 : ℝ) → ∀ X : Fin 3 → Fin 3 → ℝ,\n      (∀ i, -(607/500 : ℝ) ≤ X i i ∧ X i i ≤ -(189/500 : ℝ)) →\n      (∀ j i, j ≠ i → (349/500 : ℝ) ≤ X j i ∧ X j i ≤ (607/500 : ℝ)) →\n      lpNorm p (X 0) + lpNorm p (X 1) + lpNorm p (X 2) = 3 →\n      lpNorm p (X 0 + X 1 + X 2) < (3033/2500 : ℝ) →\n      pairGapSum (lpNorm p) (X 0) (X 1) (X 2) < 2 / ((273/625 : ℝ)*p) →\n      (∀ j, -(5559/5000 : ℝ) ≤ X j j ∧ X j j ≤ -(881/2000 : ℝ)) ∧\n      (∀ j i, j ≠ i → (3779/5000 : ℝ) ≤ X j i ∧ X j i ≤ (11847/10000 : ℝ)) ∧\n      (∀ j, lpNorm p (X j) ≤ (1193402307/1000000000 : ℝ)) ∧\n      (∀ i j k : Fin 3, i ≠ j → i ≠ k → j ≠ k → (1139124440087/716625000000 : ℝ) ≤ X j i + X k i) ∧\n      (3314799982801/573300000000 : ℝ) ≤ X 0 1 + X 0 2 + X 1 0 + X 1 2 + X 2 0 + X 2 1 := by sorry",
+    "preamble": "import Definitions.Def_HlawkaSchatten_GapComparison\nimport Definitions.Def_HlawkaSchatten_DiagonalConstruction_Basic\nopen HlawkaSchatten HlawkaSchatten.DiagonalConstruction\n",
+    "natural_language_statement": "For every real p in [89/4,179/8], coarse-box original norm data with singleton norm sum three, total norm below 3033/2500, and pair-gap sum below 2/((273/625)p) imply the explicit norm cap and linear bounds of analytic domain 0. This block covers 4 consecutive certified slabs. Unequal singleton norms are allowed.",
+    "source": "Yuxuan Xu, A computer-assisted sharp diagonal Hlawka inequality for real exponents p >= 21, Sections 3-4, https://github.com/Anchen-AI4Math/hlawka-diagonal-certificates/blob/main/paper/main.pdf . Generic contraction framework adapted from @bwdaugherty, Apache-2.0; notices retained.",
+    "tags": [
+      "hlawka-schatten",
+      "localization",
+      "exact-arithmetic"
+    ],
+    "solution_file": "formalization/platform/Sol_localized_domain4_21_10.lean",
+    "solution_sha256": "dd2ae66dccd78efc3577410d345be792334b747f6957482f0cb5564931aa88cc",
+    "explanation": "No platform theorem imports are used. The complete original norm bridge, rational root inequalities, budget and all ten contraction rounds are proved for at most four slabs, then weakened by exact rational comparisons to a common analytic domain. A balanced interval split covers all real exponents in the block. The analytic theorem is deliberately separated from finite localization; no external validity assumption is introduced."
+  },
+  {
+    "key": "localized_domain4_21_11",
+    "theorem_name": "HlawkaSchatten.DiagonalCutoff21.localized_domain4_21_11",
+    "theorem_title": "Actual norm localization block [179/8,45/2]",
+    "formal_statement": "theorem HlawkaSchatten.DiagonalCutoff21.localized_domain4_21_11 :\n    ∀ p : ℝ, (179/8 : ℝ) ≤ p → p ≤ (45/2 : ℝ) → ∀ X : Fin 3 → Fin 3 → ℝ,\n      (∀ i, -(607/500 : ℝ) ≤ X i i ∧ X i i ≤ -(189/500 : ℝ)) →\n      (∀ j i, j ≠ i → (349/500 : ℝ) ≤ X j i ∧ X j i ≤ (607/500 : ℝ)) →\n      lpNorm p (X 0) + lpNorm p (X 1) + lpNorm p (X 2) = 3 →\n      lpNorm p (X 0 + X 1 + X 2) < (3033/2500 : ℝ) →\n      pairGapSum (lpNorm p) (X 0) (X 1) (X 2) < 2 / ((273/625 : ℝ)*p) →\n      (∀ j, -(5559/5000 : ℝ) ≤ X j j ∧ X j j ≤ -(881/2000 : ℝ)) ∧\n      (∀ j i, j ≠ i → (3779/5000 : ℝ) ≤ X j i ∧ X j i ≤ (11847/10000 : ℝ)) ∧\n      (∀ j, lpNorm p (X j) ≤ (1193402307/1000000000 : ℝ)) ∧\n      (∀ i j k : Fin 3, i ≠ j → i ≠ k → j ≠ k → (1139124440087/716625000000 : ℝ) ≤ X j i + X k i) ∧\n      (3314799982801/573300000000 : ℝ) ≤ X 0 1 + X 0 2 + X 1 0 + X 1 2 + X 2 0 + X 2 1 := by sorry",
+    "preamble": "import Definitions.Def_HlawkaSchatten_GapComparison\nimport Definitions.Def_HlawkaSchatten_DiagonalConstruction_Basic\nopen HlawkaSchatten HlawkaSchatten.DiagonalConstruction\n",
+    "natural_language_statement": "For every real p in [179/8,45/2], coarse-box original norm data with singleton norm sum three, total norm below 3033/2500, and pair-gap sum below 2/((273/625)p) imply the explicit norm cap and linear bounds of analytic domain 0. This block covers 4 consecutive certified slabs. Unequal singleton norms are allowed.",
+    "source": "Yuxuan Xu, A computer-assisted sharp diagonal Hlawka inequality for real exponents p >= 21, Sections 3-4, https://github.com/Anchen-AI4Math/hlawka-diagonal-certificates/blob/main/paper/main.pdf . Generic contraction framework adapted from @bwdaugherty, Apache-2.0; notices retained.",
+    "tags": [
+      "hlawka-schatten",
+      "localization",
+      "exact-arithmetic"
+    ],
+    "solution_file": "formalization/platform/Sol_localized_domain4_21_11.lean",
+    "solution_sha256": "1d757844777c111c361348455b4dc4ee0512f7fd4fef5cc6b5872be0cb694277",
+    "explanation": "No platform theorem imports are used. The complete original norm bridge, rational root inequalities, budget and all ten contraction rounds are proved for at most four slabs, then weakened by exact rational comparisons to a common analytic domain. A balanced interval split covers all real exponents in the block. The analytic theorem is deliberately separated from finite localization; no external validity assumption is introduced."
+  },
+  {
+    "key": "localized_domain4_21_12",
+    "theorem_name": "HlawkaSchatten.DiagonalCutoff21.localized_domain4_21_12",
+    "theorem_title": "Actual norm localization block [45/2,181/8]",
+    "formal_statement": "theorem HlawkaSchatten.DiagonalCutoff21.localized_domain4_21_12 :\n    ∀ p : ℝ, (45/2 : ℝ) ≤ p → p ≤ (181/8 : ℝ) → ∀ X : Fin 3 → Fin 3 → ℝ,\n      (∀ i, -(607/500 : ℝ) ≤ X i i ∧ X i i ≤ -(189/500 : ℝ)) →\n      (∀ j i, j ≠ i → (349/500 : ℝ) ≤ X j i ∧ X j i ≤ (607/500 : ℝ)) →\n      lpNorm p (X 0) + lpNorm p (X 1) + lpNorm p (X 2) = 3 →\n      lpNorm p (X 0 + X 1 + X 2) < (3033/2500 : ℝ) →\n      pairGapSum (lpNorm p) (X 0) (X 1) (X 2) < 2 / ((273/625 : ℝ)*p) →\n      (∀ j, -(5559/5000 : ℝ) ≤ X j j ∧ X j j ≤ -(881/2000 : ℝ)) ∧\n      (∀ j i, j ≠ i → (3779/5000 : ℝ) ≤ X j i ∧ X j i ≤ (11847/10000 : ℝ)) ∧\n      (∀ j, lpNorm p (X j) ≤ (1193402307/1000000000 : ℝ)) ∧\n      (∀ i j k : Fin 3, i ≠ j → i ≠ k → j ≠ k → (1139124440087/716625000000 : ℝ) ≤ X j i + X k i) ∧\n      (3314799982801/573300000000 : ℝ) ≤ X 0 1 + X 0 2 + X 1 0 + X 1 2 + X 2 0 + X 2 1 := by sorry",
+    "preamble": "import Definitions.Def_HlawkaSchatten_GapComparison\nimport Definitions.Def_HlawkaSchatten_DiagonalConstruction_Basic\nopen HlawkaSchatten HlawkaSchatten.DiagonalConstruction\n",
+    "natural_language_statement": "For every real p in [45/2,181/8], coarse-box original norm data with singleton norm sum three, total norm below 3033/2500, and pair-gap sum below 2/((273/625)p) imply the explicit norm cap and linear bounds of analytic domain 0. This block covers 4 consecutive certified slabs. Unequal singleton norms are allowed.",
+    "source": "Yuxuan Xu, A computer-assisted sharp diagonal Hlawka inequality for real exponents p >= 21, Sections 3-4, https://github.com/Anchen-AI4Math/hlawka-diagonal-certificates/blob/main/paper/main.pdf . Generic contraction framework adapted from @bwdaugherty, Apache-2.0; notices retained.",
+    "tags": [
+      "hlawka-schatten",
+      "localization",
+      "exact-arithmetic"
+    ],
+    "solution_file": "formalization/platform/Sol_localized_domain4_21_12.lean",
+    "solution_sha256": "7f31d02d7f5f791da129b5504763928249fe54f7b6e928c2a59677eeb3b19ead",
+    "explanation": "No platform theorem imports are used. The complete original norm bridge, rational root inequalities, budget and all ten contraction rounds are proved for at most four slabs, then weakened by exact rational comparisons to a common analytic domain. A balanced interval split covers all real exponents in the block. The analytic theorem is deliberately separated from finite localization; no external validity assumption is introduced."
+  },
+  {
+    "key": "localized_domain4_21_13",
+    "theorem_name": "HlawkaSchatten.DiagonalCutoff21.localized_domain4_21_13",
+    "theorem_title": "Actual norm localization block [181/8,91/4]",
+    "formal_statement": "theorem HlawkaSchatten.DiagonalCutoff21.localized_domain4_21_13 :\n    ∀ p : ℝ, (181/8 : ℝ) ≤ p → p ≤ (91/4 : ℝ) → ∀ X : Fin 3 → Fin 3 → ℝ,\n      (∀ i, -(607/500 : ℝ) ≤ X i i ∧ X i i ≤ -(189/500 : ℝ)) →\n      (∀ j i, j ≠ i → (349/500 : ℝ) ≤ X j i ∧ X j i ≤ (607/500 : ℝ)) →\n      lpNorm p (X 0) + lpNorm p (X 1) + lpNorm p (X 2) = 3 →\n      lpNorm p (X 0 + X 1 + X 2) < (3033/2500 : ℝ) →\n      pairGapSum (lpNorm p) (X 0) (X 1) (X 2) < 2 / ((273/625 : ℝ)*p) →\n      (∀ j, -(5559/5000 : ℝ) ≤ X j j ∧ X j j ≤ -(881/2000 : ℝ)) ∧\n      (∀ j i, j ≠ i → (3779/5000 : ℝ) ≤ X j i ∧ X j i ≤ (11847/10000 : ℝ)) ∧\n      (∀ j, lpNorm p (X j) ≤ (1193402307/1000000000 : ℝ)) ∧\n      (∀ i j k : Fin 3, i ≠ j → i ≠ k → j ≠ k → (1139124440087/716625000000 : ℝ) ≤ X j i + X k i) ∧\n      (3314799982801/573300000000 : ℝ) ≤ X 0 1 + X 0 2 + X 1 0 + X 1 2 + X 2 0 + X 2 1 := by sorry",
+    "preamble": "import Definitions.Def_HlawkaSchatten_GapComparison\nimport Definitions.Def_HlawkaSchatten_DiagonalConstruction_Basic\nopen HlawkaSchatten HlawkaSchatten.DiagonalConstruction\n",
+    "natural_language_statement": "For every real p in [181/8,91/4], coarse-box original norm data with singleton norm sum three, total norm below 3033/2500, and pair-gap sum below 2/((273/625)p) imply the explicit norm cap and linear bounds of analytic domain 0. This block covers 4 consecutive certified slabs. Unequal singleton norms are allowed.",
+    "source": "Yuxuan Xu, A computer-assisted sharp diagonal Hlawka inequality for real exponents p >= 21, Sections 3-4, https://github.com/Anchen-AI4Math/hlawka-diagonal-certificates/blob/main/paper/main.pdf . Generic contraction framework adapted from @bwdaugherty, Apache-2.0; notices retained.",
+    "tags": [
+      "hlawka-schatten",
+      "localization",
+      "exact-arithmetic"
+    ],
+    "solution_file": "formalization/platform/Sol_localized_domain4_21_13.lean",
+    "solution_sha256": "e1faebf80f74df7d4d074918ea7b055e316a4ad9d208d73c53e106ed6713a57c",
+    "explanation": "No platform theorem imports are used. The complete original norm bridge, rational root inequalities, budget and all ten contraction rounds are proved for at most four slabs, then weakened by exact rational comparisons to a common analytic domain. A balanced interval split covers all real exponents in the block. The analytic theorem is deliberately separated from finite localization; no external validity assumption is introduced."
+  },
+  {
+    "key": "localized_domain4_21_14",
+    "theorem_name": "HlawkaSchatten.DiagonalCutoff21.localized_domain4_21_14",
+    "theorem_title": "Actual norm localization block [91/4,183/8]",
+    "formal_statement": "theorem HlawkaSchatten.DiagonalCutoff21.localized_domain4_21_14 :\n    ∀ p : ℝ, (91/4 : ℝ) ≤ p → p ≤ (183/8 : ℝ) → ∀ X : Fin 3 → Fin 3 → ℝ,\n      (∀ i, -(607/500 : ℝ) ≤ X i i ∧ X i i ≤ -(189/500 : ℝ)) →\n      (∀ j i, j ≠ i → (349/500 : ℝ) ≤ X j i ∧ X j i ≤ (607/500 : ℝ)) →\n      lpNorm p (X 0) + lpNorm p (X 1) + lpNorm p (X 2) = 3 →\n      lpNorm p (X 0 + X 1 + X 2) < (3033/2500 : ℝ) →\n      pairGapSum (lpNorm p) (X 0) (X 1) (X 2) < 2 / ((273/625 : ℝ)*p) →\n      (∀ j, -(5559/5000 : ℝ) ≤ X j j ∧ X j j ≤ -(881/2000 : ℝ)) ∧\n      (∀ j i, j ≠ i → (3779/5000 : ℝ) ≤ X j i ∧ X j i ≤ (11847/10000 : ℝ)) ∧\n      (∀ j, lpNorm p (X j) ≤ (1193402307/1000000000 : ℝ)) ∧\n      (∀ i j k : Fin 3, i ≠ j → i ≠ k → j ≠ k → (1139124440087/716625000000 : ℝ) ≤ X j i + X k i) ∧\n      (3314799982801/573300000000 : ℝ) ≤ X 0 1 + X 0 2 + X 1 0 + X 1 2 + X 2 0 + X 2 1 := by sorry",
+    "preamble": "import Definitions.Def_HlawkaSchatten_GapComparison\nimport Definitions.Def_HlawkaSchatten_DiagonalConstruction_Basic\nopen HlawkaSchatten HlawkaSchatten.DiagonalConstruction\n",
+    "natural_language_statement": "For every real p in [91/4,183/8], coarse-box original norm data with singleton norm sum three, total norm below 3033/2500, and pair-gap sum below 2/((273/625)p) imply the explicit norm cap and linear bounds of analytic domain 0. This block covers 4 consecutive certified slabs. Unequal singleton norms are allowed.",
+    "source": "Yuxuan Xu, A computer-assisted sharp diagonal Hlawka inequality for real exponents p >= 21, Sections 3-4, https://github.com/Anchen-AI4Math/hlawka-diagonal-certificates/blob/main/paper/main.pdf . Generic contraction framework adapted from @bwdaugherty, Apache-2.0; notices retained.",
+    "tags": [
+      "hlawka-schatten",
+      "localization",
+      "exact-arithmetic"
+    ],
+    "solution_file": "formalization/platform/Sol_localized_domain4_21_14.lean",
+    "solution_sha256": "d6b07a7eafe72fb2436b1bdeb297d1802423afc0794c53ba9e2518aa2c8fd239",
+    "explanation": "No platform theorem imports are used. The complete original norm bridge, rational root inequalities, budget and all ten contraction rounds are proved for at most four slabs, then weakened by exact rational comparisons to a common analytic domain. A balanced interval split covers all real exponents in the block. The analytic theorem is deliberately separated from finite localization; no external validity assumption is introduced."
+  },
+  {
+    "key": "localized_domain4_21_15",
+    "theorem_name": "HlawkaSchatten.DiagonalCutoff21.localized_domain4_21_15",
+    "theorem_title": "Actual norm localization block [183/8,23]",
+    "formal_statement": "theorem HlawkaSchatten.DiagonalCutoff21.localized_domain4_21_15 :\n    ∀ p : ℝ, (183/8 : ℝ) ≤ p → p ≤ (23 : ℝ) → ∀ X : Fin 3 → Fin 3 → ℝ,\n      (∀ i, -(607/500 : ℝ) ≤ X i i ∧ X i i ≤ -(189/500 : ℝ)) →\n      (∀ j i, j ≠ i → (349/500 : ℝ) ≤ X j i ∧ X j i ≤ (607/500 : ℝ)) →\n      lpNorm p (X 0) + lpNorm p (X 1) + lpNorm p (X 2) = 3 →\n      lpNorm p (X 0 + X 1 + X 2) < (3033/2500 : ℝ) →\n      pairGapSum (lpNorm p) (X 0) (X 1) (X 2) < 2 / ((273/625 : ℝ)*p) →\n      (∀ j, -(5559/5000 : ℝ) ≤ X j j ∧ X j j ≤ -(881/2000 : ℝ)) ∧\n      (∀ j i, j ≠ i → (3779/5000 : ℝ) ≤ X j i ∧ X j i ≤ (11847/10000 : ℝ)) ∧\n      (∀ j, lpNorm p (X j) ≤ (1193402307/1000000000 : ℝ)) ∧\n      (∀ i j k : Fin 3, i ≠ j → i ≠ k → j ≠ k → (1139124440087/716625000000 : ℝ) ≤ X j i + X k i) ∧\n      (3314799982801/573300000000 : ℝ) ≤ X 0 1 + X 0 2 + X 1 0 + X 1 2 + X 2 0 + X 2 1 := by sorry",
+    "preamble": "import Definitions.Def_HlawkaSchatten_GapComparison\nimport Definitions.Def_HlawkaSchatten_DiagonalConstruction_Basic\nopen HlawkaSchatten HlawkaSchatten.DiagonalConstruction\n",
+    "natural_language_statement": "For every real p in [183/8,23], coarse-box original norm data with singleton norm sum three, total norm below 3033/2500, and pair-gap sum below 2/((273/625)p) imply the explicit norm cap and linear bounds of analytic domain 0. This block covers 4 consecutive certified slabs. Unequal singleton norms are allowed.",
+    "source": "Yuxuan Xu, A computer-assisted sharp diagonal Hlawka inequality for real exponents p >= 21, Sections 3-4, https://github.com/Anchen-AI4Math/hlawka-diagonal-certificates/blob/main/paper/main.pdf . Generic contraction framework adapted from @bwdaugherty, Apache-2.0; notices retained.",
+    "tags": [
+      "hlawka-schatten",
+      "localization",
+      "exact-arithmetic"
+    ],
+    "solution_file": "formalization/platform/Sol_localized_domain4_21_15.lean",
+    "solution_sha256": "ff4ec9917008b6d59faa6922556eecde566e66f21da04cb7041bc958b5ecf41d",
+    "explanation": "No platform theorem imports are used. The complete original norm bridge, rational root inequalities, budget and all ten contraction rounds are proved for at most four slabs, then weakened by exact rational comparisons to a common analytic domain. A balanced interval split covers all real exponents in the block. The analytic theorem is deliberately separated from finite localization; no external validity assumption is introduced."
+  },
+  {
+    "key": "localized_domain4_21_16",
+    "theorem_name": "HlawkaSchatten.DiagonalCutoff21.localized_domain4_21_16",
+    "theorem_title": "Actual norm localization block [23,185/8]",
+    "formal_statement": "theorem HlawkaSchatten.DiagonalCutoff21.localized_domain4_21_16 :\n    ∀ p : ℝ, (23 : ℝ) ≤ p → p ≤ (185/8 : ℝ) → ∀ X : Fin 3 → Fin 3 → ℝ,\n      (∀ i, -(607/500 : ℝ) ≤ X i i ∧ X i i ≤ -(189/500 : ℝ)) →\n      (∀ j i, j ≠ i → (349/500 : ℝ) ≤ X j i ∧ X j i ≤ (607/500 : ℝ)) →\n      lpNorm p (X 0) + lpNorm p (X 1) + lpNorm p (X 2) = 3 →\n      lpNorm p (X 0 + X 1 + X 2) < (3033/2500 : ℝ) →\n      pairGapSum (lpNorm p) (X 0) (X 1) (X 2) < 2 / ((273/625 : ℝ)*p) →\n      (∀ j, -(5559/5000 : ℝ) ≤ X j j ∧ X j j ≤ -(881/2000 : ℝ)) ∧\n      (∀ j i, j ≠ i → (3779/5000 : ℝ) ≤ X j i ∧ X j i ≤ (11847/10000 : ℝ)) ∧\n      (∀ j, lpNorm p (X j) ≤ (1193402307/1000000000 : ℝ)) ∧\n      (∀ i j k : Fin 3, i ≠ j → i ≠ k → j ≠ k → (1139124440087/716625000000 : ℝ) ≤ X j i + X k i) ∧\n      (3314799982801/573300000000 : ℝ) ≤ X 0 1 + X 0 2 + X 1 0 + X 1 2 + X 2 0 + X 2 1 := by sorry",
+    "preamble": "import Definitions.Def_HlawkaSchatten_GapComparison\nimport Definitions.Def_HlawkaSchatten_DiagonalConstruction_Basic\nopen HlawkaSchatten HlawkaSchatten.DiagonalConstruction\n",
+    "natural_language_statement": "For every real p in [23,185/8], coarse-box original norm data with singleton norm sum three, total norm below 3033/2500, and pair-gap sum below 2/((273/625)p) imply the explicit norm cap and linear bounds of analytic domain 0. This block covers 4 consecutive certified slabs. Unequal singleton norms are allowed.",
+    "source": "Yuxuan Xu, A computer-assisted sharp diagonal Hlawka inequality for real exponents p >= 21, Sections 3-4, https://github.com/Anchen-AI4Math/hlawka-diagonal-certificates/blob/main/paper/main.pdf . Generic contraction framework adapted from @bwdaugherty, Apache-2.0; notices retained.",
+    "tags": [
+      "hlawka-schatten",
+      "localization",
+      "exact-arithmetic"
+    ],
+    "solution_file": "formalization/platform/Sol_localized_domain4_21_16.lean",
+    "solution_sha256": "3acdc68d39e64b6a2d53b31c4d03523ba317d945df838b6a5631ef4073f1f223",
+    "explanation": "No platform theorem imports are used. The complete original norm bridge, rational root inequalities, budget and all ten contraction rounds are proved for at most four slabs, then weakened by exact rational comparisons to a common analytic domain. A balanced interval split covers all real exponents in the block. The analytic theorem is deliberately separated from finite localization; no external validity assumption is introduced."
+  },
+  {
+    "key": "localized_domain4_21_17",
+    "theorem_name": "HlawkaSchatten.DiagonalCutoff21.localized_domain4_21_17",
+    "theorem_title": "Actual norm localization block [185/8,93/4]",
+    "formal_statement": "theorem HlawkaSchatten.DiagonalCutoff21.localized_domain4_21_17 :\n    ∀ p : ℝ, (185/8 : ℝ) ≤ p → p ≤ (93/4 : ℝ) → ∀ X : Fin 3 → Fin 3 → ℝ,\n      (∀ i, -(607/500 : ℝ) ≤ X i i ∧ X i i ≤ -(189/500 : ℝ)) →\n      (∀ j i, j ≠ i → (349/500 : ℝ) ≤ X j i ∧ X j i ≤ (607/500 : ℝ)) →\n      lpNorm p (X 0) + lpNorm p (X 1) + lpNorm p (X 2) = 3 →\n      lpNorm p (X 0 + X 1 + X 2) < (3033/2500 : ℝ) →\n      pairGapSum (lpNorm p) (X 0) (X 1) (X 2) < 2 / ((273/625 : ℝ)*p) →\n      (∀ j, -(5559/5000 : ℝ) ≤ X j j ∧ X j j ≤ -(881/2000 : ℝ)) ∧\n      (∀ j i, j ≠ i → (3779/5000 : ℝ) ≤ X j i ∧ X j i ≤ (11847/10000 : ℝ)) ∧\n      (∀ j, lpNorm p (X j) ≤ (1193402307/1000000000 : ℝ)) ∧\n      (∀ i j k : Fin 3, i ≠ j → i ≠ k → j ≠ k → (1139124440087/716625000000 : ℝ) ≤ X j i + X k i) ∧\n      (3314799982801/573300000000 : ℝ) ≤ X 0 1 + X 0 2 + X 1 0 + X 1 2 + X 2 0 + X 2 1 := by sorry",
+    "preamble": "import Definitions.Def_HlawkaSchatten_GapComparison\nimport Definitions.Def_HlawkaSchatten_DiagonalConstruction_Basic\nopen HlawkaSchatten HlawkaSchatten.DiagonalConstruction\n",
+    "natural_language_statement": "For every real p in [185/8,93/4], coarse-box original norm data with singleton norm sum three, total norm below 3033/2500, and pair-gap sum below 2/((273/625)p) imply the explicit norm cap and linear bounds of analytic domain 0. This block covers 4 consecutive certified slabs. Unequal singleton norms are allowed.",
+    "source": "Yuxuan Xu, A computer-assisted sharp diagonal Hlawka inequality for real exponents p >= 21, Sections 3-4, https://github.com/Anchen-AI4Math/hlawka-diagonal-certificates/blob/main/paper/main.pdf . Generic contraction framework adapted from @bwdaugherty, Apache-2.0; notices retained.",
+    "tags": [
+      "hlawka-schatten",
+      "localization",
+      "exact-arithmetic"
+    ],
+    "solution_file": "formalization/platform/Sol_localized_domain4_21_17.lean",
+    "solution_sha256": "ec1dd7267ddb7c300eeaed3c1dba7c1331527c7383a7e39af00f9eda4caeb8cd",
+    "explanation": "No platform theorem imports are used. The complete original norm bridge, rational root inequalities, budget and all ten contraction rounds are proved for at most four slabs, then weakened by exact rational comparisons to a common analytic domain. A balanced interval split covers all real exponents in the block. The analytic theorem is deliberately separated from finite localization; no external validity assumption is introduced."
+  },
+  {
+    "key": "localized_domain4_21_18",
+    "theorem_name": "HlawkaSchatten.DiagonalCutoff21.localized_domain4_21_18",
+    "theorem_title": "Actual norm localization block [93/4,187/8]",
+    "formal_statement": "theorem HlawkaSchatten.DiagonalCutoff21.localized_domain4_21_18 :\n    ∀ p : ℝ, (93/4 : ℝ) ≤ p → p ≤ (187/8 : ℝ) → ∀ X : Fin 3 → Fin 3 → ℝ,\n      (∀ i, -(607/500 : ℝ) ≤ X i i ∧ X i i ≤ -(189/500 : ℝ)) →\n      (∀ j i, j ≠ i → (349/500 : ℝ) ≤ X j i ∧ X j i ≤ (607/500 : ℝ)) →\n      lpNorm p (X 0) + lpNorm p (X 1) + lpNorm p (X 2) = 3 →\n      lpNorm p (X 0 + X 1 + X 2) < (3033/2500 : ℝ) →\n      pairGapSum (lpNorm p) (X 0) (X 1) (X 2) < 2 / ((273/625 : ℝ)*p) →\n      (∀ j, -(5559/5000 : ℝ) ≤ X j j ∧ X j j ≤ -(881/2000 : ℝ)) ∧\n      (∀ j i, j ≠ i → (3779/5000 : ℝ) ≤ X j i ∧ X j i ≤ (11847/10000 : ℝ)) ∧\n      (∀ j, lpNorm p (X j) ≤ (1193402307/1000000000 : ℝ)) ∧\n      (∀ i j k : Fin 3, i ≠ j → i ≠ k → j ≠ k → (1139124440087/716625000000 : ℝ) ≤ X j i + X k i) ∧\n      (3314799982801/573300000000 : ℝ) ≤ X 0 1 + X 0 2 + X 1 0 + X 1 2 + X 2 0 + X 2 1 := by sorry",
+    "preamble": "import Definitions.Def_HlawkaSchatten_GapComparison\nimport Definitions.Def_HlawkaSchatten_DiagonalConstruction_Basic\nopen HlawkaSchatten HlawkaSchatten.DiagonalConstruction\n",
+    "natural_language_statement": "For every real p in [93/4,187/8], coarse-box original norm data with singleton norm sum three, total norm below 3033/2500, and pair-gap sum below 2/((273/625)p) imply the explicit norm cap and linear bounds of analytic domain 0. This block covers 4 consecutive certified slabs. Unequal singleton norms are allowed.",
+    "source": "Yuxuan Xu, A computer-assisted sharp diagonal Hlawka inequality for real exponents p >= 21, Sections 3-4, https://github.com/Anchen-AI4Math/hlawka-diagonal-certificates/blob/main/paper/main.pdf . Generic contraction framework adapted from @bwdaugherty, Apache-2.0; notices retained.",
+    "tags": [
+      "hlawka-schatten",
+      "localization",
+      "exact-arithmetic"
+    ],
+    "solution_file": "formalization/platform/Sol_localized_domain4_21_18.lean",
+    "solution_sha256": "6eda5ca3c9ad0271d7c276df511f4218f5d7d63783b6a984ca4a39a2e8a01554",
+    "explanation": "No platform theorem imports are used. The complete original norm bridge, rational root inequalities, budget and all ten contraction rounds are proved for at most four slabs, then weakened by exact rational comparisons to a common analytic domain. A balanced interval split covers all real exponents in the block. The analytic theorem is deliberately separated from finite localization; no external validity assumption is introduced."
+  },
+  {
+    "key": "localized_domain4_21_19",
+    "theorem_name": "HlawkaSchatten.DiagonalCutoff21.localized_domain4_21_19",
+    "theorem_title": "Actual norm localization block [187/8,47/2]",
+    "formal_statement": "theorem HlawkaSchatten.DiagonalCutoff21.localized_domain4_21_19 :\n    ∀ p : ℝ, (187/8 : ℝ) ≤ p → p ≤ (47/2 : ℝ) → ∀ X : Fin 3 → Fin 3 → ℝ,\n      (∀ i, -(607/500 : ℝ) ≤ X i i ∧ X i i ≤ -(189/500 : ℝ)) →\n      (∀ j i, j ≠ i → (349/500 : ℝ) ≤ X j i ∧ X j i ≤ (607/500 : ℝ)) →\n      lpNorm p (X 0) + lpNorm p (X 1) + lpNorm p (X 2) = 3 →\n      lpNorm p (X 0 + X 1 + X 2) < (3033/2500 : ℝ) →\n      pairGapSum (lpNorm p) (X 0) (X 1) (X 2) < 2 / ((273/625 : ℝ)*p) →\n      (∀ j, -(5559/5000 : ℝ) ≤ X j j ∧ X j j ≤ -(881/2000 : ℝ)) ∧\n      (∀ j i, j ≠ i → (3779/5000 : ℝ) ≤ X j i ∧ X j i ≤ (11847/10000 : ℝ)) ∧\n      (∀ j, lpNorm p (X j) ≤ (1193402307/1000000000 : ℝ)) ∧\n      (∀ i j k : Fin 3, i ≠ j → i ≠ k → j ≠ k → (1139124440087/716625000000 : ℝ) ≤ X j i + X k i) ∧\n      (3314799982801/573300000000 : ℝ) ≤ X 0 1 + X 0 2 + X 1 0 + X 1 2 + X 2 0 + X 2 1 := by sorry",
+    "preamble": "import Definitions.Def_HlawkaSchatten_GapComparison\nimport Definitions.Def_HlawkaSchatten_DiagonalConstruction_Basic\nopen HlawkaSchatten HlawkaSchatten.DiagonalConstruction\n",
+    "natural_language_statement": "For every real p in [187/8,47/2], coarse-box original norm data with singleton norm sum three, total norm below 3033/2500, and pair-gap sum below 2/((273/625)p) imply the explicit norm cap and linear bounds of analytic domain 0. This block covers 4 consecutive certified slabs. Unequal singleton norms are allowed.",
+    "source": "Yuxuan Xu, A computer-assisted sharp diagonal Hlawka inequality for real exponents p >= 21, Sections 3-4, https://github.com/Anchen-AI4Math/hlawka-diagonal-certificates/blob/main/paper/main.pdf . Generic contraction framework adapted from @bwdaugherty, Apache-2.0; notices retained.",
+    "tags": [
+      "hlawka-schatten",
+      "localization",
+      "exact-arithmetic"
+    ],
+    "solution_file": "formalization/platform/Sol_localized_domain4_21_19.lean",
+    "solution_sha256": "6eee6a24429cbd165e977b08b013d8094737b21990f0be00172121527c8b193b",
+    "explanation": "No platform theorem imports are used. The complete original norm bridge, rational root inequalities, budget and all ten contraction rounds are proved for at most four slabs, then weakened by exact rational comparisons to a common analytic domain. A balanced interval split covers all real exponents in the block. The analytic theorem is deliberately separated from finite localization; no external validity assumption is introduced."
+  },
+  {
+    "key": "localized_domain4_21_20",
+    "theorem_name": "HlawkaSchatten.DiagonalCutoff21.localized_domain4_21_20",
+    "theorem_title": "Actual norm localization block [47/2,377/16]",
+    "formal_statement": "theorem HlawkaSchatten.DiagonalCutoff21.localized_domain4_21_20 :\n    ∀ p : ℝ, (47/2 : ℝ) ≤ p → p ≤ (377/16 : ℝ) → ∀ X : Fin 3 → Fin 3 → ℝ,\n      (∀ i, -(607/500 : ℝ) ≤ X i i ∧ X i i ≤ -(189/500 : ℝ)) →\n      (∀ j i, j ≠ i → (349/500 : ℝ) ≤ X j i ∧ X j i ≤ (607/500 : ℝ)) →\n      lpNorm p (X 0) + lpNorm p (X 1) + lpNorm p (X 2) = 3 →\n      lpNorm p (X 0 + X 1 + X 2) < (3033/2500 : ℝ) →\n      pairGapSum (lpNorm p) (X 0) (X 1) (X 2) < 2 / ((273/625 : ℝ)*p) →\n      (∀ j, -(5559/5000 : ℝ) ≤ X j j ∧ X j j ≤ -(881/2000 : ℝ)) ∧\n      (∀ j i, j ≠ i → (3779/5000 : ℝ) ≤ X j i ∧ X j i ≤ (11847/10000 : ℝ)) ∧\n      (∀ j, lpNorm p (X j) ≤ (1193402307/1000000000 : ℝ)) ∧\n      (∀ i j k : Fin 3, i ≠ j → i ≠ k → j ≠ k → (1139124440087/716625000000 : ℝ) ≤ X j i + X k i) ∧\n      (3314799982801/573300000000 : ℝ) ≤ X 0 1 + X 0 2 + X 1 0 + X 1 2 + X 2 0 + X 2 1 := by sorry",
+    "preamble": "import Definitions.Def_HlawkaSchatten_GapComparison\nimport Definitions.Def_HlawkaSchatten_DiagonalConstruction_Basic\nopen HlawkaSchatten HlawkaSchatten.DiagonalConstruction\n",
+    "natural_language_statement": "For every real p in [47/2,377/16], coarse-box original norm data with singleton norm sum three, total norm below 3033/2500, and pair-gap sum below 2/((273/625)p) imply the explicit norm cap and linear bounds of analytic domain 0. This block covers 2 consecutive certified slabs. Unequal singleton norms are allowed.",
+    "source": "Yuxuan Xu, A computer-assisted sharp diagonal Hlawka inequality for real exponents p >= 21, Sections 3-4, https://github.com/Anchen-AI4Math/hlawka-diagonal-certificates/blob/main/paper/main.pdf . Generic contraction framework adapted from @bwdaugherty, Apache-2.0; notices retained.",
+    "tags": [
+      "hlawka-schatten",
+      "localization",
+      "exact-arithmetic"
+    ],
+    "solution_file": "formalization/platform/Sol_localized_domain4_21_20.lean",
+    "solution_sha256": "16848916678fcf1a624581ecaf64eaf3aa34b7f744ab4cdaa492a2e665eba9c6",
+    "explanation": "No platform theorem imports are used. The complete original norm bridge, rational root inequalities, budget and all ten contraction rounds are proved for at most four slabs, then weakened by exact rational comparisons to a common analytic domain. A balanced interval split covers all real exponents in the block. The analytic theorem is deliberately separated from finite localization; no external validity assumption is introduced."
+  },
+  {
+    "key": "localized_domain4_21_21",
+    "theorem_name": "HlawkaSchatten.DiagonalCutoff21.localized_domain4_21_21",
+    "theorem_title": "Actual norm localization block [377/16,379/16]",
+    "formal_statement": "theorem HlawkaSchatten.DiagonalCutoff21.localized_domain4_21_21 :\n    ∀ p : ℝ, (377/16 : ℝ) ≤ p → p ≤ (379/16 : ℝ) → ∀ X : Fin 3 → Fin 3 → ℝ,\n      (∀ i, -(607/500 : ℝ) ≤ X i i ∧ X i i ≤ -(189/500 : ℝ)) →\n      (∀ j i, j ≠ i → (349/500 : ℝ) ≤ X j i ∧ X j i ≤ (607/500 : ℝ)) →\n      lpNorm p (X 0) + lpNorm p (X 1) + lpNorm p (X 2) = 3 →\n      lpNorm p (X 0 + X 1 + X 2) < (3033/2500 : ℝ) →\n      pairGapSum (lpNorm p) (X 0) (X 1) (X 2) < 2 / ((273/625 : ℝ)*p) →\n      (∀ j, -(2239/2000 : ℝ) ≤ X j j ∧ X j j ≤ -(4577/10000 : ℝ)) ∧\n      (∀ j i, j ≠ i → (3863/5000 : ℝ) ≤ X j i ∧ X j i ≤ (1483/1250 : ℝ)) ∧\n      (∀ j, lpNorm p (X j) ≤ (149298789/125000000 : ℝ)) ∧\n      (∀ i j k : Fin 3, i ≠ j → i ≠ k → j ≠ k → (82967765642843/51460500000000 : ℝ) ≤ X j i + X k i) ∧\n      (59752599691237/10292100000000 : ℝ) ≤ X 0 1 + X 0 2 + X 1 0 + X 1 2 + X 2 0 + X 2 1 := by sorry",
+    "preamble": "import Definitions.Def_HlawkaSchatten_GapComparison\nimport Definitions.Def_HlawkaSchatten_DiagonalConstruction_Basic\nopen HlawkaSchatten HlawkaSchatten.DiagonalConstruction\n",
+    "natural_language_statement": "For every real p in [377/16,379/16], coarse-box original norm data with singleton norm sum three, total norm below 3033/2500, and pair-gap sum below 2/((273/625)p) imply the explicit norm cap and linear bounds of analytic domain 1. This block covers 4 consecutive certified slabs. Unequal singleton norms are allowed.",
+    "source": "Yuxuan Xu, A computer-assisted sharp diagonal Hlawka inequality for real exponents p >= 21, Sections 3-4, https://github.com/Anchen-AI4Math/hlawka-diagonal-certificates/blob/main/paper/main.pdf . Generic contraction framework adapted from @bwdaugherty, Apache-2.0; notices retained.",
+    "tags": [
+      "hlawka-schatten",
+      "localization",
+      "exact-arithmetic"
+    ],
+    "solution_file": "formalization/platform/Sol_localized_domain4_21_21.lean",
+    "solution_sha256": "8ca6e0a907e034fdd72b452490ad303557bbf94600585c806f343e84a36eec00",
+    "explanation": "No platform theorem imports are used. The complete original norm bridge, rational root inequalities, budget and all ten contraction rounds are proved for at most four slabs, then weakened by exact rational comparisons to a common analytic domain. A balanced interval split covers all real exponents in the block. The analytic theorem is deliberately separated from finite localization; no external validity assumption is introduced."
+  },
+  {
+    "key": "localized_domain4_21_22",
+    "theorem_name": "HlawkaSchatten.DiagonalCutoff21.localized_domain4_21_22",
+    "theorem_title": "Actual norm localization block [379/16,381/16]",
+    "formal_statement": "theorem HlawkaSchatten.DiagonalCutoff21.localized_domain4_21_22 :\n    ∀ p : ℝ, (379/16 : ℝ) ≤ p → p ≤ (381/16 : ℝ) → ∀ X : Fin 3 → Fin 3 → ℝ,\n      (∀ i, -(607/500 : ℝ) ≤ X i i ∧ X i i ≤ -(189/500 : ℝ)) →\n      (∀ j i, j ≠ i → (349/500 : ℝ) ≤ X j i ∧ X j i ≤ (607/500 : ℝ)) →\n      lpNorm p (X 0) + lpNorm p (X 1) + lpNorm p (X 2) = 3 →\n      lpNorm p (X 0 + X 1 + X 2) < (3033/2500 : ℝ) →\n      pairGapSum (lpNorm p) (X 0) (X 1) (X 2) < 2 / ((273/625 : ℝ)*p) →\n      (∀ j, -(2239/2000 : ℝ) ≤ X j j ∧ X j j ≤ -(4577/10000 : ℝ)) ∧\n      (∀ j i, j ≠ i → (3863/5000 : ℝ) ≤ X j i ∧ X j i ≤ (1483/1250 : ℝ)) ∧\n      (∀ j, lpNorm p (X j) ≤ (149298789/125000000 : ℝ)) ∧\n      (∀ i j k : Fin 3, i ≠ j → i ≠ k → j ≠ k → (82967765642843/51460500000000 : ℝ) ≤ X j i + X k i) ∧\n      (59752599691237/10292100000000 : ℝ) ≤ X 0 1 + X 0 2 + X 1 0 + X 1 2 + X 2 0 + X 2 1 := by sorry",
+    "preamble": "import Definitions.Def_HlawkaSchatten_GapComparison\nimport Definitions.Def_HlawkaSchatten_DiagonalConstruction_Basic\nopen HlawkaSchatten HlawkaSchatten.DiagonalConstruction\n",
+    "natural_language_statement": "For every real p in [379/16,381/16], coarse-box original norm data with singleton norm sum three, total norm below 3033/2500, and pair-gap sum below 2/((273/625)p) imply the explicit norm cap and linear bounds of analytic domain 1. This block covers 4 consecutive certified slabs. Unequal singleton norms are allowed.",
+    "source": "Yuxuan Xu, A computer-assisted sharp diagonal Hlawka inequality for real exponents p >= 21, Sections 3-4, https://github.com/Anchen-AI4Math/hlawka-diagonal-certificates/blob/main/paper/main.pdf . Generic contraction framework adapted from @bwdaugherty, Apache-2.0; notices retained.",
+    "tags": [
+      "hlawka-schatten",
+      "localization",
+      "exact-arithmetic"
+    ],
+    "solution_file": "formalization/platform/Sol_localized_domain4_21_22.lean",
+    "solution_sha256": "7d7da869f54111393fc3ac0c46172261c22d4f86f704d1f546e90df83185e673",
+    "explanation": "No platform theorem imports are used. The complete original norm bridge, rational root inequalities, budget and all ten contraction rounds are proved for at most four slabs, then weakened by exact rational comparisons to a common analytic domain. A balanced interval split covers all real exponents in the block. The analytic theorem is deliberately separated from finite localization; no external validity assumption is introduced."
+  },
+  {
+    "key": "localized_domain4_21_23",
+    "theorem_name": "HlawkaSchatten.DiagonalCutoff21.localized_domain4_21_23",
+    "theorem_title": "Actual norm localization block [381/16,383/16]",
+    "formal_statement": "theorem HlawkaSchatten.DiagonalCutoff21.localized_domain4_21_23 :\n    ∀ p : ℝ, (381/16 : ℝ) ≤ p → p ≤ (383/16 : ℝ) → ∀ X : Fin 3 → Fin 3 → ℝ,\n      (∀ i, -(607/500 : ℝ) ≤ X i i ∧ X i i ≤ -(189/500 : ℝ)) →\n      (∀ j i, j ≠ i → (349/500 : ℝ) ≤ X j i ∧ X j i ≤ (607/500 : ℝ)) →\n      lpNorm p (X 0) + lpNorm p (X 1) + lpNorm p (X 2) = 3 →\n      lpNorm p (X 0 + X 1 + X 2) < (3033/2500 : ℝ) →\n      pairGapSum (lpNorm p) (X 0) (X 1) (X 2) < 2 / ((273/625 : ℝ)*p) →\n      (∀ j, -(2239/2000 : ℝ) ≤ X j j ∧ X j j ≤ -(4577/10000 : ℝ)) ∧\n      (∀ j i, j ≠ i → (3863/5000 : ℝ) ≤ X j i ∧ X j i ≤ (1483/1250 : ℝ)) ∧\n      (∀ j, lpNorm p (X j) ≤ (149298789/125000000 : ℝ)) ∧\n      (∀ i j k : Fin 3, i ≠ j → i ≠ k → j ≠ k → (82967765642843/51460500000000 : ℝ) ≤ X j i + X k i) ∧\n      (59752599691237/10292100000000 : ℝ) ≤ X 0 1 + X 0 2 + X 1 0 + X 1 2 + X 2 0 + X 2 1 := by sorry",
+    "preamble": "import Definitions.Def_HlawkaSchatten_GapComparison\nimport Definitions.Def_HlawkaSchatten_DiagonalConstruction_Basic\nopen HlawkaSchatten HlawkaSchatten.DiagonalConstruction\n",
+    "natural_language_statement": "For every real p in [381/16,383/16], coarse-box original norm data with singleton norm sum three, total norm below 3033/2500, and pair-gap sum below 2/((273/625)p) imply the explicit norm cap and linear bounds of analytic domain 1. This block covers 4 consecutive certified slabs. Unequal singleton norms are allowed.",
+    "source": "Yuxuan Xu, A computer-assisted sharp diagonal Hlawka inequality for real exponents p >= 21, Sections 3-4, https://github.com/Anchen-AI4Math/hlawka-diagonal-certificates/blob/main/paper/main.pdf . Generic contraction framework adapted from @bwdaugherty, Apache-2.0; notices retained.",
+    "tags": [
+      "hlawka-schatten",
+      "localization",
+      "exact-arithmetic"
+    ],
+    "solution_file": "formalization/platform/Sol_localized_domain4_21_23.lean",
+    "solution_sha256": "b614cf397bf680d88bf376a6f8ac7d004ccab85e52c827699747bd77e0c02192",
+    "explanation": "No platform theorem imports are used. The complete original norm bridge, rational root inequalities, budget and all ten contraction rounds are proved for at most four slabs, then weakened by exact rational comparisons to a common analytic domain. A balanced interval split covers all real exponents in the block. The analytic theorem is deliberately separated from finite localization; no external validity assumption is introduced."
+  },
+  {
+    "key": "localized_domain4_21_24",
+    "theorem_name": "HlawkaSchatten.DiagonalCutoff21.localized_domain4_21_24",
+    "theorem_title": "Actual norm localization block [383/16,385/16]",
+    "formal_statement": "theorem HlawkaSchatten.DiagonalCutoff21.localized_domain4_21_24 :\n    ∀ p : ℝ, (383/16 : ℝ) ≤ p → p ≤ (385/16 : ℝ) → ∀ X : Fin 3 → Fin 3 → ℝ,\n      (∀ i, -(607/500 : ℝ) ≤ X i i ∧ X i i ≤ -(189/500 : ℝ)) →\n      (∀ j i, j ≠ i → (349/500 : ℝ) ≤ X j i ∧ X j i ≤ (607/500 : ℝ)) →\n      lpNorm p (X 0) + lpNorm p (X 1) + lpNorm p (X 2) = 3 →\n      lpNorm p (X 0 + X 1 + X 2) < (3033/2500 : ℝ) →\n      pairGapSum (lpNorm p) (X 0) (X 1) (X 2) < 2 / ((273/625 : ℝ)*p) →\n      (∀ j, -(2239/2000 : ℝ) ≤ X j j ∧ X j j ≤ -(4577/10000 : ℝ)) ∧\n      (∀ j i, j ≠ i → (3863/5000 : ℝ) ≤ X j i ∧ X j i ≤ (1483/1250 : ℝ)) ∧\n      (∀ j, lpNorm p (X j) ≤ (149298789/125000000 : ℝ)) ∧\n      (∀ i j k : Fin 3, i ≠ j → i ≠ k → j ≠ k → (82967765642843/51460500000000 : ℝ) ≤ X j i + X k i) ∧\n      (59752599691237/10292100000000 : ℝ) ≤ X 0 1 + X 0 2 + X 1 0 + X 1 2 + X 2 0 + X 2 1 := by sorry",
+    "preamble": "import Definitions.Def_HlawkaSchatten_GapComparison\nimport Definitions.Def_HlawkaSchatten_DiagonalConstruction_Basic\nopen HlawkaSchatten HlawkaSchatten.DiagonalConstruction\n",
+    "natural_language_statement": "For every real p in [383/16,385/16], coarse-box original norm data with singleton norm sum three, total norm below 3033/2500, and pair-gap sum below 2/((273/625)p) imply the explicit norm cap and linear bounds of analytic domain 1. This block covers 4 consecutive certified slabs. Unequal singleton norms are allowed.",
+    "source": "Yuxuan Xu, A computer-assisted sharp diagonal Hlawka inequality for real exponents p >= 21, Sections 3-4, https://github.com/Anchen-AI4Math/hlawka-diagonal-certificates/blob/main/paper/main.pdf . Generic contraction framework adapted from @bwdaugherty, Apache-2.0; notices retained.",
+    "tags": [
+      "hlawka-schatten",
+      "localization",
+      "exact-arithmetic"
+    ],
+    "solution_file": "formalization/platform/Sol_localized_domain4_21_24.lean",
+    "solution_sha256": "d449f7e9fa1ecd290f812decec895fad068ec0f163ea5dbc957ec06bc60292ef",
+    "explanation": "No platform theorem imports are used. The complete original norm bridge, rational root inequalities, budget and all ten contraction rounds are proved for at most four slabs, then weakened by exact rational comparisons to a common analytic domain. A balanced interval split covers all real exponents in the block. The analytic theorem is deliberately separated from finite localization; no external validity assumption is introduced."
+  },
+  {
+    "key": "localized_domain4_21_25",
+    "theorem_name": "HlawkaSchatten.DiagonalCutoff21.localized_domain4_21_25",
+    "theorem_title": "Actual norm localization block [385/16,387/16]",
+    "formal_statement": "theorem HlawkaSchatten.DiagonalCutoff21.localized_domain4_21_25 :\n    ∀ p : ℝ, (385/16 : ℝ) ≤ p → p ≤ (387/16 : ℝ) → ∀ X : Fin 3 → Fin 3 → ℝ,\n      (∀ i, -(607/500 : ℝ) ≤ X i i ∧ X i i ≤ -(189/500 : ℝ)) →\n      (∀ j i, j ≠ i → (349/500 : ℝ) ≤ X j i ∧ X j i ≤ (607/500 : ℝ)) →\n      lpNorm p (X 0) + lpNorm p (X 1) + lpNorm p (X 2) = 3 →\n      lpNorm p (X 0 + X 1 + X 2) < (3033/2500 : ℝ) →\n      pairGapSum (lpNorm p) (X 0) (X 1) (X 2) < 2 / ((273/625 : ℝ)*p) →\n      (∀ j, -(2239/2000 : ℝ) ≤ X j j ∧ X j j ≤ -(4577/10000 : ℝ)) ∧\n      (∀ j i, j ≠ i → (3863/5000 : ℝ) ≤ X j i ∧ X j i ≤ (1483/1250 : ℝ)) ∧\n      (∀ j, lpNorm p (X j) ≤ (149298789/125000000 : ℝ)) ∧\n      (∀ i j k : Fin 3, i ≠ j → i ≠ k → j ≠ k → (82967765642843/51460500000000 : ℝ) ≤ X j i + X k i) ∧\n      (59752599691237/10292100000000 : ℝ) ≤ X 0 1 + X 0 2 + X 1 0 + X 1 2 + X 2 0 + X 2 1 := by sorry",
+    "preamble": "import Definitions.Def_HlawkaSchatten_GapComparison\nimport Definitions.Def_HlawkaSchatten_DiagonalConstruction_Basic\nopen HlawkaSchatten HlawkaSchatten.DiagonalConstruction\n",
+    "natural_language_statement": "For every real p in [385/16,387/16], coarse-box original norm data with singleton norm sum three, total norm below 3033/2500, and pair-gap sum below 2/((273/625)p) imply the explicit norm cap and linear bounds of analytic domain 1. This block covers 4 consecutive certified slabs. Unequal singleton norms are allowed.",
+    "source": "Yuxuan Xu, A computer-assisted sharp diagonal Hlawka inequality for real exponents p >= 21, Sections 3-4, https://github.com/Anchen-AI4Math/hlawka-diagonal-certificates/blob/main/paper/main.pdf . Generic contraction framework adapted from @bwdaugherty, Apache-2.0; notices retained.",
+    "tags": [
+      "hlawka-schatten",
+      "localization",
+      "exact-arithmetic"
+    ],
+    "solution_file": "formalization/platform/Sol_localized_domain4_21_25.lean",
+    "solution_sha256": "399f8afe885137f387ba32c664ac8165eda5f18ec9de6548659a498d7ce14476",
+    "explanation": "No platform theorem imports are used. The complete original norm bridge, rational root inequalities, budget and all ten contraction rounds are proved for at most four slabs, then weakened by exact rational comparisons to a common analytic domain. A balanced interval split covers all real exponents in the block. The analytic theorem is deliberately separated from finite localization; no external validity assumption is introduced."
+  },
+  {
+    "key": "localized_domain4_21_26",
+    "theorem_name": "HlawkaSchatten.DiagonalCutoff21.localized_domain4_21_26",
+    "theorem_title": "Actual norm localization block [387/16,389/16]",
+    "formal_statement": "theorem HlawkaSchatten.DiagonalCutoff21.localized_domain4_21_26 :\n    ∀ p : ℝ, (387/16 : ℝ) ≤ p → p ≤ (389/16 : ℝ) → ∀ X : Fin 3 → Fin 3 → ℝ,\n      (∀ i, -(607/500 : ℝ) ≤ X i i ∧ X i i ≤ -(189/500 : ℝ)) →\n      (∀ j i, j ≠ i → (349/500 : ℝ) ≤ X j i ∧ X j i ≤ (607/500 : ℝ)) →\n      lpNorm p (X 0) + lpNorm p (X 1) + lpNorm p (X 2) = 3 →\n      lpNorm p (X 0 + X 1 + X 2) < (3033/2500 : ℝ) →\n      pairGapSum (lpNorm p) (X 0) (X 1) (X 2) < 2 / ((273/625 : ℝ)*p) →\n      (∀ j, -(2239/2000 : ℝ) ≤ X j j ∧ X j j ≤ -(4577/10000 : ℝ)) ∧\n      (∀ j i, j ≠ i → (3863/5000 : ℝ) ≤ X j i ∧ X j i ≤ (1483/1250 : ℝ)) ∧\n      (∀ j, lpNorm p (X j) ≤ (149298789/125000000 : ℝ)) ∧\n      (∀ i j k : Fin 3, i ≠ j → i ≠ k → j ≠ k → (82967765642843/51460500000000 : ℝ) ≤ X j i + X k i) ∧\n      (59752599691237/10292100000000 : ℝ) ≤ X 0 1 + X 0 2 + X 1 0 + X 1 2 + X 2 0 + X 2 1 := by sorry",
+    "preamble": "import Definitions.Def_HlawkaSchatten_GapComparison\nimport Definitions.Def_HlawkaSchatten_DiagonalConstruction_Basic\nopen HlawkaSchatten HlawkaSchatten.DiagonalConstruction\n",
+    "natural_language_statement": "For every real p in [387/16,389/16], coarse-box original norm data with singleton norm sum three, total norm below 3033/2500, and pair-gap sum below 2/((273/625)p) imply the explicit norm cap and linear bounds of analytic domain 1. This block covers 4 consecutive certified slabs. Unequal singleton norms are allowed.",
+    "source": "Yuxuan Xu, A computer-assisted sharp diagonal Hlawka inequality for real exponents p >= 21, Sections 3-4, https://github.com/Anchen-AI4Math/hlawka-diagonal-certificates/blob/main/paper/main.pdf . Generic contraction framework adapted from @bwdaugherty, Apache-2.0; notices retained.",
+    "tags": [
+      "hlawka-schatten",
+      "localization",
+      "exact-arithmetic"
+    ],
+    "solution_file": "formalization/platform/Sol_localized_domain4_21_26.lean",
+    "solution_sha256": "b3066acbf3600f063cb4d1b07a8e744edb0141d4141fc06de3ad5cd9c7d18a52",
+    "explanation": "No platform theorem imports are used. The complete original norm bridge, rational root inequalities, budget and all ten contraction rounds are proved for at most four slabs, then weakened by exact rational comparisons to a common analytic domain. A balanced interval split covers all real exponents in the block. The analytic theorem is deliberately separated from finite localization; no external validity assumption is introduced."
+  },
+  {
+    "key": "localized_domain4_21_27",
+    "theorem_name": "HlawkaSchatten.DiagonalCutoff21.localized_domain4_21_27",
+    "theorem_title": "Actual norm localization block [389/16,391/16]",
+    "formal_statement": "theorem HlawkaSchatten.DiagonalCutoff21.localized_domain4_21_27 :\n    ∀ p : ℝ, (389/16 : ℝ) ≤ p → p ≤ (391/16 : ℝ) → ∀ X : Fin 3 → Fin 3 → ℝ,\n      (∀ i, -(607/500 : ℝ) ≤ X i i ∧ X i i ≤ -(189/500 : ℝ)) →\n      (∀ j i, j ≠ i → (349/500 : ℝ) ≤ X j i ∧ X j i ≤ (607/500 : ℝ)) →\n      lpNorm p (X 0) + lpNorm p (X 1) + lpNorm p (X 2) = 3 →\n      lpNorm p (X 0 + X 1 + X 2) < (3033/2500 : ℝ) →\n      pairGapSum (lpNorm p) (X 0) (X 1) (X 2) < 2 / ((273/625 : ℝ)*p) →\n      (∀ j, -(2239/2000 : ℝ) ≤ X j j ∧ X j j ≤ -(4577/10000 : ℝ)) ∧\n      (∀ j i, j ≠ i → (3863/5000 : ℝ) ≤ X j i ∧ X j i ≤ (1483/1250 : ℝ)) ∧\n      (∀ j, lpNorm p (X j) ≤ (149298789/125000000 : ℝ)) ∧\n      (∀ i j k : Fin 3, i ≠ j → i ≠ k → j ≠ k → (82967765642843/51460500000000 : ℝ) ≤ X j i + X k i) ∧\n      (59752599691237/10292100000000 : ℝ) ≤ X 0 1 + X 0 2 + X 1 0 + X 1 2 + X 2 0 + X 2 1 := by sorry",
+    "preamble": "import Definitions.Def_HlawkaSchatten_GapComparison\nimport Definitions.Def_HlawkaSchatten_DiagonalConstruction_Basic\nopen HlawkaSchatten HlawkaSchatten.DiagonalConstruction\n",
+    "natural_language_statement": "For every real p in [389/16,391/16], coarse-box original norm data with singleton norm sum three, total norm below 3033/2500, and pair-gap sum below 2/((273/625)p) imply the explicit norm cap and linear bounds of analytic domain 1. This block covers 4 consecutive certified slabs. Unequal singleton norms are allowed.",
+    "source": "Yuxuan Xu, A computer-assisted sharp diagonal Hlawka inequality for real exponents p >= 21, Sections 3-4, https://github.com/Anchen-AI4Math/hlawka-diagonal-certificates/blob/main/paper/main.pdf . Generic contraction framework adapted from @bwdaugherty, Apache-2.0; notices retained.",
+    "tags": [
+      "hlawka-schatten",
+      "localization",
+      "exact-arithmetic"
+    ],
+    "solution_file": "formalization/platform/Sol_localized_domain4_21_27.lean",
+    "solution_sha256": "db2463596ec3d64795f611e6b2b00a11f19798da829df5495f22742ec763cdf5",
+    "explanation": "No platform theorem imports are used. The complete original norm bridge, rational root inequalities, budget and all ten contraction rounds are proved for at most four slabs, then weakened by exact rational comparisons to a common analytic domain. A balanced interval split covers all real exponents in the block. The analytic theorem is deliberately separated from finite localization; no external validity assumption is introduced."
+  },
+  {
+    "key": "localized_domain4_21_28",
+    "theorem_name": "HlawkaSchatten.DiagonalCutoff21.localized_domain4_21_28",
+    "theorem_title": "Actual norm localization block [391/16,393/16]",
+    "formal_statement": "theorem HlawkaSchatten.DiagonalCutoff21.localized_domain4_21_28 :\n    ∀ p : ℝ, (391/16 : ℝ) ≤ p → p ≤ (393/16 : ℝ) → ∀ X : Fin 3 → Fin 3 → ℝ,\n      (∀ i, -(607/500 : ℝ) ≤ X i i ∧ X i i ≤ -(189/500 : ℝ)) →\n      (∀ j i, j ≠ i → (349/500 : ℝ) ≤ X j i ∧ X j i ≤ (607/500 : ℝ)) →\n      lpNorm p (X 0) + lpNorm p (X 1) + lpNorm p (X 2) = 3 →\n      lpNorm p (X 0 + X 1 + X 2) < (3033/2500 : ℝ) →\n      pairGapSum (lpNorm p) (X 0) (X 1) (X 2) < 2 / ((273/625 : ℝ)*p) →\n      (∀ j, -(2239/2000 : ℝ) ≤ X j j ∧ X j j ≤ -(4577/10000 : ℝ)) ∧\n      (∀ j i, j ≠ i → (3863/5000 : ℝ) ≤ X j i ∧ X j i ≤ (1483/1250 : ℝ)) ∧\n      (∀ j, lpNorm p (X j) ≤ (149298789/125000000 : ℝ)) ∧\n      (∀ i j k : Fin 3, i ≠ j → i ≠ k → j ≠ k → (82967765642843/51460500000000 : ℝ) ≤ X j i + X k i) ∧\n      (59752599691237/10292100000000 : ℝ) ≤ X 0 1 + X 0 2 + X 1 0 + X 1 2 + X 2 0 + X 2 1 := by sorry",
+    "preamble": "import Definitions.Def_HlawkaSchatten_GapComparison\nimport Definitions.Def_HlawkaSchatten_DiagonalConstruction_Basic\nopen HlawkaSchatten HlawkaSchatten.DiagonalConstruction\n",
+    "natural_language_statement": "For every real p in [391/16,393/16], coarse-box original norm data with singleton norm sum three, total norm below 3033/2500, and pair-gap sum below 2/((273/625)p) imply the explicit norm cap and linear bounds of analytic domain 1. This block covers 4 consecutive certified slabs. Unequal singleton norms are allowed.",
+    "source": "Yuxuan Xu, A computer-assisted sharp diagonal Hlawka inequality for real exponents p >= 21, Sections 3-4, https://github.com/Anchen-AI4Math/hlawka-diagonal-certificates/blob/main/paper/main.pdf . Generic contraction framework adapted from @bwdaugherty, Apache-2.0; notices retained.",
+    "tags": [
+      "hlawka-schatten",
+      "localization",
+      "exact-arithmetic"
+    ],
+    "solution_file": "formalization/platform/Sol_localized_domain4_21_28.lean",
+    "solution_sha256": "69ac077e35f49adb62d608fbdba76a9386862a830851968e87182d5c201d7a83",
+    "explanation": "No platform theorem imports are used. The complete original norm bridge, rational root inequalities, budget and all ten contraction rounds are proved for at most four slabs, then weakened by exact rational comparisons to a common analytic domain. A balanced interval split covers all real exponents in the block. The analytic theorem is deliberately separated from finite localization; no external validity assumption is introduced."
+  },
+  {
+    "key": "localized_domain4_21_29",
+    "theorem_name": "HlawkaSchatten.DiagonalCutoff21.localized_domain4_21_29",
+    "theorem_title": "Actual norm localization block [393/16,395/16]",
+    "formal_statement": "theorem HlawkaSchatten.DiagonalCutoff21.localized_domain4_21_29 :\n    ∀ p : ℝ, (393/16 : ℝ) ≤ p → p ≤ (395/16 : ℝ) → ∀ X : Fin 3 → Fin 3 → ℝ,\n      (∀ i, -(607/500 : ℝ) ≤ X i i ∧ X i i ≤ -(189/500 : ℝ)) →\n      (∀ j i, j ≠ i → (349/500 : ℝ) ≤ X j i ∧ X j i ≤ (607/500 : ℝ)) →\n      lpNorm p (X 0) + lpNorm p (X 1) + lpNorm p (X 2) = 3 →\n      lpNorm p (X 0 + X 1 + X 2) < (3033/2500 : ℝ) →\n      pairGapSum (lpNorm p) (X 0) (X 1) (X 2) < 2 / ((273/625 : ℝ)*p) →\n      (∀ j, -(2239/2000 : ℝ) ≤ X j j ∧ X j j ≤ -(4577/10000 : ℝ)) ∧\n      (∀ j i, j ≠ i → (3863/5000 : ℝ) ≤ X j i ∧ X j i ≤ (1483/1250 : ℝ)) ∧\n      (∀ j, lpNorm p (X j) ≤ (149298789/125000000 : ℝ)) ∧\n      (∀ i j k : Fin 3, i ≠ j → i ≠ k → j ≠ k → (82967765642843/51460500000000 : ℝ) ≤ X j i + X k i) ∧\n      (59752599691237/10292100000000 : ℝ) ≤ X 0 1 + X 0 2 + X 1 0 + X 1 2 + X 2 0 + X 2 1 := by sorry",
+    "preamble": "import Definitions.Def_HlawkaSchatten_GapComparison\nimport Definitions.Def_HlawkaSchatten_DiagonalConstruction_Basic\nopen HlawkaSchatten HlawkaSchatten.DiagonalConstruction\n",
+    "natural_language_statement": "For every real p in [393/16,395/16], coarse-box original norm data with singleton norm sum three, total norm below 3033/2500, and pair-gap sum below 2/((273/625)p) imply the explicit norm cap and linear bounds of analytic domain 1. This block covers 4 consecutive certified slabs. Unequal singleton norms are allowed.",
+    "source": "Yuxuan Xu, A computer-assisted sharp diagonal Hlawka inequality for real exponents p >= 21, Sections 3-4, https://github.com/Anchen-AI4Math/hlawka-diagonal-certificates/blob/main/paper/main.pdf . Generic contraction framework adapted from @bwdaugherty, Apache-2.0; notices retained.",
+    "tags": [
+      "hlawka-schatten",
+      "localization",
+      "exact-arithmetic"
+    ],
+    "solution_file": "formalization/platform/Sol_localized_domain4_21_29.lean",
+    "solution_sha256": "28601cc3137c442352cd32ed9412a9db8dc180a18c10eeb8a8743a1b04eb68f7",
+    "explanation": "No platform theorem imports are used. The complete original norm bridge, rational root inequalities, budget and all ten contraction rounds are proved for at most four slabs, then weakened by exact rational comparisons to a common analytic domain. A balanced interval split covers all real exponents in the block. The analytic theorem is deliberately separated from finite localization; no external validity assumption is introduced."
+  },
+  {
+    "key": "localized_domain4_21_30",
+    "theorem_name": "HlawkaSchatten.DiagonalCutoff21.localized_domain4_21_30",
+    "theorem_title": "Actual norm localization block [395/16,397/16]",
+    "formal_statement": "theorem HlawkaSchatten.DiagonalCutoff21.localized_domain4_21_30 :\n    ∀ p : ℝ, (395/16 : ℝ) ≤ p → p ≤ (397/16 : ℝ) → ∀ X : Fin 3 → Fin 3 → ℝ,\n      (∀ i, -(607/500 : ℝ) ≤ X i i ∧ X i i ≤ -(189/500 : ℝ)) →\n      (∀ j i, j ≠ i → (349/500 : ℝ) ≤ X j i ∧ X j i ≤ (607/500 : ℝ)) →\n      lpNorm p (X 0) + lpNorm p (X 1) + lpNorm p (X 2) = 3 →\n      lpNorm p (X 0 + X 1 + X 2) < (3033/2500 : ℝ) →\n      pairGapSum (lpNorm p) (X 0) (X 1) (X 2) < 2 / ((273/625 : ℝ)*p) →\n      (∀ j, -(2239/2000 : ℝ) ≤ X j j ∧ X j j ≤ -(4577/10000 : ℝ)) ∧\n      (∀ j i, j ≠ i → (3863/5000 : ℝ) ≤ X j i ∧ X j i ≤ (1483/1250 : ℝ)) ∧\n      (∀ j, lpNorm p (X j) ≤ (149298789/125000000 : ℝ)) ∧\n      (∀ i j k : Fin 3, i ≠ j → i ≠ k → j ≠ k → (82967765642843/51460500000000 : ℝ) ≤ X j i + X k i) ∧\n      (59752599691237/10292100000000 : ℝ) ≤ X 0 1 + X 0 2 + X 1 0 + X 1 2 + X 2 0 + X 2 1 := by sorry",
+    "preamble": "import Definitions.Def_HlawkaSchatten_GapComparison\nimport Definitions.Def_HlawkaSchatten_DiagonalConstruction_Basic\nopen HlawkaSchatten HlawkaSchatten.DiagonalConstruction\n",
+    "natural_language_statement": "For every real p in [395/16,397/16], coarse-box original norm data with singleton norm sum three, total norm below 3033/2500, and pair-gap sum below 2/((273/625)p) imply the explicit norm cap and linear bounds of analytic domain 1. This block covers 4 consecutive certified slabs. Unequal singleton norms are allowed.",
+    "source": "Yuxuan Xu, A computer-assisted sharp diagonal Hlawka inequality for real exponents p >= 21, Sections 3-4, https://github.com/Anchen-AI4Math/hlawka-diagonal-certificates/blob/main/paper/main.pdf . Generic contraction framework adapted from @bwdaugherty, Apache-2.0; notices retained.",
+    "tags": [
+      "hlawka-schatten",
+      "localization",
+      "exact-arithmetic"
+    ],
+    "solution_file": "formalization/platform/Sol_localized_domain4_21_30.lean",
+    "solution_sha256": "0f4bbb14da068d7cbae8a9080d4ac21fd986e155cd223a90d6c22d243748a9c6",
+    "explanation": "No platform theorem imports are used. The complete original norm bridge, rational root inequalities, budget and all ten contraction rounds are proved for at most four slabs, then weakened by exact rational comparisons to a common analytic domain. A balanced interval split covers all real exponents in the block. The analytic theorem is deliberately separated from finite localization; no external validity assumption is introduced."
+  },
+  {
+    "key": "localized_domain4_21_31",
+    "theorem_name": "HlawkaSchatten.DiagonalCutoff21.localized_domain4_21_31",
+    "theorem_title": "Actual norm localization block [397/16,399/16]",
+    "formal_statement": "theorem HlawkaSchatten.DiagonalCutoff21.localized_domain4_21_31 :\n    ∀ p : ℝ, (397/16 : ℝ) ≤ p → p ≤ (399/16 : ℝ) → ∀ X : Fin 3 → Fin 3 → ℝ,\n      (∀ i, -(607/500 : ℝ) ≤ X i i ∧ X i i ≤ -(189/500 : ℝ)) →\n      (∀ j i, j ≠ i → (349/500 : ℝ) ≤ X j i ∧ X j i ≤ (607/500 : ℝ)) →\n      lpNorm p (X 0) + lpNorm p (X 1) + lpNorm p (X 2) = 3 →\n      lpNorm p (X 0 + X 1 + X 2) < (3033/2500 : ℝ) →\n      pairGapSum (lpNorm p) (X 0) (X 1) (X 2) < 2 / ((273/625 : ℝ)*p) →\n      (∀ j, -(2239/2000 : ℝ) ≤ X j j ∧ X j j ≤ -(4577/10000 : ℝ)) ∧\n      (∀ j i, j ≠ i → (3863/5000 : ℝ) ≤ X j i ∧ X j i ≤ (1483/1250 : ℝ)) ∧\n      (∀ j, lpNorm p (X j) ≤ (149298789/125000000 : ℝ)) ∧\n      (∀ i j k : Fin 3, i ≠ j → i ≠ k → j ≠ k → (82967765642843/51460500000000 : ℝ) ≤ X j i + X k i) ∧\n      (59752599691237/10292100000000 : ℝ) ≤ X 0 1 + X 0 2 + X 1 0 + X 1 2 + X 2 0 + X 2 1 := by sorry",
+    "preamble": "import Definitions.Def_HlawkaSchatten_GapComparison\nimport Definitions.Def_HlawkaSchatten_DiagonalConstruction_Basic\nopen HlawkaSchatten HlawkaSchatten.DiagonalConstruction\n",
+    "natural_language_statement": "For every real p in [397/16,399/16], coarse-box original norm data with singleton norm sum three, total norm below 3033/2500, and pair-gap sum below 2/((273/625)p) imply the explicit norm cap and linear bounds of analytic domain 1. This block covers 4 consecutive certified slabs. Unequal singleton norms are allowed.",
+    "source": "Yuxuan Xu, A computer-assisted sharp diagonal Hlawka inequality for real exponents p >= 21, Sections 3-4, https://github.com/Anchen-AI4Math/hlawka-diagonal-certificates/blob/main/paper/main.pdf . Generic contraction framework adapted from @bwdaugherty, Apache-2.0; notices retained.",
+    "tags": [
+      "hlawka-schatten",
+      "localization",
+      "exact-arithmetic"
+    ],
+    "solution_file": "formalization/platform/Sol_localized_domain4_21_31.lean",
+    "solution_sha256": "c84867650448a72a0dad1e223fd898ac0538bf1f4e0b2f026cc166f3d4f95622",
+    "explanation": "No platform theorem imports are used. The complete original norm bridge, rational root inequalities, budget and all ten contraction rounds are proved for at most four slabs, then weakened by exact rational comparisons to a common analytic domain. A balanced interval split covers all real exponents in the block. The analytic theorem is deliberately separated from finite localization; no external validity assumption is introduced."
+  },
+  {
+    "key": "localized_domain4_21_32",
+    "theorem_name": "HlawkaSchatten.DiagonalCutoff21.localized_domain4_21_32",
+    "theorem_title": "Actual norm localization block [399/16,401/16]",
+    "formal_statement": "theorem HlawkaSchatten.DiagonalCutoff21.localized_domain4_21_32 :\n    ∀ p : ℝ, (399/16 : ℝ) ≤ p → p ≤ (401/16 : ℝ) → ∀ X : Fin 3 → Fin 3 → ℝ,\n      (∀ i, -(607/500 : ℝ) ≤ X i i ∧ X i i ≤ -(189/500 : ℝ)) →\n      (∀ j i, j ≠ i → (349/500 : ℝ) ≤ X j i ∧ X j i ≤ (607/500 : ℝ)) →\n      lpNorm p (X 0) + lpNorm p (X 1) + lpNorm p (X 2) = 3 →\n      lpNorm p (X 0 + X 1 + X 2) < (3033/2500 : ℝ) →\n      pairGapSum (lpNorm p) (X 0) (X 1) (X 2) < 2 / ((273/625 : ℝ)*p) →\n      (∀ j, -(2239/2000 : ℝ) ≤ X j j ∧ X j j ≤ -(4577/10000 : ℝ)) ∧\n      (∀ j i, j ≠ i → (3863/5000 : ℝ) ≤ X j i ∧ X j i ≤ (1483/1250 : ℝ)) ∧\n      (∀ j, lpNorm p (X j) ≤ (149298789/125000000 : ℝ)) ∧\n      (∀ i j k : Fin 3, i ≠ j → i ≠ k → j ≠ k → (82967765642843/51460500000000 : ℝ) ≤ X j i + X k i) ∧\n      (59752599691237/10292100000000 : ℝ) ≤ X 0 1 + X 0 2 + X 1 0 + X 1 2 + X 2 0 + X 2 1 := by sorry",
+    "preamble": "import Definitions.Def_HlawkaSchatten_GapComparison\nimport Definitions.Def_HlawkaSchatten_DiagonalConstruction_Basic\nopen HlawkaSchatten HlawkaSchatten.DiagonalConstruction\n",
+    "natural_language_statement": "For every real p in [399/16,401/16], coarse-box original norm data with singleton norm sum three, total norm below 3033/2500, and pair-gap sum below 2/((273/625)p) imply the explicit norm cap and linear bounds of analytic domain 1. This block covers 4 consecutive certified slabs. Unequal singleton norms are allowed.",
+    "source": "Yuxuan Xu, A computer-assisted sharp diagonal Hlawka inequality for real exponents p >= 21, Sections 3-4, https://github.com/Anchen-AI4Math/hlawka-diagonal-certificates/blob/main/paper/main.pdf . Generic contraction framework adapted from @bwdaugherty, Apache-2.0; notices retained.",
+    "tags": [
+      "hlawka-schatten",
+      "localization",
+      "exact-arithmetic"
+    ],
+    "solution_file": "formalization/platform/Sol_localized_domain4_21_32.lean",
+    "solution_sha256": "1b59f8739e65e8c0424d5f5105f07254d791508a24a324e7daae8da3abe8ecb0",
+    "explanation": "No platform theorem imports are used. The complete original norm bridge, rational root inequalities, budget and all ten contraction rounds are proved for at most four slabs, then weakened by exact rational comparisons to a common analytic domain. A balanced interval split covers all real exponents in the block. The analytic theorem is deliberately separated from finite localization; no external validity assumption is introduced."
+  },
+  {
+    "key": "localized_domain4_21_33",
+    "theorem_name": "HlawkaSchatten.DiagonalCutoff21.localized_domain4_21_33",
+    "theorem_title": "Actual norm localization block [401/16,403/16]",
+    "formal_statement": "theorem HlawkaSchatten.DiagonalCutoff21.localized_domain4_21_33 :\n    ∀ p : ℝ, (401/16 : ℝ) ≤ p → p ≤ (403/16 : ℝ) → ∀ X : Fin 3 → Fin 3 → ℝ,\n      (∀ i, -(607/500 : ℝ) ≤ X i i ∧ X i i ≤ -(189/500 : ℝ)) →\n      (∀ j i, j ≠ i → (349/500 : ℝ) ≤ X j i ∧ X j i ≤ (607/500 : ℝ)) →\n      lpNorm p (X 0) + lpNorm p (X 1) + lpNorm p (X 2) = 3 →\n      lpNorm p (X 0 + X 1 + X 2) < (3033/2500 : ℝ) →\n      pairGapSum (lpNorm p) (X 0) (X 1) (X 2) < 2 / ((273/625 : ℝ)*p) →\n      (∀ j, -(2239/2000 : ℝ) ≤ X j j ∧ X j j ≤ -(4577/10000 : ℝ)) ∧\n      (∀ j i, j ≠ i → (3863/5000 : ℝ) ≤ X j i ∧ X j i ≤ (1483/1250 : ℝ)) ∧\n      (∀ j, lpNorm p (X j) ≤ (149298789/125000000 : ℝ)) ∧\n      (∀ i j k : Fin 3, i ≠ j → i ≠ k → j ≠ k → (82967765642843/51460500000000 : ℝ) ≤ X j i + X k i) ∧\n      (59752599691237/10292100000000 : ℝ) ≤ X 0 1 + X 0 2 + X 1 0 + X 1 2 + X 2 0 + X 2 1 := by sorry",
+    "preamble": "import Definitions.Def_HlawkaSchatten_GapComparison\nimport Definitions.Def_HlawkaSchatten_DiagonalConstruction_Basic\nopen HlawkaSchatten HlawkaSchatten.DiagonalConstruction\n",
+    "natural_language_statement": "For every real p in [401/16,403/16], coarse-box original norm data with singleton norm sum three, total norm below 3033/2500, and pair-gap sum below 2/((273/625)p) imply the explicit norm cap and linear bounds of analytic domain 1. This block covers 4 consecutive certified slabs. Unequal singleton norms are allowed.",
+    "source": "Yuxuan Xu, A computer-assisted sharp diagonal Hlawka inequality for real exponents p >= 21, Sections 3-4, https://github.com/Anchen-AI4Math/hlawka-diagonal-certificates/blob/main/paper/main.pdf . Generic contraction framework adapted from @bwdaugherty, Apache-2.0; notices retained.",
+    "tags": [
+      "hlawka-schatten",
+      "localization",
+      "exact-arithmetic"
+    ],
+    "solution_file": "formalization/platform/Sol_localized_domain4_21_33.lean",
+    "solution_sha256": "7b72a2dababbcda02d0e51743b7f3c21e8b2643835f9351726de0a5d0d28735b",
+    "explanation": "No platform theorem imports are used. The complete original norm bridge, rational root inequalities, budget and all ten contraction rounds are proved for at most four slabs, then weakened by exact rational comparisons to a common analytic domain. A balanced interval split covers all real exponents in the block. The analytic theorem is deliberately separated from finite localization; no external validity assumption is introduced."
+  },
+  {
+    "key": "localized_domain4_21_34",
+    "theorem_name": "HlawkaSchatten.DiagonalCutoff21.localized_domain4_21_34",
+    "theorem_title": "Actual norm localization block [403/16,405/16]",
+    "formal_statement": "theorem HlawkaSchatten.DiagonalCutoff21.localized_domain4_21_34 :\n    ∀ p : ℝ, (403/16 : ℝ) ≤ p → p ≤ (405/16 : ℝ) → ∀ X : Fin 3 → Fin 3 → ℝ,\n      (∀ i, -(607/500 : ℝ) ≤ X i i ∧ X i i ≤ -(189/500 : ℝ)) →\n      (∀ j i, j ≠ i → (349/500 : ℝ) ≤ X j i ∧ X j i ≤ (607/500 : ℝ)) →\n      lpNorm p (X 0) + lpNorm p (X 1) + lpNorm p (X 2) = 3 →\n      lpNorm p (X 0 + X 1 + X 2) < (3033/2500 : ℝ) →\n      pairGapSum (lpNorm p) (X 0) (X 1) (X 2) < 2 / ((273/625 : ℝ)*p) →\n      (∀ j, -(2239/2000 : ℝ) ≤ X j j ∧ X j j ≤ -(4577/10000 : ℝ)) ∧\n      (∀ j i, j ≠ i → (3863/5000 : ℝ) ≤ X j i ∧ X j i ≤ (1483/1250 : ℝ)) ∧\n      (∀ j, lpNorm p (X j) ≤ (149298789/125000000 : ℝ)) ∧\n      (∀ i j k : Fin 3, i ≠ j → i ≠ k → j ≠ k → (82967765642843/51460500000000 : ℝ) ≤ X j i + X k i) ∧\n      (59752599691237/10292100000000 : ℝ) ≤ X 0 1 + X 0 2 + X 1 0 + X 1 2 + X 2 0 + X 2 1 := by sorry",
+    "preamble": "import Definitions.Def_HlawkaSchatten_GapComparison\nimport Definitions.Def_HlawkaSchatten_DiagonalConstruction_Basic\nopen HlawkaSchatten HlawkaSchatten.DiagonalConstruction\n",
+    "natural_language_statement": "For every real p in [403/16,405/16], coarse-box original norm data with singleton norm sum three, total norm below 3033/2500, and pair-gap sum below 2/((273/625)p) imply the explicit norm cap and linear bounds of analytic domain 1. This block covers 4 consecutive certified slabs. Unequal singleton norms are allowed.",
+    "source": "Yuxuan Xu, A computer-assisted sharp diagonal Hlawka inequality for real exponents p >= 21, Sections 3-4, https://github.com/Anchen-AI4Math/hlawka-diagonal-certificates/blob/main/paper/main.pdf . Generic contraction framework adapted from @bwdaugherty, Apache-2.0; notices retained.",
+    "tags": [
+      "hlawka-schatten",
+      "localization",
+      "exact-arithmetic"
+    ],
+    "solution_file": "formalization/platform/Sol_localized_domain4_21_34.lean",
+    "solution_sha256": "8e974ac9a09960330e5063f45492a3dba893a93d47c3f45328f0b7171d81e166",
+    "explanation": "No platform theorem imports are used. The complete original norm bridge, rational root inequalities, budget and all ten contraction rounds are proved for at most four slabs, then weakened by exact rational comparisons to a common analytic domain. A balanced interval split covers all real exponents in the block. The analytic theorem is deliberately separated from finite localization; no external validity assumption is introduced."
+  },
+  {
+    "key": "localized_domain4_21_35",
+    "theorem_name": "HlawkaSchatten.DiagonalCutoff21.localized_domain4_21_35",
+    "theorem_title": "Actual norm localization block [405/16,407/16]",
+    "formal_statement": "theorem HlawkaSchatten.DiagonalCutoff21.localized_domain4_21_35 :\n    ∀ p : ℝ, (405/16 : ℝ) ≤ p → p ≤ (407/16 : ℝ) → ∀ X : Fin 3 → Fin 3 → ℝ,\n      (∀ i, -(607/500 : ℝ) ≤ X i i ∧ X i i ≤ -(189/500 : ℝ)) →\n      (∀ j i, j ≠ i → (349/500 : ℝ) ≤ X j i ∧ X j i ≤ (607/500 : ℝ)) →\n      lpNorm p (X 0) + lpNorm p (X 1) + lpNorm p (X 2) = 3 →\n      lpNorm p (X 0 + X 1 + X 2) < (3033/2500 : ℝ) →\n      pairGapSum (lpNorm p) (X 0) (X 1) (X 2) < 2 / ((273/625 : ℝ)*p) →\n      (∀ j, -(2239/2000 : ℝ) ≤ X j j ∧ X j j ≤ -(4577/10000 : ℝ)) ∧\n      (∀ j i, j ≠ i → (3863/5000 : ℝ) ≤ X j i ∧ X j i ≤ (1483/1250 : ℝ)) ∧\n      (∀ j, lpNorm p (X j) ≤ (149298789/125000000 : ℝ)) ∧\n      (∀ i j k : Fin 3, i ≠ j → i ≠ k → j ≠ k → (82967765642843/51460500000000 : ℝ) ≤ X j i + X k i) ∧\n      (59752599691237/10292100000000 : ℝ) ≤ X 0 1 + X 0 2 + X 1 0 + X 1 2 + X 2 0 + X 2 1 := by sorry",
+    "preamble": "import Definitions.Def_HlawkaSchatten_GapComparison\nimport Definitions.Def_HlawkaSchatten_DiagonalConstruction_Basic\nopen HlawkaSchatten HlawkaSchatten.DiagonalConstruction\n",
+    "natural_language_statement": "For every real p in [405/16,407/16], coarse-box original norm data with singleton norm sum three, total norm below 3033/2500, and pair-gap sum below 2/((273/625)p) imply the explicit norm cap and linear bounds of analytic domain 1. This block covers 4 consecutive certified slabs. Unequal singleton norms are allowed.",
+    "source": "Yuxuan Xu, A computer-assisted sharp diagonal Hlawka inequality for real exponents p >= 21, Sections 3-4, https://github.com/Anchen-AI4Math/hlawka-diagonal-certificates/blob/main/paper/main.pdf . Generic contraction framework adapted from @bwdaugherty, Apache-2.0; notices retained.",
+    "tags": [
+      "hlawka-schatten",
+      "localization",
+      "exact-arithmetic"
+    ],
+    "solution_file": "formalization/platform/Sol_localized_domain4_21_35.lean",
+    "solution_sha256": "04370bdcc483f3794b30d2b339490216f5b87acf18a6ce1cd35c99e11ed59be2",
+    "explanation": "No platform theorem imports are used. The complete original norm bridge, rational root inequalities, budget and all ten contraction rounds are proved for at most four slabs, then weakened by exact rational comparisons to a common analytic domain. A balanced interval split covers all real exponents in the block. The analytic theorem is deliberately separated from finite localization; no external validity assumption is introduced."
+  },
+  {
+    "key": "localized_domain4_21_36",
+    "theorem_name": "HlawkaSchatten.DiagonalCutoff21.localized_domain4_21_36",
+    "theorem_title": "Actual norm localization block [407/16,409/16]",
+    "formal_statement": "theorem HlawkaSchatten.DiagonalCutoff21.localized_domain4_21_36 :\n    ∀ p : ℝ, (407/16 : ℝ) ≤ p → p ≤ (409/16 : ℝ) → ∀ X : Fin 3 → Fin 3 → ℝ,\n      (∀ i, -(607/500 : ℝ) ≤ X i i ∧ X i i ≤ -(189/500 : ℝ)) →\n      (∀ j i, j ≠ i → (349/500 : ℝ) ≤ X j i ∧ X j i ≤ (607/500 : ℝ)) →\n      lpNorm p (X 0) + lpNorm p (X 1) + lpNorm p (X 2) = 3 →\n      lpNorm p (X 0 + X 1 + X 2) < (3033/2500 : ℝ) →\n      pairGapSum (lpNorm p) (X 0) (X 1) (X 2) < 2 / ((273/625 : ℝ)*p) →\n      (∀ j, -(2239/2000 : ℝ) ≤ X j j ∧ X j j ≤ -(4577/10000 : ℝ)) ∧\n      (∀ j i, j ≠ i → (3863/5000 : ℝ) ≤ X j i ∧ X j i ≤ (1483/1250 : ℝ)) ∧\n      (∀ j, lpNorm p (X j) ≤ (149298789/125000000 : ℝ)) ∧\n      (∀ i j k : Fin 3, i ≠ j → i ≠ k → j ≠ k → (82967765642843/51460500000000 : ℝ) ≤ X j i + X k i) ∧\n      (59752599691237/10292100000000 : ℝ) ≤ X 0 1 + X 0 2 + X 1 0 + X 1 2 + X 2 0 + X 2 1 := by sorry",
+    "preamble": "import Definitions.Def_HlawkaSchatten_GapComparison\nimport Definitions.Def_HlawkaSchatten_DiagonalConstruction_Basic\nopen HlawkaSchatten HlawkaSchatten.DiagonalConstruction\n",
+    "natural_language_statement": "For every real p in [407/16,409/16], coarse-box original norm data with singleton norm sum three, total norm below 3033/2500, and pair-gap sum below 2/((273/625)p) imply the explicit norm cap and linear bounds of analytic domain 1. This block covers 4 consecutive certified slabs. Unequal singleton norms are allowed.",
+    "source": "Yuxuan Xu, A computer-assisted sharp diagonal Hlawka inequality for real exponents p >= 21, Sections 3-4, https://github.com/Anchen-AI4Math/hlawka-diagonal-certificates/blob/main/paper/main.pdf . Generic contraction framework adapted from @bwdaugherty, Apache-2.0; notices retained.",
+    "tags": [
+      "hlawka-schatten",
+      "localization",
+      "exact-arithmetic"
+    ],
+    "solution_file": "formalization/platform/Sol_localized_domain4_21_36.lean",
+    "solution_sha256": "5c8dd8650758c028c9efb8da8830902ba7246891459f476fb5bbc17bcf676133",
+    "explanation": "No platform theorem imports are used. The complete original norm bridge, rational root inequalities, budget and all ten contraction rounds are proved for at most four slabs, then weakened by exact rational comparisons to a common analytic domain. A balanced interval split covers all real exponents in the block. The analytic theorem is deliberately separated from finite localization; no external validity assumption is introduced."
+  },
+  {
+    "key": "localized_domain4_21_37",
+    "theorem_name": "HlawkaSchatten.DiagonalCutoff21.localized_domain4_21_37",
+    "theorem_title": "Actual norm localization block [409/16,411/16]",
+    "formal_statement": "theorem HlawkaSchatten.DiagonalCutoff21.localized_domain4_21_37 :\n    ∀ p : ℝ, (409/16 : ℝ) ≤ p → p ≤ (411/16 : ℝ) → ∀ X : Fin 3 → Fin 3 → ℝ,\n      (∀ i, -(607/500 : ℝ) ≤ X i i ∧ X i i ≤ -(189/500 : ℝ)) →\n      (∀ j i, j ≠ i → (349/500 : ℝ) ≤ X j i ∧ X j i ≤ (607/500 : ℝ)) →\n      lpNorm p (X 0) + lpNorm p (X 1) + lpNorm p (X 2) = 3 →\n      lpNorm p (X 0 + X 1 + X 2) < (3033/2500 : ℝ) →\n      pairGapSum (lpNorm p) (X 0) (X 1) (X 2) < 2 / ((273/625 : ℝ)*p) →\n      (∀ j, -(2239/2000 : ℝ) ≤ X j j ∧ X j j ≤ -(4577/10000 : ℝ)) ∧\n      (∀ j i, j ≠ i → (3863/5000 : ℝ) ≤ X j i ∧ X j i ≤ (1483/1250 : ℝ)) ∧\n      (∀ j, lpNorm p (X j) ≤ (149298789/125000000 : ℝ)) ∧\n      (∀ i j k : Fin 3, i ≠ j → i ≠ k → j ≠ k → (82967765642843/51460500000000 : ℝ) ≤ X j i + X k i) ∧\n      (59752599691237/10292100000000 : ℝ) ≤ X 0 1 + X 0 2 + X 1 0 + X 1 2 + X 2 0 + X 2 1 := by sorry",
+    "preamble": "import Definitions.Def_HlawkaSchatten_GapComparison\nimport Definitions.Def_HlawkaSchatten_DiagonalConstruction_Basic\nopen HlawkaSchatten HlawkaSchatten.DiagonalConstruction\n",
+    "natural_language_statement": "For every real p in [409/16,411/16], coarse-box original norm data with singleton norm sum three, total norm below 3033/2500, and pair-gap sum below 2/((273/625)p) imply the explicit norm cap and linear bounds of analytic domain 1. This block covers 4 consecutive certified slabs. Unequal singleton norms are allowed.",
+    "source": "Yuxuan Xu, A computer-assisted sharp diagonal Hlawka inequality for real exponents p >= 21, Sections 3-4, https://github.com/Anchen-AI4Math/hlawka-diagonal-certificates/blob/main/paper/main.pdf . Generic contraction framework adapted from @bwdaugherty, Apache-2.0; notices retained.",
+    "tags": [
+      "hlawka-schatten",
+      "localization",
+      "exact-arithmetic"
+    ],
+    "solution_file": "formalization/platform/Sol_localized_domain4_21_37.lean",
+    "solution_sha256": "2f317dffe6892e18f9d04808948576b62d53761cb6e58e09d005224e6c063f85",
+    "explanation": "No platform theorem imports are used. The complete original norm bridge, rational root inequalities, budget and all ten contraction rounds are proved for at most four slabs, then weakened by exact rational comparisons to a common analytic domain. A balanced interval split covers all real exponents in the block. The analytic theorem is deliberately separated from finite localization; no external validity assumption is introduced."
+  },
+  {
+    "key": "localized_domain4_21_38",
+    "theorem_name": "HlawkaSchatten.DiagonalCutoff21.localized_domain4_21_38",
+    "theorem_title": "Actual norm localization block [411/16,413/16]",
+    "formal_statement": "theorem HlawkaSchatten.DiagonalCutoff21.localized_domain4_21_38 :\n    ∀ p : ℝ, (411/16 : ℝ) ≤ p → p ≤ (413/16 : ℝ) → ∀ X : Fin 3 → Fin 3 → ℝ,\n      (∀ i, -(607/500 : ℝ) ≤ X i i ∧ X i i ≤ -(189/500 : ℝ)) →\n      (∀ j i, j ≠ i → (349/500 : ℝ) ≤ X j i ∧ X j i ≤ (607/500 : ℝ)) →\n      lpNorm p (X 0) + lpNorm p (X 1) + lpNorm p (X 2) = 3 →\n      lpNorm p (X 0 + X 1 + X 2) < (3033/2500 : ℝ) →\n      pairGapSum (lpNorm p) (X 0) (X 1) (X 2) < 2 / ((273/625 : ℝ)*p) →\n      (∀ j, -(2239/2000 : ℝ) ≤ X j j ∧ X j j ≤ -(4577/10000 : ℝ)) ∧\n      (∀ j i, j ≠ i → (3863/5000 : ℝ) ≤ X j i ∧ X j i ≤ (1483/1250 : ℝ)) ∧\n      (∀ j, lpNorm p (X j) ≤ (149298789/125000000 : ℝ)) ∧\n      (∀ i j k : Fin 3, i ≠ j → i ≠ k → j ≠ k → (82967765642843/51460500000000 : ℝ) ≤ X j i + X k i) ∧\n      (59752599691237/10292100000000 : ℝ) ≤ X 0 1 + X 0 2 + X 1 0 + X 1 2 + X 2 0 + X 2 1 := by sorry",
+    "preamble": "import Definitions.Def_HlawkaSchatten_GapComparison\nimport Definitions.Def_HlawkaSchatten_DiagonalConstruction_Basic\nopen HlawkaSchatten HlawkaSchatten.DiagonalConstruction\n",
+    "natural_language_statement": "For every real p in [411/16,413/16], coarse-box original norm data with singleton norm sum three, total norm below 3033/2500, and pair-gap sum below 2/((273/625)p) imply the explicit norm cap and linear bounds of analytic domain 1. This block covers 4 consecutive certified slabs. Unequal singleton norms are allowed.",
+    "source": "Yuxuan Xu, A computer-assisted sharp diagonal Hlawka inequality for real exponents p >= 21, Sections 3-4, https://github.com/Anchen-AI4Math/hlawka-diagonal-certificates/blob/main/paper/main.pdf . Generic contraction framework adapted from @bwdaugherty, Apache-2.0; notices retained.",
+    "tags": [
+      "hlawka-schatten",
+      "localization",
+      "exact-arithmetic"
+    ],
+    "solution_file": "formalization/platform/Sol_localized_domain4_21_38.lean",
+    "solution_sha256": "41aca61ca984919ec843bfb820be52ef844f079503f293b726f24e41c869d3ff",
+    "explanation": "No platform theorem imports are used. The complete original norm bridge, rational root inequalities, budget and all ten contraction rounds are proved for at most four slabs, then weakened by exact rational comparisons to a common analytic domain. A balanced interval split covers all real exponents in the block. The analytic theorem is deliberately separated from finite localization; no external validity assumption is introduced."
+  },
+  {
+    "key": "localized_domain4_21_39",
+    "theorem_name": "HlawkaSchatten.DiagonalCutoff21.localized_domain4_21_39",
+    "theorem_title": "Actual norm localization block [413/16,415/16]",
+    "formal_statement": "theorem HlawkaSchatten.DiagonalCutoff21.localized_domain4_21_39 :\n    ∀ p : ℝ, (413/16 : ℝ) ≤ p → p ≤ (415/16 : ℝ) → ∀ X : Fin 3 → Fin 3 → ℝ,\n      (∀ i, -(607/500 : ℝ) ≤ X i i ∧ X i i ≤ -(189/500 : ℝ)) →\n      (∀ j i, j ≠ i → (349/500 : ℝ) ≤ X j i ∧ X j i ≤ (607/500 : ℝ)) →\n      lpNorm p (X 0) + lpNorm p (X 1) + lpNorm p (X 2) = 3 →\n      lpNorm p (X 0 + X 1 + X 2) < (3033/2500 : ℝ) →\n      pairGapSum (lpNorm p) (X 0) (X 1) (X 2) < 2 / ((273/625 : ℝ)*p) →\n      (∀ j, -(2239/2000 : ℝ) ≤ X j j ∧ X j j ≤ -(4577/10000 : ℝ)) ∧\n      (∀ j i, j ≠ i → (3863/5000 : ℝ) ≤ X j i ∧ X j i ≤ (1483/1250 : ℝ)) ∧\n      (∀ j, lpNorm p (X j) ≤ (149298789/125000000 : ℝ)) ∧\n      (∀ i j k : Fin 3, i ≠ j → i ≠ k → j ≠ k → (82967765642843/51460500000000 : ℝ) ≤ X j i + X k i) ∧\n      (59752599691237/10292100000000 : ℝ) ≤ X 0 1 + X 0 2 + X 1 0 + X 1 2 + X 2 0 + X 2 1 := by sorry",
+    "preamble": "import Definitions.Def_HlawkaSchatten_GapComparison\nimport Definitions.Def_HlawkaSchatten_DiagonalConstruction_Basic\nopen HlawkaSchatten HlawkaSchatten.DiagonalConstruction\n",
+    "natural_language_statement": "For every real p in [413/16,415/16], coarse-box original norm data with singleton norm sum three, total norm below 3033/2500, and pair-gap sum below 2/((273/625)p) imply the explicit norm cap and linear bounds of analytic domain 1. This block covers 4 consecutive certified slabs. Unequal singleton norms are allowed.",
+    "source": "Yuxuan Xu, A computer-assisted sharp diagonal Hlawka inequality for real exponents p >= 21, Sections 3-4, https://github.com/Anchen-AI4Math/hlawka-diagonal-certificates/blob/main/paper/main.pdf . Generic contraction framework adapted from @bwdaugherty, Apache-2.0; notices retained.",
+    "tags": [
+      "hlawka-schatten",
+      "localization",
+      "exact-arithmetic"
+    ],
+    "solution_file": "formalization/platform/Sol_localized_domain4_21_39.lean",
+    "solution_sha256": "cb42739f2ab791fd599c0fdf4d77ed89fcb810e98b2f703b4cd239fb61e1386d",
+    "explanation": "No platform theorem imports are used. The complete original norm bridge, rational root inequalities, budget and all ten contraction rounds are proved for at most four slabs, then weakened by exact rational comparisons to a common analytic domain. A balanced interval split covers all real exponents in the block. The analytic theorem is deliberately separated from finite localization; no external validity assumption is introduced."
+  },
+  {
+    "key": "localized_domain4_21_40",
+    "theorem_name": "HlawkaSchatten.DiagonalCutoff21.localized_domain4_21_40",
+    "theorem_title": "Actual norm localization block [415/16,26]",
+    "formal_statement": "theorem HlawkaSchatten.DiagonalCutoff21.localized_domain4_21_40 :\n    ∀ p : ℝ, (415/16 : ℝ) ≤ p → p ≤ (26 : ℝ) → ∀ X : Fin 3 → Fin 3 → ℝ,\n      (∀ i, -(607/500 : ℝ) ≤ X i i ∧ X i i ≤ -(189/500 : ℝ)) →\n      (∀ j i, j ≠ i → (349/500 : ℝ) ≤ X j i ∧ X j i ≤ (607/500 : ℝ)) →\n      lpNorm p (X 0) + lpNorm p (X 1) + lpNorm p (X 2) = 3 →\n      lpNorm p (X 0 + X 1 + X 2) < (3033/2500 : ℝ) →\n      pairGapSum (lpNorm p) (X 0) (X 1) (X 2) < 2 / ((273/625 : ℝ)*p) →\n      (∀ j, -(2239/2000 : ℝ) ≤ X j j ∧ X j j ≤ -(4577/10000 : ℝ)) ∧\n      (∀ j i, j ≠ i → (3863/5000 : ℝ) ≤ X j i ∧ X j i ≤ (1483/1250 : ℝ)) ∧\n      (∀ j, lpNorm p (X j) ≤ (149298789/125000000 : ℝ)) ∧\n      (∀ i j k : Fin 3, i ≠ j → i ≠ k → j ≠ k → (82967765642843/51460500000000 : ℝ) ≤ X j i + X k i) ∧\n      (59752599691237/10292100000000 : ℝ) ≤ X 0 1 + X 0 2 + X 1 0 + X 1 2 + X 2 0 + X 2 1 := by sorry",
+    "preamble": "import Definitions.Def_HlawkaSchatten_GapComparison\nimport Definitions.Def_HlawkaSchatten_DiagonalConstruction_Basic\nopen HlawkaSchatten HlawkaSchatten.DiagonalConstruction\n",
+    "natural_language_statement": "For every real p in [415/16,26], coarse-box original norm data with singleton norm sum three, total norm below 3033/2500, and pair-gap sum below 2/((273/625)p) imply the explicit norm cap and linear bounds of analytic domain 1. This block covers 2 consecutive certified slabs. Unequal singleton norms are allowed.",
+    "source": "Yuxuan Xu, A computer-assisted sharp diagonal Hlawka inequality for real exponents p >= 21, Sections 3-4, https://github.com/Anchen-AI4Math/hlawka-diagonal-certificates/blob/main/paper/main.pdf . Generic contraction framework adapted from @bwdaugherty, Apache-2.0; notices retained.",
+    "tags": [
+      "hlawka-schatten",
+      "localization",
+      "exact-arithmetic"
+    ],
+    "solution_file": "formalization/platform/Sol_localized_domain4_21_40.lean",
+    "solution_sha256": "926adeb53327c526fad2b0e39e66cff1f5612ec65ce3fdeb171e30fb8c711859",
+    "explanation": "No platform theorem imports are used. The complete original norm bridge, rational root inequalities, budget and all ten contraction rounds are proved for at most four slabs, then weakened by exact rational comparisons to a common analytic domain. A balanced interval split covers all real exponents in the block. The analytic theorem is deliberately separated from finite localization; no external validity assumption is introduced."
+  },
+  {
+    "key": "localized_domain4_26_00",
+    "theorem_name": "HlawkaSchatten.DiagonalCutoff21.localized_domain4_26_00",
+    "theorem_title": "Actual norm localization block [26,105/4]",
+    "formal_statement": "theorem HlawkaSchatten.DiagonalCutoff21.localized_domain4_26_00 :\n    ∀ p : ℝ, (26 : ℝ) ≤ p → p ≤ (105/4 : ℝ) → ∀ X : Fin 3 → Fin 3 → ℝ,\n      (∀ i, -(1183/1000 : ℝ) ≤ X i i ∧ X i i ≤ -(477/1000 : ℝ)) →\n      (∀ j i, j ≠ i → (3/4 : ℝ) ≤ X j i ∧ X j i ≤ (1183/1000 : ℝ)) →\n      lpNorm p (X 0) + lpNorm p (X 1) + lpNorm p (X 2) = 3 →\n      lpNorm p (X 0 + X 1 + X 2) < (591/500 : ℝ) →\n      pairGapSum (lpNorm p) (X 0) (X 1) (X 2) < 2 / ((443/1000 : ℝ)*p) →\n      (∀ j, -(2239/2000 : ℝ) ≤ X j j ∧ X j j ≤ -(4577/10000 : ℝ)) ∧\n      (∀ j i, j ≠ i → (3863/5000 : ℝ) ≤ X j i ∧ X j i ≤ (1483/1250 : ℝ)) ∧\n      (∀ j, lpNorm p (X j) ≤ (149298789/125000000 : ℝ)) ∧\n      (∀ i j k : Fin 3, i ≠ j → i ≠ k → j ≠ k → (82967765642843/51460500000000 : ℝ) ≤ X j i + X k i) ∧\n      (59752599691237/10292100000000 : ℝ) ≤ X 0 1 + X 0 2 + X 1 0 + X 1 2 + X 2 0 + X 2 1 := by sorry",
+    "preamble": "import Definitions.Def_HlawkaSchatten_GapComparison\nimport Definitions.Def_HlawkaSchatten_DiagonalConstruction_Basic\nopen HlawkaSchatten HlawkaSchatten.DiagonalConstruction\n",
+    "natural_language_statement": "For every real p in [26,105/4], coarse-box original norm data with singleton norm sum three, total norm below 591/500, and pair-gap sum below 2/((443/1000)p) imply the explicit norm cap and linear bounds of analytic domain 1. This block covers 4 consecutive certified slabs. Unequal singleton norms are allowed.",
+    "source": "Yuxuan Xu, A computer-assisted sharp diagonal Hlawka inequality for real exponents p >= 21, Sections 3-4, https://github.com/Anchen-AI4Math/hlawka-diagonal-certificates/blob/main/paper/main.pdf . Generic contraction framework adapted from @bwdaugherty, Apache-2.0; notices retained.",
+    "tags": [
+      "hlawka-schatten",
+      "localization",
+      "exact-arithmetic"
+    ],
+    "solution_file": "formalization/platform/Sol_localized_domain4_26_00.lean",
+    "solution_sha256": "c9301aecf93e42bba89bbf82004608d99aa1742ee4e0684d730220be0815bb48",
+    "explanation": "No platform theorem imports are used. The complete original norm bridge, rational root inequalities, budget and all ten contraction rounds are proved for at most four slabs, then weakened by exact rational comparisons to a common analytic domain. A balanced interval split covers all real exponents in the block. The analytic theorem is deliberately separated from finite localization; no external validity assumption is introduced."
+  },
+  {
+    "key": "localized_domain4_26_01",
+    "theorem_name": "HlawkaSchatten.DiagonalCutoff21.localized_domain4_26_01",
+    "theorem_title": "Actual norm localization block [105/4,53/2]",
+    "formal_statement": "theorem HlawkaSchatten.DiagonalCutoff21.localized_domain4_26_01 :\n    ∀ p : ℝ, (105/4 : ℝ) ≤ p → p ≤ (53/2 : ℝ) → ∀ X : Fin 3 → Fin 3 → ℝ,\n      (∀ i, -(1183/1000 : ℝ) ≤ X i i ∧ X i i ≤ -(477/1000 : ℝ)) →\n      (∀ j i, j ≠ i → (3/4 : ℝ) ≤ X j i ∧ X j i ≤ (1183/1000 : ℝ)) →\n      lpNorm p (X 0) + lpNorm p (X 1) + lpNorm p (X 2) = 3 →\n      lpNorm p (X 0 + X 1 + X 2) < (591/500 : ℝ) →\n      pairGapSum (lpNorm p) (X 0) (X 1) (X 2) < 2 / ((443/1000 : ℝ)*p) →\n      (∀ j, -(2239/2000 : ℝ) ≤ X j j ∧ X j j ≤ -(4577/10000 : ℝ)) ∧\n      (∀ j i, j ≠ i → (3863/5000 : ℝ) ≤ X j i ∧ X j i ≤ (1483/1250 : ℝ)) ∧\n      (∀ j, lpNorm p (X j) ≤ (149298789/125000000 : ℝ)) ∧\n      (∀ i j k : Fin 3, i ≠ j → i ≠ k → j ≠ k → (82967765642843/51460500000000 : ℝ) ≤ X j i + X k i) ∧\n      (59752599691237/10292100000000 : ℝ) ≤ X 0 1 + X 0 2 + X 1 0 + X 1 2 + X 2 0 + X 2 1 := by sorry",
+    "preamble": "import Definitions.Def_HlawkaSchatten_GapComparison\nimport Definitions.Def_HlawkaSchatten_DiagonalConstruction_Basic\nopen HlawkaSchatten HlawkaSchatten.DiagonalConstruction\n",
+    "natural_language_statement": "For every real p in [105/4,53/2], coarse-box original norm data with singleton norm sum three, total norm below 591/500, and pair-gap sum below 2/((443/1000)p) imply the explicit norm cap and linear bounds of analytic domain 1. This block covers 4 consecutive certified slabs. Unequal singleton norms are allowed.",
+    "source": "Yuxuan Xu, A computer-assisted sharp diagonal Hlawka inequality for real exponents p >= 21, Sections 3-4, https://github.com/Anchen-AI4Math/hlawka-diagonal-certificates/blob/main/paper/main.pdf . Generic contraction framework adapted from @bwdaugherty, Apache-2.0; notices retained.",
+    "tags": [
+      "hlawka-schatten",
+      "localization",
+      "exact-arithmetic"
+    ],
+    "solution_file": "formalization/platform/Sol_localized_domain4_26_01.lean",
+    "solution_sha256": "4b5362edd6eeb474782fe1524ab99a5c1cbd43e264c25653ab4c1055476140a9",
+    "explanation": "No platform theorem imports are used. The complete original norm bridge, rational root inequalities, budget and all ten contraction rounds are proved for at most four slabs, then weakened by exact rational comparisons to a common analytic domain. A balanced interval split covers all real exponents in the block. The analytic theorem is deliberately separated from finite localization; no external validity assumption is introduced."
+  },
+  {
+    "key": "localized_domain4_26_02",
+    "theorem_name": "HlawkaSchatten.DiagonalCutoff21.localized_domain4_26_02",
+    "theorem_title": "Actual norm localization block [53/2,107/4]",
+    "formal_statement": "theorem HlawkaSchatten.DiagonalCutoff21.localized_domain4_26_02 :\n    ∀ p : ℝ, (53/2 : ℝ) ≤ p → p ≤ (107/4 : ℝ) → ∀ X : Fin 3 → Fin 3 → ℝ,\n      (∀ i, -(1183/1000 : ℝ) ≤ X i i ∧ X i i ≤ -(477/1000 : ℝ)) →\n      (∀ j i, j ≠ i → (3/4 : ℝ) ≤ X j i ∧ X j i ≤ (1183/1000 : ℝ)) →\n      lpNorm p (X 0) + lpNorm p (X 1) + lpNorm p (X 2) = 3 →\n      lpNorm p (X 0 + X 1 + X 2) < (591/500 : ℝ) →\n      pairGapSum (lpNorm p) (X 0) (X 1) (X 2) < 2 / ((443/1000 : ℝ)*p) →\n      (∀ j, -(2239/2000 : ℝ) ≤ X j j ∧ X j j ≤ -(4577/10000 : ℝ)) ∧\n      (∀ j i, j ≠ i → (3863/5000 : ℝ) ≤ X j i ∧ X j i ≤ (1483/1250 : ℝ)) ∧\n      (∀ j, lpNorm p (X j) ≤ (149298789/125000000 : ℝ)) ∧\n      (∀ i j k : Fin 3, i ≠ j → i ≠ k → j ≠ k → (82967765642843/51460500000000 : ℝ) ≤ X j i + X k i) ∧\n      (59752599691237/10292100000000 : ℝ) ≤ X 0 1 + X 0 2 + X 1 0 + X 1 2 + X 2 0 + X 2 1 := by sorry",
+    "preamble": "import Definitions.Def_HlawkaSchatten_GapComparison\nimport Definitions.Def_HlawkaSchatten_DiagonalConstruction_Basic\nopen HlawkaSchatten HlawkaSchatten.DiagonalConstruction\n",
+    "natural_language_statement": "For every real p in [53/2,107/4], coarse-box original norm data with singleton norm sum three, total norm below 591/500, and pair-gap sum below 2/((443/1000)p) imply the explicit norm cap and linear bounds of analytic domain 1. This block covers 4 consecutive certified slabs. Unequal singleton norms are allowed.",
+    "source": "Yuxuan Xu, A computer-assisted sharp diagonal Hlawka inequality for real exponents p >= 21, Sections 3-4, https://github.com/Anchen-AI4Math/hlawka-diagonal-certificates/blob/main/paper/main.pdf . Generic contraction framework adapted from @bwdaugherty, Apache-2.0; notices retained.",
+    "tags": [
+      "hlawka-schatten",
+      "localization",
+      "exact-arithmetic"
+    ],
+    "solution_file": "formalization/platform/Sol_localized_domain4_26_02.lean",
+    "solution_sha256": "9b9674e4850a506d26bbf3e290098462a674c697eb02b251ebcec74c585cc94e",
+    "explanation": "No platform theorem imports are used. The complete original norm bridge, rational root inequalities, budget and all ten contraction rounds are proved for at most four slabs, then weakened by exact rational comparisons to a common analytic domain. A balanced interval split covers all real exponents in the block. The analytic theorem is deliberately separated from finite localization; no external validity assumption is introduced."
+  },
+  {
+    "key": "localized_domain4_26_03",
+    "theorem_name": "HlawkaSchatten.DiagonalCutoff21.localized_domain4_26_03",
+    "theorem_title": "Actual norm localization block [107/4,27]",
+    "formal_statement": "theorem HlawkaSchatten.DiagonalCutoff21.localized_domain4_26_03 :\n    ∀ p : ℝ, (107/4 : ℝ) ≤ p → p ≤ (27 : ℝ) → ∀ X : Fin 3 → Fin 3 → ℝ,\n      (∀ i, -(1183/1000 : ℝ) ≤ X i i ∧ X i i ≤ -(477/1000 : ℝ)) →\n      (∀ j i, j ≠ i → (3/4 : ℝ) ≤ X j i ∧ X j i ≤ (1183/1000 : ℝ)) →\n      lpNorm p (X 0) + lpNorm p (X 1) + lpNorm p (X 2) = 3 →\n      lpNorm p (X 0 + X 1 + X 2) < (591/500 : ℝ) →\n      pairGapSum (lpNorm p) (X 0) (X 1) (X 2) < 2 / ((443/1000 : ℝ)*p) →\n      (∀ j, -(2239/2000 : ℝ) ≤ X j j ∧ X j j ≤ -(4577/10000 : ℝ)) ∧\n      (∀ j i, j ≠ i → (3863/5000 : ℝ) ≤ X j i ∧ X j i ≤ (1483/1250 : ℝ)) ∧\n      (∀ j, lpNorm p (X j) ≤ (149298789/125000000 : ℝ)) ∧\n      (∀ i j k : Fin 3, i ≠ j → i ≠ k → j ≠ k → (82967765642843/51460500000000 : ℝ) ≤ X j i + X k i) ∧\n      (59752599691237/10292100000000 : ℝ) ≤ X 0 1 + X 0 2 + X 1 0 + X 1 2 + X 2 0 + X 2 1 := by sorry",
+    "preamble": "import Definitions.Def_HlawkaSchatten_GapComparison\nimport Definitions.Def_HlawkaSchatten_DiagonalConstruction_Basic\nopen HlawkaSchatten HlawkaSchatten.DiagonalConstruction\n",
+    "natural_language_statement": "For every real p in [107/4,27], coarse-box original norm data with singleton norm sum three, total norm below 591/500, and pair-gap sum below 2/((443/1000)p) imply the explicit norm cap and linear bounds of analytic domain 1. This block covers 4 consecutive certified slabs. Unequal singleton norms are allowed.",
+    "source": "Yuxuan Xu, A computer-assisted sharp diagonal Hlawka inequality for real exponents p >= 21, Sections 3-4, https://github.com/Anchen-AI4Math/hlawka-diagonal-certificates/blob/main/paper/main.pdf . Generic contraction framework adapted from @bwdaugherty, Apache-2.0; notices retained.",
+    "tags": [
+      "hlawka-schatten",
+      "localization",
+      "exact-arithmetic"
+    ],
+    "solution_file": "formalization/platform/Sol_localized_domain4_26_03.lean",
+    "solution_sha256": "7ba1410b525fb8571c1bc60350e4b25ec9b0089cb2ffde237bc4056c7dd2ccd1",
+    "explanation": "No platform theorem imports are used. The complete original norm bridge, rational root inequalities, budget and all ten contraction rounds are proved for at most four slabs, then weakened by exact rational comparisons to a common analytic domain. A balanced interval split covers all real exponents in the block. The analytic theorem is deliberately separated from finite localization; no external validity assumption is introduced."
+  },
+  {
+    "key": "localized_domain4_26_04",
+    "theorem_name": "HlawkaSchatten.DiagonalCutoff21.localized_domain4_26_04",
+    "theorem_title": "Actual norm localization block [27,109/4]",
+    "formal_statement": "theorem HlawkaSchatten.DiagonalCutoff21.localized_domain4_26_04 :\n    ∀ p : ℝ, (27 : ℝ) ≤ p → p ≤ (109/4 : ℝ) → ∀ X : Fin 3 → Fin 3 → ℝ,\n      (∀ i, -(1183/1000 : ℝ) ≤ X i i ∧ X i i ≤ -(477/1000 : ℝ)) →\n      (∀ j i, j ≠ i → (3/4 : ℝ) ≤ X j i ∧ X j i ≤ (1183/1000 : ℝ)) →\n      lpNorm p (X 0) + lpNorm p (X 1) + lpNorm p (X 2) = 3 →\n      lpNorm p (X 0 + X 1 + X 2) < (591/500 : ℝ) →\n      pairGapSum (lpNorm p) (X 0) (X 1) (X 2) < 2 / ((443/1000 : ℝ)*p) →\n      (∀ j, -(2239/2000 : ℝ) ≤ X j j ∧ X j j ≤ -(4577/10000 : ℝ)) ∧\n      (∀ j i, j ≠ i → (3863/5000 : ℝ) ≤ X j i ∧ X j i ≤ (1483/1250 : ℝ)) ∧\n      (∀ j, lpNorm p (X j) ≤ (149298789/125000000 : ℝ)) ∧\n      (∀ i j k : Fin 3, i ≠ j → i ≠ k → j ≠ k → (82967765642843/51460500000000 : ℝ) ≤ X j i + X k i) ∧\n      (59752599691237/10292100000000 : ℝ) ≤ X 0 1 + X 0 2 + X 1 0 + X 1 2 + X 2 0 + X 2 1 := by sorry",
+    "preamble": "import Definitions.Def_HlawkaSchatten_GapComparison\nimport Definitions.Def_HlawkaSchatten_DiagonalConstruction_Basic\nopen HlawkaSchatten HlawkaSchatten.DiagonalConstruction\n",
+    "natural_language_statement": "For every real p in [27,109/4], coarse-box original norm data with singleton norm sum three, total norm below 591/500, and pair-gap sum below 2/((443/1000)p) imply the explicit norm cap and linear bounds of analytic domain 1. This block covers 4 consecutive certified slabs. Unequal singleton norms are allowed.",
+    "source": "Yuxuan Xu, A computer-assisted sharp diagonal Hlawka inequality for real exponents p >= 21, Sections 3-4, https://github.com/Anchen-AI4Math/hlawka-diagonal-certificates/blob/main/paper/main.pdf . Generic contraction framework adapted from @bwdaugherty, Apache-2.0; notices retained.",
+    "tags": [
+      "hlawka-schatten",
+      "localization",
+      "exact-arithmetic"
+    ],
+    "solution_file": "formalization/platform/Sol_localized_domain4_26_04.lean",
+    "solution_sha256": "1a5a4ee5968be69c91edad1ab9671aed803e8b244f6182f74912e52cab9b8b59",
+    "explanation": "No platform theorem imports are used. The complete original norm bridge, rational root inequalities, budget and all ten contraction rounds are proved for at most four slabs, then weakened by exact rational comparisons to a common analytic domain. A balanced interval split covers all real exponents in the block. The analytic theorem is deliberately separated from finite localization; no external validity assumption is introduced."
+  },
+  {
+    "key": "localized_domain4_26_05",
+    "theorem_name": "HlawkaSchatten.DiagonalCutoff21.localized_domain4_26_05",
+    "theorem_title": "Actual norm localization block [109/4,55/2]",
+    "formal_statement": "theorem HlawkaSchatten.DiagonalCutoff21.localized_domain4_26_05 :\n    ∀ p : ℝ, (109/4 : ℝ) ≤ p → p ≤ (55/2 : ℝ) → ∀ X : Fin 3 → Fin 3 → ℝ,\n      (∀ i, -(1183/1000 : ℝ) ≤ X i i ∧ X i i ≤ -(477/1000 : ℝ)) →\n      (∀ j i, j ≠ i → (3/4 : ℝ) ≤ X j i ∧ X j i ≤ (1183/1000 : ℝ)) →\n      lpNorm p (X 0) + lpNorm p (X 1) + lpNorm p (X 2) = 3 →\n      lpNorm p (X 0 + X 1 + X 2) < (591/500 : ℝ) →\n      pairGapSum (lpNorm p) (X 0) (X 1) (X 2) < 2 / ((443/1000 : ℝ)*p) →\n      (∀ j, -(2239/2000 : ℝ) ≤ X j j ∧ X j j ≤ -(4577/10000 : ℝ)) ∧\n      (∀ j i, j ≠ i → (3863/5000 : ℝ) ≤ X j i ∧ X j i ≤ (1483/1250 : ℝ)) ∧\n      (∀ j, lpNorm p (X j) ≤ (149298789/125000000 : ℝ)) ∧\n      (∀ i j k : Fin 3, i ≠ j → i ≠ k → j ≠ k → (82967765642843/51460500000000 : ℝ) ≤ X j i + X k i) ∧\n      (59752599691237/10292100000000 : ℝ) ≤ X 0 1 + X 0 2 + X 1 0 + X 1 2 + X 2 0 + X 2 1 := by sorry",
+    "preamble": "import Definitions.Def_HlawkaSchatten_GapComparison\nimport Definitions.Def_HlawkaSchatten_DiagonalConstruction_Basic\nopen HlawkaSchatten HlawkaSchatten.DiagonalConstruction\n",
+    "natural_language_statement": "For every real p in [109/4,55/2], coarse-box original norm data with singleton norm sum three, total norm below 591/500, and pair-gap sum below 2/((443/1000)p) imply the explicit norm cap and linear bounds of analytic domain 1. This block covers 4 consecutive certified slabs. Unequal singleton norms are allowed.",
+    "source": "Yuxuan Xu, A computer-assisted sharp diagonal Hlawka inequality for real exponents p >= 21, Sections 3-4, https://github.com/Anchen-AI4Math/hlawka-diagonal-certificates/blob/main/paper/main.pdf . Generic contraction framework adapted from @bwdaugherty, Apache-2.0; notices retained.",
+    "tags": [
+      "hlawka-schatten",
+      "localization",
+      "exact-arithmetic"
+    ],
+    "solution_file": "formalization/platform/Sol_localized_domain4_26_05.lean",
+    "solution_sha256": "f88fcee07d7763fd971ef0355a7485c2c9a4d8ba1935545222f578bfd92030f0",
+    "explanation": "No platform theorem imports are used. The complete original norm bridge, rational root inequalities, budget and all ten contraction rounds are proved for at most four slabs, then weakened by exact rational comparisons to a common analytic domain. A balanced interval split covers all real exponents in the block. The analytic theorem is deliberately separated from finite localization; no external validity assumption is introduced."
+  },
+  {
+    "key": "localized_domain4_26_06",
+    "theorem_name": "HlawkaSchatten.DiagonalCutoff21.localized_domain4_26_06",
+    "theorem_title": "Actual norm localization block [55/2,111/4]",
+    "formal_statement": "theorem HlawkaSchatten.DiagonalCutoff21.localized_domain4_26_06 :\n    ∀ p : ℝ, (55/2 : ℝ) ≤ p → p ≤ (111/4 : ℝ) → ∀ X : Fin 3 → Fin 3 → ℝ,\n      (∀ i, -(1183/1000 : ℝ) ≤ X i i ∧ X i i ≤ -(477/1000 : ℝ)) →\n      (∀ j i, j ≠ i → (3/4 : ℝ) ≤ X j i ∧ X j i ≤ (1183/1000 : ℝ)) →\n      lpNorm p (X 0) + lpNorm p (X 1) + lpNorm p (X 2) = 3 →\n      lpNorm p (X 0 + X 1 + X 2) < (591/500 : ℝ) →\n      pairGapSum (lpNorm p) (X 0) (X 1) (X 2) < 2 / ((443/1000 : ℝ)*p) →\n      (∀ j, -(2239/2000 : ℝ) ≤ X j j ∧ X j j ≤ -(4577/10000 : ℝ)) ∧\n      (∀ j i, j ≠ i → (3863/5000 : ℝ) ≤ X j i ∧ X j i ≤ (1483/1250 : ℝ)) ∧\n      (∀ j, lpNorm p (X j) ≤ (149298789/125000000 : ℝ)) ∧\n      (∀ i j k : Fin 3, i ≠ j → i ≠ k → j ≠ k → (82967765642843/51460500000000 : ℝ) ≤ X j i + X k i) ∧\n      (59752599691237/10292100000000 : ℝ) ≤ X 0 1 + X 0 2 + X 1 0 + X 1 2 + X 2 0 + X 2 1 := by sorry",
+    "preamble": "import Definitions.Def_HlawkaSchatten_GapComparison\nimport Definitions.Def_HlawkaSchatten_DiagonalConstruction_Basic\nopen HlawkaSchatten HlawkaSchatten.DiagonalConstruction\n",
+    "natural_language_statement": "For every real p in [55/2,111/4], coarse-box original norm data with singleton norm sum three, total norm below 591/500, and pair-gap sum below 2/((443/1000)p) imply the explicit norm cap and linear bounds of analytic domain 1. This block covers 4 consecutive certified slabs. Unequal singleton norms are allowed.",
+    "source": "Yuxuan Xu, A computer-assisted sharp diagonal Hlawka inequality for real exponents p >= 21, Sections 3-4, https://github.com/Anchen-AI4Math/hlawka-diagonal-certificates/blob/main/paper/main.pdf . Generic contraction framework adapted from @bwdaugherty, Apache-2.0; notices retained.",
+    "tags": [
+      "hlawka-schatten",
+      "localization",
+      "exact-arithmetic"
+    ],
+    "solution_file": "formalization/platform/Sol_localized_domain4_26_06.lean",
+    "solution_sha256": "5c3a5bf8f539c9296fd1fd14eb583abd80650559c4c8eaef38de3919b2704409",
+    "explanation": "No platform theorem imports are used. The complete original norm bridge, rational root inequalities, budget and all ten contraction rounds are proved for at most four slabs, then weakened by exact rational comparisons to a common analytic domain. A balanced interval split covers all real exponents in the block. The analytic theorem is deliberately separated from finite localization; no external validity assumption is introduced."
+  },
+  {
+    "key": "localized_domain4_26_07",
+    "theorem_name": "HlawkaSchatten.DiagonalCutoff21.localized_domain4_26_07",
+    "theorem_title": "Actual norm localization block [111/4,28]",
+    "formal_statement": "theorem HlawkaSchatten.DiagonalCutoff21.localized_domain4_26_07 :\n    ∀ p : ℝ, (111/4 : ℝ) ≤ p → p ≤ (28 : ℝ) → ∀ X : Fin 3 → Fin 3 → ℝ,\n      (∀ i, -(1183/1000 : ℝ) ≤ X i i ∧ X i i ≤ -(477/1000 : ℝ)) →\n      (∀ j i, j ≠ i → (3/4 : ℝ) ≤ X j i ∧ X j i ≤ (1183/1000 : ℝ)) →\n      lpNorm p (X 0) + lpNorm p (X 1) + lpNorm p (X 2) = 3 →\n      lpNorm p (X 0 + X 1 + X 2) < (591/500 : ℝ) →\n      pairGapSum (lpNorm p) (X 0) (X 1) (X 2) < 2 / ((443/1000 : ℝ)*p) →\n      (∀ j, -(2239/2000 : ℝ) ≤ X j j ∧ X j j ≤ -(4577/10000 : ℝ)) ∧\n      (∀ j i, j ≠ i → (3863/5000 : ℝ) ≤ X j i ∧ X j i ≤ (1483/1250 : ℝ)) ∧\n      (∀ j, lpNorm p (X j) ≤ (149298789/125000000 : ℝ)) ∧\n      (∀ i j k : Fin 3, i ≠ j → i ≠ k → j ≠ k → (82967765642843/51460500000000 : ℝ) ≤ X j i + X k i) ∧\n      (59752599691237/10292100000000 : ℝ) ≤ X 0 1 + X 0 2 + X 1 0 + X 1 2 + X 2 0 + X 2 1 := by sorry",
+    "preamble": "import Definitions.Def_HlawkaSchatten_GapComparison\nimport Definitions.Def_HlawkaSchatten_DiagonalConstruction_Basic\nopen HlawkaSchatten HlawkaSchatten.DiagonalConstruction\n",
+    "natural_language_statement": "For every real p in [111/4,28], coarse-box original norm data with singleton norm sum three, total norm below 591/500, and pair-gap sum below 2/((443/1000)p) imply the explicit norm cap and linear bounds of analytic domain 1. This block covers 4 consecutive certified slabs. Unequal singleton norms are allowed.",
+    "source": "Yuxuan Xu, A computer-assisted sharp diagonal Hlawka inequality for real exponents p >= 21, Sections 3-4, https://github.com/Anchen-AI4Math/hlawka-diagonal-certificates/blob/main/paper/main.pdf . Generic contraction framework adapted from @bwdaugherty, Apache-2.0; notices retained.",
+    "tags": [
+      "hlawka-schatten",
+      "localization",
+      "exact-arithmetic"
+    ],
+    "solution_file": "formalization/platform/Sol_localized_domain4_26_07.lean",
+    "solution_sha256": "1c5f7c331ce660c9f7a156bcf33e93c0e4b9522b55a757bd9a55bbe1a2f77f91",
+    "explanation": "No platform theorem imports are used. The complete original norm bridge, rational root inequalities, budget and all ten contraction rounds are proved for at most four slabs, then weakened by exact rational comparisons to a common analytic domain. A balanced interval split covers all real exponents in the block. The analytic theorem is deliberately separated from finite localization; no external validity assumption is introduced."
+  },
+  {
+    "key": "localized_domain4_26_08",
+    "theorem_name": "HlawkaSchatten.DiagonalCutoff21.localized_domain4_26_08",
+    "theorem_title": "Actual norm localization block [28,113/4]",
+    "formal_statement": "theorem HlawkaSchatten.DiagonalCutoff21.localized_domain4_26_08 :\n    ∀ p : ℝ, (28 : ℝ) ≤ p → p ≤ (113/4 : ℝ) → ∀ X : Fin 3 → Fin 3 → ℝ,\n      (∀ i, -(1183/1000 : ℝ) ≤ X i i ∧ X i i ≤ -(477/1000 : ℝ)) →\n      (∀ j i, j ≠ i → (3/4 : ℝ) ≤ X j i ∧ X j i ≤ (1183/1000 : ℝ)) →\n      lpNorm p (X 0) + lpNorm p (X 1) + lpNorm p (X 2) = 3 →\n      lpNorm p (X 0 + X 1 + X 2) < (591/500 : ℝ) →\n      pairGapSum (lpNorm p) (X 0) (X 1) (X 2) < 2 / ((443/1000 : ℝ)*p) →\n      (∀ j, -(2239/2000 : ℝ) ≤ X j j ∧ X j j ≤ -(4577/10000 : ℝ)) ∧\n      (∀ j i, j ≠ i → (3863/5000 : ℝ) ≤ X j i ∧ X j i ≤ (1483/1250 : ℝ)) ∧\n      (∀ j, lpNorm p (X j) ≤ (149298789/125000000 : ℝ)) ∧\n      (∀ i j k : Fin 3, i ≠ j → i ≠ k → j ≠ k → (82967765642843/51460500000000 : ℝ) ≤ X j i + X k i) ∧\n      (59752599691237/10292100000000 : ℝ) ≤ X 0 1 + X 0 2 + X 1 0 + X 1 2 + X 2 0 + X 2 1 := by sorry",
+    "preamble": "import Definitions.Def_HlawkaSchatten_GapComparison\nimport Definitions.Def_HlawkaSchatten_DiagonalConstruction_Basic\nopen HlawkaSchatten HlawkaSchatten.DiagonalConstruction\n",
+    "natural_language_statement": "For every real p in [28,113/4], coarse-box original norm data with singleton norm sum three, total norm below 591/500, and pair-gap sum below 2/((443/1000)p) imply the explicit norm cap and linear bounds of analytic domain 1. This block covers 4 consecutive certified slabs. Unequal singleton norms are allowed.",
+    "source": "Yuxuan Xu, A computer-assisted sharp diagonal Hlawka inequality for real exponents p >= 21, Sections 3-4, https://github.com/Anchen-AI4Math/hlawka-diagonal-certificates/blob/main/paper/main.pdf . Generic contraction framework adapted from @bwdaugherty, Apache-2.0; notices retained.",
+    "tags": [
+      "hlawka-schatten",
+      "localization",
+      "exact-arithmetic"
+    ],
+    "solution_file": "formalization/platform/Sol_localized_domain4_26_08.lean",
+    "solution_sha256": "32525b023cdd6adda1460600121cd4907b13dbbb07ec754be7f937bc882b6d91",
+    "explanation": "No platform theorem imports are used. The complete original norm bridge, rational root inequalities, budget and all ten contraction rounds are proved for at most four slabs, then weakened by exact rational comparisons to a common analytic domain. A balanced interval split covers all real exponents in the block. The analytic theorem is deliberately separated from finite localization; no external validity assumption is introduced."
+  },
+  {
+    "key": "localized_domain4_26_09",
+    "theorem_name": "HlawkaSchatten.DiagonalCutoff21.localized_domain4_26_09",
+    "theorem_title": "Actual norm localization block [113/4,57/2]",
+    "formal_statement": "theorem HlawkaSchatten.DiagonalCutoff21.localized_domain4_26_09 :\n    ∀ p : ℝ, (113/4 : ℝ) ≤ p → p ≤ (57/2 : ℝ) → ∀ X : Fin 3 → Fin 3 → ℝ,\n      (∀ i, -(1183/1000 : ℝ) ≤ X i i ∧ X i i ≤ -(477/1000 : ℝ)) →\n      (∀ j i, j ≠ i → (3/4 : ℝ) ≤ X j i ∧ X j i ≤ (1183/1000 : ℝ)) →\n      lpNorm p (X 0) + lpNorm p (X 1) + lpNorm p (X 2) = 3 →\n      lpNorm p (X 0 + X 1 + X 2) < (591/500 : ℝ) →\n      pairGapSum (lpNorm p) (X 0) (X 1) (X 2) < 2 / ((443/1000 : ℝ)*p) →\n      (∀ j, -(2239/2000 : ℝ) ≤ X j j ∧ X j j ≤ -(4577/10000 : ℝ)) ∧\n      (∀ j i, j ≠ i → (3863/5000 : ℝ) ≤ X j i ∧ X j i ≤ (1483/1250 : ℝ)) ∧\n      (∀ j, lpNorm p (X j) ≤ (149298789/125000000 : ℝ)) ∧\n      (∀ i j k : Fin 3, i ≠ j → i ≠ k → j ≠ k → (82967765642843/51460500000000 : ℝ) ≤ X j i + X k i) ∧\n      (59752599691237/10292100000000 : ℝ) ≤ X 0 1 + X 0 2 + X 1 0 + X 1 2 + X 2 0 + X 2 1 := by sorry",
+    "preamble": "import Definitions.Def_HlawkaSchatten_GapComparison\nimport Definitions.Def_HlawkaSchatten_DiagonalConstruction_Basic\nopen HlawkaSchatten HlawkaSchatten.DiagonalConstruction\n",
+    "natural_language_statement": "For every real p in [113/4,57/2], coarse-box original norm data with singleton norm sum three, total norm below 591/500, and pair-gap sum below 2/((443/1000)p) imply the explicit norm cap and linear bounds of analytic domain 1. This block covers 4 consecutive certified slabs. Unequal singleton norms are allowed.",
+    "source": "Yuxuan Xu, A computer-assisted sharp diagonal Hlawka inequality for real exponents p >= 21, Sections 3-4, https://github.com/Anchen-AI4Math/hlawka-diagonal-certificates/blob/main/paper/main.pdf . Generic contraction framework adapted from @bwdaugherty, Apache-2.0; notices retained.",
+    "tags": [
+      "hlawka-schatten",
+      "localization",
+      "exact-arithmetic"
+    ],
+    "solution_file": "formalization/platform/Sol_localized_domain4_26_09.lean",
+    "solution_sha256": "c40453a83b258edbafe7f5d3cf2502408621895e75382e07f65460944cb7bf93",
+    "explanation": "No platform theorem imports are used. The complete original norm bridge, rational root inequalities, budget and all ten contraction rounds are proved for at most four slabs, then weakened by exact rational comparisons to a common analytic domain. A balanced interval split covers all real exponents in the block. The analytic theorem is deliberately separated from finite localization; no external validity assumption is introduced."
+  },
+  {
+    "key": "localized_domain4_26_10",
+    "theorem_name": "HlawkaSchatten.DiagonalCutoff21.localized_domain4_26_10",
+    "theorem_title": "Actual norm localization block [57/2,115/4]",
+    "formal_statement": "theorem HlawkaSchatten.DiagonalCutoff21.localized_domain4_26_10 :\n    ∀ p : ℝ, (57/2 : ℝ) ≤ p → p ≤ (115/4 : ℝ) → ∀ X : Fin 3 → Fin 3 → ℝ,\n      (∀ i, -(1183/1000 : ℝ) ≤ X i i ∧ X i i ≤ -(477/1000 : ℝ)) →\n      (∀ j i, j ≠ i → (3/4 : ℝ) ≤ X j i ∧ X j i ≤ (1183/1000 : ℝ)) →\n      lpNorm p (X 0) + lpNorm p (X 1) + lpNorm p (X 2) = 3 →\n      lpNorm p (X 0 + X 1 + X 2) < (591/500 : ℝ) →\n      pairGapSum (lpNorm p) (X 0) (X 1) (X 2) < 2 / ((443/1000 : ℝ)*p) →\n      (∀ j, -(2239/2000 : ℝ) ≤ X j j ∧ X j j ≤ -(4577/10000 : ℝ)) ∧\n      (∀ j i, j ≠ i → (3863/5000 : ℝ) ≤ X j i ∧ X j i ≤ (1483/1250 : ℝ)) ∧\n      (∀ j, lpNorm p (X j) ≤ (149298789/125000000 : ℝ)) ∧\n      (∀ i j k : Fin 3, i ≠ j → i ≠ k → j ≠ k → (82967765642843/51460500000000 : ℝ) ≤ X j i + X k i) ∧\n      (59752599691237/10292100000000 : ℝ) ≤ X 0 1 + X 0 2 + X 1 0 + X 1 2 + X 2 0 + X 2 1 := by sorry",
+    "preamble": "import Definitions.Def_HlawkaSchatten_GapComparison\nimport Definitions.Def_HlawkaSchatten_DiagonalConstruction_Basic\nopen HlawkaSchatten HlawkaSchatten.DiagonalConstruction\n",
+    "natural_language_statement": "For every real p in [57/2,115/4], coarse-box original norm data with singleton norm sum three, total norm below 591/500, and pair-gap sum below 2/((443/1000)p) imply the explicit norm cap and linear bounds of analytic domain 1. This block covers 4 consecutive certified slabs. Unequal singleton norms are allowed.",
+    "source": "Yuxuan Xu, A computer-assisted sharp diagonal Hlawka inequality for real exponents p >= 21, Sections 3-4, https://github.com/Anchen-AI4Math/hlawka-diagonal-certificates/blob/main/paper/main.pdf . Generic contraction framework adapted from @bwdaugherty, Apache-2.0; notices retained.",
+    "tags": [
+      "hlawka-schatten",
+      "localization",
+      "exact-arithmetic"
+    ],
+    "solution_file": "formalization/platform/Sol_localized_domain4_26_10.lean",
+    "solution_sha256": "ec7e655577a7cf959b21934a8eefe618e33c68f651fdc30a9ac36a519c0ceaa6",
+    "explanation": "No platform theorem imports are used. The complete original norm bridge, rational root inequalities, budget and all ten contraction rounds are proved for at most four slabs, then weakened by exact rational comparisons to a common analytic domain. A balanced interval split covers all real exponents in the block. The analytic theorem is deliberately separated from finite localization; no external validity assumption is introduced."
+  },
+  {
+    "key": "localized_domain4_26_11",
+    "theorem_name": "HlawkaSchatten.DiagonalCutoff21.localized_domain4_26_11",
+    "theorem_title": "Actual norm localization block [115/4,29]",
+    "formal_statement": "theorem HlawkaSchatten.DiagonalCutoff21.localized_domain4_26_11 :\n    ∀ p : ℝ, (115/4 : ℝ) ≤ p → p ≤ (29 : ℝ) → ∀ X : Fin 3 → Fin 3 → ℝ,\n      (∀ i, -(1183/1000 : ℝ) ≤ X i i ∧ X i i ≤ -(477/1000 : ℝ)) →\n      (∀ j i, j ≠ i → (3/4 : ℝ) ≤ X j i ∧ X j i ≤ (1183/1000 : ℝ)) →\n      lpNorm p (X 0) + lpNorm p (X 1) + lpNorm p (X 2) = 3 →\n      lpNorm p (X 0 + X 1 + X 2) < (591/500 : ℝ) →\n      pairGapSum (lpNorm p) (X 0) (X 1) (X 2) < 2 / ((443/1000 : ℝ)*p) →\n      (∀ j, -(2239/2000 : ℝ) ≤ X j j ∧ X j j ≤ -(4577/10000 : ℝ)) ∧\n      (∀ j i, j ≠ i → (3863/5000 : ℝ) ≤ X j i ∧ X j i ≤ (1483/1250 : ℝ)) ∧\n      (∀ j, lpNorm p (X j) ≤ (149298789/125000000 : ℝ)) ∧\n      (∀ i j k : Fin 3, i ≠ j → i ≠ k → j ≠ k → (82967765642843/51460500000000 : ℝ) ≤ X j i + X k i) ∧\n      (59752599691237/10292100000000 : ℝ) ≤ X 0 1 + X 0 2 + X 1 0 + X 1 2 + X 2 0 + X 2 1 := by sorry",
+    "preamble": "import Definitions.Def_HlawkaSchatten_GapComparison\nimport Definitions.Def_HlawkaSchatten_DiagonalConstruction_Basic\nopen HlawkaSchatten HlawkaSchatten.DiagonalConstruction\n",
+    "natural_language_statement": "For every real p in [115/4,29], coarse-box original norm data with singleton norm sum three, total norm below 591/500, and pair-gap sum below 2/((443/1000)p) imply the explicit norm cap and linear bounds of analytic domain 1. This block covers 4 consecutive certified slabs. Unequal singleton norms are allowed.",
+    "source": "Yuxuan Xu, A computer-assisted sharp diagonal Hlawka inequality for real exponents p >= 21, Sections 3-4, https://github.com/Anchen-AI4Math/hlawka-diagonal-certificates/blob/main/paper/main.pdf . Generic contraction framework adapted from @bwdaugherty, Apache-2.0; notices retained.",
+    "tags": [
+      "hlawka-schatten",
+      "localization",
+      "exact-arithmetic"
+    ],
+    "solution_file": "formalization/platform/Sol_localized_domain4_26_11.lean",
+    "solution_sha256": "f3dd356ed6449d3e47efafd13b2b4e4d13bdad2725019fb1b3935d86b0929305",
+    "explanation": "No platform theorem imports are used. The complete original norm bridge, rational root inequalities, budget and all ten contraction rounds are proved for at most four slabs, then weakened by exact rational comparisons to a common analytic domain. A balanced interval split covers all real exponents in the block. The analytic theorem is deliberately separated from finite localization; no external validity assumption is introduced."
+  },
+  {
+    "key": "localized_domain4_26_12",
+    "theorem_name": "HlawkaSchatten.DiagonalCutoff21.localized_domain4_26_12",
+    "theorem_title": "Actual norm localization block [29,117/4]",
+    "formal_statement": "theorem HlawkaSchatten.DiagonalCutoff21.localized_domain4_26_12 :\n    ∀ p : ℝ, (29 : ℝ) ≤ p → p ≤ (117/4 : ℝ) → ∀ X : Fin 3 → Fin 3 → ℝ,\n      (∀ i, -(1183/1000 : ℝ) ≤ X i i ∧ X i i ≤ -(477/1000 : ℝ)) →\n      (∀ j i, j ≠ i → (3/4 : ℝ) ≤ X j i ∧ X j i ≤ (1183/1000 : ℝ)) →\n      lpNorm p (X 0) + lpNorm p (X 1) + lpNorm p (X 2) = 3 →\n      lpNorm p (X 0 + X 1 + X 2) < (591/500 : ℝ) →\n      pairGapSum (lpNorm p) (X 0) (X 1) (X 2) < 2 / ((443/1000 : ℝ)*p) →\n      (∀ j, -(2239/2000 : ℝ) ≤ X j j ∧ X j j ≤ -(4577/10000 : ℝ)) ∧\n      (∀ j i, j ≠ i → (3863/5000 : ℝ) ≤ X j i ∧ X j i ≤ (1483/1250 : ℝ)) ∧\n      (∀ j, lpNorm p (X j) ≤ (149298789/125000000 : ℝ)) ∧\n      (∀ i j k : Fin 3, i ≠ j → i ≠ k → j ≠ k → (82967765642843/51460500000000 : ℝ) ≤ X j i + X k i) ∧\n      (59752599691237/10292100000000 : ℝ) ≤ X 0 1 + X 0 2 + X 1 0 + X 1 2 + X 2 0 + X 2 1 := by sorry",
+    "preamble": "import Definitions.Def_HlawkaSchatten_GapComparison\nimport Definitions.Def_HlawkaSchatten_DiagonalConstruction_Basic\nopen HlawkaSchatten HlawkaSchatten.DiagonalConstruction\n",
+    "natural_language_statement": "For every real p in [29,117/4], coarse-box original norm data with singleton norm sum three, total norm below 591/500, and pair-gap sum below 2/((443/1000)p) imply the explicit norm cap and linear bounds of analytic domain 1. This block covers 4 consecutive certified slabs. Unequal singleton norms are allowed.",
+    "source": "Yuxuan Xu, A computer-assisted sharp diagonal Hlawka inequality for real exponents p >= 21, Sections 3-4, https://github.com/Anchen-AI4Math/hlawka-diagonal-certificates/blob/main/paper/main.pdf . Generic contraction framework adapted from @bwdaugherty, Apache-2.0; notices retained.",
+    "tags": [
+      "hlawka-schatten",
+      "localization",
+      "exact-arithmetic"
+    ],
+    "solution_file": "formalization/platform/Sol_localized_domain4_26_12.lean",
+    "solution_sha256": "31a5eb8509051ab2bb108fe8ca8adb33e5568185232aecd28d21702b1db56343",
+    "explanation": "No platform theorem imports are used. The complete original norm bridge, rational root inequalities, budget and all ten contraction rounds are proved for at most four slabs, then weakened by exact rational comparisons to a common analytic domain. A balanced interval split covers all real exponents in the block. The analytic theorem is deliberately separated from finite localization; no external validity assumption is introduced."
+  },
+  {
+    "key": "localized_domain4_26_13",
+    "theorem_name": "HlawkaSchatten.DiagonalCutoff21.localized_domain4_26_13",
+    "theorem_title": "Actual norm localization block [117/4,59/2]",
+    "formal_statement": "theorem HlawkaSchatten.DiagonalCutoff21.localized_domain4_26_13 :\n    ∀ p : ℝ, (117/4 : ℝ) ≤ p → p ≤ (59/2 : ℝ) → ∀ X : Fin 3 → Fin 3 → ℝ,\n      (∀ i, -(1183/1000 : ℝ) ≤ X i i ∧ X i i ≤ -(477/1000 : ℝ)) →\n      (∀ j i, j ≠ i → (3/4 : ℝ) ≤ X j i ∧ X j i ≤ (1183/1000 : ℝ)) →\n      lpNorm p (X 0) + lpNorm p (X 1) + lpNorm p (X 2) = 3 →\n      lpNorm p (X 0 + X 1 + X 2) < (591/500 : ℝ) →\n      pairGapSum (lpNorm p) (X 0) (X 1) (X 2) < 2 / ((443/1000 : ℝ)*p) →\n      (∀ j, -(2239/2000 : ℝ) ≤ X j j ∧ X j j ≤ -(4577/10000 : ℝ)) ∧\n      (∀ j i, j ≠ i → (3863/5000 : ℝ) ≤ X j i ∧ X j i ≤ (1483/1250 : ℝ)) ∧\n      (∀ j, lpNorm p (X j) ≤ (149298789/125000000 : ℝ)) ∧\n      (∀ i j k : Fin 3, i ≠ j → i ≠ k → j ≠ k → (82967765642843/51460500000000 : ℝ) ≤ X j i + X k i) ∧\n      (59752599691237/10292100000000 : ℝ) ≤ X 0 1 + X 0 2 + X 1 0 + X 1 2 + X 2 0 + X 2 1 := by sorry",
+    "preamble": "import Definitions.Def_HlawkaSchatten_GapComparison\nimport Definitions.Def_HlawkaSchatten_DiagonalConstruction_Basic\nopen HlawkaSchatten HlawkaSchatten.DiagonalConstruction\n",
+    "natural_language_statement": "For every real p in [117/4,59/2], coarse-box original norm data with singleton norm sum three, total norm below 591/500, and pair-gap sum below 2/((443/1000)p) imply the explicit norm cap and linear bounds of analytic domain 1. This block covers 4 consecutive certified slabs. Unequal singleton norms are allowed.",
+    "source": "Yuxuan Xu, A computer-assisted sharp diagonal Hlawka inequality for real exponents p >= 21, Sections 3-4, https://github.com/Anchen-AI4Math/hlawka-diagonal-certificates/blob/main/paper/main.pdf . Generic contraction framework adapted from @bwdaugherty, Apache-2.0; notices retained.",
+    "tags": [
+      "hlawka-schatten",
+      "localization",
+      "exact-arithmetic"
+    ],
+    "solution_file": "formalization/platform/Sol_localized_domain4_26_13.lean",
+    "solution_sha256": "6761cf0de5d6b15413e308bfd22ec758defbd7f24c68f3bd51d2e64c9160805b",
+    "explanation": "No platform theorem imports are used. The complete original norm bridge, rational root inequalities, budget and all ten contraction rounds are proved for at most four slabs, then weakened by exact rational comparisons to a common analytic domain. A balanced interval split covers all real exponents in the block. The analytic theorem is deliberately separated from finite localization; no external validity assumption is introduced."
+  },
+  {
+    "key": "localized_domain4_26_14",
+    "theorem_name": "HlawkaSchatten.DiagonalCutoff21.localized_domain4_26_14",
+    "theorem_title": "Actual norm localization block [59/2,119/4]",
+    "formal_statement": "theorem HlawkaSchatten.DiagonalCutoff21.localized_domain4_26_14 :\n    ∀ p : ℝ, (59/2 : ℝ) ≤ p → p ≤ (119/4 : ℝ) → ∀ X : Fin 3 → Fin 3 → ℝ,\n      (∀ i, -(1183/1000 : ℝ) ≤ X i i ∧ X i i ≤ -(477/1000 : ℝ)) →\n      (∀ j i, j ≠ i → (3/4 : ℝ) ≤ X j i ∧ X j i ≤ (1183/1000 : ℝ)) →\n      lpNorm p (X 0) + lpNorm p (X 1) + lpNorm p (X 2) = 3 →\n      lpNorm p (X 0 + X 1 + X 2) < (591/500 : ℝ) →\n      pairGapSum (lpNorm p) (X 0) (X 1) (X 2) < 2 / ((443/1000 : ℝ)*p) →\n      (∀ j, -(2239/2000 : ℝ) ≤ X j j ∧ X j j ≤ -(4577/10000 : ℝ)) ∧\n      (∀ j i, j ≠ i → (3863/5000 : ℝ) ≤ X j i ∧ X j i ≤ (1483/1250 : ℝ)) ∧\n      (∀ j, lpNorm p (X j) ≤ (149298789/125000000 : ℝ)) ∧\n      (∀ i j k : Fin 3, i ≠ j → i ≠ k → j ≠ k → (82967765642843/51460500000000 : ℝ) ≤ X j i + X k i) ∧\n      (59752599691237/10292100000000 : ℝ) ≤ X 0 1 + X 0 2 + X 1 0 + X 1 2 + X 2 0 + X 2 1 := by sorry",
+    "preamble": "import Definitions.Def_HlawkaSchatten_GapComparison\nimport Definitions.Def_HlawkaSchatten_DiagonalConstruction_Basic\nopen HlawkaSchatten HlawkaSchatten.DiagonalConstruction\n",
+    "natural_language_statement": "For every real p in [59/2,119/4], coarse-box original norm data with singleton norm sum three, total norm below 591/500, and pair-gap sum below 2/((443/1000)p) imply the explicit norm cap and linear bounds of analytic domain 1. This block covers 4 consecutive certified slabs. Unequal singleton norms are allowed.",
+    "source": "Yuxuan Xu, A computer-assisted sharp diagonal Hlawka inequality for real exponents p >= 21, Sections 3-4, https://github.com/Anchen-AI4Math/hlawka-diagonal-certificates/blob/main/paper/main.pdf . Generic contraction framework adapted from @bwdaugherty, Apache-2.0; notices retained.",
+    "tags": [
+      "hlawka-schatten",
+      "localization",
+      "exact-arithmetic"
+    ],
+    "solution_file": "formalization/platform/Sol_localized_domain4_26_14.lean",
+    "solution_sha256": "3be8d1d010e75758266155291377213fff08f2f8aad3f581bb2b6e54e370760d",
+    "explanation": "No platform theorem imports are used. The complete original norm bridge, rational root inequalities, budget and all ten contraction rounds are proved for at most four slabs, then weakened by exact rational comparisons to a common analytic domain. A balanced interval split covers all real exponents in the block. The analytic theorem is deliberately separated from finite localization; no external validity assumption is introduced."
+  },
+  {
+    "key": "localized_domain4_26_15",
+    "theorem_name": "HlawkaSchatten.DiagonalCutoff21.localized_domain4_26_15",
+    "theorem_title": "Actual norm localization block [119/4,30]",
+    "formal_statement": "theorem HlawkaSchatten.DiagonalCutoff21.localized_domain4_26_15 :\n    ∀ p : ℝ, (119/4 : ℝ) ≤ p → p ≤ (30 : ℝ) → ∀ X : Fin 3 → Fin 3 → ℝ,\n      (∀ i, -(1183/1000 : ℝ) ≤ X i i ∧ X i i ≤ -(477/1000 : ℝ)) →\n      (∀ j i, j ≠ i → (3/4 : ℝ) ≤ X j i ∧ X j i ≤ (1183/1000 : ℝ)) →\n      lpNorm p (X 0) + lpNorm p (X 1) + lpNorm p (X 2) = 3 →\n      lpNorm p (X 0 + X 1 + X 2) < (591/500 : ℝ) →\n      pairGapSum (lpNorm p) (X 0) (X 1) (X 2) < 2 / ((443/1000 : ℝ)*p) →\n      (∀ j, -(2239/2000 : ℝ) ≤ X j j ∧ X j j ≤ -(4577/10000 : ℝ)) ∧\n      (∀ j i, j ≠ i → (3863/5000 : ℝ) ≤ X j i ∧ X j i ≤ (1483/1250 : ℝ)) ∧\n      (∀ j, lpNorm p (X j) ≤ (149298789/125000000 : ℝ)) ∧\n      (∀ i j k : Fin 3, i ≠ j → i ≠ k → j ≠ k → (82967765642843/51460500000000 : ℝ) ≤ X j i + X k i) ∧\n      (59752599691237/10292100000000 : ℝ) ≤ X 0 1 + X 0 2 + X 1 0 + X 1 2 + X 2 0 + X 2 1 := by sorry",
+    "preamble": "import Definitions.Def_HlawkaSchatten_GapComparison\nimport Definitions.Def_HlawkaSchatten_DiagonalConstruction_Basic\nopen HlawkaSchatten HlawkaSchatten.DiagonalConstruction\n",
+    "natural_language_statement": "For every real p in [119/4,30], coarse-box original norm data with singleton norm sum three, total norm below 591/500, and pair-gap sum below 2/((443/1000)p) imply the explicit norm cap and linear bounds of analytic domain 1. This block covers 4 consecutive certified slabs. Unequal singleton norms are allowed.",
+    "source": "Yuxuan Xu, A computer-assisted sharp diagonal Hlawka inequality for real exponents p >= 21, Sections 3-4, https://github.com/Anchen-AI4Math/hlawka-diagonal-certificates/blob/main/paper/main.pdf . Generic contraction framework adapted from @bwdaugherty, Apache-2.0; notices retained.",
+    "tags": [
+      "hlawka-schatten",
+      "localization",
+      "exact-arithmetic"
+    ],
+    "solution_file": "formalization/platform/Sol_localized_domain4_26_15.lean",
+    "solution_sha256": "bd9732caf38918084511e537f1ff85671a979354d4e1bf701ffe92db38984bd3",
+    "explanation": "No platform theorem imports are used. The complete original norm bridge, rational root inequalities, budget and all ten contraction rounds are proved for at most four slabs, then weakened by exact rational comparisons to a common analytic domain. A balanced interval split covers all real exponents in the block. The analytic theorem is deliberately separated from finite localization; no external validity assumption is introduced."
+  },
+  {
+    "key": "localized_domain4_26_16",
+    "theorem_name": "HlawkaSchatten.DiagonalCutoff21.localized_domain4_26_16",
+    "theorem_title": "Actual norm localization block [30,121/4]",
+    "formal_statement": "theorem HlawkaSchatten.DiagonalCutoff21.localized_domain4_26_16 :\n    ∀ p : ℝ, (30 : ℝ) ≤ p → p ≤ (121/4 : ℝ) → ∀ X : Fin 3 → Fin 3 → ℝ,\n      (∀ i, -(1183/1000 : ℝ) ≤ X i i ∧ X i i ≤ -(477/1000 : ℝ)) →\n      (∀ j i, j ≠ i → (3/4 : ℝ) ≤ X j i ∧ X j i ≤ (1183/1000 : ℝ)) →\n      lpNorm p (X 0) + lpNorm p (X 1) + lpNorm p (X 2) = 3 →\n      lpNorm p (X 0 + X 1 + X 2) < (591/500 : ℝ) →\n      pairGapSum (lpNorm p) (X 0) (X 1) (X 2) < 2 / ((443/1000 : ℝ)*p) →\n      (∀ j, -(2239/2000 : ℝ) ≤ X j j ∧ X j j ≤ -(4577/10000 : ℝ)) ∧\n      (∀ j i, j ≠ i → (3863/5000 : ℝ) ≤ X j i ∧ X j i ≤ (1483/1250 : ℝ)) ∧\n      (∀ j, lpNorm p (X j) ≤ (149298789/125000000 : ℝ)) ∧\n      (∀ i j k : Fin 3, i ≠ j → i ≠ k → j ≠ k → (82967765642843/51460500000000 : ℝ) ≤ X j i + X k i) ∧\n      (59752599691237/10292100000000 : ℝ) ≤ X 0 1 + X 0 2 + X 1 0 + X 1 2 + X 2 0 + X 2 1 := by sorry",
+    "preamble": "import Definitions.Def_HlawkaSchatten_GapComparison\nimport Definitions.Def_HlawkaSchatten_DiagonalConstruction_Basic\nopen HlawkaSchatten HlawkaSchatten.DiagonalConstruction\n",
+    "natural_language_statement": "For every real p in [30,121/4], coarse-box original norm data with singleton norm sum three, total norm below 591/500, and pair-gap sum below 2/((443/1000)p) imply the explicit norm cap and linear bounds of analytic domain 1. This block covers 4 consecutive certified slabs. Unequal singleton norms are allowed.",
+    "source": "Yuxuan Xu, A computer-assisted sharp diagonal Hlawka inequality for real exponents p >= 21, Sections 3-4, https://github.com/Anchen-AI4Math/hlawka-diagonal-certificates/blob/main/paper/main.pdf . Generic contraction framework adapted from @bwdaugherty, Apache-2.0; notices retained.",
+    "tags": [
+      "hlawka-schatten",
+      "localization",
+      "exact-arithmetic"
+    ],
+    "solution_file": "formalization/platform/Sol_localized_domain4_26_16.lean",
+    "solution_sha256": "50edc4d35597e454d03e9d0495e31a2cc308b47e3b6a1684dac8069010c6cf8f",
+    "explanation": "No platform theorem imports are used. The complete original norm bridge, rational root inequalities, budget and all ten contraction rounds are proved for at most four slabs, then weakened by exact rational comparisons to a common analytic domain. A balanced interval split covers all real exponents in the block. The analytic theorem is deliberately separated from finite localization; no external validity assumption is introduced."
+  },
+  {
+    "key": "localized_domain4_26_17",
+    "theorem_name": "HlawkaSchatten.DiagonalCutoff21.localized_domain4_26_17",
+    "theorem_title": "Actual norm localization block [121/4,61/2]",
+    "formal_statement": "theorem HlawkaSchatten.DiagonalCutoff21.localized_domain4_26_17 :\n    ∀ p : ℝ, (121/4 : ℝ) ≤ p → p ≤ (61/2 : ℝ) → ∀ X : Fin 3 → Fin 3 → ℝ,\n      (∀ i, -(1183/1000 : ℝ) ≤ X i i ∧ X i i ≤ -(477/1000 : ℝ)) →\n      (∀ j i, j ≠ i → (3/4 : ℝ) ≤ X j i ∧ X j i ≤ (1183/1000 : ℝ)) →\n      lpNorm p (X 0) + lpNorm p (X 1) + lpNorm p (X 2) = 3 →\n      lpNorm p (X 0 + X 1 + X 2) < (591/500 : ℝ) →\n      pairGapSum (lpNorm p) (X 0) (X 1) (X 2) < 2 / ((443/1000 : ℝ)*p) →\n      (∀ j, -(2239/2000 : ℝ) ≤ X j j ∧ X j j ≤ -(4577/10000 : ℝ)) ∧\n      (∀ j i, j ≠ i → (3863/5000 : ℝ) ≤ X j i ∧ X j i ≤ (1483/1250 : ℝ)) ∧\n      (∀ j, lpNorm p (X j) ≤ (149298789/125000000 : ℝ)) ∧\n      (∀ i j k : Fin 3, i ≠ j → i ≠ k → j ≠ k → (82967765642843/51460500000000 : ℝ) ≤ X j i + X k i) ∧\n      (59752599691237/10292100000000 : ℝ) ≤ X 0 1 + X 0 2 + X 1 0 + X 1 2 + X 2 0 + X 2 1 := by sorry",
+    "preamble": "import Definitions.Def_HlawkaSchatten_GapComparison\nimport Definitions.Def_HlawkaSchatten_DiagonalConstruction_Basic\nopen HlawkaSchatten HlawkaSchatten.DiagonalConstruction\n",
+    "natural_language_statement": "For every real p in [121/4,61/2], coarse-box original norm data with singleton norm sum three, total norm below 591/500, and pair-gap sum below 2/((443/1000)p) imply the explicit norm cap and linear bounds of analytic domain 1. This block covers 4 consecutive certified slabs. Unequal singleton norms are allowed.",
+    "source": "Yuxuan Xu, A computer-assisted sharp diagonal Hlawka inequality for real exponents p >= 21, Sections 3-4, https://github.com/Anchen-AI4Math/hlawka-diagonal-certificates/blob/main/paper/main.pdf . Generic contraction framework adapted from @bwdaugherty, Apache-2.0; notices retained.",
+    "tags": [
+      "hlawka-schatten",
+      "localization",
+      "exact-arithmetic"
+    ],
+    "solution_file": "formalization/platform/Sol_localized_domain4_26_17.lean",
+    "solution_sha256": "5bdca812d6f6dca5573d4cf905d40e8c41a53aea6ff76ba04adf36b31eae11da",
+    "explanation": "No platform theorem imports are used. The complete original norm bridge, rational root inequalities, budget and all ten contraction rounds are proved for at most four slabs, then weakened by exact rational comparisons to a common analytic domain. A balanced interval split covers all real exponents in the block. The analytic theorem is deliberately separated from finite localization; no external validity assumption is introduced."
+  },
+  {
+    "key": "localized_domain4_26_18",
+    "theorem_name": "HlawkaSchatten.DiagonalCutoff21.localized_domain4_26_18",
+    "theorem_title": "Actual norm localization block [61/2,123/4]",
+    "formal_statement": "theorem HlawkaSchatten.DiagonalCutoff21.localized_domain4_26_18 :\n    ∀ p : ℝ, (61/2 : ℝ) ≤ p → p ≤ (123/4 : ℝ) → ∀ X : Fin 3 → Fin 3 → ℝ,\n      (∀ i, -(1183/1000 : ℝ) ≤ X i i ∧ X i i ≤ -(477/1000 : ℝ)) →\n      (∀ j i, j ≠ i → (3/4 : ℝ) ≤ X j i ∧ X j i ≤ (1183/1000 : ℝ)) →\n      lpNorm p (X 0) + lpNorm p (X 1) + lpNorm p (X 2) = 3 →\n      lpNorm p (X 0 + X 1 + X 2) < (591/500 : ℝ) →\n      pairGapSum (lpNorm p) (X 0) (X 1) (X 2) < 2 / ((443/1000 : ℝ)*p) →\n      (∀ j, -(2239/2000 : ℝ) ≤ X j j ∧ X j j ≤ -(4577/10000 : ℝ)) ∧\n      (∀ j i, j ≠ i → (3863/5000 : ℝ) ≤ X j i ∧ X j i ≤ (1483/1250 : ℝ)) ∧\n      (∀ j, lpNorm p (X j) ≤ (149298789/125000000 : ℝ)) ∧\n      (∀ i j k : Fin 3, i ≠ j → i ≠ k → j ≠ k → (82967765642843/51460500000000 : ℝ) ≤ X j i + X k i) ∧\n      (59752599691237/10292100000000 : ℝ) ≤ X 0 1 + X 0 2 + X 1 0 + X 1 2 + X 2 0 + X 2 1 := by sorry",
+    "preamble": "import Definitions.Def_HlawkaSchatten_GapComparison\nimport Definitions.Def_HlawkaSchatten_DiagonalConstruction_Basic\nopen HlawkaSchatten HlawkaSchatten.DiagonalConstruction\n",
+    "natural_language_statement": "For every real p in [61/2,123/4], coarse-box original norm data with singleton norm sum three, total norm below 591/500, and pair-gap sum below 2/((443/1000)p) imply the explicit norm cap and linear bounds of analytic domain 1. This block covers 4 consecutive certified slabs. Unequal singleton norms are allowed.",
+    "source": "Yuxuan Xu, A computer-assisted sharp diagonal Hlawka inequality for real exponents p >= 21, Sections 3-4, https://github.com/Anchen-AI4Math/hlawka-diagonal-certificates/blob/main/paper/main.pdf . Generic contraction framework adapted from @bwdaugherty, Apache-2.0; notices retained.",
+    "tags": [
+      "hlawka-schatten",
+      "localization",
+      "exact-arithmetic"
+    ],
+    "solution_file": "formalization/platform/Sol_localized_domain4_26_18.lean",
+    "solution_sha256": "09734d3f5fe4bf30d356795d1b0fefa57dab1e77ebbeffca3ae3198f9621cb53",
+    "explanation": "No platform theorem imports are used. The complete original norm bridge, rational root inequalities, budget and all ten contraction rounds are proved for at most four slabs, then weakened by exact rational comparisons to a common analytic domain. A balanced interval split covers all real exponents in the block. The analytic theorem is deliberately separated from finite localization; no external validity assumption is introduced."
+  },
+  {
+    "key": "localized_domain4_26_19",
+    "theorem_name": "HlawkaSchatten.DiagonalCutoff21.localized_domain4_26_19",
+    "theorem_title": "Actual norm localization block [123/4,31]",
+    "formal_statement": "theorem HlawkaSchatten.DiagonalCutoff21.localized_domain4_26_19 :\n    ∀ p : ℝ, (123/4 : ℝ) ≤ p → p ≤ (31 : ℝ) → ∀ X : Fin 3 → Fin 3 → ℝ,\n      (∀ i, -(1183/1000 : ℝ) ≤ X i i ∧ X i i ≤ -(477/1000 : ℝ)) →\n      (∀ j i, j ≠ i → (3/4 : ℝ) ≤ X j i ∧ X j i ≤ (1183/1000 : ℝ)) →\n      lpNorm p (X 0) + lpNorm p (X 1) + lpNorm p (X 2) = 3 →\n      lpNorm p (X 0 + X 1 + X 2) < (591/500 : ℝ) →\n      pairGapSum (lpNorm p) (X 0) (X 1) (X 2) < 2 / ((443/1000 : ℝ)*p) →\n      (∀ j, -(2239/2000 : ℝ) ≤ X j j ∧ X j j ≤ -(4577/10000 : ℝ)) ∧\n      (∀ j i, j ≠ i → (3863/5000 : ℝ) ≤ X j i ∧ X j i ≤ (1483/1250 : ℝ)) ∧\n      (∀ j, lpNorm p (X j) ≤ (149298789/125000000 : ℝ)) ∧\n      (∀ i j k : Fin 3, i ≠ j → i ≠ k → j ≠ k → (82967765642843/51460500000000 : ℝ) ≤ X j i + X k i) ∧\n      (59752599691237/10292100000000 : ℝ) ≤ X 0 1 + X 0 2 + X 1 0 + X 1 2 + X 2 0 + X 2 1 := by sorry",
+    "preamble": "import Definitions.Def_HlawkaSchatten_GapComparison\nimport Definitions.Def_HlawkaSchatten_DiagonalConstruction_Basic\nopen HlawkaSchatten HlawkaSchatten.DiagonalConstruction\n",
+    "natural_language_statement": "For every real p in [123/4,31], coarse-box original norm data with singleton norm sum three, total norm below 591/500, and pair-gap sum below 2/((443/1000)p) imply the explicit norm cap and linear bounds of analytic domain 1. This block covers 4 consecutive certified slabs. Unequal singleton norms are allowed.",
+    "source": "Yuxuan Xu, A computer-assisted sharp diagonal Hlawka inequality for real exponents p >= 21, Sections 3-4, https://github.com/Anchen-AI4Math/hlawka-diagonal-certificates/blob/main/paper/main.pdf . Generic contraction framework adapted from @bwdaugherty, Apache-2.0; notices retained.",
+    "tags": [
+      "hlawka-schatten",
+      "localization",
+      "exact-arithmetic"
+    ],
+    "solution_file": "formalization/platform/Sol_localized_domain4_26_19.lean",
+    "solution_sha256": "4ac745f0b4822dacee30b9014ad7316d57d9072bc1bd7d3443593770ba7d1c8e",
+    "explanation": "No platform theorem imports are used. The complete original norm bridge, rational root inequalities, budget and all ten contraction rounds are proved for at most four slabs, then weakened by exact rational comparisons to a common analytic domain. A balanced interval split covers all real exponents in the block. The analytic theorem is deliberately separated from finite localization; no external validity assumption is introduced."
+  },
+  {
+    "key": "localized_domain4_26_20",
+    "theorem_name": "HlawkaSchatten.DiagonalCutoff21.localized_domain4_26_20",
+    "theorem_title": "Actual norm localization block [31,125/4]",
+    "formal_statement": "theorem HlawkaSchatten.DiagonalCutoff21.localized_domain4_26_20 :\n    ∀ p : ℝ, (31 : ℝ) ≤ p → p ≤ (125/4 : ℝ) → ∀ X : Fin 3 → Fin 3 → ℝ,\n      (∀ i, -(1183/1000 : ℝ) ≤ X i i ∧ X i i ≤ -(477/1000 : ℝ)) →\n      (∀ j i, j ≠ i → (3/4 : ℝ) ≤ X j i ∧ X j i ≤ (1183/1000 : ℝ)) →\n      lpNorm p (X 0) + lpNorm p (X 1) + lpNorm p (X 2) = 3 →\n      lpNorm p (X 0 + X 1 + X 2) < (591/500 : ℝ) →\n      pairGapSum (lpNorm p) (X 0) (X 1) (X 2) < 2 / ((443/1000 : ℝ)*p) →\n      (∀ j, -(2239/2000 : ℝ) ≤ X j j ∧ X j j ≤ -(4577/10000 : ℝ)) ∧\n      (∀ j i, j ≠ i → (3863/5000 : ℝ) ≤ X j i ∧ X j i ≤ (1483/1250 : ℝ)) ∧\n      (∀ j, lpNorm p (X j) ≤ (149298789/125000000 : ℝ)) ∧\n      (∀ i j k : Fin 3, i ≠ j → i ≠ k → j ≠ k → (82967765642843/51460500000000 : ℝ) ≤ X j i + X k i) ∧\n      (59752599691237/10292100000000 : ℝ) ≤ X 0 1 + X 0 2 + X 1 0 + X 1 2 + X 2 0 + X 2 1 := by sorry",
+    "preamble": "import Definitions.Def_HlawkaSchatten_GapComparison\nimport Definitions.Def_HlawkaSchatten_DiagonalConstruction_Basic\nopen HlawkaSchatten HlawkaSchatten.DiagonalConstruction\n",
+    "natural_language_statement": "For every real p in [31,125/4], coarse-box original norm data with singleton norm sum three, total norm below 591/500, and pair-gap sum below 2/((443/1000)p) imply the explicit norm cap and linear bounds of analytic domain 1. This block covers 4 consecutive certified slabs. Unequal singleton norms are allowed.",
+    "source": "Yuxuan Xu, A computer-assisted sharp diagonal Hlawka inequality for real exponents p >= 21, Sections 3-4, https://github.com/Anchen-AI4Math/hlawka-diagonal-certificates/blob/main/paper/main.pdf . Generic contraction framework adapted from @bwdaugherty, Apache-2.0; notices retained.",
+    "tags": [
+      "hlawka-schatten",
+      "localization",
+      "exact-arithmetic"
+    ],
+    "solution_file": "formalization/platform/Sol_localized_domain4_26_20.lean",
+    "solution_sha256": "60b9cf63e8df755890010f7aee64b71db8fe9194fc92be4ffbb74998d6ec8dbe",
+    "explanation": "No platform theorem imports are used. The complete original norm bridge, rational root inequalities, budget and all ten contraction rounds are proved for at most four slabs, then weakened by exact rational comparisons to a common analytic domain. A balanced interval split covers all real exponents in the block. The analytic theorem is deliberately separated from finite localization; no external validity assumption is introduced."
+  },
+  {
+    "key": "localized_domain4_26_21",
+    "theorem_name": "HlawkaSchatten.DiagonalCutoff21.localized_domain4_26_21",
+    "theorem_title": "Actual norm localization block [125/4,63/2]",
+    "formal_statement": "theorem HlawkaSchatten.DiagonalCutoff21.localized_domain4_26_21 :\n    ∀ p : ℝ, (125/4 : ℝ) ≤ p → p ≤ (63/2 : ℝ) → ∀ X : Fin 3 → Fin 3 → ℝ,\n      (∀ i, -(1183/1000 : ℝ) ≤ X i i ∧ X i i ≤ -(477/1000 : ℝ)) →\n      (∀ j i, j ≠ i → (3/4 : ℝ) ≤ X j i ∧ X j i ≤ (1183/1000 : ℝ)) →\n      lpNorm p (X 0) + lpNorm p (X 1) + lpNorm p (X 2) = 3 →\n      lpNorm p (X 0 + X 1 + X 2) < (591/500 : ℝ) →\n      pairGapSum (lpNorm p) (X 0) (X 1) (X 2) < 2 / ((443/1000 : ℝ)*p) →\n      (∀ j, -(2239/2000 : ℝ) ≤ X j j ∧ X j j ≤ -(4577/10000 : ℝ)) ∧\n      (∀ j i, j ≠ i → (3863/5000 : ℝ) ≤ X j i ∧ X j i ≤ (1483/1250 : ℝ)) ∧\n      (∀ j, lpNorm p (X j) ≤ (149298789/125000000 : ℝ)) ∧\n      (∀ i j k : Fin 3, i ≠ j → i ≠ k → j ≠ k → (82967765642843/51460500000000 : ℝ) ≤ X j i + X k i) ∧\n      (59752599691237/10292100000000 : ℝ) ≤ X 0 1 + X 0 2 + X 1 0 + X 1 2 + X 2 0 + X 2 1 := by sorry",
+    "preamble": "import Definitions.Def_HlawkaSchatten_GapComparison\nimport Definitions.Def_HlawkaSchatten_DiagonalConstruction_Basic\nopen HlawkaSchatten HlawkaSchatten.DiagonalConstruction\n",
+    "natural_language_statement": "For every real p in [125/4,63/2], coarse-box original norm data with singleton norm sum three, total norm below 591/500, and pair-gap sum below 2/((443/1000)p) imply the explicit norm cap and linear bounds of analytic domain 1. This block covers 4 consecutive certified slabs. Unequal singleton norms are allowed.",
+    "source": "Yuxuan Xu, A computer-assisted sharp diagonal Hlawka inequality for real exponents p >= 21, Sections 3-4, https://github.com/Anchen-AI4Math/hlawka-diagonal-certificates/blob/main/paper/main.pdf . Generic contraction framework adapted from @bwdaugherty, Apache-2.0; notices retained.",
+    "tags": [
+      "hlawka-schatten",
+      "localization",
+      "exact-arithmetic"
+    ],
+    "solution_file": "formalization/platform/Sol_localized_domain4_26_21.lean",
+    "solution_sha256": "b255b33e11906f7127c92523ee6e6db5a0725599a5ed64bfe50f7636db3a3a19",
+    "explanation": "No platform theorem imports are used. The complete original norm bridge, rational root inequalities, budget and all ten contraction rounds are proved for at most four slabs, then weakened by exact rational comparisons to a common analytic domain. A balanced interval split covers all real exponents in the block. The analytic theorem is deliberately separated from finite localization; no external validity assumption is introduced."
+  },
+  {
+    "key": "localized_domain4_26_22",
+    "theorem_name": "HlawkaSchatten.DiagonalCutoff21.localized_domain4_26_22",
+    "theorem_title": "Actual norm localization block [63/2,127/4]",
+    "formal_statement": "theorem HlawkaSchatten.DiagonalCutoff21.localized_domain4_26_22 :\n    ∀ p : ℝ, (63/2 : ℝ) ≤ p → p ≤ (127/4 : ℝ) → ∀ X : Fin 3 → Fin 3 → ℝ,\n      (∀ i, -(1183/1000 : ℝ) ≤ X i i ∧ X i i ≤ -(477/1000 : ℝ)) →\n      (∀ j i, j ≠ i → (3/4 : ℝ) ≤ X j i ∧ X j i ≤ (1183/1000 : ℝ)) →\n      lpNorm p (X 0) + lpNorm p (X 1) + lpNorm p (X 2) = 3 →\n      lpNorm p (X 0 + X 1 + X 2) < (591/500 : ℝ) →\n      pairGapSum (lpNorm p) (X 0) (X 1) (X 2) < 2 / ((443/1000 : ℝ)*p) →\n      (∀ j, -(2239/2000 : ℝ) ≤ X j j ∧ X j j ≤ -(4577/10000 : ℝ)) ∧\n      (∀ j i, j ≠ i → (3863/5000 : ℝ) ≤ X j i ∧ X j i ≤ (1483/1250 : ℝ)) ∧\n      (∀ j, lpNorm p (X j) ≤ (149298789/125000000 : ℝ)) ∧\n      (∀ i j k : Fin 3, i ≠ j → i ≠ k → j ≠ k → (82967765642843/51460500000000 : ℝ) ≤ X j i + X k i) ∧\n      (59752599691237/10292100000000 : ℝ) ≤ X 0 1 + X 0 2 + X 1 0 + X 1 2 + X 2 0 + X 2 1 := by sorry",
+    "preamble": "import Definitions.Def_HlawkaSchatten_GapComparison\nimport Definitions.Def_HlawkaSchatten_DiagonalConstruction_Basic\nopen HlawkaSchatten HlawkaSchatten.DiagonalConstruction\n",
+    "natural_language_statement": "For every real p in [63/2,127/4], coarse-box original norm data with singleton norm sum three, total norm below 591/500, and pair-gap sum below 2/((443/1000)p) imply the explicit norm cap and linear bounds of analytic domain 1. This block covers 4 consecutive certified slabs. Unequal singleton norms are allowed.",
+    "source": "Yuxuan Xu, A computer-assisted sharp diagonal Hlawka inequality for real exponents p >= 21, Sections 3-4, https://github.com/Anchen-AI4Math/hlawka-diagonal-certificates/blob/main/paper/main.pdf . Generic contraction framework adapted from @bwdaugherty, Apache-2.0; notices retained.",
+    "tags": [
+      "hlawka-schatten",
+      "localization",
+      "exact-arithmetic"
+    ],
+    "solution_file": "formalization/platform/Sol_localized_domain4_26_22.lean",
+    "solution_sha256": "fde416a893928769e585e84709bc92bbd6f561cc5ed7f57705e75fedabb18047",
+    "explanation": "No platform theorem imports are used. The complete original norm bridge, rational root inequalities, budget and all ten contraction rounds are proved for at most four slabs, then weakened by exact rational comparisons to a common analytic domain. A balanced interval split covers all real exponents in the block. The analytic theorem is deliberately separated from finite localization; no external validity assumption is introduced."
+  },
+  {
+    "key": "localized_domain4_26_23",
+    "theorem_name": "HlawkaSchatten.DiagonalCutoff21.localized_domain4_26_23",
+    "theorem_title": "Actual norm localization block [127/4,32]",
+    "formal_statement": "theorem HlawkaSchatten.DiagonalCutoff21.localized_domain4_26_23 :\n    ∀ p : ℝ, (127/4 : ℝ) ≤ p → p ≤ (32 : ℝ) → ∀ X : Fin 3 → Fin 3 → ℝ,\n      (∀ i, -(1183/1000 : ℝ) ≤ X i i ∧ X i i ≤ -(477/1000 : ℝ)) →\n      (∀ j i, j ≠ i → (3/4 : ℝ) ≤ X j i ∧ X j i ≤ (1183/1000 : ℝ)) →\n      lpNorm p (X 0) + lpNorm p (X 1) + lpNorm p (X 2) = 3 →\n      lpNorm p (X 0 + X 1 + X 2) < (591/500 : ℝ) →\n      pairGapSum (lpNorm p) (X 0) (X 1) (X 2) < 2 / ((443/1000 : ℝ)*p) →\n      (∀ j, -(2239/2000 : ℝ) ≤ X j j ∧ X j j ≤ -(4577/10000 : ℝ)) ∧\n      (∀ j i, j ≠ i → (3863/5000 : ℝ) ≤ X j i ∧ X j i ≤ (1483/1250 : ℝ)) ∧\n      (∀ j, lpNorm p (X j) ≤ (149298789/125000000 : ℝ)) ∧\n      (∀ i j k : Fin 3, i ≠ j → i ≠ k → j ≠ k → (82967765642843/51460500000000 : ℝ) ≤ X j i + X k i) ∧\n      (59752599691237/10292100000000 : ℝ) ≤ X 0 1 + X 0 2 + X 1 0 + X 1 2 + X 2 0 + X 2 1 := by sorry",
+    "preamble": "import Definitions.Def_HlawkaSchatten_GapComparison\nimport Definitions.Def_HlawkaSchatten_DiagonalConstruction_Basic\nopen HlawkaSchatten HlawkaSchatten.DiagonalConstruction\n",
+    "natural_language_statement": "For every real p in [127/4,32], coarse-box original norm data with singleton norm sum three, total norm below 591/500, and pair-gap sum below 2/((443/1000)p) imply the explicit norm cap and linear bounds of analytic domain 1. This block covers 4 consecutive certified slabs. Unequal singleton norms are allowed.",
+    "source": "Yuxuan Xu, A computer-assisted sharp diagonal Hlawka inequality for real exponents p >= 21, Sections 3-4, https://github.com/Anchen-AI4Math/hlawka-diagonal-certificates/blob/main/paper/main.pdf . Generic contraction framework adapted from @bwdaugherty, Apache-2.0; notices retained.",
+    "tags": [
+      "hlawka-schatten",
+      "localization",
+      "exact-arithmetic"
+    ],
+    "solution_file": "formalization/platform/Sol_localized_domain4_26_23.lean",
+    "solution_sha256": "f20c0d74c4610ac4b937fd068148ee93a693db4ff463a080ac66707801de59f6",
+    "explanation": "No platform theorem imports are used. The complete original norm bridge, rational root inequalities, budget and all ten contraction rounds are proved for at most four slabs, then weakened by exact rational comparisons to a common analytic domain. A balanced interval split covers all real exponents in the block. The analytic theorem is deliberately separated from finite localization; no external validity assumption is introduced."
+  }
+]
