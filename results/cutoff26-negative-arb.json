@@ -1,0 +1,44 @@
+[
+  {
+    "control": "gap",
+    "backend": "arb",
+    "status": "REJECTED",
+    "reason": "gap, overlap or inverted interval"
+  },
+  {
+    "control": "witness",
+    "backend": "arb",
+    "status": "REJECTED",
+    "reason": "scalar envelope"
+  },
+  {
+    "control": "chain",
+    "backend": "arb",
+    "status": "REJECTED",
+    "reason": "round does not use preceding n"
+  },
+  {
+    "control": "dual",
+    "backend": "arb",
+    "status": "REJECTED",
+    "reason": "dual sign/dimension"
+  },
+  {
+    "control": "missing",
+    "backend": "arb",
+    "status": "REJECTED",
+    "reason": "coverage endpoint mismatch"
+  },
+  {
+    "control": "final_box",
+    "backend": "arb",
+    "status": "REJECTED",
+    "reason": "final box"
+  },
+  {
+    "control": "curvature",
+    "backend": "arb",
+    "status": "REJECTED",
+    "reason": "norm-cap total curvature"
+  }
+]

@@ -12,12 +12,12 @@ X=[[unit(3*j+i) for i in range(3)] for j in range(3)]
 N=[unit(9+j) for j in range(3)]
 P=[unit(12+i) for i in range(3)] # pair excluding i
 T=unit(15)
-def model():
+def model(pmin=F('31.75'),c=F('.448'),q=F('.3854'),loss=F('.08')):
     A=[]; b=[]
     def le(v,r): A.append(v); b.append(F(r))
     for n in N:
         le(scale(n,-1),0); le(add(n,scale(T,-1)),0)
-    le(scale(T,-1),-1); le(T,3*F('.3854'))
+    le(scale(T,-1),-1); le(T,3*q)
     for j in range(3):
         for i in range(3):
             for s in [-1,1]: le(add(scale(X[j][i],s),scale(N[j],-1)),0)
@@ -27,8 +27,8 @@ def model():
         js=[j for j in range(3) if j!=i]
         le(scale(P[i],-1),0)
         le(add(P[i],*(scale(N[j],-1) for j in js)),0)
-        le(add(P[i],*(scale(X[j][i],-1) for j in js)),F('.08'))
-    k0=F('0.448')*F('31.75')
+        le(add(P[i],*(scale(X[j][i],-1) for j in js)),loss)
+    k0=c*pmin
     le(add(T,*(scale(v,-k0) for v in P)),3-6*k0)
     return A,b,[add(*N)],[F(3)]
 
@@ -44,8 +44,9 @@ def dual(c,A,b,E,f):
     lower=sum(v*w for v,w in zip(y,b))+sum(v*w for v,w in zip(z,f))
     return dict(objective=list(map(str,c)),dual_ineq=list(map(str,y)),dual_eq=list(map(str,z)),lower=str(lower))
 
-def generate():
-    A,b,E,f=model(); stages=[]
+def generate(pmin=F('31.75'),c=F('.448'),q=F('.3854'),loss=F('.08'),box=None,half_tail=F('1e-5')):
+    A,b,E,f=model(pmin,c,q,loss); stages=[]
+    if box is None: box=dict(diag_min=F('.555'),diag_max=F('1.158'),off_min=F('.79'),off_max=F('1.158'))
     # Each pass-0 dominant coordinate is positive, <= 3, and its other coordinates <= half.
     tests=[]
     for i in range(3):
@@ -56,25 +57,25 @@ def generate():
             small=add(*(X[j][k] for j in js))
             for sign in [-1,1]: tests.append((f'half_{i}_{k}_{sign}',add(scale(large,F(1,2)),scale(small,sign)),F(0)))
     records=[]
-    for name,c,target in tests:
-        cert=dual(c,A,b,E,f); assert F(cert['lower'])>=target,(name,cert['lower'])
+    for name,objective,target in tests:
+        cert=dual(objective,A,b,E,f); assert F(cert['lower'])>=target,(name,cert['lower'])
         records.append(dict(name=name,target=str(target),**cert))
     stages.append(records)
     # The certified half-tail estimate permits these new linear premises.
     for i in range(3):
         js=[j for j in range(3) if j!=i]
-        A.append(add(P[i],*(scale(X[j][i],-1) for j in js))); b.append(F(1,100000))
+        A.append(add(P[i],*(scale(X[j][i],-1) for j in js))); b.append(half_tail)
     records=[]
     for j in range(3):
         for i in range(3):
-            low,high=(F('-1.158'),F('-.555')) if i==j else (F('.79'),F('1.158'))
-            for name,c,target in [(f'lo_{j}_{i}',X[j][i],low),(f'hi_{j}_{i}',scale(X[j][i],-1),-high)]:
-                cert=dual(c,A,b,E,f)
+            low,high=(-box['diag_max'],-box['diag_min']) if i==j else (box['off_min'],box['off_max'])
+            for name,objective,target in [(f'lo_{j}_{i}',X[j][i],low),(f'hi_{j}_{i}',scale(X[j][i],-1),-high)]:
+                cert=dual(objective,A,b,E,f)
                 print(name,float(F(cert['lower'])),float(target))
                 assert F(cert['lower'])>=target,(name,cert['lower'],target)
                 records.append(dict(name=name,target=str(target),**cert))
     stages.append(records)
-    return dict(p_min='127/4',c='56/125',q_cap='1927/5000',stages=stages)
+    return dict(p_min=str(pmin),c=str(c),q_cap=str(q),stages=stages)
 
 if __name__=='__main__':
     Path('certificates').mkdir(exist_ok=True)

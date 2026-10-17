@@ -1,0 +1,16 @@
+{
+  "name": "cutoff26",
+  "p_min": "26",
+  "p_max": "32",
+  "c": "443/1000",
+  "q": "197/500",
+  "orientation_loss": "1/10",
+  "half_tail": "1/100000",
+  "coarse_tail": "1/100000000",
+  "coarse_box": {"diag_min": "477/1000", "diag_max": "1183/1000", "off_min": "3/4", "off_max": "1183/1000"},
+  "young_epsilon_1": "1/10",
+  "young_epsilon_2": "1/10",
+  "geometry": "norm_caps",
+  "slab_width": "1/16",
+  "rounds": 10
+}
