@@ -1,0 +1,3342 @@
+{
+  "status": "PASS",
+  "toolchain": "leanprover/lean4:v4.33.1",
+  "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474",
+  "dependencies": {
+    "formalization/Hlawka21/ContractionCore.lean": "ae4a68fdb14bd5c9229084a55fe301b597a6df0cc43e472385d99a6c637a3882",
+    "formalization/Hlawka21/ContractionRounds.lean": "266e19189d45aed08a7baa53b31fefe966c12d2c85b6d17f6cea4e1ff47c7d5c"
+  },
+  "scope": "Conditional contraction from Facts and initial lower bound; not the cutoff21 root proof.",
+  "proofs": [
+    {
+      "module": "Hlawka21.Window21.Slab000",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab000.lean",
+      "sha256": "0263cdb9b43870659da7fd628d1e5e3a09c3650d69af1528753be0086814e065",
+      "power_comparisons": 23,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 8.58
+    },
+    {
+      "module": "Hlawka21.Window21.Slab001",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab001.lean",
+      "sha256": "10052032d8b5c5030d69a71ffd3ada8ae9a7e2efd13dd80315b4a7a1624f63fc",
+      "power_comparisons": 23,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 35.51
+    },
+    {
+      "module": "Hlawka21.Window21.Slab002",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab002.lean",
+      "sha256": "b1a27db3dc37e2c21c932b3142179fe4fc4faa03657621f1bb1043c7b80ba942",
+      "power_comparisons": 23,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 38.71
+    },
+    {
+      "module": "Hlawka21.Window21.Slab003",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab003.lean",
+      "sha256": "d34774f942b630fe04de190526eb5db574f3d2392a83a854ffd6ae4225ae78e9",
+      "power_comparisons": 23,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 37.25
+    },
+    {
+      "module": "Hlawka21.Window21.Slab004",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab004.lean",
+      "sha256": "62d2de7ff5e8440b45732bbea1f1aa4d83c88501c80ed86a0aa513ab86f86834",
+      "power_comparisons": 23,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 37.81
+    },
+    {
+      "module": "Hlawka21.Window21.Slab005",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab005.lean",
+      "sha256": "7e19018043eaf944dab5b5418ad1a7043c302584f5a913568b61ac66f15057ca",
+      "power_comparisons": 23,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 37.31
+    },
+    {
+      "module": "Hlawka21.Window21.Slab006",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab006.lean",
+      "sha256": "4eb205a9fa11fd54128651147c3ca2c9e7875aef66d615c472ea4a223d6ca8cc",
+      "power_comparisons": 23,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 37.28
+    },
+    {
+      "module": "Hlawka21.Window21.Slab007",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab007.lean",
+      "sha256": "a6ba11647f5fb71c5e304dadb80f52c7399a9a348290bbec887e59b5127840a9",
+      "power_comparisons": 23,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 36.63
+    },
+    {
+      "module": "Hlawka21.Window21.Slab008",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab008.lean",
+      "sha256": "9ad84b4cef0266672f4440929493e8dc2c42e11594c7834c2554e725c646fbc5",
+      "power_comparisons": 23,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 37.09
+    },
+    {
+      "module": "Hlawka21.Window21.Slab009",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab009.lean",
+      "sha256": "f5d92164ca993a61b32b643ef8607eff003a80caf04b39b809a10d9201103e6c",
+      "power_comparisons": 23,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 36.06
+    },
+    {
+      "module": "Hlawka21.Window21.Slab010",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab010.lean",
+      "sha256": "2fbf90672a4fc5f0288531559b9e06f6bcf9ce1e2b46d69cc0deb46e36f16c6f",
+      "power_comparisons": 23,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 39.81
+    },
+    {
+      "module": "Hlawka21.Window21.Slab011",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab011.lean",
+      "sha256": "31cb841d3239a73b03521eafd362a0d15ce5bf2ac63f3c6e355a41b0ce9e78d5",
+      "power_comparisons": 23,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 36.94
+    },
+    {
+      "module": "Hlawka21.Window21.Slab012",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab012.lean",
+      "sha256": "48589dc11983cdaa179f2611dcba02dcd2a37598f6cb9bd019f312bdf5ac2816",
+      "power_comparisons": 23,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 37.77
+    },
+    {
+      "module": "Hlawka21.Window21.Slab013",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab013.lean",
+      "sha256": "d09f8d6c645a73f410747227f5d1a1c12c132bb2eba0f5481a2df343d0e257d7",
+      "power_comparisons": 23,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 37.2
+    },
+    {
+      "module": "Hlawka21.Window21.Slab014",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab014.lean",
+      "sha256": "92bb44f5ec7ae47e0c211b4c5f5f27d2325ed16be4fd2b28d24879904bc52870",
+      "power_comparisons": 23,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 44.32
+    },
+    {
+      "module": "Hlawka21.Window21.Slab015",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab015.lean",
+      "sha256": "3dffd2948f8b7241d8331b1b655d64bef8c95ddeb0058042a92370ace932eca7",
+      "power_comparisons": 23,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 42.51
+    },
+    {
+      "module": "Hlawka21.Window21.Slab016",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab016.lean",
+      "sha256": "126c20ec1914592ece66cd8fda081daf231f0718e7b0b4968f1ef7c9c99167fd",
+      "power_comparisons": 23,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 44.2
+    },
+    {
+      "module": "Hlawka21.Window21.Slab017",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab017.lean",
+      "sha256": "c1b2012148cb2cf006e07ec40f18a746bb3086b0e69b8c3f1b55e63080bf771d",
+      "power_comparisons": 23,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 42.65
+    },
+    {
+      "module": "Hlawka21.Window21.Slab018",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab018.lean",
+      "sha256": "a9b8bc8f87e9f32c737538b5f5b8c0f0c55a6bf37e4bb018e0deab097202188c",
+      "power_comparisons": 23,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 45.89
+    },
+    {
+      "module": "Hlawka21.Window21.Slab019",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab019.lean",
+      "sha256": "835e58991fe7b3a6fef5ca0732abb60da13a02bfb5aa3eb51eada7ba83c34f8a",
+      "power_comparisons": 23,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 44.75
+    },
+    {
+      "module": "Hlawka21.Window21.Slab020",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab020.lean",
+      "sha256": "eeaff18e114b4f32b86f836101caaf60e7f4c3db522f665933b66cf9d7d6ca55",
+      "power_comparisons": 23,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 44.13
+    },
+    {
+      "module": "Hlawka21.Window21.Slab021",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab021.lean",
+      "sha256": "2eaea08c285a3578f8aef0f0c6b444cbc55e868011f44b3f89101e94c7c7dcd0",
+      "power_comparisons": 23,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 43.72
+    },
+    {
+      "module": "Hlawka21.Window21.Slab022",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab022.lean",
+      "sha256": "3cf34fee273315a06f6bc16cb1fb372aa630fb5194d71b5e19e47f843c2365e4",
+      "power_comparisons": 23,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 44.07
+    },
+    {
+      "module": "Hlawka21.Window21.Slab023",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab023.lean",
+      "sha256": "fea2565c7b78bd6ab7376a604b6650f6184a836b77c4982a45498b0d23e873f7",
+      "power_comparisons": 23,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 44.12
+    },
+    {
+      "module": "Hlawka21.Window21.Slab024",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab024.lean",
+      "sha256": "0d153798e3fd398c2585d44ccaef16de1ce48e474a1d380a5fe38eb7a0e9ed2d",
+      "power_comparisons": 23,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 44.24
+    },
+    {
+      "module": "Hlawka21.Window21.Slab025",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab025.lean",
+      "sha256": "0a8b1f897bcb5c4ac86d76e8cc3c10352448c46a9ab63579a51407ee75364644",
+      "power_comparisons": 23,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 43.98
+    },
+    {
+      "module": "Hlawka21.Window21.Slab026",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab026.lean",
+      "sha256": "46286fbc5170c5876bf667149da1ccbef6ccac569162e337bf2801b54b75cb35",
+      "power_comparisons": 23,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 35.6
+    },
+    {
+      "module": "Hlawka21.Window21.Slab027",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab027.lean",
+      "sha256": "cb81b63acb0bd181d6dbf168e514d61531e3407ad1276f5571607da77acaca77",
+      "power_comparisons": 23,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 34.87
+    },
+    {
+      "module": "Hlawka21.Window21.Slab028",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab028.lean",
+      "sha256": "94c64372f36d5df8c8cd3ef93c2233968bcb65a011682b98a8b89e516f025a1b",
+      "power_comparisons": 23,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 35.15
+    },
+    {
+      "module": "Hlawka21.Window21.Slab029",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab029.lean",
+      "sha256": "fbf5f2b5903d4e2636672da907ad4797f63d52980dd9fb227f2777c5935bc6a5",
+      "power_comparisons": 23,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 35.17
+    },
+    {
+      "module": "Hlawka21.Window21.Slab030",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab030.lean",
+      "sha256": "4d130ef44137432614ba5304b5c3438f11b8ef3f22f1090445e28810c0b7dfa5",
+      "power_comparisons": 23,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 47.1
+    },
+    {
+      "module": "Hlawka21.Window21.Slab031",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab031.lean",
+      "sha256": "2af5fe8689e3cca30132e81fe0096c6def3406e10d86ed154dc4df0ac764f496",
+      "power_comparisons": 23,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 43.21
+    },
+    {
+      "module": "Hlawka21.Window21.Slab032",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab032.lean",
+      "sha256": "7f4e88d5274b205bdc9eeb70e1c6efc6f0beb5d2ff83db1051a39d321f3e604e",
+      "power_comparisons": 23,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 45.87
+    },
+    {
+      "module": "Hlawka21.Window21.Slab033",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab033.lean",
+      "sha256": "963bdf110978aaea137e67752da6a4e7a1c0fad5fd1602e14b8606c73a77d7e6",
+      "power_comparisons": 23,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 46.04
+    },
+    {
+      "module": "Hlawka21.Window21.Slab034",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab034.lean",
+      "sha256": "b721e3f9850c952fd5818fcffd1c5de100da3a53d4ea30b0dcd4a7ff9e94d6f4",
+      "power_comparisons": 23,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 45.93
+    },
+    {
+      "module": "Hlawka21.Window21.Slab035",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab035.lean",
+      "sha256": "8c0f9808ec97c54d053b83e83626a8cf0d663ec2b47fa49dfeab1f4e20060b12",
+      "power_comparisons": 23,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 44.95
+    },
+    {
+      "module": "Hlawka21.Window21.Slab036",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab036.lean",
+      "sha256": "69f48dcc68448bd62d2d44c2a98d1e6cf325b48b3cad4cc26ef474fae80baabf",
+      "power_comparisons": 23,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 45.63
+    },
+    {
+      "module": "Hlawka21.Window21.Slab037",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab037.lean",
+      "sha256": "7efa9dea08b8abd43649be361a3e9205d57a2a05821b353a7f5cc6de6358f30d",
+      "power_comparisons": 26,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 47.92
+    },
+    {
+      "module": "Hlawka21.Window21.Slab038",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab038.lean",
+      "sha256": "2ac3a000475ae62fcda4e72932b69637ee490aa12b7213a363abfad5bccf4c20",
+      "power_comparisons": 23,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 40.71
+    },
+    {
+      "module": "Hlawka21.Window21.Slab039",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab039.lean",
+      "sha256": "3037e26c17e295d5f3fe76ed490c8116b84f6aa7c680b0d4792ff5658bba49ca",
+      "power_comparisons": 23,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 38.04
+    },
+    {
+      "module": "Hlawka21.Window21.Slab040",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab040.lean",
+      "sha256": "3ff8c851111691cb509f88c43d8929d0fdb136133a35fe99f6762339acdfec19",
+      "power_comparisons": 23,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 39.52
+    },
+    {
+      "module": "Hlawka21.Window21.Slab041",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab041.lean",
+      "sha256": "117f8e92e081111c8e39f2b390f2f4bfc4d1b737dac067248100158a845aab1c",
+      "power_comparisons": 23,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 37.97
+    },
+    {
+      "module": "Hlawka21.Window21.Slab042",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab042.lean",
+      "sha256": "3b392f4fe75feebc91a4f5ecfde229b04784ee374087f78dddd542845d8422a0",
+      "power_comparisons": 23,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 43.57
+    },
+    {
+      "module": "Hlawka21.Window21.Slab043",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab043.lean",
+      "sha256": "f50b2bb3f36e261837b69816a35043c6ac0b07e0a1c999c30872d2fa37a8b2d1",
+      "power_comparisons": 23,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 42.73
+    },
+    {
+      "module": "Hlawka21.Window21.Slab044",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab044.lean",
+      "sha256": "ef246160745967ceafabf21e4fcec2aba4952e957eb59bb16df3cbfd6aa4bd16",
+      "power_comparisons": 23,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 42.62
+    },
+    {
+      "module": "Hlawka21.Window21.Slab045",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab045.lean",
+      "sha256": "ec26065071db60f5b246a424315e932946b42cf7536fc82754b575ce778a3432",
+      "power_comparisons": 23,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 42.55
+    },
+    {
+      "module": "Hlawka21.Window21.Slab046",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab046.lean",
+      "sha256": "bcf55ea6fa8282253a004fd1a2fe0863c8c151e288aaeeaf030dc489eb852e27",
+      "power_comparisons": 23,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 40.24
+    },
+    {
+      "module": "Hlawka21.Window21.Slab047",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab047.lean",
+      "sha256": "294044df187ddecce6a0a0800cfac80d570761251671f3c36162b9c3457e28cf",
+      "power_comparisons": 23,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 39.46
+    },
+    {
+      "module": "Hlawka21.Window21.Slab048",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab048.lean",
+      "sha256": "5e19c3b9770876db6d4ad1c936341e3460ab78c07dbfd8f36b6eb2326145ad2f",
+      "power_comparisons": 23,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 41.07
+    },
+    {
+      "module": "Hlawka21.Window21.Slab049",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab049.lean",
+      "sha256": "71d3aee65c0e2ee5ddba2b7685df1c016fc3bf59cb43b20e4f55d89dcfe97fd6",
+      "power_comparisons": 23,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 39.61
+    },
+    {
+      "module": "Hlawka21.Window21.Slab050",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab050.lean",
+      "sha256": "8ca8471a3832a0e5ef808ae364fba77de665bb2721d054d0cefaf40090c8b940",
+      "power_comparisons": 23,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 39.28
+    },
+    {
+      "module": "Hlawka21.Window21.Slab051",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab051.lean",
+      "sha256": "c0704960db7f1145e9d4a77ff943628f3478d6c0ba53d7b546d5cb35bb6ef4a5",
+      "power_comparisons": 23,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 38.44
+    },
+    {
+      "module": "Hlawka21.Window21.Slab052",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab052.lean",
+      "sha256": "5979a2b6c52a8ef3ab1edab90cc59c21460e073cc7d4cb7a9760031b74e09436",
+      "power_comparisons": 23,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 39.63
+    },
+    {
+      "module": "Hlawka21.Window21.Slab053",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab053.lean",
+      "sha256": "47a604a1e011ed9ec9ac0bf353d8a1317cbfed842ad56058036e3e0189f29e90",
+      "power_comparisons": 20,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 36.39
+    },
+    {
+      "module": "Hlawka21.Window21.Slab054",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab054.lean",
+      "sha256": "a57a6d221de3528c2303bbe0fa49c0beedc22ca87d5c0bc7d5c6e87ffb1cc1d9",
+      "power_comparisons": 23,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 42.79
+    },
+    {
+      "module": "Hlawka21.Window21.Slab055",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab055.lean",
+      "sha256": "f66accd3149d00580d21bcc7326c68877f1d29d79956cdb1010a3b5cd381da1f",
+      "power_comparisons": 23,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 41.84
+    },
+    {
+      "module": "Hlawka21.Window21.Slab056",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab056.lean",
+      "sha256": "08b8556d4ce8391f4357c805e929c5ee1065b7a57e5ff1f3d8ae57443620b479",
+      "power_comparisons": 23,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 43.18
+    },
+    {
+      "module": "Hlawka21.Window21.Slab057",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab057.lean",
+      "sha256": "e2ff66c826bf7059fe05e875be27bafc3105563a6a4bb2793c7c96a63edbf661",
+      "power_comparisons": 23,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 43.87
+    },
+    {
+      "module": "Hlawka21.Window21.Slab058",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab058.lean",
+      "sha256": "09850665e33fbb6bbbbbbd3c116cd0664d5e4163eae68652923ed68cf939312b",
+      "power_comparisons": 23,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 48.78
+    },
+    {
+      "module": "Hlawka21.Window21.Slab059",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab059.lean",
+      "sha256": "c8b89148626db6b163120aec6bd38a628a5008c63cc36fed2ce542be61e981fe",
+      "power_comparisons": 23,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 47.01
+    },
+    {
+      "module": "Hlawka21.Window21.Slab060",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab060.lean",
+      "sha256": "c5e05754ad93b3252896cc8eb44c054332909894834a70af7e656de45a740c4a",
+      "power_comparisons": 23,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 47.49
+    },
+    {
+      "module": "Hlawka21.Window21.Slab061",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab061.lean",
+      "sha256": "1f815da5959080193edc5c0c3ac8f3d29efa890a31717957deced183615d8d84",
+      "power_comparisons": 23,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 46.54
+    },
+    {
+      "module": "Hlawka21.Window21.Slab062",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab062.lean",
+      "sha256": "1303a22db426d37ed2645f923f71f8fffc568e900fc57dd61f8cc21bda203dc5",
+      "power_comparisons": 23,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 38.33
+    },
+    {
+      "module": "Hlawka21.Window21.Slab063",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab063.lean",
+      "sha256": "823038acb31b0d2553090c92281a11bcbb93f26d4d9418238a8dd642a41da0e9",
+      "power_comparisons": 23,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 34.54
+    },
+    {
+      "module": "Hlawka21.Window21.Slab064",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab064.lean",
+      "sha256": "c826e9c906d1ad5048ccfc83c7927368c04645abc73756005fa68033116f655d",
+      "power_comparisons": 23,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 36.54
+    },
+    {
+      "module": "Hlawka21.Window21.Slab065",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab065.lean",
+      "sha256": "f9d30bef173f6a54bc1b6a9aecad802ca80a1c47146d1a2ebe36683269d17da4",
+      "power_comparisons": 23,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 37.21
+    },
+    {
+      "module": "Hlawka21.Window21.Slab066",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab066.lean",
+      "sha256": "92e688738ae921cfa98515fdb304c2306774915f298547f3d8fc0c486f85cfe6",
+      "power_comparisons": 23,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 35.1
+    },
+    {
+      "module": "Hlawka21.Window21.Slab067",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab067.lean",
+      "sha256": "52de30c24b69fb1bfd3c35f1a36cd47efa1a7a839c720500077e81042fdd2b38",
+      "power_comparisons": 20,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 33.19
+    },
+    {
+      "module": "Hlawka21.Window21.Slab068",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab068.lean",
+      "sha256": "57815f9829b0652eef0cc87139e3bff71cc62fb131f55b86d3e75e63d463ee72",
+      "power_comparisons": 23,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 34.89
+    },
+    {
+      "module": "Hlawka21.Window21.Slab069",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab069.lean",
+      "sha256": "22c9a89b3069b3d58c7b9d7b0c4082dd290520d4e8a335824ee90c5e39f4214b",
+      "power_comparisons": 23,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 32.96
+    },
+    {
+      "module": "Hlawka21.Window21.Slab070",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab070.lean",
+      "sha256": "55ee879dbedc0480fa8721b873342a43a174aee8e617305e64a8793d3585663f",
+      "power_comparisons": 23,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 34.27
+    },
+    {
+      "module": "Hlawka21.Window21.Slab071",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab071.lean",
+      "sha256": "e3482e2936d79601d2a9718c9174a77b9d2202d84fd9d95800f36a34edcc07f4",
+      "power_comparisons": 20,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 31.69
+    },
+    {
+      "module": "Hlawka21.Window21.Slab072",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab072.lean",
+      "sha256": "ccdacd24b41bb48af3da068fff7b2e323d9bbed7057761eafeb0f9b3c7e769f5",
+      "power_comparisons": 20,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 32.76
+    },
+    {
+      "module": "Hlawka21.Window21.Slab073",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab073.lean",
+      "sha256": "52d8ac88ad86f68229ede3da39a202de0831443b694db0b4dd190371c9f796e2",
+      "power_comparisons": 23,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 34.96
+    },
+    {
+      "module": "Hlawka21.Window21.Slab074",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab074.lean",
+      "sha256": "952909e799e7d4c39215704ff7122f3a3a8a1a958c2df2ee3bade9d644b73dfa",
+      "power_comparisons": 23,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 37.9
+    },
+    {
+      "module": "Hlawka21.Window21.Slab075",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab075.lean",
+      "sha256": "77f69d0ba849b90a56e4aa105548d1220894c5295a16f1bdf75b7ec61f1e8e25",
+      "power_comparisons": 20,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 36.02
+    },
+    {
+      "module": "Hlawka21.Window21.Slab076",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab076.lean",
+      "sha256": "9b05b254d0bb59bf82632cb9e5a936bc19a774539143dace17276e64bf46465e",
+      "power_comparisons": 20,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 36.53
+    },
+    {
+      "module": "Hlawka21.Window21.Slab077",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab077.lean",
+      "sha256": "8ec447ab66b1850f4c0163e9e57f89acd9b8b5d32cdf34ce3033a750f9aa32a7",
+      "power_comparisons": 23,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 40.7
+    },
+    {
+      "module": "Hlawka21.Window21.Slab078",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab078.lean",
+      "sha256": "cd8905f473407be2c491b5108bf4a058e0474d518b9e45c705ff87c438bd25ec",
+      "power_comparisons": 20,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 43.94
+    },
+    {
+      "module": "Hlawka21.Window21.Slab079",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab079.lean",
+      "sha256": "66f16381ea1a8aacb2ec9ff47e6a0614654e877149740475ed584a5a7d029bfe",
+      "power_comparisons": 23,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 44.42
+    },
+    {
+      "module": "Hlawka21.Window21.Slab080",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab080.lean",
+      "sha256": "52bebd319503800cdff93e0ad7720671daf0c207320cbf656236f1e0f8a55829",
+      "power_comparisons": 23,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 45.1
+    },
+    {
+      "module": "Hlawka21.Window21.Slab081",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab081.lean",
+      "sha256": "dcbeb4f31105da017769f93f7f0fa155fda3ebe5f9e33de84d43db6c544924ed",
+      "power_comparisons": 23,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 42.38
+    },
+    {
+      "module": "Hlawka21.Window21.Slab082",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab082.lean",
+      "sha256": "112af092dbd0ee97a50f0dd111a91f5accc112f9e893afb54d58a2662ed924a7",
+      "power_comparisons": 23,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 47.77
+    },
+    {
+      "module": "Hlawka21.Window21.Slab083",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab083.lean",
+      "sha256": "3158ee04f00695d59bfd47606fd1189798728c33f3f982472067c351d96e68ca",
+      "power_comparisons": 20,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 44.77
+    },
+    {
+      "module": "Hlawka21.Window21.Slab084",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab084.lean",
+      "sha256": "7305ba870a607a618b0649acbe1ca06a9538d69efe120831c1bc5d4dff195f89",
+      "power_comparisons": 23,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 44.96
+    },
+    {
+      "module": "Hlawka21.Window21.Slab085",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab085.lean",
+      "sha256": "dbcb4bdfced1c6a53e595eb35cd07adb2d32695a4020631461a51f384b24bbfe",
+      "power_comparisons": 23,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 42.7
+    },
+    {
+      "module": "Hlawka21.Window21.Slab086",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab086.lean",
+      "sha256": "4cceb7a2af3be90d0e78f64c57ba130b43106dfdfe677aee4c2cb98781ff4a19",
+      "power_comparisons": 23,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 45.58
+    },
+    {
+      "module": "Hlawka21.Window21.Slab087",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab087.lean",
+      "sha256": "8eb24a9180bcb9763baa00926ea945fd8887084e1ff8d8adff0fc68549f8d981",
+      "power_comparisons": 23,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 43.62
+    },
+    {
+      "module": "Hlawka21.Window21.Slab088",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab088.lean",
+      "sha256": "b0e2136ee00d735e51490ccf1d364c8b4890c696d911647722e955b5b30b879e",
+      "power_comparisons": 20,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 42.01
+    },
+    {
+      "module": "Hlawka21.Window21.Slab089",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab089.lean",
+      "sha256": "0040cf1f13078c1e1f4df4f6cf3abf4cf024353a6e2eb2d47340011f35d69a01",
+      "power_comparisons": 23,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 43.51
+    },
+    {
+      "module": "Hlawka21.Window21.Slab090",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab090.lean",
+      "sha256": "09bb4b9f3e4d78694f90e80d31846dde50f885ddbfaa44b7347c00fe881c2838",
+      "power_comparisons": 23,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 48.57
+    },
+    {
+      "module": "Hlawka21.Window21.Slab091",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab091.lean",
+      "sha256": "e6dee308e6e36d68c55b2f476fde8a49218221ff15ea3b6ff5dd6549242e5e00",
+      "power_comparisons": 23,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 46.97
+    },
+    {
+      "module": "Hlawka21.Window21.Slab092",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab092.lean",
+      "sha256": "db499cad6688ae1d47e7aad455a01101faa3e985b775803be72c4fd9a3f74552",
+      "power_comparisons": 23,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 47.41
+    },
+    {
+      "module": "Hlawka21.Window21.Slab093",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab093.lean",
+      "sha256": "497af3494c8bf735d5c0a35aa378d950746730282ede35e9eaec286a931fe722",
+      "power_comparisons": 23,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 47.85
+    },
+    {
+      "module": "Hlawka21.Window21.Slab094",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab094.lean",
+      "sha256": "7c7b2f4f81c49c49c6ce391bcfddcffb6bc18821920effb6d70b53698b9fffe1",
+      "power_comparisons": 23,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 50.38
+    },
+    {
+      "module": "Hlawka21.Window21.Slab095",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab095.lean",
+      "sha256": "cf4d0ed6ff9931456b3feda4481012f7465c1df2eca16b4f44bf8d2e7c3b3103",
+      "power_comparisons": 20,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 43.49
+    },
+    {
+      "module": "Hlawka21.Window21.Slab096",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab096.lean",
+      "sha256": "dce77a5b5d7597317fad08940156c58ad8f941d6887a7dab314b578decd8d236",
+      "power_comparisons": 20,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 46.18
+    },
+    {
+      "module": "Hlawka21.Window21.Slab097",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab097.lean",
+      "sha256": "88a9f574eb9a30eb11e51cbb3208db0c79ec931457a68176fcfc1fc2a64c2be8",
+      "power_comparisons": 23,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 47.15
+    },
+    {
+      "module": "Hlawka21.Window21.Slab098",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab098.lean",
+      "sha256": "52b8ce630bec44b5fb6a5fdabfdf0a243525d078efd34fd6e84fb16b835fe5b5",
+      "power_comparisons": 20,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 47.13
+    },
+    {
+      "module": "Hlawka21.Window21.Slab099",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab099.lean",
+      "sha256": "0904cc3acea1e1a412d6e62164070b651849d6d7c8771023a0cb311df198db87",
+      "power_comparisons": 23,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 46.56
+    },
+    {
+      "module": "Hlawka21.Window21.Slab100",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab100.lean",
+      "sha256": "1e90190905e1011c3e76383af00cce9a8bf3250611293553d36724b2215d9959",
+      "power_comparisons": 20,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 44.04
+    },
+    {
+      "module": "Hlawka21.Window21.Slab101",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab101.lean",
+      "sha256": "41b1fbe29e2d22c3195d34c301782a0f69c68baa50d52bbc5a56d47f2c47c5c4",
+      "power_comparisons": 20,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 43.41
+    },
+    {
+      "module": "Hlawka21.Window21.Slab102",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab102.lean",
+      "sha256": "1ce48be0bd872f122aa972b154c6289058120da7502e0cf978ff13a248b0e010",
+      "power_comparisons": 23,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 47.06
+    },
+    {
+      "module": "Hlawka21.Window21.Slab103",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab103.lean",
+      "sha256": "3bd20f1306570861f71d15a6dd04872051d74e2480d83af324c640c47d8077d8",
+      "power_comparisons": 20,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 41.43
+    },
+    {
+      "module": "Hlawka21.Window21.Slab104",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab104.lean",
+      "sha256": "b5b126beb3705e66c73f81397970ed9ab08bf73e4ce0595a52057cd3fdddc3b6",
+      "power_comparisons": 23,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 44.73
+    },
+    {
+      "module": "Hlawka21.Window21.Slab105",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab105.lean",
+      "sha256": "3da09f1461816a8f20cd0b307dc24410c63b56e4e983ca1260dd7d601f720b49",
+      "power_comparisons": 20,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 41.15
+    },
+    {
+      "module": "Hlawka21.Window21.Slab106",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab106.lean",
+      "sha256": "6c9e0eff60a1535791914e027d4fe8612623ae2bd6b52209886dbc85aa6fc4e8",
+      "power_comparisons": 20,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 41.8
+    },
+    {
+      "module": "Hlawka21.Window21.Slab107",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab107.lean",
+      "sha256": "cec493f0746aad7bbaca63c3b8dcccf3a9773e3565b1592f33869ee0e9c943b1",
+      "power_comparisons": 23,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 44.29
+    },
+    {
+      "module": "Hlawka21.Window21.Slab108",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab108.lean",
+      "sha256": "ab52f7d9047cfcd770749f89c18c1a9057c9f85ce66ad33d058c6f633470c668",
+      "power_comparisons": 20,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 42.8
+    },
+    {
+      "module": "Hlawka21.Window21.Slab109",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab109.lean",
+      "sha256": "e25b6baf8d856303e0a657029cbf4b2fd4f8bad1ca23f4a99cffe70e93093264",
+      "power_comparisons": 20,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 41.62
+    },
+    {
+      "module": "Hlawka21.Window21.Slab110",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab110.lean",
+      "sha256": "6833431474796bf578339ce64e0a27e51b7531e3ce8897025997327ad79e209d",
+      "power_comparisons": 20,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 42.0
+    },
+    {
+      "module": "Hlawka21.Window21.Slab111",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab111.lean",
+      "sha256": "d049b8ea05f33241b070b22cc1245ce17cbe4e4f1ddb6e6b2e19314f4310a8a8",
+      "power_comparisons": 20,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 40.61
+    },
+    {
+      "module": "Hlawka21.Window21.Slab112",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab112.lean",
+      "sha256": "22088126f814f8bdcdc301a0c134b8c355917e85bb28e1d5a84de2a96f1fe828",
+      "power_comparisons": 20,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 41.4
+    },
+    {
+      "module": "Hlawka21.Window21.Slab113",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab113.lean",
+      "sha256": "150234bcc2285181e9b142200afdf66525a6b180c6ea4867f17b676e8d58ad39",
+      "power_comparisons": 23,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 44.09
+    },
+    {
+      "module": "Hlawka21.Window21.Slab114",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab114.lean",
+      "sha256": "2f0311d306f9aa6c9ffa9277b6537e5c085f9eaa5a729ac9a0a604c66f34f670",
+      "power_comparisons": 20,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 39.73
+    },
+    {
+      "module": "Hlawka21.Window21.Slab115",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab115.lean",
+      "sha256": "6db3a3b0dcd392a317c44614f559a988602a1f235d2c9255837afa744a050e9e",
+      "power_comparisons": 23,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 42.45
+    },
+    {
+      "module": "Hlawka21.Window21.Slab116",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab116.lean",
+      "sha256": "5660ab5279de9f4954b2f5c201f3406068e16c79276ac0a667d9916a77e7c783",
+      "power_comparisons": 23,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 44.03
+    },
+    {
+      "module": "Hlawka21.Window21.Slab117",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab117.lean",
+      "sha256": "e8a51b81d2fa36aa4e7fdf3bf10d364da92dc39b5c2f55f67e685883722bd9bd",
+      "power_comparisons": 20,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 37.62
+    },
+    {
+      "module": "Hlawka21.Window21.Slab118",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab118.lean",
+      "sha256": "fbec9bae9711cd2d66fdc0baac045a15bac29ac77f9d7625c6a03ac046257213",
+      "power_comparisons": 20,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 39.76
+    },
+    {
+      "module": "Hlawka21.Window21.Slab119",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab119.lean",
+      "sha256": "d58a3a96b7b6093f8a4460965efeedf7221b5f6fddcab021bb988d19322bc3bf",
+      "power_comparisons": 20,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 40.92
+    },
+    {
+      "module": "Hlawka21.Window21.Slab120",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab120.lean",
+      "sha256": "bf26c264dc9092ecdd018b189797ddf5d11aed37fc5c6ba571913ccd6297ee4a",
+      "power_comparisons": 20,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 41.87
+    },
+    {
+      "module": "Hlawka21.Window21.Slab121",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab121.lean",
+      "sha256": "829dd6474ba3ea642b4a5719795ea6c43cf313d5fd6eae05948c305cb6cd9279",
+      "power_comparisons": 20,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 40.87
+    },
+    {
+      "module": "Hlawka21.Window21.Slab122",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab122.lean",
+      "sha256": "07e67060fbfadb02e15e3d6ed95deb97c3f417f9d7be4c197676193b4f2cb543",
+      "power_comparisons": 23,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 39.25
+    },
+    {
+      "module": "Hlawka21.Window21.Slab123",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab123.lean",
+      "sha256": "c560b4659a80aad0cb1cf54f7bb327c0314a9c51192870b030464548c2cf4de8",
+      "power_comparisons": 23,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 38.69
+    },
+    {
+      "module": "Hlawka21.Window21.Slab124",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab124.lean",
+      "sha256": "d922afe202d476845d3b310c89aaaeb02bd08a20cd277361c9434fee943a7b10",
+      "power_comparisons": 23,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 39.35
+    },
+    {
+      "module": "Hlawka21.Window21.Slab125",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab125.lean",
+      "sha256": "717e36b6a19e61902d17b3ce093e6558b6d0c6a58af91ff7d8fdbb99d6f30f1d",
+      "power_comparisons": 23,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 38.2
+    },
+    {
+      "module": "Hlawka21.Window21.Slab126",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab126.lean",
+      "sha256": "bc0286e58bf89a690193943cc0967197ad40e95893951bec751d5191775380ae",
+      "power_comparisons": 23,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 33.89
+    },
+    {
+      "module": "Hlawka21.Window21.Slab127",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab127.lean",
+      "sha256": "6d1f56e9613a1df231b8ab90c8fb498c5732f02297340a7f8ead5eaa60ecaea9",
+      "power_comparisons": 20,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 32.29
+    },
+    {
+      "module": "Hlawka21.Window21.Slab128",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab128.lean",
+      "sha256": "9cf00bc32ecc1137aad7b989b0491c2df4648c49ff1efac8d2f906a5d40f4e24",
+      "power_comparisons": 20,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 32.98
+    },
+    {
+      "module": "Hlawka21.Window21.Slab129",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab129.lean",
+      "sha256": "d379746a8c09ea289c61e3983955f960dec78eca5f6be99826037fac8735758f",
+      "power_comparisons": 20,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 33.36
+    },
+    {
+      "module": "Hlawka21.Window21.Slab130",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab130.lean",
+      "sha256": "8a279525c8dd8447ff5c10235eb940840134bf0d3f9a4b0b07af26a93ea45678",
+      "power_comparisons": 20,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 32.34
+    },
+    {
+      "module": "Hlawka21.Window21.Slab131",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab131.lean",
+      "sha256": "c294a3e2ea6dca735a4d2edd6a76d58c3417dda046f66bf28c2c9b9cdcdfb526",
+      "power_comparisons": 23,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 35.76
+    },
+    {
+      "module": "Hlawka21.Window21.Slab132",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab132.lean",
+      "sha256": "4ee1ce744d18a0ed09ce8f68f0dfb92e11476740ccd060ae5c2559c184a0d95a",
+      "power_comparisons": 20,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 32.82
+    },
+    {
+      "module": "Hlawka21.Window21.Slab133",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab133.lean",
+      "sha256": "201dada26a224f629e17211a85094872ed0f9f54feed747dac678a57e7f45af1",
+      "power_comparisons": 20,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 31.89
+    },
+    {
+      "module": "Hlawka21.Window21.Slab134",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab134.lean",
+      "sha256": "c6782cb50bb0a8d625d58f66ca4e290083f2c1422d07bc907f05a4aadaa0aa64",
+      "power_comparisons": 20,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 35.68
+    },
+    {
+      "module": "Hlawka21.Window21.Slab135",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab135.lean",
+      "sha256": "1f549f6994acdbd50ba11cbcd3638517c6663f6422a47452be7127caddf7c55d",
+      "power_comparisons": 23,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 39.89
+    },
+    {
+      "module": "Hlawka21.Window21.Slab136",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab136.lean",
+      "sha256": "dd3a07b2841bd6228d610fbff8a029c7fb4cf255567a26f94e816e3dd34fa916",
+      "power_comparisons": 20,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 37.54
+    },
+    {
+      "module": "Hlawka21.Window21.Slab137",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab137.lean",
+      "sha256": "54be3da92888e2d077977549d393c0ca08d8ef1e3a50f6ae5573558ae748ba22",
+      "power_comparisons": 23,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 40.05
+    },
+    {
+      "module": "Hlawka21.Window21.Slab138",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab138.lean",
+      "sha256": "c0f47b943e8e5efe7d90bea460e1663c171721e029be5cf89ae3700eeac9c467",
+      "power_comparisons": 23,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 34.6
+    },
+    {
+      "module": "Hlawka21.Window21.Slab139",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab139.lean",
+      "sha256": "6dfbe04f16a430819ccb276feb2f9963b3f77695acc0ee2b56ed77252b94f6fd",
+      "power_comparisons": 20,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 35.08
+    },
+    {
+      "module": "Hlawka21.Window21.Slab140",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab140.lean",
+      "sha256": "8a551c379868c654bbe0cc5b4f9477fe5fcd94707258e2c33786156800f2e17f",
+      "power_comparisons": 23,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 38.01
+    },
+    {
+      "module": "Hlawka21.Window21.Slab141",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab141.lean",
+      "sha256": "1f8fb9c1001225d343917e69944e84ca90253acf48c00a4b5f70ee570a433438",
+      "power_comparisons": 23,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 36.82
+    },
+    {
+      "module": "Hlawka21.Window21.Slab142",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab142.lean",
+      "sha256": "49370ce4a87cc88d1c7ef370281eb79bacb81a0eb1d9194b456fac954315f095",
+      "power_comparisons": 20,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 32.93
+    },
+    {
+      "module": "Hlawka21.Window21.Slab143",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab143.lean",
+      "sha256": "84bc155775c14526da26eec89dec4f032efdff5aeb80b3bf0a3b11e0305bb088",
+      "power_comparisons": 20,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 31.97
+    },
+    {
+      "module": "Hlawka21.Window21.Slab144",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab144.lean",
+      "sha256": "0f0eb1aaf3a0b5bd078f54bda7fc135ef7caa98de405e7f4ff514d3854806078",
+      "power_comparisons": 20,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 33.4
+    },
+    {
+      "module": "Hlawka21.Window21.Slab145",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab145.lean",
+      "sha256": "55331e86aa98ffc39dbb4cb03889b0b96e09136338a20610f33f11ada935fd05",
+      "power_comparisons": 23,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 35.08
+    },
+    {
+      "module": "Hlawka21.Window21.Slab146",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab146.lean",
+      "sha256": "341879491ebde700a0d04e330c1361d902a8808bcfcc6fb70f5f0246f6df3c47",
+      "power_comparisons": 20,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 30.72
+    },
+    {
+      "module": "Hlawka21.Window21.Slab147",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab147.lean",
+      "sha256": "e30511e314d59e24d4e825e41e3b525447f63a29a4843a3719b17ee2afa4918e",
+      "power_comparisons": 23,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 32.67
+    },
+    {
+      "module": "Hlawka21.Window21.Slab148",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab148.lean",
+      "sha256": "6a9574caa0ca7f2ffb57fd73e4bdabb2e23bbe5b2400369c18aa5981040fcfcb",
+      "power_comparisons": 20,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 32.16
+    },
+    {
+      "module": "Hlawka21.Window21.Slab149",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab149.lean",
+      "sha256": "92a1e3ed357edcf87a3f6e4d43685befb8c7c61fc4e71da8c26c772e11bcfd67",
+      "power_comparisons": 23,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 34.18
+    },
+    {
+      "module": "Hlawka21.Window21.Slab150",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab150.lean",
+      "sha256": "c115a1e85158bde7eb00175504970f4c83ba7cfbec8c12fcbf7894e45baa66cd",
+      "power_comparisons": 23,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 33.81
+    },
+    {
+      "module": "Hlawka21.Window21.Slab151",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab151.lean",
+      "sha256": "8e166a9953959d7b102d7b091929520b70af7e6f0244c7c512369250481e7cae",
+      "power_comparisons": 23,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 33.99
+    },
+    {
+      "module": "Hlawka21.Window21.Slab152",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab152.lean",
+      "sha256": "e0fa5c7f6df093aabcb977ae62bb3f63b18c9b16e02cfc1d68b6e3f6916debe4",
+      "power_comparisons": 20,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 34.08
+    },
+    {
+      "module": "Hlawka21.Window21.Slab153",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab153.lean",
+      "sha256": "84d3aee53f8a60829d81b0643a511033d93b1e6c65d1a57858bab77601da4da4",
+      "power_comparisons": 23,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 36.51
+    },
+    {
+      "module": "Hlawka21.Window21.Slab154",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab154.lean",
+      "sha256": "ef7b6680b394c41ef9a11e98e190405403ad6dbbe0180056e96dfb16c1052b82",
+      "power_comparisons": 20,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 33.42
+    },
+    {
+      "module": "Hlawka21.Window21.Slab155",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab155.lean",
+      "sha256": "da6965b8bdff4ecefe0aeef3e16c8f7e3e86dfbb9e17249b8aca7900d9d0c50f",
+      "power_comparisons": 20,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 32.25
+    },
+    {
+      "module": "Hlawka21.Window21.Slab156",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab156.lean",
+      "sha256": "8d8325c1fd0f562ca648685c03275ba92af928c95dd588c806c16aea559c9c5d",
+      "power_comparisons": 23,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 33.49
+    },
+    {
+      "module": "Hlawka21.Window21.Slab157",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab157.lean",
+      "sha256": "aed6cd92e680041ab7089ecf677fe646628473a2f13bdcbbc096fc03f667ff01",
+      "power_comparisons": 20,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 32.85
+    },
+    {
+      "module": "Hlawka21.Window21.Slab158",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab158.lean",
+      "sha256": "8754214b0d74c7be1c18e8370ee8ed8725b63fe5965b324fce90344159a6b070",
+      "power_comparisons": 23,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 37.55
+    },
+    {
+      "module": "Hlawka21.Window21.Slab159",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window21/Slab159.lean",
+      "sha256": "bd61fd6cf95bfbafeec78febb41863de05672434123f877c10a93cd95db8ca3a",
+      "power_comparisons": 23,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 35.73
+    },
+    {
+      "module": "Hlawka21.Window26.Slab000",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window26/Slab000.lean",
+      "sha256": "97c3fac88ae60af9692e10c12c95a8f5f1626528cfc8d8e367507c4e49fa7541",
+      "power_comparisons": 20,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 33.8
+    },
+    {
+      "module": "Hlawka21.Window26.Slab001",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window26/Slab001.lean",
+      "sha256": "caeaede4b119136b6f464d937dd594e5b64e0391c0346588d7b5f10b5a115403",
+      "power_comparisons": 20,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 33.82
+    },
+    {
+      "module": "Hlawka21.Window26.Slab002",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window26/Slab002.lean",
+      "sha256": "02f4f42157ee7a7345380c700bbe25d02420e3abba293edc28991543865547f7",
+      "power_comparisons": 20,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 35.36
+    },
+    {
+      "module": "Hlawka21.Window26.Slab003",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window26/Slab003.lean",
+      "sha256": "f4b7ae8df4511105b19ffce50e0bc351493fbf7d261db48f4fb9017d2e9349f9",
+      "power_comparisons": 20,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 32.38
+    },
+    {
+      "module": "Hlawka21.Window26.Slab004",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window26/Slab004.lean",
+      "sha256": "73aaab26af3a1c1de882b644c20efa6f0a264db9212eafc92ae5da0e57aedbbf",
+      "power_comparisons": 20,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 33.09
+    },
+    {
+      "module": "Hlawka21.Window26.Slab005",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window26/Slab005.lean",
+      "sha256": "e3ca5069130f39b4bc48276525d325f8c42342a979055c09765c8e4b5f64f887",
+      "power_comparisons": 20,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 32.02
+    },
+    {
+      "module": "Hlawka21.Window26.Slab006",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window26/Slab006.lean",
+      "sha256": "902c1043bf2e1ebce370db7ef2cc5a7bea64129ce11902da257ff6599a0ffdb4",
+      "power_comparisons": 20,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 34.24
+    },
+    {
+      "module": "Hlawka21.Window26.Slab007",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window26/Slab007.lean",
+      "sha256": "5e92e32c91c48e5aa4f4b15c34dcf373bd873535f5122e618010cc76af3b71bd",
+      "power_comparisons": 20,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 32.7
+    },
+    {
+      "module": "Hlawka21.Window26.Slab008",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window26/Slab008.lean",
+      "sha256": "67f3a113d2ad9adcc85fb7a58f8f5d20e51c04b37e01cb321c30a6410603a755",
+      "power_comparisons": 20,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 31.79
+    },
+    {
+      "module": "Hlawka21.Window26.Slab009",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window26/Slab009.lean",
+      "sha256": "67d531b003e99d0575f7297d535a83c370ce7fdc981e80e29307f00bf0d4f26a",
+      "power_comparisons": 20,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 31.43
+    },
+    {
+      "module": "Hlawka21.Window26.Slab010",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window26/Slab010.lean",
+      "sha256": "1acb5c41d720de57b25b4603a5e50ff2b305515f4af876d66719ce29ee464f3d",
+      "power_comparisons": 20,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 32.58
+    },
+    {
+      "module": "Hlawka21.Window26.Slab011",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window26/Slab011.lean",
+      "sha256": "67a8d96f03e2a98ec5f70429d1d59929405c082a221982dfe347e42f492367ca",
+      "power_comparisons": 20,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 31.76
+    },
+    {
+      "module": "Hlawka21.Window26.Slab012",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window26/Slab012.lean",
+      "sha256": "2e4a2713dc308fc8ec5ec4431d78d09d86e2844e223cd5aefd144ec86931b076",
+      "power_comparisons": 20,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 31.15
+    },
+    {
+      "module": "Hlawka21.Window26.Slab013",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window26/Slab013.lean",
+      "sha256": "736a87de941571b88743f61522ad71ef63baab4b3fc30ec64da2b83ff5943d23",
+      "power_comparisons": 20,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 30.36
+    },
+    {
+      "module": "Hlawka21.Window26.Slab014",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window26/Slab014.lean",
+      "sha256": "6b52be980ad86c45cac82b27e0ac655396e41b6d0487d173e06f1dbb38b4a340",
+      "power_comparisons": 20,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 32.19
+    },
+    {
+      "module": "Hlawka21.Window26.Slab015",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window26/Slab015.lean",
+      "sha256": "464ac2d0f3e435e44b6cd94a4f1b42ce4423045a1ae9a17eb2066f8b2cfa243f",
+      "power_comparisons": 20,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 30.21
+    },
+    {
+      "module": "Hlawka21.Window26.Slab016",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window26/Slab016.lean",
+      "sha256": "e5c2f087b001dbfaf1526a772f371bc9f4d729d2f06b2d1fccd3179aa97a1bfa",
+      "power_comparisons": 20,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 30.64
+    },
+    {
+      "module": "Hlawka21.Window26.Slab017",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window26/Slab017.lean",
+      "sha256": "ac6c4217e1a7737fc97bc54830b7249e55e98c701a1641d85ee1f648143e9ed1",
+      "power_comparisons": 20,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 30.45
+    },
+    {
+      "module": "Hlawka21.Window26.Slab018",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window26/Slab018.lean",
+      "sha256": "e133c86af9cf2706f276cb498e3a7dcb92843a4a4cfa592e581edeb8a092e5ff",
+      "power_comparisons": 20,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 31.65
+    },
+    {
+      "module": "Hlawka21.Window26.Slab019",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window26/Slab019.lean",
+      "sha256": "8e93640861257363c5e25783baf235975aa08a12a0ca78fb815c3dd4fda304aa",
+      "power_comparisons": 20,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 30.97
+    },
+    {
+      "module": "Hlawka21.Window26.Slab020",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window26/Slab020.lean",
+      "sha256": "194e694971001c2c62f68384cc72e1b93f371a8f6d33ba22a0f1fe1acb381def",
+      "power_comparisons": 20,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 32.48
+    },
+    {
+      "module": "Hlawka21.Window26.Slab021",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window26/Slab021.lean",
+      "sha256": "c20ca8b4d3a5b7eac9720ae3557a143c3f63f18c2c26a36d49d8b8a1aee384c2",
+      "power_comparisons": 20,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 32.87
+    },
+    {
+      "module": "Hlawka21.Window26.Slab022",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window26/Slab022.lean",
+      "sha256": "e517d4808ca1609d8c79c6dd0c7ce751c597fe56c81d87c58c7379a0ffdb1dfc",
+      "power_comparisons": 20,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 34.15
+    },
+    {
+      "module": "Hlawka21.Window26.Slab023",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window26/Slab023.lean",
+      "sha256": "06c3a663cb753192a2fe371011b0dfb5ee311e777d26c56e95a03d54e8126237",
+      "power_comparisons": 20,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 33.66
+    },
+    {
+      "module": "Hlawka21.Window26.Slab024",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window26/Slab024.lean",
+      "sha256": "791a4328e945ca7d9212c74df67d5858ae51276fb5bd75d90d510a37e8f7d373",
+      "power_comparisons": 20,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 32.93
+    },
+    {
+      "module": "Hlawka21.Window26.Slab025",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window26/Slab025.lean",
+      "sha256": "d069cb5d0ac4113453e72d92fddc91b1f3694d686aa9d480bd60ce9a388a03b9",
+      "power_comparisons": 20,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 32.45
+    },
+    {
+      "module": "Hlawka21.Window26.Slab026",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window26/Slab026.lean",
+      "sha256": "b78cad596b852e59f70ae5494f6e33279703de1bec46b3b6f123e7abeffa8bb3",
+      "power_comparisons": 20,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 33.18
+    },
+    {
+      "module": "Hlawka21.Window26.Slab027",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window26/Slab027.lean",
+      "sha256": "5ad7d7c0914b050701fbfed0430d9e3f2a8d3dc4254be9cb5ad2b41801539f56",
+      "power_comparisons": 20,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 32.74
+    },
+    {
+      "module": "Hlawka21.Window26.Slab028",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window26/Slab028.lean",
+      "sha256": "06670a9c8309887973afb7acc81c344db1e1493709e6f1d313545116c799c0f0",
+      "power_comparisons": 20,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 32.35
+    },
+    {
+      "module": "Hlawka21.Window26.Slab029",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window26/Slab029.lean",
+      "sha256": "68b8d3c8f5fd1fef367d193b49522b03e8170896af24dff06bf1c3010a373c41",
+      "power_comparisons": 20,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 32.79
+    },
+    {
+      "module": "Hlawka21.Window26.Slab030",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window26/Slab030.lean",
+      "sha256": "da920776052640ce8b9b80ce4d2cadee9b8e23d574355f2fa6057cfb682daca1",
+      "power_comparisons": 20,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 34.21
+    },
+    {
+      "module": "Hlawka21.Window26.Slab031",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window26/Slab031.lean",
+      "sha256": "cda80a94fc467e45625a2d372744ee8285ae5ac7d7d21dbb8fc6882538e8b23c",
+      "power_comparisons": 20,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 31.96
+    },
+    {
+      "module": "Hlawka21.Window26.Slab032",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window26/Slab032.lean",
+      "sha256": "90df00ca16d37bb06941aec9f95bf913fb08dede1cf65a0164b4b4cd48eea4f4",
+      "power_comparisons": 20,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 34.45
+    },
+    {
+      "module": "Hlawka21.Window26.Slab033",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window26/Slab033.lean",
+      "sha256": "e3e52ad5085b6717f23840c8a54d8dbc64449c3949e2b7928e004b266a5939c0",
+      "power_comparisons": 20,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 34.42
+    },
+    {
+      "module": "Hlawka21.Window26.Slab034",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window26/Slab034.lean",
+      "sha256": "bee8081092768b12544512be0e93b105c91e538ddce9623256c11ad799eceb5f",
+      "power_comparisons": 20,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 36.36
+    },
+    {
+      "module": "Hlawka21.Window26.Slab035",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window26/Slab035.lean",
+      "sha256": "03386cd98ba47a2b4386754f95f19c400f5e6b4397d4484bbdbad74927c838e0",
+      "power_comparisons": 20,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 34.43
+    },
+    {
+      "module": "Hlawka21.Window26.Slab036",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window26/Slab036.lean",
+      "sha256": "da33c0d88e46139c9b71f5a31377b725e41a8d28c9d56d4d055a60dc8602488d",
+      "power_comparisons": 20,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 33.08
+    },
+    {
+      "module": "Hlawka21.Window26.Slab037",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window26/Slab037.lean",
+      "sha256": "541d0542e10cb30baeb714452dc8a5a1e9501cc113696e2268c6de41ba4b0834",
+      "power_comparisons": 20,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 32.64
+    },
+    {
+      "module": "Hlawka21.Window26.Slab038",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window26/Slab038.lean",
+      "sha256": "1f86bbf854441d07c817168f75254136fc3a9fdaec44a900843a729a3d994ced",
+      "power_comparisons": 20,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 33.23
+    },
+    {
+      "module": "Hlawka21.Window26.Slab039",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window26/Slab039.lean",
+      "sha256": "6b1a93e9d6380d715c173c27c861583b28424110ba642b1d96e4de12d93d1d45",
+      "power_comparisons": 20,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 32.77
+    },
+    {
+      "module": "Hlawka21.Window26.Slab040",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window26/Slab040.lean",
+      "sha256": "0479b483cbdc2bfe4e7d01395690d3f318424fa1dde942118207ee9ed84514aa",
+      "power_comparisons": 20,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 33.22
+    },
+    {
+      "module": "Hlawka21.Window26.Slab041",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window26/Slab041.lean",
+      "sha256": "cb95eefc144195f532ceb48eb439d969ddfbbf8d78e77c61664ddb5e9b9a0d22",
+      "power_comparisons": 20,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 32.35
+    },
+    {
+      "module": "Hlawka21.Window26.Slab042",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window26/Slab042.lean",
+      "sha256": "9865c54455b995c29e3f192853344605fd27aeb03ebfe813b4399b25be20ce5c",
+      "power_comparisons": 20,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 32.85
+    },
+    {
+      "module": "Hlawka21.Window26.Slab043",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window26/Slab043.lean",
+      "sha256": "dc0d979bf57e80f1b0949ecb10cff21cf9c4a29e2ec95209e24d5c4c39eee2ff",
+      "power_comparisons": 20,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 32.27
+    },
+    {
+      "module": "Hlawka21.Window26.Slab044",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window26/Slab044.lean",
+      "sha256": "29d4d7016b11cae8ef8b209dca7de38ac918e3f1c9bfdb67006727d996b5faee",
+      "power_comparisons": 20,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 33.36
+    },
+    {
+      "module": "Hlawka21.Window26.Slab045",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window26/Slab045.lean",
+      "sha256": "a4226ef97c5d3698eb408f81e2145fb34e4ac2369e36749b5c4234038f6f4d46",
+      "power_comparisons": 20,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 32.38
+    },
+    {
+      "module": "Hlawka21.Window26.Slab046",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window26/Slab046.lean",
+      "sha256": "1150fa5a20a37c96352bde50585ac450f587c6d046fb1004cc033023f8ebb478",
+      "power_comparisons": 20,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 34.28
+    },
+    {
+      "module": "Hlawka21.Window26.Slab047",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window26/Slab047.lean",
+      "sha256": "38b7a3af1363ce2442dc4e3d0abb16654d29f80acca0ff10a0d7c93ac6dd3746",
+      "power_comparisons": 20,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 32.34
+    },
+    {
+      "module": "Hlawka21.Window26.Slab048",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window26/Slab048.lean",
+      "sha256": "4033c6608b20070504a2261dc4a39d22c652111e5edc5db19a12cc2d45b1bb33",
+      "power_comparisons": 20,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 37.18
+    },
+    {
+      "module": "Hlawka21.Window26.Slab049",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window26/Slab049.lean",
+      "sha256": "48cd144d7ca6734947310451b90a51617a5d105640980cf7370396e276d1d89b",
+      "power_comparisons": 20,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 36.8
+    },
+    {
+      "module": "Hlawka21.Window26.Slab050",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window26/Slab050.lean",
+      "sha256": "021eb661dbed2f2883ff40f548d1d959a2fe38086a4cf0e74f4c2940670d3780",
+      "power_comparisons": 20,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 38.64
+    },
+    {
+      "module": "Hlawka21.Window26.Slab051",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window26/Slab051.lean",
+      "sha256": "0b45bed40b1c16162349df46d833fcee3a18f03c4d1a73fe8ccca24c552d0691",
+      "power_comparisons": 20,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 36.7
+    },
+    {
+      "module": "Hlawka21.Window26.Slab052",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window26/Slab052.lean",
+      "sha256": "2014f415bfcf3c50471559fd653beb016fb7743225b12b4e38e2ed657624a63d",
+      "power_comparisons": 20,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 34.35
+    },
+    {
+      "module": "Hlawka21.Window26.Slab053",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window26/Slab053.lean",
+      "sha256": "3e04c1b73007901803820ce553b4089976eb293c3a5b290ba2e8c9b4e36272f1",
+      "power_comparisons": 20,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 33.36
+    },
+    {
+      "module": "Hlawka21.Window26.Slab054",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window26/Slab054.lean",
+      "sha256": "4ba8a17827eb1e3a6b2f8a7e3cd6eebda2abdae0ca36f44580262e36cfb008c3",
+      "power_comparisons": 20,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 33.47
+    },
+    {
+      "module": "Hlawka21.Window26.Slab055",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window26/Slab055.lean",
+      "sha256": "22f20ef4bc52af5cfb3aeffc7ef0742469fae4966da28cd9bd67f05c4a4b56b0",
+      "power_comparisons": 20,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 32.43
+    },
+    {
+      "module": "Hlawka21.Window26.Slab056",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window26/Slab056.lean",
+      "sha256": "9cf71541623df120a981c5f7749833299f7b37b1ff9ccf2d38b995c7790cccfa",
+      "power_comparisons": 20,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 32.99
+    },
+    {
+      "module": "Hlawka21.Window26.Slab057",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window26/Slab057.lean",
+      "sha256": "68525028732f0dfc2e08a7a9926182f22ea83b4399afaa42af5bc4362db12d2b",
+      "power_comparisons": 20,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 32.14
+    },
+    {
+      "module": "Hlawka21.Window26.Slab058",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window26/Slab058.lean",
+      "sha256": "f0e5ad59dbb73cc7e4216e93ba9096c9fe8984fadd4e2079cb2e36d42b586704",
+      "power_comparisons": 20,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 33.06
+    },
+    {
+      "module": "Hlawka21.Window26.Slab059",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window26/Slab059.lean",
+      "sha256": "7224993c266237af0594e21c614c287d104cd22c1abc4ca47b08ebedc55cb699",
+      "power_comparisons": 20,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 32.18
+    },
+    {
+      "module": "Hlawka21.Window26.Slab060",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window26/Slab060.lean",
+      "sha256": "a571aa9ba4bdb9f69cbc42b24669da71d17e11c14ac0e5c213056801dfeff6f1",
+      "power_comparisons": 20,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 36.37
+    },
+    {
+      "module": "Hlawka21.Window26.Slab061",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window26/Slab061.lean",
+      "sha256": "6c5843d8047cbac36cd461ebe457a1a3e98f922b618f199d8beb04c365fd2fa4",
+      "power_comparisons": 20,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 36.37
+    },
+    {
+      "module": "Hlawka21.Window26.Slab062",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window26/Slab062.lean",
+      "sha256": "ca8d0955e560601cd3c6601b2006d3776034d5394627a0e6bc12ded12609f3c2",
+      "power_comparisons": 20,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 40.7
+    },
+    {
+      "module": "Hlawka21.Window26.Slab063",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window26/Slab063.lean",
+      "sha256": "5e5a8b706b22b913c0b24775b6f50cacb78aa5f5af230a50ba04b24e4eca783d",
+      "power_comparisons": 20,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 38.63
+    },
+    {
+      "module": "Hlawka21.Window26.Slab064",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window26/Slab064.lean",
+      "sha256": "0c495919fe9627bb3aa981193b0655496e7a8510a0c1490bbe5ca72f3469eaa5",
+      "power_comparisons": 20,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 41.24
+    },
+    {
+      "module": "Hlawka21.Window26.Slab065",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window26/Slab065.lean",
+      "sha256": "670adad7b2a9dd94a4158c21f7f92527b8906d3ff82b9b78c6288b04e9835a42",
+      "power_comparisons": 20,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 41.17
+    },
+    {
+      "module": "Hlawka21.Window26.Slab066",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window26/Slab066.lean",
+      "sha256": "ed830a344b6a84e752a6d82759939da472e560d6cb6d5cb03e5d650d85af0671",
+      "power_comparisons": 20,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 46.67
+    },
+    {
+      "module": "Hlawka21.Window26.Slab067",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window26/Slab067.lean",
+      "sha256": "07079c3bee4e3fa43f00a5a925dccfeec8f1b34baaeca027e16e2b3b8f232083",
+      "power_comparisons": 20,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 43.64
+    },
+    {
+      "module": "Hlawka21.Window26.Slab068",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window26/Slab068.lean",
+      "sha256": "17afd2bb42b84cc6d0c9aa5b6a5bf5b77252d671c5df4090b92d08ce82fa12be",
+      "power_comparisons": 20,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 46.01
+    },
+    {
+      "module": "Hlawka21.Window26.Slab069",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window26/Slab069.lean",
+      "sha256": "8f47f121e44f9811d6bcd380de113af797571c2c4883a28643f7f3c8700255f4",
+      "power_comparisons": 20,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 45.02
+    },
+    {
+      "module": "Hlawka21.Window26.Slab070",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window26/Slab070.lean",
+      "sha256": "7479ba233d8f1597185de0b5e5abfab02fbaaddf091049d2404b09c823388c62",
+      "power_comparisons": 20,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 43.0
+    },
+    {
+      "module": "Hlawka21.Window26.Slab071",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window26/Slab071.lean",
+      "sha256": "01c8913d61ecb7deae4fc4a79b45b6931d3650e88ea8649606801d86644c4481",
+      "power_comparisons": 20,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 43.47
+    },
+    {
+      "module": "Hlawka21.Window26.Slab072",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window26/Slab072.lean",
+      "sha256": "107235667554a9b92f18b3261b36f7bf8c2e15faafa93bb51959ff3f637349c0",
+      "power_comparisons": 20,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 41.07
+    },
+    {
+      "module": "Hlawka21.Window26.Slab073",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window26/Slab073.lean",
+      "sha256": "1c4869b636b4ac7a5d266db6a635ffaf1caee1dcc8a7e862143eea3cfc37186f",
+      "power_comparisons": 20,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 39.95
+    },
+    {
+      "module": "Hlawka21.Window26.Slab074",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window26/Slab074.lean",
+      "sha256": "5645e75990d03b6e32e5497400615ce875a4deea5a443d01fbabb6033f4a16b7",
+      "power_comparisons": 23,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 47.89
+    },
+    {
+      "module": "Hlawka21.Window26.Slab075",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window26/Slab075.lean",
+      "sha256": "7d5e162c9ad066efa7404f0d4dc57b30cb281532aadd7b46d9d772a44a325720",
+      "power_comparisons": 20,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 44.41
+    },
+    {
+      "module": "Hlawka21.Window26.Slab076",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window26/Slab076.lean",
+      "sha256": "31f0b6ed2cb80d84a871b5cc2616f916a16ec3c412d1cff83b17c38424abedfa",
+      "power_comparisons": 20,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 47.23
+    },
+    {
+      "module": "Hlawka21.Window26.Slab077",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window26/Slab077.lean",
+      "sha256": "36cfc85cf6c3d7cfd270fc1a9e153a4c5e2ee2fcaff766c8585b1df72ce5e534",
+      "power_comparisons": 20,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 45.83
+    },
+    {
+      "module": "Hlawka21.Window26.Slab078",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window26/Slab078.lean",
+      "sha256": "21390289302fdd9025955816a6d5c5c72b0da17b284d992595d4e313e67d9cfd",
+      "power_comparisons": 20,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 45.71
+    },
+    {
+      "module": "Hlawka21.Window26.Slab079",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window26/Slab079.lean",
+      "sha256": "39ba9c7faacdf22dd8d8552d723acf9dd7caa2efd6596b210c2efd584a783c2a",
+      "power_comparisons": 20,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 41.79
+    },
+    {
+      "module": "Hlawka21.Window26.Slab080",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window26/Slab080.lean",
+      "sha256": "d9fe8a4bb8851151167c11329099556b4b780df5d91f7d278c49fd6ec0c23052",
+      "power_comparisons": 20,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 41.11
+    },
+    {
+      "module": "Hlawka21.Window26.Slab081",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window26/Slab081.lean",
+      "sha256": "976ffe6463b6596e98ed79b9e16daa1555339dcff2f84e6ebb0fc1b915d864df",
+      "power_comparisons": 20,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 40.43
+    },
+    {
+      "module": "Hlawka21.Window26.Slab082",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window26/Slab082.lean",
+      "sha256": "ffdb6ab5ffa6b07e04b832f92443bac7217a8b502131cb64aabc7ab6cc453bf1",
+      "power_comparisons": 20,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 39.58
+    },
+    {
+      "module": "Hlawka21.Window26.Slab083",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window26/Slab083.lean",
+      "sha256": "bcd874778f1e2483ce1d6bfe1253ca4b4379b9fbfca2005984885119665727a4",
+      "power_comparisons": 20,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 37.31
+    },
+    {
+      "module": "Hlawka21.Window26.Slab084",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window26/Slab084.lean",
+      "sha256": "283e3f6595e0c2aacddf0548446f2f591034f39e88a72490598e6efee34fd370",
+      "power_comparisons": 20,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 36.01
+    },
+    {
+      "module": "Hlawka21.Window26.Slab085",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window26/Slab085.lean",
+      "sha256": "fdfaca40b9bbbb43cb85a173e4c5bea063b559914cf19477c0dd44f605fa4c00",
+      "power_comparisons": 20,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 35.36
+    },
+    {
+      "module": "Hlawka21.Window26.Slab086",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window26/Slab086.lean",
+      "sha256": "c101c327131518ffbd18bc518db569aa5eb54087156f79cb769c3fdb153bbbf8",
+      "power_comparisons": 20,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 32.81
+    },
+    {
+      "module": "Hlawka21.Window26.Slab087",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window26/Slab087.lean",
+      "sha256": "4dead223a1728d7448c65ffdbe08dc7fd3a0a3ff4d828693449e4bcea4b4027b",
+      "power_comparisons": 20,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 32.19
+    },
+    {
+      "module": "Hlawka21.Window26.Slab088",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window26/Slab088.lean",
+      "sha256": "929b6b08998ab863a93a1747464229c84415bd87c14d4c77defc184e623f7d05",
+      "power_comparisons": 20,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 32.62
+    },
+    {
+      "module": "Hlawka21.Window26.Slab089",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window26/Slab089.lean",
+      "sha256": "2c8aed4a1d456db9d8af2b5e991bc71f0dfa136057e70380e612b0212d18574d",
+      "power_comparisons": 20,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 32.43
+    },
+    {
+      "module": "Hlawka21.Window26.Slab090",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window26/Slab090.lean",
+      "sha256": "8127804cf55a17fa3759eb2acf6946946bae15899955ab893690e3ee30f018e4",
+      "power_comparisons": 20,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 32.49
+    },
+    {
+      "module": "Hlawka21.Window26.Slab091",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window26/Slab091.lean",
+      "sha256": "13b75406eb8cc323a6960bfd6f4a3f90a18d9b5d1fa7b64baa20061a9bf25649",
+      "power_comparisons": 20,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 32.31
+    },
+    {
+      "module": "Hlawka21.Window26.Slab092",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window26/Slab092.lean",
+      "sha256": "e38b07f97bfc36c52c1d449eaa89d4aead1bac3c671d06e36d986abc6716e3c6",
+      "power_comparisons": 20,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 32.73
+    },
+    {
+      "module": "Hlawka21.Window26.Slab093",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window26/Slab093.lean",
+      "sha256": "4f36b0ee0a3a5f12bd6effe3db92b4e3d7842cdd3d60d1f42d38e3601dc0cd99",
+      "power_comparisons": 20,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 32.49
+    },
+    {
+      "module": "Hlawka21.Window26.Slab094",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window26/Slab094.lean",
+      "sha256": "c8f3c4a33ec94ed5fd92ffbc3c7f915adc790d0f308eb06e382187aa1b5e28a5",
+      "power_comparisons": 17,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 30.58
+    },
+    {
+      "module": "Hlawka21.Window26.Slab095",
+      "status": "PASS",
+      "source": "formalization/Hlawka21/Window26/Slab095.lean",
+      "sha256": "f37626055ef4b5ee176b79b19ddca2a5dd60144b89d17b904542ce090827491b",
+      "power_comparisons": 17,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 29.43
+    }
+  ],
+  "slabs": 256,
+  "complete_original_schedules": true
+}

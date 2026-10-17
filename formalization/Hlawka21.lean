@@ -2,3 +2,10 @@ import Hlawka21.Coarse21
 import Hlawka21.Coarse26
 import Hlawka21.Residual
 import Hlawka21.PairResidual
+import Hlawka21.Tail
+import Hlawka21.RefinedTail
+import Hlawka21.CoarseConnection21
+import Hlawka21.CoarseConnection26
+import Hlawka21.CyclicUpper
+import Hlawka21.Envelope
+import Hlawka21.FixedWitness

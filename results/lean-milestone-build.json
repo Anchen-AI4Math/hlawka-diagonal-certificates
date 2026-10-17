@@ -1,0 +1,33 @@
+{
+  "status": "PASS",
+  "toolchain": "leanprover/lean4:v4.33.1",
+  "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474",
+  "proofs": [
+    {
+      "key": "scalar_window21",
+      "status": "PASS",
+      "solution_file": "formalization/platform/Sol_scalar_window21.lean",
+      "sha256": "6363a69b3a8145cbeed94060d5ec26a66991bf5e4eec0ae1a3687c5a93d40017",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 14.61
+    },
+    {
+      "key": "scalar_window26",
+      "status": "PASS",
+      "solution_file": "formalization/platform/Sol_scalar_window26.lean",
+      "sha256": "24c5fb0c2733c308ed62002e0bcb329871af098c62c191c2619548a65b5f30af",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 14.737
+    }
+  ],
+  "manifest": "formalization/platform/mission-proofs.json",
+  "scope": "2 proof files from this manifest only. The cutoff21 root remains unproved."
+}

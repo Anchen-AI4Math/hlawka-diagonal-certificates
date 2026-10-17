@@ -6,7 +6,8 @@
     "cutoff": "32",
     "solved_date": "2026-10-16",
     "source": "https://prove2.me/campaigns/sharp-diagonal-hlawka-constant",
-    "independently_rebuilt": false
+    "independently_rebuilt": false,
+    "last_checked": "2026-10-17T09:41:51.487123+00:00"
   },
   "research": {
     "candidate_cutoff": "21",
@@ -74,7 +75,12 @@
       "results/arithmetic-crosscheck.json",
       "results/release-replay.json",
       "results/lean-auxiliary-build.json",
-      "results/prove2me-auxiliary.json"
+      "results/prove2me-auxiliary.json",
+      "results/lean-scalar-build.json",
+      "results/lean-contraction-build.json",
+      "results/lean-milestone-build.json",
+      "results/prove2me-milestones.json",
+      "results/prove2me-goals.json"
     ],
     "release_replay": "results/release-replay.json",
     "release_replay_status": "PASS",
@@ -82,11 +88,11 @@
     "proposal_statement_compilation": "platform/proposal/validation.json",
     "full_cutoff21_lean_proof": false,
     "lean_formalization": {
-      "stage": "auxiliary proofs",
+      "stage": "two_original_scalar_milestones_proved; real_three_windows_and_root_open",
       "toolchain": "leanprover/lean4:v4.33.1",
       "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474",
-      "locally_compiled_auxiliary_files": 6,
-      "platform_accepted_auxiliary_theorems": 6,
+      "locally_compiled_auxiliary_files": 27,
+      "platform_accepted_auxiliary_theorems": 27,
       "root_status": "Open",
       "axioms": [
         "propext",
@@ -95,7 +101,19 @@
       ],
       "sources": "formalization/README.md",
       "build_evidence": "results/lean-auxiliary-build.json",
-      "platform_evidence": "results/prove2me-auxiliary.json"
+      "platform_evidence": "results/prove2me-auxiliary.json",
+      "locally_compiled_original_milestone_files": 2,
+      "platform_proved_original_milestones": [
+        "scalar_window21",
+        "scalar_window26"
+      ],
+      "scalar_lower_slabs_compiled": 256,
+      "scalar_integer_power_certificates": 768,
+      "conditional_contraction_slabs_compiled": 256,
+      "milestone_evidence": "results/prove2me-milestones.json",
+      "goal_evidence": "results/prove2me-goals.json",
+      "scalar_evidence": "results/lean-scalar-build.json",
+      "conditional_contraction_evidence": "results/lean-contraction-build.json"
     }
   },
   "publication": {

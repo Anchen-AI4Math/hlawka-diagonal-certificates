@@ -1,0 +1,4 @@
+import Definitions.Def_HlawkaSchatten_DiagonalConstruction_Basic
+import Definitions.Def_HlawkaSchatten_GapComparison
+import Definitions.Def_HlawkaSchatten_DiagonalConstruction_Cyclic
+import Definitions.Def_HlawkaSchatten_DiagonalConstruction_ScalarBounds

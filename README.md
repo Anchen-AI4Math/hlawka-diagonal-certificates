@@ -10,7 +10,9 @@
 
 本轮改进包括：用总范数上界裁剪 pair 尾坐标；把已推导的 pair 主坐标下界与非对角总和下界保留为凸域上的线性约束；把 pair 误差的统一系数 16 改成更小的有理系数。新证书覆盖 `[21,26]`，接上既有稿的 `[26,32]`，尾部 `p≥32` 引用平台已有接受结果。
 
-**当前状态：完整计算机辅助证明稿已完成作者自审，待独立审阅；Lean 形式化进行中。** Arb 192/256 位和纯有理数 256 位均通过新窗口的全部有限证书。两个窗口的四组精确 LP 定位证明（72 个线性结论）、通用残差能量引理和矩阵残差估计，合计六个辅助定理，已获 Prove2Me `ACCEPTED`。[Lean 源码、复现及未完成范围](formalization/README.md)。cutoff 21 主定理仍未证明，平台 cutoff 纪录未更新；两个数值后端共享数学条件和检查流程，不代表两份独立端到端证明。
+**当前状态：两个原始标量里程碑已在 Prove2Me 通过，完整 cutoff 21 主目标仍未完成。** [scalar_window21](https://prove2.me/theorems/2b5def5c-82ab-4480-bbcb-1d11f05b7cbe) 与 [scalar_window26](https://prove2.me/theorems/bfa2ef01-7ed9-4ac2-93ec-ace2d0624fda) 均为 `Proved`，开放依赖为零；另有 27 个辅助定理获 `ACCEPTED`。256 段条件收缩证明也已在本地 Lean 通过。[源码、复现及未完成范围](formalization/README.md)。两个实三维窗口和全维复数最优性主目标仍为 `Open`，平台正式 cutoff 纪录仍为 32。
+
+完整计算机辅助证明稿已完成作者自审，待独立审阅。Arb 192/256 位和纯有理数 256 位均通过原数值证书；两种数值后端共享数学条件和检查流程，不代表两份独立端到端证明。新增的 [Lean 标量证明](docs/lean-scalar.md) 使用端点整数幂证书和 Bernoulli 传递，没有把外部检查器 PASS 当作前提。
 
 2026-10-17 查询的 [Prove2Me campaign](https://prove2.me/campaigns/sharp-diagonal-hlawka-constant) 仍显示最佳形式化 cutoff 为 32。这里的 21、26、31.75、32 都是指数 p 的阈值，不是最优常数 K_p 的数值。
 

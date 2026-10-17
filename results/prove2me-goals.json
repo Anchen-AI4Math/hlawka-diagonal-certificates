@@ -1,0 +1,56 @@
+{
+  "checked_at": "2026-10-17T09:41:51.487123+00:00",
+  "source": "Prove2Me API current read-back",
+  "scope": "Original five published mission targets, unchanged statements.",
+  "targets": [
+    {
+      "key": "scalar21",
+      "theorem_id": "2b5def5c-82ab-4480-bbcb-1d11f05b7cbe",
+      "theorem_name": "HlawkaSchatten.DiagonalCutoff21.scalar_window21",
+      "status": "Proved",
+      "statement_matches_original_proposal": true,
+      "formal_statement": "theorem HlawkaSchatten.DiagonalCutoff21.scalar_window21 :\n    ∀ p : ℝ, 21 ≤ p → p ≤ 26 →\n      (273 / 625 : ℝ) * p < cyclicConstant p ∧\n      cyclicConstant p ≤ p / 2 ∧\n      scalarEnvelope p (1011 / 2500 : ℝ) < cyclicConstant p := by sorry",
+      "url": "https://prove2.me/theorems/2b5def5c-82ab-4480-bbcb-1d11f05b7cbe",
+      "open_leaf_count": 0,
+      "open_leaves": []
+    },
+    {
+      "key": "scalar26",
+      "theorem_id": "bfa2ef01-7ed9-4ac2-93ec-ace2d0624fda",
+      "theorem_name": "HlawkaSchatten.DiagonalCutoff21.scalar_window26",
+      "status": "Proved",
+      "statement_matches_original_proposal": true,
+      "formal_statement": "theorem HlawkaSchatten.DiagonalCutoff21.scalar_window26 :\n    ∀ p : ℝ, 26 ≤ p → p ≤ 32 →\n      (443 / 1000 : ℝ) * p < cyclicConstant p ∧\n      cyclicConstant p ≤ p / 2 ∧\n      scalarEnvelope p (197 / 500 : ℝ) < cyclicConstant p := by sorry",
+      "url": "https://prove2.me/theorems/bfa2ef01-7ed9-4ac2-93ec-ace2d0624fda",
+      "open_leaf_count": 0,
+      "open_leaves": []
+    },
+    {
+      "key": "real21",
+      "theorem_id": "6c62afca-c977-42ef-8cf7-7b8d39ebe08a",
+      "theorem_name": "HlawkaSchatten.DiagonalCutoff21.real_three_window21",
+      "status": "Open",
+      "statement_matches_original_proposal": true,
+      "formal_statement": "theorem HlawkaSchatten.DiagonalCutoff21.real_three_window21 :\n    ∀ p : ℝ, 21 ≤ p → p ≤ 26 →\n      HasHlawkaConstant (lpNorm p : (Fin 3 → ℝ) → ℝ)\n        (cyclicConstant p) := by sorry",
+      "url": "https://prove2.me/theorems/6c62afca-c977-42ef-8cf7-7b8d39ebe08a"
+    },
+    {
+      "key": "real26",
+      "theorem_id": "a1a7a36f-f8b9-4061-84a2-33080e185b41",
+      "theorem_name": "HlawkaSchatten.DiagonalCutoff21.real_three_window26",
+      "status": "Open",
+      "statement_matches_original_proposal": true,
+      "formal_statement": "theorem HlawkaSchatten.DiagonalCutoff21.real_three_window26 :\n    ∀ p : ℝ, 26 ≤ p → p ≤ 32 →\n      HasHlawkaConstant (lpNorm p : (Fin 3 → ℝ) → ℝ)\n        (cyclicConstant p) := by sorry",
+      "url": "https://prove2.me/theorems/a1a7a36f-f8b9-4061-84a2-33080e185b41"
+    },
+    {
+      "key": "goal",
+      "theorem_id": "db286144-c8c4-4918-9bc9-03fcadedfffd",
+      "theorem_name": "HlawkaSchatten.DiagonalConstruction.campaign_cutoff21",
+      "status": "Open",
+      "statement_matches_original_proposal": true,
+      "formal_statement": "theorem HlawkaSchatten.DiagonalConstruction.campaign_cutoff21 :\n    ∀ p : ℝ, 21 ≤ p →\n      IsLeast {C : ℝ | ∀ n : ℕ,\n        HasHlawkaConstant (lpNorm p : (Fin n → ℂ) → ℝ) C}\n        (cyclicConstant p) := by sorry",
+      "url": "https://prove2.me/theorems/db286144-c8c4-4918-9bc9-03fcadedfffd"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+[
+  {
+    "key": "scalar_window21",
+    "theorem_id": "2b5def5c-82ab-4480-bbcb-1d11f05b7cbe",
+    "theorem_name": "HlawkaSchatten.DiagonalCutoff21.scalar_window21",
+    "solution_file": "formalization/platform/Sol_scalar_window21.lean",
+    "explanation": "The fixed rational cyclic witness gives cp<Kp on a finite covering of the full real window. Bernoulli scaling transports exact endpoint root certificates across each closed subinterval. The analytic cyclic upper bound yields Kp<=p/2. A separate endpoint certificate and Bernoulli scaling yield Ep(q)<cp, hence Ep(q)<Kp. The imported lower-bound chunks, upper bound and envelope comparison together prove all three original scalar-window conclusions, with no added assumptions.",
+    "solution_sha256": "6363a69b3a8145cbeed94060d5ec26a66991bf5e4eec0ae1a3687c5a93d40017"
+  },
+  {
+    "key": "scalar_window26",
+    "theorem_id": "bfa2ef01-7ed9-4ac2-93ec-ace2d0624fda",
+    "theorem_name": "HlawkaSchatten.DiagonalCutoff21.scalar_window26",
+    "solution_file": "formalization/platform/Sol_scalar_window26.lean",
+    "explanation": "The fixed rational cyclic witness gives cp<Kp on a finite covering of the full real window. Bernoulli scaling transports exact endpoint root certificates across each closed subinterval. The analytic cyclic upper bound yields Kp<=p/2. A separate endpoint certificate and Bernoulli scaling yield Ep(q)<cp, hence Ep(q)<Kp. The imported lower-bound chunks, upper bound and envelope comparison together prove all three original scalar-window conclusions, with no added assumptions.",
+    "solution_sha256": "24c5fb0c2733c308ed62002e0bcb329871af098c62c191c2619548a65b5f30af"
+  }
+]

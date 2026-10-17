@@ -100,5 +100,362 @@
     "solution_file": "formalization/platform/Sol_matrix_pair_residual.lean",
     "explanation": "The direct pair sums have squared energy at most 3 times the matrix energy, using the columnwise identity 3(x²+y²+z²)-(x+y)²-(x+z)²=(x-y-z)²+(y-z)². The main-coordinate sums occur twice, giving energy at most 4 times the matrix energy. Multiplication by the bounded theta coefficients gives the factor rho². The proved weighted-square estimate then yields the claimed rational coefficient. Every helper proof is included in the submitted file.",
     "solution_sha256": "c5408a1cf88fae22390ebdb327bf085595bafc4d93b5eedfb71117a50373d9f0"
+  },
+  {
+    "key": "cyclic_upper21",
+    "theorem_name": "HlawkaSchatten.DiagonalCutoff21.cyclicConstant_upper21",
+    "theorem_title": "Cyclic Hlawka constant at most p/2 throughout [21,32]",
+    "formal_statement": "theorem HlawkaSchatten.DiagonalCutoff21.cyclicConstant_upper21 {p : ℝ} (hp : 21 ≤ p) (hp32 : p ≤ 32) :\n    cyclicConstant p ≤ p/2 := by sorry",
+    "preamble": "import Mathlib.Analysis.Convex.SpecificFunctions.Basic\nimport Mathlib.Tactic.Linarith\nimport Mathlib.Tactic.NormNum\nimport Mathlib.Tactic.Positivity\nimport Mathlib.Tactic.FieldSimp\nimport Mathlib.Tactic.Ring\nimport Definitions.Def_HlawkaSchatten_DiagonalConstruction_Cyclic\nimport Mathlib.Analysis.Complex.ExponentialBounds\nopen HlawkaSchatten.DiagonalConstruction\n",
+    "natural_language_statement": "Let $p$ be any real exponent with $21\\le p\\le32$. Define\n\n$$A_p(t)=(t^p+2)^{1/p},\\qquad B_p(t)=(2|1-t|^p+2^p)^{1/p},$$\n$$R_p(t)=\\frac{3A_p(t)-3^{1/p}|2-t|}{6A_p(t)-3B_p(t)},\\qquad K_p=\\sup_{1/2\\le t\\le2}R_p(t).$$\n\nThen $K_p\\le p/2$. The exponent ranges over the entire real interval. This is the upper-bound component of both scalar-window milestones in the source paper.",
+    "source": "Yuxuan Xu, A computer-assisted sharp diagonal Hlawka inequality for real exponents p >= 21, v1 (2026), https://github.com/Anchen-AI4Math/hlawka-diagonal-certificates/blob/main/paper/main.pdf . Section 2, equation (7), upper-bound component; elementary analytic proof in formalization/Hlawka21/CyclicUpper.lean.",
+    "tags": [
+      "hlawka-schatten",
+      "real-analysis",
+      "cyclic-constant"
+    ],
+    "solution_file": "formalization/platform/Sol_cyclic_upper21.lean",
+    "explanation": "Put a=3^(1/p) and b=2^(1/p). Logarithm and exponential bounds give a>=1+1/p, a<=3, 1+.69/p+.69^2/(2p^2)<=b<=1+1/p. Bernoulli and the proved two-tail estimate give Bp(t)<=2+10^-5. Since Ap(t)>=max(b,t), the quantity 2(p-1)Ap(t)+(2/3)a(2-t) is at least 2p+10^-3 for p>=21. On p<=32 this dominates p Bp(t). The denominator is positive from Ap(t)>=1+1/64, so rearranging proves Rp(t)<=p/2, and taking the supremum closes the result. The complete file proves all helpers and imports no open theorem.",
+    "solution_sha256": "dd67a6fa20621a4e4a84dad46bb30309a1600b0a5ae298d4e3728d484efe7e37"
+  },
+  {
+    "key": "coarse_oriented21",
+    "theorem_name": "HlawkaSchatten.DiagonalCutoff21.coarse_box21_oriented_bounds",
+    "theorem_title": "Cutoff 21: coarse localization from oriented normalized norm data",
+    "formal_statement": "theorem HlawkaSchatten.DiagonalCutoff21.coarse_box21_oriented_bounds (p : ℝ) (hp : (21 : ℝ) ≤ p) (X : Fin 3 → Fin 3 → ℝ)\n    (N P : Fin 3 → ℝ) (T : ℝ)\n    (hNdef : ∀ i, N i = lpNorm p (X i))\n    (hP0 : P 0 = lpNorm p (X 1 + X 2))\n    (hP1 : P 1 = lpNorm p (X 0 + X 2))\n    (hP2 : P 2 = lpNorm p (X 0 + X 1))\n    (hTdef : T = lpNorm p (X 0 + X 1 + X 2))\n    (hS : N 0 + N 1 + N 2 = 3) (hNT : ∀ i, N i ≤ T)\n    (hT1 : 1 ≤ T) (hTcap : T ≤ (3033 / 2500 : ℝ))\n    (hmain0 : P 0 - (X 1 0 + X 2 0) ≤ (13 / 100 : ℝ))\n    (hmain1 : P 1 - (X 0 1 + X 2 1) ≤ (13 / 100 : ℝ))\n    (hmain2 : P 2 - (X 0 2 + X 1 2) ≤ (13 / 100 : ℝ))\n    (hfail : T - (5733 / 625 : ℝ) * (P 0 + P 1 + P 2) ≤ 3 - 6 * (5733 / 625 : ℝ)) :\n    (∀ i, -(607 / 500 : ℝ) ≤ X i i ∧ X i i ≤ -(189 / 500 : ℝ)) ∧\n    (∀ j i, j ≠ i → (349 / 500 : ℝ) ≤ X j i ∧ X j i ≤ (607 / 500 : ℝ)) := by sorry",
+    "preamble": "import Mathlib.Analysis.Convex.SpecificFunctions.Basic\nimport Mathlib.Analysis.MeanInequalities\nimport Mathlib.Data.Fin.VecNotation\nimport Mathlib.Tactic.Linarith\nimport Mathlib.Tactic.NormNum\nimport Mathlib.Tactic.Positivity\nimport Mathlib.Tactic.FieldSimp\nimport Mathlib.Tactic.Ring\nimport Definitions.Def_HlawkaSchatten_DiagonalConstruction_Basic\nimport Definitions.Def_HlawkaSchatten_GapComparison\nimport Mathlib.Data.Real.Basic\nopen HlawkaSchatten.DiagonalConstruction\n",
+    "natural_language_statement": "Let $p\\ge21$ be real, and let $X_0,X_1,X_2\\in\\mathbb R^3$. Write $N_i=\\|X_i\\|_p$, $T=\\|X_0+X_1+X_2\\|_p$ and $P_i=\\|X_j+X_k\\|_p$, where $\\{i,j,k\\}=\\{0,1,2\\}$. Put $A=3(1011/2500)$, $e=13/100$ and $k_0=5733/625$.\n\nAssume $\\sum_iN_i=3$, $N_i\\le T$, $1\\le T\\le A$, and $P_i-X_{ji}-X_{ki}\\le e$ for every complementary pair. Assume also $T-k_0\\sum_iP_i\\le3-6k_0$.\n\nThen\n\n$$-607/500\\le X_{ii}\\le-189/500,\\qquad 349/500\\le X_{ji}\\le607/500\\quad(j\\ne i).$$\n\nThis is the complete two-stage coarse localization implication in Section 3 of the paper, starting from actual coordinate norms. Orientation and normalization are explicit hypotheses; a pre-established coarse box or successful numerical-check predicate is not assumed.",
+    "source": "Yuxuan Xu, A computer-assisted sharp diagonal Hlawka inequality for real exponents p >= 21, v1 (2026), https://github.com/Anchen-AI4Math/hlawka-diagonal-certificates/blob/main/paper/main.pdf . Section 3, equations (10)-(11), parameters for Window I. The source LP and pair half-tail estimate are both proved in the submitted file.",
+    "tags": [
+      "hlawka-schatten",
+      "localization",
+      "lp-norm"
+    ],
+    "solution_file": "formalization/platform/Sol_coarse_oriented21.lean",
+    "explanation": "Coordinate bounds and pair triangle inequalities supply every premise of the first exact LP stage. Its eighteen conclusions show that each non-main pair coordinate is at most half the nonnegative main coordinate, which is at most three. The actual p-norm half-tail theorem then proves P_i<=L_i+10^-5, including L_i=0. These three inequalities supply the extra premises of the second exact LP stage, yielding the requested coordinate box. All norm laws, rational linear proofs and the real-exponent tail proof are included, with attribution to the accepted cutoff32 implementation for reused generic norm lemmas.",
+    "solution_sha256": "914ce3c53fd6c42079439f356a3656991916e44924064f816a751b86cba214ba"
+  },
+  {
+    "key": "coarse_oriented26",
+    "theorem_name": "HlawkaSchatten.DiagonalCutoff21.coarse_box26_oriented_bounds",
+    "theorem_title": "Cutoff 26: coarse localization from oriented normalized norm data",
+    "formal_statement": "theorem HlawkaSchatten.DiagonalCutoff21.coarse_box26_oriented_bounds (p : ℝ) (hp : (26 : ℝ) ≤ p) (X : Fin 3 → Fin 3 → ℝ)\n    (N P : Fin 3 → ℝ) (T : ℝ)\n    (hNdef : ∀ i, N i = lpNorm p (X i))\n    (hP0 : P 0 = lpNorm p (X 1 + X 2))\n    (hP1 : P 1 = lpNorm p (X 0 + X 2))\n    (hP2 : P 2 = lpNorm p (X 0 + X 1))\n    (hTdef : T = lpNorm p (X 0 + X 1 + X 2))\n    (hS : N 0 + N 1 + N 2 = 3) (hNT : ∀ i, N i ≤ T)\n    (hT1 : 1 ≤ T) (hTcap : T ≤ (591 / 500 : ℝ))\n    (hmain0 : P 0 - (X 1 0 + X 2 0) ≤ (1 / 10 : ℝ))\n    (hmain1 : P 1 - (X 0 1 + X 2 1) ≤ (1 / 10 : ℝ))\n    (hmain2 : P 2 - (X 0 2 + X 1 2) ≤ (1 / 10 : ℝ))\n    (hfail : T - (5759 / 500 : ℝ) * (P 0 + P 1 + P 2) ≤ 3 - 6 * (5759 / 500 : ℝ)) :\n    (∀ i, -(1183 / 1000 : ℝ) ≤ X i i ∧ X i i ≤ -(477 / 1000 : ℝ)) ∧\n    (∀ j i, j ≠ i → (3 / 4 : ℝ) ≤ X j i ∧ X j i ≤ (1183 / 1000 : ℝ)) := by sorry",
+    "preamble": "import Mathlib.Analysis.Convex.SpecificFunctions.Basic\nimport Mathlib.Analysis.MeanInequalities\nimport Mathlib.Data.Fin.VecNotation\nimport Mathlib.Tactic.Linarith\nimport Mathlib.Tactic.NormNum\nimport Mathlib.Tactic.Positivity\nimport Mathlib.Tactic.FieldSimp\nimport Mathlib.Tactic.Ring\nimport Definitions.Def_HlawkaSchatten_DiagonalConstruction_Basic\nimport Definitions.Def_HlawkaSchatten_GapComparison\nimport Mathlib.Data.Real.Basic\nopen HlawkaSchatten.DiagonalConstruction\n",
+    "natural_language_statement": "Let $p\\ge26$ be real, and let $X_0,X_1,X_2\\in\\mathbb R^3$. Write $N_i=\\|X_i\\|_p$, $T=\\|X_0+X_1+X_2\\|_p$ and $P_i=\\|X_j+X_k\\|_p$, where $\\{i,j,k\\}=\\{0,1,2\\}$. Put $A=3(197/500)$, $e=1/10$ and $k_0=5759/500$.\n\nAssume $\\sum_iN_i=3$, $N_i\\le T$, $1\\le T\\le A$, and $P_i-X_{ji}-X_{ki}\\le e$ for every complementary pair. Assume also $T-k_0\\sum_iP_i\\le3-6k_0$.\n\nThen\n\n$$-1183/1000\\le X_{ii}\\le-477/1000,\\qquad 3/4\\le X_{ji}\\le1183/1000\\quad(j\\ne i).$$\n\nThis is the complete two-stage coarse localization implication in Section 3 of the paper, starting from actual coordinate norms. Orientation and normalization are explicit hypotheses; a pre-established coarse box or successful numerical-check predicate is not assumed.",
+    "source": "Yuxuan Xu, A computer-assisted sharp diagonal Hlawka inequality for real exponents p >= 21, v1 (2026), https://github.com/Anchen-AI4Math/hlawka-diagonal-certificates/blob/main/paper/main.pdf . Section 3, equations (10)-(11), parameters for Window II. The source LP and pair half-tail estimate are both proved in the submitted file.",
+    "tags": [
+      "hlawka-schatten",
+      "localization",
+      "lp-norm"
+    ],
+    "solution_file": "formalization/platform/Sol_coarse_oriented26.lean",
+    "explanation": "Coordinate bounds and pair triangle inequalities supply every premise of the first exact LP stage. Its eighteen conclusions show that each non-main pair coordinate is at most half the nonnegative main coordinate, which is at most three. The actual p-norm half-tail theorem then proves P_i<=L_i+10^-5, including L_i=0. These three inequalities supply the extra premises of the second exact LP stage, yielding the requested coordinate box. All norm laws, rational linear proofs and the real-exponent tail proof are included, with attribution to the accepted cutoff32 implementation for reused generic norm lemmas.",
+    "solution_sha256": "d1c92e52194d60eb7005180e3b4cbd3f6ae5eed6b9f0ce7a470043ec5ec583dc"
+  },
+  {
+    "key": "envelope_linear21",
+    "theorem_name": "HlawkaSchatten.DiagonalCutoff21.envelope_linear21",
+    "theorem_title": "Envelope strictly below the linear threshold for all real p >= 21",
+    "formal_statement": "theorem HlawkaSchatten.DiagonalCutoff21.envelope_linear21 {p : ℝ} (hp : 21 ≤ p) :\n    scalarEnvelope p (1011/2500 : ℝ) < (273/625 : ℝ)*p := by sorry",
+    "preamble": "import Mathlib.Analysis.Convex.SpecificFunctions.Basic\nimport Mathlib.Tactic.Linarith\nimport Mathlib.Tactic.NormNum\nimport Mathlib.Tactic.Positivity\nimport Mathlib.Tactic.FieldSimp\nimport Mathlib.Tactic.Ring\nimport Definitions.Def_HlawkaSchatten_DiagonalConstruction_ScalarBounds\nopen HlawkaSchatten.DiagonalConstruction\n",
+    "natural_language_statement": "For any real $p\\ge21$, define\n\n$$E_p(q)=\\frac{1-q}{2(1-((1+q^p)/2)^{1/p})}.$$\n\nAt $q=1011/2500$ and $c=273/625$ one has $E_p(q)<cp$. The assertion includes all real exponents above the endpoint, without an upper endpoint restriction. Together with the source paper's cyclic lower bound $cp<K_p$, it implies the required envelope comparison.",
+    "source": "Yuxuan Xu, A computer-assisted sharp diagonal Hlawka inequality for real exponents p >= 21, v1 (2026), https://github.com/Anchen-AI4Math/hlawka-diagonal-certificates/blob/main/paper/main.pdf . Section 2, equation (7), envelope comparison parameters in Table 1. This stronger linear comparison is proved by a rational endpoint certificate and Bernoulli scaling in formalization/Hlawka21/Envelope.lean.",
+    "tags": [
+      "hlawka-schatten",
+      "real-analysis",
+      "bernoulli-inequality"
+    ],
+    "solution_file": "formalization/platform/Sol_envelope_linear21.lean",
+    "explanation": "Let m be the endpoint and d=(1-q)/(2c). An exact rational integer-power computation gives (1+q^m)/2<(1-d/m)^m. Since 0<=q<1, q^p<=q^m for every real p>=m. Bernoulli applied with exponent p/m proves (1-d/m)^m<=(1-d/p)^p. Taking positive p-th roots yields ((1+q^p)/2)^(1/p)<1-d/p. Its denominator is positive, so rearranging gives E_p(q)<cp. All endpoint computations and scaling steps are proved in the submitted Lean file.",
+    "solution_sha256": "a4ee5a7a38b4138a0e789e79ae85015952f79d38667b8fdbaf2e86b1564bb76b"
+  },
+  {
+    "key": "envelope_linear26",
+    "theorem_name": "HlawkaSchatten.DiagonalCutoff21.envelope_linear26",
+    "theorem_title": "Envelope strictly below the linear threshold for all real p >= 26",
+    "formal_statement": "theorem HlawkaSchatten.DiagonalCutoff21.envelope_linear26 {p : ℝ} (hp : 26 ≤ p) :\n    scalarEnvelope p (197/500 : ℝ) < (443/1000 : ℝ)*p := by sorry",
+    "preamble": "import Mathlib.Analysis.Convex.SpecificFunctions.Basic\nimport Mathlib.Tactic.Linarith\nimport Mathlib.Tactic.NormNum\nimport Mathlib.Tactic.Positivity\nimport Mathlib.Tactic.FieldSimp\nimport Mathlib.Tactic.Ring\nimport Definitions.Def_HlawkaSchatten_DiagonalConstruction_ScalarBounds\nopen HlawkaSchatten.DiagonalConstruction\n",
+    "natural_language_statement": "For any real $p\\ge26$, define\n\n$$E_p(q)=\\frac{1-q}{2(1-((1+q^p)/2)^{1/p})}.$$\n\nAt $q=197/500$ and $c=443/1000$ one has $E_p(q)<cp$. The assertion includes all real exponents above the endpoint, without an upper endpoint restriction. Together with the source paper's cyclic lower bound $cp<K_p$, it implies the required envelope comparison.",
+    "source": "Yuxuan Xu, A computer-assisted sharp diagonal Hlawka inequality for real exponents p >= 21, v1 (2026), https://github.com/Anchen-AI4Math/hlawka-diagonal-certificates/blob/main/paper/main.pdf . Section 2, equation (7), envelope comparison parameters in Table 1. This stronger linear comparison is proved by a rational endpoint certificate and Bernoulli scaling in formalization/Hlawka21/Envelope.lean.",
+    "tags": [
+      "hlawka-schatten",
+      "real-analysis",
+      "bernoulli-inequality"
+    ],
+    "solution_file": "formalization/platform/Sol_envelope_linear26.lean",
+    "explanation": "Let m be the endpoint and d=(1-q)/(2c). An exact rational integer-power computation gives (1+q^m)/2<(1-d/m)^m. Since 0<=q<1, q^p<=q^m for every real p>=m. Bernoulli applied with exponent p/m proves (1-d/m)^m<=(1-d/p)^p. Taking positive p-th roots yields ((1+q^p)/2)^(1/p)<1-d/p. Its denominator is positive, so rearranging gives E_p(q)<cp. All endpoint computations and scaling steps are proved in the submitted Lean file.",
+    "solution_sha256": "02e2a2a7d886d431e335dadff98a3241409ea263c7aa840625d21e39481f8ef5"
+  },
+  {
+    "key": "scalar_lower_21_00",
+    "theorem_name": "HlawkaSchatten.DiagonalCutoff21.lower21_chunk00",
+    "theorem_title": "Fixed cyclic witness: Kp > (273/625)p for real p in [21,43/2]",
+    "formal_statement": "theorem HlawkaSchatten.DiagonalCutoff21.lower21_chunk00 (p : ℝ) (hpa : (21 : ℝ) ≤ p) (hpb : p ≤ (43/2 : ℝ)) :\n    (273/625 : ℝ)*p < cyclicConstant p := by sorry",
+    "preamble": "import Mathlib.Analysis.Convex.SpecificFunctions.Basic\nimport Mathlib.Tactic.Linarith\nimport Mathlib.Tactic.NormNum\nimport Mathlib.Tactic.Positivity\nimport Mathlib.Tactic.FieldSimp\nimport Mathlib.Tactic.Ring\nimport Definitions.Def_HlawkaSchatten_DiagonalConstruction_Cyclic\nimport Mathlib.Analysis.Complex.ExponentialBounds\nimport Mathlib.Analysis.MeanInequalities\nimport Mathlib.Data.Fin.VecNotation\nopen HlawkaSchatten.DiagonalConstruction\n",
+    "natural_language_statement": "For every real $p\\in[21,43/2]$, the cyclic Hlawka constant satisfies $(273/625)p<K_p$. Here $K_p$ is the source paper's supremum of the cyclic ratio over $1/2\\le t\\le2$. The same fixed rational witness $t=17/20$ works on the entire interval, which contains sixteen adjacent closed subintervals. This is a lower-bound component of the scalar-window target, with no numerical-check predicate as a hypothesis.",
+    "source": "Yuxuan Xu, A computer-assisted sharp diagonal Hlawka inequality for real exponents p >= 21, v1 (2026), https://github.com/Anchen-AI4Math/hlawka-diagonal-certificates/blob/main/paper/main.pdf . Section 2, equation (7), linear lower-bound component. Fixed-witness Bernoulli proof and exact certificates: certificates/lean-scalar-cutoff21.json, slabs 0 through 15.",
+    "tags": [
+      "hlawka-schatten",
+      "real-analysis",
+      "exact-arithmetic"
+    ],
+    "solution_file": "formalization/platform/Sol_scalar_lower_21_00.lean",
+    "explanation": "At each left endpoint alpha, three rational integer-power comparisons bound t^alpha, (2+t^alpha)^(1/alpha), and 3^(1/alpha) from above. Bernoulli transports the two root bounds to every real p>=alpha. The cyclic pair norm is at least two. Substitution into the cyclic ratio reduces the desired strict lower bound to a single rational inequality, whose worst reciprocal p occurs at the right endpoint beta. A balanced finite case split covers all sixteen real subintervals. Finally the already-proved upper bound makes the cyclic-ratio image bounded, so the witness ratio is at most its supremum Kp. All arithmetic and helper proofs are included.",
+    "solution_sha256": "4da31be192d6629d92fd95563a146810de4e30ca080298cf84d97a4a95132481"
+  },
+  {
+    "key": "scalar_lower_21_01",
+    "theorem_name": "HlawkaSchatten.DiagonalCutoff21.lower21_chunk01",
+    "theorem_title": "Fixed cyclic witness: Kp > (273/625)p for real p in [43/2,22]",
+    "formal_statement": "theorem HlawkaSchatten.DiagonalCutoff21.lower21_chunk01 (p : ℝ) (hpa : (43/2 : ℝ) ≤ p) (hpb : p ≤ (22 : ℝ)) :\n    (273/625 : ℝ)*p < cyclicConstant p := by sorry",
+    "preamble": "import Mathlib.Analysis.Convex.SpecificFunctions.Basic\nimport Mathlib.Tactic.Linarith\nimport Mathlib.Tactic.NormNum\nimport Mathlib.Tactic.Positivity\nimport Mathlib.Tactic.FieldSimp\nimport Mathlib.Tactic.Ring\nimport Definitions.Def_HlawkaSchatten_DiagonalConstruction_Cyclic\nimport Mathlib.Analysis.Complex.ExponentialBounds\nimport Mathlib.Analysis.MeanInequalities\nimport Mathlib.Data.Fin.VecNotation\nopen HlawkaSchatten.DiagonalConstruction\n",
+    "natural_language_statement": "For every real $p\\in[43/2,22]$, the cyclic Hlawka constant satisfies $(273/625)p<K_p$. Here $K_p$ is the source paper's supremum of the cyclic ratio over $1/2\\le t\\le2$. The same fixed rational witness $t=17/20$ works on the entire interval, which contains sixteen adjacent closed subintervals. This is a lower-bound component of the scalar-window target, with no numerical-check predicate as a hypothesis.",
+    "source": "Yuxuan Xu, A computer-assisted sharp diagonal Hlawka inequality for real exponents p >= 21, v1 (2026), https://github.com/Anchen-AI4Math/hlawka-diagonal-certificates/blob/main/paper/main.pdf . Section 2, equation (7), linear lower-bound component. Fixed-witness Bernoulli proof and exact certificates: certificates/lean-scalar-cutoff21.json, slabs 16 through 31.",
+    "tags": [
+      "hlawka-schatten",
+      "real-analysis",
+      "exact-arithmetic"
+    ],
+    "solution_file": "formalization/platform/Sol_scalar_lower_21_01.lean",
+    "explanation": "At each left endpoint alpha, three rational integer-power comparisons bound t^alpha, (2+t^alpha)^(1/alpha), and 3^(1/alpha) from above. Bernoulli transports the two root bounds to every real p>=alpha. The cyclic pair norm is at least two. Substitution into the cyclic ratio reduces the desired strict lower bound to a single rational inequality, whose worst reciprocal p occurs at the right endpoint beta. A balanced finite case split covers all sixteen real subintervals. Finally the already-proved upper bound makes the cyclic-ratio image bounded, so the witness ratio is at most its supremum Kp. All arithmetic and helper proofs are included.",
+    "solution_sha256": "dafaad6cc4affaefc6496aad66e8ddb2473bd2d8127f779c5854a062b614af12"
+  },
+  {
+    "key": "scalar_lower_21_02",
+    "theorem_name": "HlawkaSchatten.DiagonalCutoff21.lower21_chunk02",
+    "theorem_title": "Fixed cyclic witness: Kp > (273/625)p for real p in [22,45/2]",
+    "formal_statement": "theorem HlawkaSchatten.DiagonalCutoff21.lower21_chunk02 (p : ℝ) (hpa : (22 : ℝ) ≤ p) (hpb : p ≤ (45/2 : ℝ)) :\n    (273/625 : ℝ)*p < cyclicConstant p := by sorry",
+    "preamble": "import Mathlib.Analysis.Convex.SpecificFunctions.Basic\nimport Mathlib.Tactic.Linarith\nimport Mathlib.Tactic.NormNum\nimport Mathlib.Tactic.Positivity\nimport Mathlib.Tactic.FieldSimp\nimport Mathlib.Tactic.Ring\nimport Definitions.Def_HlawkaSchatten_DiagonalConstruction_Cyclic\nimport Mathlib.Analysis.Complex.ExponentialBounds\nimport Mathlib.Analysis.MeanInequalities\nimport Mathlib.Data.Fin.VecNotation\nopen HlawkaSchatten.DiagonalConstruction\n",
+    "natural_language_statement": "For every real $p\\in[22,45/2]$, the cyclic Hlawka constant satisfies $(273/625)p<K_p$. Here $K_p$ is the source paper's supremum of the cyclic ratio over $1/2\\le t\\le2$. The same fixed rational witness $t=17/20$ works on the entire interval, which contains sixteen adjacent closed subintervals. This is a lower-bound component of the scalar-window target, with no numerical-check predicate as a hypothesis.",
+    "source": "Yuxuan Xu, A computer-assisted sharp diagonal Hlawka inequality for real exponents p >= 21, v1 (2026), https://github.com/Anchen-AI4Math/hlawka-diagonal-certificates/blob/main/paper/main.pdf . Section 2, equation (7), linear lower-bound component. Fixed-witness Bernoulli proof and exact certificates: certificates/lean-scalar-cutoff21.json, slabs 32 through 47.",
+    "tags": [
+      "hlawka-schatten",
+      "real-analysis",
+      "exact-arithmetic"
+    ],
+    "solution_file": "formalization/platform/Sol_scalar_lower_21_02.lean",
+    "explanation": "At each left endpoint alpha, three rational integer-power comparisons bound t^alpha, (2+t^alpha)^(1/alpha), and 3^(1/alpha) from above. Bernoulli transports the two root bounds to every real p>=alpha. The cyclic pair norm is at least two. Substitution into the cyclic ratio reduces the desired strict lower bound to a single rational inequality, whose worst reciprocal p occurs at the right endpoint beta. A balanced finite case split covers all sixteen real subintervals. Finally the already-proved upper bound makes the cyclic-ratio image bounded, so the witness ratio is at most its supremum Kp. All arithmetic and helper proofs are included.",
+    "solution_sha256": "0804408d2768a9508269f17673ad573dec311a0ec5dfd9bc5588d829f07f2299"
+  },
+  {
+    "key": "scalar_lower_21_03",
+    "theorem_name": "HlawkaSchatten.DiagonalCutoff21.lower21_chunk03",
+    "theorem_title": "Fixed cyclic witness: Kp > (273/625)p for real p in [45/2,23]",
+    "formal_statement": "theorem HlawkaSchatten.DiagonalCutoff21.lower21_chunk03 (p : ℝ) (hpa : (45/2 : ℝ) ≤ p) (hpb : p ≤ (23 : ℝ)) :\n    (273/625 : ℝ)*p < cyclicConstant p := by sorry",
+    "preamble": "import Mathlib.Analysis.Convex.SpecificFunctions.Basic\nimport Mathlib.Tactic.Linarith\nimport Mathlib.Tactic.NormNum\nimport Mathlib.Tactic.Positivity\nimport Mathlib.Tactic.FieldSimp\nimport Mathlib.Tactic.Ring\nimport Definitions.Def_HlawkaSchatten_DiagonalConstruction_Cyclic\nimport Mathlib.Analysis.Complex.ExponentialBounds\nimport Mathlib.Analysis.MeanInequalities\nimport Mathlib.Data.Fin.VecNotation\nopen HlawkaSchatten.DiagonalConstruction\n",
+    "natural_language_statement": "For every real $p\\in[45/2,23]$, the cyclic Hlawka constant satisfies $(273/625)p<K_p$. Here $K_p$ is the source paper's supremum of the cyclic ratio over $1/2\\le t\\le2$. The same fixed rational witness $t=17/20$ works on the entire interval, which contains sixteen adjacent closed subintervals. This is a lower-bound component of the scalar-window target, with no numerical-check predicate as a hypothesis.",
+    "source": "Yuxuan Xu, A computer-assisted sharp diagonal Hlawka inequality for real exponents p >= 21, v1 (2026), https://github.com/Anchen-AI4Math/hlawka-diagonal-certificates/blob/main/paper/main.pdf . Section 2, equation (7), linear lower-bound component. Fixed-witness Bernoulli proof and exact certificates: certificates/lean-scalar-cutoff21.json, slabs 48 through 63.",
+    "tags": [
+      "hlawka-schatten",
+      "real-analysis",
+      "exact-arithmetic"
+    ],
+    "solution_file": "formalization/platform/Sol_scalar_lower_21_03.lean",
+    "explanation": "At each left endpoint alpha, three rational integer-power comparisons bound t^alpha, (2+t^alpha)^(1/alpha), and 3^(1/alpha) from above. Bernoulli transports the two root bounds to every real p>=alpha. The cyclic pair norm is at least two. Substitution into the cyclic ratio reduces the desired strict lower bound to a single rational inequality, whose worst reciprocal p occurs at the right endpoint beta. A balanced finite case split covers all sixteen real subintervals. Finally the already-proved upper bound makes the cyclic-ratio image bounded, so the witness ratio is at most its supremum Kp. All arithmetic and helper proofs are included.",
+    "solution_sha256": "943c429183811d8cddcfe7089d65bb17158f06ca201b6a6180a5d708bb413f0e"
+  },
+  {
+    "key": "scalar_lower_21_04",
+    "theorem_name": "HlawkaSchatten.DiagonalCutoff21.lower21_chunk04",
+    "theorem_title": "Fixed cyclic witness: Kp > (273/625)p for real p in [23,47/2]",
+    "formal_statement": "theorem HlawkaSchatten.DiagonalCutoff21.lower21_chunk04 (p : ℝ) (hpa : (23 : ℝ) ≤ p) (hpb : p ≤ (47/2 : ℝ)) :\n    (273/625 : ℝ)*p < cyclicConstant p := by sorry",
+    "preamble": "import Mathlib.Analysis.Convex.SpecificFunctions.Basic\nimport Mathlib.Tactic.Linarith\nimport Mathlib.Tactic.NormNum\nimport Mathlib.Tactic.Positivity\nimport Mathlib.Tactic.FieldSimp\nimport Mathlib.Tactic.Ring\nimport Definitions.Def_HlawkaSchatten_DiagonalConstruction_Cyclic\nimport Mathlib.Analysis.Complex.ExponentialBounds\nimport Mathlib.Analysis.MeanInequalities\nimport Mathlib.Data.Fin.VecNotation\nopen HlawkaSchatten.DiagonalConstruction\n",
+    "natural_language_statement": "For every real $p\\in[23,47/2]$, the cyclic Hlawka constant satisfies $(273/625)p<K_p$. Here $K_p$ is the source paper's supremum of the cyclic ratio over $1/2\\le t\\le2$. The same fixed rational witness $t=17/20$ works on the entire interval, which contains sixteen adjacent closed subintervals. This is a lower-bound component of the scalar-window target, with no numerical-check predicate as a hypothesis.",
+    "source": "Yuxuan Xu, A computer-assisted sharp diagonal Hlawka inequality for real exponents p >= 21, v1 (2026), https://github.com/Anchen-AI4Math/hlawka-diagonal-certificates/blob/main/paper/main.pdf . Section 2, equation (7), linear lower-bound component. Fixed-witness Bernoulli proof and exact certificates: certificates/lean-scalar-cutoff21.json, slabs 64 through 79.",
+    "tags": [
+      "hlawka-schatten",
+      "real-analysis",
+      "exact-arithmetic"
+    ],
+    "solution_file": "formalization/platform/Sol_scalar_lower_21_04.lean",
+    "explanation": "At each left endpoint alpha, three rational integer-power comparisons bound t^alpha, (2+t^alpha)^(1/alpha), and 3^(1/alpha) from above. Bernoulli transports the two root bounds to every real p>=alpha. The cyclic pair norm is at least two. Substitution into the cyclic ratio reduces the desired strict lower bound to a single rational inequality, whose worst reciprocal p occurs at the right endpoint beta. A balanced finite case split covers all sixteen real subintervals. Finally the already-proved upper bound makes the cyclic-ratio image bounded, so the witness ratio is at most its supremum Kp. All arithmetic and helper proofs are included.",
+    "solution_sha256": "40f5915e7eeecf7ea075f6a597bfe6468acc089c8d7af36e2f152a717e505c2f"
+  },
+  {
+    "key": "scalar_lower_21_05",
+    "theorem_name": "HlawkaSchatten.DiagonalCutoff21.lower21_chunk05",
+    "theorem_title": "Fixed cyclic witness: Kp > (273/625)p for real p in [47/2,24]",
+    "formal_statement": "theorem HlawkaSchatten.DiagonalCutoff21.lower21_chunk05 (p : ℝ) (hpa : (47/2 : ℝ) ≤ p) (hpb : p ≤ (24 : ℝ)) :\n    (273/625 : ℝ)*p < cyclicConstant p := by sorry",
+    "preamble": "import Mathlib.Analysis.Convex.SpecificFunctions.Basic\nimport Mathlib.Tactic.Linarith\nimport Mathlib.Tactic.NormNum\nimport Mathlib.Tactic.Positivity\nimport Mathlib.Tactic.FieldSimp\nimport Mathlib.Tactic.Ring\nimport Definitions.Def_HlawkaSchatten_DiagonalConstruction_Cyclic\nimport Mathlib.Analysis.Complex.ExponentialBounds\nimport Mathlib.Analysis.MeanInequalities\nimport Mathlib.Data.Fin.VecNotation\nopen HlawkaSchatten.DiagonalConstruction\n",
+    "natural_language_statement": "For every real $p\\in[47/2,24]$, the cyclic Hlawka constant satisfies $(273/625)p<K_p$. Here $K_p$ is the source paper's supremum of the cyclic ratio over $1/2\\le t\\le2$. The same fixed rational witness $t=17/20$ works on the entire interval, which contains sixteen adjacent closed subintervals. This is a lower-bound component of the scalar-window target, with no numerical-check predicate as a hypothesis.",
+    "source": "Yuxuan Xu, A computer-assisted sharp diagonal Hlawka inequality for real exponents p >= 21, v1 (2026), https://github.com/Anchen-AI4Math/hlawka-diagonal-certificates/blob/main/paper/main.pdf . Section 2, equation (7), linear lower-bound component. Fixed-witness Bernoulli proof and exact certificates: certificates/lean-scalar-cutoff21.json, slabs 80 through 95.",
+    "tags": [
+      "hlawka-schatten",
+      "real-analysis",
+      "exact-arithmetic"
+    ],
+    "solution_file": "formalization/platform/Sol_scalar_lower_21_05.lean",
+    "explanation": "At each left endpoint alpha, three rational integer-power comparisons bound t^alpha, (2+t^alpha)^(1/alpha), and 3^(1/alpha) from above. Bernoulli transports the two root bounds to every real p>=alpha. The cyclic pair norm is at least two. Substitution into the cyclic ratio reduces the desired strict lower bound to a single rational inequality, whose worst reciprocal p occurs at the right endpoint beta. A balanced finite case split covers all sixteen real subintervals. Finally the already-proved upper bound makes the cyclic-ratio image bounded, so the witness ratio is at most its supremum Kp. All arithmetic and helper proofs are included.",
+    "solution_sha256": "61a35b394ec8c38e0a0edb43f9c1bce94259c9636b7e9bf7fac1883ca127538b"
+  },
+  {
+    "key": "scalar_lower_21_06",
+    "theorem_name": "HlawkaSchatten.DiagonalCutoff21.lower21_chunk06",
+    "theorem_title": "Fixed cyclic witness: Kp > (273/625)p for real p in [24,49/2]",
+    "formal_statement": "theorem HlawkaSchatten.DiagonalCutoff21.lower21_chunk06 (p : ℝ) (hpa : (24 : ℝ) ≤ p) (hpb : p ≤ (49/2 : ℝ)) :\n    (273/625 : ℝ)*p < cyclicConstant p := by sorry",
+    "preamble": "import Mathlib.Analysis.Convex.SpecificFunctions.Basic\nimport Mathlib.Tactic.Linarith\nimport Mathlib.Tactic.NormNum\nimport Mathlib.Tactic.Positivity\nimport Mathlib.Tactic.FieldSimp\nimport Mathlib.Tactic.Ring\nimport Definitions.Def_HlawkaSchatten_DiagonalConstruction_Cyclic\nimport Mathlib.Analysis.Complex.ExponentialBounds\nimport Mathlib.Analysis.MeanInequalities\nimport Mathlib.Data.Fin.VecNotation\nopen HlawkaSchatten.DiagonalConstruction\n",
+    "natural_language_statement": "For every real $p\\in[24,49/2]$, the cyclic Hlawka constant satisfies $(273/625)p<K_p$. Here $K_p$ is the source paper's supremum of the cyclic ratio over $1/2\\le t\\le2$. The same fixed rational witness $t=17/20$ works on the entire interval, which contains sixteen adjacent closed subintervals. This is a lower-bound component of the scalar-window target, with no numerical-check predicate as a hypothesis.",
+    "source": "Yuxuan Xu, A computer-assisted sharp diagonal Hlawka inequality for real exponents p >= 21, v1 (2026), https://github.com/Anchen-AI4Math/hlawka-diagonal-certificates/blob/main/paper/main.pdf . Section 2, equation (7), linear lower-bound component. Fixed-witness Bernoulli proof and exact certificates: certificates/lean-scalar-cutoff21.json, slabs 96 through 111.",
+    "tags": [
+      "hlawka-schatten",
+      "real-analysis",
+      "exact-arithmetic"
+    ],
+    "solution_file": "formalization/platform/Sol_scalar_lower_21_06.lean",
+    "explanation": "At each left endpoint alpha, three rational integer-power comparisons bound t^alpha, (2+t^alpha)^(1/alpha), and 3^(1/alpha) from above. Bernoulli transports the two root bounds to every real p>=alpha. The cyclic pair norm is at least two. Substitution into the cyclic ratio reduces the desired strict lower bound to a single rational inequality, whose worst reciprocal p occurs at the right endpoint beta. A balanced finite case split covers all sixteen real subintervals. Finally the already-proved upper bound makes the cyclic-ratio image bounded, so the witness ratio is at most its supremum Kp. All arithmetic and helper proofs are included.",
+    "solution_sha256": "8e51a2b8da1f952767103018e07a12edc5f4fc153e50d8abb194657052bee75d"
+  },
+  {
+    "key": "scalar_lower_21_07",
+    "theorem_name": "HlawkaSchatten.DiagonalCutoff21.lower21_chunk07",
+    "theorem_title": "Fixed cyclic witness: Kp > (273/625)p for real p in [49/2,25]",
+    "formal_statement": "theorem HlawkaSchatten.DiagonalCutoff21.lower21_chunk07 (p : ℝ) (hpa : (49/2 : ℝ) ≤ p) (hpb : p ≤ (25 : ℝ)) :\n    (273/625 : ℝ)*p < cyclicConstant p := by sorry",
+    "preamble": "import Mathlib.Analysis.Convex.SpecificFunctions.Basic\nimport Mathlib.Tactic.Linarith\nimport Mathlib.Tactic.NormNum\nimport Mathlib.Tactic.Positivity\nimport Mathlib.Tactic.FieldSimp\nimport Mathlib.Tactic.Ring\nimport Definitions.Def_HlawkaSchatten_DiagonalConstruction_Cyclic\nimport Mathlib.Analysis.Complex.ExponentialBounds\nimport Mathlib.Analysis.MeanInequalities\nimport Mathlib.Data.Fin.VecNotation\nopen HlawkaSchatten.DiagonalConstruction\n",
+    "natural_language_statement": "For every real $p\\in[49/2,25]$, the cyclic Hlawka constant satisfies $(273/625)p<K_p$. Here $K_p$ is the source paper's supremum of the cyclic ratio over $1/2\\le t\\le2$. The same fixed rational witness $t=17/20$ works on the entire interval, which contains sixteen adjacent closed subintervals. This is a lower-bound component of the scalar-window target, with no numerical-check predicate as a hypothesis.",
+    "source": "Yuxuan Xu, A computer-assisted sharp diagonal Hlawka inequality for real exponents p >= 21, v1 (2026), https://github.com/Anchen-AI4Math/hlawka-diagonal-certificates/blob/main/paper/main.pdf . Section 2, equation (7), linear lower-bound component. Fixed-witness Bernoulli proof and exact certificates: certificates/lean-scalar-cutoff21.json, slabs 112 through 127.",
+    "tags": [
+      "hlawka-schatten",
+      "real-analysis",
+      "exact-arithmetic"
+    ],
+    "solution_file": "formalization/platform/Sol_scalar_lower_21_07.lean",
+    "explanation": "At each left endpoint alpha, three rational integer-power comparisons bound t^alpha, (2+t^alpha)^(1/alpha), and 3^(1/alpha) from above. Bernoulli transports the two root bounds to every real p>=alpha. The cyclic pair norm is at least two. Substitution into the cyclic ratio reduces the desired strict lower bound to a single rational inequality, whose worst reciprocal p occurs at the right endpoint beta. A balanced finite case split covers all sixteen real subintervals. Finally the already-proved upper bound makes the cyclic-ratio image bounded, so the witness ratio is at most its supremum Kp. All arithmetic and helper proofs are included.",
+    "solution_sha256": "c567fcbce716f7730050251162602795889557b8cddd5e3cc005d9792c9ae4ab"
+  },
+  {
+    "key": "scalar_lower_21_08",
+    "theorem_name": "HlawkaSchatten.DiagonalCutoff21.lower21_chunk08",
+    "theorem_title": "Fixed cyclic witness: Kp > (273/625)p for real p in [25,51/2]",
+    "formal_statement": "theorem HlawkaSchatten.DiagonalCutoff21.lower21_chunk08 (p : ℝ) (hpa : (25 : ℝ) ≤ p) (hpb : p ≤ (51/2 : ℝ)) :\n    (273/625 : ℝ)*p < cyclicConstant p := by sorry",
+    "preamble": "import Mathlib.Analysis.Convex.SpecificFunctions.Basic\nimport Mathlib.Tactic.Linarith\nimport Mathlib.Tactic.NormNum\nimport Mathlib.Tactic.Positivity\nimport Mathlib.Tactic.FieldSimp\nimport Mathlib.Tactic.Ring\nimport Definitions.Def_HlawkaSchatten_DiagonalConstruction_Cyclic\nimport Mathlib.Analysis.Complex.ExponentialBounds\nimport Mathlib.Analysis.MeanInequalities\nimport Mathlib.Data.Fin.VecNotation\nopen HlawkaSchatten.DiagonalConstruction\n",
+    "natural_language_statement": "For every real $p\\in[25,51/2]$, the cyclic Hlawka constant satisfies $(273/625)p<K_p$. Here $K_p$ is the source paper's supremum of the cyclic ratio over $1/2\\le t\\le2$. The same fixed rational witness $t=17/20$ works on the entire interval, which contains sixteen adjacent closed subintervals. This is a lower-bound component of the scalar-window target, with no numerical-check predicate as a hypothesis.",
+    "source": "Yuxuan Xu, A computer-assisted sharp diagonal Hlawka inequality for real exponents p >= 21, v1 (2026), https://github.com/Anchen-AI4Math/hlawka-diagonal-certificates/blob/main/paper/main.pdf . Section 2, equation (7), linear lower-bound component. Fixed-witness Bernoulli proof and exact certificates: certificates/lean-scalar-cutoff21.json, slabs 128 through 143.",
+    "tags": [
+      "hlawka-schatten",
+      "real-analysis",
+      "exact-arithmetic"
+    ],
+    "solution_file": "formalization/platform/Sol_scalar_lower_21_08.lean",
+    "explanation": "At each left endpoint alpha, three rational integer-power comparisons bound t^alpha, (2+t^alpha)^(1/alpha), and 3^(1/alpha) from above. Bernoulli transports the two root bounds to every real p>=alpha. The cyclic pair norm is at least two. Substitution into the cyclic ratio reduces the desired strict lower bound to a single rational inequality, whose worst reciprocal p occurs at the right endpoint beta. A balanced finite case split covers all sixteen real subintervals. Finally the already-proved upper bound makes the cyclic-ratio image bounded, so the witness ratio is at most its supremum Kp. All arithmetic and helper proofs are included.",
+    "solution_sha256": "7c5f576bd901e876342d08fba8177cd542a6190d404b888fc6bf1eb944d0210d"
+  },
+  {
+    "key": "scalar_lower_21_09",
+    "theorem_name": "HlawkaSchatten.DiagonalCutoff21.lower21_chunk09",
+    "theorem_title": "Fixed cyclic witness: Kp > (273/625)p for real p in [51/2,26]",
+    "formal_statement": "theorem HlawkaSchatten.DiagonalCutoff21.lower21_chunk09 (p : ℝ) (hpa : (51/2 : ℝ) ≤ p) (hpb : p ≤ (26 : ℝ)) :\n    (273/625 : ℝ)*p < cyclicConstant p := by sorry",
+    "preamble": "import Mathlib.Analysis.Convex.SpecificFunctions.Basic\nimport Mathlib.Tactic.Linarith\nimport Mathlib.Tactic.NormNum\nimport Mathlib.Tactic.Positivity\nimport Mathlib.Tactic.FieldSimp\nimport Mathlib.Tactic.Ring\nimport Definitions.Def_HlawkaSchatten_DiagonalConstruction_Cyclic\nimport Mathlib.Analysis.Complex.ExponentialBounds\nimport Mathlib.Analysis.MeanInequalities\nimport Mathlib.Data.Fin.VecNotation\nopen HlawkaSchatten.DiagonalConstruction\n",
+    "natural_language_statement": "For every real $p\\in[51/2,26]$, the cyclic Hlawka constant satisfies $(273/625)p<K_p$. Here $K_p$ is the source paper's supremum of the cyclic ratio over $1/2\\le t\\le2$. The same fixed rational witness $t=17/20$ works on the entire interval, which contains sixteen adjacent closed subintervals. This is a lower-bound component of the scalar-window target, with no numerical-check predicate as a hypothesis.",
+    "source": "Yuxuan Xu, A computer-assisted sharp diagonal Hlawka inequality for real exponents p >= 21, v1 (2026), https://github.com/Anchen-AI4Math/hlawka-diagonal-certificates/blob/main/paper/main.pdf . Section 2, equation (7), linear lower-bound component. Fixed-witness Bernoulli proof and exact certificates: certificates/lean-scalar-cutoff21.json, slabs 144 through 159.",
+    "tags": [
+      "hlawka-schatten",
+      "real-analysis",
+      "exact-arithmetic"
+    ],
+    "solution_file": "formalization/platform/Sol_scalar_lower_21_09.lean",
+    "explanation": "At each left endpoint alpha, three rational integer-power comparisons bound t^alpha, (2+t^alpha)^(1/alpha), and 3^(1/alpha) from above. Bernoulli transports the two root bounds to every real p>=alpha. The cyclic pair norm is at least two. Substitution into the cyclic ratio reduces the desired strict lower bound to a single rational inequality, whose worst reciprocal p occurs at the right endpoint beta. A balanced finite case split covers all sixteen real subintervals. Finally the already-proved upper bound makes the cyclic-ratio image bounded, so the witness ratio is at most its supremum Kp. All arithmetic and helper proofs are included.",
+    "solution_sha256": "147b521e5b3e6b005a54a01b41e085c67563df8558d5d67657df0b12f4ef440c"
+  },
+  {
+    "key": "scalar_lower_26_00",
+    "theorem_name": "HlawkaSchatten.DiagonalCutoff21.lower26_chunk00",
+    "theorem_title": "Fixed cyclic witness: Kp > (443/1000)p for real p in [26,27]",
+    "formal_statement": "theorem HlawkaSchatten.DiagonalCutoff21.lower26_chunk00 (p : ℝ) (hpa : (26 : ℝ) ≤ p) (hpb : p ≤ (27 : ℝ)) :\n    (443/1000 : ℝ)*p < cyclicConstant p := by sorry",
+    "preamble": "import Mathlib.Analysis.Convex.SpecificFunctions.Basic\nimport Mathlib.Tactic.Linarith\nimport Mathlib.Tactic.NormNum\nimport Mathlib.Tactic.Positivity\nimport Mathlib.Tactic.FieldSimp\nimport Mathlib.Tactic.Ring\nimport Definitions.Def_HlawkaSchatten_DiagonalConstruction_Cyclic\nimport Mathlib.Analysis.Complex.ExponentialBounds\nimport Mathlib.Analysis.MeanInequalities\nimport Mathlib.Data.Fin.VecNotation\nopen HlawkaSchatten.DiagonalConstruction\n",
+    "natural_language_statement": "For every real $p\\in[26,27]$, the cyclic Hlawka constant satisfies $(443/1000)p<K_p$. Here $K_p$ is the source paper's supremum of the cyclic ratio over $1/2\\le t\\le2$. The same fixed rational witness $t=87/100$ works on the entire interval, which contains sixteen adjacent closed subintervals. This is a lower-bound component of the scalar-window target, with no numerical-check predicate as a hypothesis.",
+    "source": "Yuxuan Xu, A computer-assisted sharp diagonal Hlawka inequality for real exponents p >= 21, v1 (2026), https://github.com/Anchen-AI4Math/hlawka-diagonal-certificates/blob/main/paper/main.pdf . Section 2, equation (7), linear lower-bound component. Fixed-witness Bernoulli proof and exact certificates: certificates/lean-scalar-cutoff26.json, slabs 0 through 15.",
+    "tags": [
+      "hlawka-schatten",
+      "real-analysis",
+      "exact-arithmetic"
+    ],
+    "solution_file": "formalization/platform/Sol_scalar_lower_26_00.lean",
+    "explanation": "At each left endpoint alpha, three rational integer-power comparisons bound t^alpha, (2+t^alpha)^(1/alpha), and 3^(1/alpha) from above. Bernoulli transports the two root bounds to every real p>=alpha. The cyclic pair norm is at least two. Substitution into the cyclic ratio reduces the desired strict lower bound to a single rational inequality, whose worst reciprocal p occurs at the right endpoint beta. A balanced finite case split covers all sixteen real subintervals. Finally the already-proved upper bound makes the cyclic-ratio image bounded, so the witness ratio is at most its supremum Kp. All arithmetic and helper proofs are included.",
+    "solution_sha256": "cdbf8fbaf128aa32b1ee17073ae68bfa82d4ad685fa1e340dbb4aa13c17eccf7"
+  },
+  {
+    "key": "scalar_lower_26_01",
+    "theorem_name": "HlawkaSchatten.DiagonalCutoff21.lower26_chunk01",
+    "theorem_title": "Fixed cyclic witness: Kp > (443/1000)p for real p in [27,28]",
+    "formal_statement": "theorem HlawkaSchatten.DiagonalCutoff21.lower26_chunk01 (p : ℝ) (hpa : (27 : ℝ) ≤ p) (hpb : p ≤ (28 : ℝ)) :\n    (443/1000 : ℝ)*p < cyclicConstant p := by sorry",
+    "preamble": "import Mathlib.Analysis.Convex.SpecificFunctions.Basic\nimport Mathlib.Tactic.Linarith\nimport Mathlib.Tactic.NormNum\nimport Mathlib.Tactic.Positivity\nimport Mathlib.Tactic.FieldSimp\nimport Mathlib.Tactic.Ring\nimport Definitions.Def_HlawkaSchatten_DiagonalConstruction_Cyclic\nimport Mathlib.Analysis.Complex.ExponentialBounds\nimport Mathlib.Analysis.MeanInequalities\nimport Mathlib.Data.Fin.VecNotation\nopen HlawkaSchatten.DiagonalConstruction\n",
+    "natural_language_statement": "For every real $p\\in[27,28]$, the cyclic Hlawka constant satisfies $(443/1000)p<K_p$. Here $K_p$ is the source paper's supremum of the cyclic ratio over $1/2\\le t\\le2$. The same fixed rational witness $t=87/100$ works on the entire interval, which contains sixteen adjacent closed subintervals. This is a lower-bound component of the scalar-window target, with no numerical-check predicate as a hypothesis.",
+    "source": "Yuxuan Xu, A computer-assisted sharp diagonal Hlawka inequality for real exponents p >= 21, v1 (2026), https://github.com/Anchen-AI4Math/hlawka-diagonal-certificates/blob/main/paper/main.pdf . Section 2, equation (7), linear lower-bound component. Fixed-witness Bernoulli proof and exact certificates: certificates/lean-scalar-cutoff26.json, slabs 16 through 31.",
+    "tags": [
+      "hlawka-schatten",
+      "real-analysis",
+      "exact-arithmetic"
+    ],
+    "solution_file": "formalization/platform/Sol_scalar_lower_26_01.lean",
+    "explanation": "At each left endpoint alpha, three rational integer-power comparisons bound t^alpha, (2+t^alpha)^(1/alpha), and 3^(1/alpha) from above. Bernoulli transports the two root bounds to every real p>=alpha. The cyclic pair norm is at least two. Substitution into the cyclic ratio reduces the desired strict lower bound to a single rational inequality, whose worst reciprocal p occurs at the right endpoint beta. A balanced finite case split covers all sixteen real subintervals. Finally the already-proved upper bound makes the cyclic-ratio image bounded, so the witness ratio is at most its supremum Kp. All arithmetic and helper proofs are included.",
+    "solution_sha256": "5947a32343e5889d563740492391a4888f65922ad240b4264be306a9110097c3"
+  },
+  {
+    "key": "scalar_lower_26_02",
+    "theorem_name": "HlawkaSchatten.DiagonalCutoff21.lower26_chunk02",
+    "theorem_title": "Fixed cyclic witness: Kp > (443/1000)p for real p in [28,29]",
+    "formal_statement": "theorem HlawkaSchatten.DiagonalCutoff21.lower26_chunk02 (p : ℝ) (hpa : (28 : ℝ) ≤ p) (hpb : p ≤ (29 : ℝ)) :\n    (443/1000 : ℝ)*p < cyclicConstant p := by sorry",
+    "preamble": "import Mathlib.Analysis.Convex.SpecificFunctions.Basic\nimport Mathlib.Tactic.Linarith\nimport Mathlib.Tactic.NormNum\nimport Mathlib.Tactic.Positivity\nimport Mathlib.Tactic.FieldSimp\nimport Mathlib.Tactic.Ring\nimport Definitions.Def_HlawkaSchatten_DiagonalConstruction_Cyclic\nimport Mathlib.Analysis.Complex.ExponentialBounds\nimport Mathlib.Analysis.MeanInequalities\nimport Mathlib.Data.Fin.VecNotation\nopen HlawkaSchatten.DiagonalConstruction\n",
+    "natural_language_statement": "For every real $p\\in[28,29]$, the cyclic Hlawka constant satisfies $(443/1000)p<K_p$. Here $K_p$ is the source paper's supremum of the cyclic ratio over $1/2\\le t\\le2$. The same fixed rational witness $t=87/100$ works on the entire interval, which contains sixteen adjacent closed subintervals. This is a lower-bound component of the scalar-window target, with no numerical-check predicate as a hypothesis.",
+    "source": "Yuxuan Xu, A computer-assisted sharp diagonal Hlawka inequality for real exponents p >= 21, v1 (2026), https://github.com/Anchen-AI4Math/hlawka-diagonal-certificates/blob/main/paper/main.pdf . Section 2, equation (7), linear lower-bound component. Fixed-witness Bernoulli proof and exact certificates: certificates/lean-scalar-cutoff26.json, slabs 32 through 47.",
+    "tags": [
+      "hlawka-schatten",
+      "real-analysis",
+      "exact-arithmetic"
+    ],
+    "solution_file": "formalization/platform/Sol_scalar_lower_26_02.lean",
+    "explanation": "At each left endpoint alpha, three rational integer-power comparisons bound t^alpha, (2+t^alpha)^(1/alpha), and 3^(1/alpha) from above. Bernoulli transports the two root bounds to every real p>=alpha. The cyclic pair norm is at least two. Substitution into the cyclic ratio reduces the desired strict lower bound to a single rational inequality, whose worst reciprocal p occurs at the right endpoint beta. A balanced finite case split covers all sixteen real subintervals. Finally the already-proved upper bound makes the cyclic-ratio image bounded, so the witness ratio is at most its supremum Kp. All arithmetic and helper proofs are included.",
+    "solution_sha256": "8d611d8a47fbe47ff93e5e34b69672389f89ccacd395c22d92af51ca12c1655f"
+  },
+  {
+    "key": "scalar_lower_26_03",
+    "theorem_name": "HlawkaSchatten.DiagonalCutoff21.lower26_chunk03",
+    "theorem_title": "Fixed cyclic witness: Kp > (443/1000)p for real p in [29,30]",
+    "formal_statement": "theorem HlawkaSchatten.DiagonalCutoff21.lower26_chunk03 (p : ℝ) (hpa : (29 : ℝ) ≤ p) (hpb : p ≤ (30 : ℝ)) :\n    (443/1000 : ℝ)*p < cyclicConstant p := by sorry",
+    "preamble": "import Mathlib.Analysis.Convex.SpecificFunctions.Basic\nimport Mathlib.Tactic.Linarith\nimport Mathlib.Tactic.NormNum\nimport Mathlib.Tactic.Positivity\nimport Mathlib.Tactic.FieldSimp\nimport Mathlib.Tactic.Ring\nimport Definitions.Def_HlawkaSchatten_DiagonalConstruction_Cyclic\nimport Mathlib.Analysis.Complex.ExponentialBounds\nimport Mathlib.Analysis.MeanInequalities\nimport Mathlib.Data.Fin.VecNotation\nopen HlawkaSchatten.DiagonalConstruction\n",
+    "natural_language_statement": "For every real $p\\in[29,30]$, the cyclic Hlawka constant satisfies $(443/1000)p<K_p$. Here $K_p$ is the source paper's supremum of the cyclic ratio over $1/2\\le t\\le2$. The same fixed rational witness $t=87/100$ works on the entire interval, which contains sixteen adjacent closed subintervals. This is a lower-bound component of the scalar-window target, with no numerical-check predicate as a hypothesis.",
+    "source": "Yuxuan Xu, A computer-assisted sharp diagonal Hlawka inequality for real exponents p >= 21, v1 (2026), https://github.com/Anchen-AI4Math/hlawka-diagonal-certificates/blob/main/paper/main.pdf . Section 2, equation (7), linear lower-bound component. Fixed-witness Bernoulli proof and exact certificates: certificates/lean-scalar-cutoff26.json, slabs 48 through 63.",
+    "tags": [
+      "hlawka-schatten",
+      "real-analysis",
+      "exact-arithmetic"
+    ],
+    "solution_file": "formalization/platform/Sol_scalar_lower_26_03.lean",
+    "explanation": "At each left endpoint alpha, three rational integer-power comparisons bound t^alpha, (2+t^alpha)^(1/alpha), and 3^(1/alpha) from above. Bernoulli transports the two root bounds to every real p>=alpha. The cyclic pair norm is at least two. Substitution into the cyclic ratio reduces the desired strict lower bound to a single rational inequality, whose worst reciprocal p occurs at the right endpoint beta. A balanced finite case split covers all sixteen real subintervals. Finally the already-proved upper bound makes the cyclic-ratio image bounded, so the witness ratio is at most its supremum Kp. All arithmetic and helper proofs are included.",
+    "solution_sha256": "2b45f6b3f290e67f6fc9a761d4af2ba3044856d1c02d32dc78838d0dc07a3228"
+  },
+  {
+    "key": "scalar_lower_26_04",
+    "theorem_name": "HlawkaSchatten.DiagonalCutoff21.lower26_chunk04",
+    "theorem_title": "Fixed cyclic witness: Kp > (443/1000)p for real p in [30,31]",
+    "formal_statement": "theorem HlawkaSchatten.DiagonalCutoff21.lower26_chunk04 (p : ℝ) (hpa : (30 : ℝ) ≤ p) (hpb : p ≤ (31 : ℝ)) :\n    (443/1000 : ℝ)*p < cyclicConstant p := by sorry",
+    "preamble": "import Mathlib.Analysis.Convex.SpecificFunctions.Basic\nimport Mathlib.Tactic.Linarith\nimport Mathlib.Tactic.NormNum\nimport Mathlib.Tactic.Positivity\nimport Mathlib.Tactic.FieldSimp\nimport Mathlib.Tactic.Ring\nimport Definitions.Def_HlawkaSchatten_DiagonalConstruction_Cyclic\nimport Mathlib.Analysis.Complex.ExponentialBounds\nimport Mathlib.Analysis.MeanInequalities\nimport Mathlib.Data.Fin.VecNotation\nopen HlawkaSchatten.DiagonalConstruction\n",
+    "natural_language_statement": "For every real $p\\in[30,31]$, the cyclic Hlawka constant satisfies $(443/1000)p<K_p$. Here $K_p$ is the source paper's supremum of the cyclic ratio over $1/2\\le t\\le2$. The same fixed rational witness $t=87/100$ works on the entire interval, which contains sixteen adjacent closed subintervals. This is a lower-bound component of the scalar-window target, with no numerical-check predicate as a hypothesis.",
+    "source": "Yuxuan Xu, A computer-assisted sharp diagonal Hlawka inequality for real exponents p >= 21, v1 (2026), https://github.com/Anchen-AI4Math/hlawka-diagonal-certificates/blob/main/paper/main.pdf . Section 2, equation (7), linear lower-bound component. Fixed-witness Bernoulli proof and exact certificates: certificates/lean-scalar-cutoff26.json, slabs 64 through 79.",
+    "tags": [
+      "hlawka-schatten",
+      "real-analysis",
+      "exact-arithmetic"
+    ],
+    "solution_file": "formalization/platform/Sol_scalar_lower_26_04.lean",
+    "explanation": "At each left endpoint alpha, three rational integer-power comparisons bound t^alpha, (2+t^alpha)^(1/alpha), and 3^(1/alpha) from above. Bernoulli transports the two root bounds to every real p>=alpha. The cyclic pair norm is at least two. Substitution into the cyclic ratio reduces the desired strict lower bound to a single rational inequality, whose worst reciprocal p occurs at the right endpoint beta. A balanced finite case split covers all sixteen real subintervals. Finally the already-proved upper bound makes the cyclic-ratio image bounded, so the witness ratio is at most its supremum Kp. All arithmetic and helper proofs are included.",
+    "solution_sha256": "a004ceb74846569920a5b4d591cb4b06a4357d8ab85f2c0df9e1d7dac1b52783"
+  },
+  {
+    "key": "scalar_lower_26_05",
+    "theorem_name": "HlawkaSchatten.DiagonalCutoff21.lower26_chunk05",
+    "theorem_title": "Fixed cyclic witness: Kp > (443/1000)p for real p in [31,32]",
+    "formal_statement": "theorem HlawkaSchatten.DiagonalCutoff21.lower26_chunk05 (p : ℝ) (hpa : (31 : ℝ) ≤ p) (hpb : p ≤ (32 : ℝ)) :\n    (443/1000 : ℝ)*p < cyclicConstant p := by sorry",
+    "preamble": "import Mathlib.Analysis.Convex.SpecificFunctions.Basic\nimport Mathlib.Tactic.Linarith\nimport Mathlib.Tactic.NormNum\nimport Mathlib.Tactic.Positivity\nimport Mathlib.Tactic.FieldSimp\nimport Mathlib.Tactic.Ring\nimport Definitions.Def_HlawkaSchatten_DiagonalConstruction_Cyclic\nimport Mathlib.Analysis.Complex.ExponentialBounds\nimport Mathlib.Analysis.MeanInequalities\nimport Mathlib.Data.Fin.VecNotation\nopen HlawkaSchatten.DiagonalConstruction\n",
+    "natural_language_statement": "For every real $p\\in[31,32]$, the cyclic Hlawka constant satisfies $(443/1000)p<K_p$. Here $K_p$ is the source paper's supremum of the cyclic ratio over $1/2\\le t\\le2$. The same fixed rational witness $t=87/100$ works on the entire interval, which contains sixteen adjacent closed subintervals. This is a lower-bound component of the scalar-window target, with no numerical-check predicate as a hypothesis.",
+    "source": "Yuxuan Xu, A computer-assisted sharp diagonal Hlawka inequality for real exponents p >= 21, v1 (2026), https://github.com/Anchen-AI4Math/hlawka-diagonal-certificates/blob/main/paper/main.pdf . Section 2, equation (7), linear lower-bound component. Fixed-witness Bernoulli proof and exact certificates: certificates/lean-scalar-cutoff26.json, slabs 80 through 95.",
+    "tags": [
+      "hlawka-schatten",
+      "real-analysis",
+      "exact-arithmetic"
+    ],
+    "solution_file": "formalization/platform/Sol_scalar_lower_26_05.lean",
+    "explanation": "At each left endpoint alpha, three rational integer-power comparisons bound t^alpha, (2+t^alpha)^(1/alpha), and 3^(1/alpha) from above. Bernoulli transports the two root bounds to every real p>=alpha. The cyclic pair norm is at least two. Substitution into the cyclic ratio reduces the desired strict lower bound to a single rational inequality, whose worst reciprocal p occurs at the right endpoint beta. A balanced finite case split covers all sixteen real subintervals. Finally the already-proved upper bound makes the cyclic-ratio image bounded, so the witness ratio is at most its supremum Kp. All arithmetic and helper proofs are included.",
+    "solution_sha256": "20c9e8d0f2c02f853bf12f2d8dfe10fa57173e929babf32b95749948d080f443"
   }
 ]

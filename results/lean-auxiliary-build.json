@@ -74,7 +74,260 @@
         "propext"
       ],
       "elapsed_seconds": 11.932
+    },
+    {
+      "key": "cyclic_upper21",
+      "status": "PASS",
+      "solution_file": "formalization/platform/Sol_cyclic_upper21.lean",
+      "sha256": "dd67a6fa20621a4e4a84dad46bb30309a1600b0a5ae298d4e3728d484efe7e37",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 35.179
+    },
+    {
+      "key": "coarse_oriented21",
+      "status": "PASS",
+      "solution_file": "formalization/platform/Sol_coarse_oriented21.lean",
+      "sha256": "914ce3c53fd6c42079439f356a3656991916e44924064f816a751b86cba214ba",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 38.33
+    },
+    {
+      "key": "coarse_oriented26",
+      "status": "PASS",
+      "solution_file": "formalization/platform/Sol_coarse_oriented26.lean",
+      "sha256": "d1c92e52194d60eb7005180e3b4cbd3f6ae5eed6b9f0ce7a470043ec5ec583dc",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 39.832
+    },
+    {
+      "key": "envelope_linear21",
+      "status": "PASS",
+      "solution_file": "formalization/platform/Sol_envelope_linear21.lean",
+      "sha256": "a4ee5a7a38b4138a0e789e79ae85015952f79d38667b8fdbaf2e86b1564bb76b",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 24.913
+    },
+    {
+      "key": "envelope_linear26",
+      "status": "PASS",
+      "solution_file": "formalization/platform/Sol_envelope_linear26.lean",
+      "sha256": "02e2a2a7d886d431e335dadff98a3241409ea263c7aa840625d21e39481f8ef5",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 21.149
+    },
+    {
+      "key": "scalar_lower_21_00",
+      "status": "PASS",
+      "solution_file": "formalization/platform/Sol_scalar_lower_21_00.lean",
+      "sha256": "4da31be192d6629d92fd95563a146810de4e30ca080298cf84d97a4a95132481",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 26.465
+    },
+    {
+      "key": "scalar_lower_21_01",
+      "status": "PASS",
+      "solution_file": "formalization/platform/Sol_scalar_lower_21_01.lean",
+      "sha256": "dafaad6cc4affaefc6496aad66e8ddb2473bd2d8127f779c5854a062b614af12",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 26.612
+    },
+    {
+      "key": "scalar_lower_21_02",
+      "status": "PASS",
+      "solution_file": "formalization/platform/Sol_scalar_lower_21_02.lean",
+      "sha256": "0804408d2768a9508269f17673ad573dec311a0ec5dfd9bc5588d829f07f2299",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 28.04
+    },
+    {
+      "key": "scalar_lower_21_03",
+      "status": "PASS",
+      "solution_file": "formalization/platform/Sol_scalar_lower_21_03.lean",
+      "sha256": "943c429183811d8cddcfe7089d65bb17158f06ca201b6a6180a5d708bb413f0e",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 27.795
+    },
+    {
+      "key": "scalar_lower_21_04",
+      "status": "PASS",
+      "solution_file": "formalization/platform/Sol_scalar_lower_21_04.lean",
+      "sha256": "40f5915e7eeecf7ea075f6a597bfe6468acc089c8d7af36e2f152a717e505c2f",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 31.439
+    },
+    {
+      "key": "scalar_lower_21_05",
+      "status": "PASS",
+      "solution_file": "formalization/platform/Sol_scalar_lower_21_05.lean",
+      "sha256": "61a35b394ec8c38e0a0edb43f9c1bce94259c9636b7e9bf7fac1883ca127538b",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 31.671
+    },
+    {
+      "key": "scalar_lower_21_06",
+      "status": "PASS",
+      "solution_file": "formalization/platform/Sol_scalar_lower_21_06.lean",
+      "sha256": "8e51a2b8da1f952767103018e07a12edc5f4fc153e50d8abb194657052bee75d",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 29.61
+    },
+    {
+      "key": "scalar_lower_21_07",
+      "status": "PASS",
+      "solution_file": "formalization/platform/Sol_scalar_lower_21_07.lean",
+      "sha256": "c567fcbce716f7730050251162602795889557b8cddd5e3cc005d9792c9ae4ab",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 29.781
+    },
+    {
+      "key": "scalar_lower_21_08",
+      "status": "PASS",
+      "solution_file": "formalization/platform/Sol_scalar_lower_21_08.lean",
+      "sha256": "7c5f576bd901e876342d08fba8177cd542a6190d404b888fc6bf1eb944d0210d",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 30.5
+    },
+    {
+      "key": "scalar_lower_21_09",
+      "status": "PASS",
+      "solution_file": "formalization/platform/Sol_scalar_lower_21_09.lean",
+      "sha256": "147b521e5b3e6b005a54a01b41e085c67563df8558d5d67657df0b12f4ef440c",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 30.243
+    },
+    {
+      "key": "scalar_lower_26_00",
+      "status": "PASS",
+      "solution_file": "formalization/platform/Sol_scalar_lower_26_00.lean",
+      "sha256": "cdbf8fbaf128aa32b1ee17073ae68bfa82d4ad685fa1e340dbb4aa13c17eccf7",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 31.718
+    },
+    {
+      "key": "scalar_lower_26_01",
+      "status": "PASS",
+      "solution_file": "formalization/platform/Sol_scalar_lower_26_01.lean",
+      "sha256": "5947a32343e5889d563740492391a4888f65922ad240b4264be306a9110097c3",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 31.759
+    },
+    {
+      "key": "scalar_lower_26_02",
+      "status": "PASS",
+      "solution_file": "formalization/platform/Sol_scalar_lower_26_02.lean",
+      "sha256": "8d611d8a47fbe47ff93e5e34b69672389f89ccacd395c22d92af51ca12c1655f",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 29.351
+    },
+    {
+      "key": "scalar_lower_26_03",
+      "status": "PASS",
+      "solution_file": "formalization/platform/Sol_scalar_lower_26_03.lean",
+      "sha256": "2b45f6b3f290e67f6fc9a761d4af2ba3044856d1c02d32dc78838d0dc07a3228",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 29.449
+    },
+    {
+      "key": "scalar_lower_26_04",
+      "status": "PASS",
+      "solution_file": "formalization/platform/Sol_scalar_lower_26_04.lean",
+      "sha256": "a004ceb74846569920a5b4d591cb4b06a4357d8ab85f2c0df9e1d7dac1b52783",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 30.672
+    },
+    {
+      "key": "scalar_lower_26_05",
+      "status": "PASS",
+      "solution_file": "formalization/platform/Sol_scalar_lower_26_05.lean",
+      "sha256": "20c9e8d0f2c02f853bf12f2d8dfe10fa57173e929babf32b95749948d080f443",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 30.959
     }
   ],
-  "scope": "6 auxiliary proofs only. The cutoff21 root remains unproved."
+  "manifest": "formalization/platform/payloads.json",
+  "scope": "27 auxiliary proofs only. The cutoff21 root remains unproved."
 }

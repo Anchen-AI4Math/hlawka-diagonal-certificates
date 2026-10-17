@@ -1,0 +1,243 @@
+{
+  "status": "PASS",
+  "toolchain": "leanprover/lean4:v4.33.1",
+  "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474",
+  "dependencies": {
+    "formalization/Hlawka21/FixedWitness.lean": "e87b55e8bf631fa46ed25c8b70f153062439c95e207ad5a0877a835498b81170",
+    "formalization/Hlawka21/CyclicUpper.lean": "51acf705d55c1edda1365c77cb84a9de2ebb8abbd83c1ffb75c0003114efa46d",
+    "formalization/Hlawka21/ContractionCore.lean": "ae4a68fdb14bd5c9229084a55fe301b597a6df0cc43e472385d99a6c637a3882",
+    "formalization/Hlawka21/Tail.lean": "f304e8a2d19f9176acaf0cf0716f76cce8e4725acbc7d165de05d98e84c3d06b",
+    "formalization/Definitions/Def_HlawkaSchatten_DiagonalConstruction_Cyclic.lean": "79594ce39ab401db1d067cbbd8391a09df3868a0354107b077c9d4520937fa88"
+  },
+  "scope": "The two scalar lower-bound windows only; full cutoff21 root remains open.",
+  "proofs": [
+    {
+      "module": "Hlawka21.Scalar21.Chunk00",
+      "source": "formalization/Hlawka21/Scalar21/Chunk00.lean",
+      "sha256": "8661ec03469eb966e0bf9586bdcf69594cf274a3e3f2f1c16fb0fe4a4a9abd82",
+      "status": "PASS",
+      "slabs": 16,
+      "integer_power_certificates": 48,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 27.97
+    },
+    {
+      "module": "Hlawka21.Scalar21.Chunk01",
+      "source": "formalization/Hlawka21/Scalar21/Chunk01.lean",
+      "sha256": "2126e7c600f4d6ae674659aecc41c68614b8447be4b2ddbe783044ebbe621991",
+      "status": "PASS",
+      "slabs": 16,
+      "integer_power_certificates": 48,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 27.88
+    },
+    {
+      "module": "Hlawka21.Scalar21.Chunk02",
+      "source": "formalization/Hlawka21/Scalar21/Chunk02.lean",
+      "sha256": "d79128778fd528fb62db6a36aa9bd47f445761515957f6195bcad24605cf85fe",
+      "status": "PASS",
+      "slabs": 16,
+      "integer_power_certificates": 48,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 31.88
+    },
+    {
+      "module": "Hlawka21.Scalar21.Chunk03",
+      "source": "formalization/Hlawka21/Scalar21/Chunk03.lean",
+      "sha256": "0fb22513887fc2b6bde408da7be2a6fef6b68764d6dd90aa6c7570e3b81b0ce6",
+      "status": "PASS",
+      "slabs": 16,
+      "integer_power_certificates": 48,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 31.49
+    },
+    {
+      "module": "Hlawka21.Scalar21.Chunk04",
+      "source": "formalization/Hlawka21/Scalar21/Chunk04.lean",
+      "sha256": "9aca589fa995a777c33312fb69e7123d85699d5c07d09ee38d549533383d12ba",
+      "status": "PASS",
+      "slabs": 16,
+      "integer_power_certificates": 48,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 27.24
+    },
+    {
+      "module": "Hlawka21.Scalar21.Chunk05",
+      "source": "formalization/Hlawka21/Scalar21/Chunk05.lean",
+      "sha256": "b307d3d5df3dc4ddb5578f7182f7d4fb85c4cea44aff5a480c63e7e3e3a9b694",
+      "status": "PASS",
+      "slabs": 16,
+      "integer_power_certificates": 48,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 27.04
+    },
+    {
+      "module": "Hlawka21.Scalar21.Chunk06",
+      "source": "formalization/Hlawka21/Scalar21/Chunk06.lean",
+      "sha256": "3f03433592e7cc522afe3c12e76ced9c8334e13f78d6a3c4c737b9e65ab7e68b",
+      "status": "PASS",
+      "slabs": 16,
+      "integer_power_certificates": 48,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 27.37
+    },
+    {
+      "module": "Hlawka21.Scalar21.Chunk07",
+      "source": "formalization/Hlawka21/Scalar21/Chunk07.lean",
+      "sha256": "888eafbe9f330c7154b398c972a8e5baf5805c2bed8df006592edf34cd783ebf",
+      "status": "PASS",
+      "slabs": 16,
+      "integer_power_certificates": 48,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 27.43
+    },
+    {
+      "module": "Hlawka21.Scalar21.Chunk08",
+      "source": "formalization/Hlawka21/Scalar21/Chunk08.lean",
+      "sha256": "4102428ba4b945ac09c0e225b25168543088357a31cd7add197f75cea0f051e3",
+      "status": "PASS",
+      "slabs": 16,
+      "integer_power_certificates": 48,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 31.89
+    },
+    {
+      "module": "Hlawka21.Scalar21.Chunk09",
+      "source": "formalization/Hlawka21/Scalar21/Chunk09.lean",
+      "sha256": "b867074c85e538fb0fbcb70ebedc67471d84b43a4dbf69401655cecbebaeb86b",
+      "status": "PASS",
+      "slabs": 16,
+      "integer_power_certificates": 48,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 31.91
+    },
+    {
+      "module": "Hlawka21.Scalar26.Chunk00",
+      "source": "formalization/Hlawka21/Scalar26/Chunk00.lean",
+      "sha256": "74aa133664c9213e511a6506143f69e8e0e29387a9577c097da2d122b57c5f03",
+      "status": "PASS",
+      "slabs": 16,
+      "integer_power_certificates": 48,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 26.86
+    },
+    {
+      "module": "Hlawka21.Scalar26.Chunk01",
+      "source": "formalization/Hlawka21/Scalar26/Chunk01.lean",
+      "sha256": "6e5b0f200406074482090ca17514cc7dbcca7e77f591f939eb93292dcc13c84b",
+      "status": "PASS",
+      "slabs": 16,
+      "integer_power_certificates": 48,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 26.93
+    },
+    {
+      "module": "Hlawka21.Scalar26.Chunk02",
+      "source": "formalization/Hlawka21/Scalar26/Chunk02.lean",
+      "sha256": "7af8a27afba74b4ff530ae0c7633dd924df917e0f4ca09745f5e23407af856a3",
+      "status": "PASS",
+      "slabs": 16,
+      "integer_power_certificates": 48,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 27.47
+    },
+    {
+      "module": "Hlawka21.Scalar26.Chunk03",
+      "source": "formalization/Hlawka21/Scalar26/Chunk03.lean",
+      "sha256": "f1672585cc4c903edcd131b1934738cd1b4d07288898b4f9a984b995ee74f2a2",
+      "status": "PASS",
+      "slabs": 16,
+      "integer_power_certificates": 48,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 27.56
+    },
+    {
+      "module": "Hlawka21.Scalar26.Chunk04",
+      "source": "formalization/Hlawka21/Scalar26/Chunk04.lean",
+      "sha256": "9c786ae62acb179996131a8a8259232a344ef7e32d58da270354c26cf7431094",
+      "status": "PASS",
+      "slabs": 16,
+      "integer_power_certificates": 48,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 31.84
+    },
+    {
+      "module": "Hlawka21.Scalar26.Chunk05",
+      "source": "formalization/Hlawka21/Scalar26/Chunk05.lean",
+      "sha256": "4c3838f553fb4f701ca1a203bafce8b7206eccafe71c1f1f1776f0283f4ff242",
+      "status": "PASS",
+      "slabs": 16,
+      "integer_power_certificates": 48,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 32.17
+    }
+  ],
+  "chunks": 16,
+  "slabs": 256,
+  "integer_power_certificates": 768,
+  "complete_scalar_windows": true
+}

@@ -1,0 +1,30 @@
+[
+  {
+    "file": "Def_HlawkaSchatten_DiagonalConstruction_Basic.lean",
+    "platform_theorem_id": "f124d0a8-a6cd-440e-88a6-7194d9e4a233",
+    "source": "https://github.com/savarin/hlawka-schatten/blob/79aa498bfcf7b22bd91d771fb32ec278e2d4704b/HlawkaSchatten/DiagonalConstruction/Basic.lean#L21-L23",
+    "sha256": "3dc980faa7f2f29df60b4c83b746ebdcd942e61e8e2c0cba97d987032a740e2a",
+    "notice": "Original author and Apache-2.0 notices preserved."
+  },
+  {
+    "file": "Def_HlawkaSchatten_DiagonalConstruction_Cyclic.lean",
+    "platform_theorem_id": "c4c4cf74-7f65-4cbe-85e4-1e3d1b97fdb2",
+    "source": "https://github.com/savarin/hlawka-schatten/blob/79aa498bfcf7b22bd91d771fb32ec278e2d4704b/HlawkaSchatten/DiagonalConstruction/Cyclic.lean#L20-L30",
+    "sha256": "79594ce39ab401db1d067cbbd8391a09df3868a0354107b077c9d4520937fa88",
+    "notice": "Original author and Apache-2.0 notices preserved."
+  },
+  {
+    "file": "Def_HlawkaSchatten_DiagonalConstruction_ScalarBounds.lean",
+    "platform_theorem_id": "0b49f5b8-6b01-41ca-8f8d-858c72fab13f",
+    "source": "https://github.com/savarin/hlawka-schatten/blob/79aa498bfcf7b22bd91d771fb32ec278e2d4704b/HlawkaSchatten/DiagonalConstruction/ScalarBounds.lean#L179-L182",
+    "sha256": "fb9cd37af5031ea83e63c660082d233501f8288ffd82d48208845ecad67e0a86",
+    "notice": "Original author and Apache-2.0 notices preserved."
+  },
+  {
+    "file": "Def_HlawkaSchatten_GapComparison.lean",
+    "platform_theorem_id": "f13a4a1f-d47f-411f-863d-f133a880174b",
+    "source": "https://github.com/savarin/hlawka-schatten/blob/79aa498bfcf7b22bd91d771fb32ec278e2d4704b/HlawkaSchatten/GapComparison.lean#L20-L36",
+    "sha256": "fea0f637de5e406b698c4ca86fd7f70a70fcedca43a7a31688b80ca336123ee5",
+    "notice": "Original author and Apache-2.0 notices preserved."
+  }
+]

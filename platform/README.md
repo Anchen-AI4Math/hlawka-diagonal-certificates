@@ -17,7 +17,7 @@
 
 ## 验证范围
 
-五条目标声明在与 campaign 完全相同的环境下编译通过，产生五个预期的 `sorry` 警告。它们仍是开放任务。编译成功仅表示语法、类型及依赖成立；read-back 只审计声明含义。此后新增的四组 LP 定位辅助证明、通用残差能量引理和矩阵残差估计，合计六个辅助定理，已被平台接受，但尚未完成这些主目标或论文解析论证的独立审阅。辅助证明、确切文件哈希及服务器验证结果见 [formalization](../formalization/README.md)。
+五条原始声明均未改动。最初的声明编译只检查类型，read-back 只审计含义。此后 `scalar_window21` 与 `scalar_window26` 的实际证明已获 `ACCEPTED`，定理状态均为 `Proved`，开放依赖为零。两个实三维窗口与全维主目标仍为 `Open`。[当前五目标读回](../results/prove2me-goals.json)、[里程碑验证记录](../results/prove2me-milestones.json)。另有 27 个辅助定理已被平台接受；所有源码、确切文件哈希和未完成范围见 [formalization](../formalization/README.md)。
 
 全部声明未增加“Python 检查器通过”“证书有效”“范数相等”“已定位到盒子”或“凸性成立”等前提。求解者必须证明相应内容，或复用假设范围匹配的已有定理。
 

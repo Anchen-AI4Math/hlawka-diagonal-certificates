@@ -1,0 +1,27 @@
+{
+  "scope": "The two original scalar milestones only; cutoff21 root remains open.",
+  "theorems": {
+    "scalar_window21": {
+      "theorem_name": "HlawkaSchatten.DiagonalCutoff21.scalar_window21",
+      "theorem_id": "2b5def5c-82ab-4480-bbcb-1d11f05b7cbe",
+      "submission_id": "af4fc091-6e07-4111-a6ad-25ece6a64a27",
+      "submission_status": "ACCEPTED",
+      "solution_sha256": "6363a69b3a8145cbeed94060d5ec26a66991bf5e4eec0ae1a3687c5a93d40017",
+      "theorem_status": "Proved",
+      "open_leaf_count": 0,
+      "statement_matches_original_proposal": true,
+      "checked_at": "2026-10-17T09:41:51.487123+00:00"
+    },
+    "scalar_window26": {
+      "theorem_name": "HlawkaSchatten.DiagonalCutoff21.scalar_window26",
+      "theorem_id": "bfa2ef01-7ed9-4ac2-93ec-ace2d0624fda",
+      "submission_id": "31e53398-4398-494e-a2f2-85f9cfdba2f9",
+      "submission_status": "ACCEPTED",
+      "solution_sha256": "24c5fb0c2733c308ed62002e0bcb329871af098c62c191c2619548a65b5f30af",
+      "theorem_status": "Proved",
+      "open_leaf_count": 0,
+      "statement_matches_original_proposal": true,
+      "checked_at": "2026-10-17T09:41:51.487123+00:00"
+    }
+  }
+}
