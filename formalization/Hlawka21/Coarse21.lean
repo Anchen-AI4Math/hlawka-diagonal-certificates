@@ -178,4 +178,3 @@ theorem HlawkaSchatten.DiagonalCutoff21.coarse21_stage1 (v : Fin 16 → ℝ)
   · linarith only [h5, h7, h29, h34, h37, h41, h44, heq]
 
 #print axioms HlawkaSchatten.DiagonalCutoff21.coarse21_stage1
-

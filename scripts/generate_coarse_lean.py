@@ -85,7 +85,7 @@ def generate(cutoff):
                 for i in range(3):
                     low,high=(-box['diag_max'],-box['diag_min']) if i==j else (box['off_min'],box['off_max'])
                     expected += [(X[j][i],low),(scale(X[j][i],-1),-high)]
-    output='\n'.join(lines)+'\n'
+    output='\n'.join(lines).rstrip()+'\n'
     assert 'sorry' not in output and 'axiom ' not in output
     (OUT/f'Coarse{cutoff}.lean').write_text(output,encoding='utf-8')
     return reports
