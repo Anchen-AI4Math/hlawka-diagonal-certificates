@@ -183,7 +183,7 @@
   "publication": {
     "platform_submitted": true,
     "paper_submitted": false,
-    "public_navigation": "final full-proof status update pending",
+    "public_navigation": "synced and remotely verified: organization profile README, research-index README and catalog.json",
     "preprint_title": "A computer-assisted sharp diagonal Hlawka inequality for real exponents p >= 21",
     "author": {
       "name": "Yuxuan Xu",
@@ -193,7 +193,7 @@
     "version": "2",
     "date": "2026-10-17",
     "ai_assistance_disclosed": true,
-    "public_release_status": "public repository preprint v2; final anonymous downloads and navigation verification pending",
+    "public_release_status": "public repository preprint v2; anonymous downloads and artifact hashes verified",
     "evidence": "results/publication-v2.json",
     "preprint_public": true,
     "prove2me_proposal": {

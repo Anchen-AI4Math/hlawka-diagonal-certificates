@@ -1,0 +1,73 @@
+{
+  "date": "2026-10-17",
+  "checked_at": "2026-10-17T15:48:29.261271+00:00",
+  "repository": "https://github.com/Anchen-AI4Math/hlawka-diagonal-certificates",
+  "visibility_verified": "public",
+  "preprint_version": "2",
+  "paper_release_commit": "e27c3c6c6fb0dd11d1956d05ada4df1e77a985c2",
+  "anonymous_content_checks": {
+    "paper/main.pdf": {
+      "anonymous_http_status": 200,
+      "sha256": "47374bbbf2ca2fef9c450f65bd1a2b4a54102968caec82aef4b70641a20434f5",
+      "url": "https://raw.githubusercontent.com/Anchen-AI4Math/hlawka-diagonal-certificates/e27c3c6c6fb0dd11d1956d05ada4df1e77a985c2/paper/main.pdf"
+    },
+    "paper/main.tex": {
+      "anonymous_http_status": 200,
+      "sha256": "0f92b152c5679cce4b99529a7aba438bc4796c74a1f45a7037081b45ac697517",
+      "url": "https://raw.githubusercontent.com/Anchen-AI4Math/hlawka-diagonal-certificates/e27c3c6c6fb0dd11d1956d05ada4df1e77a985c2/paper/main.tex"
+    },
+    "paper/build.json": {
+      "anonymous_http_status": 200,
+      "sha256": "2d2376379dce14d8d456f560dc159662154d8fad5a00551dd4c90f039b6ecbf3",
+      "url": "https://raw.githubusercontent.com/Anchen-AI4Math/hlawka-diagonal-certificates/e27c3c6c6fb0dd11d1956d05ada4df1e77a985c2/paper/build.json"
+    },
+    "results/lean-completion-audit.json": {
+      "anonymous_http_status": 200,
+      "sha256": "39306f17572a1d91617c41d1eb6ee1a03584b9d55dbe2e80b9bcf4e001e4c5b8",
+      "url": "https://raw.githubusercontent.com/Anchen-AI4Math/hlawka-diagonal-certificates/e27c3c6c6fb0dd11d1956d05ada4df1e77a985c2/results/lean-completion-audit.json"
+    },
+    "results/prove2me-root.json": {
+      "anonymous_http_status": 200,
+      "sha256": "a0da1f0a7e3b650c33e922e84f4f5a4b29b89c600bfc484ea54af8672f01abb2",
+      "url": "https://raw.githubusercontent.com/Anchen-AI4Math/hlawka-diagonal-certificates/e27c3c6c6fb0dd11d1956d05ada4df1e77a985c2/results/prove2me-root.json"
+    },
+    "results/prove2me-goals.json": {
+      "anonymous_http_status": 200,
+      "sha256": "f47312f063c960daa705eb3321ca911f4460f2de0e3a283d57ee8136f5afd5d1",
+      "url": "https://raw.githubusercontent.com/Anchen-AI4Math/hlawka-diagonal-certificates/e27c3c6c6fb0dd11d1956d05ada4df1e77a985c2/results/prove2me-goals.json"
+    },
+    "results/release-replay.json": {
+      "anonymous_http_status": 200,
+      "sha256": "a75f3bd43ed0cb6848ec9962da0dc3da805761a23aece7dbd4b829acfa56ce25",
+      "url": "https://raw.githubusercontent.com/Anchen-AI4Math/hlawka-diagonal-certificates/e27c3c6c6fb0dd11d1956d05ada4df1e77a985c2/results/release-replay.json"
+    }
+  },
+  "navigation_updates": [
+    {
+      "repository": "research-index",
+      "path": "catalog.json",
+      "commit": "22b29061101b9038c571c46213cdb6d097a4ee6e",
+      "url": "https://github.com/Anchen-AI4Math/research-index/blob/22b29061101b9038c571c46213cdb6d097a4ee6e/catalog.json"
+    },
+    {
+      "repository": "research-index",
+      "path": "README.md",
+      "commit": "e88007d6f96a5b337eb7a37b2b0b4678880de3bf",
+      "url": "https://github.com/Anchen-AI4Math/research-index/blob/e88007d6f96a5b337eb7a37b2b0b4678880de3bf/README.md"
+    },
+    {
+      "repository": ".github",
+      "path": "profile/README.md",
+      "commit": "02dea4a22a87f2a0cc81b129ad921a35e3c501f2",
+      "url": "https://github.com/Anchen-AI4Math/.github/blob/02dea4a22a87f2a0cc81b129ad921a35e3c501f2/profile/README.md"
+    }
+  ],
+  "formalization": {
+    "root_theorem_id": "db286144-c8c4-4918-9bc9-03fcadedfffd",
+    "status": "Proved",
+    "open_leaf_count": 0,
+    "scope": "All real p>=21; all natural complex dimensions including zero; arbitrary triples; original lpNorm, cyclicConstant and IsLeast.",
+    "cutoff32_tail_independently_rebuilt": false
+  },
+  "publication_scope": "Public repository preprint v2 and reproducibility package. Original complete theorem verified on Prove2Me; campaign-linked paper proposal remains In review. No journal submission or independent analytic review claimed."
+}
