@@ -29,6 +29,16 @@ def main():
     target=state['theorems'][args.parent]
     assert target['proof_status']=='ERROR','Repair only a confirmed terminal failure'
     assert 'timed out' in target.get('proof_error','').lower(),'Inspect non-timeout errors before decomposing'
+    repairs_path=ROOT/'formalization/platform/domain-repair-proofs.json'
+    if repairs_path.exists():
+        existing=next((r for r in json.loads(repairs_path.read_text(encoding='utf-8')) if r['key']==args.parent),None)
+        if existing:
+            saved=json.loads((ROOT/'formalization/platform/domain-child-proofs.json').read_text(encoding='utf-8'))
+            for key in existing['children']:
+                child=next(r for r in saved if r['key']==key)
+                assert hashlib.sha256((ROOT/child['solution_file']).read_bytes()).hexdigest()==child['solution_sha256']
+            print('Repair already prepared; preserving exact checked/submitted source bytes for',args.parent)
+            return
     cutoff=row['cutoff'];indices=row['indices']
     assert len(indices)>args.size
     slabs=json.loads((ROOT/f'certificates/cutoff{cutoff}/contractor.json').read_text())
@@ -61,10 +71,10 @@ def main():
             proof.append(f'  rcases le_total p {rat(F(slabs[selected[1]]["a"]))} with hl | hr')
             for k in selected:
                 proof.append('  ·')
-                proof += ['    '+line for line in leaves[k]]
+                proof += ['    '+line if line else '' for line in leaves[k]]
         else:
             assert len(selected)==1
-            proof += ['  '+line for line in leaves[selected[0]]]
+            proof += ['  '+line if line else '' for line in leaves[selected[0]]]
         module=f'Hlawka21.DomainChildren{cutoff}.Block{row["index"]:02d}Size{args.size}Part{part}'
         path=ROOT/'formalization'/(module.replace('.','/')+'.lean')
         path.parent.mkdir(parents=True,exist_ok=True)
