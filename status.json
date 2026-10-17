@@ -76,7 +76,8 @@
     ],
     "release_replay": "results/release-replay.json",
     "release_replay_status": "PASS",
-    "release_negative_controls": 15
+    "release_negative_controls": 15,
+    "proposal_statement_compilation": "platform/proposal/validation.json"
   },
   "publication": {
     "platform_submitted": false,
@@ -93,6 +94,18 @@
     "ai_assistance_disclosed": true,
     "public_release_status": "public repository preprint; anonymous downloads verified",
     "evidence": "results/publication-v1.json",
-    "preprint_public": true
+    "preprint_public": true,
+    "prove2me_proposal": {
+      "status": "Draft",
+      "campaign": "sharp-diagonal-hlawka-constant",
+      "campaign_flag_set": true,
+      "target_cutoff": "21",
+      "proposal_uploaded": true,
+      "submitted_for_moderation": false,
+      "live_mission_created": false,
+      "campaign_entry_attested": false,
+      "human_self_audit_and_submit_pending": true,
+      "public_materials": "platform/README.md"
+    }
   }
 }

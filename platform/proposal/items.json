@@ -1,0 +1,96 @@
+[
+  {
+    "preamble": "import Definitions.Def_HlawkaSchatten_DiagonalConstruction_Basic\nimport Definitions.Def_HlawkaSchatten_DiagonalConstruction_Cyclic\nimport Definitions.Def_HlawkaSchatten_GapComparison\nimport Mathlib.Analysis.Complex.Circle\nimport Mathlib.Analysis.Complex.ExponentialBounds\nimport Mathlib.Analysis.Convex.Deriv\nimport Mathlib.Analysis.Convex.Function\nimport Mathlib.Analysis.Convex.Integral\nimport Mathlib.Analysis.Convex.Jensen\nimport Mathlib.Analysis.Convex.SpecificFunctions.Basic\nimport Mathlib.Analysis.Convex.SpecificFunctions.Pow\nimport Mathlib.Analysis.InnerProductSpace.Basic\nimport Mathlib.Analysis.InnerProductSpace.Dual\nimport Mathlib.Analysis.InnerProductSpace.NormPow\nimport Mathlib.Analysis.Normed.Lp.PiLp\nimport Mathlib.Analysis.Normed.Module.FiniteDimension\nimport Mathlib.Analysis.SpecialFunctions.Pow.Continuity\nimport Mathlib.Data.Fin.VecNotation\nimport Mathlib.Data.Real.Basic\nimport Mathlib.Data.Sign.Basic\nimport Mathlib.LinearAlgebra.Dimension.Finite\nimport Mathlib.MeasureTheory.Group.Integral\nimport Mathlib.MeasureTheory.Integral.Bochner.ContinuousLinearMap\nimport Mathlib.MeasureTheory.Measure.Haar.Basic\nimport Mathlib.Tactic.Abel\nimport Mathlib.Tactic.FieldSimp\nimport Mathlib.Tactic.Linarith\nimport Mathlib.Tactic.LinearCombination\nimport Mathlib.Tactic.Module\nimport Mathlib.Tactic.Positivity\nimport Mathlib.Tactic.Ring\nimport Mathlib.Topology.Instances.Sign\nimport Mathlib.Topology.Order.Compact\n\n/-! # The least dimension-independent complex coordinate Hlawka constant\n\nThis packages admissibility and the three-coordinate cyclic obstruction into\none statement, with an explicit lower cutoff on the real exponent.\n-/\n\nopen HlawkaSchatten\nopen HlawkaSchatten.DiagonalConstruction",
+    "formal_statement": "theorem HlawkaSchatten.DiagonalConstruction.campaign_cutoff21 :\n    ∀ p : ℝ, 21 ≤ p →\n      IsLeast {C : ℝ | ∀ n : ℕ,\n        HasHlawkaConstant (lpNorm p : (Fin n → ℂ) → ℝ) C}\n        (cyclicConstant p) := by sorry",
+    "theorem_name": "HlawkaSchatten.DiagonalConstruction.campaign_cutoff21",
+    "theorem_title": "The least uniform complex coordinate Hlawka constant for p ≥ 21",
+    "natural_language_statement": "For every real exponent p ≥ 21, let N_p(x) be the foundation's finite coordinate p-norm and let K_p be its unchanged cyclicConstant p, defined as the supremum of the cyclic ratio over t ∈ [1/2, 2].\n\nThen K_p is the least real constant C such that the triple deficit N_p(x) + N_p(y) + N_p(z) − N_p(x + y + z) is at most C times the pair-deficit sum 2(N_p(x) + N_p(y) + N_p(z)) − N_p(x + y) − N_p(x + z) − N_p(y + z), for every natural-number dimension n and all complex vectors x, y, z in that dimension.\n\nThis combines admissibility and optimality uniformly over all finite complex coordinate dimensions. It includes dimension zero and arbitrary triples with unequal or zero norms. The same shared definitions are used throughout; the claim concerns complex diagonal matrices via their coordinate norms.",
+    "tags": [
+      "complex-analysis",
+      "diagonal-construction",
+      "hlawka-schatten",
+      "optimal-constant"
+    ],
+    "kind": "theorem",
+    "source": "Yuxuan Xu (徐宇轩), School of Computer Science, Wuhan University. A computer-assisted sharp diagonal Hlawka inequality for real exponents p >= 21, v1, 17 October 2026. https://github.com/Anchen-AI4Math/hlawka-diagonal-certificates/blob/2f1ec21c8ce4e3d9de33f57119f73f8504de0bd3/paper/main.pdf . LaTeX: https://github.com/Anchen-AI4Math/hlawka-diagonal-certificates/blob/2f1ec21c8ce4e3d9de33f57119f73f8504de0bd3/paper/main.tex . Reproducibility: https://github.com/Anchen-AI4Math/hlawka-diagonal-certificates/blob/2f1ec21c8ce4e3d9de33f57119f73f8504de0bd3/results/release-replay.json . AI-assisted research preprint; independent analytic review pending; no new Lean proof. Main Theorem 1.1. The campaign template is preserved, changing only its declaration name and numeric cutoff.",
+    "local_key": "goal",
+    "readback": "For every real number $p\\ge 21$, let $N_{p,n}(x)=\\bigl(\\sum_{i=0}^{n-1}|x_i|^p\\bigr)^{1/p}$ for each natural number $n$ and each vector $x\\in\\mathbb C^n$, where $|x_i|$ is the complex modulus, and define $A_p(t)=(t^p+2)^{1/p}$, $B_p(t)=(2|1-t|^p+2^p)^{1/p}$, and $K_p=\\sup\\bigl\\{\\frac{3A_p(t)-3^{1/p}|2-t|}{6A_p(t)-3B_p(t)}:t\\in[\\tfrac12,2]\\bigr\\}$. Then $K_p$ is the least real number $C$ such that, for every natural number $n$ and all $x,y,z\\in\\mathbb C^n$, $N_{p,n}(x)+N_{p,n}(y)+N_{p,n}(z)-N_{p,n}(x+y+z)\\le C\\bigl[(N_{p,n}(x)+N_{p,n}(y)-N_{p,n}(x+y))+(N_{p,n}(x)+N_{p,n}(z)-N_{p,n}(x+z))+(N_{p,n}(y)+N_{p,n}(z)-N_{p,n}(y+z))\\bigr]$. Explicitly, this inequality holds with $C=K_p$ simultaneously for every such dimension and triple, and $K_p\\le C$ for every real $C$ for which it holds simultaneously for every dimension and triple; the competing constants $C$ have no separately imposed sign restriction. The quantifiers include zero vectors and $n=0$: in dimension zero the coordinate sum is empty, $N_{p,0}=0$, and the required inequality is $0\\le 0$ for every real $C$.",
+    "readback_model": "GPT-6 (Codex independent sub-agent)"
+  },
+  {
+    "kind": "theorem",
+    "local_key": "scalar21",
+    "theorem_name": "HlawkaSchatten.DiagonalCutoff21.scalar_window21",
+    "theorem_title": "Scalar bounds on the full real window [21, 26]",
+    "formal_statement": "theorem HlawkaSchatten.DiagonalCutoff21.scalar_window21 :\n    ∀ p : ℝ, 21 ≤ p → p ≤ 26 →\n      (273 / 625 : ℝ) * p < cyclicConstant p ∧\n      cyclicConstant p ≤ p / 2 ∧\n      scalarEnvelope p (1011 / 2500 : ℝ) < cyclicConstant p := by sorry",
+    "preamble": "import Definitions.Def_HlawkaSchatten_DiagonalConstruction_Basic\nimport Definitions.Def_HlawkaSchatten_DiagonalConstruction_Cyclic\nimport Definitions.Def_HlawkaSchatten_GapComparison\nimport Definitions.Def_HlawkaSchatten_DiagonalConstruction_ScalarBounds\n\nopen HlawkaSchatten\nopen HlawkaSchatten.DiagonalConstruction\n",
+    "natural_language_statement": "For every real p in the closed interval [21,26], c p < K_p, K_p <= p/2, and E_p(q) < K_p, where c=273/625, q=1011/2500, K_p is the unchanged foundation cyclic maximum, and E_p(q)=(1-q)/(2(1-((1+q^p)/2)^(1/p))). No numerical certificate hypothesis or sampled-exponent restriction is assumed.",
+    "source": "Yuxuan Xu (徐宇轩), School of Computer Science, Wuhan University. A computer-assisted sharp diagonal Hlawka inequality for real exponents p >= 21, v1, 17 October 2026. https://github.com/Anchen-AI4Math/hlawka-diagonal-certificates/blob/2f1ec21c8ce4e3d9de33f57119f73f8504de0bd3/paper/main.pdf . LaTeX: https://github.com/Anchen-AI4Math/hlawka-diagonal-certificates/blob/2f1ec21c8ce4e3d9de33f57119f73f8504de0bd3/paper/main.tex . Reproducibility: https://github.com/Anchen-AI4Math/hlawka-diagonal-certificates/blob/2f1ec21c8ce4e3d9de33f57119f73f8504de0bd3/results/release-replay.json . AI-assisted research preprint; independent analytic review pending; no new Lean proof. Section 3, equation (7), Table 1, Window I; finite certificate specification in Lemma 8.1.",
+    "tags": [
+      "hlawka-schatten",
+      "interval-arithmetic",
+      "real-analysis"
+    ],
+    "milestone_title": "Equation (7), Window I — scalar bounds",
+    "milestone_description": "For every real p in [21,26], prove c p < K_p <= p/2 and E_p(q) < K_p with c=273/625 and q=1011/2500. These are unconditional real inequalities from equation (7) and Table 1, with interval certificates specified in Lemma 8.1. Floating-point output and the Python verifier are source evidence to formalize, not additional Lean assumptions.",
+    "readback": "For every real number $p$ with $21\\le p\\le26$ (including both endpoints), let $C(p)$ be the real supremum\n$$C(p)=\\sup\\left\\{\\frac{3(t^p+2)^{1/p}-3^{1/p}|2-t|}{6(t^p+2)^{1/p}-3\\bigl(2|1-t|^p+2^p\\bigr)^{1/p}}:\\ t\\in\\mathbb R,\\ \\frac12\\le t\\le2\\right\\}.$$\nThen all three inequalities hold simultaneously:\n$$\\frac{273}{625}p<C(p),\\qquad C(p)\\le\\frac p2,\\qquad \\frac{1-\\frac{1011}{2500}}{2\\left(1-\\left(\\frac{1+(\\frac{1011}{2500})^p}{2}\\right)^{1/p}\\right)}<C(p).$$\nHere every power is a real power, $|\\cdot|$ is the absolute value on $\\mathbb R$, and division has the total real-number convention $a/0=0$.",
+    "readback_model": "GPT-6 (Codex independent sub-agent)"
+  },
+  {
+    "kind": "theorem",
+    "local_key": "real21",
+    "theorem_name": "HlawkaSchatten.DiagonalCutoff21.real_three_window21",
+    "theorem_title": "Real three-dimensional Hlawka admissibility on [21, 26]",
+    "formal_statement": "theorem HlawkaSchatten.DiagonalCutoff21.real_three_window21 :\n    ∀ p : ℝ, 21 ≤ p → p ≤ 26 →\n      HasHlawkaConstant (lpNorm p : (Fin 3 → ℝ) → ℝ)\n        (cyclicConstant p) := by sorry",
+    "preamble": "import Definitions.Def_HlawkaSchatten_DiagonalConstruction_Basic\nimport Definitions.Def_HlawkaSchatten_DiagonalConstruction_Cyclic\nimport Definitions.Def_HlawkaSchatten_GapComparison\n\nopen HlawkaSchatten\nopen HlawkaSchatten.DiagonalConstruction\n",
+    "natural_language_statement": "For each real exponent p in the closed interval [21,26] and all real three-coordinate vectors x,y,z, their triple norm deficit is at most K_p times the sum of their three pair norm deficits. K_p and lpNorm are the unchanged campaign definitions. The conclusion covers all triples, including unequal norms and zero vectors, with no localization, normalization, certificate-validity or convexity assumption.",
+    "source": "Yuxuan Xu (徐宇轩), School of Computer Science, Wuhan University. A computer-assisted sharp diagonal Hlawka inequality for real exponents p >= 21, v1, 17 October 2026. https://github.com/Anchen-AI4Math/hlawka-diagonal-certificates/blob/2f1ec21c8ce4e3d9de33f57119f73f8504de0bd3/paper/main.pdf . LaTeX: https://github.com/Anchen-AI4Math/hlawka-diagonal-certificates/blob/2f1ec21c8ce4e3d9de33f57119f73f8504de0bd3/paper/main.tex . Reproducibility: https://github.com/Anchen-AI4Math/hlawka-diagonal-certificates/blob/2f1ec21c8ce4e3d9de33f57119f73f8504de0bd3/results/release-replay.json . AI-assisted research preprint; independent analytic review pending; no new Lean proof. Section 7, paragraph following equation (40): exclusion of all real three-dimensional counterexamples on Window I. Sections 3-6 and Lemma 8.1 supply the argument.",
+    "tags": [
+      "hlawka-schatten",
+      "convexity",
+      "lp-norm"
+    ],
+    "milestone_title": "Section 7, Window I — real three-dimensional inequality",
+    "milestone_description": "Exclude every real three-dimensional counterexample for every real p in [21,26], as concluded in Section 7 after equation (40). The target has no equal-norm assumption: normalization, orientation, localization, the contraction inequalities, and Hessian convexity must be derived as in Sections 3-6. The source uses clipped pair tails and linear pair/offsum floors on the norm-capped convex domain.",
+    "readback": "For every real number $p$ with $21\\le p\\le26$, define $N_p(v)=(|v_0|^p+|v_1|^p+|v_2|^p)^{1/p}$ for every real coordinate triple $v=(v_0,v_1,v_2)\\in\\mathbb R^3$, and let $C_p$ be the real supremum of the set $\\left\\{\\dfrac{3(t^p+2)^{1/p}-3^{1/p}|2-t|}{6(t^p+2)^{1/p}-3\\bigl(2|1-t|^p+2^p\\bigr)^{1/p}}:\\ t\\in\\mathbb R,\\ \\tfrac12\\le t\\le2\\right\\}$, with real powers and real division (division by zero, if encountered, has value zero). Then for every three real coordinate triples $x,y,z\\in\\mathbb R^3$, with addition performed coordinatewise, $N_p(x)+N_p(y)+N_p(z)-N_p(x+y+z)\\le C_p\\bigl((N_p(x)+N_p(y)-N_p(x+y))+(N_p(x)+N_p(z)-N_p(x+z))+(N_p(y)+N_p(z)-N_p(y+z))\\bigr)$. There is no assumption that any of $x,y,z$ is nonzero or that their values under $N_p$ are equal: the assertion includes arbitrary unequal values, cancellation in any pair or in the total sum, and every zero-input case; if, for example, $z=0$, it states $N_p(x)+N_p(y)-N_p(x+y)\\le C_p(N_p(x)+N_p(y)-N_p(x+y))$, with the analogous statements when either other input is zero, while if at least two inputs are zero both sides are zero.",
+    "readback_model": "GPT-6 (Codex independent sub-agent)"
+  },
+  {
+    "kind": "theorem",
+    "local_key": "scalar26",
+    "theorem_name": "HlawkaSchatten.DiagonalCutoff21.scalar_window26",
+    "theorem_title": "Scalar bounds on the full real window [26, 32]",
+    "formal_statement": "theorem HlawkaSchatten.DiagonalCutoff21.scalar_window26 :\n    ∀ p : ℝ, 26 ≤ p → p ≤ 32 →\n      (443 / 1000 : ℝ) * p < cyclicConstant p ∧\n      cyclicConstant p ≤ p / 2 ∧\n      scalarEnvelope p (197 / 500 : ℝ) < cyclicConstant p := by sorry",
+    "preamble": "import Definitions.Def_HlawkaSchatten_DiagonalConstruction_Basic\nimport Definitions.Def_HlawkaSchatten_DiagonalConstruction_Cyclic\nimport Definitions.Def_HlawkaSchatten_GapComparison\nimport Definitions.Def_HlawkaSchatten_DiagonalConstruction_ScalarBounds\n\nopen HlawkaSchatten\nopen HlawkaSchatten.DiagonalConstruction\n",
+    "natural_language_statement": "For every real p in the closed interval [26,32], c p < K_p, K_p <= p/2, and E_p(q) < K_p, where c=443/1000, q=197/500, K_p is the unchanged foundation cyclic maximum, and E_p(q)=(1-q)/(2(1-((1+q^p)/2)^(1/p))). No numerical certificate hypothesis or sampled-exponent restriction is assumed.",
+    "source": "Yuxuan Xu (徐宇轩), School of Computer Science, Wuhan University. A computer-assisted sharp diagonal Hlawka inequality for real exponents p >= 21, v1, 17 October 2026. https://github.com/Anchen-AI4Math/hlawka-diagonal-certificates/blob/2f1ec21c8ce4e3d9de33f57119f73f8504de0bd3/paper/main.pdf . LaTeX: https://github.com/Anchen-AI4Math/hlawka-diagonal-certificates/blob/2f1ec21c8ce4e3d9de33f57119f73f8504de0bd3/paper/main.tex . Reproducibility: https://github.com/Anchen-AI4Math/hlawka-diagonal-certificates/blob/2f1ec21c8ce4e3d9de33f57119f73f8504de0bd3/results/release-replay.json . AI-assisted research preprint; independent analytic review pending; no new Lean proof. Section 3, equation (7), Table 1, Window II; finite certificate specification in Lemma 8.1.",
+    "tags": [
+      "hlawka-schatten",
+      "interval-arithmetic",
+      "real-analysis"
+    ],
+    "milestone_title": "Equation (7), Window II — scalar bounds",
+    "milestone_description": "For every real p in [26,32], prove c p < K_p <= p/2 and E_p(q) < K_p with c=443/1000 and q=197/500. These are unconditional real inequalities from equation (7) and Table 1, with interval certificates specified in Lemma 8.1. Floating-point output and the Python verifier are source evidence to formalize, not additional Lean assumptions.",
+    "readback": "For every real number $p$ satisfying $26\\le p\\le32$, define $C_p=\\sup\\left\\{\\dfrac{3(t^p+2)^{1/p}-3^{1/p}|2-t|}{6(t^p+2)^{1/p}-3\\bigl(2|1-t|^p+2^p\\bigr)^{1/p}}\\;\\middle|\\;t\\in\\mathbb R,\\ \\dfrac12\\le t\\le2\\right\\}$. Then all three inequalities $\\dfrac{443}{1000}p<C_p$, $C_p\\le\\dfrac p2$, and $\\dfrac{1-\\frac{197}{500}}{2\\left(1-\\left(\\frac{1+(\\frac{197}{500})^p}{2}\\right)^{1/p}\\right)}<C_p$ hold simultaneously; all powers and divisions are taken in the real numbers, with division by zero interpreted as zero.",
+    "readback_model": "GPT-6 (Codex independent sub-agent)"
+  },
+  {
+    "kind": "theorem",
+    "local_key": "real26",
+    "theorem_name": "HlawkaSchatten.DiagonalCutoff21.real_three_window26",
+    "theorem_title": "Real three-dimensional Hlawka admissibility on [26, 32]",
+    "formal_statement": "theorem HlawkaSchatten.DiagonalCutoff21.real_three_window26 :\n    ∀ p : ℝ, 26 ≤ p → p ≤ 32 →\n      HasHlawkaConstant (lpNorm p : (Fin 3 → ℝ) → ℝ)\n        (cyclicConstant p) := by sorry",
+    "preamble": "import Definitions.Def_HlawkaSchatten_DiagonalConstruction_Basic\nimport Definitions.Def_HlawkaSchatten_DiagonalConstruction_Cyclic\nimport Definitions.Def_HlawkaSchatten_GapComparison\n\nopen HlawkaSchatten\nopen HlawkaSchatten.DiagonalConstruction\n",
+    "natural_language_statement": "For each real exponent p in the closed interval [26,32] and all real three-coordinate vectors x,y,z, their triple norm deficit is at most K_p times the sum of their three pair norm deficits. K_p and lpNorm are the unchanged campaign definitions. The conclusion covers all triples, including unequal norms and zero vectors, with no localization, normalization, certificate-validity or convexity assumption.",
+    "source": "Yuxuan Xu (徐宇轩), School of Computer Science, Wuhan University. A computer-assisted sharp diagonal Hlawka inequality for real exponents p >= 21, v1, 17 October 2026. https://github.com/Anchen-AI4Math/hlawka-diagonal-certificates/blob/2f1ec21c8ce4e3d9de33f57119f73f8504de0bd3/paper/main.pdf . LaTeX: https://github.com/Anchen-AI4Math/hlawka-diagonal-certificates/blob/2f1ec21c8ce4e3d9de33f57119f73f8504de0bd3/paper/main.tex . Reproducibility: https://github.com/Anchen-AI4Math/hlawka-diagonal-certificates/blob/2f1ec21c8ce4e3d9de33f57119f73f8504de0bd3/results/release-replay.json . AI-assisted research preprint; independent analytic review pending; no new Lean proof. Section 7, paragraph following equation (40): exclusion of all real three-dimensional counterexamples on Window II. Sections 3-6 and Lemma 8.1 supply the argument.",
+    "tags": [
+      "hlawka-schatten",
+      "convexity",
+      "lp-norm"
+    ],
+    "milestone_title": "Section 7, Window II — real three-dimensional inequality",
+    "milestone_description": "Exclude every real three-dimensional counterexample for every real p in [26,32], as concluded in Section 7 after equation (40). The target has no equal-norm assumption: normalization, orientation, localization, the contraction inequalities, and Hessian convexity must be derived as in Sections 3-6. The source uses the coordinate box intersected with singleton and total norm caps.",
+    "readback": "For every real number $p$ with $26\\le p\\le32$, and every three vectors $x=(x_1,x_2,x_3)$, $y=(y_1,y_2,y_3)$, and $z=(z_1,z_2,z_3)$ in $\\mathbb R^3$, define $N_p(v)=\\left(\\sum_{i=1}^{3}|v_i|^p\\right)^{1/p}$ for $v\\in\\mathbb R^3$ and let $C_p$ be the real supremum of the set $\\left\\{\\dfrac{3(t^p+2)^{1/p}-3^{1/p}|2-t|}{6(t^p+2)^{1/p}-3\\left(2|1-t|^p+2^p\\right)^{1/p}}:\\ t\\in\\mathbb R,\\ \\tfrac12\\le t\\le2\\right\\}$, where powers are real powers and the quotient is interpreted using total real division (its value is $0$ if its denominator is $0$). Then $N_p(x)+N_p(y)+N_p(z)-N_p(x+y+z)\\le C_p\\bigl((N_p(x)+N_p(y)-N_p(x+y))+(N_p(x)+N_p(z)-N_p(x+z))+(N_p(y)+N_p(z)-N_p(y+z))\\bigr)$, with vector sums taken coordinatewise. There are no restrictions on the vectors or on equality of their $N_p$ values: the assertion includes arbitrary unequal norms, cases in which any vector or any displayed vector sum is zero, and the all-zero triple, for which the inequality is $0\\le0$.",
+    "readback_model": "GPT-6 (Codex independent sub-agent)"
+  }
+]

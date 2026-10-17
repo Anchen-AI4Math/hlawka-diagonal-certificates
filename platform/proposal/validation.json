@@ -1,0 +1,25 @@
+{
+  "status": "PASS",
+  "check": "Local elaboration of open theorem declarations only",
+  "date": "2026-10-17",
+  "lean_version": "4.33.1",
+  "lean_commit": "819816b2e0a3bf405af45ae5c7af2491d8f5bee6",
+  "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474",
+  "auto_implicit": false,
+  "draft_theorems": 5,
+  "expected_sorry_warnings": 5,
+  "new_proofs_completed": false,
+  "independent_readbacks": 5,
+  "scope": "Statement syntax, types and imports compile; read-backs audit declaration meaning. Neither establishes the new analytic proof.",
+  "source_sha256": {
+    "goal.lean": "03380558c39f2342b21075e15c47c240c6fc3cc1780d1aa14402fb22cacf29a8",
+    "scalar21.lean": "d91e3ad9a0b187af2555d27ea65a5d1a1fbb2c358e8a18e201a1a2cbe0d73f63",
+    "real21.lean": "b13d3739263e62ca5ac89e389ccc367de4311c8e2587018fe90f1f2b90ebed75",
+    "scalar26.lean": "fb024c0adb96f091ed23e7792bc1c8cfc7486afb6dae0fd4f6793f3a687268ef",
+    "real26.lean": "c391f985d21f445264b16bc33fc098c7e4e7da42b0d402189d1e2faf456176b5"
+  },
+  "platform_roundtrip": "Five statement texts, preambles, read-backs, names and source citations match the uploaded draft.",
+  "campaign_flag_verified": true,
+  "proposal_status": "Draft",
+  "human_confirmation_and_submit_pending": true
+}
