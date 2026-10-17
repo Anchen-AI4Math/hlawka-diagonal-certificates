@@ -17,5 +17,5 @@
     }
   ],
   "manifest": ".test-tmp/prove2me/real-piece-test.json",
-  "scope": "1 proof files from this manifest only. The cutoff21 root remains unproved."
+  "scope": "1 proof files from this manifest only. This check alone does not establish whole-root platform closure."
 }

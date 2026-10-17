@@ -1,0 +1,12 @@
+[
+  {
+    "key": "conditional_real_three_window21",
+    "solution_file": "formalization/platform/Check_assembly_real21.lean",
+    "solution_sha256": "ce860ce8e452cbfc2328f83410425ed78fa7c8fd85a3487798b59533446f79ee"
+  },
+  {
+    "key": "conditional_real_three_window26",
+    "solution_file": "formalization/platform/Check_assembly_real26.lean",
+    "solution_sha256": "458cb163923ce474100298cdd996457f80a41c505a92ff045ab2829ebd3f0c7b"
+  }
+]

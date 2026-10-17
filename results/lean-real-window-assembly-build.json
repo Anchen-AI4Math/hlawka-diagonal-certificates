@@ -1,0 +1,33 @@
+{
+  "status": "PASS",
+  "toolchain": "leanprover/lean4:v4.33.1",
+  "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474",
+  "proofs": [
+    {
+      "key": "conditional_real_three_window21",
+      "status": "PASS",
+      "solution_file": "formalization/platform/Check_assembly_real21.lean",
+      "sha256": "ce860ce8e452cbfc2328f83410425ed78fa7c8fd85a3487798b59533446f79ee",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 68.742
+    },
+    {
+      "key": "conditional_real_three_window26",
+      "status": "PASS",
+      "solution_file": "formalization/platform/Check_assembly_real26.lean",
+      "sha256": "458cb163923ce474100298cdd996457f80a41c505a92ff045ab2829ebd3f0c7b",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 44.307
+    }
+  ],
+  "manifest": "formalization/platform/real-window-assembly-checks.json",
+  "scope": "2 proof files from this manifest only. This check alone does not establish whole-root platform closure."
+}

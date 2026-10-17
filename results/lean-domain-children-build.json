@@ -74,8 +74,42 @@
         "propext"
       ],
       "elapsed_seconds": 66.237
+    },
+    {
+      "key": "localized_domain2_21_29_part0",
+      "status": "PASS",
+      "solution_file": "formalization/platform/Sol_localized_domain2_21_29_part0.lean",
+      "sha256": "a09c7d530f2a0e8648b345e0c1c0820506e44358aa2593ad4847b15e34ec9175",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 74.15
+    },
+    {
+      "key": "localized_domain2_21_29_part1",
+      "status": "PASS",
+      "solution_file": "formalization/platform/Sol_localized_domain2_21_29_part1.lean",
+      "sha256": "cac5e1cb06d3dec1adde6ff133a7bf33da955e1418dadc0f9644d0c7d97b9d42",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 61.803
     }
   ],
   "manifest": "formalization/platform/domain-child-proofs.json",
-  "scope": "6 proof files from this manifest only. The cutoff21 root remains unproved."
+  "scope": "8 proof files from this manifest only. This check alone does not establish whole-root platform closure.",
+  "selected_keys": [
+    "localized_domain2_21_04_part0",
+    "localized_domain2_21_04_part1",
+    "localized_domain2_21_08_part0",
+    "localized_domain2_21_08_part1",
+    "localized_domain2_21_14_part0",
+    "localized_domain2_21_14_part1",
+    "localized_domain2_21_29_part0",
+    "localized_domain2_21_29_part1"
+  ]
 }

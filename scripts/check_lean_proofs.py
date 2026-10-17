@@ -64,7 +64,7 @@ def main():
     def save(status):
         records.sort(key=lambda r:order[r['key']])
         report=dict(status=status,toolchain=toolchain,mathlib_rev=head,proofs=records,manifest=args.manifest,
-            scope=f'{len(records)} proof files from this manifest only. The cutoff21 root remains unproved.')
+            scope=f'{len(records)} proof files from this manifest only. This check alone does not establish whole-root platform closure.')
         if args.lean_threads:report['lean_threads']=args.lean_threads
         if args.keys:report['selected_keys']=args.keys
         if failures:report['failures']=failures

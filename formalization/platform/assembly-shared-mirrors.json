@@ -1,0 +1,42 @@
+[
+  {
+    "key": "dimension_reduction",
+    "theorem_name": "HlawkaSchatten.DiagonalConstruction.real_bound_of_fin_three"
+  },
+  {
+    "key": "scalar_window21",
+    "theorem_name": "HlawkaSchatten.DiagonalCutoff21.scalar_window21"
+  },
+  {
+    "key": "scalar_window26",
+    "theorem_name": "HlawkaSchatten.DiagonalCutoff21.scalar_window26"
+  },
+  {
+    "key": "coarse_failure_window21",
+    "theorem_name": "HlawkaSchatten.DiagonalCutoff21.coarse_failure_window21"
+  },
+  {
+    "key": "coarse_failure_window26",
+    "theorem_name": "HlawkaSchatten.DiagonalCutoff21.coarse_failure_window26"
+  },
+  {
+    "key": "domain_nonneg_group00",
+    "theorem_name": "HlawkaSchatten.DiagonalCutoff21.domain_nonneg_group00"
+  },
+  {
+    "key": "domain_nonneg_group01",
+    "theorem_name": "HlawkaSchatten.DiagonalCutoff21.domain_nonneg_group01"
+  },
+  {
+    "key": "real_three_window21",
+    "theorem_name": "HlawkaSchatten.DiagonalCutoff21.real_three_window21"
+  },
+  {
+    "key": "real_three_window26",
+    "theorem_name": "HlawkaSchatten.DiagonalCutoff21.real_three_window26"
+  },
+  {
+    "key": "complex_least_of_real_three",
+    "theorem_name": "HlawkaSchatten.DiagonalCutoff21.complex_least_of_real_three"
+  }
+]

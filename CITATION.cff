@@ -1,5 +1,5 @@
 cff-version: 1.2.0
-message: "Please cite the accompanying research preprint. The new cutoff is not Lean-formalized or independently reviewed."
+message: "Please cite the accompanying research preprint. Current formalization evidence is tracked in status.json; independent analytic review is pending."
 type: software
 title: "Sharp diagonal Hlawka certificates for real exponents p >= 21"
 authors:

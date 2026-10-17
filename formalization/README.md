@@ -10,11 +10,11 @@
 | 任意严格实三维反例到粗盒子 | 两个平台定理 `Proved`，开放依赖为零；[完整证明与记录](../results/prove2me-failure.json)；输入没有归一化、定向、非零或等范数假设 |
 | 256 段实际范数定位 | [全部 PASS](../results/lean-localization-build.json)，含 768 个根界整数幂证书、十轮收缩和线性 pair/offsum floors；不再以抽象 `Facts` 为输入 |
 | 范数 cap 下的 Hessian、凸性与对称平均 | [两组域构建报告](../results/lean-geometry-build.json)；参数区间 `[21,377/16]`、`[377/16,32]`；两组公共域定理已获平台接受 |
-| 两个原始无条件实三维窗口 | [RealWindows](Hlawka21/RealWindows.lean) 已本地内核检查；平台原目标仍 `Open` |
+| 两个原始无条件实三维窗口 | [RealWindows](Hlawka21/RealWindows.lean) 已本地内核检查；平台原目标 real_three_window21 已 `Proved`、零开放依赖；real_three_window26 仍 `Open` |
 | 任意有限复维度传递及最小性 | [通用桥接](Hlawka21/ComplexBridge.lean) 本地通过且平台 `Proved`、开放依赖为零；[平台记录](../results/prove2me-analytic-assembly.json) |
-| 全范围最终拼接 | [FullWindow](Hlawka21/FullWindow.lean) 本地证明准确的 cutoff 21 结论，显式输入既有 cutoff 32 尾部；[639 个源码哈希、601 项公理检查](../results/lean-full-window-build.json)；尾部未独立重建，原始平台主目标组合已获 `SKETCH_ACCEPTED`，仍有两个实三维窗口依赖 |
+| 全范围最终拼接 | [FullWindow](Hlawka21/FullWindow.lean) 本地证明准确的 cutoff 21 结论，显式输入既有 cutoff 32 尾部；[639 个源码哈希、601 项公理检查](../results/lean-full-window-build.json)；尾部未独立重建，原始平台主目标组合已获 `SKETCH_ACCEPTED`，目前仅 real_three_window26 仍开放 |
 
-目前 59 个辅助定理获平台 `ACCEPTED`，另有两个原始标量里程碑 `Proved`。计数与新增证书的异步状态分别见 [status.json](../status.json)、[原辅助记录](../results/prove2me-auxiliary.json)、[任意反例归约](../results/prove2me-failure.json)、[公共解析及传递](../results/prove2me-analytic-assembly.json)、[紧凑证书](../results/prove2me-real-pieces.json)。这不表示原始全维主目标已经通过。
+目前 84 个辅助定理获平台 `ACCEPTED`，另有两个原始标量里程碑 `Proved`。计数与新增证书的异步状态分别见 [status.json](../status.json)、[原辅助记录](../results/prove2me-auxiliary.json)、[任意反例归约](../results/prove2me-failure.json)、[公共解析及传递](../results/prove2me-analytic-assembly.json)、[紧凑证书](../results/prove2me-real-pieces.json)。这不表示原始全维主目标已经通过。
 
 ## 平台提交为何拆分
 
@@ -53,16 +53,19 @@ python scripts/check_full_window_lean.py
 python scripts/prepare_group_domain_platform_proofs.py
 python scripts/prepare_transfer_platform_proof.py
 python scripts/prepare_domain_block_platform_proofs.py
-python scripts/build_theorem_mirrors.py --manifest formalization/platform/domain-block-proofs.json
+python scripts/prepare_real_window_platform_proofs.py
+python scripts/prepare_real_window_assembly_checks.py
+python scripts/prepare_root_platform_proof.py
+python scripts/build_theorem_mirrors.py --manifest formalization/platform/assembly-shared-mirrors.json
 python scripts/check_lean_proofs.py --manifest formalization/platform/analytic-assembly-proofs.json --output results/lean-analytic-assembly-build.json --jobs 2
 python scripts/check_lean_proofs.py --manifest formalization/platform/domain-block-proofs.json --output results/lean-domain-blocks-build.json --jobs 2
-python scripts/prepare_real_window_platform_proofs.py
-python scripts/check_lean_proofs.py --manifest formalization/platform/real-window-proofs.json --output results/lean-real-window-platform-build.json --jobs 1
-python scripts/prepare_root_platform_proof.py
+python scripts/check_lean_proofs.py --manifest formalization/platform/real-window-assembly-checks.json --output results/lean-real-window-assembly-build.json --jobs 1
 python scripts/check_lean_proofs.py --manifest formalization/platform/root-assembly-check.json --output results/lean-root-assembly-build.json --jobs 1
 ```
 
-四段 API 镜像把真实局部证明在本地合并编译一次，再由各个 `Theorems/` 模块导入；没有开放声明、外加公理或平台 Definition 中隐藏的复杂证明。`--keys` 可明确选择少数代表块，报告会记录选择；只有整份清单全部 PASS 才表示整批精确文件通过。
+定位定理的可选 `Theorems/` 镜像保留实际证明，可逐个编译。组合层检查以 41 份、24 份证书为显式参数；[接口映射](platform/real-window-assembly-mapping.json) 记录文件哈希，并通过逆替换验证证明体与最终服务器文件一致。[组合层检查](../results/lean-real-window-assembly-build.json) 只验证这个条件接口。两个无条件实三维窗口的实际证明另见完整新证明链报告；全部 65 份证书也已逐文件通过内核检查。最终服务器文件保留原始无条件声明，并导入平台已证明的定位定理。
+
+如需直接本地编译最终文件的全部同名导入，可先运行 `build_theorem_mirrors.py --manifest formalization/platform/domain-block-proofs.json`，再对 `real-window-proofs.json` 执行检查；这会重复编译边界包装。该重复构建的旧聚合版本已停止。没有引入本地 `sorry`、新公理或平台 Definition 中隐藏的复杂证明。`--keys` 可明确选择少数文件，报告会记录选择。
 
 个别四段文件仍触发服务器限时，分别用 `prepare_domain_block_repair.py <parent_key>` 拆成两个忠实子区间。原父声明、256 段覆盖及最终目标保持不变。子证明闭合后，用新的短区间组合证明修复父目标；旧超时提交保留为历史，不重复上传同一文件。[子证明检查](../results/lean-domain-children-build.json)、[子证明平台任务](../results/prove2me-domain-children.json)、[修复源码清单](platform/domain-repair-proofs.json)。
 

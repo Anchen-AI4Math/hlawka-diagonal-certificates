@@ -137,7 +137,7 @@
     }
   ],
   "manifest": "formalization/platform/real-piece-proofs.json",
-  "scope": "11 proof files from this manifest only. The cutoff21 root remains unproved.",
+  "scope": "11 proof files from this manifest only. This check alone does not establish whole-root platform closure.",
   "lean_threads": 2,
   "interruption_reason": "Eight-slab platform submissions timed out; completed exact-file PASS records are retained while smaller packaging is investigated."
 }

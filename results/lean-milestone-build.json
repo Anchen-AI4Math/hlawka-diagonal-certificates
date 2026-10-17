@@ -29,5 +29,5 @@
     }
   ],
   "manifest": "formalization/platform/mission-proofs.json",
-  "scope": "2 proof files from this manifest only. The cutoff21 root remains unproved."
+  "scope": "2 proof files from this manifest only. This check alone does not establish whole-root platform closure."
 }

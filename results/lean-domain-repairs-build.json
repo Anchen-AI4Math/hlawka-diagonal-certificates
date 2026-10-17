@@ -38,8 +38,26 @@
         "propext"
       ],
       "elapsed_seconds": 26.229
+    },
+    {
+      "key": "localized_domain4_21_29",
+      "status": "PASS",
+      "solution_file": "formalization/platform/Repair_localized_domain4_21_29_size2.lean",
+      "sha256": "23980905c714c86efac64fcd35e83f1b16f0a82a29bdaa5eab36965826298fb2",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "elapsed_seconds": 24.346
     }
   ],
   "manifest": "formalization/platform/domain-repair-proofs.json",
-  "scope": "3 proof files from this manifest only. The cutoff21 root remains unproved."
+  "scope": "4 proof files from this manifest only. This check alone does not establish whole-root platform closure.",
+  "selected_keys": [
+    "localized_domain4_21_04",
+    "localized_domain4_21_08",
+    "localized_domain4_21_14",
+    "localized_domain4_21_29"
+  ]
 }

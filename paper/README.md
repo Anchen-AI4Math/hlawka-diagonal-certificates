@@ -4,7 +4,7 @@
 
 徐宇轩 / Yuxuan Xu，武汉大学计算机学院 / School of Computer Science, Wuhan University。
 
-2026-10-17，v1 研究预印本。[阅读 PDF](main.pdf) · [LaTeX 源码](main.tex)。尚未独立审阅、期刊投稿或新增 Lean 验证；没有声称 21 为最优阈值。
+2026-10-17，v1 研究预印本。[阅读 PDF](main.pdf) · [LaTeX 源码](main.tex)。v1 发布时尚无新增 Lean 验证；后续进展见 [形式化状态](../formalization/README.md)。尚未独立审阅或期刊投稿，没有声称 21 为最优阈值。
 
 论文包含问题定义、主定理、全维归约、标量包络、定向和精确 LP 定位、十轮收缩、保留范数及线性约束的凸域、Hessian 估计、对称平均、最优性、有限证书规格及有理算术附录。`[21,32]` 的论证在正文中连贯给出，`[32,∞)` 明确引用已有接受结果。
 

@@ -7,7 +7,7 @@
     "solved_date": "2026-10-16",
     "source": "https://prove2.me/campaigns/sharp-diagonal-hlawka-constant",
     "independently_rebuilt": false,
-    "last_checked": "2026-10-17T13:13:49.929163+00:00"
+    "last_checked": "2026-10-17T14:59:58.471655+00:00"
   },
   "research": {
     "candidate_cutoff": "21",
@@ -102,7 +102,9 @@
       "results/lean-domain-children-build.json",
       "results/prove2me-domain-children.json",
       "results/prove2me-domain-repairs.json",
-      "results/lean-domain-repairs-build.json"
+      "results/lean-domain-repairs-build.json",
+      "results/lean-real-window-assembly-build.json",
+      "results/prove2me-real-windows.json"
     ],
     "release_replay": "results/release-replay.json",
     "release_replay_status": "PASS",
@@ -113,8 +115,8 @@
       "stage": "all_new_ingredients_kernel_checked; platform_closure_in_progress",
       "toolchain": "leanprover/lean4:v4.33.1",
       "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474",
-      "locally_compiled_auxiliary_files": 107,
-      "platform_accepted_auxiliary_theorems": 59,
+      "locally_compiled_auxiliary_files": 110,
+      "platform_accepted_auxiliary_theorems": 84,
       "root_status": "Open",
       "axioms": [
         "propext",
@@ -127,7 +129,8 @@
       "locally_compiled_original_milestone_files": 2,
       "platform_proved_original_milestones": [
         "scalar_window21",
-        "scalar_window26"
+        "scalar_window26",
+        "real_three_window21"
       ],
       "scalar_lower_slabs_compiled": 256,
       "scalar_integer_power_certificates": 768,
@@ -157,15 +160,17 @@
       "domain_block_build": "results/lean-domain-blocks-build.json",
       "domain_block_platform": "results/prove2me-domain-blocks.json",
       "root_submission_status": "SKETCH_ACCEPTED",
-      "root_assembly_open_leaf_count": 2,
+      "root_assembly_open_leaf_count": 1,
       "root_assembly_evidence": "results/prove2me-root.json",
       "superseded_eight_slab_manifest": "formalization/platform/real-piece-proofs.json",
-      "domain_blocks_closed": 20,
+      "domain_blocks_closed": 43,
       "domain_block_target_count": 65,
-      "domain_block_repairs_pending": [
-        "localized_domain4_21_14"
-      ],
-      "domain_repair_manifest": "formalization/platform/domain-repair-proofs.json"
+      "domain_block_repairs_pending": [],
+      "domain_repair_manifest": "formalization/platform/domain-repair-proofs.json",
+      "real_window_assembly_check": "Explicit certificate inputs (41 and 24), with reversible proof-body substitution. The unconditional RealWindows proofs and the 65 exact certificate files are separately kernel checked. The unchanged server files require actual proved dependency closure.",
+      "real_window_assembly_evidence": "results/lean-real-window-assembly-build.json",
+      "real_window_interface_mapping": "formalization/platform/real-window-assembly-mapping.json",
+      "real_window_platform_evidence": "results/prove2me-real-windows.json"
     }
   },
   "publication": {

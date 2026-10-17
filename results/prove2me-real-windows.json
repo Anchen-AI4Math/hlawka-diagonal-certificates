@@ -1,0 +1,23 @@
+{
+  "scope": "The two unchanged, unrestricted original real-three windows. Local assembly checks have explicit certificate parameters; the server files import actual proved theorems and contain no extra hypotheses.",
+  "theorems": {
+    "real_three_window21": {
+      "theorem_id": "6c62afca-c977-42ef-8cf7-7b8d39ebe08a",
+      "theorem_name": "HlawkaSchatten.DiagonalCutoff21.real_three_window21",
+      "submission_id": "465152fa-67f5-47de-b7ed-b3162388b39d",
+      "proof_status": "ACCEPTED",
+      "solution_sha256": "aebc4e9236e5090e37cb984f0bb803f13e33c8b94ea84ae4339bce99703c68f8",
+      "local_check_scope": "Only the assembly interface is conditional here. The original unconditional real windows and every finite certificate are separately kernel checked; the server checks the unchanged original statement using tracked proved dependencies. No local axiom or sorry placeholder is introduced.",
+      "certificate_dependency_count": 41,
+      "submitted_at": "2026-10-17T14:52:19.976107+00:00",
+      "theorem_status": "Proved",
+      "open_leaf_count": 0,
+      "statement_matches_original_proposal": true,
+      "checked_at": "2026-10-17T14:58:01.046875+00:00"
+    },
+    "real_three_window26": {
+      "theorem_id": "a1a7a36f-f8b9-4061-84a2-33080e185b41",
+      "theorem_name": "HlawkaSchatten.DiagonalCutoff21.real_three_window26"
+    }
+  }
+}

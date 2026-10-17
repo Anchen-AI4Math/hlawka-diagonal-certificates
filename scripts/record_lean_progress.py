@@ -27,7 +27,8 @@ def main():
               'results/lean-domain-blocks-build.json','results/prove2me-domain-blocks.json',
               'results/lean-root-assembly-build.json','results/prove2me-root.json',
               'results/lean-domain-children-build.json','results/prove2me-domain-children.json',
-              'results/lean-domain-repairs-build.json','results/prove2me-domain-repairs.json']
+              'results/lean-domain-repairs-build.json','results/prove2me-domain-repairs.json',
+              'results/lean-real-window-assembly-build.json','results/prove2me-real-windows.json']
     accepted=0
     for path in ['results/prove2me-auxiliary.json','results/prove2me-failure.json',
                  'results/prove2me-analytic-assembly.json','results/prove2me-real-pieces.json',
@@ -68,6 +69,10 @@ def main():
                   domain_block_coverage='formalization/domain-blocks.json',
                   domain_block_build='results/lean-domain-blocks-build.json',
                   domain_block_platform='results/prove2me-domain-blocks.json')
+    formal.update(real_window_assembly_check='Explicit certificate inputs (41 and 24), with reversible proof-body substitution. The unconditional RealWindows proofs and the 65 exact certificate files are separately kernel checked. The unchanged server files require actual proved dependency closure.',
+                  real_window_assembly_evidence='results/lean-real-window-assembly-build.json',
+                  real_window_interface_mapping='formalization/platform/real-window-assembly-mapping.json',
+                  real_window_platform_evidence='results/prove2me-real-windows.json')
     if (ROOT/'results/prove2me-domain-blocks.json').exists():
         blocks=read('results/prove2me-domain-blocks.json')['theorems']
         formal.update(domain_blocks_closed=sum(r.get('theorem_status')=='Proved' and r.get('open_leaf_count')==0 for r in blocks.values()),

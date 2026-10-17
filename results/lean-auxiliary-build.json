@@ -329,5 +329,5 @@
     }
   ],
   "manifest": "formalization/platform/payloads.json",
-  "scope": "27 auxiliary proofs only. The cutoff21 root remains unproved."
+  "scope": "27 auxiliary proofs only. This check alone does not establish whole-root platform closure."
 }

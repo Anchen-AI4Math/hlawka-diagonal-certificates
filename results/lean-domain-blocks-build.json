@@ -785,5 +785,5 @@
     }
   ],
   "manifest": "formalization/platform/domain-block-proofs.json",
-  "scope": "65 proof files from this manifest only. The cutoff21 root remains unproved."
+  "scope": "65 proof files from this manifest only. This check alone does not establish whole-root platform closure."
 }

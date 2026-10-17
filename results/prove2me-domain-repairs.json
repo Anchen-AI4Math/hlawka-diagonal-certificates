@@ -14,7 +14,7 @@
       "theorem_status": "Proved",
       "open_leaf_count": 0,
       "statement_matches_original_parent": true,
-      "checked_at": "2026-10-17T14:16:30.911795+00:00"
+      "checked_at": "2026-10-17T14:45:26.988773+00:00"
     },
     "localized_domain4_21_08": {
       "theorem_id": "fd806c8d-0c1b-4472-ba60-bd7b7fd32117",
@@ -29,11 +29,37 @@
       "theorem_status": "Proved",
       "open_leaf_count": 0,
       "statement_matches_original_parent": true,
-      "checked_at": "2026-10-17T14:16:32.122466+00:00"
+      "checked_at": "2026-10-17T14:45:28.287057+00:00"
     },
     "localized_domain4_21_14": {
       "theorem_id": "820f7e38-cb97-4544-bfdc-977e6fc9bc09",
-      "theorem_name": "HlawkaSchatten.DiagonalCutoff21.localized_domain4_21_14"
+      "theorem_name": "HlawkaSchatten.DiagonalCutoff21.localized_domain4_21_14",
+      "submission_id": "0a1e5171-e31f-4360-b7db-f68fd84a4653",
+      "proof_status": "ACCEPTED",
+      "solution_sha256": "fffdc8a130020f09374bcde76fa8605801fb354e15a85d98d17a437fbb2e8849",
+      "children": [
+        "localized_domain2_21_14_part0",
+        "localized_domain2_21_14_part1"
+      ],
+      "theorem_status": "Proved",
+      "open_leaf_count": 0,
+      "statement_matches_original_parent": true,
+      "checked_at": "2026-10-17T14:45:29.513127+00:00"
+    },
+    "localized_domain4_21_29": {
+      "theorem_id": "bc92b1ce-0091-4cc0-9dd9-dbec9ec261fa",
+      "theorem_name": "HlawkaSchatten.DiagonalCutoff21.localized_domain4_21_29",
+      "submission_id": "11b73bef-8009-4b18-97b2-9fb2ac1d75da",
+      "proof_status": "ACCEPTED",
+      "solution_sha256": "23980905c714c86efac64fcd35e83f1b16f0a82a29bdaa5eab36965826298fb2",
+      "children": [
+        "localized_domain2_21_29_part0",
+        "localized_domain2_21_29_part1"
+      ],
+      "theorem_status": "Proved",
+      "open_leaf_count": 0,
+      "statement_matches_original_parent": true,
+      "checked_at": "2026-10-17T14:45:30.773162+00:00"
     }
   }
 }
