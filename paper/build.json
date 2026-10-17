@@ -1,0 +1,10 @@
+{
+  "date": "2026-10-17",
+  "compiler": "Tectonic 0.17.0+20260731",
+  "status": "PASS",
+  "pages": 12,
+  "final_pass_warnings": [],
+  "visual_review": "All 12 pages rendered and inspected in contact sheets; pages 1, 4, 7, 8, 11 and 12 additionally inspected at full image size.",
+  "source_sha256": "7a52f1f8b7fad0c0b38c071ef5c455f25e8c093cb9f765b9b089d64d4884ab1f",
+  "pdf_sha256": "94c10308c9e903aee029e9220e07234b766fd80ec1eb11f84b6505af58d02bcc"
+}

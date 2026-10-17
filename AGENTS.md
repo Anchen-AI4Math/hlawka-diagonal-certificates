@@ -2,7 +2,8 @@
 
 ## 本仓库当前范围
 
-- 本仓库为用户明确选择的私有研究仓库，不向公开目录发布其名称、内容或状态。
+- 用户于 2026-10-17 明确要求整理完整论文、推送后公开本仓库，覆盖此前的私有偏好。公开发布后按下方约定同步组织导航；不得发布凭证、无关私人资料或推断平台已接受新阈值。
+- 论文署名为徐宇轩（Yuxuan Xu），武汉大学计算机学院。主论文为 `paper/main.tex` 与 `paper/main.pdf`；修改数学内容后复核其与证书的对应，重新编译 PDF。公开不等于期刊发表或独立审阅。
 - 用户要求优先推进数值证书，暂不急做 Lean；除非后续改变要求，不提交平台证明或启动大规模 Lean 工作。
 - 先读 `status.json`、`docs/proof-21.md`、`docs/self-audit.md` 和 `docs/next-steps.md`。`docs/proof-26.md` 与 `docs/proof-127-over-4.md` 为新稿依赖；证书分别保存在 `certificates/cutoff21/`、`certificates/cutoff26/` 与顶层，不覆盖旧结果。严格区分数值义务、解析归约、独立审阅、Lean 验证和发表状态。
 - `sources/*.lean` 是参考下载，保留不改；新数值证书放在 `certificates/`，验证器放在 `scripts/`。生成器可用浮点搜索，接受证书必须通过区间或精确有理数验证。

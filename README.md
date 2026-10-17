@@ -1,6 +1,10 @@
 # Sharp diagonal Hlawka：cutoff 21 的计算机辅助证明
 
-独立、私有的研究仓库。当前 [证明稿](docs/proof-21.md) 将此前的 **26 推进到 21**，结论针对所有实数 `p≥21`、任意有限维复向量的统一最优 Hlawka 常数。仓库中的进展为 31.75 → 26 → 21。
+**论文：** [A computer-assisted sharp diagonal Hlawka inequality for real exponents p ≥ 21（PDF）](paper/main.pdf) · [LaTeX 源码](paper/main.tex) · [构建与复现](paper/README.md)。
+
+**作者：徐宇轩（Yuxuan Xu），武汉大学计算机学院。** 论文为 AI 辅助研究预印本，明确披露辅助范围，并致谢既有证明与平台贡献者。
+
+本仓库的完整论文将此前的 **26 推进到 21**，结论针对所有实数 `p≥21`、任意有限维复向量的统一最优 Hlawka 常数。论文独立展开 `[21,32]` 的解析归约及有限证书论证；`p≥32` 引用已有接受结果。仓库中的进展为 31.75 → 26 → 21。
 
 本轮改进包括：用总范数上界裁剪 pair 尾坐标；把已推导的 pair 主坐标下界与非对角总和下界保留为凸域上的线性约束；把 pair 误差的统一系数 16 改成更小的有理系数。新证书覆盖 `[21,26]`，接上既有稿的 `[26,32]`，尾部 `p≥32` 引用平台已有接受结果。
 
@@ -9,6 +13,14 @@
 2026-10-17 查询的 [Prove2Me campaign](https://prove2.me/campaigns/sharp-diagonal-hlawka-constant) 仍显示最佳形式化 cutoff 为 32。这里的 21、26、31.75、32 都是指数 p 的阈值，不是最优常数 K_p 的数值。
 
 ## 复核新窗口 [21,26]
+
+**一条命令复核论文的全部新窗口 `[21,32]`：**
+
+```powershell
+python -S scripts/replay_release.py
+```
+
+该命令使用纯标准库有理区间后端，复核两个窗口、15 项损坏证书拒绝检查及 11 个引用源文件哈希，生成 [发布复核报告](results/release-replay.json)。它不重新编译已有 Lean 尾部，也不代替独立数学审阅。
 
 本次使用 Python 3.14。在项目根，无第三方依赖的复核命令为：
 
@@ -54,4 +66,4 @@ cutoff 26 的原证书保留并通过本轮 [回归检查](results/cutoff26-regr
 
 另见 [作者自审](docs/self-audit.md)、[研究状态](status.json)、[下一步](docs/next-steps.md)。下载的 `sources/*.lean` 保持原字节，未重新编译。浮点探索不能作为证明；本仓库尚未证明 21 是最优阈值。
 
-本仓库按用户要求保持私有。组织公开主页及 research-index 不登记它；未来明确获准公开后，再按 `AGENTS.md` 同步导航。
+按作者 2026-10-17 的指示，本仓库以论文预印本和可复核数据包公开发布；不代表期刊发表。项目材料采用 [Apache-2.0](LICENSE)，第三方材料保留原作者归属与许可，详见 [NOTICE](NOTICE) 和 [来源声明](sources/NOTICE.md)。可使用 [CITATION.cff](CITATION.cff) 引用。

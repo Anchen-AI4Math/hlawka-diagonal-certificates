@@ -8,3 +8,9 @@ sources/fetch_platform.py
 sources/inspect_page.py
 *.tmp
 .test-tmp/
+paper/build-report.json
+paper/*.aux
+paper/*.log
+paper/*.out
+paper/*.toc
+paper/*.xdv

@@ -1,0 +1,771 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=28mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,booktabs,array}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{xurl}
+\usepackage{xcolor}
+\usepackage[colorlinks=true,linkcolor=blue!50!black,urlcolor=blue!50!black,citecolor=blue!50!black]{hyperref}
+\hypersetup{pdftitle={A computer-assisted sharp diagonal Hlawka inequality for p at least 21},pdfauthor={Yuxuan Xu}}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{remark}\newtheorem{remark}[theorem]{Remark}
+\newcommand{\R}{\mathbb R}\newcommand{\C}{\mathbb C}
+\newcommand{\Np}{N_p}\newcommand{\F}{F_{p,K}}
+\newcommand{\repo}{\url{https://github.com/Anchen-AI4Math/hlawka-diagonal-certificates}}
+\DeclareMathOperator{\Rea}{Re}
+\allowdisplaybreaks
+\setlength{\emergencystretch}{2em}
+\title{A computer-assisted sharp diagonal Hlawka inequality\protect\\for real exponents $p\ge21$}
+\author{Yuxuan Xu\thanks{AI-assisted research and manuscript preparation; see the disclosure at the end.}\\
+School of Computer Science, Wuhan University}
+\date{17 October 2026\\\small Research preprint, version 1}
+\begin{document}
+\maketitle
+\begin{abstract}
+We give a computer-assisted proof that, for every real $p\ge21$, the
+dimension-independent sharp Hlawka constant of complex $\ell_p$ is the
+maximum of an explicit one-parameter ratio on the cyclic triple
+$(-t,1,1),(1,-t,1),(1,1,-t)$, $1/2\le t\le2$.
+The new finite calculation covers $21\le p\le32$; the range $p\ge32$
+uses a previously accepted Prove2Me theorem. The improvement uses norm
+caps, clipped pair-coordinate tails, and linear coordinate-sum constraints
+on a convex averaging domain, together with a sharper residual Hessian
+estimate. Rational linear-programming dual witnesses and interval
+certificates cover real exponent intervals, rather than sampled exponents.
+The finite obligations pass both Arb and a standard-library dyadic rational
+implementation. We give the analytic reduction, certificate specification,
+and reproduction instructions. This preprint has not undergone independent
+analytic review; the new range is not Lean-formalized, and no optimality of
+the exponent threshold $21$ is asserted.
+\end{abstract}
+\noindent\textbf{Keywords:} Hlawka inequality; $\ell_p$ norm; sharp constant;
+computer-assisted proof; interval arithmetic; convexity.
+
+\section{Introduction and statement}
+For $p>1$ and $v\in\C^n$ write $\Np(v)=(\sum_i|v_i|^p)^{1/p}$.
+For a triple $(x,y,z)$ put
+\begin{align}
+S&=\Np(x)+\Np(y)+\Np(z),& T&=\Np(x+y+z),\nonumber\\
+P&=\Np(x+y)+\Np(x+z)+\Np(y+z),& G&=2S-P.\label{eq:defs}
+\end{align}
+The Hlawka constant problem asks for the least $K$, uniformly in the
+dimension, such that $S-T\le KG$. Equivalently, the deficit
+\begin{equation}\label{eq:F}
+\F=(2K-1)S+T-KP=KG-(S-T)
+\end{equation}
+must be nonnegative. The triangle inequality gives $G\ge0$.
+For diagonal complex matrices this is exactly the corresponding Schatten
+$p$-norm question, since their singular values are the absolute values of
+their diagonal entries. We do not determine the sharp constant for general
+noncommuting matrices.
+
+Audenaert and Kittaneh formulate a dimension-independent operator version
+in Section 8.2, Problem 7 of \cite{AK}. A survey of the classical inequality
+and related questions is \cite{MN}. The diagonal construction and its
+reduction to a cyclic family were developed in the formalization project
+\cite{savarin}; the Prove2Me campaign records an accepted exponent cutoff
+$32$ \cite{campaign,solution32}. We use that result for the unbounded tail.
+Our contribution is an explicit certified extension to $[21,32]$, retaining
+additional convex constraints in the localization argument. We reproduce
+the analytic reductions needed for this interval below rather than requiring
+the reader to combine the earlier working notes.
+
+Define, for $1/2\le t\le2$,
+\begin{align}
+A_p(t)&=(t^p+2)^{1/p},&B_p(t)&=(2|1-t|^p+2^p)^{1/p},\nonumber\\
+R_p(t)&=\frac{3A_p(t)-3^{1/p}|2-t|}{6A_p(t)-3B_p(t)},&
+K_p&=\max_{1/2\le t\le2}R_p(t).\label{eq:cyclic}
+\end{align}
+Each pair of vectors in the cyclic family is nonproportional. Strict
+convexity of $\ell_p$ therefore makes the denominator positive. Thus the
+maximum exists by continuity and compactness. Since $R_p(2)=1$, $K_p\ge1$.
+
+\begin{theorem}\label{thm:main}
+For every real $p\ge21$, every $n\ge1$, and every $x,y,z\in\C^n$,
+\begin{equation}\label{eq:main} S-T\le K_p(2S-P).\end{equation}
+The constant $K_p$ is the least constant valid uniformly in $n$.
+For each fixed $n\ge3$, it is also the least constant in that dimension.
+\end{theorem}
+The proof on $[21,32]$ consists of the analytic arguments below and the
+finite certificate lemma in Section~\ref{sec:cert}. The proof on $[32,\infty)$
+invokes \cite{solution32}, whose downloaded source and acceptance metadata
+are preserved in the repository. That source was not independently rebuilt
+in this project. The theorem is a computer-assisted claim in this preprint,
+not a claim that the platform has accepted the cutoff $21$.
+
+\section{Dimension reduction and the scalar envelope}\label{sec:reduce}
+We first explain why it suffices to exclude real three-dimensional
+counterexamples. Throughout, $p>1$ and $K\ge1$.
+
+\begin{lemma}\label{lem:dim}
+If $\F\ge0$ for all triples in $\R^3$, it holds in every finite real
+dimension and then in every finite complex dimension.
+\end{lemma}
+\begin{proof}
+For a real triple remove coordinates in which all three entries vanish.
+Give each remaining coordinate a nonnegative weight $w_i$, preserving the
+three pair moments
+\[
+\sum_i w_i\bigl(|x_i+y_i|^p,|x_i+z_i|^p,|y_i+z_i|^p\bigr)
+=\sum_i\bigl(|x_i+y_i|^p,|x_i+z_i|^p,|y_i+z_i|^p\bigr).
+\]
+The negative part $-KP$ is constant, and the positive part of $\F$ is
+concave in $w$, because $s^{1/p}$ is concave and $2K-1\ge0$.
+If more than three weights are positive, the corresponding moment columns
+are linearly dependent. Each column is nonnegative and nonzero: three zero
+pair entries would imply $x_i=y_i=z_i=0$. Any nonzero kernel direction
+therefore has both signs. Its feasible interval has two finite endpoints,
+each with fewer positive weights. Concavity implies that at least one
+endpoint does not increase $\F$. Starting from all weights equal to one
+and iterating leaves at most three positive weights. Multiply coordinate
+$i$ by $w_i^{1/p}$ and delete zero coordinates. A counterexample would thus
+give a counterexample in $\R^3$, padding with zeros when necessary.
+
+For complex vectors put $a_p=(2\pi)^{-1}\int_0^{2\pi}|\cos\theta|^p,d\theta>0$.
+For positive integers $M$, define the real-linear map
+\[
+(Q_Mx)_{m,i}=M^{-1/p}\Rea(e^{2\pi im/M}x_i),\qquad 0\le m<M.
+\]
+Riemann-sum convergence and rotation invariance give
+$\Np(Q_Mv)\longrightarrow a_p^{1/p}\Np(v)$ for each of the seven vectors
+in \eqref{eq:defs}. Apply the real inequality in dimension $Mn$, take
+the limit, and divide by $a_p^{1/p}$. This uses convergence of norms,
+not interchange of a norm with an integral.
+\end{proof}
+
+\begin{lemma}[Weighted three-point convexity]\label{lem:weighted}
+Let $f:\R\to\R$ be convex, let $a_i>0$, $s=\sum_{i=1}^3a_i$, and
+$m=s^{-1}\sum_i a_i u_i$. Then
+\[
+\sum_{i<j}(a_i+a_j)f\left(\frac{a_iu_i+a_ju_j}{a_i+a_j}\right)
+\le\sum_i a_if(u_i)+s f(m).
+\]
+\end{lemma}
+\begin{proof}
+Order $u_1\le u_2\le u_3$; the case of three equal points is immediate.
+If $u_2\le m$, the means for pairs $(1,3)$ and $(2,3)$ lie in $[m,u_3]$.
+Their total mass is $s+a_3$ and their first moment is $sm+a_3u_3$.
+The chord bound on this interval bounds their combined contribution by
+$sf(m)+a_3f(u_3)$. Jensen bounds the remaining pair by
+$a_1f(u_1)+a_2f(u_2)$. If $m\le u_2$, use the chord on $[u_1,m]$
+for pairs $(1,2)$ and $(1,3)$ and Jensen for $(2,3)$.
+\end{proof}
+
+Set
+\begin{equation}\label{eq:envelope}
+g_p(u)=((1+u^p)/2)^{1/p},\qquad
+E_p(u)=\frac{1-u}{2(1-g_p(u))}\quad(0\le u<1).
+\end{equation}
+For a real triple normalized by $S=1$ and having no zero vector,
+Lemma~\ref{lem:weighted}, applied coordinatewise to $f(s)=|s|^p$
+with weights $\Np(x),\Np(y),\Np(z)$, gives
+\[
+\sum_{i<j}\frac{\Np(x_i+x_j)^p}{(\Np(x_i)+\Np(x_j))^{p-1}}\le1+T^p.
+\]
+Jensen with weights $(\Np(x_i)+\Np(x_j))/2$ implies $P\le2g_p(T)$.
+Here $x_1,x_2,x_3$ denote the three vectors, not scalar coordinates.
+The function $g_p$ is convex and $g_p(1)=1$, so its secant slope
+$(1-g_p(u))/(1-u)$ is nondecreasing; $E_p$ is nonincreasing.
+A zero vector gives $\F=(K-1)$ times the remaining pair gap and cannot
+be a counterexample. For a counterexample $T<1$, and
+\begin{equation}\label{eq:envelope-use}
+K<\frac{1-T}{G}\le E_p(T).
+\end{equation}
+Consequently, $E_p(q)<K_p$ forces $T<q$ when $S=1$.
+
+\section{Normalization, orientation, and coarse localization}\label{sec:coarse}
+Fix one of the two windows in Table~\ref{tab:profiles}; write its endpoints
+as $p_0,p_1$, and put $A=3q$, $k_0=cp_0$. All terminating decimals
+in this paper and the input profiles denote exact rationals.
+\begin{table}[ht]
+\centering\small
+\begin{tabular}{lcc}\toprule
+Parameter & Window I & Window II\\\midrule
+$[p_0,p_1]$ & $[21,26]$ & $[26,32]$\\
+$c$ & $273/625$ & $443/1000$\\
+$q$ & $1011/2500$ & $197/500$\\
+Orientation error $e$ & $13/100$ & $1/10$\\
+Initial tail error $\varepsilon_0$ & $10^{-5}$ & $10^{-5}$\\
+Refined tail error $\varepsilon$ & $10^{-8}$ & $10^{-8}$\\
+Coarse $(\ell_0,u_0,v_0,w_0)$ & $(.378,1.214,.698,1.214)$ & $(.477,1.183,.750,1.183)$\\
+Young parameters $(e_1,e_2)$ & $(1,1/4)$ & $(1/10,1/10)$\\
+Slab width & $1/32$ & $1/16$\\\bottomrule
+\end{tabular}
+\caption{Exact profiles used by the finite verification.}\label{tab:profiles}
+\end{table}
+The certificates establish
+\begin{equation}\label{eq:Kbounds} cp<K_p\le p/2,\qquad E_p(q)<K_p.\end{equation}
+Their verification is specified in Section~\ref{sec:cert}.
+
+The reflection $(x,y,z)\mapsto(-(x+y+z),y,z)$ exchanges $T$ and
+$\Np(x)$, permutes the pair norms, and changes $\F$ by
+$(2K-2)(T-\Np(x))$. Reflect in a largest singleton norm if necessary.
+A counterexample can therefore be chosen with each singleton norm at
+most $T$. Scale to $S=3$. Equations~\eqref{eq:envelope-use}--\eqref{eq:Kbounds}
+give, with $N_j=\Np(x_j)$,
+\begin{equation}\label{eq:normal}
+1\le T<A,\quad N_j\le T,\quad N_j>3-2A,\quad
+G<\frac{2}{cp},\quad k_0G+T<3.
+\end{equation}
+
+In three real coordinates each pair has a signed coordinate at least
+$3^{-1/p}$ times its norm. Since its norm is at most $2A$, its loss
+is less than $e$ provided
+\begin{equation}\label{eq:orientchecks}
+2A(1-3^{-1/p_0})<e,\quad
+3-2A>2/k_0+e,\quad 3-4/k_0-2e>A.
+\end{equation}
+These comparisons are certified. The three selected coordinates are
+distinct. Indeed, if pairs $(a,b)$ and $(a,d)$ select one coordinate with
+the same sign, adding their inequalities and using the singleton bound
+for $a$ gives a signed total coordinate at least $3-2G-2e>T$.
+If they select opposite signs, each inequality, after bounding the other
+singleton coordinate, gives $\pm a_i\ge N_a-G-e$. Hence
+$N_a\le G+e<3-2A$, again impossible.
+
+Permute and flip coordinates so that the pair complementary to index $i$
+has its positive main coordinate at $i$. Write $X_{ji}$ for coordinate
+$i$ of vector $j$, $P_i=\Np(X_j+X_k)$ and $L_i=X_{ji}+X_{ki}$, where
+$\{i,j,k\}=\{1,2,3\}$. The following rational linear system contains
+the resulting counterexample:
+\begin{equation}\label{eq:LP}
+\begin{gathered}
+0\le N_j\le T,\quad\sum_jN_j=3,\quad1\le T\le A,\\
+-N_j\le X_{ji}\le N_j,\quad -T\le\sum_jX_{ji}\le T,\\
+0\le P_i\le N_j+N_k,\quad P_i-L_i\le e,\quad
+T-k_0\sum_iP_i\le3-6k_0.
+\end{gathered}
+\end{equation}
+Eighteen rational dual witnesses imply $0\le L_i\le3$ and
+$|(X_j+X_k)_r|\le L_i/2$ for $r\ne i$. Concavity of $s^{1/p}$ yields
+\[
+P_i\le L_i(1+2\,2^{-p})^{1/p}\le L_i+6\,2^{-p}/p<L_i+\varepsilon_0.
+\]
+The last bound is checked at $p_0$. Add these three linear inequalities
+to \eqref{eq:LP}. Eighteen further dual witnesses imply the coarse box
+\begin{equation}\label{eq:box0}
+-u_0\le X_{ii}\le-\ell_0,\qquad v_0\le X_{ji}\le w_0\quad(j\ne i).
+\end{equation}
+For clarity, a dual witness for $Av\le b$, $Ev=f$ consists of rational
+$y\le0,z$ with $A^Ty+E^Tz=d$. It proves $d^Tv\ge b^Ty+f^Tz$.
+The verifier reconstructs all objectives and checks these identities
+exactly; an optimizer's claimed optimum is never used as evidence.
+
+\subsection{A smaller tail bound}
+In any box with parameters $(\ell,u,v,w)$ as in \eqref{eq:box0}, a
+non-main coordinate of the pair excluding $k$ equals $V_i-X_{ki}$,
+where $V=\sum_jX_j$ and $i\ne k$. Since $X_{ki}\ge v$ and
+$V_i\le\Np(V)\le A$, it lies in
+\begin{equation}\label{eq:clip}
+[v-u,\ \min(w-\ell,A-v)].
+\end{equation}
+Window I uses this clipped interval. Its coarse tail bound is $.516$,
+and its main coordinate is at least $1.396$, giving ratio $129/349$.
+Window II uses the box-only tail bound $.706$ and main bound $1.5$.
+In both windows the certificate checks, with the corresponding ratio $r_0$,
+\begin{equation}\label{eq:tail}
+\frac6{p_0}r_0^{p_0}<\varepsilon,\qquad 0<r_0<1.
+\end{equation}
+Thus $P_i\le L_i+\varepsilon$ for all normalized counterexamples.
+The clipping argument uses the known total norm cap; it makes no claim
+about arbitrary points of the coarse box without that cap.
+
+\section{Certified contraction}\label{sec:contract}
+Let $a_i=-X_{ii}$, $w_i=\sum_{r\ne i}X_{ir}$, $W=\sum_iw_i=\sum_iL_i$,
+and $\gamma_p=2\,2^{-1/p}$. H\"older gives
+\begin{equation}\label{eq:row}
+a_i^p+(w_i/\gamma_p)^p\le N_i^p,\qquad w_i\le\gamma_pN_i.
+\end{equation}
+From $P=6-G$ and the refined tails,
+$W>6-2/(cp)-3\varepsilon$.
+On each rational slab $[\alpha,\beta]$ choose certified rational bounds
+\begin{align}
+t_-&\le2^{-1/\alpha}\le t_\alpha^+,&2^{-1/\beta}&\le t_\beta^+,\nonumber\\
+h&\ge2/(c\alpha)+3\varepsilon,&
+D&\ge2/(c\alpha)+3\varepsilon-6(1-t_\alpha^+),\label{eq:budgets}\\
+D&\ge0,&\delta&\ge D/(2t_-),\quad\delta\ge0.\nonumber
+\end{align}
+The comparison $2/c>6\log2$ is certified. It makes
+$6\,2^{-1/p}+2/(cp)$ decreasing. Therefore the nonnegative residuals
+$r_i=\gamma_pN_i-w_i$ satisfy
+\begin{equation}\label{eq:residual}
+\sum_i r_i<D,\qquad W>6-h,\qquad 2t_-\le\gamma_p\le2t_\beta^+.
+\end{equation}
+In particular, a pair of rows consumes the same total budget $D$,
+not two separate copies of that budget.
+
+\begin{lemma}[Diagonal and ratio bounds]\label{lem:contract}
+Suppose $\delta\le N\le V$, $a^p+(w/\gamma_p)^p\le N^p$,
+and $w\ge\gamma_pN-D$. If $B\ge0$ and
+\begin{equation}\label{eq:diagcert}
+(B/V)^p+(1-\delta/V)^p\ge1,
+\end{equation}
+then $a\le B$. Also, if $N_i\ge n>0$ and
+\begin{equation}\label{eq:ratiocert}
+\begin{gathered}
+1\le s\le2t_--D/n,\qquad0\le\tau\le s/2\le\sigma,\\
+\tau^p+(s-\tau)^p>1,\qquad\sigma^p+(s-\sigma)^p>1,
+\end{gathered}
+\end{equation}
+with all four power bases in $[0,1]$, then each off-diagonal entry of
+row $i$ lies strictly between $\tau N_i$ and $\sigma N_i$.
+\end{lemma}
+\begin{proof}
+Since $D/\gamma_p\le\delta$, the first hypotheses imply
+$a^p\le N^p-(N-\delta)^p\le V^p-(V-\delta)^p\le B^p$;
+the middle function is increasing for $N\ge\delta$.
+For the second claim divide the two off-diagonal entries by $N_i$,
+obtaining $u,v\ge0$, $u^p+v^p\le1$, $u+v\ge s$. Both are at most one.
+If $u\le\tau$, use the decrease of $r^p+(s-r)^p$ on $[0,s/2]$.
+If $u\ge\sigma$, use its increase on $[s/2,s]$; $u\le1\le s$.
+Either case contradicts the stated power comparison. The same applies to $v$.
+\end{proof}
+
+Initialize $n=v_0$, which is a valid lower bound on each $N_i$.
+The following updates are applied sequentially, always using the already
+established lower bound and checking $\delta\le n$.
+
+\paragraph{Lower update.}
+Choose $n'>0$ and $B\ge0$ satisfying \eqref{eq:diagcert} at $V=n'$ and
+$A\le\tau(3-n')-B$. If $N_i<n'$, the diagonal bound gives $a_i\le B$,
+whereas the $i$th total coordinate exceeds
+$\tau(3-N_i)-B>A$, a contradiction. Hence $N_i\ge n'$.
+
+\paragraph{Upper update.}
+Choose $0<U<3$ and $B\ge0$ satisfying \eqref{eq:diagcert} at $V=3-U$ and
+\begin{equation}\label{eq:upperupdate}
+2t_\beta^+A\le6-h-\sigma(3-U)-B.
+\end{equation}
+If $N_i>U$, let $M=N_j+N_k<3-U$. Minkowski applied to
+\eqref{eq:row} gives
+\[
+(a_j+a_k)^p+((w_j+w_k)/\gamma_p)^p\le M^p.
+\]
+The sum of their residuals is less than $D$, and $M\ge2n\ge\delta$.
+The diagonal bound thus gives $a_j+a_k\le B$. The sum of total
+coordinates $j,k$ exceeds
+$W-\sigma M-B>6-h-\sigma(3-U)-B$.
+H\"older bounds this sum by $\gamma_pT<2t_\beta^+A$, contradicting
+\eqref{eq:upperupdate}. Thus $N_i\le U$.
+
+\paragraph{Final box.}
+With the final $n,U,\tau,\sigma$, choose $A_f$ satisfying the diagonal
+certificate at $V=U$. Then
+\begin{equation}\label{eq:finalbounds}
+\tau n<X_{ij}<\sigma U\ (i\ne j),\qquad
+\tau(3-U)-A<a_i\le A_f.
+\end{equation}
+Each slab stores a rational box $B=B(\ell,u,v,w)$, verified by
+\begin{equation}\label{eq:boxchecks}
+v\le\tau n,\quad \sigma U\le w,\quad A_f\le u,\quad
+\ell\le\tau(3-U)-A.
+\end{equation}
+There are ten lower updates followed by the final ratio and upper update
+in every slab. All power comparisons are checked at $p=\beta$ with bases
+in $[0,1]$, so they hold throughout the slab. These are finite induction
+steps, with no assumption of the desired final box in an earlier update.
+
+\section{Convex domains retaining the normalization information}\label{sec:domain}
+The normalization $S=3$ is useful for deriving bounds but is not itself a
+convex constraint to preserve during averaging. Window II uses
+\begin{equation}\label{eq:D2}
+\mathcal D_2=B\cap\{\Np(X_i)\le U\ (i=1,2,3),\ \Np(V)\le A\}.
+\end{equation}
+For Window I, each pair gap is nonnegative and at most $G$; hence at a
+normalized counterexample
+\[
+P_i=3-N_i-(N_j+N_k-P_i)>3-U-2/(c\alpha).
+\]
+By the tail bound, set
+\begin{equation}\label{eq:floors}
+J=3-U-2/(c\alpha)-\varepsilon,\qquad W_0=6-h.
+\end{equation}
+Then the counterexample belongs to the smaller domain
+\begin{equation}\label{eq:D1}
+\mathcal D_1=\mathcal D_2\cap\{L_i\ge J\ (i=1,2,3),\ \sum_iL_i\ge W_0\}.
+\end{equation}
+Both domains are convex and invariant under simultaneous permutation of
+rows and coordinates. The new constraints in \eqref{eq:D1} are linear.
+In particular, neither domain retains the equality $S=3$.
+
+Here are the constants used to bound the Hessian. Set $m=\min(\ell,v)$,
+$M=\max(u,w)$. In Window I set
+\begin{equation}\label{eq:geo1}
+\begin{gathered}
+L=\max(2v,J),\quad s=L-u,\quad t=\min(2w-\ell,A),\\
+\eta=\max\{|v-u|,|\min(w-\ell,A-v)|\},\quad b_0=\max(v,W_0/6).
+\end{gathered}
+\end{equation}
+The interval in \eqref{eq:clip} is also checked to be nonempty.
+In Window II use the weaker box bounds
+\begin{equation}\label{eq:geo2}
+L=2v,\quad s=2v-u,\quad t=2w-\ell,\quad
+\eta=\max(|v-u|,|w-\ell|),\quad b_0=v.
+\end{equation}
+The certificate verifies $m>0$, $0<s\le t$, $0<\eta\le L$ and,
+in Window I, $J,W_0>0$. On the appropriate domain, each singleton
+coordinate has absolute value in $[m,M]$, total coordinates lie in $[s,t]$,
+and each pair has main coordinate at least $L$ and tails of magnitude
+at most $\eta$. Singletons, pairs, and total are therefore nonzero.
+
+\section{The Hessian estimate}\label{sec:hessian}
+Write $|\cdot|_2$ for the Euclidean norm. For $p>2$, $\Np$ is $C^2$
+away from the zero vector, even if some individual coordinates vanish.
+Differentiation and completion of the square give
+\begin{equation}\label{eq:hessian}
+H_p(v,z)=\frac{p-1}{\Np(v)^{p-1}}
+\min_{a\in\R}\sum_i|v_i|^{p-2}(z_i-av_i)^2.
+\end{equation}
+The minimizing $a$ is
+$\sum_i|v_i|^{p-2}v_iz_i/\sum_i|v_i|^p$.
+For each row decompose a direction as $Z_j=a_jX_j+U_j$ using this
+minimizer, and put $D_Z=\sum_j Z_j-bV$ using the total minimizer.
+The norm caps in the convex domain imply the positive lower bounds
+\begin{equation}\label{eq:positivehess}
+\sum_jH_p(X_j,Z_j)\ge b_C\sum_j|U_j|_2^2,\quad
+H_p(V,\sum_jZ_j)\ge b_T|D_Z|_2^2,
+\end{equation}
+where
+\[
+b_C=\frac{(p-1)m^{p-2}}{U^{p-1}},\qquad
+b_T=\frac{(p-1)s^{p-2}}{A^{p-1}},\qquad
+d=\frac{(p-1)\eta^{p-2}}{L^{p-1}}.
+\]
+In a pair with main coordinate $k$, choose in \eqref{eq:hessian} the
+scalar which eliminates the main coordinate. The resulting upper bound
+is $d$ times the sum of squares of its two remaining components.
+
+\subsection{Controlling the radial coefficients}
+Let $a_j=\max a_i$, $a_k=\min a_i$, $\Delta=a_j-a_k$, and
+$R=\sum_i a_iX_i$. Then
+\begin{equation}\label{eq:cross}
+V_jR_k-V_kR_j\ge m(V_j+V_k)\Delta.
+\end{equation}
+Indeed, subtract $a_k$ from all coefficients, and let $l$ be the third
+index and $\lambda=a_l-a_k\in[0,\Delta]$. The left side becomes
+$\Delta A_1+\lambda A_2$, where
+$A_1=V_jX_{jk}-V_kX_{jj}$ and $A_2=V_jX_{lk}-V_kX_{lj}$.
+If $A_2\ge0$ it is at least $\Delta A_1$; otherwise it is at least
+$\Delta(A_1+A_2)$. Both $A_1$ and
+$A_1+A_2=V_kX_{kj}-V_jX_{kk}$ are at least $m(V_j+V_k)$.
+
+Define
+\begin{equation}\label{eq:Hshape} H=\frac{s^2+t^2}{m^2(s+t)^2}.\end{equation}
+For two positive numbers in $[s,t]$, their squared Euclidean norm divided
+by their squared sum is at most $(s^2+t^2)/(s+t)^2$; this follows by
+monotonicity in their ratio. Since $R=D_Z-\sum U_i+bV$, Cauchy and
+Young's inequality in \eqref{eq:cross} give
+\begin{equation}\label{eq:delta}
+\Delta^2\le H\left((1+e_1)|D_Z|_2^2+
+3(1+e_1^{-1})\sum_i|U_i|_2^2\right).
+\end{equation}
+
+\subsection{Pair residuals}
+For the pair of rows $j,r$ complementary to $k$, the residual in coordinate
+$i\ne k$ equals $r_{ki}+e_{ki}$, where
+\begin{align}
+r_{ki}&=(a_j-a_r)\frac{X_{rk}X_{ji}-X_{jk}X_{ri}}{X_{jk}+X_{rk}},\nonumber\\
+e_{ki}&=U_{ji}+U_{ri}-\theta_{ki}(U_{jk}+U_{rk}),\qquad
+\theta_{ki}=\frac{X_{ji}+X_{ri}}{X_{jk}+X_{rk}}.\label{eq:pairres}
+\end{align}
+The fraction multiplying $a_j-a_r$ is bounded by $M$ in absolute value:
+it is a difference with positive weights summing to one, and both relevant
+coordinates have absolute value at most $M$. Thus
+\begin{equation}\label{eq:rbound}
+\sum_{k,i\ne k}r_{ki}^2\le2M^2\sum_{j<r}(a_j-a_r)^2\le4M^2\Delta^2.
+\end{equation}
+For Window II, $|\theta_{ki}|\le1$ and four-term Cauchy gives
+$\sum e_{ki}^2\le16\sum_j|U_j|_2^2$: in the six residuals an off-diagonal
+entry occurs at most three times and a diagonal entry twice.
+
+For Window I put $\rho=\eta/L$. Split $e_{ki}$ into
+$U_{ji}+U_{ri}$ and $-\theta_{ki}(U_{jk}+U_{rk})$.
+In each coordinate, the first set contributes $(x+y)^2+(x+z)^2\le
+3(x^2+y^2+z^2)$, since the difference is
+$(x-y-z)^2+(y-z)^2$. The second set has squared norm at most
+$4\rho^2\sum|U_j|_2^2$, because each off-diagonal main entry occurs
+twice. The Euclidean triangle inequality yields
+\begin{equation}\label{eq:ebound}
+\sum e_{ki}^2\le(\sqrt3+2\rho)^2\sum_j|U_j|_2^2
+\le E\sum_j|U_j|_2^2,\qquad E=(7/4+2\rho)^2.
+\end{equation}
+For Window II set $E=16$. Using Young's inequality with $e_2$,
+\eqref{eq:delta} and \eqref{eq:rbound} give
+\begin{align}
+\sum(r_{ki}+e_{ki})^2&\le G_T|D_Z|_2^2+G_C\sum_j|U_j|_2^2,\label{eq:pairbound}\\
+G_T&=4M^2(1+e_2)H(1+e_1),\nonumber\\
+G_C&=12M^2(1+e_2)H(1+e_1^{-1})+E(1+e_2^{-1}).\nonumber
+\end{align}
+Combining the positive and negative Hessian bounds proves
+\begin{equation}\label{eq:Fhessian}
+D^2\F(X)[Z,Z]\ge(b_T-KdG_T)|D_Z|_2^2+
+((2K-1)b_C-KdG_C)\sum_j|U_j|_2^2.
+\end{equation}
+Put
+\begin{equation}\label{eq:ratios}
+r_T=\frac A L\left(\frac{\eta A}{Ls}\right)^{p-2}=\frac d{b_T},\qquad
+r_C=\frac U L\left(\frac{\eta U}{Lm}\right)^{p-2}=\frac d{b_C}.
+\end{equation}
+On every slab the certificate checks the two strict inequalities
+\begin{equation}\label{eq:curvature}
+1-G_T(p/2)r_T>0,\qquad 2c-1/p-(G_C/2)r_C>0.
+\end{equation}
+By \eqref{eq:Kbounds}, both coefficients in \eqref{eq:Fhessian} are
+positive. In particular $\F$ is convex on the relevant domain: along
+each segment it is $C^2$ in a neighborhood of every point and has
+nonnegative second derivative. This also applies to segments on the
+boundary of the closed domain.
+
+\section{Permutation averaging and sharpness}\label{sec:finish}
+Average $X$ over all six simultaneous row and coordinate permutations.
+The resulting matrix has diagonal entries $-a$ and off-diagonal entries
+$b>0$. It remains in the convex domain, and convexity gives
+$\F(\overline X)\le\F(X)$. The box gives $a\le u$, $b\ge v$;
+Window I also gives $b\ge W_0/6$, hence $b\ge b_0$ in both windows.
+The certificate verifies
+\begin{equation}\label{eq:orbit}
+u/v\le2,\qquad \ell/w\ge1/2\quad\hbox{or}\quad A\le3b_0/2.
+\end{equation}
+If the box alternative holds, $a/b\ge1/2$ directly. Otherwise the
+positive total coordinates give $0<2b-a\le A$, and therefore
+$a/b\ge2-A/b\ge1/2$. Thus $t=a/b\in[1/2,2]$.
+For $K=K_p$, equation~\eqref{eq:cyclic} implies
+\[
+\F(\overline X)=b(6A_p(t)-3B_p(t))(K_p-R_p(t))\ge0.
+\]
+A counterexample would instead give $\F(\overline X)\le\F(X)<0$.
+This excludes real three-dimensional counterexamples on both windows.
+Lemma~\ref{lem:dim} proves the complex inequality on $[21,32]$.
+The accepted theorem \cite{solution32} supplies $p\ge32$ with the same
+definitions, proving admissibility in Theorem~\ref{thm:main}.
+
+Finally, the cyclic triple has strictly positive $G$ and ratio exactly
+$R_p(t)$. A constant valid in complex dimension three must dominate every
+such ratio, and hence $K_p$. Taking a maximizer shows attainment. Padding
+with zeros gives the same sharpness in each dimension $n\ge3$.
+
+\section{Finite certificates and reproducibility}\label{sec:cert}
+\begin{lemma}[Finite certificate lemma]\label{lem:finite}
+For the two profiles in Table~\ref{tab:profiles}, all scalar, orientation,
+linear-dual, tail, contraction, geometry, orbit, and curvature comparisons
+used in Sections~\ref{sec:coarse}--\ref{sec:finish} hold on their specified
+closed real exponent intervals.
+\end{lemma}
+\begin{proof}[Computer-assisted verification]
+The proof is the deterministic replay described here, using the committed
+JSON witnesses and the directed interval operations of Appendix~\ref{app:arith}.
+Table~\ref{tab:counts} records the finite size. All profile parameters,
+partition endpoints, and witnesses are parsed as exact fractions.
+Partitions must meet exactly, in order, with positive length and matching
+outer endpoints. Thus all real exponents are covered.
+
+For each scalar cell $[a,b]$, the witness supplies one rational
+$t\in[1/2,2]$. Evaluate $R_p(t)-E_p(q)$ and $R_p(t)-cp$ with
+$p\in[a,b]$ and require positive interval lower endpoints. This proves
+the lower bounds in \eqref{eq:Kbounds}. For the upper bound, partition
+the exponent range and, on each exponent cell, partition the entire
+$t$ range. Evaluate $p/2-R_p(t)$ on every rectangle and require a positive
+lower endpoint. Every denominator is checked positive before division.
+
+The coarse checker reconstructs \eqref{eq:LP} and the 36 objectives;
+it checks each rational dual identity, sign and target, adding the initial
+tail constraints only between its two stages. The scalar orientation,
+tail and monotonicity prerequisites are checked independently.
+For each contraction slab it validates \eqref{eq:budgets}, the preceding
+$n$ in each round, the bases and branch conditions in
+Lemma~\ref{lem:contract}, the updates, and \eqref{eq:boxchecks}.
+It then reconstructs all geometric constants as rational numbers and
+checks their domains and \eqref{eq:orbit}. Finally, interval evaluation
+of \eqref{eq:ratios}--\eqref{eq:curvature} covers the full slab.
+Stored floating-point diagnostics are not used in any acceptance decision.
+\end{proof}
+
+\begin{table}[ht]
+\centering
+\begin{tabular}{lrr}\toprule
+Obligation & $[21,26]$ & $[26,32]$\\\midrule
+Scalar exponent cells &2355&2699\\
+Upper-bound rectangles &960&672\\
+Exact LP dual witnesses &36&36\\
+Contraction slabs &160&96\\
+Lower updates per slab &10&10\\\bottomrule
+\end{tabular}
+\caption{Certificates cover intervals, not isolated sample points.}\label{tab:counts}
+\end{table}
+
+The primary files are \path{profiles/cutoff21.json},
+\path{profiles/cutoff26.json} and the corresponding subdirectories of
+\path{certificates/}, each containing \path{scalar.json},
+\path{cyclic-upper.json}, \path{coarse.json}, and \path{contractor.json}.
+The acceptance implementation is \path{scripts/verify.py}, with exact
+model construction in \path{scripts/coarse_lp.py} and geometric constants
+in \path{scripts/geometry.py}. Candidate generation may use floating-point
+optimization, but the replay neither calls that optimizer nor trusts its
+reported optimum.
+
+Both windows have passed Arb at 192 and 256 bits and the standard-library
+rational backend at 256 bits. The minimum reported lower endpoints of
+the two dimensionless curvature margins on $[21,26]$ are approximately
+$0.391298$ and $0.321741$; on $[26,32]$ they exceed $0.3200$ and $0.2675$.
+These rounded summaries are descriptive; the actual decisions use the
+unrounded interval endpoints.
+
+From the repository root, the complete dependency-free release replay is
+\begin{verbatim}
+python -S scripts/replay_release.py
+\end{verbatim}
+It runs both windows at 256-bit rational precision, rejection controls,
+and checks all eleven preserved upstream file hashes. It writes
+\path{results/release-replay.json}, including the input hashes. Python 3.14
+was used for the recorded runs. No third-party package is imported by
+this replay; \texttt{-S} disables site initialization.
+For an individual window, for example:
+\begin{verbatim}
+python -S scripts/verify.py --backend rational --precision 256 \
+  --profile profiles/cutoff21.json \
+  --directory certificates/cutoff21 \
+  --output results/cutoff21-rational.json
+\end{verbatim}
+The backslash continuation above is for a POSIX shell; on Windows enter
+the command on one line. An Arb replay uses the same command without
+\texttt{-S}, with \texttt{--backend arb}, after installing
+\texttt{python-flint==0.9.0} (see \path{requirements.txt}).
+
+Negative controls deliberately damage coverage, a cyclic witness, a
+contraction chain, an LP dual, a certificate set, a final box, and a
+curvature configuration. Window I additionally tests an unjustifiably
+small clipped-tail budget. Both backends reject all eight Window I
+mutations; Window II has seven. There are also 53 arithmetic cross-checks
+against higher-precision Arb. Rejection tests are implementation checks,
+not substitutes for the analytic lemmas.
+
+\subsection{Trust and provenance}
+The two arithmetic backends share the certificate data, LP model,
+geometric formulas, and \path{verify.py}. They are not independent
+end-to-end proofs. Python's integer arithmetic, interpreter, the interval
+implementation, and the correspondence between this paper and the checker
+remain in the computational trust boundary. The mathematical argument
+has received internal self-audit, but no independent analytic review is
+claimed. No new Lean proof or Prove2Me submission has been made.
+
+The tail reference is the final \texttt{theorem solution} in submission
+\path{2d248eb1-4938-4dee-8392-df24d2c70f2f}, with statement
+``for every real $p\ge32$, the cyclic constant is the least uniform
+complex $\ell_p$ Hlawka constant.'' Its record and byte-preserved source
+are in \path{sources/}; \path{sources/provenance.json} gives identifiers
+and SHA-256 digests. The coarse, contraction and convexity components at
+cutoff $32$ are attributed in those records to \texttt{@bwdaugherty}.
+The underlying public construction repository is \cite{savarin}, with
+reference commit \path{1829591140522193a81ae721330e4d775c81123e}.
+We do not count a source download or acceptance record as a local rebuild.
+
+\section{Discussion}
+The number $21$ is a sufficient lower threshold for the exponent $p$,
+not the value of $K_p$ and not a proven optimal threshold. The constant
+itself remains the exact real maximum \eqref{eq:cyclic}; a decimal
+approximation to it would require a specified exponent and precision.
+The proof does not require $p$ or the cutoff to be an integer. The older
+window $[127/4,32]$ illustrates that rational cutoffs work in the same
+certificate framework.
+
+The gain comes from keeping information during convexification:
+singleton and total norm caps reduce Hessian denominators; the total norm
+clips pair tails; pair-main-coordinate floors improve the radial scale;
+and the off-diagonal sum floor keeps the permutation average in the
+cyclic parameter range. These constraints are convex or linear, which is
+essential for Jensen averaging. Further threshold reductions would
+require new certificates and, if estimates change, a corresponding
+analytic justification. No claim for $2<p<21$ follows from the present
+calculation.
+
+\appendix
+\section{Directed dyadic arithmetic}\label{app:arith}
+At precision $B$ an integer pair $(l,u)$ represents
+$[l2^{-B},u2^{-B}]$. Fraction inputs are enclosed using integer floor and
+ceiling. Addition and subtraction use endpoint identities. Multiplication
+and division use all endpoint combinations and outward integer rounding;
+division rejects intervals containing zero. Float inputs are rejected.
+Strict positivity is accepted only when the integer lower endpoint is
+strictly positive. These rules give containment by elementary interval
+arithmetic, regardless of dependency-induced overestimation.
+
+For a positive dyadic $x$, range reduction writes $x=2^km$, with
+$1\le m<2$. Let $z=(m-1)/(m+1)$; the implementation checks a rounded
+enclosure in $[0,1/2]$. The finite formula
+\[
+\log m=2\sum_{j=0}^{191}\frac{z^{2j+1}}{2j+1}+R,\qquad
+0\le R\le\frac{2z^{385}}{385(1-z^2)}
+\le\frac8{3\cdot385\cdot2^{385}}
+\]
+follows by integrating the geometric series or the power series for
+$\operatorname{arctanh}z$. All terms are evaluated outward, and the
+rational remainder is added to the upper endpoint. Compute $\log2$ by
+the same formula and use $\log x=k\log2+\log m$, with signed interval
+multiplication when $k<0$.
+
+For $e^x$, choose $k\ge0$ so that the interval for $z=x/2^k$ lies
+in $[-1/2,1/2]$, and evaluate
+\[
+e^z=\sum_{j=0}^{80}\frac{z^j}{j!}+R,\qquad
+|R|\le\frac2{2^{81}81!}.
+\]
+The Lagrange remainder and $e^{1/2}<2$ justify this bound.
+Enlarge both endpoints by the remainder bound, verify positivity,
+and square $k$ times outward. Monotonicity gives interval exponential
+and logarithm from their endpoint enclosures. For positive bases use
+$x^y=\exp(y\log x)$. When the base interval includes zero and its upper
+endpoint is positive, with strictly positive exponents, monotonicity in
+the base gives lower endpoint zero and the upper-base power enclosure.
+A zero base gives zero. Other nonpositive-base cases are rejected.
+This includes the vanishing factor $|1-t|^p$ at $t=1$.
+The implementation is \path{scripts/rational_intervals.py}; explicit
+remainders, not presumed numerical precision, supply rigor.
+
+\section*{Acknowledgments and AI-use disclosure}
+The cyclic reduction and formalized baseline are credited to the
+\texttt{savarin/hlawka-schatten} project (Ezzeri Esa / savarin in the
+source attribution) and the Prove2Me contributors, including
+\texttt{@bwdaugherty}. Their sources and licenses are identified in
+\path{sources/NOTICE.md}. This project adapts that proof architecture;
+it does not claim to originate the diagonal Hlawka problem or the
+cyclic extremizer construction.
+
+OpenAI Codex assisted with mathematical exploration, proof drafting,
+certificate generation, implementation, verification runs, and preparation
+of this manuscript. AI assistance and internal replay do not constitute
+independent expert review. The author name and institutional affiliation
+are supplied by the author; no institutional endorsement is implied.
+
+\section*{Data and software availability}
+The manuscript source, PDF, exact input certificates, replay scripts,
+and verification reports are available at \repo.
+This is a repository preprint, not a journal publication. Citation
+metadata and third-party notices accompany the release.
+
+\begin{thebibliography}{9}
+\raggedright
+\bibitem{AK} K.~M.~R. Audenaert and F. Kittaneh,
+\emph{Problems and Conjectures in Matrix and Operator Inequalities},
+arXiv:1201.5232v3 (2012), Section 8.2, Problem 7.
+\url{https://arxiv.org/abs/1201.5232v3}.
+\bibitem{MN} D.-\c{S}. Marinescu and C.~P. Niculescu,
+\emph{A survey of the Hornich--Hlawka inequality},
+arXiv:2407.03278 (2024). \url{https://arxiv.org/abs/2407.03278}.
+\bibitem{savarin} savarin and contributors,
+\emph{Dimension-independent Hlawka constants for Schatten norms},
+Lean source repository (2026). \url{https://github.com/savarin/hlawka-schatten}.
+Reference commit recorded in the accompanying provenance file.
+\bibitem{campaign} Prove2Me contributors,
+\emph{Sharp diagonal Hlawka constant}, campaign record, accessed
+17 October 2026. \url{https://prove2.me/campaigns/sharp-diagonal-hlawka-constant}.
+\bibitem{solution32} Prove2Me contributors,
+\emph{Accepted solution for cutoff 32}, submission
+\path{2d248eb1-4938-4dee-8392-df24d2c70f2f} (16 October 2026),
+theorem record \url{https://prove2.me/theorems/6e8430ce-7c32-4b82-9a1b-d7fcd67fdeb3}.
+Source and acceptance metadata preserved under \path{sources/}.
+\end{thebibliography}
+\end{document}

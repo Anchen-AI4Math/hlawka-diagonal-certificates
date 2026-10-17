@@ -1,0 +1,27 @@
+cff-version: 1.2.0
+message: "Please cite the accompanying research preprint. The new cutoff is not Lean-formalized or independently reviewed."
+type: software
+title: "Sharp diagonal Hlawka certificates for real exponents p >= 21"
+authors:
+  - family-names: Xu
+    given-names: Yuxuan
+    affiliation: "School of Computer Science, Wuhan University"
+version: 1.0.0
+date-released: 2026-10-17
+url: "https://github.com/Anchen-AI4Math/hlawka-diagonal-certificates"
+license: Apache-2.0
+preferred-citation:
+  type: report
+  title: "A computer-assisted sharp diagonal Hlawka inequality for real exponents p >= 21"
+  authors:
+    - family-names: Xu
+      given-names: Yuxuan
+      affiliation: "School of Computer Science, Wuhan University"
+  year: 2026
+  month: 10
+  day: 17
+  version: "1"
+  institution:
+    name: "Wuhan University"
+  url: "https://github.com/Anchen-AI4Math/hlawka-diagonal-certificates/blob/main/paper/main.pdf"
+  notes: "Research preprint. Author's Chinese name: 徐宇轩. AI-assisted; not independently reviewed or journal-published."

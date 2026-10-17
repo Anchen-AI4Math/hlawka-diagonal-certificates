@@ -7,3 +7,5 @@ The baseline Hlawka–Schatten library is by Ezzeri Esa (savarin), released unde
 The accepted cutoff 32 solution and its components were submitted by @bwdaugherty to Prove2Me, building on that library and the cutoff 50 development. Their exact platform identifiers and downloaded hashes are recorded in provenance.json. Preserve author and licensing notices; this repository does not relicense third-party material. Platform reuse is additionally governed by https://prove2.me/terms .
 
 No access token, API key or private workspace credential belongs in this directory. The local authenticated fetching helper is ignored by Git and stores no credentials here.
+
+For the public release, the Prove2Me terms were checked on 2026-10-17: public contributions made after 2026-09-24 15:55 UTC are licensed under Apache-2.0 to the extent the contributor has authority. The cutoff-32 records here are dated 2026-10-16. The repository includes the Apache-2.0 license text at `../LICENSE`; existing notices in downloaded sources remain intact. Linked papers are cited, not redistributed. No additional rights in third-party material are asserted.

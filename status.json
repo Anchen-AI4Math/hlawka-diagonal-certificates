@@ -16,7 +16,7 @@
       "26"
     ],
     "stage": "complete_computer_assisted_proof_manuscript",
-    "proof": "docs/proof-21.md",
+    "proof": "paper/main.tex",
     "foundation": [
       "docs/proof-26.md",
       "docs/proof-127-over-4.md"
@@ -36,7 +36,8 @@
         "26",
         "32"
       ]
-    ]
+    ],
+    "paper_pdf": "paper/main.pdf"
   },
   "verification": {
     "method": "Arb and standard-library dyadic rational intervals; exact rational LP dual replay",
@@ -70,12 +71,26 @@
       "results/cutoff21-negative-rational.json",
       "results/cutoff26-regression.json",
       "results/cutoff26-rational.json",
-      "results/arithmetic-crosscheck.json"
-    ]
+      "results/arithmetic-crosscheck.json",
+      "results/release-replay.json"
+    ],
+    "release_replay": "results/release-replay.json",
+    "release_replay_status": "PASS",
+    "release_negative_controls": 15
   },
   "publication": {
     "platform_submitted": false,
     "paper_submitted": false,
-    "public_navigation": "excluded because repository is private"
+    "public_navigation": "pending repository visibility change",
+    "preprint_title": "A computer-assisted sharp diagonal Hlawka inequality for real exponents p >= 21",
+    "author": {
+      "name": "Yuxuan Xu",
+      "name_zh": "徐宇轩",
+      "affiliation": "School of Computer Science, Wuhan University"
+    },
+    "version": "1",
+    "date": "2026-10-17",
+    "ai_assistance_disclosed": true,
+    "public_release_status": "prepared; authorized by author on 2026-10-17"
   }
 }

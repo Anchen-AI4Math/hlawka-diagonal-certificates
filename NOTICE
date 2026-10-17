@@ -1,0 +1,19 @@
+Sharp diagonal Hlawka certificates and manuscript
+Copyright 2026 Yuxuan Xu (徐宇轩).
+
+The author-supplied affiliation is School of Computer Science, Wuhan University.
+This is a research preprint; no institutional endorsement is implied.
+
+Original project material is distributed under the Apache License, Version 2.0.
+Third-party reference material retains its original attribution and license.
+
+The proof architecture builds on savarin/hlawka-schatten (Ezzeri Esa / savarin)
+and Prove2Me contributors, including @bwdaugherty for the accepted cutoff-32
+development. These contributions are not claimed as newly authored here.
+See sources/NOTICE.md and sources/provenance.json for exact source identifiers.
+Downloaded Lean files are unchanged reference snapshots, not locally rebuilt
+or newly formalized results. The new paper and certificate implementation
+are separate files and adapt and extend the earlier mathematical argument.
+
+OpenAI Codex assisted in mathematical exploration, drafting, implementation,
+certificate generation, and verification. No independent peer review is claimed.

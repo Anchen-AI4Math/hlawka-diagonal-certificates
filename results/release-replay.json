@@ -1,0 +1,48 @@
+{
+  "status": "PASS",
+  "python": "3.14.7 (tags/v3.14.7:823f032, Aug  5 2026, 10:51:32) [MSC v.1944 64 bit (AMD64)]",
+  "windows": [
+    [
+      "21",
+      "26"
+    ],
+    [
+      "26",
+      "32"
+    ]
+  ],
+  "backend": "standard-library dyadic rational intervals",
+  "precision_bits": 256,
+  "checks": [
+    "results/release-21-verification.json",
+    "results/release-21-negative.json",
+    "results/release-26-verification.json",
+    "results/release-26-negative.json"
+  ],
+  "upstream_source_hashes_checked": 11,
+  "scope": "Finite obligations and rejection controls; no Lean rebuild or independent analytic review.",
+  "input_sha256": {
+    "certificates/cutoff21/coarse.json": "da9afc17c2e471c28fc30b154aa39b28cfaf35ec98ae2a67cd318707222dafbe",
+    "certificates/cutoff21/contractor.json": "b8bb24c2c255a5a0a42163304fea7771ff9dc74119cdc4935232ef88649e32b5",
+    "certificates/cutoff21/cyclic-upper.json": "02bad1a5751e2faf493df34ec3db8715aaf66ac2fde75e1cdcbf21e6bde86b7e",
+    "certificates/cutoff21/scalar.json": "db27cb36f18dfa952ead0e8f7fd2b98ac42034d9b23a05ba472829f5b6b6e27c",
+    "certificates/cutoff26/coarse.json": "8f151726c887864e8d3e423c3b3b50590cb11d3650781369ed78316078d5e5ae",
+    "certificates/cutoff26/contractor.json": "f30b18b50a7b5090619344d4cb6666c02072d330a7e42084883e255e48c43e2f",
+    "certificates/cutoff26/cyclic-upper.json": "acfc2825b7298249155dcc6bc9461c3de798e65c5f49d4304b6cccc3a851c96f",
+    "certificates/cutoff26/scalar.json": "e855c1ab2e080129b45a62065f8bc0f6879e2851ac8ea4a32c242c7d06b9ec1a",
+    "profiles/cutoff21.json": "a364aef4c9b70f08e5dc7556fbb0c1b243a22db1f73954e6411ab672a90fb0a8",
+    "profiles/cutoff26.json": "c36e5ee820adf7b7133543777f748feb729e302a451f52fbb7839a5b5a337cb6",
+    "scripts/check_arithmetic.py": "960cd0078e929ca6011d84a7b84b892d5f41354617b7a7d9f4654b531c57079b",
+    "scripts/coarse_lp.py": "aa4530cf28fee1fbc6c170272f374deea1f8476fb97436c80927a1cbde5d9f46",
+    "scripts/generate.py": "e6537cdaf5d9b80de459389bac7d78744808d14cb06731bb81adecf3d54e6fa1",
+    "scripts/generate_window.py": "7a12dce910e24169fc82a0efd3346cb57d8dc1b9025bd907a480ac6c41e34d99",
+    "scripts/geometry.py": "8f23870aff2ae5b408248aeaa88a256fd6a65b9e3f7af29bf9c0dfc2cb9053e0",
+    "scripts/intervals.py": "f2e5fe7b1e912b7d1c2b66e89ce4dbd7c82a0923ada72f59edbb99c8f61fb7f1",
+    "scripts/negative_controls.py": "96199e9ed5fb55045e523742828e508df44cf134219f78a68d6a3a93e6adb544",
+    "scripts/provenance.py": "0dd0b490ce2f29c05c601067c80a6cff2544fa19530ac257a6c79e331f7a67a4",
+    "scripts/rational_intervals.py": "d2a823c3f8c09bbf9db003178bf817b7b44a3aae4d9f0ff0fb019f7172c86a1e",
+    "scripts/replay_release.py": "9c5bbc1fb890d966a1c0a5071966390fb34d9408c0a997a488779da161d34986",
+    "scripts/scout.py": "44beff9d3aab925c1e201e736480a58c25250ed5218da89f33e8ed1fc7ddbc84",
+    "scripts/verify.py": "efa3a8fc0da1004d51eacba05a936de950be5f55375302b73d11f0f667bca5f4"
+  }
+}
