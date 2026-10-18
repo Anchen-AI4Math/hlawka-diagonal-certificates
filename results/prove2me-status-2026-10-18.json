@@ -1,0 +1,210 @@
+{
+  "checked_at": "2026-10-18T03:47:31.773063+00:00",
+  "source": "Authenticated Prove2Me API read-back; no credentials or owner-only proposal identifier included",
+  "goal_url": "https://prove2.me/theorems/db286144-c8c4-4918-9bc9-03fcadedfffd",
+  "root_status": "Proved",
+  "open_leaf_count": 0,
+  "audits": [
+    {
+      "reviewer_username": "Shuze Chen",
+      "decision": "confirm",
+      "comment": "Confirmed by the moderator at approval.",
+      "created_at": "2026-10-18T01:49:38.657293+00:00"
+    },
+    {
+      "reviewer_username": "Yuxuan Xu",
+      "decision": "confirm",
+      "comment": "Confirmed by the mission captain (proposal self-audit).",
+      "created_at": "2026-10-18T01:49:38.925449+00:00"
+    }
+  ],
+  "proposal_status": "Reviewed",
+  "live_mission_url": "https://prove2.me/missions/8e2bd9f5-57b1-4d55-aab4-a94532a6d6b8",
+  "campaign_url": "https://prove2.me/campaigns/sharp-diagonal-hlawka-constant",
+  "best_proved_attested_cutoff": "21",
+  "entries": [
+    {
+      "value": "256",
+      "recorded_at": "2026-09-29T01:41:04.981+00:00",
+      "mission_id": "846c5975-c051-4823-91b3-836e5f07a551",
+      "mission": {
+        "id": "846c5975-c051-4823-91b3-836e5f07a551",
+        "name": "Sharp diagonal Hlawka constants: foundation and proved cutoff 256",
+        "main_theorem": {
+          "theorem_id": "d828068e-8b2b-4f6d-86a9-7d6358026dfc",
+          "status": "Proved",
+          "solved_at": "2026-09-29T01:41:04.9816+00:00"
+        }
+      }
+    },
+    {
+      "value": "90",
+      "recorded_at": "2026-10-01T03:50:19.266656+00:00",
+      "mission_id": "13ed3643-19ec-406a-90b9-d7ff125f4d7c",
+      "mission": {
+        "id": "13ed3643-19ec-406a-90b9-d7ff125f4d7c",
+        "name": "Sharp diagonal Hlawka constants: formalize the supplied proof at cutoff 90",
+        "main_theorem": {
+          "theorem_id": "b519f309-d992-45b3-85cc-fda260ef0fde",
+          "status": "Proved",
+          "solved_at": "2026-10-01T14:26:29.044126+00:00"
+        }
+      }
+    },
+    {
+      "value": "89",
+      "recorded_at": "2026-10-05T19:38:05.500645+00:00",
+      "mission_id": "b6bcd845-3478-41f5-9c75-3c1e73a33e0d",
+      "mission": {
+        "id": "b6bcd845-3478-41f5-9c75-3c1e73a33e0d",
+        "name": "Sharp diagonal Hlawka constants: lower the cutoff to 89",
+        "main_theorem": {
+          "theorem_id": "b2afdba8-fd6d-4c94-a924-101ef66e1ab7",
+          "status": "Proved",
+          "solved_at": "2026-10-05T01:09:15.220741+00:00"
+        }
+      }
+    },
+    {
+      "value": "85",
+      "recorded_at": "2026-10-05T23:25:11.388505+00:00",
+      "mission_id": "30bd170f-f2e3-416d-b05a-adedd858bb7e",
+      "mission": {
+        "id": "30bd170f-f2e3-416d-b05a-adedd858bb7e",
+        "name": "Sharp diagonal Hlawka constants: lower the cutoff to 85",
+        "main_theorem": {
+          "theorem_id": "7da9a83b-9c3c-49c1-8e59-377f8798a1da",
+          "status": "Proved",
+          "solved_at": "2026-10-06T01:30:52.187289+00:00"
+        }
+      }
+    },
+    {
+      "value": "87",
+      "recorded_at": "2026-10-06T01:08:26.078+00:00",
+      "mission_id": "2c258850-68f3-4464-b87b-eeaed8cce753",
+      "mission": {
+        "id": "2c258850-68f3-4464-b87b-eeaed8cce753",
+        "name": "Sharp diagonal Hlawka constants: lower the cutoff to 87",
+        "main_theorem": {
+          "theorem_id": "48035f3f-71a2-426a-92cc-d6ebeb3b15af",
+          "status": "Proved",
+          "solved_at": "2026-10-05T02:35:36.197087+00:00"
+        }
+      }
+    },
+    {
+      "value": "84",
+      "recorded_at": "2026-10-06T14:48:10.053087+00:00",
+      "mission_id": "5dd4395e-ce23-45b6-9787-726ca8d8e221",
+      "mission": {
+        "id": "5dd4395e-ce23-45b6-9787-726ca8d8e221",
+        "name": "Sharp diagonal Hlawka constants: lower the cutoff to 84",
+        "main_theorem": {
+          "theorem_id": "dc4ca4a3-8ccf-423c-8de3-f56278354923",
+          "status": "Proved",
+          "solved_at": "2026-10-06T09:44:36.989194+00:00"
+        }
+      }
+    },
+    {
+      "value": "80",
+      "recorded_at": "2026-10-06T14:49:30.919856+00:00",
+      "mission_id": "d8cee437-3519-4d74-9af2-770b341d0b01",
+      "mission": {
+        "id": "d8cee437-3519-4d74-9af2-770b341d0b01",
+        "name": "Sharp diagonal Hlawka constants: lower the cutoff to 80",
+        "main_theorem": {
+          "theorem_id": "aa9cb153-86dc-4986-a67b-3a6eae9c19c3",
+          "status": "Proved",
+          "solved_at": "2026-10-06T20:19:54.487988+00:00"
+        }
+      }
+    },
+    {
+      "value": "70",
+      "recorded_at": "2026-10-08T13:18:51.410984+00:00",
+      "mission_id": "d970ca4e-a63e-4f92-ae2f-afbc62332163",
+      "mission": {
+        "id": "d970ca4e-a63e-4f92-ae2f-afbc62332163",
+        "name": "Sharp diagonal Hlawka constants: lower the cutoff to 70",
+        "main_theorem": {
+          "theorem_id": "6a1646a7-c95c-425f-b2a5-27906fc6dbfc",
+          "status": "Proved",
+          "solved_at": "2026-10-10T04:26:31.172965+00:00"
+        }
+      }
+    },
+    {
+      "value": "62",
+      "recorded_at": "2026-10-11T16:31:33.817587+00:00",
+      "mission_id": "eb9d7cdd-da3f-478e-af68-78ba6ce53484",
+      "mission": {
+        "id": "eb9d7cdd-da3f-478e-af68-78ba6ce53484",
+        "name": "Sharp diagonal Hlawka constants: lower the cutoff to 62",
+        "main_theorem": {
+          "theorem_id": "4b0e2108-893f-4408-97cb-c338c56efbf6",
+          "status": "Proved",
+          "solved_at": "2026-10-10T07:53:19.414699+00:00"
+        }
+      }
+    },
+    {
+      "value": "50",
+      "recorded_at": "2026-10-13T19:53:58.333977+00:00",
+      "mission_id": "216aae9c-1dbf-44ee-8503-5126c528e848",
+      "mission": {
+        "id": "216aae9c-1dbf-44ee-8503-5126c528e848",
+        "name": "Sharp diagonal Hlawka constants: lower the cutoff to 50",
+        "main_theorem": {
+          "theorem_id": "1120d180-bace-44ec-8479-2de875a5b0bb",
+          "status": "Proved",
+          "solved_at": "2026-10-16T12:16:55.274681+00:00"
+        }
+      }
+    },
+    {
+      "value": "32",
+      "recorded_at": "2026-10-16T14:45:23.18231+00:00",
+      "mission_id": "b6067dd6-c557-4716-99a5-a6d5e9829860",
+      "mission": {
+        "id": "b6067dd6-c557-4716-99a5-a6d5e9829860",
+        "name": "Sharp diagonal Hlawka constant: cutoff 32",
+        "main_theorem": {
+          "theorem_id": "6e8430ce-7c32-4b82-9a1b-d7fcd67fdeb3",
+          "status": "Proved",
+          "solved_at": "2026-10-16T14:26:12.425725+00:00"
+        }
+      }
+    },
+    {
+      "value": "16",
+      "recorded_at": "2026-10-18T01:49:36.122922+00:00",
+      "mission_id": "5f823bb8-15b2-4e56-a23e-163acd2ed066",
+      "mission": {
+        "id": "5f823bb8-15b2-4e56-a23e-163acd2ed066",
+        "name": "Sharp diagonal Hlawka constants: lower the cutoff to 16",
+        "main_theorem": {
+          "theorem_id": "35f13fc8-75d2-4d2e-8832-82bc7987bb87",
+          "status": "Open",
+          "solved_at": null
+        }
+      }
+    },
+    {
+      "value": "21",
+      "recorded_at": "2026-10-18T01:49:38.967973+00:00",
+      "mission_id": "8e2bd9f5-57b1-4d55-aab4-a94532a6d6b8",
+      "mission": {
+        "id": "8e2bd9f5-57b1-4d55-aab4-a94532a6d6b8",
+        "name": "Sharp diagonal Hlawka constant: formalize cutoff 21",
+        "main_theorem": {
+          "theorem_id": "db286144-c8c4-4918-9bc9-03fcadedfffd",
+          "status": "Proved",
+          "solved_at": "2026-10-17T15:34:24.969782+00:00"
+        }
+      }
+    }
+  ],
+  "scope": "Platform status verification only; not independent analytic review or journal publication."
+}

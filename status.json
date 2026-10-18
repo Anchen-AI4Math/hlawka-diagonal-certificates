@@ -1,13 +1,16 @@
 {
-  "as_of": "2026-10-17",
+  "as_of": "2026-10-18",
   "topic": "Sharp diagonal Hlawka constant",
   "repository_visibility": "public",
   "platform_record": {
-    "cutoff": "32",
-    "solved_date": "2026-10-16",
+    "cutoff": "21",
+    "solved_date": "2026-10-17",
     "source": "https://prove2.me/campaigns/sharp-diagonal-hlawka-constant",
     "independently_rebuilt": false,
-    "last_checked": "2026-10-17T15:43:49.228301+00:00"
+    "last_checked": "2026-10-18T03:47:31.773063+00:00",
+    "mission_url": "https://prove2.me/missions/8e2bd9f5-57b1-4d55-aab4-a94532a6d6b8",
+    "attested_date": "2026-10-18",
+    "evidence": "results/prove2me-status-2026-10-18.json"
   },
   "research": {
     "candidate_cutoff": "21",
@@ -197,18 +200,19 @@
     "evidence": "results/publication-v2.json",
     "preprint_public": true,
     "prove2me_proposal": {
-      "status": "In review",
+      "status": "Reviewed",
       "campaign": "sharp-diagonal-hlawka-constant",
       "campaign_flag_set": true,
       "target_cutoff": "21",
       "proposal_uploaded": true,
       "submitted_for_moderation": true,
-      "live_mission_created": false,
-      "campaign_entry_attested": false,
+      "live_mission_created": true,
+      "campaign_entry_attested": true,
       "human_self_audit_and_submit_pending": false,
       "public_materials": "platform/README.md",
       "submitted_at": "2026-10-17T08:15:12.549+00:00",
-      "evidence": "results/prove2me-proposal-status.json"
+      "evidence": "results/prove2me-status-2026-10-18.json",
+      "mission_url": "https://prove2.me/missions/8e2bd9f5-57b1-4d55-aab4-a94532a6d6b8"
     },
     "paper_build": "paper/build.json"
   }

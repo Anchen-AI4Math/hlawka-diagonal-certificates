@@ -4,7 +4,7 @@
 
 **作者：徐宇轩（Yuxuan Xu），武汉大学计算机学院。** 论文为 AI 辅助研究预印本，明确披露辅助范围，并致谢既有证明与平台贡献者。
 
-**Prove2Me：** cutoff 21 的 ResearchPaper proposal 已由作者在网页完成 11 项确认并提交，服务器状态为 **In review**，关联原 campaign；待版主审核成为 live mission。[形式化任务材料与状态](platform/README.md)。
+**Prove2Me：** cutoff 21 的 ResearchPaper proposal 已于 2026-10-18 审核完成（Reviewed），[正式 mission](https://prove2.me/missions/8e2bd9f5-57b1-4d55-aab4-a94532a6d6b8) 已创建，campaign 已认证 cutoff 21。[形式化任务材料与状态](platform/README.md)。
 
 本仓库的完整论文将此前的 **26 推进到 21**，结论针对所有实数 `p≥21`、任意有限维复向量的统一最优 Hlawka 常数。论文独立展开 `[21,32]` 的解析归约及有限证书论证；`p≥32` 引用已有接受结果。仓库中的进展为 31.75 → 26 → 21。
 
@@ -16,7 +16,7 @@
 
 完整计算机辅助证明稿已完成作者自审，待独立审阅。Arb 192/256 位和纯有理数 256 位均通过原数值证书；两种数值后端共享数学条件和检查流程，不代表两份独立端到端证明。新增的 [Lean 标量证明](docs/lean-scalar.md) 使用端点整数幂证书和 Bernoulli 传递，没有把外部检查器 PASS 当作前提。
 
-2026-10-17 查询的 [Prove2Me campaign](https://prove2.me/campaigns/sharp-diagonal-hlawka-constant) 仍显示已认证 campaign cutoff 为 32。这里的 21、26、31.75、32 都是指数 p 的阈值，不是最优常数 K_p 的数值。
+2026-10-18 实时 API 核对：[Prove2Me campaign](https://prove2.me/campaigns/sharp-diagonal-hlawka-constant) 已完成且已认证的最佳 cutoff 为 21；另有 cutoff 16 任务，但主定理仍为 Open。[读回证据](results/prove2me-status-2026-10-18.json)。这里的 21、26、31.75、32 都是指数 p 的阈值，不是最优常数 K_p 的数值。
 
 ## 复核新窗口 [21,26]
 

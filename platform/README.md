@@ -1,8 +1,8 @@
 # Prove2Me 形式化任务材料
 
-2026-10-17。按作者要求，已准备并上传 **Sharp diagonal Hlawka constant: formalize cutoff 21** 的 `ResearchPaper` proposal，关联 [Sharp diagonal Hlawka constant campaign](https://prove2.me/campaigns/sharp-diagonal-hlawka-constant)。
+2026-10-18 更新。按作者要求，已准备并上传 **Sharp diagonal Hlawka constant: formalize cutoff 21** 的 `ResearchPaper` proposal，关联 [Sharp diagonal Hlawka constant campaign](https://prove2.me/campaigns/sharp-diagonal-hlawka-constant)。
 
-作者已完成网页自审并提交。服务器读回为 **In review**，11/11 项均已确认，提交时间为 2026-10-17 08:15:12 UTC（北京时间 16:15:12），campaign 关联保留。尚未创建公开 live mission，也没有 attested campaign entry。公开 campaign 的已认证 cutoff 仍为 32。[状态读回摘要](../results/prove2me-proposal-status.json)。owner-only proposal 地址不写入公开导航。
+作者已完成网页自审并提交；提案现为 **Reviewed**。2026-10-18 北京时间 09:49，版主确认目标并创建[正式 mission](https://prove2.me/missions/8e2bd9f5-57b1-4d55-aab4-a94532a6d6b8)，campaign 登记 cutoff **21**。实时核对主定理 Proved、开放依赖 0；已完成的最佳认证阈值为 21，cutoff 16 任务仍为 Open。[状态证据](../results/prove2me-status-2026-10-18.json)。
 
 ## 材料
 
@@ -29,6 +29,6 @@
 
 > You cannot self-audit or launch — those are **human-only**, done in the web app.
 
-作者已在 My Missions 中比较声明、来源与 read-back，逐项确认并点击 **Submit Proposal**。服务器已发表五条目标声明并进入 `In review`；版主批准后才成为公开 mission，并核定 campaign entry 的 cutoff 值。没有由 agent 代替作者作这些人类自审声明。
+作者已在 My Missions 中比较声明、来源与 read-back，逐项确认并点击 **Submit Proposal**。服务器已发表五条目标声明，提案现已审核完成、创建正式 mission，并认证 campaign cutoff 21。没有由 agent 代替作者作这些人类自审声明。
 
-公开主目标：[campaign_cutoff21](https://prove2.me/theorems/db286144-c8c4-4918-9bc9-03fcadedfffd)。提案提交、目标声明发表、辅助引理通过、完整主定理通过和 campaign 纪录更新是不同事件；当前原始完整定理已经通过；proposal 审核、live mission 创建和 campaign attestation 仍未完成。
+公开主目标：[campaign_cutoff21](https://prove2.me/theorems/db286144-c8c4-4918-9bc9-03fcadedfffd)。提案提交、目标声明发表、辅助引理通过、完整主定理通过和 campaign 纪录更新是不同事件；当前原始完整定理已经通过；proposal 审核、live mission 创建和 campaign attestation 也已完成；这不等于论文通过独立同行评审。

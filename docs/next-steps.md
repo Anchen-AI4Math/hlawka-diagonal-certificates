@@ -10,6 +10,6 @@
 
 后续事项不再是该原始定理的开放证明义务：
 
-1. 跟进论文 proposal 的人工审核、live mission 创建和 campaign attestation。当前提案 In review，campaign 已认证记录仍为 32；不能由主定理通过推断审核已完成。
+1. 论文 proposal 已于 2026-10-18 审核完成（Reviewed），[正式 mission](https://prove2.me/missions/8e2bd9f5-57b1-4d55-aab4-a94532a6d6b8) 已创建，campaign 已认证 cutoff 21。实时核对主定理 Proved、零开放依赖；cutoff 16 任务仍为 Open。见 [API 读回](../results/prove2me-status-2026-10-18.json)。
 2. 邀请独立审阅正文及数学建模，准备期刊投稿；公开预印本与内核验证不等于同行评审或期刊发表。
 3. 如继续降低 cutoff，另行形成有证据的研究增量。本仓库未证明 21 是最优阈值；“sharp”指每个指定 p 下常数的统一最小性。

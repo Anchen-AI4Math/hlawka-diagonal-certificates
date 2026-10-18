@@ -1,13 +1,16 @@
 {
-  "checked_at": "2026-10-17T15:43:49.228301+00:00",
+  "checked_at": "2026-10-18T03:47:31.773063+00:00",
   "source": "Authenticated server read-back; owner-only proposal identifier omitted.",
-  "status": "In review",
+  "status": "Reviewed",
   "submitted_at": "2026-10-17T08:15:12.549+00:00",
   "confirmed_items": 11,
   "total_items": 11,
   "campaign_id": "e360ac37-a9aa-4574-bda3-b50843c599e3",
   "campaign_url": "https://prove2.me/campaigns/sharp-diagonal-hlawka-constant",
-  "live_mission_created": false,
+  "live_mission_created": true,
   "goal_url": "https://prove2.me/theorems/db286144-c8c4-4918-9bc9-03fcadedfffd",
-  "proof_status": "Original full goal is tracked separately in results/prove2me-goals.json."
+  "proof_status": "Original full goal is tracked separately in results/prove2me-goals.json.",
+  "campaign_entry_attested": true,
+  "mission_url": "https://prove2.me/missions/8e2bd9f5-57b1-4d55-aab4-a94532a6d6b8",
+  "evidence": "results/prove2me-status-2026-10-18.json"
 }
