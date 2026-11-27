@@ -19,9 +19,10 @@ preferred-citation:
       affiliation: "School of Computer Science, Wuhan University"
   year: 2026
   month: 10
-  day: 17
+  day: 18
   version: "2"
   institution:
-    name: "Wuhan University"
-  url: "https://github.com/Anchen-AI4Math/hlawka-diagonal-certificates/blob/main/paper/main.pdf"
+    name: "Zenodo"
+  doi: "10.5281/zenodo.23444667"
+  url: "https://doi.org/10.5281/zenodo.23444667"
   notes: "Research preprint. Author's Chinese name: 徐宇轩. AI-assisted; not independently reviewed or journal-published."
